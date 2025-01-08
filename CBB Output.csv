@@ -1,234 +1,65 @@
-Game,Team,Predicted Outcome,Spread Cover Probability,Opening Spread,Edge For Covering Spread,spread_barttorvik,spread_drating,spread_kenpom,spread_massey,spread_evanmiya,Moneyline Win Probability,Opening Moneyline,Moneyline Edge,win_prob_barttorvik,win_prob_drating,win_prob_kenpom,win_prob_massey,win_prob_evanmiya,average_total,theoddsapi_total,projected_total_barttorvik,projected_total_drating,projected_total_kenpom,projected_total_massey,projected_total_evanmiya
-UCF Knights vs. Kansas Jayhawks,UCF Knights,6,0.47415814,6,-0.0497,4,6,-4,5,6,0.34,185,-0.0109,34,25.2,65,35,29.1,148,148.5,150,150.5,150,143,148.3
-Penn State Nittany Lions vs. Indiana Hoosiers,Penn State Nittany Lions,-7,0.42901835,-7,-0.0948,-6,-6,,-6,-4,0.65,-275,-0.0833,70,60.7,,67,63.8,155,156.5,160,157.2,,149,155.4
-Purdue Boilermakers vs. Northwestern Wildcats,Purdue Boilermakers,-7,0.42901835,-7,-0.0948,-6,-6,-7,-7,-6,0.74,-330,-0.0274,73,78.2,74,79,69.9,140,137.5,136,144.1,139,140,139
-Washington Huskies vs. Illinois Fighting Illini,Washington Huskies,9,0.42910174,9,-0.0947,11,8,-10,0,11,0.19,280,-0.0732,16,19,81,26,18.1,153,155,153,154.3,152,153,151.8
-East Carolina Pirates vs. Florida Atlantic Owls,East Carolina Pirates,3,0.40667568,3,-0.1171,1,2,-2,5,3,0.4,125,-0.0444,47,31.6,58,34,40,151,150,153,149.5,154,151,148.7
-Memphis Tigers vs. North Texas Mean Green,Memphis Tigers,-9,0.41882643,-9,-0.105,-8,-9,-10,-10,-9,0.79,-455,-0.0298,79,83.2,82,79,79,137,136.5,135,138.6,138,135,137.3
-Marist Red Foxes vs. Quinnipiac Bobcats,Marist Red Foxes,-2,0.49308454,-2,-0.0307,-1,-2,-3,-2,-2,0.56,-134,-0.0126,55,55.5,58,55,58.7,137,137,134,140.9,137,136,136.3
-Rider Broncs vs. Manhattan Jaspers,Rider Broncs,-2,0.49308454,-2,-0.0307,-2,-2,-1,-4,-1,0.57,-125,0.0144,57,58.6,52,66,54.8,145,146.5,148,139.5,149,145,145.3
-Drake Bulldogs vs. Murray St Racers,Drake Bulldogs,-10,0.46567674,-10,-0.0581,-11,-10,-9,-10,-7,0.77,-490,-0.0605,87,67.1,77,82,73.7,132,127,119,143.5,127,139,130.3
-Navy Midshipmen vs. Lafayette Leopards,Navy Midshipmen,-2,0.49308454,-2,-0.0307,-3,-2,-1,-4,-2,0.57,-140,-0.0133,63,52.8,50,64,56.9,138,139,141,136.1,143,134,136.1
-Bucknell Bison vs. Colgate Raiders,Bucknell Bison,-2,0.50430517,-1,-0.0195,-4,-1,-3,2,-3,0.59,-118,0.0487,65,52,61,44,59.1,134,136.5,131,138.8,133,136,133.6
-Illinois St Redbirds vs. Southern Illinois Salukis,Illinois St Redbirds,-7,0.42901835,-7,-0.0948,-13,-6,-8,-4,-8,0.77,-290,0.0264,86,67.2,77,60,76.5,144,142,147,146.3,146,139,143.1
-Siena Saints vs. Iona Gaels,Siena Saints,-3,0.43366223,-3,-0.0901,-5,-2,-3,2,-3,0.62,-134,0.0474,69,53.4,62,41,61.7,136,133.5,134,136,137,137,135.4
-Wagner Seahawks vs. Fairleigh Dickinson Knights,Wagner Seahawks,-3,0.43366223,-3,-0.0901,-3,-2,-2,-4,-5,0.63,-148,0.0332,62,69.7,55,63,66.7,132,133.5,127,135.2,132,136,131.3
-Boston Univ. Terriers vs. Army Knights,Boston Univ. Terriers,-4,0.48321649,-4,-0.0406,-5,-4,-4,-6,-5,0.68,-195,0.019,69,68.8,63,68,68.3,136,132.5,134,136.9,136,139,134.6
-American Eagles vs. Holy Cross Crusaders,American Eagles,-5,0.42940277,-5,-0.0944,-6,-5,-4,-6,-4,0.66,-240,-0.0459,71,63.4,65,71,65.9,138,138.5,137,136.4,140,138,138.3
-Mt. St. Mary's Mountaineers vs. Niagara Purple Eagles,Mt. St. Mary's Mountaineers,-6,0.47817114,-6,-0.0456,-6,,-7,-5,-6,0.72,-227,0.0258,74,,73,65,70.5,138,138.5,136,,139,139,137.6
-Sacred Heart Pioneers vs. Canisius Golden Griffins,Sacred Heart Pioneers,-10,0.46567674,-10,-0.0581,-13,-10,-10,-6,-13,0.87,-435,0.0569,87,92.6,80,70,87.4,147,145.5,150,143.8,150,144,147.9
-UCF Knights vs. Kansas Jayhawks,Kansas Jayhawks,-6,0.47817114,-6,-0.0456,-4,-6,4,-5,-6,0.66,-225,-0.0323,66,74.8,35,65,70.9,148,148.5,150,150.5,150,143,148.3
-Penn State Nittany Lions vs. Indiana Hoosiers,Indiana Hoosiers,7,0.42803309,7,-0.0958,6,6,,6,4,0.35,217,0.0345,30,39.3,,33,36.2,155,156.5,160,157.2,,149,155.4
-Purdue Boilermakers vs. Northwestern Wildcats,Northwestern Wildcats,7,0.42803309,7,-0.0958,6,7,7,7,6,0.26,260,-0.0178,27,21.8,26,21,30.1,140,137.5,136,144.1,139,140,139
-Washington Huskies vs. Illinois Fighting Illini,Illinois Fighting Illini,-9,0.41882643,-9,-0.105,-11,-8,10,0,-11,0.81,-360,0.0274,84,81,19,74,81.9,153,155,153,154.3,152,153,151.8
-East Carolina Pirates vs. Florida Atlantic Owls,Florida Atlantic Owls,-3,0.43366223,-3,-0.0901,-1,-2,2,-5,-3,0.6,-152,-0.0032,53,68.4,42,66,60,151,150,153,149.5,154,151,148.7
-Memphis Tigers vs. North Texas Mean Green,North Texas Mean Green,9,0.42910174,9,-0.0947,8,10,10,10,9,0.21,344,-0.0152,21,16.8,18,21,21,137,136.5,135,138.6,138,135,137.3
-Marist Red Foxes vs. Quinnipiac Bobcats,Quinnipiac Bobcats,2,0.45956662,2,-0.0642,1,2,3,2,2,0.45,112,-0.0217,45,44.5,42,45,41.3,137,137,134,140.9,137,136,136.3
-Rider Broncs vs. Manhattan Jaspers,Manhattan Jaspers,2,0.45956662,2,-0.0642,2,2,1,4,1,0.43,105,-0.0578,43,41.4,48,34,45.2,145,146.5,148,139.5,149,145,145.3
-Drake Bulldogs vs. Murray St Racers,Murray St Racers,10,0.48445459,10,-0.0394,11,10,9,10,7,0.23,362,0.0135,13,32.9,23,18,26.3,132,127,119,143.5,127,139,130.3
-Navy Midshipmen vs. Lafayette Leopards,Lafayette Leopards,2,0.45956662,2,-0.0642,3,2,1,4,2,0.43,114,-0.0373,37,47.2,50,36,43.1,138,139,141,136.1,143,134,136.1
-Bucknell Bison vs. Colgate Raiders,Colgate Raiders,2,0.38731021,1,-0.1365,4,1,3,-2,3,0.41,-105,-0.1022,35,48,39,56,40.9,134,136.5,131,138.8,133,136,133.6
-Illinois St Redbirds vs. Southern Illinois Salukis,Southern Illinois Salukis,7,0.42803309,7,-0.0958,13,6,8,4,8,0.24,230,-0.063,14,32.8,23,40,23.5,144,142,147,146.3,146,139,143.1
-Siena Saints vs. Iona Gaels,Iona Gaels,3,0.40667568,3,-0.1171,5,2,3,-2,3,0.38,110,-0.0962,31,46.6,38,59,38.3,136,133.5,134,136,137,137,135.4
-Wagner Seahawks vs. Fairleigh Dickinson Knights,Fairleigh Dickinson Knights,3,0.40667568,3,-0.1171,3,2,2,4,5,0.37,120,-0.0845,38,30.3,45,37,33.3,132,133.5,127,135.2,132,136,131.3
-Boston Univ. Terriers vs. Army Knights,Army Knights,4,0.46639482,4,-0.0574,5,4,4,6,5,0.32,155,-0.0722,31,31.2,37,32,31.7,136,132.5,134,136.9,136,139,134.6
-American Eagles vs. Holy Cross Crusaders,Holy Cross Crusaders,5,0.4201535,5,-0.1037,6,5,4,6,4,0.34,180,-0.0171,29,36.6,35,29,34.1,138,138.5,137,136.4,140,138,138.3
-Mt. St. Mary's Mountaineers vs. Niagara Purple Eagles,Niagara Purple Eagles,6,0.47415814,6,-0.0497,6,,7,5,6,0.28,182,-0.0746,26,,27,35,29.5,138,138.5,136,,139,139,137.6
-Sacred Heart Pioneers vs. Canisius Golden Griffins,Canisius Golden Griffins,10,0.48445459,10,-0.0394,13,10,10,6,13,0.13,327,-0.1042,13,7.4,20,30,12.6,147,145.5,150,143.8,150,144,147.9
-Idaho Vandals vs. Montana Grizzlies,Idaho Vandals,2,0.45956662,2,-0.0642,-2,2,1,,1,0.53,112,0.0583,58,50.3,55,,46.9,153,151,156,148.6,155,,152.3
-West Virginia Mountaineers vs. Oklahoma St Cowboys,West Virginia Mountaineers,-9,0.41882643,-9,-0.105,-12,-8,,-6,-8,0.79,-410,-0.0139,88,80.1,,69,77.2,144,143.5,142,150.7,,143,139.6
-Radford Highlanders vs. Winthrop Eagles,Radford Highlanders,2,0.45956662,2,-0.0642,-3,2,1,0,2,0.51,105,0.021,60,44.3,51,51,43.8,151,151.5,151,150.8,153,149,149.9
-North Florida Ospreys vs. Lipscomb Bisons,North Florida Ospreys,6,0.47415814,6,-0.0497,7,6,5,2,8,0.32,195,-0.019,28,31.6,67,47,23.7,159,161.5,161,161.1,161,156,158
-Eastern Washington Eagles vs. Montana St Bobcats,Eastern Washington Eagles,2,0.45956662,2,-0.0642,2,2,,-4,5,0.44,103,-0.0526,44,44.8,,60,33.8,151,149,148,153,,153,150.5
-Appalachian St Mountaineers vs. Texas State Bobcats,Appalachian St Mountaineers,-1,0.45672501,-1,-0.0671,-2,0,,-4,0,0.57,-118,0.0287,58,55.3,,60,49.5,134,133,128,139.3,,135,133.8
-Valparaiso Beacons vs. Northern Iowa Panthers,Valparaiso Beacons,5,0.4201535,5,-0.1037,4,5,4,4,6,0.33,165,-0.0474,33,23.4,65,35,28.8,147,147.5,148,146.3,148,145,147.2
-Western Michigan Broncos vs. Toledo Rockets,Western Michigan Broncos,3,0.40667568,3,-0.1171,-2,2,1,4,4,0.36,120,-0.0945,57,31.6,53,34,36,155,154.5,157,154.7,157,151,155.2
-Liberty Flames vs. Middle Tennessee Blue Raiders,Liberty Flames,-8,0.47421568,-8,-0.0496,-8,-8,9,-6,-8,0.79,-375,0.0005,80,81.7,79,73,75.8,138,139.5,136,141.6,137,137,138
-Evansville Purple Aces vs. Indiana St Sycamores,Evansville Purple Aces,3,0.40667568,3,-0.1171,2,2,,6,3,0.4,123,-0.0484,41,40.7,,27,39.1,153,151.25,154,155.1,,151,150
-Florida St Seminoles vs. Syracuse Orange,Florida St Seminoles,-9,0.41882643,-9,-0.105,-13,-8,,-4,-7,0.74,-385,-0.0538,86,73.9,,63,73.2,155,156.5,158,157.1,,152,154.2
-Fort Wayne Mastodons vs. Youngstown St Penguins,Fort Wayne Mastodons,-5,0.42940277,-5,-0.0944,-5,-5,,-2,,0.7,-225,0.0077,70,72.9,,57,,148,147.5,145,150.8,,149,
-Northwestern St Demons vs. Nicholls St Colonels,Northwestern St Demons,1,0.50690029,2,-0.0169,-1,2,,-2,1,0.48,104,-0.0114,54,39.4,,51,45.2,134,137.75,137,144.2,,117,139.3
-Texas Southern Tigers vs. Southern Jaguars,Texas Southern Tigers,-1,0.45672501,-1,-0.0671,-2,-1,1,6,-4,0.54,-115,0.0051,58,34.4,54,32,62.9,140,142,144,141.7,143,127,142.1
-Clemson Tigers vs. California Golden Bears,Clemson Tigers,-14,0.3648674,-15,-0.1589,-15,-14,15,-10,-13,0.88,-1250,-0.0459,90,88.1,92,84,87.7,150,147.5,149,153.2,149,149,150.5
-Tenn-Martin Skyhawks vs. SE Missouri St Redhawks,Tenn-Martin Skyhawks,-3,0.43366223,-3,-0.0901,-2,-2,1,-10,-1,0.59,-145,-0.001,59,59,55,79,52.9,139,142.5,138,150.8,139,130,138.8
-East Tennessee St Buccaneers vs. Wofford Terriers,East Tennessee St Buccaneers,-5,0.42940277,-5,-0.0944,-4,-4,,-4,-3,0.65,-192,-0.0075,65,64.2,,66,61.5,143,141.5,142,147.1,,141,143.6
-Binghamton Bearcats vs. UMBC Retrievers,Binghamton Bearcats,2,0.45956662,2,-0.0642,1,2,2,2,3,0.47,106,-0.0154,47,39,58,48,38.5,150,148.5,149,150.6,150,151,150.6
-Fordham Rams vs. St. Bonaventure Bonnies,Fordham Rams,6,0.47415814,6,-0.0497,9,,,4,7,0.26,224,-0.0486,18,,,36,26.2,139,142.25,141,,,138,138.6
-Davidson Wildcats vs. Duquesne Dukes,Davidson Wildcats,-6,0.47817114,-6,-0.0456,-7,-5,6,-4,-5,0.7,-233,0.0003,76,73.4,70,64,68.2,136,133.5,133,141.2,136,136,135.5
-Georgia Tech Yellow Jackets vs. Boston College Eagles,Georgia Tech Yellow Jackets,-7,0.42901835,-7,-0.0948,-9,-7,8,,-7,0.76,-300,0.01,80,77.8,75,,74,147,145.5,145,147.1,148,,146.7
-UTEP Miners vs. Sam Houston St Bearkats,UTEP Miners,-5,0.42940277,-5,-0.0944,-11,-5,,-4,-6,0.71,-222,0.021,82,72.9,,61,69.6,148,146.5,155,142.5,,143,150.2
-UC Irvine Anteaters vs. UC Riverside Highlanders,UC Irvine Anteaters,-11,0.41146584,-11,-0.1123,-10,-10,10,-10,-10,0.81,-589,-0.0449,82,81.3,82,81,80.9,140,141.5,137,141.8,138,141,141.1
-Bryant Bulldogs vs. Maine Black Bears,Bryant Bulldogs,-3,0.43366223,-3,-0.0901,-6,-4,4,-6,-4,0.63,-165,0.0074,71,63.2,63,69,62.5,150,150.5,154,148.8,152,146,148.4
-Grand Canyon Antelopes vs. Southern Utah Thunderbirds,Grand Canyon Antelopes,-16,0.37551385,-17,-0.1483,-15,-16,12,-12,-17,0.88,-2917,-0.0868,88,90.4,86,84,92.1,152,153.5,154,152.4,154,151,151
-Tulane Green Wave vs. UTSA Roadrunners,Tulane Green Wave,-6,0.47817114,-6,-0.0456,-8,-5,6,-10,-4,0.7,-225,0.0077,75,66.5,70,78,64.6,155,155,155,156,154,155,152.9
-CSU Northridge Matadors vs. UC Davis Aggies,CSU Northridge Matadors,-9,0.41882643,-9,-0.105,-10,-9,7,-2,-8,0.76,-480,-0.0676,82,75.7,76,58,73.6,147,149.5,148,151.3,147,143,146
-Georgia St Panthers vs. Louisiana Ragin' Cajuns,Georgia St Panthers,-1,0.45672501,-1,-0.0671,-2,-1,,0,-1,0.56,-120,0.0156,59,57.7,,51,54,147,144,148,149.2,,145,145.8
-Massachusetts Minutemen vs. Richmond Spiders,Massachusetts Minutemen,-6,0.47817114,-6,-0.0456,-5,-5,5,-2,-5,0.67,-245,-0.0401,69,66.4,67,57,68,147,148,148,148.7,147,144,147.9
-Utah State Aggies vs. Fresno St Bulldogs,Utah State Aggies,-23,0.48336947,-23,-0.0404,-26,-22,,-16,-24,0.97,-7000,-0.0159,97,97.7,,92,97.9,153,155.5,158,154.4,,148,151.5
-North Carolina A&T Aggies vs. Drexel Dragons,North Carolina A&T Aggies,4,0.46639482,4,-0.0574,4,4,3,8,4,0.35,147,-0.0557,35,35.9,62,26,34.4,144,146.5,146,146.7,147,139,143.1
-Tarleton State Texans vs. UT-Arlington Mavericks,Tarleton State Texans,5,0.4201535,5,-0.1037,5,5,,2,7,0.3,182,-0.0546,32,22.4,,46,27.1,142,138.5,141,145,,142,141.4
-New Orleans Privateers vs. UT Rio Grande Valley Vaqueros,New Orleans Privateers,8,0.47552012,9,-0.0483,6,8,6,2,6,0.32,260,0.0422,31,26.2,71,46,32.1,152,155.5,160,159.3,156,128,154.2
-Western Carolina Catamounts vs. Samford Bulldogs,Western Carolina Catamounts,13,0.44701545,13,-0.0768,10,13,12,6,14,0.19,525,0.03,19,8.8,85,34,11.8,160,160.5,164,162.3,162,157,155.2
-Utah Valley Wolverines vs. Abilene Christian Wildcats,Utah Valley Wolverines,-9,0.41882643,-9,-0.105,-8,-8,8,-6,-8,0.74,-400,-0.06,78,68,74,72,76.4,141,138.5,138,143.8,140,142,138.7
-Delaware Blue Hens vs. Monmouth Hawks,Delaware Blue Hens,-6,0.47817114,-6,-0.0456,-7,-6,4,-4,-5,0.64,-250,-0.0743,73,60,63,64,66.5,153,152.5,159,149.1,156,148,154.7
-UAB Blazers vs. Tulsa Golden Hurricane,UAB Blazers,-13,0.40855401,-13,-0.1153,-12,-13,11,-10,-14,0.83,-800,-0.0589,83,80,84,80,88.1,158,159,160,157.1,159,156,157.4
-Northern Arizona Lumberjacks vs. Weber State Wildcats,Northern Arizona Lumberjacks,-3,0.43366223,-3,-0.0901,-4,-2,,0,-2,0.52,-148,-0.0768,66,48.5,,49,55.7,145,144,144,145.1,,145,146.3
-Gardner-Webb Bulldogs vs. Presbyterian Blue Hose,Gardner-Webb Bulldogs,-3,0.43366223,-3,-0.0901,-5,-3,2,-6,-3,0.61,-168,-0.0169,70,60.5,57,68,60.4,146,146.75,146,147.1,146,145,144.5
-Prairie View Panthers vs. Grambling St Tigers,Prairie View Panthers,2,0.45956662,2,-0.0642,-3,2,,4,2,0.41,118,-0.0487,61,28,,39,43.8,147,149.5,154,147.9,,135,152.6
-Detroit Mercy Titans vs. Milwaukee Panthers,Detroit Mercy Titans,8,0.47552012,9,-0.0483,6,9,6,2,9,0.27,310,0.0261,27,21.9,71,43,21.8,149,148.5,146,154.1,148,149,147.9
-Bradley Braves vs. Missouri St Bears,Bradley Braves,-12,0.45803162,-12,-0.0658,-13,-12,,-8,-12,0.87,-692,-0.0037,89,87.2,,77,86.6,140,133.5,133,145.8,,142,139.1
-Air Force Falcons vs. Wyoming Cowboys,Air Force Falcons,3,0.40667568,3,-0.1171,5,2,3,4,4,0.35,120,-0.1045,30,34.9,60,38,34,133,130,127,137.6,131,134,134.5
-Tennessee Tech Golden Eagles vs. Morehead St Eagles,Tennessee Tech Golden Eagles,-2,0.49308454,-2,-0.0307,-4,-2,,-12,-2,0.62,-137,0.0419,65,52.7,,83,58,140,143.5,144,141.9,,132,141.4
-Sacramento St Hornets vs. Portland St Vikings,Sacramento St Hornets,5,0.52044932,6,-0.0034,3,6,,-2,4,0.37,220,0.0575,38,25.9,,53,35.6,141,141.5,141,144.5,,139,140.2
-Longwood Lancers vs. Charleston Southern Buccaneers,Longwood Lancers,-8,0.47421568,-8,-0.0496,-8,-8,7,-10,-11,0.81,-398,0.011,78,80.9,76,81,82.7,146,146.5,146,149.8,147,141,145.7
-Oakland Golden Grizzlies vs. Robert Morris Colonials,Oakland Golden Grizzlies,-5,0.42940277,-5,-0.0944,-6,-4,5,-6,-5,0.7,-209,0.0236,75,70.3,69,74,66.4,137,136,131,141.5,135,143,136.9
-Charleston Cougars vs. Towson Tigers,Charleston Cougars,-8,0.47421568,-8,-0.0496,-11,-8,8,-6,-8,0.75,-313,-0.0079,85,73,76,72,75,139,139.5,135,142,138,140,137.9
-Rice Owls vs. Charlotte 49ers,Rice Owls,-4,0.48321649,-4,-0.0406,-7,-4,6,-2,-5,0.67,-191,0.0136,76,66,68,54,67.2,138,140.75,136,140.1,138,140,137.2
-Old Dominion Monarchs vs. Southern Miss Golden Eagles,Old Dominion Monarchs,-2,0.49308454,-2,-0.0307,-4,-2,1,-2,-1,0.55,-140,-0.0333,63,55.3,52,55,52.5,146,143.5,145,150.8,145,142,145.7
-Florida A&M Rattlers vs. Bethune-Cookman Wildcats,Florida A&M Rattlers,5,0.4201535,5,-0.1037,5,5,5,-2,5,0.42,180,0.0629,31,41.7,67,52,34.3,139,139.5,139,143,139,129,142.7
-CSU Fullerton Titans vs. UC San Diego Tritons,CSU Fullerton Titans,12,0.49423506,13,-0.0296,10,14,,6,11,0.15,570,0.0007,14,12,,32,15,137,137.5,136,136.4,,139,138.1
-N Colorado Bears vs. Idaho State Bengals,N Colorado Bears,-7,0.42901835,-7,-0.0948,-12,-7,,,-8,0.79,-300,0.04,85,79.3,,,74.4,147,146,146,148.8,,,147.6
-VMI Keydets vs. Mercer Bears,VMI Keydets,6,0.47415814,6,-0.0497,5,6,5,6,3,0.33,214,0.0115,33,26.9,67,32,38.9,155,155.5,153,157.2,155,153,155.4
-Oregon St Beavers vs. San Diego Toreros,Oregon St Beavers,-15,0.41204591,-15,-0.1118,-19,-14,,-14,-16,0.93,-1250,0.0041,94,94.4,,90,92.7,139,141,139,139.1,,139,139.9
-Kent State Golden Flashes vs. Ball State Cardinals,Kent State Golden Flashes,-11,0.41146584,-11,-0.1123,-10,-11,,-8,-10,0.82,-667,-0.0496,83,85.7,,75,80.4,135,135.5,128,138.8,,139,134.7
-CSU Bakersfield Roadrunners vs. Long Beach St 49ers,CSU Bakersfield Roadrunners,-5,0.42940277,-5,-0.0944,-5,-4,,-2,-5,0.65,-203,-0.02,70,62.6,,59,66.7,136,134,131,138.4,,141,134.5
-Stephen F. Austin Lumberjacks vs. Incarnate Word Cardinals,Stephen F. Austin Lumberjacks,-7,0.52431739,-6,0.0005,-7,,,-18,-8,0.77,-265,0.044,77,,,92,75,131,133.5,129,,,131,134.1
-Elon Phoenix vs. Hampton Pirates,Elon Phoenix,-8,0.47421568,-8,-0.0496,-10,-8,7,-8,-6,0.76,-371,-0.0277,83,75.8,74,76,70.3,139,138.75,134,143.2,137,142,140.1
-Jacksonville Dolphins vs. Austin Peay Governors,Jacksonville Dolphins,-6,0.47817114,-6,-0.0456,-7,-6,7,-4,-6,0.71,-225,0.0177,79,71.3,73,60,69.7,134,133.5,129,140.3,131,137,134.3
-Portland Pilots vs. Saint Mary's Gaels,Portland Pilots,17,0.53186914,18,0.0081,16,18,,16,13,0.07,1174,-0.0085,6,3,,8,11.5,140,139.5,138,142.9,,138,140.1
-Morgan St Bears vs. South Carolina St Bulldogs,Morgan St Bears,4,0.46639482,4,-0.0574,8,4,,-16,4,0.37,163,-0.011,24,37.9,,92,37,143,154,152,154.1,,112,152.3
-Howard Bison vs. Delaware St Hornets,Howard Bison,-6,0.47817114,-6,-0.0456,-7,-6,,-20,-4,0.74,-250,0.0257,75,72.5,,95,64.9,142,149.5,153,145.6,,119,149.9
-SIU-Edwardsville Cougars vs. Lindenwood Lions,SIU-Edwardsville Cougars,-7,0.42901835,-7,-0.0948,-8,-7,8,-2,-8,0.76,-313,0.0021,80,76.3,78,55,75.1,138,138,136,143.1,138,133,137.8
-UNC Wilmington Seahawks vs. Campbell Fighting Camels,UNC Wilmington Seahawks,-11,0.41146584,-11,-0.1123,-14,-11,11,-10,-9,0.82,-625,-0.0421,89,86.4,82,81,78.9,142,144.5,140,143.9,141,141,143.2
-Texas A&M-Commerce Lions vs. McNeese Cowboys,Texas A&M-Commerce Lions,17,0.44408344,17,-0.0797,16,17,16,-10,17,0.07,950,-0.0252,6,4.5,93,77,6.7,139,137,135,142.5,136,142,137.4
-Alabama A&M Bulldogs vs. Arkansas-Pine Bluff Golden Lions,Alabama A&M Bulldogs,-7,0.42901835,-7,-0.0948,-6,-7,5,-8,-8,0.73,-310,-0.0261,68,77,69,73,73.5,155,162,166,160.3,165,124,161.3
-Northern Kentucky Norse vs. Green Bay Phoenix,Northern Kentucky Norse,-12,0.36256498,-13,-0.1612,-10,-13,11,-8,-15,0.84,-900,-0.06,83,86.1,84,80,90.6,143,139.5,141,147.4,143,143,140.2
-The Citadel Bulldogs vs. Chattanooga Mocs,The Citadel Bulldogs,11,0.53834163,12,0.0145,8,12,10,6,10,0.21,525,0.05,21,9.5,80,27,18,144,142.5,142,147.9,142,145,145.3
-Eastern Michigan Eagles vs. Northern Illinois Huskies,Eastern Michigan Eagles,-7,0.42901835,-7,-0.0948,-8,-7,6,-2,-7,0.72,-307,-0.034,78,70.6,72,56,72,146,146.5,146,144.1,146,144,147.4
-New Hampshire Wildcats vs. Vermont Catamounts,New Hampshire Wildcats,9,0.53048296,10,0.0067,6,10,7,6,9,0.26,360,0.0426,26,9,76,26,21.2,132,130.5,126,137.3,129,133,133.5
-Miami (OH) RedHawks vs. Buffalo Bulls,Miami (OH) RedHawks,-12,0.45803162,-12,-0.0658,-16,-12,13,-8,-13,0.87,-769,-0.0149,91,87.9,87,76,86.8,150,149,152,149.7,151,148,149.2
-Coppin St Eagles vs. North Carolina Central Eagles,Coppin St Eagles,7,0.42803309,7,-0.0958,5,6,,-14,6,0.3,225,-0.0077,31,23.6,,86,28.3,135,135.5,137,138.3,,127,136.8
-West Georgia Wolves vs. Stetson Hatters,West Georgia Wolves,-4,0.48321649,-4,-0.0406,-6,-4,4,4,-6,0.68,-182,0.0346,73,84.9,64,38,68.1,149,148.5,147,150.3,148,150,148.2
-Central Arkansas Bears vs. Bellarmine Knights,Central Arkansas Bears,-4,0.48321649,-4,-0.0406,-6,-4,4,-2,-4,0.64,-178,0.0004,71,62.7,67,55,63.9,148,145.5,146,149,148,148,146.5
-Cleveland St Vikings vs. IUPUI Jaguars,Cleveland St Vikings,-11,0.41146584,-11,-0.1123,-10,-10,,-12,-12,0.87,-600,0.0129,83,88.6,,88,86.9,143,141.5,142,142.2,,143,143.2
-Coastal Carolina Chanticleers vs. UL Monroe Warhawks,Coastal Carolina Chanticleers,-7,0.42901835,-7,-0.0948,-8,-7,7,-4,-6,0.7,-282,-0.0382,81,68.5,74,66,70.3,138,136.5,134,142.4,135,139,138.8
-Eastern Illinois Panthers vs. Western Illinois Leathernecks,Eastern Illinois Panthers,-4,0.48321649,-4,-0.0406,-7,-4,4,-4,-3,0.64,-175,0.0036,78,68.1,64,61,62,135,134.5,133,137.3,134,135,135
-Norfolk St Spartans vs. Maryland-Eastern Shore Hawks,Norfolk St Spartans,-17,0.42423801,-17,-0.0996,-19,-17,,-14,-17,0.94,-2500,-0.0215,94,95.2,,90,94.1,136,142.5,145,137.8,,117,143.3
-Alabama St Hornets vs. Miss Valley St Delta Devils,Alabama St Hornets,-22,0.43008061,-23,-0.0937,-20,-22,,-4,-24,0.96,-10000,-0.0301,96,95.7,,58,98.6,137,139.5,143,139.6,,128,137.9
-Kentucky Wildcats vs. Florida Gators,Florida Gators,3,0.51311707,4,-0.0107,2,4,-1,4,-1,0.48,136,0.0554,44,53.1,48,41,51.8,165,166,165,170.8,165,163,159.4
-Cincinnati Bearcats vs. Arizona Wildcats,Arizona Wildcats,3,0.40667568,3,-0.1171,2,3,-4,-4,4,0.43,125,-0.0144,43,52.4,38,60,37.4,148,147.5,142,153.5,146,149,147.6
-LSU Tigers vs. Vanderbilt Commodores,Vanderbilt Commodores,-3,0.43366223,-3,-0.0901,2,-2,-3,4,-3,0.44,-135,-0.1345,44,48.5,41,39,59.2,154,157,157,154.5,157,148,154.7
-Utah Utes vs. Texas Tech Red Raiders,Texas Tech Red Raiders,-3,0.43366223,-3,-0.0901,-3,-2,-2,0,-8,0.61,-145,0.019,61,72.5,41,51,75,152,154,153,151.6,154,147,153.8
-Iowa State Cyclones vs. Baylor Bears,Baylor Bears,9,0.42910174,9,-0.0947,8,8,,4,9,0.22,310,-0.0239,24,15.4,,39,20.7,152,152.5,155,151.5,,147,152.7
-Notre Dame Fighting Irish vs. North Carolina Tar Heels,North Carolina Tar Heels,-5,0.42940277,-5,-0.0944,-1,-4,-4,-6,-5,0.68,-199,0.0144,54,78.5,35,68,68.6,156,155.5,161,155.1,160,150,155.6
-Ole Miss Rebels vs. Georgia Bulldogs,Georgia Bulldogs,5,0.4201535,5,-0.1037,3,4,-5,4,6,0.37,155,-0.0222,37,42.1,33,37,31.2,147,146.5,144,152.4,145,144,148
-Washington St Cougars vs. San Francisco Dons,San Francisco Dons,2,0.45956662,2,-0.0642,4,2,,4,0,0.43,116,-0.033,34,60.8,,34,51.1,147,148.5,149,149.9,,143,147.5
-Texas A&M Aggies vs. Texas Longhorns,Texas Longhorns,5,0.4201535,5,-0.1037,6,5,-7,2,7,0.28,187,-0.069,28,28.3,29,41,28,142,140,138,147.9,139,141,144.1
-Alabama Crimson Tide vs. Oklahoma Sooners,Oklahoma Sooners,11,0.54129798,13,0.0175,13,12,-10,8,9,0.21,550,0.0562,15,24.3,20,23,21.3,165,167,169,167.3,166,159,165.9
-Auburn Tigers vs. Missouri Tigers,Missouri Tigers,19,0.43297164,19,-0.0908,19,18,-18,14,20,0.06,1000,-0.0309,6,11.1,5,11,4.2,158,154.5,162,158,160,152,157
-Tennessee Volunteers vs. Arkansas Razorbacks,Arkansas Razorbacks,12,0.49190974,12,-0.0319,12,12,-12,10,11,0.14,533,-0.018,11,13.6,13,17,16.4,143,143.5,138,151,140,142,142.5
-James Madison Dukes vs. Arkansas St Red Wolves,Arkansas St Red Wolves,-2,0.49308454,-2,-0.0307,0,-2,,4,-3,0.54,-128,-0.0214,52,55.7,,36,59.7,149,148.5,147,154,,148,148.3
-Virginia Cavaliers vs. Louisville Cardinals,Louisville Cardinals,-3,0.43686138,-4,-0.0869,-2,-4,-2,6,-4,0.58,-185,-0.0691,58,72.7,44,32,65.5,131,130,124,136.5,130,131,133.4
-Houston Cougars vs. BYU Cougars,BYU Cougars,10,0.48445459,10,-0.0394,12,10,-11,10,11,0.16,370,-0.053,11,14.7,16,18,16.1,136,132.5,130,142.1,135,138,134.7
-Loyola (Chi) Ramblers vs. VCU Rams,VCU Rams,-6,0.47817114,-6,-0.0456,-4,-6,-5,-4,-6,0.64,-230,-0.057,64,71.7,35,61,71.1,139,139.5,137,140.9,139,137,138.8
-Arizona St Sun Devils vs. Colorado Buffaloes,Colorado Buffaloes,6,0.47415814,6,-0.0497,4,6,,0,6,0.42,207,0.0943,33,52.2,,51,31.8,144,142.5,139,151.9,,143,142.4
-TCU Horned Frogs vs. Kansas St Wildcats,Kansas St Wildcats,4,0.46639482,4,-0.0574,6,4,,4,3,0.36,148,-0.0432,28,38.2,,33,39.6,143,141.5,140,146.8,,143,143.2
-St. John's Red Storm vs. Butler Bulldogs,Butler Bulldogs,11,0.53834163,12,0.0145,10,,,8,12,0.17,453,-0.011,17,,,25,14.4,148,148,147,,,149,148.1
-Marshall Thundering Herd vs. Troy Trojans,Troy Trojans,-2,0.49308454,-2,-0.0307,-1,-2,-1,-2,-3,0.55,-135,-0.0245,55,61.3,44,52,59.9,144,144,141,152,143,145,140.4
-SE Louisiana Lions vs. Texas A&M-CC Islanders,Texas A&M-CC Islanders,-1,0.44608395,-2,-0.0777,0,-2,-1,6,0,0.5,-127,-0.0585,51,54.8,49,32,50.2,138,142.5,143,145.7,145,117,141.3
-Mississippi St Bulldogs vs. South Carolina Gamecocks,South Carolina Gamecocks,11,0.43795658,11,-0.0859,10,10,,8,10,0.18,387,-0.0253,17,13.1,,25,19.9,144,142.5,146,146.6,,139,144.1
-UNC Asheville Bulldogs vs. High Point Panthers,High Point Panthers,-2,0.49308454,-2,-0.0307,0,-2,-1,2,-3,0.51,-147,-0.0843,51,72.2,48,45,61.6,151,150.5,149,153.2,153,148,151.9
-Kennesaw St Owls vs. Jacksonville St Gamecocks,Jacksonville St Gamecocks,1,0.4341509,1,-0.0897,0,1,,-2,0,0.51,-108,-0.0092,51,50.9,,54,49.6,152,155.5,155,150.9,,150,152
-Pittsburgh Panthers vs. Stanford Cardinal,Stanford Cardinal,10,0.48445459,10,-0.0394,10,10,-12,8,13,0.14,340,-0.0873,17,11.5,14,26,12.6,151,151.5,152,151.7,152,147,150.7
-Loyola Marymount Lions vs. Gonzaga Bulldogs,Gonzaga Bulldogs,-16,0.46283238,-16,-0.061,-13,-16,-15,-14,-18,0.88,-1667,-0.0634,88,94,8,88,94.2,151,153,148,156.1,151,149,150.9
-Villanova Wildcats vs. DePaul Blue Demons,DePaul Blue Demons,10,0.48445459,10,-0.0394,8,10,-9,12,10,0.2,340,-0.0273,24,24.7,20,14,18.9,148,146.5,152,145.4,151,143,149.6
-Albany Great Danes vs. UMass Lowell River Hawks,UMass Lowell River Hawks,-4,0.48321649,-4,-0.0406,0,-4,-4,-4,-2,0.57,-169,-0.0576,48,72.4,36,59,56.6,161,161.5,169,157.1,164,155,161
-New Mexico St Aggies vs. Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,-2,0.49308454,-2,-0.0307,-1,-2,,-4,-4,0.6,-134,0.0274,53,59.6,,61,64.4,139,139.5,135,143.6,,139,138.3
-Belmont Bruins vs. UIC Flames,UIC Flames,5,0.52044932,6,-0.0034,4,6,-4,6,1,0.34,191,-0.0036,37,24.5,34,28,45.6,160,157.5,166,156.3,162,153,160.9
-Florida Int'l Golden Panthers vs. Western Kentucky Hilltoppers,Western Kentucky Hilltoppers,-7,0.42901835,-7,-0.0948,-4,-6,-6,-4,-6,0.65,-250,-0.0643,65,78.4,28,63,67.5,151,154,150,157.7,148,150,147.4
-Central Michigan Chippewas vs. Ohio Bobcats,Ohio Bobcats,-4,0.48321649,-4,-0.0406,-2,-4,-1,-4,-5,0.59,-199,-0.0756,58,59.2,47,65,67.7,150,147.5,154,147.2,153,146,148
-Virginia Tech Hokies vs. Miami Hurricanes,Miami Hurricanes,-1,0.45672501,-1,-0.0671,2,-1,-1,2,0,0.48,-114,-0.0527,42,51.6,48,42,48.7,148,143.5,146,151.7,147,147,148.8
-North Alabama Lions vs. Eastern Kentucky Colonels,Eastern Kentucky Colonels,4,0.46700997,5,-0.0568,3,5,-5,2,4,0.36,165,-0.0174,39,32,34,44,35.8,152,151.5,153,152.2,153,152,151.5
-Pacific Tigers vs. Pepperdine Waves,Pepperdine Waves,-2,0.49308454,-2,-0.0307,0,-2,-1,-4,-2,0.53,-128,-0.0304,51,52.6,44,60,56,147,147.5,147,146.4,147,147,146.7
-Cal Baptist Lancers vs. Seattle Redhawks,Seattle Redhawks,3,0.51311707,4,-0.0107,2,4,-2,0,1,0.42,158,0.0324,41,39.2,42,50,45.8,145,143,147,147,146,143,144.2
-Georgia Southern Eagles vs. South Alabama Jaguars,South Alabama Jaguars,-5,0.43224608,-6,-0.0916,-1,-5,-4,-4,-4,0.61,-232,-0.0883,55,66.1,36,61,64.7,144,144,140,149.3,142,145,145.2
-Idaho Vandals vs. Montana Grizzlies,Montana Grizzlies,-2,0.49308454,-2,-0.0307,2,-2,-1,,-1,0.47,-137,-0.1081,42,49.7,45,,53.1,153,151,156,148.6,155,,152.3
-West Virginia Mountaineers vs. Oklahoma St Cowboys,Oklahoma St Cowboys,9,0.42910174,9,-0.0947,12,9,,6,8,0.21,320,-0.0281,12,19.9,,31,22.8,144,143.5,142,150.7,,143,139.6
-Radford Highlanders vs. Winthrop Eagles,Winthrop Eagles,-2,0.49308454,-2,-0.0307,3,-2,-1,0,-2,0.49,-127,-0.0685,40,55.7,49,49,56.2,151,151.5,151,150.8,153,149,149.9
-North Florida Ospreys vs. Lipscomb Bisons,Lipscomb Bisons,-6,0.47817114,-6,-0.0456,-7,-6,-5,-2,-8,0.68,-255,-0.0383,72,68.4,33,53,76.3,159,161.5,161,161.1,161,156,158
-Eastern Washington Eagles vs. Montana St Bobcats,Montana St Bobcats,-2,0.49308454,-2,-0.0307,-2,-2,,4,-5,0.56,-125,0.0044,56,55.2,,40,66.2,151,149,148,153,,153,150.5
-Appalachian St Mountaineers vs. Texas State Bobcats,Texas State Bobcats,1,0.4341509,1,-0.0897,2,1,,4,0,0.43,-104,-0.0798,42,44.7,,40,50.5,134,133,128,139.3,,135,133.8
-Valparaiso Beacons vs. Northern Iowa Panthers,Northern Iowa Panthers,-5,0.42940277,-5,-0.0944,-4,-4,-4,-4,-6,0.67,-204,-0.0011,67,76.6,35,65,71.2,147,147.5,148,146.3,148,145,147.2
-Western Michigan Broncos vs. Toledo Rockets,Toledo Rockets,-3,0.43366223,-3,-0.0901,2,-2,-1,-4,-4,0.64,-145,0.0482,43,68.4,47,66,64,155,154.5,157,154.7,157,151,155.2
-Liberty Flames vs. Middle Tennessee Blue Raiders,Middle Tennessee Blue Raiders,8,0.47729107,8,-0.0465,8,8,-9,6,8,0.21,290,-0.0464,20,18.3,21,27,24.2,138,139.5,136,141.6,137,137,138
-Evansville Purple Aces vs. Indiana St Sycamores,Indiana St Sycamores,-3,0.43366223,-3,-0.0901,-2,-2,,-6,-3,0.6,-150,0.0008,59,59.3,,73,60.9,153,151.25,154,155.1,,151,150
-Florida St Seminoles vs. Syracuse Orange,Syracuse Orange,9,0.42910174,9,-0.0947,13,8,,4,7,0.26,295,0.0068,14,26.1,,37,26.8,155,156.5,158,157.1,,152,154.2
-Fort Wayne Mastodons vs. Youngstown St Penguins,Youngstown St Penguins,5,0.4201535,5,-0.1037,5,6,,2,,0.3,185,-0.0509,30,27.1,,43,,148,147.5,145,150.8,,149,
-Northwestern St Demons vs. Nicholls St Colonels,Nicholls St Colonels,-1,0.44608395,-2,-0.0777,1,-2,,2,-1,0.52,-125,-0.0356,46,60.6,,49,54.8,134,137.75,137,144.2,,117,139.3
-Texas Southern Tigers vs. Southern Jaguars,Southern Jaguars,1,0.4341509,1,-0.0897,2,1,-1,-6,4,0.46,-108,-0.0592,42,65.6,46,68,37.1,140,142,144,141.7,143,127,142.1
-Clemson Tigers vs. California Golden Bears,California Golden Bears,14,0.497197,15,-0.0266,15,14,-15,10,13,0.12,734,0.0001,10,11.9,8,16,12.3,150,147.5,149,153.2,149,149,150.5
-Tenn-Martin Skyhawks vs. SE Missouri St Redhawks,SE Missouri St Redhawks,3,0.40667568,3,-0.1171,2,2,-1,10,1,0.41,119,-0.0466,41,41,45,21,47.1,139,142.5,138,150.8,139,130,138.8
-East Tennessee St Buccaneers vs. Wofford Terriers,Wofford Terriers,5,0.4201535,5,-0.1037,4,4,,4,3,0.35,155,-0.0422,35,35.8,,34,38.5,143,141.5,142,147.1,,141,143.6
-Binghamton Bearcats vs. UMBC Retrievers,UMBC Retrievers,-2,0.49308454,-2,-0.0307,-1,-2,-2,-2,-3,0.53,-130,-0.0352,53,61,42,52,61.5,150,148.5,149,150.6,150,151,150.6
-Fordham Rams vs. St. Bonaventure Bonnies,St. Bonaventure Bonnies,-6,0.47817114,-6,-0.0456,-9,,,-4,-7,0.74,-282,0.0018,82,,,64,73.8,139,142.25,141,,,138,138.6
-Davidson Wildcats vs. Duquesne Dukes,Duquesne Dukes,6,0.47415814,6,-0.0497,7,6,-6,4,5,0.3,184,-0.0521,24,26.6,30,36,31.8,136,133.5,133,141.2,136,136,135.5
-Georgia Tech Yellow Jackets vs. Boston College Eagles,Boston College Eagles,7,0.42803309,7,-0.0958,9,7,-8,,7,0.24,240,-0.0541,20,22.2,25,,26,147,145.5,145,147.1,148,,146.7
-UTEP Miners vs. Sam Houston St Bearkats,Sam Houston St Bearkats,5,0.4201535,5,-0.1037,11,5,,4,6,0.29,180,-0.0671,18,27.1,,39,30.4,148,146.5,155,142.5,,143,150.2
-UC Irvine Anteaters vs. UC Riverside Highlanders,UC Riverside Highlanders,11,0.43795658,11,-0.0859,10,10,-10,10,10,0.19,407,-0.0074,18,18.7,18,19,19.1,140,141.5,137,141.8,138,141,141.1
-Bryant Bulldogs vs. Maine Black Bears,Maine Black Bears,3,0.40667568,3,-0.1171,6,4,-4,6,4,0.37,136,-0.0546,29,36.8,37,31,37.5,150,150.5,154,148.8,152,146,148.4
-Grand Canyon Antelopes vs. Southern Utah Thunderbirds,Southern Utah Thunderbirds,16,0.49350835,17,-0.0303,15,16,-12,12,17,0.12,1147,0.0398,12,9.6,14,16,7.9,152,153.5,154,152.4,154,151,151
-Tulane Green Wave vs. UTSA Roadrunners,UTSA Roadrunners,6,0.47415814,6,-0.0497,8,6,-6,10,4,0.3,180,-0.0571,25,33.5,30,22,35.4,155,155,155,156,154,155,152.9
-CSU Northridge Matadors vs. UC Davis Aggies,UC Davis Aggies,9,0.42910174,9,-0.0947,10,9,-7,2,8,0.24,340,0.0127,18,24.3,24,42,26.4,147,149.5,148,151.3,147,143,146
-Georgia St Panthers vs. Louisiana Ragin' Cajuns,Louisiana Ragin' Cajuns,1,0.4341509,1,-0.0897,2,1,,0,1,0.44,-2,0.4252,41,42.3,,49,46,147,144,148,149.2,,145,145.8
-Massachusetts Minutemen vs. Richmond Spiders,Richmond Spiders,6,0.47415814,6,-0.0497,5,6,-5,2,5,0.33,195,-0.009,31,33.6,33,43,32,147,148,148,148.7,147,144,147.9
-Utah State Aggies vs. Fresno St Bulldogs,Fresno St Bulldogs,23,0.39474956,23,-0.1291,26,22,,16,24,0.03,1800,-0.0226,3,2.3,,8,2.1,153,155.5,158,154.4,,148,151.5
-North Carolina A&T Aggies vs. Drexel Dragons,Drexel Dragons,-4,0.48321649,-4,-0.0406,-4,-4,-3,-8,-4,0.65,-179,0.0091,65,64.1,38,74,65.6,144,146.5,146,146.7,147,139,143.1
-Tarleton State Texans vs. UT-Arlington Mavericks,UT-Arlington Mavericks,-5,0.42940277,-5,-0.0944,-5,-5,,-2,-7,0.7,-229,0.0044,68,77.6,,54,72.9,142,138.5,141,145,,142,141.4
-New Orleans Privateers vs. UT Rio Grande Valley Vaqueros,UT Rio Grande Valley Vaqueros,-8,0.37368728,-9,-0.1501,-6,-8,-6,-2,-6,0.68,-325,-0.0847,69,73.8,29,54,67.9,152,155.5,160,159.3,156,128,154.2
-Western Carolina Catamounts vs. Samford Bulldogs,Samford Bulldogs,-13,0.40855401,-13,-0.1153,-10,-12,-12,-6,-14,0.81,-760,-0.0737,81,91.2,15,66,88.2,160,160.5,164,162.3,162,157,155.2
-Utah Valley Wolverines vs. Abilene Christian Wildcats,Abilene Christian Wildcats,9,0.42910174,9,-0.0947,8,8,-8,6,8,0.26,299,0.0091,22,32,26,28,23.6,141,138.5,138,143.8,140,142,138.7
-Delaware Blue Hens vs. Monmouth Hawks,Monmouth Hawks,6,0.47415814,6,-0.0497,7,6,-4,4,5,0.36,202,0.0289,27,40,37,36,33.5,153,152.5,159,149.1,156,148,154.7
-UAB Blazers vs. Tulsa Golden Hurricane,Tulsa Golden Hurricane,13,0.44701545,13,-0.0768,12,13,-11,10,14,0.17,550,0.0162,17,20,16,20,11.9,158,159,160,157.1,159,156,157.4
-Northern Arizona Lumberjacks vs. Weber State Wildcats,Weber State Wildcats,3,0.40667568,3,-0.1171,4,2,,0,2,0.48,120,0.0255,34,51.5,,51,44.3,145,144,144,145.1,,145,146.3
-Gardner-Webb Bulldogs vs. Presbyterian Blue Hose,Presbyterian Blue Hose,3,0.40667568,3,-0.1171,5,3,-2,6,3,0.4,137,-0.0228,30,39.5,43,32,39.6,146,146.75,146,147.1,146,145,144.5
-Prairie View Panthers vs. Grambling St Tigers,Grambling St Tigers,-2,0.49308454,-2,-0.0307,3,-2,,-4,-2,0.59,-144,0.0007,39,72,,61,56.2,147,149.5,154,147.9,,135,152.6
-Detroit Mercy Titans vs. Milwaukee Panthers,Milwaukee Panthers,-8,0.37368728,-9,-0.1501,-6,-9,-6,-2,-9,0.73,-400,-0.07,73,78.1,29,57,78.2,149,148.5,146,154.1,148,149,147.9
-Bradley Braves vs. Missouri St Bears,Missouri St Bears,12,0.49190974,12,-0.0319,13,12,,8,12,0.13,472,-0.0448,11,12.8,,23,13.4,140,133.5,133,145.8,,142,139.1
-Air Force Falcons vs. Wyoming Cowboys,Wyoming Cowboys,-3,0.43366223,-3,-0.0901,-5,-2,-3,-4,-4,0.65,-147,0.0549,70,65.1,40,62,66,133,130,127,137.6,131,134,134.5
-Tennessee Tech Golden Eagles vs. Morehead St Eagles,Morehead St Eagles,2,0.45956662,2,-0.0642,4,2,,12,2,0.39,111,-0.0839,35,47.3,,17,42,140,143.5,144,141.9,,132,141.4
-Sacramento St Hornets vs. Portland St Vikings,Portland St Vikings,-5,0.43224608,-6,-0.0916,-3,-6,,2,-4,0.63,-270,-0.0997,62,74.1,,47,64.4,141,141.5,141,144.5,,139,140.2
-Longwood Lancers vs. Charleston Southern Buccaneers,Charleston Southern Buccaneers,8,0.47729107,8,-0.0465,8,8,-7,10,11,0.19,290,-0.0664,22,19.1,24,19,17.3,146,146.5,146,149.8,147,141,145.7
-Oakland Golden Grizzlies vs. Robert Morris Colonials,Robert Morris Colonials,5,0.4201535,5,-0.1037,6,4,-5,6,5,0.3,170,-0.0704,25,29.7,31,26,33.6,137,136,131,141.5,135,143,136.9
-Charleston Cougars vs. Towson Tigers,Towson Tigers,8,0.47729107,8,-0.0465,11,8,-8,6,8,0.25,240,-0.0441,15,27,24,28,25,139,139.5,135,142,138,140,137.9
-Rice Owls vs. Charlotte 49ers,Charlotte 49ers,4,0.46639482,4,-0.0574,7,4,-6,2,5,0.33,155,-0.0629,24,34,32,46,32.8,138,140.75,136,140.1,138,140,137.2
-Old Dominion Monarchs vs. Southern Miss Golden Eagles,Southern Miss Golden Eagles,2,0.45956662,2,-0.0642,4,2,-1,2,1,0.45,115,-0.0151,37,44.7,48,45,47.5,146,143.5,145,150.8,145,142,145.7
-Florida A&M Rattlers vs. Bethune-Cookman Wildcats,Bethune-Cookman Wildcats,-5,0.42940277,-5,-0.0944,-5,-5,-5,2,-5,0.58,-230,-0.117,69,58.3,33,48,65.7,139,139.5,139,143,139,129,142.7
-CSU Fullerton Titans vs. UC San Diego Tritons,UC San Diego Tritons,-12,0.36256498,-13,-0.1612,-10,-12,,-6,-11,0.86,-868,-0.0366,86,88,,68,85,137,137.5,136,136.4,,139,138.1
-N Colorado Bears vs. Idaho State Bengals,Idaho State Bengals,7,0.42803309,7,-0.0958,12,7,,,8,0.21,240,-0.0841,15,20.7,,,25.6,147,146,146,148.8,,,147.6
-VMI Keydets vs. Mercer Bears,Mercer Bears,-6,0.47817114,-6,-0.0456,-5,-6,-5,-6,-3,0.67,-270,-0.0597,67,73.1,33,68,61.1,155,155.5,153,157.2,155,153,155.4
-Oregon St Beavers vs. San Diego Toreros,San Diego Toreros,15,0.44897736,15,-0.0748,19,14,,14,16,0.07,700,-0.055,6,5.6,,10,7.3,139,141,139,139.1,,139,139.9
-Kent State Golden Flashes vs. Ball State Cardinals,Ball State Cardinals,11,0.43795658,11,-0.0859,10,11,,8,10,0.18,448,-0.0025,17,14.3,,25,19.6,135,135.5,128,138.8,,139,134.7
-CSU Bakersfield Roadrunners vs. Long Beach St 49ers,Long Beach St 49ers,5,0.4201535,5,-0.1037,5,5,,2,5,0.35,165,-0.0274,30,37.4,,41,33.3,136,134,131,138.4,,141,134.5
-Stephen F. Austin Lumberjacks vs. Incarnate Word Cardinals,Incarnate Word Cardinals,7,0.42829256,6,-0.0955,7,,,18,8,0.23,205,-0.0979,23,,,8,25,131,133.5,129,,,131,134.1
-Elon Phoenix vs. Hampton Pirates,Hampton Pirates,8,0.47729107,8,-0.0465,10,8,-7,8,6,0.24,280,-0.0232,17,24.2,26,24,29.7,139,138.75,134,143.2,137,142,140.1
-Jacksonville Dolphins vs. Austin Peay Governors,Austin Peay Governors,6,0.47415814,6,-0.0497,7,6,-7,4,6,0.29,185,-0.0609,21,28.7,27,40,30.3,134,133.5,129,140.3,131,137,134.3
-Portland Pilots vs. Saint Mary's Gaels,Saint Mary's Gaels,-17,0.4235382,-18,-0.1003,-16,-18,,-16,-13,0.93,-3334,-0.0409,94,97,,92,88.5,140,139.5,138,142.9,,138,140.1
-Morgan St Bears vs. South Carolina St Bulldogs,South Carolina St Bulldogs,-4,0.48321649,-4,-0.0406,-8,-4,,16,-4,0.63,-210,-0.0474,76,62.1,,8,63,143,154,152,154.1,,112,152.3
-Howard Bison vs. Delaware St Hornets,Delaware St Hornets,6,0.47415814,6,-0.0497,7,6,,20,4,0.26,190,-0.0848,25,27.5,,5,35.1,142,149.5,153,145.6,,119,149.9
-SIU-Edwardsville Cougars vs. Lindenwood Lions,Lindenwood Lions,7,0.42803309,7,-0.0958,8,7,-8,2,8,0.24,241,-0.0533,20,23.7,22,45,24.9,138,138,136,143.1,138,133,137.8
-UNC Wilmington Seahawks vs. Campbell Fighting Camels,Campbell Fighting Camels,11,0.43795658,11,-0.0859,14,11,-11,10,9,0.18,428,-0.0096,11,13.6,18,19,21.1,142,144.5,140,143.9,141,141,143.2
-Texas A&M-Commerce Lions vs. McNeese Cowboys,McNeese Cowboys,-17,0.42423801,-17,-0.0996,-16,-17,-16,10,-17,0.93,-2000,-0.0224,94,95.5,7,23,93.3,139,137,135,142.5,136,142,137.4
-Alabama A&M Bulldogs vs. Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff Golden Lions,7,0.42803309,7,-0.0958,6,7,-5,8,8,0.27,230,-0.033,32,23,31,27,26.5,155,162,166,160.3,165,124,161.3
-Northern Kentucky Norse vs. Green Bay Phoenix,Green Bay Phoenix,12,0.49423506,13,-0.0296,10,13,-11,8,15,0.16,575,0.0119,17,13.9,16,20,9.4,143,139.5,141,147.4,143,143,140.2
-The Citadel Bulldogs vs. Chattanooga Mocs,Chattanooga Mocs,-11,0.41203524,-12,-0.1118,-8,-12,-10,-6,-10,0.79,-750,-0.0924,79,90.5,20,73,82,144,142.5,142,147.9,142,145,145.3
-Eastern Michigan Eagles vs. Northern Illinois Huskies,Northern Illinois Huskies,7,0.42803309,7,-0.0958,8,8,-6,2,7,0.28,240,-0.0141,22,29.4,28,44,28,146,146.5,146,144.1,146,144,147.4
-New Hampshire Wildcats vs. Vermont Catamounts,Vermont Catamounts,-9,0.42007745,-10,-0.1037,-6,-10,-7,-6,-9,0.74,-500,-0.0933,74,91,24,74,78.8,132,130.5,126,137.3,129,133,133.5
-Miami (OH) RedHawks vs. Buffalo Bulls,Buffalo Bulls,12,0.49190974,12,-0.0319,16,12,-13,8,13,0.13,525,-0.03,9,12.1,13,24,13.2,150,149,152,149.7,151,148,149.2
-Coppin St Eagles vs. North Carolina Central Eagles,North Carolina Central Eagles,-7,0.42901835,-7,-0.0948,-5,-6,,14,-6,0.7,-289,-0.0429,69,76.4,,14,71.7,135,135.5,137,138.3,,127,136.8
-West Georgia Wolves vs. Stetson Hatters,Stetson Hatters,4,0.46639482,4,-0.0574,6,4,-4,-4,6,0.32,147,-0.0857,27,15.1,36,62,31.9,149,148.5,147,150.3,148,150,148.2
-Central Arkansas Bears vs. Bellarmine Knights,Bellarmine Knights,4,0.46639482,4,-0.0574,6,4,-4,2,4,0.36,145,-0.0482,29,37.3,33,45,36.1,148,145.5,146,149,148,148,146.5
-Cleveland St Vikings vs. IUPUI Jaguars,IUPUI Jaguars,11,0.43795658,11,-0.0859,10,10,,12,12,0.13,425,-0.0605,17,11.4,,12,13.1,143,141.5,142,142.2,,143,143.2
-Coastal Carolina Chanticleers vs. UL Monroe Warhawks,UL Monroe Warhawks,7,0.42803309,7,-0.0958,8,7,-7,4,6,0.3,226,-0.0072,19,31.5,26,34,29.7,138,136.5,134,142.4,135,139,138.8
-Eastern Illinois Panthers vs. Western Illinois Leathernecks,Western Illinois Leathernecks,4,0.46639482,4,-0.0574,7,4,-4,4,3,0.36,141,-0.0549,22,31.9,36,39,38,135,134.5,133,137.3,134,135,135
-Norfolk St Spartans vs. Maryland-Eastern Shore Hawks,Maryland-Eastern Shore Hawks,17,0.44408344,17,-0.0797,19,17,,14,17,0.06,1000,-0.0309,6,4.8,,10,5.9,136,142.5,145,137.8,,117,143.3
-Alabama St Hornets vs. Miss Valley St Delta Devils,Miss Valley St Delta Devils,22,0.44690407,23,-0.0769,20,22,,4,24,0.04,2200,-0.0035,4,4.3,,42,1.4,137,139.5,143,139.6,,128,137.9
+game,team,mov,coverprobability,spread_oddsapi,mov_percent_edge,spread_barttorvik,spread_drating,spread_kenpom,spread_massey,spread_evanmiya,win_probability_median_scaled,moneyline_oddsapi,moneyline_percent_edge,win_prob_barttorvik,win_prob_drating,win_prob_kenpom,win_prob_massey,win_prob_evanmiya,average_total,theoddsapi_total,projected_total_barttorvik,projected_total_drating,projected_total_kenpom,projected_total_massey,projected_total_evanmiya
+Florida Gators vs. Tennessee Volunteers,Florida Gators,-1,0.3943373323518553,-3,-0.1295,1,-2,-1,4,1,0.46,-140.0,-0.1233,46.0,35.0,52.0,46.0,46.0,147,148.5,141.0,153.7,147.0,146,145.6
+Georgia Bulldogs vs. Kentucky Wildcats,Georgia Bulldogs,2,0.5069154583167825,3,-0.0169,0,2,-1,5,1,0.45,115.0,-0.0151,48.0,38.0,55.00000000000001,36.0,45.29999999999999,157,155.0,155.0,165.7,155.0,156,154.2
+Vanderbilt Commodores vs. Mississippi St Bulldogs,Vanderbilt Commodores,2,0.4595666224309713,2,-0.0642,1,2,-2,5,2,0.44,100.0,-0.06,47.0,33.2,56.00000000000001,44.0,43.4,155,154.5,161.0,153.6,160.0,146,154.1
+West Virginia Mountaineers vs. Arizona Wildcats,West Virginia Mountaineers,2,0.5069154583167825,3,-0.0169,-2,2,-1,5,0,0.49,120.0,0.0355,56.00000000000001,44.9,54.0,34.0,49.2,147,143.5,142.0,156.6,143.0,149,143.9
+BYU Cougars vs. Texas Tech Red Raiders,BYU Cougars,-2,0.4402440758209511,-3,-0.0836,-1,-3,-1,-2,4,0.52,-166.0,-0.1041,55.00000000000001,58.9,50.0,52.0,35.699999999999996,151,150.0,152.0,150.9,153.0,147,152.4
+Xavier Musketeers vs. St. John's Red Storm,Xavier Musketeers,1,0.5069002916117006,2,-0.0169,2,,-2,-1,1,0.51,105.0,0.0222,43.0,,56.00000000000001,54.0,47.0,151,151.5,150.0,,150.0,150,152.0
+Texas Longhorns vs. Auburn Tigers,Texas Longhorns,11,0.4881491075940643,11,-0.0357,10,10,-10,0,12,0.19,425.0,-0.0005,19.0,18.4,81.0,34.0,15.5,152,152.5,152.0,154.7,152.0,149,153.3
+North Carolina Tar Heels vs. SMU Mustangs,North Carolina Tar Heels,-7,0.4766678693280233,-7,-0.0471,-6,-6,-6,-6,-8,0.7,-250.0,-0.0143,68.0,69.7,69.0,73.0,73.8,167,166.5,174.0,166.1,170.0,159,168.0
+Baylor Bears vs. Cincinnati Bearcats,Baylor Bears,-6,0.4781711415685151,-6,-0.0456,-4,-6,-5,-6,-3,0.66,-225.0,-0.0323,67.0,63.9,66.0,73.0,60.3,141,138.5,134.0,148.1,139.0,143,142.1
+Louisville Cardinals vs. Clemson Tigers,Louisville Cardinals,-3,0.4368613837274783,-4,-0.0869,-4,-4,-1,4,-2,0.57,-180.0,-0.0729,66.0,62.4,56.99999999999999,38.0,55.8,145,145.5,140.0,152.6,143.0,144,145.0
+Oklahoma St Cowboys vs. Kansas St Wildcats,Oklahoma St Cowboys,-2,0.4402440758209511,-3,-0.0836,0,-2,-1,-3,1,0.53,-136.0,-0.0463,49.0,54.50000000000001,53.0,53.0,45.7,147,146.5,149.0,150.6,147.0,142,146.3
+Duke Blue Devils vs. Pittsburgh Panthers,Duke Blue Devils,-15,0.4583714863535141,-15,-0.0654,-14,-14,-12,-8,-14,0.87,-1250.0,-0.0559,91.0,84.7,87.0,77.0,89.6,145,143.5,141.0,148.5,144.0,144,145.7
+Syracuse Orange vs. Georgia Tech Yellow Jackets,Syracuse Orange,-2,0.4930845416832174,-2,-0.0307,1,-1,-1,-4,-1,0.53,-118.0,-0.0113,47.0,46.3,53.0,61.0,53.79999999999999,155,156.0,157.0,157.3,157.0,151,155.0
+Missouri Tigers vs. LSU Tigers,Missouri Tigers,-7,0.4766678693280233,-7,-0.0471,-6,-7,-6,-7,-7,0.73,-278.0,-0.0054,73.0,78.9,69.0,56.00000000000001,73.5,152,151.0,148.0,156.7,150.0,152,151.4
+Iowa State Cyclones vs. Utah Utes,Iowa State Cyclones,-19,0.4805469224602959,-19,-0.0433,-17,-18,-19,-18,-23,0.95,-3800.0,-0.0244,93.0,95.0,96.0,81.0,97.8,153,151.5,157.0,152.0,157.0,147,151.4
+Wyoming Cowboys vs. New Mexico Lobos,Wyoming Cowboys,7,0.4756826119909313,7,-0.0481,6,7,-6,5,8,0.3,253.0,0.0167,30.0,17.4,68.0,36.0,25.5,153,147.5,152.0,155.4,152.0,154,150.3
+Marquette Golden Eagles vs. Georgetown Hoyas,Marquette Golden Eagles,-13,0.4566975248492554,-13,-0.0671,-14,-12,-13,-14,-12,0.88,-816.5,-0.0109,90.0,87.4,88.0,89.0,84.5,145,145.5,142.0,151.0,145.0,144,144.8
+Boise State Broncos vs. UNLV Rebels,Boise State Broncos,-7,0.4766678693280233,-7,-0.0471,-7,-7,-7,-6,-6,0.75,-313.0,-0.0079,76.0,82.3,75.0,74.0,71.5,142,140.0,141.0,143.6,143.0,141,141.3
+San Jos√© St Spartans vs. Utah State Aggies,San Jos√© St Spartans,,,,,7,10,-10,10,10,0.18,,nan,24.0,15.299999999999999,83.0,18.0,18.0,148,,149.0,147.7,148.0,148,148.0
+Missouri St Bears vs. UIC Flames,Missouri St Bears,-3,0.486882927743974,-3,-0.0369,-1,-2,-2,-6,2,0.55,-150.0,-0.05,55.00000000000001,58.4,55.00000000000001,71.0,44.79999999999999,145,139.5,141.0,148.0,142.0,146,146.1
+UAB Blazers vs. Tulane Green Wave,UAB Blazers,-8,0.4239514794523615,-9,-0.0999,-6,-8,-6,-4,-7,0.72,-395.0,-0.078,72.0,82.4,72.0,66.0,72.7,156,158.0,156.0,158.6,156.0,155,155.1
+Ball State Cardinals vs. Miami (OH) RedHawks,Ball State Cardinals,0,,1,,-2,1,-1,-2,0,0.52,-105.0,0.0078,56.99999999999999,48.3,52.0,56.99999999999999,49.3,147,145.5,148.0,144.0,147.0,147,146.6
+Eastern Illinois Panthers vs. SIU-Edwardsville Cougars,Eastern Illinois Panthers,2,0.5069154583167825,3,-0.0169,1,2,-2,-12,2,0.47,130.0,0.0352,47.0,35.8,57.99999999999999,82.0,41.4,134,132.5,131.0,140.6,132.0,134,133.9
+Saint Mary's Gaels vs. Loyola Marymount Lions,Saint Mary's Gaels,-14,0.4568244669595832,-14,-0.067,-13,-14,-12,-14,-11,0.89,-2000.0,-0.0624,89.0,91.1,86.0,91.0,85.2,135,135.0,129.0,141.3,134.0,134,134.4
+Akron Zips vs. Central Michigan Chippewas,Akron Zips,-9,0.4695170395183575,-9,-0.0543,-9,-9,-7,-10,-11,0.8,-370.0,0.0128,80.0,70.8,74.0,83.0,81.8,144,146.5,149.0,146.7,145.0,140,140.7
+Colorado St Rams vs. Fresno St Bulldogs,Colorado St Rams,-15,0.4583714863535141,-15,-0.0654,-14,-15,-15,-10,-15,0.91,-1429.0,-0.0246,88.0,93.7,91.0,85.0,90.7,147,149.5,146.0,148.9,147.0,147,144.9
+Western Michigan Broncos vs. Bowling Green Falcons,Western Michigan Broncos,-4,0.4832164909801298,-4,-0.0406,-5,-4,-3,-5,-1,0.57,-180.0,-0.0729,68.0,57.49999999999999,59.0,52.0,52.800000000000004,148,151.5,147.0,150.6,149.0,147,148.4
+UTSA Roadrunners vs. Tulsa Golden Hurricane,UTSA Roadrunners,-6,0.4781711415685151,-6,-0.0456,-5,-5,-5,-2,-6,0.67,-235.0,-0.0315,69.0,56.60000000000001,67.0,55.00000000000001,67.9,153,154.5,152.0,155.0,153.0,154,151.0
+Morgan St Bears vs. North Carolina Central Eagles,Morgan St Bears,3,0.513117072256026,4,-0.0107,1,,-2,5,2,0.45,133.0,0.0208,48.0,38.7,54.0,41.0,44.79999999999999,155,154.5,157.0,152.8,156.0,155,153.5
+Buffalo Bulls vs. Ohio Bobcats,Buffalo Bulls,9,0.5304829604816426,10,0.0067,11,10,-8,7,8,0.24,333.0,0.0091,17.0,13.3,76.0,28.999999999999996,24.2,155,152.5,156.0,157.4,156.0,150,154.2
+Toledo Rockets vs. Eastern Michigan Eagles,Toledo Rockets,-10,0.4656767371757552,-10,-0.0581,-12,-10,-9,-10,-12,0.84,-500.0,0.0067,84.0,74.7,79.0,86.0,84.5,154,152.0,158.0,149.9,157.0,150,156.1
+Northern Illinois Huskies vs. Kent State Golden Flashes,Northern Illinois Huskies,11,0.5879647646887123,13,0.0642,9,13,-12,7,14,0.16,511.0,-0.0037,16.0,11.3,86.0,28.999999999999996,11.5,135,136.5,129.0,140.9,134.0,138,134.9
+Florida Gators vs. Tennessee Volunteers,Tennessee Volunteers,1,0.5539160523213018,3,0.0301,-1,3,1,-4,-1,0.54,117.0,0.0792,54.0,65.0,48.0,54.0,54.0,147,148.5,141.0,153.7,147.0,146,145.6
+Georgia Bulldogs vs. Kentucky Wildcats,Kentucky Wildcats,-2,0.4402440758209511,-3,-0.0836,0,-2,1,-5,-1,0.55,-140.0,-0.0333,52.0,62.0,45.0,64.0,54.7,157,155.0,155.0,165.7,155.0,156,154.2
+Vanderbilt Commodores vs. Mississippi St Bulldogs,Mississippi St Bulldogs,-2,0.4930845416832174,-2,-0.0307,-1,-2,2,-5,-2,0.56,-120.0,0.0145,53.0,66.8,44.0,56.00000000000001,56.60000000000001,155,154.5,161.0,153.6,160.0,146,154.1
+West Virginia Mountaineers vs. Arizona Wildcats,Arizona Wildcats,-2,0.4402440758209511,-3,-0.0836,2,-2,1,-5,0,0.51,-145.0,-0.0818,44.0,55.1,46.0,66.0,50.8,147,143.5,142.0,156.6,143.0,149,143.9
+BYU Cougars vs. Texas Tech Red Raiders,Texas Tech Red Raiders,2,0.5069154583167825,3,-0.0169,1,3,1,2,-4,0.48,140.0,0.0633,45.0,41.1,50.0,48.0,64.3,151,150.0,152.0,150.9,153.0,147,152.4
+Xavier Musketeers vs. St. John's Red Storm,St. John's Red Storm,-1,0.4460839476786983,-2,-0.0777,-2,,2,1,-1,0.5,-127.0,-0.0595,56.99999999999999,,44.0,46.0,53.0,151,151.5,150.0,,150.0,150,152.0
+Texas Longhorns vs. Auburn Tigers,Auburn Tigers,-11,0.4616583674315948,-11,-0.0622,-10,-10,10,0,-12,0.81,-600.0,-0.0471,81.0,81.6,19.0,66.0,84.5,152,152.5,152.0,154.7,152.0,149,153.3
+North Carolina Tar Heels vs. SMU Mustangs,SMU Mustangs,7,0.4756826119909313,7,-0.0481,6,6,6,6,8,0.3,200.0,-0.0333,32.0,30.3,31.0,27.0,26.200000000000003,167,166.5,174.0,166.1,170.0,159,168.0
+Baylor Bears vs. Cincinnati Bearcats,Cincinnati Bearcats,6,0.4741581359723123,6,-0.0497,4,6,5,6,3,0.34,180.0,-0.0171,33.0,36.1,34.0,27.0,39.7,141,138.5,134.0,148.1,139.0,143,142.1
+Louisville Cardinals vs. Clemson Tigers,Clemson Tigers,3,0.513117072256026,4,-0.0107,4,4,1,-4,2,0.43,145.0,0.0218,34.0,37.6,43.0,62.0,44.2,145,145.5,140.0,152.6,143.0,144,145.0
+Oklahoma St Cowboys vs. Kansas St Wildcats,Kansas St Wildcats,2,0.5069154583167825,3,-0.0169,0,2,1,3,-1,0.47,114.0,0.0027,51.0,45.5,47.0,47.0,54.29999999999999,147,146.5,149.0,150.6,147.0,142,146.3
+Duke Blue Devils vs. Pittsburgh Panthers,Pittsburgh Panthers,15,0.4953029387967503,15,-0.0285,14,14,12,8,14,0.13,717.0,0.0076,9.0,15.299999999999999,13.0,23.0,10.4,145,143.5,141.0,148.5,144.0,144,145.7
+Syracuse Orange vs. Georgia Tech Yellow Jackets,Georgia Tech Yellow Jackets,2,0.4595666224309713,2,-0.0642,-1,1,1,4,1,0.47,-104.0,-0.0398,53.0,53.7,47.0,39.0,46.2,155,156.0,157.0,157.3,157.0,151,155.0
+Missouri Tigers vs. LSU Tigers,LSU Tigers,7,0.4756826119909313,7,-0.0481,6,7,6,7,7,0.27,225.0,-0.0377,27.0,21.1,31.0,44.0,26.5,152,151.0,148.0,156.7,150.0,152,151.4
+Iowa State Cyclones vs. Utah Utes,Utah Utes,19,0.4762123577019178,19,-0.0476,17,18,19,18,23,0.05,1322.5,-0.0203,7.000000000000001,5.0,4.0,19.0,2.1999999999999997,153,151.5,157.0,152.0,157.0,147,151.4
+Wyoming Cowboys vs. New Mexico Lobos,New Mexico Lobos,-7,0.4766678693280233,-7,-0.0471,-6,-6,6,-5,-8,0.7,-325.0,-0.0647,70.0,82.6,32.0,64.0,74.5,153,147.5,152.0,155.4,152.0,154,150.3
+Marquette Golden Eagles vs. Georgetown Hoyas,Georgetown Hoyas,13,0.4951589647223455,13,-0.0287,14,12,13,14,12,0.12,550.0,-0.0338,10.0,12.6,12.0,11.0,15.5,145,145.5,142.0,151.0,145.0,144,144.8
+Boise State Broncos vs. UNLV Rebels,UNLV Rebels,7,0.4756826119909313,7,-0.0481,7,7,7,6,6,0.25,239.0,-0.045,24.0,17.7,25.0,26.0,28.499999999999996,142,140.0,141.0,143.6,143.0,141,141.3
+San Jos√© St Spartans vs. Utah State Aggies,Utah State Aggies,,,,,-7,-10,10,-10,-10,0.82,,nan,76.0,84.7,17.0,82.0,82.0,148,,149.0,147.7,148.0,148,148.0
+Missouri St Bears vs. UIC Flames,UIC Flames,3,0.4598963773630318,3,-0.0639,1,2,2,6,-2,0.45,124.0,0.0036,45.0,41.6,45.0,28.999999999999996,55.2,145,139.5,141.0,148.0,142.0,146,146.1
+UAB Blazers vs. Tulane Green Wave,Tulane Green Wave,8,0.5257843185116576,9,0.002,6,9,6,4,7,0.28,300.0,0.03,28.000000000000004,17.6,28.000000000000004,34.0,27.3,156,158.0,156.0,158.6,156.0,155,155.1
+Ball State Cardinals vs. Miami (OH) RedHawks,Miami (OH) RedHawks,0,,-1,,2,-1,1,2,0,0.48,-115.0,-0.0549,43.0,51.7,48.0,43.0,50.7,147,145.5,148.0,144.0,147.0,147,146.6
+Eastern Illinois Panthers vs. SIU-Edwardsville Cougars,SIU-Edwardsville Cougars,-2,0.4402440758209511,-3,-0.0836,-1,-2,2,12,-2,0.53,-159.0,-0.0839,53.0,64.2,42.0,18.0,58.599999999999994,134,132.5,131.0,140.6,132.0,134,133.9
+Saint Mary's Gaels vs. Loyola Marymount Lions,Loyola Marymount Lions,14,0.4960048357396284,14,-0.0278,13,14,12,14,11,0.11,870.0,0.0069,11.0,8.9,14.000000000000002,9.0,14.799999999999999,135,135.0,129.0,141.3,134.0,134,134.4
+Akron Zips vs. Central Michigan Chippewas,Central Michigan Chippewas,9,0.4797923484577091,9,-0.044,9,8,7,10,11,0.2,280.0,-0.0632,20.0,29.2,26.0,17.0,18.2,144,146.5,149.0,146.7,145.0,140,140.7
+Colorado St Rams vs. Fresno St Bulldogs,Fresno St Bulldogs,15,0.4953029387967503,15,-0.0285,14,15,15,10,15,0.09,800.0,-0.0211,12.0,6.3,9.0,15.0,9.3,147,149.5,146.0,148.9,147.0,147,144.9
+Western Michigan Broncos vs. Bowling Green Falcons,Bowling Green Falcons,4,0.466394822495543,4,-0.0574,5,4,3,5,1,0.43,147.0,0.0251,32.0,42.5,41.0,48.0,47.199999999999996,148,151.5,147.0,150.6,149.0,147,148.4
+UTSA Roadrunners vs. Tulsa Golden Hurricane,Tulsa Golden Hurricane,6,0.4741581359723123,6,-0.0497,5,5,5,2,6,0.33,190.0,-0.0148,31.0,43.4,33.0,45.0,32.1,153,154.5,152.0,155.0,153.0,154,151.0
+Morgan St Bears vs. North Carolina Central Eagles,North Carolina Central Eagles,-3,0.4368613837274783,-4,-0.0869,-1,,2,-5,-2,0.55,-165.0,-0.0726,52.0,61.3,46.0,59.0,55.2,155,154.5,157.0,152.8,156.0,155,153.5
+Buffalo Bulls vs. Ohio Bobcats,Ohio Bobcats,-9,0.4200774459044259,-10,-0.1037,-11,-10,8,-7,-8,0.76,-450.0,-0.0582,83.0,86.7,24.0,71.0,75.8,155,152.5,156.0,157.4,156.0,150,154.2
+Toledo Rockets vs. Eastern Michigan Eagles,Eastern Michigan Eagles,10,0.4844545925399648,10,-0.0394,12,10,9,10,12,0.16,360.0,-0.0574,16.0,25.3,21.0,14.000000000000002,15.5,154,152.0,158.0,149.9,157.0,150,156.1
+Northern Illinois Huskies vs. Kent State Golden Flashes,Kent State Golden Flashes,-11,0.3653684511162809,-13,-0.1584,-9,-12,12,-7,-14,0.84,-769.0,-0.0449,84.0,88.7,14.000000000000002,71.0,88.5,135,136.5,129.0,140.9,134.0,138,134.9
