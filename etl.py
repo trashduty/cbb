@@ -5,7 +5,7 @@ import pandas as pd
 from scrapers import get_barttorvik_df
 import numpy as np 
 
-load_dotenv()
+# load_dotenv()
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """
