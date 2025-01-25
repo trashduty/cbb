@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 import requests
 import pandas as pd
 from scrapers import get_barttorvik_df
