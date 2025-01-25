@@ -32,12 +32,16 @@ jobs:
     
     - name: Install dependencies
       run: |
-        uv sync
+        uv venv
+        source .venv/bin/activate
+        uv pip install -e .
       
     - name: Run ETL script
       env:
         ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-      run: python etl.py
+      run: |
+        source .venv/bin/activate
+        python etl.py
         
     - name: Commit and push if changed
       run: |
