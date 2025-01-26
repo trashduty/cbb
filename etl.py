@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from scrapers import get_barttorvik_df
 import numpy as np 
+# from dotenv import load_dotenv
 
 # load_dotenv()
 
@@ -264,8 +265,8 @@ def run_etl():
     final_df['forecasted_spread'] = final_df[spread_models].mean(axis=1, skipna=True)
 
     # Calculate Predicted Outcome
-    final_df['Predicted Outcome'] = (0.6 * final_df['Opening Spread'] + 
-                                    0.4 * final_df['forecasted_spread'])
+    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] + 
+                                    0.3 * final_df['forecasted_spread'])
 
     # Load spreads lookup data
     try:
@@ -290,20 +291,19 @@ def run_etl():
         print("Warning: spreads_lookup.csv not found")
         final_df['Spread Cover Probability'] = np.nan
         final_df['Edge For Covering Spread'] = np.nan
-
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik', 'projected_total_drating',
-                             'projected_total_kenpom', 'projected_total_evanmiya']
-    
+                            'projected_total_kenpom', 'projected_total_evanmiya']
+
     # Handle missing totals data
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
     final_df['forecasted_total'] = final_df[projected_total_models].mean(axis=1, skipna=True)
-    
-    # Fill missing averages with theoddsapi_total
+
+    # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
-        0.6 * final_df['theoddsapi_total'].fillna(0) + 
-        0.4 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total'])
-    )
+        (0.7 * final_df['theoddsapi_total'].fillna(0) + 
+        0.3 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
+    ).round().astype(pd.Int64Dtype())  # Round to integer here
 
     # Load and process totals lookup data
     try:
@@ -311,28 +311,24 @@ def run_etl():
         
         # Handle Market Line (theoddsapi_total) with 0.5 increments
         final_df['theoddsapi_total_rounded'] = (final_df['theoddsapi_total']
-                                              .apply(lambda x: round(x * 2)/2 if pd.notnull(x) else np.nan))
-        
-        # Convert True Line (average_total) to integer
-        final_df['average_total_rounded'] = (final_df['average_total']
-                                           .round()
-                                           .astype(pd.Int64Dtype()))  # Nullable integer type
+                                            .apply(lambda x: round(x * 2)/2 if pd.notnull(x) else np.nan))
         
         # Convert lookup table columns to correct types
         totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
         totals_lookup_df['True Line'] = totals_lookup_df['True Line'].astype(pd.Int64Dtype())
         
+        # Merge using the already rounded average_total
         final_df = final_df.merge(
             totals_lookup_df,
-            left_on=['theoddsapi_total_rounded', 'average_total_rounded'],
+            left_on=['theoddsapi_total_rounded', 'average_total'],
             right_on=['Market Line', 'True Line'],
             how='left'
         )
         final_df['Over Cover Probability'] = final_df['Over_Probability']
         final_df['Under Cover Probability'] = final_df['Under_Probability']
-        final_df.drop(columns=['theoddsapi_total_rounded', 'average_total_rounded',
-                              'Market Line', 'True Line', 'Over_Probability',
-                              'Under_Probability', 'Push_Probability'], inplace=True, errors='ignore')
+        final_df.drop(columns=['theoddsapi_total_rounded', 
+                            'Market Line', 'True Line', 'Over_Probability',
+                            'Under_Probability', 'Push_Probability'], inplace=True, errors='ignore')
     except FileNotFoundError:
         print("Warning: totals_lookup.csv not found. Skipping Over/Under probabilities.")
         final_df['Over Cover Probability'] = np.nan
