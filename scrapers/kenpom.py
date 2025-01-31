@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -29,8 +29,10 @@ def fetch_kenpom():
         
     # Initialize Firefox options
     options = Options()
-    options.headless = True
-    driver = webdriver.Firefox(options=options)
+    options.add_argument('--headless')  # Equivalent to options.headless = True
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(options=options)
     
     all_games = []
     

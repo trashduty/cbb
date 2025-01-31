@@ -36,14 +36,12 @@ jobs:
         source .venv/bin/activate
         uv pip install -e .
 
-    - name: Install Firefox and Geckodriver
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y firefox
-    
-    - name: Setup GeckoDriver
-      uses: browser-actions/setup-geckodriver@latest
-      
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@latest
+
+    - name: Install ChromeDriver
+      uses: nanasess/setup-chromedriver@master
+
     - name: Run ETL script
       env:
         ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
