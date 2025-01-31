@@ -39,6 +39,10 @@ jobs:
     - name: Run ETL script
       env:
         ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        KENPOM_USERNAME: ${{ secrets.KENPOM_USERNAME }}
+        KENPOM_PASSWORD: ${{ secrets.KENPOM_PASSWORD }}
+        EVANMIYA_USERNAME: ${{ secrets.EVANMIYA_USERNAME }}
+        EVANMIYA_PASSWORD: ${{ secrets.EVANMIYA_PASSWORD }}
       run: |
         source .venv/bin/activate
         python etl.py
