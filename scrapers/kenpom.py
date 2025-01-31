@@ -254,8 +254,6 @@ def clean_kenpom(df):
     # Apply prediction parsing
     df_clean['parsed_pred'] = df_clean['prediction'].apply(parse_prediction)
     df_clean = df_clean.dropna(subset=['parsed_pred'])
-    
-    # Extract components and calculate spreads/probabilities
     def assign_values(row):
         fav_team, scores, win_prob = row['parsed_pred']
         fav_score, dog_score = scores
@@ -265,12 +263,12 @@ def clean_kenpom(df):
         if fav_team == row['Home Team']:
             home_spread = -abs(spread)
             away_spread = abs(spread)
-            home_prob = win_prob
-            away_prob = 100 - win_prob
+            home_prob = win_prob  # Already in decimal form (e.g. 0.75)
+            away_prob = 1 - win_prob  # Use 1 instead of 100 since we're working with decimals
         else:
             home_spread = abs(spread)
             away_spread = -abs(spread)
-            home_prob = 100 - win_prob
+            home_prob = 1 - win_prob  # Use 1 instead of 100
             away_prob = win_prob
             
         total = fav_score + dog_score
@@ -282,7 +280,6 @@ def clean_kenpom(df):
             'win_prob_kenpom_away': away_prob,
             'projected_total_kenpom': total
         })
-    
     # Calculate final values
     final_cols = df_clean.apply(assign_values, axis=1)
     df_clean = pd.concat([df_clean[['Home Team', 'Away Team', 'game date']], final_cols], axis=1)
