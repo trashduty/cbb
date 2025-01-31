@@ -3,9 +3,9 @@ import requests
 import pandas as pd
 from scrapers import get_barttorvik_df,get_kenpom_df
 import numpy as np 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """

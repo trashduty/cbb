@@ -4,4 +4,3 @@ env
 __pycache__
 archived/
 *.ipynb
-CBB Output.csv
