@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options 
 from selenium.webdriver.common.by import By
@@ -17,7 +17,7 @@ def fetch_kenpom():
     Fetches game data from kenpom.com for today and tomorrow using Selenium
     """
     # Load environment variables
-    load_dotenv()
+    # load_dotenv()
     
     # Retrieve credentials
     USERNAME = os.getenv("KENPOM_USERNAME")
@@ -28,11 +28,15 @@ def fetch_kenpom():
         return pd.DataFrame()
         
     # Initialize Firefox options
-    options = Options()
-    options.add_argument('--headless')  # Equivalent to options.headless = True
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=options)
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')  # Run in headless mode
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')
+    # Add user agent to avoid detection
+    chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+
+    driver = webdriver.Chrome(options=chrome_options)
     
     all_games = []
     
@@ -144,7 +148,7 @@ def fetch_kenpom():
 def map_team_names(df):
     """Map team names using crosswalk"""
     crosswalk = pd.read_csv('crosswalk.csv')
-    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
+    name_map = crosswalk.set_index('kenpom')['API'].to_dict()
     
     # Create mapping report
     unmapped_teams = {}
