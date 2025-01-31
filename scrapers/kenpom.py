@@ -244,7 +244,7 @@ def clean_kenpom(df):
         if not prob_match:
             return None, None, None
             
-        win_prob = float(prob_match.group(1))
+        win_prob = float(prob_match.group(1)) * (1/100)
         
         # Determine favored team
         fav_team = clean_team_name(pred_str.split()[0])
