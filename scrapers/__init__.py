@@ -1,7 +1,7 @@
 from .barttorvik import fetch_barttorvik, get_barttorvik_df
 # from .dratings import fetch_dratings, get_drating_df 
 # from .evanmiya import fetch_evanmiya, clean_evanmiya
-# from .kenpom import fetch_kenpom, clean_kenpom
+from .kenpom import get_kenpom_df
 # from .massey import fetch_massey, clean_massey
 
 # def get_barttorvik_df(include_tomorrow=True): return map_team_names(transform_barttorvik_data(fetch_barttorvik(include_tomorrow)))

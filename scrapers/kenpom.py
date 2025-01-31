@@ -10,11 +10,11 @@ import pandas as pd
 import numpy as np
 import re
 import time
-from io import StringIO 
+from datetime import datetime
 
 def fetch_kenpom():
     """
-    Fetches game data from kenpom.com using Selenium
+    Fetches game data from kenpom.com for today and tomorrow using Selenium
     """
     # Load environment variables
     load_dotenv()
@@ -32,6 +32,8 @@ def fetch_kenpom():
     options.headless = True
     driver = webdriver.Firefox(options=options)
     
+    all_games = []
+    
     try:
         # Navigate to fanmatch page
         driver.get('https://kenpom.com/fanmatch.php')
@@ -48,14 +50,88 @@ def fetch_kenpom():
         pwd_el.send_keys(Keys.RETURN)
         time.sleep(5)
         
-        # Wait for table and extract
-        fanmatch_table = wait.until(EC.presence_of_element_located((By.ID, 'fanmatch-table')))
-        time.sleep(2)
+        # Function to extract date from content header
+        def parse_date_from_header():
+            header = wait.until(EC.presence_of_element_located((By.ID, 'content-header')))
+            header_text = header.text
+            print(f"Header text: {header_text}")  # Debug print
+            
+            # Extract date using regex
+            date_match = re.search(r'for (.*?) \(', header_text)
+            if not date_match:
+                print("Could not find date in header")
+                return None
+                
+            date_str = date_match.group(1)
+            print(f"Extracted date string: {date_str}")  # Debug print
+            
+            try:
+                # Parse the date with the current year
+                date_obj = datetime.strptime(date_str, '%A, %B %dst')
+                return date_obj.replace(year=2025)
+            except ValueError:
+                try:
+                    date_obj = datetime.strptime(date_str, '%A, %B %dnd')
+                    return date_obj.replace(year=2025)
+                except ValueError:
+                    try:
+                        date_obj = datetime.strptime(date_str, '%A, %B %drd')
+                        return date_obj.replace(year=2025)
+                    except ValueError:
+                        try:
+                            date_obj = datetime.strptime(date_str, '%A, %B %dth')
+                            return date_obj.replace(year=2025)
+                        except ValueError:
+                            print(f"Failed to parse date string: {date_str}")
+                            return None
         
-        table_html = fanmatch_table.get_attribute('outerHTML')
-        # Use StringIO to wrap the HTML string
-        raw_df = pd.read_html(StringIO(table_html))[0]
-        return raw_df
+        # Function to extract table and add date
+        def extract_table_with_date(date_obj):
+            if date_obj is None:
+                print("No valid date provided for table extraction")
+                return pd.DataFrame()
+                
+            fanmatch_table = wait.until(EC.presence_of_element_located((By.ID, 'fanmatch-table')))
+            time.sleep(2)
+            table_html = fanmatch_table.get_attribute('outerHTML')
+            df = pd.read_html(table_html)[0]
+            df['Game Date'] = date_obj.strftime('%Y%m%d')
+            return df
+        
+        # Get today's date and games
+        today_date = parse_date_from_header()
+        if today_date:
+            today_games = extract_table_with_date(today_date)
+            if not today_games.empty:
+                all_games.append(today_games)
+        
+        # Find and click tomorrow's link
+        try:
+            tomorrow_links = driver.find_elements(By.XPATH, "//a[contains(@href, 'fanmatch.php?d=')]")
+            # Get the link that points to the next day
+            tomorrow_link = next(link for link in tomorrow_links 
+                               if datetime.strptime(link.get_attribute('href').split('=')[1], '%Y-%m-%d') > today_date)
+            
+            tomorrow_date = datetime.strptime(tomorrow_link.get_attribute('href').split('=')[1], '%Y-%m-%d')
+            tomorrow_link.click()
+            time.sleep(5)
+            
+            # Get tomorrow's games
+            tomorrow_games = extract_table_with_date(tomorrow_date)
+            if not tomorrow_games.empty:
+                all_games.append(tomorrow_games)
+                
+        except Exception as e:
+            print(f"Error fetching tomorrow's games: {e}")
+        
+        # Combine all games
+        if not all_games:
+            print("No games data collected")
+            return pd.DataFrame()
+            
+        combined_df = pd.concat(all_games, ignore_index=True)
+        print(f"Combined DataFrame columns: {combined_df.columns}")  # Debug print
+        return combined_df
         
     except Exception as e:
         print(f"Error fetching KenPom data: {e}")
@@ -63,14 +139,44 @@ def fetch_kenpom():
         
     finally:
         driver.quit()
-
+def map_team_names(df):
+    """Map team names using crosswalk"""
+    crosswalk = pd.read_csv('crosswalk.csv')
+    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
+    
+    # Create mapping report
+    unmapped_teams = {}
+    for team in df['Team'].unique():
+        if team not in name_map:
+            unmapped_teams[team] = len(df[df['Team'] == team])
+    
+    if unmapped_teams:
+        print("\nUnmapped teams and their occurrence count:")
+        for team, count in sorted(unmapped_teams.items(), key=lambda x: x[1], reverse=True):
+            print(f"- {team}: {count} occurrences")
+    
+    # Create mapped dataframe
+    mapped_df = df.copy()
+    for col in ['Home Team', 'Away Team', 'Team']:
+        mapped_df[col] = mapped_df[col].map(name_map)
+    
+    # Drop rows with missing mappings
+    original_count = len(mapped_df)
+    mapped_df = mapped_df.dropna(subset=['Home Team', 'Away Team', 'Team'])
+    if len(mapped_df) < original_count:
+        print(f"\nDropped {original_count - len(mapped_df)} rows due to mapping issues")
+    
+    return mapped_df
 def clean_kenpom(df):
     """
     Cleans the DataFrame by processing team names, spreads, probabilities and totals
     """
     if df.empty:
+        print("Empty DataFrame received in clean_kenpom")
         return df
         
+    print(f"Input DataFrame columns: {df.columns}")  # Debug print
+    
     # Create a copy
     df_clean = df.copy()
     
@@ -111,6 +217,7 @@ def clean_kenpom(df):
         return name.strip()
     
     df_clean['Home Team'] = df_clean['Home Team'].apply(clean_team_name)
+    df_clean['Home Team'] = df_clean['Home Team'].str.rsplit(' ', n=1).str[0]
     df_clean['Away Team'] = df_clean['Away Team'].apply(clean_team_name)
     
     # Parse prediction column for spreads and probabilities
@@ -163,26 +270,88 @@ def clean_kenpom(df):
         total = fav_score + dog_score
         
         return pd.Series({
-            'Home Team Spread': home_spread,
-            'Away Team Spread': away_spread,
-            'Home Team Win Probability': home_prob,
-            'Away Team Win Probability': away_prob,
-            'Projected Total': total
+            'spread_kenpom_home': home_spread,
+            'spread_kenpom_away': away_spread,
+            'win_prob_kenpom_home': home_prob,
+            'win_prob_kenpom_away': away_prob,
+            'projected_total_kenpom': total
         })
     
     # Calculate final values
     final_cols = df_clean.apply(assign_values, axis=1)
-    df_clean = pd.concat([df_clean[['Home Team', 'Away Team']], final_cols], axis=1)
+    df_clean = pd.concat([df_clean[['Home Team', 'Away Team', 'game date']], final_cols], axis=1)
     
-    # Select final columns
-    columns = [
+    print(f"Output DataFrame columns: {df_clean.columns}")  # Debug print
+    return df_clean
+
+def transform_kenpom_format(df):
+    """
+    Transforms KenPom DataFrame from one row per game to two rows per game
+    """
+    if df.empty:
+        print("Empty DataFrame received in transform_kenpom_format")
+        return df
+        
+    print(f"Transform input DataFrame columns: {df.columns}")  # Debug print
+    
+    # Create empty list to store transformed rows
+    transformed_rows = []
+    
+    for _, row in df.iterrows():
+        try:
+            # Create home team row
+            home_row = {
+                'Home Team': row['Home Team'],
+                'Away Team': row['Away Team'],
+                'Team': row['Home Team'],
+                'Game Date': row['game date'],
+                'spread_kenpom': row['spread_kenpom_home'],
+                'win_prob_kenpom': row['win_prob_kenpom_home'],
+                'projected_total_kenpom': row['projected_total_kenpom']
+            }
+            
+            # Create away team row
+            away_row = {
+                'Home Team': row['Home Team'],
+                'Away Team': row['Away Team'],
+                'Team': row['Away Team'],
+                'Game Date': row['game date'],
+                'spread_kenpom': row['spread_kenpom_away'],
+                'win_prob_kenpom': row['win_prob_kenpom_away'],
+                'projected_total_kenpom': row['projected_total_kenpom']
+            }
+            
+            transformed_rows.extend([home_row, away_row])
+            
+        except KeyError as e:
+            print(f"KeyError while transforming row: {e}")
+            print(f"Row contents: {row}")
+    
+    if not transformed_rows:
+        print("No rows were transformed successfully")
+        return pd.DataFrame()
+    
+    # Create new DataFrame from transformed rows
+    new_df = pd.DataFrame(transformed_rows)
+    
+    print(f"Transform output DataFrame columns: {new_df.columns}")  # Debug print
+    
+    # Ensure columns are in the requested order
+    column_order = [
         'Home Team',
         'Away Team',
-        'Home Team Spread',
-        'Away Team Spread',
-        'Home Team Win Probability',
-        'Away Team Win Probability',
-        'Projected Total'
+        'Team',
+        'Game Date',
+        'spread_kenpom',
+        'win_prob_kenpom',
+        'projected_total_kenpom'
     ]
     
-    return df_clean[columns]
+    return new_df[column_order]
+
+def get_kenpom_df():
+    df = fetch_kenpom()
+    df_clean = clean_kenpom(df)
+    df_transformed = transform_kenpom_format(df_clean)
+    final_df = map_team_names(df_transformed)
+    return final_df

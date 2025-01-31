@@ -1,7 +1,7 @@
 import os
 import requests
 import pandas as pd
-from scrapers import get_barttorvik_df
+from scrapers import get_barttorvik_df,get_kenpom_df
 import numpy as np 
 # from dotenv import load_dotenv
 
@@ -219,11 +219,18 @@ def run_etl():
     # Get data from sources
     odds_df = get_combined_odds()
     barttorvik = get_barttorvik_df(include_tomorrow=True)
+    kenpom = get_kenpom_df()
 
     # Merge data
     final_df = pd.merge(
         barttorvik,
         odds_df,
+        on=['Home Team', 'Away Team', 'Team'],
+        how='inner'
+    )
+    final_df = pd.merge(
+        final_df,
+        kenpom,
         on=['Home Team', 'Away Team', 'Team'],
         how='inner'
     )
@@ -233,17 +240,30 @@ def run_etl():
 
 
 
-    # Add stub columns for other prediction models
+    # # Add stub columns for other prediction models
+    # # Spread predictions
+    # for model in ['drating', 'kenpom', 'evanmiya']:
+    #     final_df[f'spread_{model}'] = np.nan
+    
+    # # Win probabilities
+    # for model in ['drating', 'kenpom', 'evanmiya']:
+    #     final_df[f'win_prob_{model}'] = np.nan
+
+    # # Add projected_total columns for other models
+    # for model in ['drating', 'kenpom', 'evanmiya']:
+    #     final_df[f'projected_total_{model}'] = np.nan
+
+        # Add stub columns for other prediction models
     # Spread predictions
-    for model in ['drating', 'kenpom', 'evanmiya']:
+    for model in ['drating', 'evanmiya']:
         final_df[f'spread_{model}'] = np.nan
     
     # Win probabilities
-    for model in ['drating', 'kenpom', 'evanmiya']:
+    for model in ['drating', 'evanmiya']:
         final_df[f'win_prob_{model}'] = np.nan
 
     # Add projected_total columns for other models
-    for model in ['drating', 'kenpom', 'evanmiya']:
+    for model in ['drating', 'evanmiya']:
         final_df[f'projected_total_{model}'] = np.nan
 
     # Rename columns to match requirements
@@ -339,7 +359,8 @@ def run_etl():
     final_df['under_implied_prob'] = final_df['Under Price'].apply(american_odds_to_implied_probability)
     final_df['Over Total Edge'] = final_df['Over Cover Probability'] - final_df['over_implied_prob']
     final_df['Under Total Edge'] = final_df['Under Cover Probability'] - final_df['under_implied_prob']
-
+    final_df['Game Time'] = pd.to_datetime(final_df['Game Time'])
+    final_df = final_df.sort_values('Game Time', ascending=True)
     # Define final column order
     column_order = [
         'Game', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
