@@ -1,7 +1,8 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -13,29 +14,35 @@ import numpy as np
 
 def fetch_evanmiya():
     """
-    Fetches game data from evanmiya.com using Selenium
+    Fetches game data from evanmiya.com using Selenium with headless Chrome
     """
     # Load environment variables
     load_dotenv()
-    
+
     # Retrieve credentials
     USERNAME = os.getenv("EVANMIYA_USERNAME")
     PASSWORD = os.getenv("EVANMIYA_PASSWORD")
-    
+
     if not USERNAME or not PASSWORD:
         print("Error: Missing EVANMIYA_USERNAME or EVANMIYA_PASSWORD environment variables")
         return pd.DataFrame()
 
-    # Initialize Firefox options
-    options = Options()
-    options.headless = True
-    driver = webdriver.Firefox(options=options)
+    # Initialize Chrome options
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")  # Required for some systems
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--window-size=1920,1080")
+
+    # Initialize Chrome driver
+    driver = webdriver.Chrome(options=chrome_options)
 
     try:
         # Navigate to site
         driver.get("https://evanmiya.com/?game_predictions")
         wait = WebDriverWait(driver, 60)
-        
+
         # Wait for page load
         WebDriverWait(driver, 30).until(lambda d: d.execute_script('return document.readyState') == 'complete')
         time.sleep(5)
@@ -51,21 +58,21 @@ def fetch_evanmiya():
         # Login process
         login_button = wait.until(EC.element_to_be_clickable((By.ID, "login-login_button")))
         login_button.click()
-        
+
         email_field = wait.until(EC.visibility_of_element_located((By.ID, "login-email_login")))
         email_field.clear()
         email_field.send_keys(USERNAME)
-        
+
         password_field = driver.find_element(By.ID, "login-password_login")
         password_field.clear()
         password_field.send_keys(PASSWORD)
         password_field.send_keys(Keys.RETURN)
-        
+
         time.sleep(5)
 
         # Verify login
         wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".far.fa-user")))
-        
+
         # Navigate to predictions page
         driver.get("https://evanmiya.com/?game_predictions")
         WebDriverWait(driver, 30).until(lambda d: d.execute_script('return document.readyState') == 'complete')
@@ -101,7 +108,7 @@ def fetch_evanmiya():
 
         # Process extracted data
         processed_data = [row[1:] for row in data if len(row) == 16 and row[0] == '⏵']
-        
+
         columns = [
             'Home', 'Away', 'Home Rank', 'Away Rank', 'Home Score', 'Away Score',
             'Line', 'Vegas Line', 'O/U', 'Vegas O/U', 'Home Win Prob', 'Away Win Prob',
@@ -113,7 +120,7 @@ def fetch_evanmiya():
     except Exception as e:
         print(f"Error fetching data: {e}")
         return pd.DataFrame()
-    
+
     finally:
         driver.quit()
 
@@ -123,25 +130,25 @@ def clean_evanmiya(df):
     """
     if df.empty:
         return df
-        
+
     # Create a copy
     df_clean = df.copy()
-    
+
     # Rename basic columns
     df_clean = df_clean.rename(columns={
         'Home': 'Home Team',
         'Away': 'Away Team',
         'O/U': 'Projected Total'
     })
-    
+
     # Process spreads
-    df_clean['Home Team Spread'] = -df_clean['Line'].astype(float)
-    df_clean['Away Team Spread'] = df_clean['Line'].astype(float)
-    
+    df_clean['Home Team Spread'] = df_clean['Line'].astype(float)  # Remove the negation
+    df_clean['Away Team Spread'] = -df_clean['Line'].astype(float)  # Negate this instead
+
     # Process win probabilities
     df_clean['Home Team Win Probability'] = df_clean['Home Win Prob'].str.rstrip('%').astype(float)
     df_clean['Away Team Win Probability'] = df_clean['Away Win Prob'].str.rstrip('%').astype(float)
-    
+
     # Select final columns
     columns = [
         'Home Team',
@@ -152,6 +159,110 @@ def clean_evanmiya(df):
         'Away Team Win Probability',
         'Projected Total'
     ]
-    
+
     return df_clean[columns]
 
+
+def map_team_names(df):
+    """Map team names using crosswalk"""
+    crosswalk = pd.read_csv('crosswalk.csv')
+    name_map = crosswalk.set_index('evanmiya')['API'].to_dict()
+
+    # Create mapping report
+    unmapped_teams = {}
+    for team in df['Team'].unique():
+        if team not in name_map:
+            unmapped_teams[team] = len(df[df['Team'] == team])
+
+    if unmapped_teams:
+        print("\nUnmapped teams and their occurrence count:")
+        for team, count in sorted(unmapped_teams.items(), key=lambda x: x[1], reverse=True):
+            print(f"- {team}: {count} occurrences")
+
+    # Create mapped dataframe
+    mapped_df = df.copy()
+    for col in ['Home Team', 'Away Team', 'Team']:
+        mapped_df[col] = mapped_df[col].map(name_map)
+
+    # Drop rows with missing mappings
+    original_count = len(mapped_df)
+    mapped_df = mapped_df.dropna(subset=['Home Team', 'Away Team', 'Team'])
+    if len(mapped_df) < original_count:
+        print(f"\nDropped {original_count - len(mapped_df)} rows due to mapping issues")
+
+    return mapped_df
+def transform_evanmiya_format(df):
+    """
+    Transforms EvanMiya DataFrame from one row per game to two rows per game
+    with team-specific stats
+    """
+    if df.empty:
+        print("Empty DataFrame received in transform_evanmiya_format")
+        return df
+
+    # Create empty list to store transformed rows
+    transformed_rows = []
+
+    for _, row in df.iterrows():
+        try:
+            # Create home team row
+            home_row = {
+                'Home Team': row['Home Team'],
+                'Away Team': row['Away Team'],
+                'Team': row['Home Team'],
+                # 'Game Date': row.get('Date', None),  # Use get() in case Date column doesn't exist
+                'spread_evanmiya': row['Home Team Spread'],
+                'win_prob_evanmiya': row['Home Team Win Probability'] / 100,  # Convert percentage to decimal
+                'projected_total_evanmiya': float(row['Projected Total'])
+            }
+
+            # Create away team row
+            away_row = {
+                'Home Team': row['Home Team'],
+                'Away Team': row['Away Team'],
+                'Team': row['Away Team'],
+                'spread_evanmiya': row['Away Team Spread'],
+                'win_prob_evanmiya': row['Away Team Win Probability'] / 100,  # Convert percentage to decimal
+                'projected_total_evanmiya': float(row['Projected Total'])
+            }
+
+            transformed_rows.extend([home_row, away_row])
+
+        except KeyError as e:
+            print(f"KeyError while transforming row: {e}")
+            print(f"Row contents: {row}")
+
+    if not transformed_rows:
+        print("No rows were transformed successfully")
+        return pd.DataFrame()
+
+    # Create new DataFrame from transformed rows
+    new_df = pd.DataFrame(transformed_rows)
+
+    # Ensure columns are in consistent order
+    column_order = [
+        'Home Team',
+        'Away Team',
+        'Team',
+        'spread_evanmiya',
+        'win_prob_evanmiya',
+        'projected_total_evanmiya'
+    ]
+
+    return new_df[column_order]
+
+def get_evanmiya_df():
+    df_raw = fetch_evanmiya()
+    df_final = clean_evanmiya(df_raw)
+    df_final = transform_evanmiya_format(df_final)
+    df_final = map_team_names(df_final)
+    return df_final
+
+if __name__ == '__main__':
+    df_raw = fetch_evanmiya()
+    df_final = clean_evanmiya(df_raw)
+    print("\nFinal processed data:")
+    print(df_final)
+
+    df_final = transform_evanmiya_format(df_final)
+    df_final.to_csv('test_evan.csv')

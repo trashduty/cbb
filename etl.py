@@ -1,11 +1,11 @@
 import os
 import requests
 import pandas as pd
-from scrapers import get_barttorvik_df,get_kenpom_df
-import numpy as np 
-# from dotenv import load_dotenv
+from scrapers import evanmiya, get_barttorvik_df,get_kenpom_df,get_dratings_df,get_evanmiya_df
+import numpy as np
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """
@@ -14,10 +14,10 @@ def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,to
     key = os.getenv("ODDS_API_KEY")
     if not key:
         raise ValueError("ODDSAPI key not found in environment variables.")
-        
+
     base_url = "https://api.the-odds-api.com"
     odds_url = f"{base_url}/v4/sports/{sport}/odds/?apiKey={key}&regions={region}&markets={markets}&oddsFormat=american"
-    
+
     try:
         response = requests.get(odds_url)
         response.raise_for_status()
@@ -38,10 +38,10 @@ def get_moneyline_odds(data):
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
         away_team = game.get('away_team')
-        
+
         if not all([game_time, home_team, away_team]):
             continue
-            
+
         for bookmaker in game.get('bookmakers', []):
             sportsbook = bookmaker.get('title')
             if sportsbook != 'FanDuel':
@@ -55,7 +55,7 @@ def get_moneyline_odds(data):
                             home_ml = outcome.get('price')
                         elif outcome.get('name') == away_team:
                             away_ml = outcome.get('price')
-                    
+
                     # Append rows for home and away teams
                     h2h_records.append({
                         'Game Time': game_time,
@@ -75,7 +75,7 @@ def get_moneyline_odds(data):
                     })
                     break  # Processed FanDuel, move to next game
             break  # Only process FanDuel
-    
+
     return pd.DataFrame(h2h_records)
 
 def get_spread_odds(data):
@@ -87,10 +87,10 @@ def get_spread_odds(data):
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
         away_team = game.get('away_team')
-        
+
         if not all([game_time, home_team, away_team]):
             continue
-            
+
         for bookmaker in game.get('bookmakers', []):
             sportsbook = bookmaker.get('title')
             if sportsbook != 'FanDuel':
@@ -106,7 +106,7 @@ def get_spread_odds(data):
                         elif outcome.get('name') == away_team:
                             away_spread = outcome.get('point')
                             away_price = outcome.get('price')
-                            
+
                     # Append rows for home and away teams
                     spreads_records.append({
                         'Game Time': game_time,
@@ -128,7 +128,7 @@ def get_spread_odds(data):
                     })
                     break  # Processed FanDuel, move to next game
             break  # Only process FanDuel
-    
+
     return pd.DataFrame(spreads_records)
 
 def get_totals_odds(data):
@@ -140,10 +140,10 @@ def get_totals_odds(data):
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
         away_team = game.get('away_team')
-        
+
         if not all([game_time, home_team, away_team]):
             continue
-            
+
         for bookmaker in game.get('bookmakers', []):
             sportsbook = bookmaker.get('title')
             if sportsbook != 'FanDuel':
@@ -159,9 +159,9 @@ def get_totals_odds(data):
                         elif outcome.get('name') == 'Under':
                             under = outcome.get('point')
                             under_price = outcome.get('price')
-                            
+
                     projected_total = (over + under) / 2 if over and under else None
-                    
+
                     totals_records.append({
                         'Game Time': game_time,
                         'Home Team': home_team,
@@ -175,19 +175,19 @@ def get_totals_odds(data):
                     })
                     break  # Processed FanDuel, move to next game
             break  # Only process FanDuel
-    
+
     return pd.DataFrame(totals_records)
 def get_combined_odds():
     data = get_odds_data()
     if not data:
         return pd.DataFrame()
-    
+
     # Get DataFrames and process
     moneyline_df = get_moneyline_odds(data).drop(columns=['Sportsbook'])
     spreads_df = get_spread_odds(data).drop(columns=['Sportsbook']).rename(
         columns={'Spread': 'Opening Spread'})
     totals_df = get_totals_odds(data).drop(columns=['Sportsbook'])
-    
+
     # Merge data
     combined_df = pd.merge(
         moneyline_df,
@@ -195,24 +195,24 @@ def get_combined_odds():
         on=['Game Time', 'Home Team', 'Away Team', 'Team'],
         how='outer'
     )
-    
+
     combined_df = pd.merge(
         combined_df,
         totals_df,
         on=['Game Time', 'Home Team', 'Away Team'],
         how='outer'
     )
-    
+
     # Create game identifier
-    combined_df.insert(0, 'Game', 
+    combined_df.insert(0, 'Game',
         combined_df['Home Team'] + " vs. " + combined_df['Away Team'])
-    
+
     return combined_df
 
 def american_odds_to_implied_probability(odds):
     if odds > 0:
-        return 100 / (odds + 100) 
-    else: 
+        return 100 / (odds + 100)
+    else:
         return abs(odds) / (abs(odds) + 100)
 
 def run_etl():
@@ -220,6 +220,8 @@ def run_etl():
     odds_df = get_combined_odds()
     barttorvik = get_barttorvik_df(include_tomorrow=True)
     kenpom = get_kenpom_df()
+    dratings = get_dratings_df()
+    evanmiya = get_evanmiya_df()
 
     # Merge data
     final_df = pd.merge(
@@ -232,9 +234,21 @@ def run_etl():
         final_df,
         kenpom,
         on=['Home Team', 'Away Team', 'Team'],
-        how='inner'
+        how='left'
     )
-    
+    final_df = pd.merge(
+        final_df,
+        dratings,
+        on=['Home Team', 'Away Team', 'Team'],
+        how='left',
+    )
+    final_df = pd.merge(
+        final_df,
+        evanmiya,
+        on=['Home Team', 'Away Team', 'Team'],
+        how='left',
+    )
+
     # Calculate spread implied probability
     final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
 
@@ -244,7 +258,7 @@ def run_etl():
     # # Spread predictions
     # for model in ['drating', 'kenpom', 'evanmiya']:
     #     final_df[f'spread_{model}'] = np.nan
-    
+
     # # Win probabilities
     # for model in ['drating', 'kenpom', 'evanmiya']:
     #     final_df[f'win_prob_{model}'] = np.nan
@@ -254,17 +268,17 @@ def run_etl():
     #     final_df[f'projected_total_{model}'] = np.nan
 
         # Add stub columns for other prediction models
-    # Spread predictions
-    for model in ['drating', 'evanmiya']:
-        final_df[f'spread_{model}'] = np.nan
-    
-    # Win probabilities
-    for model in ['drating', 'evanmiya']:
-        final_df[f'win_prob_{model}'] = np.nan
+    # # Spread predictions
+    # for model in ['drating', 'evanmiya']:
+    #     final_df[f'spread_{model}'] = np.nan
 
-    # Add projected_total columns for other models
-    for model in ['drating', 'evanmiya']:
-        final_df[f'projected_total_{model}'] = np.nan
+    # # Win probabilities
+    # for model in ['drating', 'evanmiya']:
+    #     final_df[f'win_prob_{model}'] = np.nan
+
+    # # Add projected_total columns for other models
+    # for model in ['drating', 'evanmiya']:
+    #     final_df[f'projected_total_{model}'] = np.nan
 
     # Rename columns to match requirements
     final_df.rename(columns={
@@ -285,7 +299,7 @@ def run_etl():
     final_df['forecasted_spread'] = final_df[spread_models].mean(axis=1, skipna=True)
 
     # Calculate Predicted Outcome
-    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] + 
+    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
                                     0.3 * final_df['forecasted_spread'])
 
     # Load spreads lookup data
@@ -293,7 +307,7 @@ def run_etl():
         lookup_df = pd.read_csv('spreads_lookup.csv')
         # Round predicted outcome for matching
         final_df['Predicted Outcome'] = final_df['Predicted Outcome'].round().astype(int)
-        
+
         # Merge with lookup data
         final_df = final_df.merge(
             lookup_df,
@@ -304,7 +318,7 @@ def run_etl():
         # Calculate cover probability and edge
         final_df['Spread Cover Probability'] = final_df['cover_prob']
         final_df['Edge For Covering Spread'] = (
-            final_df['Spread Cover Probability'] - 
+            final_df['Spread Cover Probability'] -
             final_df['spread_implied_prob']
         )
     except FileNotFoundError:
@@ -321,22 +335,22 @@ def run_etl():
 
     # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
-        (0.7 * final_df['theoddsapi_total'].fillna(0) + 
+        (0.7 * final_df['theoddsapi_total'].fillna(0) +
         0.3 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
     ).round().astype(pd.Int64Dtype())  # Round to integer here
 
     # Load and process totals lookup data
     try:
         totals_lookup_df = pd.read_csv('totals_lookup.csv')
-        
+
         # Handle Market Line (theoddsapi_total) with 0.5 increments
         final_df['theoddsapi_total_rounded'] = (final_df['theoddsapi_total']
                                             .apply(lambda x: round(x * 2)/2 if pd.notnull(x) else np.nan))
-        
+
         # Convert lookup table columns to correct types
         totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
         totals_lookup_df['True Line'] = totals_lookup_df['True Line'].astype(pd.Int64Dtype())
-        
+
         # Merge using the already rounded average_total
         final_df = final_df.merge(
             totals_lookup_df,
@@ -346,7 +360,7 @@ def run_etl():
         )
         final_df['Over Cover Probability'] = final_df['Over_Probability']
         final_df['Under Cover Probability'] = final_df['Under_Probability']
-        final_df.drop(columns=['theoddsapi_total_rounded', 
+        final_df.drop(columns=['theoddsapi_total_rounded',
                             'Market Line', 'True Line', 'Over_Probability',
                             'Under_Probability', 'Push_Probability'], inplace=True, errors='ignore')
     except FileNotFoundError:
@@ -373,7 +387,7 @@ def run_etl():
         'Over Cover Probability', 'Under Cover Probability',
         'Over Total Edge', 'Under Total Edge'
     ]
-    
+
     return final_df[column_order].reset_index(drop=True)
 # Example usage to save combined odds
 if __name__ == "__main__":
