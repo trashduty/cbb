@@ -226,31 +226,25 @@ def clean_kenpom(df):
     df_clean['Home Team'] = df_clean['Home Team'].str.rsplit(' ', n=1).str[0]
     df_clean['Away Team'] = df_clean['Away Team'].apply(clean_team_name)
     
-    # Parse prediction column for spreads and probabilities
+        # Parse prediction column for spreads and probabilities
     def parse_prediction(pred_str):
         if pd.isna(pred_str):
             return None, None, None
-            
-        # Extract scores using regex
-        score_match = re.search(r'(\d+)-(\d+)', pred_str)
-        if not score_match:
+
+        # Match a pattern like:
+        # rank teamname fav_score-dog_score (win_prob%)
+        pattern = r'^(.+?)\s+(\d+)-(\d+).*\(([\d.]+)%\)'
+        match = re.search(pattern, pred_str)
+        if not match:
             return None, None, None
-            
-        fav_score = int(score_match.group(1))
-        dog_score = int(score_match.group(2))
-        
-        # Extract win probability
-        prob_match = re.search(r'\((\d+(?:\.\d+)?)%\)', pred_str)
-        if not prob_match:
-            return None, None, None
-            
-        win_prob = float(prob_match.group(1)) * (1/100)
-        
-        # Determine favored team
-        fav_team = clean_team_name(pred_str.split()[0])
-        
+
+        fav_team = match.group(1).strip()
+        fav_score = int(match.group(2))
+        dog_score = int(match.group(3))
+        win_prob = float(match.group(4)) / 100.0
+
         return fav_team, (fav_score, dog_score), win_prob
-    
+
     # Apply prediction parsing
     df_clean['parsed_pred'] = df_clean['prediction'].apply(parse_prediction)
     df_clean = df_clean.dropna(subset=['parsed_pred'])
@@ -258,21 +252,28 @@ def clean_kenpom(df):
         fav_team, scores, win_prob = row['parsed_pred']
         fav_score, dog_score = scores
         spread = fav_score - dog_score
-        
-        # Determine if home or away is favored
-        if fav_team == row['Home Team']:
-            home_spread = -abs(spread)
-            away_spread = abs(spread)
-            home_prob = win_prob  # Already in decimal form (e.g. 0.75)
-            away_prob = 1 - win_prob  # Use 1 instead of 100 since we're working with decimals
-        else:
-            home_spread = abs(spread)
-            away_spread = -abs(spread)
-            home_prob = 1 - win_prob  # Use 1 instead of 100
-            away_prob = win_prob
-            
         total = fav_score + dog_score
-        
+
+        # Determine which team is favored based on Home and Away
+        if row['Home Team'] == fav_team:
+            # Home team is the favorite
+            home_spread = -abs(spread)
+            home_prob = win_prob
+            away_spread = abs(spread)
+            away_prob = 1 - win_prob
+        elif row['Away Team'] == fav_team:
+            # Away team is the favorite
+            home_spread = abs(spread)
+            home_prob = 1 - win_prob
+            away_spread = -abs(spread)
+            away_prob = win_prob
+        else:
+            # If the favored team is not found among Home or Away, warn user
+            print("Warning: Favored team not found in game teams:",
+                row['teams'], "fav_team:", fav_team)
+            home_spread = away_spread = None
+            home_prob = away_prob = None
+
         return pd.Series({
             'spread_kenpom_home': home_spread,
             'spread_kenpom_away': away_spread,
@@ -280,6 +281,7 @@ def clean_kenpom(df):
             'win_prob_kenpom_away': away_prob,
             'projected_total_kenpom': total
         })
+
     # Calculate final values
     final_cols = df_clean.apply(assign_values, axis=1)
     df_clean = pd.concat([df_clean[['Home Team', 'Away Team', 'game date']], final_cols], axis=1)
