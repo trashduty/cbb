@@ -17,7 +17,7 @@ def fetch_evanmiya():
     Fetches game data from evanmiya.com using Selenium with headless Chrome
     """
     # Load environment variables
-    load_dotenv()
+    # load_dotenv()
 
     # Retrieve credentials
     USERNAME = os.getenv("EVANMIYA_USERNAME")
