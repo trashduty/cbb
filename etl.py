@@ -3,9 +3,11 @@ import requests
 import pandas as pd
 from scrapers import evanmiya, get_barttorvik_df,get_kenpom_df,get_dratings_df,get_evanmiya_df
 import numpy as np
+from datetime import datetime, timezone
 # from dotenv import load_dotenv
 
 # load_dotenv()
+
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """
@@ -182,11 +184,34 @@ def get_combined_odds():
     if not data:
         return pd.DataFrame()
 
-    # Get DataFrames and process
-    moneyline_df = get_moneyline_odds(data).drop(columns=['Sportsbook'])
-    spreads_df = get_spread_odds(data).drop(columns=['Sportsbook']).rename(
+    # Filter out live/ended games by checking commence_time < now
+    now_utc = datetime.now(timezone.utc)
+    filtered_data = []
+    for game in data:
+        # The Odds API returns commence_time in ISO8601 string format (e.g. "2025-02-05T01:30:00Z")
+        # Remove trailing 'Z' if present, then parse it as UTC
+        raw_time_str = game.get("commence_time")
+        if not raw_time_str:
+            # If for some reason it's missing commence_time, skip this game
+            continue
+
+        # Convert to a datetime with UTC tz
+        # .replace() is used to handle trailing 'Z' by removing it before fromisoformat
+        game_time_utc = datetime.fromisoformat(raw_time_str.replace("Z", "")).replace(tzinfo=timezone.utc)
+
+        # Keep only if commence_time is still in the future
+        if game_time_utc > now_utc:
+            filtered_data.append(game)
+
+    # If everything got filtered out, return empty DataFrame
+    if not filtered_data:
+        return pd.DataFrame()
+
+    # Get DataFrames and process using filtered data
+    moneyline_df = get_moneyline_odds(filtered_data).drop(columns=['Sportsbook'])
+    spreads_df = get_spread_odds(filtered_data).drop(columns=['Sportsbook']).rename(
         columns={'Spread': 'Opening Spread'})
-    totals_df = get_totals_odds(data).drop(columns=['Sportsbook'])
+    totals_df = get_totals_odds(filtered_data).drop(columns=['Sportsbook'])
 
     # Merge data
     combined_df = pd.merge(
@@ -296,11 +321,11 @@ def run_etl():
 
     # Calculate forecasted spread (average of non-NaN model predictions)
     spread_models = ['spread_barttorvik', 'spread_drating', 'spread_kenpom', 'spread_evanmiya']
-    final_df['forecasted_spread'] = final_df[spread_models].mean(axis=1, skipna=True)
+    final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
 
     # Calculate Predicted Outcome
-    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
-                                    0.3 * final_df['forecasted_spread'])
+    final_df['Predicted Outcome'] = (0.6 * final_df['Opening Spread'] +
+                                    0.4 * final_df['forecasted_spread'])
 
     # Load spreads lookup data
     try:
@@ -331,12 +356,12 @@ def run_etl():
 
     # Handle missing totals data
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
-    final_df['forecasted_total'] = final_df[projected_total_models].mean(axis=1, skipna=True)
+    final_df['forecasted_total'] = final_df[projected_total_models].median(axis=1, skipna=True)
 
     # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
-        (0.7 * final_df['theoddsapi_total'].fillna(0) +
-        0.3 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
+        (0.6 * final_df['theoddsapi_total'].fillna(0) +
+        0.4 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
     ).round().astype(pd.Int64Dtype())  # Round to integer here
 
     # Load and process totals lookup data

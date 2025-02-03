@@ -4,3 +4,14 @@ env
 __pycache__
 archived/
 *.ipynb
+test_dratings.csv
+test_dratings.py
+test_evan.csv
+test_evanmiya.py
+test_massey.py
+crosswalk.csv
+massey_data.csv
+CBB Output.csv
+repomix-output.txt
+test.py
+test_live_games.py
