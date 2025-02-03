@@ -4,6 +4,7 @@ import pandas as pd
 from scrapers import evanmiya, get_barttorvik_df,get_kenpom_df,get_dratings_df,get_evanmiya_df
 import numpy as np
 from datetime import datetime, timezone
+from statistics import median
 # from dotenv import load_dotenv
 
 # load_dotenv()
@@ -33,9 +34,12 @@ def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,to
 
 def get_moneyline_odds(data):
     """
-    Processes moneyline odds into a DataFrame with two rows per game (home and away teams).
+    Processes moneyline odds into a DataFrame with two rows per game (home and away teams),
+    using the median price across all available bookmakers.
     """
-    h2h_records = []
+    # Dictionary to store all moneylines for each team in each game
+    moneyline_dict = {}
+
     for game in data:
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
@@ -44,47 +48,65 @@ def get_moneyline_odds(data):
         if not all([game_time, home_team, away_team]):
             continue
 
+        # Use game time + teams as unique identifier
+        game_key = f"{game_time}_{home_team}_vs_{away_team}"
+
+        # Initialize empty lists to hold moneylines from each bookmaker
+        moneyline_dict.setdefault((game_key, 'home'), [])
+        moneyline_dict.setdefault((game_key, 'away'), [])
+
+        # Collect all moneylines from each sportsbook
         for bookmaker in game.get('bookmakers', []):
             sportsbook = bookmaker.get('title')
-            if sportsbook != 'FanDuel':
-                continue  # Skip non-FanDuel bookmakers
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'h2h':
                     outcomes = market.get('outcomes', [])
-                    home_ml = away_ml = None
                     for outcome in outcomes:
-                        if outcome.get('name') == home_team:
-                            home_ml = outcome.get('price')
-                        elif outcome.get('name') == away_team:
-                            away_ml = outcome.get('price')
+                        team_name = outcome.get('name')
+                        price = outcome.get('price')
 
-                    # Append rows for home and away teams
-                    h2h_records.append({
-                        'Game Time': game_time,
-                        'Home Team': home_team,
-                        'Away Team': away_team,
-                        'Team': home_team,
-                        'Moneyline': home_ml,
-                        'Sportsbook': sportsbook
-                    })
-                    h2h_records.append({
-                        'Game Time': game_time,
-                        'Home Team': home_team,
-                        'Away Team': away_team,
-                        'Team': away_team,
-                        'Moneyline': away_ml,
-                        'Sportsbook': sportsbook
-                    })
-                    break  # Processed FanDuel, move to next game
-            break  # Only process FanDuel
+                        if team_name == home_team and price is not None:
+                            moneyline_dict[(game_key, 'home')].append(price)
+                        elif team_name == away_team and price is not None:
+                            moneyline_dict[(game_key, 'away')].append(price)
+
+    # Build final records with median prices
+    h2h_records = []
+    for (game_key, side), prices in moneyline_dict.items():
+        if not prices:
+            continue
+
+        # Calculate median of all collected prices
+        med_price = median(prices)
+
+        # Parse game info from the key
+        game_time, teams = game_key.split('_', 1)
+        home_team, away_team = teams.split('_vs_')
+
+        if side == 'home':
+            team_name = home_team
+        else:
+            team_name = away_team
+
+        h2h_records.append({
+            'Game Time': game_time,
+            'Home Team': home_team,
+            'Away Team': away_team,
+            'Team': team_name,
+            'Moneyline': med_price,
+            'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
+        })
 
     return pd.DataFrame(h2h_records)
 
 def get_spread_odds(data):
     """
-    Processes spread odds into a DataFrame with two rows per game (home and away teams).
+    Processes spread odds into a DataFrame with two rows per game (home and away teams),
+    using the median of all available sportsbooks.
     """
-    spreads_records = []
+    # Dictionary to store all spreads and prices for each team in each game
+    spread_dict = {}
+
     for game in data:
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
@@ -93,51 +115,69 @@ def get_spread_odds(data):
         if not all([game_time, home_team, away_team]):
             continue
 
+        # Use game time + teams as unique identifier
+        game_key = f"{game_time}_{home_team}_vs_{away_team}"
+
+        # Initialize empty lists to hold spreads and prices from each bookmaker
+        spread_dict.setdefault((game_key, 'home'), {'points': [], 'prices': []})
+        spread_dict.setdefault((game_key, 'away'), {'points': [], 'prices': []})
+
+        # Collect spreads from each sportsbook
         for bookmaker in game.get('bookmakers', []):
-            sportsbook = bookmaker.get('title')
-            if sportsbook != 'FanDuel':
-                continue  # Skip non-FanDuel bookmakers
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'spreads':
                     outcomes = market.get('outcomes', [])
-                    home_spread = away_spread = home_price = away_price = None
                     for outcome in outcomes:
-                        if outcome.get('name') == home_team:
-                            home_spread = outcome.get('point')
-                            home_price = outcome.get('price')
-                        elif outcome.get('name') == away_team:
-                            away_spread = outcome.get('point')
-                            away_price = outcome.get('price')
+                        team_name = outcome.get('name')
+                        point = outcome.get('point')
+                        price = outcome.get('price')
 
-                    # Append rows for home and away teams
-                    spreads_records.append({
-                        'Game Time': game_time,
-                        'Home Team': home_team,
-                        'Away Team': away_team,
-                        'Team': home_team,
-                        'Spread': home_spread,
-                        'Spread Price': home_price,
-                        'Sportsbook': sportsbook
-                    })
-                    spreads_records.append({
-                        'Game Time': game_time,
-                        'Home Team': home_team,
-                        'Away Team': away_team,
-                        'Team': away_team,
-                        'Spread': away_spread,
-                        'Spread Price': away_price,
-                        'Sportsbook': sportsbook
-                    })
-                    break  # Processed FanDuel, move to next game
-            break  # Only process FanDuel
+                        if team_name == home_team and point is not None and price is not None:
+                            spread_dict[(game_key, 'home')]['points'].append(point)
+                            spread_dict[(game_key, 'home')]['prices'].append(price)
+                        elif team_name == away_team and point is not None and price is not None:
+                            spread_dict[(game_key, 'away')]['points'].append(point)
+                            spread_dict[(game_key, 'away')]['prices'].append(price)
+
+    # Build final records with median spreads and prices
+    spreads_records = []
+    for (game_key, side), values in spread_dict.items():
+        if not values['points'] or not values['prices']:
+            continue
+
+        # Calculate medians
+        med_point = median(values['points'])
+        med_price = median(values['prices'])
+
+        # Parse game info from the key
+        game_time, teams = game_key.split('_', 1)
+        home_team, away_team = teams.split('_vs_')
+
+        if side == 'home':
+            team_name = home_team
+        else:
+            team_name = away_team
+
+        spreads_records.append({
+            'Game Time': game_time,
+            'Home Team': home_team,
+            'Away Team': away_team,
+            'Team': team_name,
+            'Spread': med_point,
+            'Spread Price': med_price,
+            'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
+        })
 
     return pd.DataFrame(spreads_records)
 
 def get_totals_odds(data):
     """
-    Processes totals odds into a DataFrame with one row per game.
+    Processes totals odds into a DataFrame with one row per game,
+    using the median of all available sportsbooks for over/under lines and prices.
     """
-    totals_records = []
+    # Dictionary to store all totals data for each game
+    totals_dict = {}
+
     for game in data:
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
@@ -146,37 +186,65 @@ def get_totals_odds(data):
         if not all([game_time, home_team, away_team]):
             continue
 
+        # Use game time + teams as unique identifier
+        game_key = f"{game_time}_{home_team}_vs_{away_team}"
+
+        # Initialize data structure for this game
+        if game_key not in totals_dict:
+            totals_dict[game_key] = {
+                'over_points': [],
+                'over_prices': [],
+                'under_points': [],
+                'under_prices': []
+            }
+
+        # Collect totals from each sportsbook
         for bookmaker in game.get('bookmakers', []):
-            sportsbook = bookmaker.get('title')
-            if sportsbook != 'FanDuel':
-                continue  # Skip non-FanDuel bookmakers
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'totals':
                     outcomes = market.get('outcomes', [])
-                    over = under = over_price = under_price = None
                     for outcome in outcomes:
                         if outcome.get('name') == 'Over':
-                            over = outcome.get('point')
-                            over_price = outcome.get('price')
+                            if outcome.get('point') is not None:
+                                totals_dict[game_key]['over_points'].append(outcome['point'])
+                            if outcome.get('price') is not None:
+                                totals_dict[game_key]['over_prices'].append(outcome['price'])
                         elif outcome.get('name') == 'Under':
-                            under = outcome.get('point')
-                            under_price = outcome.get('price')
+                            if outcome.get('point') is not None:
+                                totals_dict[game_key]['under_points'].append(outcome['point'])
+                            if outcome.get('price') is not None:
+                                totals_dict[game_key]['under_prices'].append(outcome['price'])
 
-                    projected_total = (over + under) / 2 if over and under else None
+    # Build final records with median values
+    totals_records = []
+    for game_key, values in totals_dict.items():
+        if not values['over_points'] or not values['under_points']:
+            continue
 
-                    totals_records.append({
-                        'Game Time': game_time,
-                        'Home Team': home_team,
-                        'Away Team': away_team,
-                        'Projected Total': projected_total,
-                        'Over Point': over,
-                        'Over Price': over_price,
-                        'Under Point': under,
-                        'Under Price': under_price,
-                        'Sportsbook': sportsbook
-                    })
-                    break  # Processed FanDuel, move to next game
-            break  # Only process FanDuel
+        # Calculate medians
+        med_over_point = median(values['over_points'])
+        med_over_price = median(values['over_prices']) if values['over_prices'] else None
+        med_under_point = median(values['under_points'])
+        med_under_price = median(values['under_prices']) if values['under_prices'] else None
+
+        # Calculate projected total as average of median over/under points
+        projected_total = (med_over_point + med_under_point) / 2
+
+        # Parse game info from the key
+        game_time, teams = game_key.split('_', 1)
+        home_team, away_team = teams.split('_vs_')
+
+        totals_records.append({
+            'Game Time': game_time,
+            'Home Team': home_team,
+            'Away Team': away_team,
+            'Projected Total': projected_total,
+            'Over Point': med_over_point,
+            'Over Price': med_over_price,
+            'Under Point': med_under_point,
+            'Under Price': med_under_price,
+            'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
+        })
 
     return pd.DataFrame(totals_records)
 def get_combined_odds():
