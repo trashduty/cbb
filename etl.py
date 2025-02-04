@@ -342,10 +342,26 @@ def run_etl():
         how='left',
     )
 
+    # Rename columns FIRST
+    final_df.rename(columns={
+        'Spread': 'Opening Spread',
+        'Spread Price': 'Spread Price',
+        'Moneyline': 'Opening Moneyline',
+        'Projected Total': 'theoddsapi_total'
+    }, inplace=True)
+
+    # Round theoddsapi_total and Opening Spread
+    final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
+    final_df['theoddsapi_total'] = final_df['theoddsapi_total'].apply(
+        lambda x: round(x * 2) / 2 if pd.notnull(x) else np.nan
+    )
+    
+    final_df['Opening Spread'] = final_df['Opening Spread'].apply(
+        lambda x: round(x * 2) / 2 if pd.notnull(x) else np.nan
+    )
+
     # Calculate spread implied probability
     final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
-
-
 
     # # Add stub columns for other prediction models
     # # Spread predictions
@@ -373,13 +389,6 @@ def run_etl():
     # for model in ['drating', 'evanmiya']:
     #     final_df[f'projected_total_{model}'] = np.nan
 
-    # Rename columns to match requirements
-    final_df.rename(columns={
-        'Spread': 'Opening Spread',
-        'Spread Price': 'Spread Price',
-        'Moneyline': 'Opening Moneyline',
-        'Projected Total': 'theoddsapi_total'  # Rename for clarity
-    }, inplace=True)
     # Calculate moneyline probabilities and edge
     final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_drating', 'win_prob_kenpom', 'win_prob_evanmiya']
@@ -392,8 +401,8 @@ def run_etl():
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
 
     # Calculate Predicted Outcome
-    final_df['Predicted Outcome'] = (0.6 * final_df['Opening Spread'] +
-                                    0.4 * final_df['forecasted_spread'])
+    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
+                                    0.3 * final_df['forecasted_spread'])
 
     # Load spreads lookup data
     try:
@@ -436,18 +445,14 @@ def run_etl():
     try:
         totals_lookup_df = pd.read_csv('totals_lookup.csv')
 
-        # Handle Market Line (theoddsapi_total) with 0.5 increments
-        final_df['theoddsapi_total_rounded'] = (final_df['theoddsapi_total']
-                                            .apply(lambda x: round(x * 2)/2 if pd.notnull(x) else np.nan))
-
         # Convert lookup table columns to correct types
         totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
         totals_lookup_df['True Line'] = totals_lookup_df['True Line'].astype(pd.Int64Dtype())
 
-        # Merge using the already rounded average_total
+        # Use theoddsapi_total directly since it's already rounded to 0.5
         final_df = final_df.merge(
             totals_lookup_df,
-            left_on=['theoddsapi_total_rounded', 'average_total'],
+            left_on=['theoddsapi_total', 'average_total'],
             right_on=['Market Line', 'True Line'],
             how='left'
         )
