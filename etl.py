@@ -437,8 +437,8 @@ def run_etl():
 
     # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
-        (0.6 * final_df['theoddsapi_total'].fillna(0) +
-        0.4 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
+        (0.55 * final_df['theoddsapi_total'].fillna(0) +
+        0.45 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
     ).round().astype(pd.Int64Dtype())  # Round to integer here
 
     # Load and process totals lookup data
