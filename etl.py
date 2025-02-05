@@ -252,30 +252,15 @@ def get_combined_odds():
     if not data:
         return pd.DataFrame()
 
-    # Filter out live/ended games by checking commence_time < now
-    now_utc = datetime.now(timezone.utc)
-    filtered_data = []
-    for game in data:
-        # The Odds API returns commence_time in ISO8601 string format (e.g. "2025-02-05T01:30:00Z")
-        # Remove trailing 'Z' if present, then parse it as UTC
-        raw_time_str = game.get("commence_time")
-        if not raw_time_str:
-            # If for some reason it's missing commence_time, skip this game
-            continue
-
-        # Convert to a datetime with UTC tz
-        # .replace() is used to handle trailing 'Z' by removing it before fromisoformat
-        game_time_utc = datetime.fromisoformat(raw_time_str.replace("Z", "")).replace(tzinfo=timezone.utc)
-
-        # Keep only if commence_time is still in the future
-        if game_time_utc > now_utc:
-            filtered_data.append(game)
+    # Remove the time-based filtering completely
+    # Keep all games, regardless of their start time
+    filtered_data = data
 
     # If everything got filtered out, return empty DataFrame
     if not filtered_data:
         return pd.DataFrame()
 
-    # Get DataFrames and process using filtered data
+    # Get DataFrames and process using all data
     moneyline_df = get_moneyline_odds(filtered_data).drop(columns=['Sportsbook'])
     spreads_df = get_spread_odds(filtered_data).drop(columns=['Sportsbook']).rename(
         columns={'Spread': 'Opening Spread'})
@@ -301,7 +286,6 @@ def get_combined_odds():
         combined_df['Home Team'] + " vs. " + combined_df['Away Team'])
 
     return combined_df
-
 def american_odds_to_implied_probability(odds):
     if odds > 0:
         return 100 / (odds + 100)
