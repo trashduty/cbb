@@ -297,7 +297,7 @@ def run_etl():
     odds_df = get_combined_odds()
     barttorvik = get_barttorvik_df(include_tomorrow=True)
     kenpom = get_kenpom_df()
-    dratings = get_dratings_df()
+    # dratings = get_dratings_df()
     evanmiya = get_evanmiya_df()
 
     # Merge data
@@ -313,12 +313,12 @@ def run_etl():
         on=['Home Team', 'Away Team', 'Team'],
         how='left'
     )
-    final_df = pd.merge(
-        final_df,
-        dratings,
-        on=['Home Team', 'Away Team', 'Team'],
-        how='left',
-    )
+    # final_df = pd.merge(
+    #     final_df,
+    #     dratings,
+    #     on=['Home Team', 'Away Team', 'Team'],
+    #     how='left',
+    # )
     final_df = pd.merge(
         final_df,
         evanmiya,
@@ -375,13 +375,13 @@ def run_etl():
 
     # Calculate moneyline probabilities and edge
     final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
-    win_prob_cols = ['win_prob_barttorvik', 'win_prob_drating', 'win_prob_kenpom', 'win_prob_evanmiya']
+    win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
     final_df['Moneyline Win Probability'] = final_df[win_prob_cols].mean(axis=1, skipna=True)
     final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
     final_df.drop(columns=['ml_implied_prob'], inplace=True)
 
     # Calculate forecasted spread (average of non-NaN model predictions)
-    spread_models = ['spread_barttorvik', 'spread_drating', 'spread_kenpom', 'spread_evanmiya']
+    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
 
     # Calculate Predicted Outcome
@@ -412,7 +412,7 @@ def run_etl():
         final_df['Spread Cover Probability'] = np.nan
         final_df['Edge For Covering Spread'] = np.nan
     # Calculate totals projections
-    projected_total_models = ['projected_total_barttorvik', 'projected_total_drating',
+    projected_total_models = ['projected_total_barttorvik',
                             'projected_total_kenpom', 'projected_total_evanmiya']
 
     # Handle missing totals data
@@ -460,15 +460,14 @@ def run_etl():
     # Define final column order
     column_order = [
         'Game', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
-        'Opening Spread', 'Edge For Covering Spread', 'spread_barttorvik',
-        'spread_drating', 'spread_kenpom', 'spread_evanmiya',
+        'Opening Spread', 'Edge For Covering Spread', 'spread_barttorvik', 
+        'spread_kenpom', 'spread_evanmiya',
         'Moneyline Win Probability', 'Opening Moneyline', 'Moneyline Edge',
-        'win_prob_barttorvik', 'win_prob_drating', 'win_prob_kenpom', 'win_prob_evanmiya',
+        'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
         'average_total', 'theoddsapi_total', 'projected_total_barttorvik',
-        'projected_total_drating', 'projected_total_kenpom', 'projected_total_evanmiya',
+        'projected_total_kenpom', 'projected_total_evanmiya',
         'Over Cover Probability', 'Under Cover Probability',
-        'Over Total Edge', 'Under Total Edge'
-    ]
+        'Over Total Edge', 'Under Total Edge']
 
     return final_df[column_order].reset_index(drop=True)
 # Example usage to save combined odds

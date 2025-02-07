@@ -3,46 +3,57 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 from datetime import datetime, timedelta
+from logger_setup import log_scraper_execution
+import logging
 
+@log_scraper_execution
 def fetch_barttorvik(date=None):
     """
     Fetch Barttorvik data for a specific date
-
-    Args:
-        date (str, optional): Date in YYYYMMDD format. If None, uses current date
     """
+    logger = logging.getLogger('barttorvik')
+    
     headers = {'User-Agent': 'Mozilla/5.0'}
-
-    # Build URL with date parameter if provided
     base_url = "https://www.barttorvik.com/schedule.php"
+    
+    # Build URL with date parameter if provided
     if date:
         url = f"{base_url}?date={date}&conlimit="
+        logger.info(f"Fetching data for date: {date}")
     else:
         url = base_url
+        logger.info("Fetching data for current date")
 
-    response = requests.get(url, headers=headers)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        logger.info("Successfully retrieved webpage")
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        games = []
 
-    games = []
+        for row in soup.find_all('tr'):
+            teams = row.find_all('a', href=lambda x: x and 'team.php' in x)
+            if len(teams) != 2:
+                continue
 
-    for row in soup.find_all('tr'):
-        teams = row.find_all('a', href=lambda x: x and 'team.php' in x)
-        if len(teams) != 2:
-            continue
+            line = row.find('a', href=lambda x: x and 'trank.php' in x)
+            if not line:
+                continue
 
-        line = row.find('a', href=lambda x: x and 'trank.php' in x)
+            games.append({
+                'Home Team': teams[1].text.strip(),
+                'Away Team': teams[0].text.strip(),
+                'T-Rank Line': line.text.strip(),
+                'Game Date': date if date else datetime.now().strftime('%Y%m%d')
+            })
 
-        if not line:
-            continue
+        logger.info(f"Successfully parsed {len(games)} games")
+        return pd.DataFrame(games)
 
-        games.append({
-            'Home Team': teams[1].text.strip(),
-            'Away Team': teams[0].text.strip(),
-            'T-Rank Line': line.text.strip(),
-            'Game Date': date if date else datetime.now().strftime('%Y%m%d')
-        })
-
-    return pd.DataFrame(games)
+    except requests.RequestException as e:
+        logger.error(f"Failed to fetch data: {str(e)}")
+        raise
 
 def get_barttorvik_df(include_tomorrow=True):
     """
@@ -73,13 +84,16 @@ def get_barttorvik_df(include_tomorrow=True):
     mapped_df = map_team_names(combined_df)
     return mapped_df.reset_index(drop=True)
 
+@log_scraper_execution
 def transform_barttorvik_data(df):
     """Transform to two-row-per-game format with team-specific stats"""
-    # Modified pattern to make projected score optional
+    logger = logging.getLogger('barttorvik')
+    
     pattern = r"^\s*(?P<TeamName>.+?)(?:\s+(?P<Spread>-?\d+\.?\d*))?(?:,\s*(?P<ProjectedScore>\d+-\d+))?\s*\((?P<WinProb>\d+)%\)\s*$"
     extracted = df['T-Rank Line'].str.extract(pattern)
-
-    # Handle projected scores
+    
+    logger.info("Extracting projected scores and win probabilities")
+    
     try:
         extracted[['ProjectedHome', 'ProjectedAway']] = (
             extracted['ProjectedScore']
@@ -87,22 +101,21 @@ def transform_barttorvik_data(df):
             .astype(float)
         )
         extracted['ProjectedTotal'] = extracted['ProjectedHome'] + extracted['ProjectedAway']
+        logger.info("Successfully processed projected scores")
     except (TypeError, ValueError):
+        logger.warning("Could not process projected scores, setting to NaN")
         extracted['ProjectedTotal'] = np.nan
 
-    # Create base dataframe with game context
     base_df = df[['Home Team', 'Away Team', 'Game Date']].copy()
-
-    # Initialize lists for home and away records
     home_rows = []
     away_rows = []
-
     failed_rows = []
 
+    logger.info("Processing individual game records")
+    
     for idx, row in base_df.iterrows():
-        # Get the line data
         line_data = df.at[idx, 'T-Rank Line']
-
+        
         try:
             team_name = extracted.at[idx, 'TeamName'].strip() if not pd.isna(extracted.at[idx, 'TeamName']) else None
             spread = extracted.at[idx, 'Spread']

@@ -146,31 +146,52 @@ def fetch_kenpom():
     finally:
         driver.quit()
 def map_team_names(df):
-    """Map team names using crosswalk"""
+    """Map team names using crosswalk and alternate names as fallback"""
+    # Load crosswalk files
     crosswalk = pd.read_csv('crosswalk.csv')
     name_map = crosswalk.set_index('kenpom')['API'].to_dict()
+    alt_map = crosswalk.set_index('kenpom_alt')['API'].to_dict()
 
     # Create mapping report
     unmapped_teams = {}
+    found_in_alt = {}
+    
     for team in df['Team'].unique():
         if team not in name_map:
             unmapped_teams[team] = len(df[df['Team'] == team])
+            # Check if team exists in alt_map
+            if team in alt_map:
+                found_in_alt[team] = alt_map[team]
+                # Add to name_map if found in alt_map
+                name_map[team] = alt_map[team]
 
     if unmapped_teams:
         print("\nUnmapped teams and their occurrence count:")
         for team, count in sorted(unmapped_teams.items(), key=lambda x: x[1], reverse=True):
             print(f"- {team}: {count} occurrences")
+            if team in found_in_alt:
+                print(f"  Found in alt_map as: {found_in_alt[team]}")
 
-    # Create mapped dataframe
+    # Map using combined mappings
     mapped_df = df.copy()
     for col in ['Home Team', 'Away Team', 'Team']:
         mapped_df[col] = mapped_df[col].map(name_map)
 
-    # Drop rows with missing mappings
     original_count = len(mapped_df)
     mapped_df = mapped_df.dropna(subset=['Home Team', 'Away Team', 'Team'])
     if len(mapped_df) < original_count:
         print(f"\nDropped {original_count - len(mapped_df)} rows due to mapping issues")
+        
+        # Print which teams are still causing drops
+        still_unmapped = mapped_df[mapped_df[['Home Team', 'Away Team', 'Team']].isna().any(axis=1)]
+        if not still_unmapped.empty:
+            print("\nTeams still causing mapping issues:")
+            for col in ['Home Team', 'Away Team', 'Team']:
+                problem_teams = still_unmapped[col][still_unmapped[col].isna()].unique()
+                if len(problem_teams) > 0:
+                    print(f"\n{col} unmapped values:")
+                    for team in problem_teams:
+                        print(f"- {team}")
 
     return mapped_df
 def clean_kenpom(df):
@@ -214,18 +235,17 @@ def clean_kenpom(df):
     df_clean['Home Team'] = df_clean['teams'].apply(lambda x: x[0])
     df_clean['Away Team'] = df_clean['teams'].apply(lambda x: x[1])
 
-    # Clean team names - remove rankings and stats
     def clean_team_name(name):
         # Remove leading numbers and dots
         name = re.sub(r'^\d+\s*\.?\s*', '', name)
         # Remove trailing numbers
         name = re.sub(r'\s*\d+$', '', name)
         return name.strip()
-
     df_clean['Home Team'] = df_clean['Home Team'].apply(clean_team_name)
     df_clean['Home Team'] = df_clean['Home Team'].str.rsplit(' ', n=1).str[0]
     df_clean['Away Team'] = df_clean['Away Team'].apply(clean_team_name)
 
+            # Parse prediction column for spreads and probabilities
         # Parse prediction column for spreads and probabilities
     def parse_prediction(pred_str):
         if pd.isna(pred_str):
@@ -244,12 +264,22 @@ def clean_kenpom(df):
         win_prob = float(match.group(4)) / 100.0
 
         return fav_team, (fav_score, dog_score), win_prob
-
     # Apply prediction parsing
     df_clean['parsed_pred'] = df_clean['prediction'].apply(parse_prediction)
     df_clean = df_clean.dropna(subset=['parsed_pred'])
     def assign_values(row):
         fav_team, scores, win_prob = row['parsed_pred']
+        
+        # Handle case where parsing failed
+        if scores is None:
+            return pd.Series({
+                'spread_kenpom_home': None,
+                'spread_kenpom_away': None,
+                'win_prob_kenpom_home': None,
+                'win_prob_kenpom_away': None,
+                'projected_total_kenpom': None
+            })
+            
         fav_score, dog_score = scores
         spread = fav_score - dog_score
         total = fav_score + dog_score

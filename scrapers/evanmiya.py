@@ -1,3 +1,7 @@
+# evanmiya.py
+
+from logger_setup import log_scraper_execution
+import logging
 import os
 # from dotenv import load_dotenv
 from selenium import webdriver
@@ -12,50 +16,50 @@ import time
 import pandas as pd
 import numpy as np
 
+@log_scraper_execution
 def fetch_evanmiya():
-    """
-    Fetches game data from evanmiya.com using Selenium with headless Chrome
-    """
-    # Load environment variables
+    """Fetches game data from evanmiya.com using Selenium with headless Chrome"""
+    logger = logging.getLogger('evanmiya')
+    
     # load_dotenv()
-
-    # Retrieve credentials
     USERNAME = os.getenv("EVANMIYA_USERNAME")
     PASSWORD = os.getenv("EVANMIYA_PASSWORD")
 
     if not USERNAME or not PASSWORD:
-        print("Error: Missing EVANMIYA_USERNAME or EVANMIYA_PASSWORD environment variables")
+        logger.error("Missing EVANMIYA_USERNAME or EVANMIYA_PASSWORD environment variables")
         return pd.DataFrame()
 
-    # Initialize Chrome options
+    logger.info("Initializing Chrome driver with headless options")
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")  # Required for some systems
+    chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--window-size=1920,1080")
 
-    # Initialize Chrome driver
     driver = webdriver.Chrome(options=chrome_options)
 
     try:
-        # Navigate to site
+        logger.info("Navigating to EvanMiya predictions page")
         driver.get("https://evanmiya.com/?game_predictions")
         wait = WebDriverWait(driver, 60)
 
-        # Wait for page load
+        logger.info("Waiting for page load")
         WebDriverWait(driver, 30).until(lambda d: d.execute_script('return document.readyState') == 'complete')
         time.sleep(5)
 
         # Handle subscription popup
         try:
+            logger.info("Attempting to handle subscription popup")
             pop_up = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".sweet-alert.showSweetAlert.visible")))
             ActionChains(driver).send_keys(Keys.ESCAPE).perform()
             wait.until(EC.invisibility_of_element_located((By.CLASS_NAME, "sweet-overlay")))
-        except Exception:
-            pass
+            logger.info("Successfully handled subscription popup")
+        except Exception as e:
+            logger.debug(f"No subscription popup found: {str(e)}")
 
         # Login process
+        logger.info("Starting login process")
         login_button = wait.until(EC.element_to_be_clickable((By.ID, "login-login_button")))
         login_button.click()
 
@@ -72,17 +76,21 @@ def fetch_evanmiya():
 
         # Verify login
         wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".far.fa-user")))
+        logger.info("Login successful")
 
-        # Navigate to predictions page
+        # Navigate and set up page
+        logger.info("Setting up page parameters")
         driver.get("https://evanmiya.com/?game_predictions")
         WebDriverWait(driver, 30).until(lambda d: d.execute_script('return document.readyState') == 'complete')
         time.sleep(10)
 
-        # Set page size and date
+        # Set page size
         select_element = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "rt-page-size-select")))
         Select(select_element).select_by_visible_text("500")
         time.sleep(5)
 
+        # Set date
+        logger.info("Setting date parameters")
         date_input = wait.until(EC.visibility_of_element_located(
             (By.CSS_SELECTOR, 'input.form-control[title="Date format: yyyy-mm-dd"]')
         ))
@@ -92,6 +100,7 @@ def fetch_evanmiya():
         time.sleep(3)
 
         # Extract table data
+        logger.info("Extracting table data")
         data = driver.execute_script("""
             var rows = document.querySelectorAll('div.rt-table .rt-tr-group');
             var data = [];
@@ -108,26 +117,29 @@ def fetch_evanmiya():
 
         # Process extracted data
         processed_data = [row[1:] for row in data if len(row) == 16 and row[0] == '⏵']
-
+        
         columns = [
             'Home', 'Away', 'Home Rank', 'Away Rank', 'Home Score', 'Away Score',
             'Line', 'Vegas Line', 'O/U', 'Vegas O/U', 'Home Win Prob', 'Away Win Prob',
             'Venue', 'Date', 'Time'
         ]
 
-        return pd.DataFrame(processed_data, columns=columns)
+        df = pd.DataFrame(processed_data, columns=columns)
+        logger.info(f"Successfully extracted {len(df)} games")
+        return df
 
     except Exception as e:
-        print(f"Error fetching data: {e}")
+        logger.error(f"Error fetching data: {str(e)}")
         return pd.DataFrame()
 
     finally:
         driver.quit()
+        logger.info("Chrome driver closed")
 
+@log_scraper_execution
 def clean_evanmiya(df):
-    """
-    Cleans the DataFrame by processing spreads, win probabilities, and selecting relevant columns
-    """
+    """Cleans the DataFrame by processing spreads, win probabilities, and selecting relevant columns"""
+    logger = logging.getLogger('evanmiya')
     if df.empty:
         return df
 
