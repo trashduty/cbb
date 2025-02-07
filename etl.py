@@ -376,7 +376,9 @@ def run_etl():
     # Calculate moneyline probabilities and edge
     final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
-    final_df['Moneyline Win Probability'] = final_df[win_prob_cols].mean(axis=1, skipna=True)
+    final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
+    final_df['Moneyline Win Probability'] = (0.5* final_df['Moneyline Win Probability'] + 0.5 * final_df['ml_implied_prob'])
+
     final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
     final_df.drop(columns=['ml_implied_prob'], inplace=True)
 
