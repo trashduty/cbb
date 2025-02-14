@@ -1,9 +1,8 @@
 import os
 import requests
 import pandas as pd
-from scrapers import evanmiya, get_barttorvik_df,get_kenpom_df,get_dratings_df,get_evanmiya_df
+from scrapers import get_barttorvik_df,get_kenpom_df,get_evanmiya_df
 import numpy as np
-from datetime import datetime, timezone
 from statistics import median
 # from dotenv import load_dotenv
 
@@ -374,10 +373,14 @@ def run_etl():
     #     final_df[f'projected_total_{model}'] = np.nan
 
     # Calculate moneyline probabilities and edge
+    # Calculate moneyline probabilities and edge
     final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
     final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
     final_df['Moneyline Win Probability'] = (0.5* final_df['Moneyline Win Probability'] + 0.5 * final_df['ml_implied_prob'])
+
+    # Add win probability standard deviation here
+    final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
 
     final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
     final_df.drop(columns=['ml_implied_prob'], inplace=True)
@@ -386,9 +389,13 @@ def run_etl():
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
 
+    # Add this new line here
+    final_df['Spread Std. Dev.'] = final_df[spread_models].std(axis=1, skipna=True).round(2)
+
     # Calculate Predicted Outcome
     final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
                                     0.3 * final_df['forecasted_spread'])
+
 
     # Load spreads lookup data
     try:
@@ -421,12 +428,14 @@ def run_etl():
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
     final_df['forecasted_total'] = final_df[projected_total_models].median(axis=1, skipna=True)
 
+    # Add totals standard deviation here
+    final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
+
     # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
         (0.55 * final_df['theoddsapi_total'].fillna(0) +
         0.45 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
-    ).round().astype(pd.Int64Dtype())  # Round to integer here
-
+    ).round().astype(pd.Int64Dtype())
     # Load and process totals lookup data
     try:
         totals_lookup_df = pd.read_csv('totals_lookup.csv')
@@ -460,13 +469,15 @@ def run_etl():
     final_df['Game Time'] = pd.to_datetime(final_df['Game Time'])
     final_df = final_df.sort_values('Game Time', ascending=True)
     # Define final column order
+
+
     column_order = [
         'Game', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
-        'Opening Spread', 'Edge For Covering Spread', 'spread_barttorvik', 
+        'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik', 
         'spread_kenpom', 'spread_evanmiya',
-        'Moneyline Win Probability', 'Opening Moneyline', 'Moneyline Edge',
+        'Moneyline Win Probability', 'Opening Moneyline', 'Moneyline Edge', 'Moneyline Std. Dev.',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
-        'average_total', 'theoddsapi_total', 'projected_total_barttorvik',
+        'average_total', 'theoddsapi_total', 'Totals Std. Dev.', 'projected_total_barttorvik',
         'projected_total_kenpom', 'projected_total_evanmiya',
         'Over Cover Probability', 'Under Cover Probability',
         'Over Total Edge', 'Under Total Edge']
