@@ -216,9 +216,9 @@ def get_moneyline_odds(data):
         # Convert back to American odds
         def implied_probability_to_american_odds(prob):
             if prob >= 0.5:
-                return -1 * (prob * 100)/(1 - prob)
+                return int(-1 * (prob * 100)/(1 - prob))
             else:
-                return (100 - prob * 100)/prob
+                return int((100 - prob * 100)/prob)
 
         med_home_price = implied_probability_to_american_odds(med_home_prob)
         med_away_price = implied_probability_to_american_odds(med_away_prob)
