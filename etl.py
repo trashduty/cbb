@@ -207,11 +207,21 @@ def get_moneyline_odds(data):
         if not home_prices or not away_prices:
             logger.info(f"[yellow]⚠[/yellow] Skipping game {game_key} due to missing moneyline prices")
             continue
+        home_probs = [american_odds_to_implied_probability(price) for price in home_prices]
+        away_probs = [american_odds_to_implied_probability(price) for price in away_prices]
 
-        # Calculate median of all collected prices
-        med_home_price = median(home_prices)
-        med_away_price = median(away_prices)
-        
+        med_home_prob = median(home_probs)
+        med_away_prob = median(away_probs)
+
+        # Convert back to American odds
+        def implied_probability_to_american_odds(prob):
+            if prob >= 0.5:
+                return -1 * (prob * 100)/(1 - prob)
+            else:
+                return (100 - prob * 100)/prob
+
+        med_home_price = implied_probability_to_american_odds(med_home_prob)
+        med_away_price = implied_probability_to_american_odds(med_away_prob)
         # Calculate devigged probabilities
         devigged_home_prob, devigged_away_prob = devig_moneyline_odds(med_home_price, med_away_price)
 
@@ -617,7 +627,7 @@ def run_etl():
     # Add win probability standard deviation here
     final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
 
-    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
+    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob'] 
     # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
