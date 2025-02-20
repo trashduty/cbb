@@ -5,6 +5,10 @@ import numpy as np
 from datetime import datetime, timedelta
 from logger_setup import log_scraper_execution
 import logging
+from rich.table import Table
+from rich.console import Console
+
+console = Console()
 
 @log_scraper_execution
 def fetch_barttorvik(date=None):
@@ -62,6 +66,8 @@ def get_barttorvik_df(include_tomorrow=True):
     Args:
         include_tomorrow (bool): Whether to include tomorrow's games
     """
+    logger = logging.getLogger('barttorvik')
+    
     # Get today's date and tomorrow's date
     today = datetime.now()
     tomorrow = today + timedelta(days=1)
@@ -69,19 +75,135 @@ def get_barttorvik_df(include_tomorrow=True):
     # Fetch today's games
     today_raw = fetch_barttorvik(today.strftime('%Y%m%d'))
     today_transformed = transform_barttorvik_data(today_raw)
+    today_games = len(today_raw) if not today_raw.empty else 0
+    logger.info(f"[cyan]Fetched {today_games} games for {today.strftime('%Y-%m-%d')}[/cyan]")
 
     if include_tomorrow:
         # Fetch tomorrow's games
         tomorrow_raw = fetch_barttorvik(tomorrow.strftime('%Y%m%d'))
         tomorrow_transformed = transform_barttorvik_data(tomorrow_raw)
+        tomorrow_games = len(tomorrow_raw) if not tomorrow_raw.empty else 0
+        logger.info(f"[cyan]Fetched {tomorrow_games} games for {tomorrow.strftime('%Y-%m-%d')}[/cyan]")
 
         # Combine the dataframes
         combined_df = pd.concat([today_transformed, tomorrow_transformed], ignore_index=True)
+        total_games = today_games + tomorrow_games
     else:
         combined_df = today_transformed
+        total_games = today_games
 
     # Map team names
+    crosswalk = pd.read_csv('crosswalk.csv')
+    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
+    
+    # Create mapping report and get mapped dataframe
     mapped_df = map_team_names(combined_df)
+    final_games = len(mapped_df) // 2  # Divide by 2 since we have 2 rows per game
+    
+    # Create summary table
+    summary_table = Table(
+        title=f"Barttorvik Request Summary",
+        show_header=True,
+        header_style="bold magenta",
+        show_lines=False,
+        title_style="bold cyan"
+    )
+    
+    summary_table.add_column("Date", style="cyan")
+    summary_table.add_column("Games Found", style="green")
+    summary_table.add_column("Unmapped Teams", style="yellow")
+    summary_table.add_column("Count", style="red")
+    
+    # Process each date
+    for date in [today.strftime('%Y%m%d'), tomorrow.strftime('%Y%m%d')] if include_tomorrow else [today.strftime('%Y%m%d')]:
+        date_df = combined_df[combined_df['Game Date'] == date]
+        date_games = len(date_df) // 2  # Divide by 2 since we have 2 rows per game
+        
+        # Find unmapped teams for this date
+        unmapped = []
+        for team in date_df['Team'].unique():
+            if team not in name_map:
+                unmapped.append(team)
+        
+        # Format unmapped teams string
+        unmapped_count = len(unmapped)
+        
+        # Add row to summary table
+        summary_table.add_row(
+            datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d'),
+            str(date_games),
+            unmapped[0] if unmapped else "None",
+            str(unmapped_count)
+        )
+        
+        # Add additional rows for remaining unmapped teams
+        for team in unmapped[1:]:
+            summary_table.add_row("", "", team, "")
+    
+    # Add total row if showing multiple dates
+    if include_tomorrow:
+        summary_table.add_row("", "", "", "", style="dim")
+        total_unmapped = len(set(team for team in combined_df['Team'].unique() if team not in name_map))
+        summary_table.add_row(
+            "Total",
+            str(total_games),
+            f"{final_games} games after mapping",
+            f"{total_unmapped} teams unmapped",
+            style="bold"
+        )
+
+    console.print(summary_table)
+
+    # Create detailed games table
+    games_table = Table(
+        show_header=True,
+        header_style="bold magenta",
+        show_lines=False,
+        title_style="bold cyan",
+        padding=(0, 1)
+    )
+    
+    games_table.add_column("Date", style="cyan", width=10)
+    games_table.add_column("Matchup", style="green", width=65)  # Increased width to accommodate longer names
+    games_table.add_column("Spread", style="yellow", width=10)
+    games_table.add_column("Win Prob", style="cyan", width=10)
+    games_table.add_column("Total", style="magenta", width=10)
+    
+    # Process each date's games
+    current_date = None
+    for _, row in mapped_df.iterrows():
+        date = row['Game Date']
+        if row['Team'] != row['Home Team']:
+            continue  # Skip away team rows
+            
+        # Add separator row if date changes
+        if current_date != date:
+            formatted_date = datetime.strptime(str(date), '%Y%m%d').strftime('%m-%d')
+            if current_date is not None:
+                games_table.add_row("", "", "", "", "")
+            games_table.add_row(formatted_date, "=" * 63, "", "", "", style="dim")  # Adjusted separator length
+            current_date = date
+        
+        # Format the data
+        spread = f"{row['spread_barttorvik']:+.1f}"
+        win_prob = f"{row['win_prob_barttorvik']*100:.0f}%"
+        total = f"{row['projected_total_barttorvik']:.1f}" if pd.notnull(row['projected_total_barttorvik']) else "N/A"
+        
+        # Create matchup string without truncation
+        matchup = f"{row['Away Team']} @ {row['Home Team']}"
+        
+        # Add game row
+        games_table.add_row(
+            "",
+            matchup,
+            spread,
+            win_prob,
+            total
+        )
+    
+    console.print(games_table)
+    logger.info(f"[green]✓[/green] Successfully processed {final_games} games from Barttorvik")
+
     return mapped_df.reset_index(drop=True)
 
 @log_scraper_execution
