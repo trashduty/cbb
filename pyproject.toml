@@ -5,14 +5,19 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "apache-airflow==2.7.3",
+    "apache-airflow-providers-google>=10.15.0",
+    "beautifulsoup4>=4.12.3",
     "bs4>=0.0.2",
     "ipykernel>=6.29.5",
     "lxml>=5.3.0",
     "numpy>=2.2.2",
     "pandas>=2.2.3",
+    "pip>=25.0.1",
     "python-dotenv>=1.0.1",
     "pytz>=2024.2",
     "rapidfuzz>=3.11.0",
     "requests>=2.32.3",
+    "rich>=13.7.0",
     "selenium>=4.28.0",
 ]
