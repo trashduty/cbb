@@ -607,9 +607,9 @@ def run_etl():
 
     # Calculate spread implied probability
     final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
+    final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
 
     # Calculate moneyline probabilities and edge using devigged probabilities
-    # Note: We no longer need to calculate ml_implied_prob since we have devigged probabilities
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
     final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
     final_df['Moneyline Win Probability'] = (0.5 * final_df['Moneyline Win Probability'] + 0.5 * final_df['Devigged Probability'])
@@ -617,8 +617,7 @@ def run_etl():
     # Add win probability standard deviation here
     final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
 
-    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['Opening Moneyline'].astype(float)
-
+    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
     # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
