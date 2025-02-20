@@ -617,7 +617,7 @@ def run_etl():
     # Add win probability standard deviation here
     final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
 
-    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['Devigged Probability']
+    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['Opening Probability']
 
     # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
