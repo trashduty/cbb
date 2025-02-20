@@ -38,6 +38,12 @@ def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,to
         data = response.json()
         
         if data:
+            # Log raw timestamps from API
+            logger.info("\n[cyan]Sample raw timestamps from API:[/cyan]")
+            for game in data[:3]:
+                logger.info(f"Game: {game['away_team']} @ {game['home_team']}")
+                logger.info(f"Raw timestamp: {game['commence_time']}")
+            
             # Filter out live games using commence_time
             current_time = datetime.now(timezone('UTC'))
             data = [game for game in data if datetime.strptime(game['commence_time'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone('UTC')) > current_time]
@@ -162,17 +168,12 @@ def get_moneyline_odds(data):
     moneyline_dict = {}
 
     for game in data:
-        game_time = game.get('commence_time')
+        game_time = game.get('commence_time')  # Keep original ISO format
         home_team = game.get('home_team')
         away_team = game.get('away_team')
 
         if not all([game_time, home_team, away_team]):
             continue
-
-        # Convert UTC to ET for the game time
-        utc_time = datetime.strptime(game_time, '%Y-%m-%dT%H:%M:%SZ')
-        et_time = utc_time - timedelta(hours=5)
-        game_time = et_time.strftime('%b %d %I:%M%p ET')
 
         # Use game time + teams as unique identifier
         game_key = f"{game_time}_{home_team}_vs_{away_team}"
@@ -220,7 +221,7 @@ def get_moneyline_odds(data):
 
         # Add home team record
         h2h_records.append({
-            'Game Time': game_time,
+            'Game Time': game_time,  # Keep ISO format
             'Home Team': home_team,
             'Away Team': away_team,
             'Team': home_team,
@@ -231,7 +232,7 @@ def get_moneyline_odds(data):
 
         # Add away team record
         h2h_records.append({
-            'Game Time': game_time,
+            'Game Time': game_time,  # Keep ISO format
             'Home Team': home_team,
             'Away Team': away_team,
             'Team': away_team,
@@ -263,9 +264,6 @@ def get_spread_odds(data):
 
         # Use game time + teams as unique identifier
         game_key = f"{game_time}_{home_team}_vs_{away_team}"
-        
-        # Debug log for each game
-        logger.info(f"\n[cyan]Processing spreads for game:[/cyan] {home_team} vs {away_team}")
 
         # Initialize empty lists to hold spreads and prices from each bookmaker
         spread_dict.setdefault((game_key, 'home'), {'points': [], 'prices': []})
@@ -284,11 +282,9 @@ def get_spread_odds(data):
                         if team_name == home_team and point is not None and price is not None:
                             spread_dict[(game_key, 'home')]['points'].append(point)
                             spread_dict[(game_key, 'home')]['prices'].append(price)
-                            logger.info(f"Home spread from {bookmaker['title']}: {point}")
                         elif team_name == away_team and point is not None and price is not None:
                             spread_dict[(game_key, 'away')]['points'].append(point)
                             spread_dict[(game_key, 'away')]['prices'].append(price)
-                            logger.info(f"Away spread from {bookmaker['title']}: {point}")
 
     # Build final records with median spreads and prices
     spreads_records = []
@@ -309,8 +305,6 @@ def get_spread_odds(data):
             team_name = home_team
         else:
             team_name = away_team
-
-        logger.info(f"Final median spread for {team_name}: {med_point}")
 
         spreads_records.append({
             'Game Time': game_time,
@@ -417,9 +411,14 @@ def get_combined_odds():
 
     # Get DataFrames and process using all data
     moneyline_df = get_moneyline_odds(filtered_data).drop(columns=['Sportsbook'])
+    logger.info(f"\n[cyan]Sample Game Times from moneyline_df:[/cyan]\n{moneyline_df['Game Time'].head()}")
+    
     spreads_df = get_spread_odds(filtered_data).drop(columns=['Sportsbook']).rename(
         columns={'Spread': 'Opening Spread'})
+    logger.info(f"\n[cyan]Sample Game Times from spreads_df:[/cyan]\n{spreads_df['Game Time'].head()}")
+    
     totals_df = get_totals_odds(filtered_data).drop(columns=['Sportsbook'])
+    logger.info(f"\n[cyan]Sample Game Times from totals_df:[/cyan]\n{totals_df['Game Time'].head()}")
 
     # Merge data
     combined_df = pd.merge(
@@ -428,6 +427,7 @@ def get_combined_odds():
         on=['Game Time', 'Home Team', 'Away Team', 'Team'],
         how='outer'
     )
+    logger.info(f"\n[cyan]Sample Game Times after first merge:[/cyan]\n{combined_df['Game Time'].head()}")
 
     combined_df = pd.merge(
         combined_df,
@@ -435,10 +435,38 @@ def get_combined_odds():
         on=['Game Time', 'Home Team', 'Away Team'],
         how='outer'
     )
+    logger.info(f"\n[cyan]Sample Game Times after second merge:[/cyan]\n{combined_df['Game Time'].head()}")
 
     # Create game identifier
     combined_df.insert(0, 'Game',
         combined_df['Home Team'] + " vs. " + combined_df['Away Team'])
+
+    # Convert Game Time to datetime, handling both formats
+    def convert_game_time(time_str):
+        try:
+            # Try ISO format first
+            dt = pd.to_datetime(time_str)
+            # Convert to ET
+            et = timezone('US/Eastern')
+            if dt.tzinfo is None:
+                dt = dt.tz_localize('UTC')
+            dt = dt.tz_convert(et)
+            return dt
+        except (ValueError, TypeError) as e:
+            logger.error(f"[red]Error converting time {time_str}: {str(e)}[/red]")
+            return pd.NaT
+
+    logger.info(f"\n[cyan]Sample Game Times before conversion:[/cyan]\n{combined_df['Game Time'].head()}")
+    
+    # Convert all times to ET format after merges are complete
+    combined_df['Game Time'] = combined_df['Game Time'].apply(convert_game_time)
+    logger.info(f"\n[cyan]Sample Game Times after datetime conversion:[/cyan]\n{combined_df['Game Time'].head()}")
+    
+    # Format the Game Time column to Month Abbr, Day Time (ET)
+    combined_df['Game Time'] = combined_df['Game Time'].dt.strftime('%b %d %I:%M%p ET')
+    logger.info(f"\n[cyan]Sample Game Times after formatting:[/cyan]\n{combined_df['Game Time'].head()}")
+    
+    combined_df = combined_df.sort_values('Game Time', ascending=True)
 
     return combined_df
 
@@ -514,17 +542,6 @@ def run_etl():
     logger.info("\n[cyan]All teams from final_df:[/cyan]")
     for team in sorted(list(final_teams)):
         logger.info(f"- {team}")
-    
-    # Log some sample games before merge
-    logger.info("\n[cyan]Sample games from Hasla before merge:[/cyan]")
-    sample_hasla = hasla.head()
-    for _, row in sample_hasla.iterrows():
-        logger.info(f"- {row['Away Team']} @ {row['Home Team']}: spread={row['spread_hasla']}, total={row['projected_total_hasla']}")
-
-    logger.info("\n[cyan]Sample games from final_df before merge:[/cyan]")
-    sample_final = final_df.head()
-    for _, row in sample_final.iterrows():
-        logger.info(f"- {row['Away Team']} @ {row['Home Team']}")
     
     # Do the merge
     final_df = pd.merge(
@@ -718,31 +735,6 @@ def run_etl():
 
     logger.info(f"[cyan]Final shape after handling missing devigged probabilities:[/cyan] {final_df.shape}")
 
-    # Convert Game Time to datetime, handling both formats
-    def convert_game_time(time_str):
-        try:
-            # Try ISO format first
-            dt = pd.to_datetime(time_str, format='%Y-%m-%dT%H:%M:%S%z')
-            # Convert to ET
-            et = timezone('US/Eastern')
-            dt = dt.tz_convert(et)
-            return dt
-        except ValueError:
-            # Try the ET format
-            try:
-                dt = pd.to_datetime(time_str, format='%b %d %I:%M%p ET')
-                # Make it timezone aware
-                et = timezone('US/Eastern')
-                dt = et.localize(dt)
-                return dt
-            except ValueError:
-                return pd.NaT
-
-    final_df['Game Time'] = final_df['Game Time'].apply(convert_game_time)
-    
-    # Format the Game Time column to Month Abbr, Day Time (ET)
-    final_df['Game Time'] = final_df['Game Time'].dt.strftime('%b %d %I:%M%p ET')
-    
     final_df = final_df.sort_values('Game Time', ascending=True)
     # Define final column order
     column_order = [
