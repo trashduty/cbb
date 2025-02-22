@@ -1,178 +1,63 @@
 import os
 import requests
 import pandas as pd
-from scrapers import get_barttorvik_df,get_kenpom_df,get_evanmiya_df, get_hasla_df
+from scrapers import evanmiya, get_barttorvik_df,get_kenpom_df,get_evanmiya_df
 import numpy as np
+from datetime import datetime, timezone
 from statistics import median
-# from dotenv import load_dotenv
-from logger_setup import setup_logger
-from rich.table import Table
-from rich.console import Console
-from datetime import datetime, timedelta
-from rich.box import MINIMAL
-from pytz import timezone
 import logging
+# from dotenv import load_dotenv
 
-# load_dotenv()
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-logger = setup_logger('oddsapi')
-console = Console()
+# load_dotenv()   
+
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """
     Fetches odds data from the API for specified sport and markets.
-    Only returns games that haven't started yet.
     """
     key = os.getenv("ODDS_API_KEY")
     if not key:
-        logger.error("[red]✗[/red] ODDSAPI key not found in environment variables.")
         raise ValueError("ODDSAPI key not found in environment variables.")
 
     base_url = "https://api.the-odds-api.com"
     odds_url = f"{base_url}/v4/sports/{sport}/odds/?apiKey={key}&regions={region}&markets={markets}&oddsFormat=american"
 
     try:
-        logger.info(f"[cyan]Fetching odds data for {sport}[/cyan]")
         response = requests.get(odds_url)
         response.raise_for_status()
-        data = response.json()
-        
-        if data:
-            # Log raw timestamps from API
-            logger.info("\n[cyan]Sample raw timestamps from API:[/cyan]")
-            for game in data[:3]:
-                logger.info(f"Game: {game['away_team']} @ {game['home_team']}")
-                logger.info(f"Raw timestamp: {game['commence_time']}")
-            
-            # Filter out live games using commence_time
-            current_time = datetime.now(timezone('UTC'))
-            data = [game for game in data if datetime.strptime(game['commence_time'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone('UTC')) > current_time]
-            logger.info(f"[cyan]Filtered to {len(data)} upcoming games[/cyan]")
-            
-            # Create a rich table to display the data
-            table = Table(
-                title=f"OddsAPI Request ({len(data)} upcoming games)",
-                show_header=True,
-                header_style="bold magenta",
-                show_lines=False,
-                title_style="bold cyan",
-                padding=(0, 1),
-                box=MINIMAL
-            )
-            
-            # Add columns
-            table.add_column("Date", style="cyan", width=5)
-            table.add_column("Time", style="cyan", width=7)
-            table.add_column("Matchup", style="green", width=60)
-            
-            # Sort games by time
-            sorted_games = sorted(data, key=lambda x: x['commence_time'])
-            
-            # Track date changes for visual separation
-            current_date = None
-            
-            # Add rows for each game
-            for game in sorted_games:
-                # Convert UTC to ET and format time
-                game_time = datetime.strptime(game['commence_time'], '%Y-%m-%dT%H:%M:%SZ')
-                # Subtract 5 hours for ET
-                et_time = game_time - timedelta(hours=5)
-                date_str = et_time.strftime('%m-%d')
-                time_str = et_time.strftime('%I:%M%p').lstrip('0').lower()
-                
-                # Add separator row if date changes
-                if current_date != date_str:
-                    if current_date is not None:
-                        table.add_row("", "", "─" * 60, style="dim")
-                    current_date = date_str
-                
-                # Format matchup more compactly
-                matchup = f"{game['away_team']} @ {game['home_team']}"
-                
-                # Color code based on conference/matchup importance
-                style = get_matchup_style(game['home_team'], game['away_team'])
-                
-                table.add_row(date_str, time_str, matchup, style=style)
-            
-            # Log the table
-            console.print(table)
-            logger.info(f"[green]✓[/green] Successfully fetched {len(data)} upcoming games from Odds API")
-        
-        return data
+        return response.json()
     except requests.exceptions.HTTPError as http_err:
-        logger.error(f"[red]✗[/red] HTTP error occurred: {http_err}")
+        print(f"HTTP error occurred: {http_err}")
         return None
     except Exception as err:
-        logger.error(f"[red]✗[/red] Error occurred: {err}")
+        print(f"Error occurred: {err}")
         return None
-
-def get_matchup_style(home_team, away_team):
-    """
-    Returns a style string based on the matchup importance/conference.
-    Add conference-specific or rivalry-specific styling here.
-    """
-    # Example conference/matchup styling - expand this based on your needs
-    power_conferences = ['Kentucky', 'North Carolina', 'Duke', 'Kansas', 'UCLA']
-    if any(team in power_conferences for team in [home_team, away_team]):
-        return "bold yellow"
-    return None
-
-def american_odds_to_implied_probability(odds):
-    """
-    Convert American odds to implied probability
-    
-    Args:
-        odds (float): American odds (positive or negative)
-        
-    Returns:
-        float: Implied probability between 0 and 1
-    """
-    if odds > 0:
-        return 100 / (odds + 100)
-    else:
-        return abs(odds) / (abs(odds) + 100)
-
-def devig_moneyline_odds(home_odds, away_odds):
-    """
-    Remove the vig from moneyline odds using the basic method of proportionally 
-    adjusting implied probabilities to sum to 1.
-    
-    Args:
-        home_odds (float): American odds for home team
-        away_odds (float): American odds for away team
-        
-    Returns:
-        tuple: (devigged home probability, devigged away probability)
-    """
-    # Convert to implied probabilities 
-    home_prob = american_odds_to_implied_probability(home_odds)
-    away_prob = american_odds_to_implied_probability(away_odds)
-    
-    # Calculate sum of probabilities (with vig)
-    total_prob = home_prob + away_prob
-    
-    # Remove the vig by proportionally adjusting probabilities to sum to 1
-    devigged_home = home_prob / total_prob
-    devigged_away = away_prob / total_prob
-    
-    return devigged_home, devigged_away
-
 
 def get_moneyline_odds(data):
     """
     Processes moneyline odds into a DataFrame with two rows per game (home and away teams),
-    using the median price across all available bookmakers and includes devigged probabilities.
-    Only includes games where both home and away prices are available for proper devigging.
+    using the median price across all available bookmakers.
     """
     # Dictionary to store all moneylines for each team in each game
     moneyline_dict = {}
+    
+    logger.info("Processing moneyline odds...")
+    logger.info(f"Number of games in raw data: {len(data)}")
 
     for game in data:
-        game_time = game.get('commence_time')  # Keep original ISO format
+        game_time = game.get('commence_time')
         home_team = game.get('home_team')
         away_team = game.get('away_team')
+        
+        if "Duke" in str(home_team) or "Duke" in str(away_team):
+            logger.info(f"Found Duke game: {home_team} vs {away_team}")
 
         if not all([game_time, home_team, away_team]):
+            logger.warning(f"Missing required data for game: {home_team} vs {away_team}")
             continue
 
         # Use game time + teams as unique identifier
@@ -197,58 +82,31 @@ def get_moneyline_odds(data):
                         elif team_name == away_team and price is not None:
                             moneyline_dict[(game_key, 'away')].append(price)
 
-    # Build final records with median prices and devigged probabilities
+    # Build final records with median prices
     h2h_records = []
-    for game_key in set(k[0] for k in moneyline_dict.keys()):
-        home_prices = moneyline_dict.get((game_key, 'home'), [])
-        away_prices = moneyline_dict.get((game_key, 'away'), [])
-        
-        # Skip games where we don't have both home and away prices
-        if not home_prices or not away_prices:
-            logger.info(f"[yellow]⚠[/yellow] Skipping game {game_key} due to missing moneyline prices")
+    for (game_key, side), prices in moneyline_dict.items():
+        if not prices:
             continue
-        home_probs = [american_odds_to_implied_probability(price) for price in home_prices]
-        away_probs = [american_odds_to_implied_probability(price) for price in away_prices]
 
-        med_home_prob = median(home_probs)
-        med_away_prob = median(away_probs)
-
-        # Convert back to American odds
-        def implied_probability_to_american_odds(prob):
-            if prob >= 0.5:
-                return -1 * (prob * 100)/(1 - prob)
-            else:
-                return (100 - prob * 100)/prob
-
-        med_home_price = implied_probability_to_american_odds(med_home_prob)
-        med_away_price = implied_probability_to_american_odds(med_away_prob)
-        # Calculate devigged probabilities
-        devigged_home_prob, devigged_away_prob = devig_moneyline_odds(med_home_price, med_away_price)
+        # Calculate median of all collected prices
+        med_price = median(prices)
 
         # Parse game info from the key
         game_time, teams = game_key.split('_', 1)
         home_team, away_team = teams.split('_vs_')
 
-        # Add home team record
-        h2h_records.append({
-            'Game Time': game_time,  # Keep ISO format
-            'Home Team': home_team,
-            'Away Team': away_team,
-            'Team': home_team,
-            'Moneyline': med_home_price,
-            'Devigged Probability': devigged_home_prob,
-            'Sportsbook': 'CONSENSUS'
-        })
+        if side == 'home':
+            team_name = home_team
+        else:
+            team_name = away_team
 
-        # Add away team record
         h2h_records.append({
-            'Game Time': game_time,  # Keep ISO format
+            'Game Time': game_time,
             'Home Team': home_team,
             'Away Team': away_team,
-            'Team': away_team,
-            'Moneyline': med_away_price,
-            'Devigged Probability': devigged_away_prob,
-            'Sportsbook': 'CONSENSUS'
+            'Team': team_name,
+            'Moneyline': med_price,
+            'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
         })
 
     return pd.DataFrame(h2h_records)
@@ -261,9 +119,6 @@ def get_spread_odds(data):
     # Dictionary to store all spreads and prices for each team in each game
     spread_dict = {}
 
-    # Add debugging for raw data
-    logger.info("[cyan]Processing spread odds from API data[/cyan]")
-    
     for game in data:
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
@@ -300,7 +155,6 @@ def get_spread_odds(data):
     spreads_records = []
     for (game_key, side), values in spread_dict.items():
         if not values['points'] or not values['prices']:
-            logger.info(f"[yellow]Missing spread data for game:[/yellow] {game_key}, side: {side}")
             continue
 
         # Calculate medians
@@ -405,39 +259,71 @@ def get_totals_odds(data):
         })
 
     return pd.DataFrame(totals_records)
-
 def get_combined_odds():
     data = get_odds_data()
     if not data:
         return pd.DataFrame()
 
-    # Remove the time-based filtering completely
-    # Keep all games, regardless of their start time
-    filtered_data = data
+    logger.info("Starting get_combined_odds processing...")
+    logger.info(f"Number of games in raw data: {len(data)}")
+    
+    # Log Duke games in raw data
+    duke_games = [game for game in data if 'Duke' in game.get('home_team', '') or 'Duke' in game.get('away_team', '')]
+    logger.info(f"Duke games in raw data: {duke_games}")
 
-    # If everything got filtered out, return empty DataFrame
-    if not filtered_data:
-        return pd.DataFrame()
+    filtered_data = data
 
     # Get DataFrames and process using all data
     moneyline_df = get_moneyline_odds(filtered_data).drop(columns=['Sportsbook'])
-    logger.info(f"\n[cyan]Sample Game Times from moneyline_df:[/cyan]\n{moneyline_df['Game Time'].head()}")
-    
     spreads_df = get_spread_odds(filtered_data).drop(columns=['Sportsbook']).rename(
         columns={'Spread': 'Opening Spread'})
-    logger.info(f"\n[cyan]Sample Game Times from spreads_df:[/cyan]\n{spreads_df['Game Time'].head()}")
-    
     totals_df = get_totals_odds(filtered_data).drop(columns=['Sportsbook'])
-    logger.info(f"\n[cyan]Sample Game Times from totals_df:[/cyan]\n{totals_df['Game Time'].head()}")
+
+    # Log Duke games in each DataFrame
+    logger.info("\nDuke games in moneyline_df:")
+    logger.info(moneyline_df[moneyline_df['Home Team'].str.contains('Duke', na=False) | 
+                            moneyline_df['Away Team'].str.contains('Duke', na=False)])
+    
+    logger.info("\nDuke games in spreads_df:")
+    logger.info(spreads_df[spreads_df['Home Team'].str.contains('Duke', na=False) | 
+                          spreads_df['Away Team'].str.contains('Duke', na=False)])
+    
+    logger.info("\nDuke games in totals_df:")
+    logger.info(totals_df[totals_df['Home Team'].str.contains('Duke', na=False) | 
+                         totals_df['Away Team'].str.contains('Duke', na=False)])
 
     # Merge data
-    combined_df = pd.merge(
+    # Create two versions of the merge - one normal and one with teams flipped
+    merge_normal = pd.merge(
         moneyline_df,
         spreads_df,
         on=['Game Time', 'Home Team', 'Away Team', 'Team'],
-        how='outer'
+        how='outer',
+        indicator='merge_type'
     )
-    logger.info(f"\n[cyan]Sample Game Times after first merge:[/cyan]\n{combined_df['Game Time'].head()}")
+    
+    # Create temporary columns with flipped teams in moneyline_df
+    moneyline_df_flipped = moneyline_df.copy()
+    moneyline_df_flipped['Home Team_orig'] = moneyline_df_flipped['Home Team']
+    moneyline_df_flipped['Away Team_orig'] = moneyline_df_flipped['Away Team']
+    moneyline_df_flipped['Home Team'] = moneyline_df_flipped['Away Team']
+    moneyline_df_flipped['Away Team'] = moneyline_df_flipped['Home Team_orig']
+    moneyline_df_flipped.drop(['Home Team_orig', 'Away Team_orig'], axis=1, inplace=True)
+    
+    # Merge with flipped teams
+    merge_flipped = pd.merge(
+        moneyline_df_flipped,
+        spreads_df,
+        on=['Game Time', 'Home Team', 'Away Team', 'Team'],
+        how='outer',
+        indicator='merge_type'
+    )
+    
+    # Combine both merges, keeping only the matches
+    combined_df = pd.concat([
+        merge_normal[merge_normal['merge_type'] == 'both'],
+        merge_flipped[merge_flipped['merge_type'] == 'both']
+    ]).drop('merge_type', axis=1)
 
     combined_df = pd.merge(
         combined_df,
@@ -445,157 +331,105 @@ def get_combined_odds():
         on=['Game Time', 'Home Team', 'Away Team'],
         how='outer'
     )
-    logger.info(f"\n[cyan]Sample Game Times after second merge:[/cyan]\n{combined_df['Game Time'].head()}")
 
     # Create game identifier
     combined_df.insert(0, 'Game',
         combined_df['Home Team'] + " vs. " + combined_df['Away Team'])
 
-    # Convert Game Time to datetime, handling both formats
-    def convert_game_time(time_str):
-        try:
-            # Try ISO format first
-            dt = pd.to_datetime(time_str)
-            # Convert to ET
-            et = timezone('US/Eastern')
-            if dt.tzinfo is None:
-                dt = dt.tz_localize('UTC')
-            dt = dt.tz_convert(et)
-            return dt
-        except (ValueError, TypeError) as e:
-            logger.error(f"[red]Error converting time {time_str}: {str(e)}[/red]")
-            return pd.NaT
-
-    logger.info(f"\n[cyan]Sample Game Times before conversion:[/cyan]\n{combined_df['Game Time'].head()}")
-    
-    # Convert all times to ET format after merges are complete
-    combined_df['Game Time'] = combined_df['Game Time'].apply(convert_game_time)
-    logger.info(f"\n[cyan]Sample Game Times after datetime conversion:[/cyan]\n{combined_df['Game Time'].head()}")
-    
-    # Format the Game Time column to Month Abbr, Day Time (ET)
-    combined_df['Game Time'] = combined_df['Game Time'].dt.strftime('%b %d %I:%M%p ET')
-    logger.info(f"\n[cyan]Sample Game Times after formatting:[/cyan]\n{combined_df['Game Time'].head()}")
-    
-    combined_df = combined_df.sort_values('Game Time', ascending=True)
-
     return combined_df
+def american_odds_to_implied_probability(odds):
+    if odds > 0:
+        return 100 / (odds + 100)
+    else:
+        return abs(odds) / (abs(odds) + 100)
 
 def run_etl():
     # Get data from sources
-    logger = logging.getLogger('etl')
-    
-    logger.info("[cyan]Starting ETL process[/cyan]")
+    logger.info("Starting ETL process...")
     
     odds_df = get_combined_odds()
-    logger.info(f"[cyan]Odds data shape:[/cyan] {odds_df.shape}")
+    logger.info(f"Odds DataFrame shape: {odds_df.shape}")
     
     barttorvik = get_barttorvik_df(include_tomorrow=True)
-    logger.info(f"[cyan]Barttorvik data shape:[/cyan] {barttorvik.shape}")
+    logger.info(f"Barttorvik DataFrame shape: {barttorvik.shape}")
     
-    kenpom = get_kenpom_df()
-    logger.info(f"[cyan]Kenpom data shape:[/cyan] {kenpom.shape}")
+    # Log team names from both datasets
+    logger.info("\nUnique team names in odds_df:")
+    logger.info(sorted(pd.concat([odds_df['Home Team'], odds_df['Away Team']]).unique()))
     
-    evanmiya = get_evanmiya_df()
-    logger.info(f"[cyan]Evanmiya data shape:[/cyan] {evanmiya.shape}")
+    logger.info("\nUnique team names in Barttorvik:")
+    logger.info(sorted(pd.concat([barttorvik['Home Team'], barttorvik['Away Team']]).unique()))
     
-    hasla = get_hasla_df()
-    logger.info(f"[cyan]Hasla data shape:[/cyan] {hasla.shape}")
-    logger.info(f"[cyan]Hasla columns:[/cyan] {hasla.columns.tolist()}")
-    logger.info(f"[cyan]Sample Hasla spreads:[/cyan] {hasla['spread_hasla'].head().tolist()}")
+    # Log Duke games before merge
+    logger.info("\nDuke games in odds_df before merge:")
+    logger.info(odds_df[odds_df['Home Team'].str.contains('Duke', na=False) | 
+                       odds_df['Away Team'].str.contains('Duke', na=False)])
+    
+    logger.info("\nDuke games in Barttorvik before merge:")
+    logger.info(barttorvik[barttorvik['Home Team'].str.contains('Duke', na=False) | 
+                          barttorvik['Away Team'].str.contains('Duke', na=False)])
 
     # Merge data
-    logger.info("[cyan]Starting data merges[/cyan]")
-    
-    # First merge
-    final_df = pd.merge(
+    # Create two versions of the merge - one normal and one with teams flipped
+    merge_normal = pd.merge(
         barttorvik,
         odds_df,
         on=['Home Team', 'Away Team', 'Team'],
-        how='inner'
+        how='outer',
+        indicator='merge_type'
     )
-    logger.info(f"[cyan]After odds merge shape:[/cyan] {final_df.shape}")
     
-    # Kenpom merge
+    # Create temporary columns with flipped teams in odds_df
+    odds_df_flipped = odds_df.copy()
+    odds_df_flipped['Home Team_orig'] = odds_df_flipped['Home Team']
+    odds_df_flipped['Away Team_orig'] = odds_df_flipped['Away Team']
+    odds_df_flipped['Home Team'] = odds_df_flipped['Away Team']
+    odds_df_flipped['Away Team'] = odds_df_flipped['Home Team_orig']
+    odds_df_flipped.drop(['Home Team_orig', 'Away Team_orig'], axis=1, inplace=True)
+    
+    # Merge with flipped teams
+    merge_flipped = pd.merge(
+        barttorvik,
+        odds_df_flipped,
+        on=['Home Team', 'Away Team', 'Team'],
+        how='outer',
+        indicator='merge_type'
+    )
+    
+    # Combine both merges, keeping only the matches
+    final_df = pd.concat([
+        merge_normal[merge_normal['merge_type'] == 'both'],
+        merge_flipped[merge_flipped['merge_type'] == 'both']
+    ]).drop('merge_type', axis=1)
+    
+    logger.info(f"\nFinal DataFrame shape after first merge: {final_df.shape}")
+    logger.info("Duke games in final DataFrame after first merge:")
+    logger.info(final_df[final_df['Home Team'].str.contains('Duke', na=False) | 
+                        final_df['Away Team'].str.contains('Duke', na=False)])
+
+    kenpom = get_kenpom_df()
+    # dratings = get_dratings_df()
+    evanmiya = get_evanmiya_df()
+
+    # Merge data
     final_df = pd.merge(
         final_df,
         kenpom,
         on=['Home Team', 'Away Team', 'Team'],
         how='left'
     )
-    logger.info(f"[cyan]After Kenpom merge shape:[/cyan] {final_df.shape}")
-    
-    # Evanmiya merge
+    # final_df = pd.merge(
+    #     final_df,
+    #     dratings,
+    #     on=['Home Team', 'Away Team', 'Team'],
+    #     how='left',
+    # )
     final_df = pd.merge(
         final_df,
         evanmiya,
         on=['Home Team', 'Away Team', 'Team'],
         how='left',
     )
-    logger.info(f"[cyan]After Evanmiya merge shape:[/cyan] {final_df.shape}")
-    
-    # Hasla merge
-    logger.info("[cyan]Before Hasla merge columns:[/cyan] {final_df.columns.tolist()}")
-    logger.info(f"[cyan]Before Hasla merge shape:[/cyan] {final_df.shape}")
-    
-    # Check for team name matches
-    hasla_teams = set(hasla['Team'].unique())
-    final_teams = set(final_df['Team'].unique())
-    common_teams = hasla_teams.intersection(final_teams)
-    logger.info(f"[cyan]Teams in Hasla:[/cyan] {len(hasla_teams)}")
-    logger.info(f"[cyan]Teams in final_df:[/cyan] {len(final_teams)}")
-    logger.info(f"[cyan]Common teams:[/cyan] {len(common_teams)}")
-    
-    # Log all teams from both datasets for comparison
-    logger.info("\n[cyan]All teams from Hasla:[/cyan]")
-    for team in sorted(list(hasla_teams)):
-        logger.info(f"- {team}")
-    logger.info("\n[cyan]All teams from final_df:[/cyan]")
-    for team in sorted(list(final_teams)):
-        logger.info(f"- {team}")
-    
-    # Do the merge
-    final_df = pd.merge(
-        final_df,
-        hasla[['Home Team', 'Away Team', 'Team', 'spread_hasla', 'projected_total_hasla']],  # Only keep needed columns
-        on=['Home Team', 'Away Team', 'Team'],
-        how='left',
-        indicator=True  # This will show which rows matched
-    )
-    
-    # Log merge results
-    merge_counts = final_df['_merge'].value_counts()
-    logger.info("\n[cyan]Merge results:[/cyan]")
-    logger.info(f"Rows from left only: {merge_counts.get('left_only', 0)}")
-    logger.info(f"Rows from both: {merge_counts.get('both', 0)}")
-    
-    # Log some unmatched games
-    unmatched = final_df[final_df['_merge'] == 'left_only']
-    if not unmatched.empty:
-        logger.info("\n[yellow]Sample unmatched games:[/yellow]")
-        for _, row in unmatched.head().iterrows():
-            logger.info(f"- {row['Away Team']} @ {row['Home Team']}")
-    
-    # Drop the indicator column
-    final_df = final_df.drop('_merge', axis=1)
-    
-    logger.info(f"[cyan]After Hasla merge shape:[/cyan] {final_df.shape}")
-    logger.info(f"[cyan]After Hasla merge columns:[/cyan] {final_df.columns.tolist()}")
-    
-    # Check if spread_hasla exists and has values
-    if 'spread_hasla' in final_df.columns:
-        non_null = final_df['spread_hasla'].count()
-        logger.info(f"[cyan]spread_hasla non-null count:[/cyan] {non_null}")
-        if non_null > 0:
-            sample_spreads = final_df[final_df['spread_hasla'].notna()]['spread_hasla'].head()
-            logger.info(f"[cyan]Sample spread_hasla values:[/cyan] {sample_spreads.tolist()}")
-            
-            # Log some matched games with spreads
-            logger.info("\n[cyan]Sample matched games with spreads:[/cyan]")
-            matched = final_df[final_df['spread_hasla'].notna()]
-            for _, row in matched.head().iterrows():
-                logger.info(f"- {row['Away Team']} @ {row['Home Team']}: spread={row['spread_hasla']}")
-    else:
-        logger.error("[red]✗[/red] spread_hasla column not found after merge!")
 
     # Rename columns FIRST
     final_df.rename(columns={
@@ -617,50 +451,29 @@ def run_etl():
 
     # Calculate spread implied probability
     final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
-    final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
 
-    # Calculate moneyline probabilities and edge using devigged probabilities
+    # Calculate moneyline probabilities and edge
+    final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
     final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
-    final_df['Moneyline Win Probability'] = (0.5 * final_df['Moneyline Win Probability'] + 0.5 * final_df['Devigged Probability'])
+    final_df['Moneyline Win Probability'] = (0.5* final_df['Moneyline Win Probability'] + 0.5 * final_df['ml_implied_prob'])
 
-    # Add win probability standard deviation here
-    final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
+    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
+    final_df.drop(columns=['ml_implied_prob'], inplace=True)
 
-    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob'] 
-    # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
-    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
+    # Calculate forecasted spread (average of non-NaN model predictions)
+    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
-
-    # Add debugging for spread values
-    logger.info("[cyan]Checking spread values:[/cyan]")
-    logger.info(f"Opening Spread sample: {final_df['Opening Spread'].head().tolist()}")
-    logger.info(f"Barttorvik spread sample: {final_df['spread_barttorvik'].head().tolist()}")
-    logger.info(f"Kenpom spread sample: {final_df['spread_kenpom'].head().tolist()}")
-    logger.info(f"Evanmiya spread sample: {final_df['spread_evanmiya'].head().tolist()}")
-    logger.info(f"Hasla spread sample: {final_df['spread_hasla'].head().tolist()}")
-    logger.info(f"Forecasted spread sample: {final_df['forecasted_spread'].head().tolist()}")
-
-    # Add debugging for spread data types
-    logger.info("\n[cyan]Checking spread data types:[/cyan]")
-    logger.info(f"Opening Spread dtype: {final_df['Opening Spread'].dtype}")
-    logger.info(f"Forecasted spread dtype: {final_df['forecasted_spread'].dtype}")
 
     # Calculate Predicted Outcome
     final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
                                     0.3 * final_df['forecasted_spread'])
 
-    # Add debugging for predicted outcome
-    logger.info("\n[cyan]Checking predicted outcome:[/cyan]")
-    logger.info(f"Predicted Outcome sample: {final_df['Predicted Outcome'].head().tolist()}")
-    logger.info(f"Predicted Outcome dtype: {final_df['Predicted Outcome'].dtype}")
-
     # Load spreads lookup data
     try:
         lookup_df = pd.read_csv('spreads_lookup.csv')
-        # Round predicted outcome for matching and handle NaN values
-        final_df['Predicted Outcome'] = final_df['Predicted Outcome'].fillna(0).round()
-        final_df['Predicted Outcome'] = final_df['Predicted Outcome'].astype(int)
+        # Round predicted outcome for matching
+        final_df['Predicted Outcome'] = final_df['Predicted Outcome'].round().astype(int)
 
         # Merge with lookup data
         final_df = final_df.merge(
@@ -681,22 +494,18 @@ def run_etl():
         final_df['Edge For Covering Spread'] = np.nan
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik',
-                            'projected_total_kenpom', 
-                            'projected_total_evanmiya',
-                            'projected_total_hasla']
+                            'projected_total_kenpom', 'projected_total_evanmiya']
 
     # Handle missing totals data
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
     final_df['forecasted_total'] = final_df[projected_total_models].median(axis=1, skipna=True)
 
-    # Add totals standard deviation here
-    final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
-
     # Fill missing averages with theoddsapi_total and round to integer
     final_df['average_total'] = (
         (0.55 * final_df['theoddsapi_total'].fillna(0) +
         0.45 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
-    ).round().astype(pd.Int64Dtype())
+    ).round().astype(pd.Int64Dtype())  # Round to integer here
+
     # Load and process totals lookup data
     try:
         totals_lookup_df = pd.read_csv('totals_lookup.csv')
@@ -704,9 +513,6 @@ def run_etl():
         # Convert lookup table columns to correct types
         totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
         totals_lookup_df['True Line'] = totals_lookup_df['True Line'].astype(pd.Int64Dtype())
-
-        # Drop any duplicate rows before merging
-        final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
 
         # Use theoddsapi_total directly since it's already rounded to 0.5
         final_df = final_df.merge(
@@ -730,35 +536,22 @@ def run_etl():
     final_df['under_implied_prob'] = final_df['Under Price'].apply(american_odds_to_implied_probability)
     final_df['Over Total Edge'] = final_df['Over Cover Probability'] - final_df['over_implied_prob']
     final_df['Under Total Edge'] = final_df['Under Cover Probability'] - final_df['under_implied_prob']
-
-    # Calculate spread standard deviation here
-    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    final_df['Spread Std. Dev.'] = final_df[spread_models].std(axis=1, skipna=True).round(1)
-
-    # Keep rows with missing devigged probabilities, just fill with 0
-    final_df['Devigged Probability'] = final_df['Devigged Probability'].fillna(0)
-    final_df['Moneyline Edge'] = final_df['Moneyline Edge'].fillna(0)
-
-    # Drop any remaining duplicates after all processing
-    final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
-
-    logger.info(f"[cyan]Final shape after handling missing devigged probabilities:[/cyan] {final_df.shape}")
-
+    final_df['Game Time'] = pd.to_datetime(final_df['Game Time'])
     final_df = final_df.sort_values('Game Time', ascending=True)
     # Define final column order
     column_order = [
-        'Game', 'Game Time', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
-        'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik', 
-        'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
-        'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Moneyline Std. Dev.',
+        'Game', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
+        'Opening Spread', 'Edge For Covering Spread', 'spread_barttorvik', 
+        'spread_kenpom', 'spread_evanmiya',
+        'Moneyline Win Probability', 'Opening Moneyline', 'Moneyline Edge',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
-        'average_total', 'theoddsapi_total', 'Totals Std. Dev.', 'projected_total_barttorvik',
-        'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
+        'average_total', 'theoddsapi_total', 'projected_total_barttorvik',
+        'projected_total_kenpom', 'projected_total_evanmiya',
         'Over Cover Probability', 'Under Cover Probability',
         'Over Total Edge', 'Under Total Edge']
 
     return final_df[column_order].reset_index(drop=True)
-
 # Example usage to save combined odds
 if __name__ == "__main__":
+
     run_etl().to_csv('CBB Output.csv')
