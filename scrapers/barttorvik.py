@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import numpy as np
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from logger_setup import log_scraper_execution
 import logging
 from rich.table import Table
@@ -45,6 +45,14 @@ def fetch_barttorvik(date=None):
             if not line:
                 continue
 
+            # Log the raw HTML structure for Duke games
+            if "Duke" in teams[0].text or "Duke" in teams[1].text:
+                logger.info(f"Found Duke game in HTML:")
+                logger.info(f"First team (away): {teams[0].text.strip()}")
+                logger.info(f"Second team (home): {teams[1].text.strip()}")
+                logger.info(f"T-Rank line: {line.text.strip()}")
+                logger.info(f"Full row HTML: {row}")
+
             games.append({
                 'Home Team': teams[1].text.strip(),
                 'Away Team': teams[0].text.strip(),
@@ -68,22 +76,27 @@ def get_barttorvik_df(include_tomorrow=True):
     """
     logger = logging.getLogger('barttorvik')
     
-    # Get today's date and tomorrow's date
-    today = datetime.now()
+    # Get today's date and tomorrow's date in UTC
+    today = datetime.now(timezone.utc)
     tomorrow = today + timedelta(days=1)
 
-    # Fetch today's games
-    today_raw = fetch_barttorvik(today.strftime('%Y%m%d'))
+    # Convert to Eastern time for Barttorvik
+    eastern = timezone(timedelta(hours=-5))  # EST is UTC-5
+    today_eastern = today.astimezone(eastern)
+    tomorrow_eastern = tomorrow.astimezone(eastern)
+
+    # Fetch today's games using Eastern date
+    today_raw = fetch_barttorvik(today_eastern.strftime('%Y%m%d'))
     today_transformed = transform_barttorvik_data(today_raw)
     today_games = len(today_raw) if not today_raw.empty else 0
-    logger.info(f"[cyan]Fetched {today_games} games for {today.strftime('%Y-%m-%d')}[/cyan]")
+    logger.info(f"[cyan]Fetched {today_games} games for {today_eastern.strftime('%Y-%m-%d')}[/cyan]")
 
     if include_tomorrow:
-        # Fetch tomorrow's games
-        tomorrow_raw = fetch_barttorvik(tomorrow.strftime('%Y%m%d'))
+        # Fetch tomorrow's games using Eastern date
+        tomorrow_raw = fetch_barttorvik(tomorrow_eastern.strftime('%Y%m%d'))
         tomorrow_transformed = transform_barttorvik_data(tomorrow_raw)
         tomorrow_games = len(tomorrow_raw) if not tomorrow_raw.empty else 0
-        logger.info(f"[cyan]Fetched {tomorrow_games} games for {tomorrow.strftime('%Y-%m-%d')}[/cyan]")
+        logger.info(f"[cyan]Fetched {tomorrow_games} games for {tomorrow_eastern.strftime('%Y-%m-%d')}[/cyan]")
 
         # Combine the dataframes
         combined_df = pd.concat([today_transformed, tomorrow_transformed], ignore_index=True)
@@ -115,7 +128,7 @@ def get_barttorvik_df(include_tomorrow=True):
     summary_table.add_column("Count", style="red")
     
     # Process each date
-    for date in [today.strftime('%Y%m%d'), tomorrow.strftime('%Y%m%d')] if include_tomorrow else [today.strftime('%Y%m%d')]:
+    for date in [today_eastern.strftime('%Y%m%d'), tomorrow_eastern.strftime('%Y%m%d')] if include_tomorrow else [today_eastern.strftime('%Y%m%d')]:
         date_df = combined_df[combined_df['Game Date'] == date]
         date_games = len(date_df) // 2  # Divide by 2 since we have 2 rows per game
         
@@ -164,7 +177,7 @@ def get_barttorvik_df(include_tomorrow=True):
     )
     
     games_table.add_column("Date", style="cyan", width=10)
-    games_table.add_column("Matchup", style="green", width=65)  # Increased width to accommodate longer names
+    games_table.add_column("Matchup", style="green", width=65)
     games_table.add_column("Spread", style="yellow", width=10)
     games_table.add_column("Win Prob", style="cyan", width=10)
     games_table.add_column("Total", style="magenta", width=10)
