@@ -1,4 +1,4 @@
-API,kenpom,kenpom_alt,massey,evanmiya,drating,barttorvik,hasla
+﻿API,kenpom,kenpom_alt,massey,evanmiya,drating,barttorvik,hasla
 Abilene Christian Wildcats,Abilene Christian,Abilene Christian WAC,Abilene Chr,Abilene Christian,Abilene Christian Wildcats,Abilene Christian,Abil. Christian
 Air Force Falcons,Air Force,Air Force MWC,Air Force,Air Force,Air Force Falcons,Air Force,Air Force
 Akron Zips,Akron,Akron MAC,Akron,Akron,Akron Zips,Akron,Akron
@@ -14,20 +14,20 @@ Arizona Wildcats,Arizona,Arizona B,Arizona,Arizona,Arizona Wildcats,Arizona,Ariz
 Arkansas Razorbacks,Arkansas,Arkansas SEC,Arkansas,Arkansas,Arkansas Razorbacks,Arkansas,Arkansas
 Arkansas St Red Wolves,Arkansas St.,Arkansas St. SB,Arkansas St,Arkansas State,Arkansas State Red Wolves,Arkansas St.,Arkansas State
 Arkansas-Little Rock Trojans,Little Rock,Little Rock OVC,Ark Little Rock,Arkansas-Little Rock,Little Rock Trojans,Little Rock,Little Rock
-Arkansas-Pine Bluff Golden Lions,Arkansas Pine Bluff,Arkansas Pine Bluff SWAC,Ark Pine Bluff,Arkansas-Pine Bluff,Ark Pine Bluff Golden Lions,Arkansas Pine Bluff,Ark Pine Bluff
+Arkansas-Pine Bluff Golden Lions,Arkansas Pine Bluff,Arkansas Pine Bluff SWAC,Ark Pine Bluff,Arkansas-Pine Bluff,Ark Pine Bluff Golden Lions,Arkansas Pine Bluff,AR-Pine Bluff
 Army Knights,Army,Army PL,Army,Army,Army Black Knights,Army,Army
 Auburn Tigers,Auburn,Auburn SEC,Auburn,Auburn,Auburn Tigers,Auburn,Auburn
 Austin Peay Governors,Austin Peay,Austin Peay ASun,Austin Peay,Austin Peay,Austin Peay Governors,Austin Peay,Austin Peay
-Ball State Cardinals,Ball St.,Ball,Ball St,Ball State,Ball State Cardinals,Ball St.,Ball State
+Ball State Cardinals,Ball St.,Ball St. MAC,Ball St,Ball State,Ball State Cardinals,Ball St.,Ball State
 Baylor Bears,Baylor,Baylor B,Baylor,Baylor,Baylor Bears,Baylor,Baylor
 Bellarmine Knights,Bellarmine,Bellarmine ASun,Bellarmine,Bellarmine,Bellarmine Knights,Bellarmine,Bellarmine
 Belmont Bruins,Belmont,Belmont MVC,Belmont,Belmont,Belmont Bruins,Belmont,Belmont
-Bethune-Cookman Wildcats,Bethune Cookman,Bethune Cookman SWAC,Bethune-Cookman,Bethune-Cookman,Bethune Cookman Wildcats,Bethune Cookman,Bethune Cookman
+Bethune-Cookman Wildcats,Bethune Cookman,Bethune Cookman SWAC,Bethune-Cookman,Bethune-Cookman,Bethune Cookman Wildcats,Bethune Cookman,Bethune-Cookman
 Binghamton Bearcats,Binghamton,Binghamton AE,Binghamton,Binghamton,Binghamton Bearcats,Binghamton,Binghamton
 Boise State Broncos,Boise St.,Boise St. MWC,Boise St,Boise State,Boise State Broncos,Boise St.,Boise State
 Boston College Eagles,Boston College,Boston College ACC,UMBC,Boston College,Boston College Eagles,Boston College,Boston College
 Boston Univ. Terriers,Boston University,Boston University PL,Boston Univ,Boston University,Boston University Terriers,Boston University,Boston U
-Bowling Green Falcons,Bowling Green,Bowling,Bowling Green,Bowling Green,Bowling Green Falcons,Bowling Green,Bowling Green
+Bowling Green Falcons,Bowling Green,Bowling Green MAC,Bowling Green,Bowling Green,Bowling Green Falcons,Bowling Green,Bowling Green
 Bradley Braves,Bradley,Bradley MVC,Bradley,Bradley,Bradley University Braves,Bradley,Bradley
 Brown Bears,Brown,Brown Ivy,Brown,Brown,Brown Bears,Brown,Brown
 Bryant Bulldogs,Bryant,Bryant AE,Bryant,Bryant,Bryant Bulldogs,Bryant,Bryant
@@ -74,7 +74,7 @@ Drake Bulldogs,Drake,Drake MVC,Drake,Drake,Drake Bulldogs,Drake,Drake
 Drexel Dragons,Drexel,Drexel CAA,Drexel,Drexel,Drexel Dragons,Drexel,Drexel
 Duke Blue Devils,Duke,Duke ACC,Duke,Duke,Duke Blue Devils,Duke,Duke
 Duquesne Dukes,Duquesne,Duquesne A,Duquesne,Duquesne,Duquesne Dukes,Duquesne,Duquesne
-East Carolina Pirates,East Carolina,East Carolina Amer,East Carolina,East Carolina,East Carolina Pirates,East Carolina,East Carolina
+East Carolina Pirates,East Carolina,East Carolina Amer,East Carolina,East Carolina,East Carolina Pirates,East Carolina,ECU
 East Tennessee St Buccaneers,East Tennessee St.,East Tennessee St. SC,ETSU,East Tennessee State,ETSU Buccaneers,East Tennessee St.,ETSU
 Eastern Illinois Panthers,Eastern Illinois,Eastern Illinois OVC,E Illinois,Eastern Illinois,Eastern Illinois Panthers,Eastern Illinois,E. Illinois
 Eastern Kentucky Colonels,Eastern Kentucky,Eastern Kentucky ASun,E Kentucky,Eastern Kentucky,Eastern Kentucky Colonels,Eastern Kentucky,E. Kentucky
@@ -85,13 +85,13 @@ Evansville Purple Aces,Evansville,Evansville MVC,Evansville,Evansville,Evansvill
 Fairfield Stags,Fairfield,Fairfield MAAC,Fairfield,Fairfield,Fairfield Stags,Fairfield,Fairfield
 Fairleigh Dickinson Knights,Fairleigh Dickinson,Fairleigh Dickinson NEC,F Dickinson,Fairleigh Dickinson,Fairleigh Dickinson Knights,Fairleigh Dickinson,Fair. Dickinson
 Florida A&M Rattlers,Florida A&M,Florida A&M SWAC,Florida A&M,Florida A&M,Florida A&M Rattlers,Florida A&M,Florida A&M
-Florida Atlantic Owls,Florida Atlantic,Florida Atlantic Amer,FL Atlantic,Florida Atlantic,Florida Atlantic,Florida Atlantic,Florida Atlantic
+Florida Atlantic Owls,Florida Atlantic,Florida Atlantic Amer,FL Atlantic,Florida Atlantic,Florida Atlantic,Florida Atlantic,FAU
 Florida Gators,Florida,Florida SEC,Florida,Florida,Florida Gators,Florida,Florida
 Florida Gulf Coast Eagles,Florida Gulf Coast,Florida Gulf Coast ASun,FGCU,Florida Gulf Coast,Florida Gulf Coast Eagles,Florida Gulf Coast,FGCU
 Florida Int'l Golden Panthers,FIU,FIU CUSA,Florida Intl,Florida International,FIU Golden Panthers,FIU,FIU
 Florida St Seminoles,Florida St.,Florida St. ACC,Florida St,Florida State,Florida State Seminoles,Florida St.,Florida State
 Fordham Rams,Fordham,Fordham A,Fordham,Fordham,Fordham Rams,Fordham,Fordham
-Fort Wayne Mastodons,Purdue Fort Wayne,Purdue Fort Wayne Horz,PFW,Fort Wayne,IPFW Mastodons,Purdue Fort Wayne,Purdue Fort Wayne
+Fort Wayne Mastodons,Purdue Fort Wayne,Purdue Fort Wayne Horz,PFW,,IPFW Mastodons,Purdue Fort Wayne,Fort Wayne
 Fresno St Bulldogs,Fresno St.,Fresno St. MWC,Fresno St,Fresno State,Fresno State Bulldogs,Fresno St.,Fresno State
 Furman Paladins,Furman,Furman SC,Furman,Furman,Furman Paladins,Furman,Furman
 Gardner-Webb Bulldogs,Gardner Webb,Gardner Webb BSth,Gardner Webb,Gardner-Webb,Gardner Webb Runnin' Bulldogs,Gardner Webb,Gardner-Webb
@@ -112,7 +112,7 @@ Hawai'i Rainbow Warriors,Hawaii,Hawaii BW,Hawaii,Hawaii,Hawaii Rainbow Warriors,
 High Point Panthers,High Point,High Point BSth,High Point,High Point,High Point Panthers,High Point,High Point
 Hofstra Pride,Hofstra,Hofstra CAA,Hofstra,Hofstra,Hofstra Pride,Hofstra,Hofstra
 Holy Cross Crusaders,Holy Cross,Holy Cross PL,Holy Cross,Holy Cross,Holy Cross Crusaders,Holy Cross,Holy Cross
-Houston Baptist Huskies,Houston Christian,Houston Christian Slnd,Houston Chr,Houston Christian,Houston Christian Huskies,Houston Christian,Abilene Christian
+Houston Baptist Huskies,Houston Christian,Houston Christian Slnd,Houston Chr,Houston Christian,Houston Christian Huskies,Houston Christian,Houston Christian 
 Houston Cougars,Houston,Houston B,Houston,Houston,Houston Cougars,Houston,Houston
 Howard Bison,Howard,Howard MEAC,Howard,Howard,Howard Bison,Howard,Howard
 Idaho State Bengals,Idaho St.,Idaho St. BSky,Idaho,Idaho State,Idaho State Bengals,Idaho St.,Idaho State
@@ -129,11 +129,11 @@ IUPUI Jaguars,IU Indy,IU Indy Horz,IUPUI,IU Indy,IUPUI Jaguars,IU Indy,IU Indian
 Jackson St Tigers,Jackson St.,Jackson St. SWAC,Jackson St,Jackson State,Jackson State Tigers,Jackson St.,Jackson State
 Jacksonville Dolphins,Jacksonville,Jacksonville ASun,Jacksonville,Jacksonville,Jacksonville Dolphins,Jacksonville,Jacksonville
 Jacksonville St Gamecocks,Jacksonville St.,Jacksonville St. CUSA,Jacksonville St,Jacksonville State,Jacksonville State Gamecocks,Jacksonville St.,Jacksonville St.
-James Madison Dukes,James Madison,James Madison SB,James Madison,James Madison,James Madison Dukes,James Madison,James Madison
+James Madison Dukes,James Madison,James Madison SB,James Madison,James Madison,James Madison Dukes,James Madison,JMU
 Kansas Jayhawks,Kansas,Kansas B,Kansas,Kansas,Kansas Jayhawks,Kansas,Kansas
 Kansas St Wildcats,Kansas St.,Kansas St. B,Kansas St,Kansas State,Kansas State Wildcats,Kansas St.,Kansas State
 Kennesaw St Owls,Kennesaw St.,Kennesaw St. CUSA,Kennesaw,Kennesaw State,Kennesaw State Owls,Kennesaw St.,Kennesaw State
-Kent State Golden Flashes,Kent St.,Kent,Kent,Kent State,Kent State Golden Flashes,Kent St.,Kent State
+Kent State Golden Flashes,Kent St.,Kent St. MAC,Kent,Kent State,Kent State Golden Flashes,Kent St.,Kent State
 Kentucky Wildcats,Kentucky,Kentucky SEC,Kentucky,Kentucky,Kentucky Wildcats,Kentucky,Kentucky
 La Salle Explorers,La Salle,La Salle A,La Salle,La Salle,La Salle Explorers,La Salle,La Salle
 Lafayette Leopards,Lafayette,Lafayette PL,Lafayette,Lafayette,Lafayette Leopards,Lafayette,Lafayette
@@ -143,14 +143,14 @@ Lehigh Mountain Hawks,Lehigh,Lehigh PL,Lehigh,Lehigh,Lehigh Mountain Hawks,Lehig
 Liberty Flames,Liberty,Liberty CUSA,Liberty,Liberty,Liberty Flames,Liberty,Liberty
 Lindenwood Lions,Lindenwood,Lindenwood OVC,Lindenwood,Lindenwood,Lindenwood Lions,Lindenwood,Lindenwood
 Lipscomb Bisons,Lipscomb,Lipscomb ASun,Lipscomb,Lipscomb,Lipscomb Bisons,Lipscomb,Lipscomb
-LIU Sharks,LIU,LIU NEC,LIU Brooklyn,Long Island,LIU Sharks,LIU,LIU
+LIU Sharks,LIU,LIU NEC,LIU Brooklyn,Long Island,LIU Sharks,LIU,Long Island
 Long Beach St 49ers,Long Beach St.,Long Beach St. BW,Long Beach St,Long Beach State,Long Beach State 49ers,Long Beach St.,Long Beach St.
 Longwood Lancers,Longwood,Longwood BSth,Longwood,Longwood,Longwood Lancers,Longwood,Longwood
 Louisiana Ragin' Cajuns,Louisiana,Louisiana SB,Louisiana,Louisiana-Lafayette,Louisiana Lafayette,Louisiana,Louisiana
-Louisiana Tech Bulldogs,Louisiana Tech,Louisiana Tech CUSA,Louisiana Tech,Louisiana Tech,Louisiana Tech Bulldogs,Louisiana Tech,Louisiana Tech
+Louisiana Tech Bulldogs,Louisiana Tech,Louisiana Tech CUSA,Louisiana Tech,Louisiana Tech,Louisiana Tech Bulldogs,Louisiana Tech,LA Tech
 Louisville Cardinals,Louisville,Louisville ACC,Louisville,Louisville,Louisville Cardinals,Louisville,Louisville
 Loyola (Chi) Ramblers,Loyola Chicago,Loyola Chicago A,Loyola-Chicago,Loyola Chicago,Loyola Chicago Ramblers,Loyola Chicago,Loyola-Chicago
-Loyola (MD) Greyhounds,Loyola MD,Loyola MD PL,Loyola MD,Loyola Maryland,Loyola Maryland Greyhounds,Loyola MD,Loyola (MD)
+Loyola (MD) Greyhounds,Loyola MD,Loyola MD PL,Loyola MD,Loyola Maryland,Loyola Maryland Greyhounds,Loyola MD,Loyola
 Loyola Marymount Lions,Loyola Marymount,Loyola Marymount WCC,Loy Marymount,Loyola Marymount,Loyola Marymount Lions,Loyola Marymount,Loyola Marymount
 LSU Tigers,LSU,LSU SEC,LSU,LSU,LSU Tigers,LSU,LSU
 Maine Black Bears,Maine,Maine AE,Maine,Maine,Maine Black Bears,Maine,Maine
@@ -159,8 +159,8 @@ Marist Red Foxes,Marist,Marist MAAC,Marist,Marist,Marist Red Foxes,Marist,Marist
 Marquette Golden Eagles,Marquette,Marquette BE,Marquette,Marquette,Marquette Golden Eagles,Marquette,Marquette
 Marshall Thundering Herd,Marshall,Marshall SB,Marshall,Marshall,Marshall Thundering Herd,Marshall,Marshall
 Maryland Terrapins,Maryland,Maryland B,Maryland,Maryland,Maryland Terrapins,Maryland,Maryland
-Maryland-Eastern Shore Hawks,Maryland Eastern Shore,Maryland Eastern Shore MEAC,MD E Shore,Maryland-Eastern Shore,MD E Shore Fighting Hawks,Maryland Eastern Shore,Maryland Eastern Shore
-Massachusetts Minutemen,Massachusetts,Massachusetts A,Massachusetts,Massachusetts,UMass Minutemen,Massachusetts,UMass
+Maryland-Eastern Shore Hawks,Maryland Eastern Shore,Maryland Eastern Shore MEAC,MD E Shore,Maryland-Eastern Shore,MD E Shore Fighting Hawks,Maryland Eastern Shore,UMES
+Massachusetts Minutemen,Massachusetts,Massachusetts A,Massachusetts,Massachusetts,UMass Minutemen,Massachusetts,Umass
 McNeese Cowboys,McNeese,McNeese Slnd,McNeese St,McNeese State,McNeese State Cowboys,McNeese St.,McNeese
 Memphis Tigers,Memphis,Memphis Amer,Memphis,Memphis,Memphis Tigers,Memphis,Memphis
 Mercer Bears,Mercer,Mercer SC,Mercer,Mercer,Mercer Bears,Mercer,Mercer
@@ -171,9 +171,9 @@ Miami Hurricanes,Miami FL,Miami FL ACC,Miami FL,Miami (Fla.),Miami Hurricanes,Mi
 Michigan St Spartans,Michigan St.,Michigan St. B,Michigan St,Michigan State,Michigan State Spartans,Michigan St.,Michigan State
 Michigan Wolverines,Michigan,Michigan B,Michigan,Michigan,Michigan Wolverines,Michigan,Michigan
 Middle Tennessee Blue Raiders,Middle Tennessee,Middle Tennessee CUSA,MTSU,Middle Tennessee,MTSU Blue Raiders,Middle Tennessee,MTSU
-Milwaukee Panthers,Milwaukee,Milwaukee Horz,WI Milwaukee,Milwaukee,Wisconsin Milwaukee Panthers,Milwaukee,Wisconsin Milwaukee
+Milwaukee Panthers,Milwaukee,Milwaukee Horz,WI Milwaukee,Milwaukee,Wisconsin Milwaukee Panthers,Milwaukee,Milwaukee
 Minnesota Golden Gophers,Minnesota,Minnesota B,Minnesota,Minnesota,Minnesota Golden Gophers,Minnesota,Minnesota
-Miss Valley St Delta Devils,Mississippi Valley St.,Mississippi Valley St. SWAC,MS Valley St,Mississippi Valley State,MS Valley State Delta Devils,Mississippi Valley St.,Mississippi Valley State
+Miss Valley St Delta Devils,Mississippi Valley St.,Mississippi Valley St. SWAC,MS Valley St,Mississippi Valley State,MS Valley State Delta Devils,Mississippi Valley St.,Miss. Valley St.
 Mississippi St Bulldogs,Mississippi St.,Mississippi St. SEC,Mississippi St,Mississippi State,Mississippi State Bulldogs,Mississippi St.,Mississippi St.
 Missouri St Bears,Missouri St.,Missouri St. MVC,Missouri St,Missouri State,Missouri State Bears,Missouri St.,Missouri State
 Missouri Tigers,Missouri,Missouri SEC,Missouri,Missouri,Missouri Tigers,Missouri,Missouri
@@ -181,15 +181,15 @@ Monmouth Hawks,Monmouth,Monmouth CAA,Monmouth NJ,Monmouth,Monmouth Hawks,Monmout
 Montana Grizzlies,Montana,Montana BSky,Montana,Montana,Montana Grizzlies,Montana,Montana
 Montana St Bobcats,Montana St.,Montana St. BSky,Montana St,Montana State,Montana State Bobcats,Montana St.,Montana State
 Morehead St Eagles,Morehead St.,Morehead St. OVC,Morehead St,Morehead State,Morehead State Eagles,Morehead St.,Morehead State
-Morgan St Bears,Morgan St.,Morgan St. MEAC,Morgan St,Morgan State,Morgan State Bears,Morgan St.,Morgan State
-Mt. St. Mary's Mountaineers,Mount St. Mary's,Mount St. Mary's MAAC,Mt St Mary's,Mount St. Mary's,Mount St Mary's Mountaineers,Mount St.,Mount State Mary's
+Morgan St Bears,Morgan St.,Morgan St. MEAC,Morgan St,Morgan State,Morgan State Bears,Morgan St.,Morgan State 
+Mt. St. Mary's Mountaineers,Mount St. Mary's,Mount St. Mary's MAAC,Mt St Mary's,Mount St. Mary's,Mount St Mary's Mountaineers,Mount St. Mary's,Mt. St. Mary's
 Murray St Racers,Murray St.,Murray St. MVC,Murray St,Murray State,Murray State Racers,Murray St.,Murray State
 N Colorado Bears,Northern Colorado,Northern Colorado BSky,N Colorado,Northern Colorado,Northern Colorado Bears,Northern Colorado,N. Colorado
 Navy Midshipmen,Navy,Navy PL,Navy,Navy,Navy Midshipmen,Navy,Navy
-NC State Wolfpack,N.C. State,N.C. State ACC,NC State,NC State,NC State Wolfpack,N.C. State,NC State
+NC State Wolfpack,N.C. State,N.C. State ACC,NC State,NC State,NC State Wolfpack,N.C. State,NC State 
 Nebraska Cornhuskers,Nebraska,Nebraska B,Nebraska,Nebraska,Nebraska Cornhuskers,Nebraska,Nebraska
 Nevada Wolf Pack,Nevada,Nevada MWC,Nevada,Nevada,Nevada Wolf Pack,Nevada,Nevada
-New Hampshire Wildcats,New Hampshire,New Hampshire AE,New Hampshire,New Hampshire,New Hampshire Wildcats,New Hampshire,New Hampshire
+New Hampshire Wildcats,New Hampshire,New Hampshire AE,New Hampshire,New Hampshire,New Hampshire Wildcats,New Hampshire,UNH
 New Mexico Lobos,New Mexico,New Mexico MWC,New Mexico,New Mexico,New Mexico Lobos,New Mexico,New Mexico
 New Mexico St Aggies,New Mexico St.,New Mexico St. CUSA,New Mexico St,New Mexico State,New Mexico State Aggies,New Mexico St.,New Mexico St.
 New Orleans Privateers,New Orleans,New Orleans Slnd,New Orleans,New Orleans,New Orleans Privateers,New Orleans,New Orleans
@@ -199,7 +199,7 @@ NJIT Highlanders,NJIT,NJIT AE,NJIT,NJIT,NJIT Highlanders,NJIT,NJIT
 Norfolk St Spartans,Norfolk St.,Norfolk St. MEAC,Norfolk St,Norfolk State,Norfolk State Spartans,Norfolk St.,Norfolk State
 North Alabama Lions,North Alabama,North Alabama ASun,North Alabama,North Alabama,North Alabama Lions,North Alabama,North Alabama
 North Carolina A&T Aggies,North Carolina A&T,North Carolina A&T CAA,NC A&T,North Carolina A&T,North Carolina A&T Aggies,North Carolina A&T,NC A&T
-North Carolina Central Eagles,North Carolina Central,North Carolina Central MEAC,NC Central,North Carolina Central,North Carolina Central Eagles,North Carolina Central,North Carolina Central
+North Carolina Central Eagles,North Carolina Central,North Carolina Central MEAC,NC Central,North Carolina Central,North Carolina Central Eagles,North Carolina Central,NC Central
 North Carolina Tar Heels,North Carolina,North Carolina ACC,North Carolina,North Carolina,UNC Tar Heels,North Carolina,North Carolina
 North Dakota Fighting Hawks,North Dakota,North Dakota Sum,North Dakota,North Dakota,North Dakota Fighting Hawks,North Dakota,North Dakota
 North Dakota St Bison,North Dakota St.,North Dakota St. Sum,N Dakota St,North Dakota State,North Dakota State Bison,North Dakota St.,North Dakota St.
@@ -210,7 +210,7 @@ Northern Arizona Lumberjacks,Northern Arizona,Northern Arizona BSky,Northern Ari
 Northern Illinois Huskies,Northern Illinois,Northern Illinois MAC,N Illinois,Northern Illinois,Northern Illinois Huskies,Northern Illinois,N. Illinois
 Northern Iowa Panthers,Northern Iowa,Northern Iowa MVC,Northern Iowa,Northern Iowa,Northern Iowa Panthers,Northern Iowa,Northern Iowa
 Northern Kentucky Norse,Northern Kentucky,Northern Kentucky Horz,N Kentucky,Northern Kentucky,Northern Kentucky Norse,Northern Kentucky,N. Kentucky
-Northwestern St Demons,Northwestern St.,Northwestern St. Slnd,Northwestern LA,Northwestern State,Northwestern State Demons,Northwestern St.,Northwestern State
+Northwestern St Demons,Northwestern St.,Northwestern St. Slnd,Northwestern LA,Northwestern State,Northwestern State Demons,Northwestern St.,Northwestern St.
 Northwestern Wildcats,Northwestern,Northwestern B,Northwestern,Northwestern,Northwestern Wildcats,Northwestern,Northwestern
 Notre Dame Fighting Irish,Notre Dame,Notre Dame ACC,Notre Dame,Notre Dame,Notre Dame Fighting Irish,Notre Dame,Notre Dame
 Oakland Golden Grizzlies,Oakland,Oakland Horz,Oakland,Oakland,Oakland Golden Grizzlies,Oakland,Oakland
@@ -223,7 +223,7 @@ Ole Miss Rebels,Mississippi,Mississippi SEC,Mississippi,Ole Miss,Ole Miss Rebels
 Omaha Mavericks,Nebraska Omaha,Nebraska Omaha Sum,NE Omaha,Omaha,Omaha Mavericks,Nebraska Omaha,Omaha
 Oral Roberts Golden Eagles,Oral Roberts,Oral Roberts Sum,Oral Roberts,Oral Roberts,Oral Roberts Golden Eagles,Oral Roberts,Oral Roberts
 Oregon Ducks,Oregon,Oregon B,Oregon,Oregon,Oregon Ducks,Oregon,Oregon
-Oregon St Beavers,Oregon St.,Oregon St. WCC,Oregon St,Oregon State,Oregon State Beavers,Oregon St.,Oregon State
+Oregon St Beavers,Oregon St.,Oregon St. WCC,Oregon St,Oregon State,Oregon State Beavers,Oregon St.,Oregon State 
 Pacific Tigers,Pacific,Pacific WCC,Pacific,Pacific,Pacific Tigers,Pacific,Pacific
 Penn State Nittany Lions,Penn St.,Penn St. B,Penn St,Penn State,Penn State Nittany Lions,Penn St.,Penn State
 Pennsylvania Quakers,Penn,Penn Ivy,Penn,Penn,Penn Quakers,Penn,Penn
@@ -239,7 +239,7 @@ Purdue Boilermakers,Purdue,Purdue B,Purdue,Purdue,Purdue Boilermakers,Purdue,Pur
 Queens,Queens,Queens ASun,Queens NC,Queens,Queens Royals,Queens,Queens
 Quinnipiac Bobcats,Quinnipiac,Quinnipiac MAAC,Quinnipiac,Quinnipiac,Quinnipiac Bobcats,Quinnipiac,Quinnipiac
 Radford Highlanders,Radford,Radford BSth,Radford,Radford,Radford Highlanders,Radford,Radford
-Rhode Island Rams,Rhode Island,Rhode Island A,Rhode Island,Rhode Island,Rhode Island Rams,Rhode Island,Rhode Island
+Rhode Island Rams,Rhode Island,Rhode Island A,Rhode Island,Rhode Island,Rhode Island Rams,Rhode Island,URI
 Rice Owls,Rice,Rice Amer,Rice,Rice,Rice Owls,Rice,Rice
 Richmond Spiders,Richmond,Richmond A,Richmond,Richmond,Richmond Spiders,Richmond,Richmond
 Rider Broncs,Rider,Rider MAAC,Rider,Rider,Rider Broncs,Rider,Rider
@@ -250,7 +250,7 @@ Sacred Heart Pioneers,Sacred Heart,Sacred Heart MAAC,Sacred Heart,Sacred Heart,S
 Saint Joseph's Hawks,Saint Joseph's,Saint Joseph's A,St Joseph's PA,Saint Joseph's,Saint Joseph's Hawks,Saint Joseph's,Saint Joe's
 Saint Louis Billikens,Saint Louis,Saint Louis A,St Louis,Saint Louis,Saint Louis Billikens,Saint Louis,Saint Louis
 Saint Mary's Gaels,Saint Mary's,Saint Mary's WCC,St Mary's CA,Saint Mary's,Saint Mary's College Gaels,Saint Mary's,Saint Mary's
-Saint Peter's Peacocks,Saint Peter's,Saint Peter's MAAC,St Peter's,Saint Peter's,Saint Peter's Peacocks,Saint Peter's,Saint Peter's
+Saint Peter's Peacocks,Saint Peter's,Saint Peter's MAAC,St Peter's,Saint Peter's,Saint Peter's Peacocks,Saint Peter's,St. Peter's
 Sam Houston St Bearkats,Sam Houston St.,Sam Houston St. CUSA,Sam Houston St,Sam Houston State,Sam Houston State Bearkats,Sam Houston St.,Sam Houston
 Samford Bulldogs,Samford,Samford SC,Samford,Samford,Samford Bulldogs,Samford,Samford
 San Diego St Aztecs,San Diego St.,San Diego St. MWC,San Diego St,San Diego State,San Diego State Aztecs,San Diego St.,San Diego State
@@ -263,22 +263,22 @@ SE Missouri St Redhawks,Southeast Missouri,Southeast Missouri OVC,SE Missouri St
 Seattle Redhawks,Seattle,Seattle WAC,Seattle,Seattle,Seattle Redhawks,Seattle,Seattle
 Seton Hall Pirates,Seton Hall,Seton Hall BE,Seton Hall,Seton Hall,Seton Hall Pirates,Seton Hall,Seton Hall
 Siena Saints,Siena,Siena MAAC,Siena,Siena,Siena Saints,Siena,Siena
-SIU-Edwardsville Cougars,SIUE,SIUE OVC,SIUE,SIU Edwardsville,SIU Edwardsville Cougars,SIU Edwardsville,SIU Edwardsville
+SIU-Edwardsville Cougars,SIUE,SIUE OVC,SIUE,SIU Edwardsville,SIU Edwardsville Cougars,SIU Edwardsville,SIUE
 SMU Mustangs,SMU,SMU ACC,SMU,SMU,SMU Mustangs,SMU,SMU
 South Alabama Jaguars,South Alabama,South Alabama SB,South Alabama,South Alabama,South Alabama Jaguars,South Alabama,South Alabama
 South Carolina Gamecocks,South Carolina,South Carolina SEC,South Carolina,South Carolina,South Carolina Gamecocks,South Carolina,South Carolina
-South Carolina St Bulldogs,South Carolina St.,South Carolina St. MEAC,S Carolina St,South Carolina State,South Carolina State Bulldogs,South Carolina St.,South Carolina State
+South Carolina St Bulldogs,South Carolina St.,South Carolina St. MEAC,S Carolina St,South Carolina State,South Carolina State Bulldogs,South Carolina St.,S. Carolina St.
 South Carolina Upstate Spartans,USC Upstate,USC Upstate BSth,SC Upstate,South Carolina Upstate,USC Upstate Spartans,USC Upstate,USC Upstate
 South Dakota Coyotes,South Dakota,South Dakota Sum,South Dakota,South Dakota,South Dakota Coyotes,South Dakota,South Dakota
 South Dakota St Jackrabbits,South Dakota St.,South Dakota St. Sum,S Dakota St,South Dakota State,South Dakota State Jackrabbits,South Dakota St.,South Dakota St.
-South Florida Bulls,South Florida,South Florida Amer,South Florida,South Florida,South Florida Bulls,South Florida,South Florida
+South Florida Bulls,South Florida,South Florida Amer,South Florida,South Florida,South Florida Bulls,South Florida,USF
 Southern Illinois Salukis,Southern Illinois,Southern Illinois MVC,S Illinois,Southern Illinois,Southern Illinois Salukis,Southern Illinois,S. Illinois
 Southern Indiana Screaming Eagles,Southern Indiana,Southern Indiana OVC,Southern Indiana,Southern Indiana,Southern Indiana Screaming Eagles,Southern Indiana,S. Indiana
-Southern Jaguars,Southern,Southern SWAC,Southern Univ,Southern,Southern University Jaguars,Southern,S.
+Southern Jaguars,Southern,Southern SWAC,Southern Univ,Southern,Southern University Jaguars,Southern,Southern
 Southern Miss Golden Eagles,Southern Miss,Southern Miss SB,Southern Miss,Southern Mississippi,Southern Miss Golden Eagles,Southern Miss,Southern Miss
 Southern Utah Thunderbirds,Southern Utah,Southern Utah WAC,Southern Utah,Southern Utah,Southern Utah Thunderbirds,Southern Utah,Southern Utah
-St. Bonaventure Bonnies,St. Bonaventure,St. Bonaventure A,St Bonaventure,Saint Bonaventure,St Bonaventure Bonnies,St.,St. Bonaventure
-St. Francis (PA) Red Flash,Saint Francis,Saint Francis NEC,St Francis PA,Saint Francis (PA),St Francis Red Flash,Saint Francis,St. Francis (PA)
+St. Bonaventure Bonnies,St. Bonaventure,St. Bonaventure A,St Bonaventure,Saint Bonaventure,St Bonaventure Bonnies,St. Bonaventure,St. Bonaventure
+St. Francis (PA) Red Flash,Saint Francis,Saint Francis NEC,St Francis PA,Saint Francis (PA),St Francis Red Flash,Saint Francis,St. Francis
 St. John's Red Storm,St. John's,St. John's BE,St John's,Saint John's,St  John's Red Storm,St. John's,St. John's
 St. Thomas (MN) Tommies,St. Thomas,St. Thomas Sum,St Thomas MN,Saint Thomas (Minn.),St Thomas Tommies,St. Thomas,St. Thomas
 Stanford Cardinal,Stanford,Stanford ACC,Stanford,Stanford,Stanford Cardinal,Stanford,Stanford
@@ -287,7 +287,7 @@ Stetson Hatters,Stetson,Stetson ASun,Stetson,Stetson,Stetson Hatters,Stetson,Ste
 Stonehill Skyhawks,Stonehill,Stonehill NEC,Stonehill,Stonehill,Stonehill Skyhawks,Stonehill,Stonehill
 Stony Brook Seawolves,Stony Brook,Stony Brook CAA,Stony Brook,Stony Brook,Stony Brook Seawolves,Stony Brook,Stony Brook
 Syracuse Orange,Syracuse,Syracuse ACC,Syracuse,Syracuse,Syracuse Orange,Syracuse,Syracuse
-Tarleton State Texans,Tarleton St.,Tarleton St. WAC,Tarleton St,Tarleton State,Tarleton State Texans,Tarleton St.,Tarleton State
+Tarleton State Texans,Tarleton St.,Tarleton St. WAC,Tarleton St,Tarleton State,Tarleton State Texans,Tarleton St.,Tarleton
 TCU Horned Frogs,TCU,TCU B,TCU,TCU,TCU Horned Frogs,TCU,TCU
 Temple Owls,Temple,Temple Amer,Temple,Temple,Temple Owls,Temple,Temple
 Tenn-Martin Skyhawks,Tennessee Martin,Tennessee Martin OVC,TN Martin,Tennessee-Martin,Tennessee-Martin Skyhawks,Tennessee Martin,UT Martin
@@ -296,7 +296,7 @@ Tennessee Tech Golden Eagles,Tennessee Tech,Tennessee Tech OVC,Tennessee Tech,Te
 Tennessee Volunteers,Tennessee,Tennessee SEC,Tennessee,Tennessee,Tennessee Volunteers,Tennessee,Tennessee
 Texas A&M Aggies,Texas A&M,Texas A&M SEC,Texas A&M,Texas A&M,Texas A&M Aggies,Texas A&M,Texas A&M
 Texas A&M-CC Islanders,Texas A&M Corpus Chris,Texas A&M Corpus Chris Slnd,TAM C. Christi,Texas A&M-Corpus Christi,Texas A&M CC Islanders,Texas A&M Corpus Chris,Texas A&M-CC
-Texas A&M-Commerce Lions,East Texas A&M,East Texas A&M Slnd,East Texas A&M,Texas A&M-Commerce,Texas A&M Commerce Lions,Texas A&M Commerce,Texas A&M Commerce
+Texas A&M-Commerce Lions,East Texas A&M,East Texas A&M Slnd,East Texas A&M,Texas A&M-Commerce,Texas A&M Commerce Lions,Texas A&M Commerce,East Texas A&M
 Texas Longhorns,Texas,Texas SEC,Texas,Texas,Texas Longhorns,Texas,Texas
 Texas Southern Tigers,Texas Southern,Texas Southern SWAC,TX Southern,Texas Southern,Texas Southern Tigers,Texas Southern,Texas Southern
 Texas State Bobcats,Texas St.,Texas St. SB,Texas St,Texas State,Texas State Bobcats,Texas St.,Texas State
@@ -315,7 +315,7 @@ UC San Diego Tritons,UC San Diego,UC San Diego BW,UC San Diego,UC San Diego,UC S
 UC Santa Barbara Gauchos,UC Santa Barbara,UC Santa Barbara BW,UC Santa Barbara,UC Santa Barbara,UC Santa Barbara Gauchos,UC Santa Barbara,UCSB
 UCF Knights,UCF,UCF B,UCF,UCF,UCF Knights,UCF,UCF
 UCLA Bruins,UCLA,UCLA B,UCLA,UCLA,UCLA Bruins,UCLA,UCLA
-UConn Huskies,Connecticut,Connecticut BE,Connecticut,Connecticut,Connecticut Huskies,Connecticut,UConn
+UConn Huskies,Connecticut,Connecticut BE,Connecticut,Connecticut,Connecticut Huskies,Connecticut,Uconn
 UIC Flames,Illinois Chicago,Illinois Chicago MVC,IL Chicago,Illinois-Chicago,UIC Flames,Illinois Chicago,UIC
 UL Monroe Warhawks,Louisiana Monroe,Louisiana Monroe SB,ULM,Louisiana-Monroe,Louisiana Monroe Warhawks,Louisiana Monroe,UL Monroe
 UMass Lowell River Hawks,UMass Lowell,UMass Lowell AE,MA Lowell,UMass Lowell,UMass Lowell River Hawks,UMass Lowell,UMass Lowell
@@ -362,4 +362,4 @@ Wright St Raiders,Wright St.,Wright St. Horz,Wright St,Wright State,Wright State
 Wyoming Cowboys,Wyoming,Wyoming MWC,Wyoming,Wyoming,Wyoming Cowboys,Wyoming,Wyoming
 Xavier Musketeers,Xavier,Xavier BE,Xavier,Xavier,Xavier Musketeers,Xavier,Xavier
 Yale Bulldogs,Yale,Yale Ivy,Yale,Yale,Yale Bulldogs,Yale,Yale
-Youngstown St Penguins,Youngstown St.,Youngstown St. Horz,Youngstown St,Youngstown State,Youngstown State Penguins,Youngstown St.,Youngstown State
+Youngstown St Penguins,Youngstown St.,Youngstown St. Horz,Youngstown St,Youngstown State,Youngstown State Penguins,Youngstown St.,Youngstown St.
