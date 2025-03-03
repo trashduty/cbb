@@ -495,8 +495,8 @@ def run_etl():
     kenpom = get_kenpom_df()
     logger.info(f"[cyan]Kenpom data shape:[/cyan] {kenpom.shape}")
     
-    evanmiya = get_evanmiya_df()
-    logger.info(f"[cyan]Evanmiya data shape:[/cyan] {evanmiya.shape}")
+    # evanmiya = get_evanmiya_df()
+    # logger.info(f"[cyan]Evanmiya data shape:[/cyan] {evanmiya.shape}")
     
     hasla = get_hasla_df()
     logger.info(f"[cyan]Hasla data shape:[/cyan] {hasla.shape}")
@@ -558,13 +558,13 @@ def run_etl():
     logger.info(f"[cyan]After Kenpom merge shape:[/cyan] {final_df.shape}")
     
     # Evanmiya merge
-    final_df = pd.merge(
-        final_df,
-        evanmiya,
-        on=['Home Team', 'Away Team', 'Team'],
-        how='left',
-    )
-    logger.info(f"[cyan]After Evanmiya merge shape:[/cyan] {final_df.shape}")
+    # final_df = pd.merge(
+    #     final_df,
+    #     evanmiya,
+    #     on=['Home Team', 'Away Team', 'Team'],
+    #     how='left',
+    # )
+    # logger.info(f"[cyan]After Evanmiya merge shape:[/cyan] {final_df.shape}")
     
     # Hasla merge
     logger.info("[cyan]Before Hasla merge columns:[/cyan] {final_df.columns.tolist()}")
@@ -653,7 +653,7 @@ def run_etl():
     final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
 
     # Calculate moneyline probabilities and edge using devigged probabilities
-    win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
+    win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom']
     final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
     final_df['Moneyline Win Probability'] = (0.5 * final_df['Moneyline Win Probability'] + 0.5 * final_df['Devigged Probability'])
 
@@ -662,7 +662,7 @@ def run_etl():
 
     final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob'] 
     # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
-    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
+    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_hasla']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
 
     # Add debugging for spread values
@@ -670,7 +670,7 @@ def run_etl():
     logger.info(f"Opening Spread sample: {final_df['Opening Spread'].head().tolist()}")
     logger.info(f"Barttorvik spread sample: {final_df['spread_barttorvik'].head().tolist()}")
     logger.info(f"Kenpom spread sample: {final_df['spread_kenpom'].head().tolist()}")
-    logger.info(f"Evanmiya spread sample: {final_df['spread_evanmiya'].head().tolist()}")
+    # logger.info(f"Evanmiya spread sample: {final_df['spread_evanmiya'].head().tolist()}")
     logger.info(f"Hasla spread sample: {final_df['spread_hasla'].head().tolist()}")
     logger.info(f"Forecasted spread sample: {final_df['forecasted_spread'].head().tolist()}")
 
@@ -715,7 +715,7 @@ def run_etl():
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik',
                             'projected_total_kenpom', 
-                            'projected_total_evanmiya',
+                            # 'projected_total_evanmiya',
                             'projected_total_hasla']
 
     # Handle missing totals data
@@ -765,7 +765,7 @@ def run_etl():
     final_df['Under Total Edge'] = final_df['Under Cover Probability'] - final_df['under_implied_prob']
 
     # Calculate spread standard deviation here
-    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
+    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_hasla']
     final_df['Spread Std. Dev.'] = final_df[spread_models].std(axis=1, skipna=True).round(1)
 
     # Keep rows with missing devigged probabilities, just fill with 0
@@ -782,11 +782,11 @@ def run_etl():
     column_order = [
         'Game', 'Game Time', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
         'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik', 
-        'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
+        'spread_kenpom', 'spread_hasla',
         'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Moneyline Std. Dev.',
-        'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
+        'win_prob_barttorvik', 'win_prob_kenpom',
         'average_total', 'theoddsapi_total', 'Totals Std. Dev.', 'projected_total_barttorvik',
-        'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
+        'projected_total_kenpom', 'projected_total_hasla',
         'Over Cover Probability', 'Under Cover Probability',
         'Over Total Edge', 'Under Total Edge']
 
