@@ -7,13 +7,19 @@ from logger_setup import log_scraper_execution
 import logging
 from rich.table import Table
 from rich.console import Console
+import re
 
 console = Console()
 
-@log_scraper_execution
 def fetch_barttorvik(date=None):
     """
     Fetch Barttorvik data for a specific date
+    
+    Args:
+        date (str): Date in format YYYYMMDD
+        
+    Returns:
+        tuple: (DataFrame of games, next_date_url)
     """
     logger = logging.getLogger('barttorvik')
     
@@ -35,6 +41,22 @@ def fetch_barttorvik(date=None):
         
         soup = BeautifulSoup(response.text, 'html.parser')
         games = []
+        
+        # Extract next day link
+        next_day_link = None
+        nav_links = soup.find_all('a', href=lambda x: x and 'schedule.php?date=' in x)
+        for link in nav_links:
+            if '➡️' in link.text or 'next day' in link.text.lower():
+                next_day_link = 'https://www.barttorvik.com' + link['href'] if not link['href'].startswith('http') else link['href']
+                break
+        
+        # Extract date from next_day_link if found
+        next_date = None
+        if next_day_link:
+            match = re.search(r'date=(\d{8})', next_day_link)
+            if match:
+                next_date = match.group(1)
+                logger.info(f"Found next date: {next_date}")
 
         for row in soup.find_all('tr'):
             teams = row.find_all('a', href=lambda x: x and 'team.php' in x)
@@ -61,59 +83,70 @@ def fetch_barttorvik(date=None):
             })
 
         logger.info(f"Successfully parsed {len(games)} games")
-        return pd.DataFrame(games)
+        return pd.DataFrame(games), next_date
 
     except requests.RequestException as e:
         logger.error(f"Failed to fetch data: {str(e)}")
         raise
 
-def get_barttorvik_df(include_tomorrow=True):
+@log_scraper_execution
+def fetch_multiple_days(start_date=None, num_days=5):
     """
-    Main function to get processed Barttorvik data for today and optionally tomorrow
-
+    Fetch Barttorvik data for multiple consecutive days by following navigation links
+    
     Args:
-        include_tomorrow (bool): Whether to include tomorrow's games
+        start_date (str): Starting date in YYYYMMDD format, or None for current date
+        num_days (int): Number of days to fetch (including start date)
+        
+    Returns:
+        dict: Dictionary mapping dates to DataFrames of games
     """
     logger = logging.getLogger('barttorvik')
     
-    # Get today's date and tomorrow's date in UTC
-    today = datetime.now(timezone.utc)
-    tomorrow = today + timedelta(days=1)
+    all_games = {}
+    current_date = start_date
+    days_fetched = 0
+    
+    while days_fetched < num_days:
+        # Fetch data for current date
+        df, next_date = fetch_barttorvik(current_date)
+        
+        if not df.empty:
+            all_games[current_date if current_date else datetime.now().strftime('%Y%m%d')] = df
+        
+        days_fetched += 1
+        
+        # If we've reached the desired number of days or there's no next date, break
+        if days_fetched >= num_days or not next_date:
+            break
+            
+        # Move to next date
+        current_date = next_date
+        logger.info(f"Moving to next date: {current_date}")
+    
+    logger.info(f"Fetched data for {days_fetched} days")
+    return all_games
 
-    # Convert to Eastern time for Barttorvik
+def get_barttorvik_df(days_ahead=5):
+    """
+    Main function to get processed Barttorvik data for multiple days
+    
+    Args:
+        days_ahead (int): Number of days to fetch (including today)
+    """
+    logger = logging.getLogger('barttorvik')
+    
+    # Get today's date in Eastern time (for display purposes)
+    today = datetime.now(timezone.utc)
     eastern = timezone(timedelta(hours=-5))  # EST is UTC-5
     today_eastern = today.astimezone(eastern)
-    tomorrow_eastern = tomorrow.astimezone(eastern)
-
-    # Fetch today's games using Eastern date
-    today_raw = fetch_barttorvik(today_eastern.strftime('%Y%m%d'))
-    today_transformed = transform_barttorvik_data(today_raw)
-    today_games = len(today_raw) if not today_raw.empty else 0
-    logger.info(f"[cyan]Fetched {today_games} games for {today_eastern.strftime('%Y-%m-%d')}[/cyan]")
-
-    if include_tomorrow:
-        # Fetch tomorrow's games using Eastern date
-        tomorrow_raw = fetch_barttorvik(tomorrow_eastern.strftime('%Y%m%d'))
-        tomorrow_transformed = transform_barttorvik_data(tomorrow_raw)
-        tomorrow_games = len(tomorrow_raw) if not tomorrow_raw.empty else 0
-        logger.info(f"[cyan]Fetched {tomorrow_games} games for {tomorrow_eastern.strftime('%Y-%m-%d')}[/cyan]")
-
-        # Combine the dataframes
-        combined_df = pd.concat([today_transformed, tomorrow_transformed], ignore_index=True)
-        total_games = today_games + tomorrow_games
-    else:
-        combined_df = today_transformed
-        total_games = today_games
-
-    # Map team names
-    crosswalk = pd.read_csv('crosswalk.csv')
-    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
     
-    # Create mapping report and get mapped dataframe
-    mapped_df = map_team_names(combined_df)
-    final_games = len(mapped_df) // 2  # Divide by 2 since we have 2 rows per game
+    # Fetch games for multiple days by following navigation links
+    logger.info(f"Fetching games for up to {days_ahead} days starting from today")
+    games_by_date = fetch_multiple_days(today_eastern.strftime('%Y%m%d'), days_ahead)
     
-    # Create summary table
+    # Transform each day's data
+    transformed_dfs = []
     summary_table = Table(
         title=f"Barttorvik Request Summary",
         show_header=True,
@@ -127,14 +160,45 @@ def get_barttorvik_df(include_tomorrow=True):
     summary_table.add_column("Unmapped Teams", style="yellow")
     summary_table.add_column("Count", style="red")
     
-    # Process each date
-    for date in [today_eastern.strftime('%Y%m%d'), tomorrow_eastern.strftime('%Y%m%d')] if include_tomorrow else [today_eastern.strftime('%Y%m%d')]:
+    # Process each date's data
+    total_games = 0
+    for date, df in games_by_date.items():
+        # Transform the data
+        transformed = transform_barttorvik_data(df)
+        transformed_dfs.append(transformed)
+        
+        # Add date to summary
+        display_date = datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d')
+        date_games = len(df) if not df.empty else 0
+        total_games += date_games
+        logger.info(f"[cyan]Fetched {date_games} games for {display_date}[/cyan]")
+    
+    # Combine all transformed data
+    if transformed_dfs:
+        combined_df = pd.concat(transformed_dfs, ignore_index=True)
+    else:
+        logger.warning("No games found for any of the requested dates")
+        combined_df = pd.DataFrame(columns=[
+            'Home Team', 'Away Team', 'Team', 'Game Date', 
+            'spread_barttorvik', 'win_prob_barttorvik', 'projected_total_barttorvik'
+        ])
+    
+    # Map team names
+    crosswalk = pd.read_csv('crosswalk.csv')
+    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
+    
+    # Create mapping report and get mapped dataframe
+    mapped_df = map_team_names(combined_df)
+    final_games = len(mapped_df) // 2  # Divide by 2 since we have 2 rows per game
+    
+    # Create summary for each date
+    for date, df in games_by_date.items():
         date_df = combined_df[combined_df['Game Date'] == date]
-        date_games = len(date_df) // 2  # Divide by 2 since we have 2 rows per game
+        date_games = len(df) if not df.empty else 0
         
         # Find unmapped teams for this date
         unmapped = []
-        for team in date_df['Team'].unique():
+        for team in date_df['Team'].unique() if not date_df.empty else []:
             if team not in name_map:
                 unmapped.append(team)
         
@@ -142,8 +206,9 @@ def get_barttorvik_df(include_tomorrow=True):
         unmapped_count = len(unmapped)
         
         # Add row to summary table
+        display_date = datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d')
         summary_table.add_row(
-            datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d'),
+            display_date,
             str(date_games),
             unmapped[0] if unmapped else "None",
             str(unmapped_count)
@@ -153,10 +218,10 @@ def get_barttorvik_df(include_tomorrow=True):
         for team in unmapped[1:]:
             summary_table.add_row("", "", team, "")
     
-    # Add total row if showing multiple dates
-    if include_tomorrow:
+    # Add total row
+    if len(games_by_date) > 1:
         summary_table.add_row("", "", "", "", style="dim")
-        total_unmapped = len(set(team for team in combined_df['Team'].unique() if team not in name_map))
+        total_unmapped = len(set(team for team in combined_df['Team'].unique() if team not in name_map)) if not combined_df.empty else 0
         summary_table.add_row(
             "Total",
             str(total_games),
@@ -223,6 +288,14 @@ def get_barttorvik_df(include_tomorrow=True):
 def transform_barttorvik_data(df):
     """Transform to two-row-per-game format with team-specific stats"""
     logger = logging.getLogger('barttorvik')
+    
+    # Check if DataFrame is empty and return empty DataFrame with appropriate columns
+    if df.empty:
+        logger.warning("Empty DataFrame received, returning empty result with expected columns")
+        return pd.DataFrame(columns=[
+            'Home Team', 'Away Team', 'Team', 'Game Date', 
+            'spread_barttorvik', 'win_prob_barttorvik', 'projected_total_barttorvik'
+        ])
     
     pattern = r"^\s*(?P<TeamName>.+?)(?:\s+(?P<Spread>-?\d+\.?\d*))?(?:,\s*(?P<ProjectedScore>\d+-\d+))?\s*\((?P<WinProb>\d+)%\)\s*$"
     extracted = df['T-Rank Line'].str.extract(pattern)
