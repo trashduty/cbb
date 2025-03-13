@@ -489,7 +489,7 @@ def run_etl():
     odds_df = get_combined_odds()
     logger.info(f"[cyan]Odds data shape:[/cyan] {odds_df.shape}")
     
-    barttorvik = get_barttorvik_df(include_tomorrow=True)
+    barttorvik = get_barttorvik_df()
     logger.info(f"[cyan]Barttorvik data shape:[/cyan] {barttorvik.shape}")
     
     kenpom = pd.read_csv('data/kp_mapped.csv')
