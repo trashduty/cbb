@@ -505,10 +505,11 @@ def run_etl():
 
     # Merge data
     logger.info("[cyan]Starting data merges[/cyan]")
+
     
     # First merge with normal team order
     merge_normal = pd.merge(
-        barttorvik,
+        evanmiya,
         odds_df,
         on=['Home Team', 'Away Team', 'Team'],
         how='inner',
@@ -525,7 +526,7 @@ def run_etl():
     
     # Merge with flipped teams
     merge_flipped = pd.merge(
-        barttorvik,
+        evanmiya,
         odds_df_flipped,
         on=['Home Team', 'Away Team', 'Team'],
         how='inner',
@@ -560,7 +561,7 @@ def run_etl():
     # Evanmiya merge
     final_df = pd.merge(
         final_df,
-        evanmiya,
+        barttorvik,
         on=['Home Team', 'Away Team', 'Team'],
         how='left',
     )
