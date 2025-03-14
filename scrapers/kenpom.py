@@ -1,5 +1,5 @@
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -27,7 +27,7 @@ def fetch_kenpom():
     logger = logging.getLogger('kenpom')
     
     # Load environment variables
-    # load_dotenv()
+    load_dotenv()
 
     # Retrieve credentials
     USERNAME = os.getenv("KENPOM_USERNAME")

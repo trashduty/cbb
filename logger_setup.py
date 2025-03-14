@@ -5,10 +5,21 @@ import os
 from datetime import datetime
 from functools import wraps
 import traceback
+from rich.logging import RichHandler
+from rich.console import Console
+from rich.traceback import install
+from rich.progress import Progress, SpinnerColumn, TimeElapsedColumn
+import time
+
+# Install rich traceback handler
+install(show_locals=True)
+
+# Create rich console
+console = Console()
 
 def setup_logger(scraper_name):
     """
-    Set up a logger with both file and console handlers for a specific scraper.
+    Set up a logger with both file and rich console handlers for a specific scraper.
     
     Args:
         scraper_name (str): Name of the scraper (e.g., 'kenpom', 'barttorvik', 'evanmiya')
@@ -33,9 +44,6 @@ def setup_logger(scraper_name):
         '%(asctime)s | %(name)s | %(levelname)s | %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
-    console_formatter = logging.Formatter(
-        '%(name)s | %(levelname)s | %(message)s'
-    )
     
     # File handler - daily rotating log file
     today = datetime.now().strftime('%Y-%m-%d')
@@ -45,10 +53,15 @@ def setup_logger(scraper_name):
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(file_formatter)
     
-    # Console handler
-    console_handler = logging.StreamHandler()
+    # Rich console handler
+    console_handler = RichHandler(
+        rich_tracebacks=True,
+        console=console,
+        show_time=False,
+        show_path=False,
+        markup=True
+    )
     console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(console_formatter)
     
     # Add handlers to logger
     logger.addHandler(file_handler)
@@ -58,7 +71,8 @@ def setup_logger(scraper_name):
 
 def log_scraper_execution(func):
     """
-    Decorator to log the execution of scraper functions.
+    Decorator to log the execution of scraper functions with rich progress bars
+    and better error handling.
     
     Args:
         func: The scraper function to be decorated
@@ -71,23 +85,34 @@ def log_scraper_execution(func):
         scraper_name = func.__module__.split('.')[-1]
         logger = setup_logger(scraper_name)
         
-        logger.info(f"Starting {func.__name__}")
-        start_time = datetime.now()
-        
-        try:
-            result = func(*args, **kwargs)
+        # Create a progress context
+        with Progress(
+            SpinnerColumn(),
+            *Progress.get_default_columns(),
+            TimeElapsedColumn(),
+            console=console,
+            transient=True
+        ) as progress:
+            task = progress.add_task(f"[cyan]Running {func.__name__}...", total=None)
             
-            # Log DataFrame info if result is a pandas DataFrame
-            if hasattr(result, 'shape'):
-                logger.info(f"Scraped {result.shape[0]} rows and {result.shape[1]} columns")
-            
-            execution_time = (datetime.now() - start_time).total_seconds()
-            logger.info(f"Completed {func.__name__} in {execution_time:.2f} seconds")
-            return result
-            
-        except Exception as e:
-            logger.error(f"Error in {func.__name__}: {str(e)}")
-            logger.error(f"Traceback: {traceback.format_exc()}")
-            raise
-            
+            start_time = time.time()
+            try:
+                result = func(*args, **kwargs)
+                
+                # Log DataFrame info if result is a pandas DataFrame
+                if hasattr(result, 'shape'):
+                    logger.info(f"[green]✓[/green] Scraped {result.shape[0]} rows and {result.shape[1]} columns")
+                
+                execution_time = time.time() - start_time
+                logger.info(f"[green]✓[/green] Completed {func.__name__} in {execution_time:.2f} seconds")
+                
+                return result
+                
+            except Exception as e:
+                logger.error(f"[red]✗[/red] Error in {func.__name__}: {str(e)}")
+                logger.error(f"[red]Traceback:[/red]\n{traceback.format_exc()}")
+                raise
+            finally:
+                progress.update(task, completed=True)
+                
     return wrapper
