@@ -15,3 +15,4 @@ repomix-output.txt
 test.py
 test_live_games.py
 test_market_odds.py
+/node_modules

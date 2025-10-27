@@ -1,22 +1,54 @@
+# /// script
+# dependencies = [
+#   "pandas",
+#   "requests",
+#   "numpy",
+#   "rich",
+#   "python-dotenv",
+#   "pytz",
+#   "openpyxl"
+# ]
+# ///
+
 import os
-import requests
+import sys
 import pandas as pd
-from scrapers import get_barttorvik_df,get_kenpom_df, get_hasla_df
+import requests
 import numpy as np
-from statistics import median
-from dotenv import load_dotenv
-from logger_setup import setup_logger
-from rich.table import Table
-from rich.console import Console
 from datetime import datetime, timedelta
-from rich.box import MINIMAL
+import pytz
 from pytz import timezone
+from statistics import median
+from rich.console import Console
+from rich.table import Table
+from rich.box import MINIMAL
+from rich import print as rprint
+from rich.logging import RichHandler
 import logging
+from dotenv import load_dotenv
 
-load_dotenv()
-
-logger = setup_logger('oddsapi')
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(message)s",
+    datefmt="[%X]",
+    handlers=[RichHandler(rich_tracebacks=True)]
+)
+logger = logging.getLogger("rich")
 console = Console()
+
+# Determine the project root directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(script_dir))
+data_dir = os.path.join(project_root, 'data')
+
+# Ensure data directory exists
+if not os.path.exists(data_dir):
+    os.makedirs(data_dir)
+    logger.info(f"Created data directory: {data_dir}")
+
+# Load environment variables
+load_dotenv()
 
 def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,totals"):
     """
@@ -127,10 +159,17 @@ def american_odds_to_implied_probability(odds):
     Returns:
         float: Implied probability between 0 and 1
     """
-    if odds > 0:
-        return 100 / (odds + 100)
-    else:
-        return abs(odds) / (abs(odds) + 100)
+    if not odds or pd.isna(odds):
+        return None
+    
+    try:
+        odds = float(odds)
+        if odds > 0:
+            return 100 / (odds + 100)
+        else:
+            return abs(odds) / (abs(odds) + 100)
+    except (ValueError, TypeError):
+        return None
 
 def devig_moneyline_odds(home_odds, away_odds):
     """
@@ -148,6 +187,9 @@ def devig_moneyline_odds(home_odds, away_odds):
     home_prob = american_odds_to_implied_probability(home_odds)
     away_prob = american_odds_to_implied_probability(away_odds)
     
+    if home_prob is None or away_prob is None:
+        return None, None
+        
     # Calculate sum of probabilities (with vig)
     total_prob = home_prob + away_prob
     
@@ -156,7 +198,6 @@ def devig_moneyline_odds(home_odds, away_odds):
     devigged_away = away_prob / total_prob
     
     return devigged_home, devigged_away
-
 
 def get_moneyline_odds(data):
     """
@@ -210,8 +251,11 @@ def get_moneyline_odds(data):
         home_probs = [american_odds_to_implied_probability(price) for price in home_prices]
         away_probs = [american_odds_to_implied_probability(price) for price in away_prices]
 
-        med_home_prob = median(home_probs)
-        med_away_prob = median(away_probs)
+        med_home_prob = median([p for p in home_probs if p is not None]) if any(p is not None for p in home_probs) else None
+        med_away_prob = median([p for p in away_probs if p is not None]) if any(p is not None for p in away_probs) else None
+
+        if med_home_prob is None or med_away_prob is None:
+            continue
 
         # Convert back to American odds
         def implied_probability_to_american_odds(prob):
@@ -407,6 +451,9 @@ def get_totals_odds(data):
     return pd.DataFrame(totals_records)
 
 def get_combined_odds():
+    """
+    Fetches odds data from API and returns a combined DataFrame with all odds info
+    """
     data = get_odds_data()
     if not data:
         return pd.DataFrame()
@@ -480,226 +527,118 @@ def get_combined_odds():
 
     return combined_df
 
-def run_etl():
-    # Get data from sources
-    logger = logging.getLogger('etl')
+def merge_with_combined_data(odds_df):
+    """
+    Merges odds data with the combined data from previous steps.
+    Tries both home/away team orderings to maximize matches.
+    """
+    logger.info("[cyan]Loading combined data from CSV...[/cyan]")
+    combined_data_path = os.path.join(data_dir, 'combined_data.csv')
     
-    logger.info("[cyan]Starting ETL process[/cyan]")
+    if not os.path.exists(combined_data_path):
+        logger.error(f"[red]✗[/red] Combined data file not found at {combined_data_path}")
+        return pd.DataFrame()
     
-    odds_df = get_combined_odds()
-    logger.info(f"[cyan]Odds data shape:[/cyan] {odds_df.shape}")
+    # Load the combined data
+    combined_df = pd.read_csv(combined_data_path)
+    logger.info(f"[green]✓[/green] Loaded combined data with shape: {combined_df.shape}")
     
-    barttorvik = get_barttorvik_df()
-    logger.info(f"[cyan]Barttorvik data shape:[/cyan] {barttorvik.shape}")
+    # Preview data
+    logger.info("\n[cyan]Preview of combined_data.csv:[/cyan]")
+    logger.info(f"Columns: {', '.join(combined_df.columns[:10])}")
+    logger.info(f"First few teams: {combined_df['Team'].head().tolist()}")
     
-    kenpom = pd.read_csv('data/kp_mapped.csv')
-    logger.info(f"[cyan]Kenpom data shape:[/cyan] {kenpom.shape}")
+    logger.info("\n[cyan]Preview of odds data:[/cyan]")
+    logger.info(f"Columns: {', '.join(odds_df.columns)}")
+    logger.info(f"First few teams: {odds_df['Team'].head().tolist()}")
     
-    evanmiya = pd.read_csv('data/em_mapped.csv')
-    logger.info(f"[cyan]Evanmiya data shape:[/cyan] {evanmiya.shape}")
-    
-    hasla = get_hasla_df()
-    logger.info(f"[cyan]Hasla data shape:[/cyan] {hasla.shape}")
-    logger.info(f"[cyan]Hasla columns:[/cyan] {hasla.columns.tolist()}")
-    logger.info(f"[cyan]Sample Hasla spreads:[/cyan] {hasla['spread_hasla'].head().tolist()}")
-
-    # Merge data
-    logger.info("[cyan]Starting data merges[/cyan]")
-
-    
-    # First merge with normal team order
-    merge_normal = pd.merge(
-        evanmiya,
+    # Try original team ordering
+    logger.info("[cyan]Attempting merge with original team ordering...[/cyan]")
+    result_df = pd.merge(
+        combined_df,
         odds_df,
-        on=['Home Team', 'Away Team', 'Team'],
-        how='inner',
-        indicator='merge_type'
-    )
-    
-    # Create flipped version of odds_df
-    odds_df_flipped = odds_df.copy()
-    odds_df_flipped['Home Team_orig'] = odds_df_flipped['Home Team']
-    odds_df_flipped['Away Team_orig'] = odds_df_flipped['Away Team']
-    odds_df_flipped['Home Team'] = odds_df_flipped['Away Team']
-    odds_df_flipped['Away Team'] = odds_df_flipped['Home Team_orig']
-    odds_df_flipped.drop(['Home Team_orig', 'Away Team_orig'], axis=1, inplace=True)
-    
-    # Merge with flipped teams
-    merge_flipped = pd.merge(
-        evanmiya,
-        odds_df_flipped,
-        on=['Home Team', 'Away Team', 'Team'],
-        how='inner',
-        indicator='merge_type'
-    )
-    
-    # Combine both merges, keeping only the matches
-    final_df = pd.concat([
-        merge_normal[merge_normal['merge_type'] == 'both'],
-        merge_flipped[merge_flipped['merge_type'] == 'both']
-    ]).drop('merge_type', axis=1)
-    
-    logger.info(f"[cyan]After odds merge shape:[/cyan] {final_df.shape}")
-    
-    # Log Duke games after merge
-    duke_games = final_df[final_df['Home Team'].str.contains('Duke', na=False) | 
-                         final_df['Away Team'].str.contains('Duke', na=False)]
-    if not duke_games.empty:
-        logger.info("\n[cyan]Duke games after merge:[/cyan]")
-        for _, game in duke_games.iterrows():
-            logger.info(f"- {game['Away Team']} vs {game['Home Team']}")
-    
-    # Kenpom merge
-    final_df = pd.merge(
-        final_df,
-        kenpom,
-        on=['Home Team', 'Away Team', 'Team'],
+        on=['Team', 'Home Team', 'Away Team'],
         how='left'
     )
-    logger.info(f"[cyan]After Kenpom merge shape:[/cyan] {final_df.shape}")
+    original_matches = result_df['Moneyline'].notna().sum()
+    logger.info(f"Original ordering matches: {original_matches}")
     
-    # Evanmiya merge
-    final_df = pd.merge(
-        final_df,
-        barttorvik,
-        on=['Home Team', 'Away Team', 'Team'],
-        how='left',
+    # Create swapped version of odds data
+    logger.info("[cyan]Creating swapped team version...[/cyan]")
+    swapped_odds_df = odds_df.copy()
+    swapped_odds_df['Home Team'], swapped_odds_df['Away Team'] = odds_df['Away Team'], odds_df['Home Team']
+    # Adjust spreads and probabilities for the swap
+    swapped_odds_df['Opening Spread'] = -swapped_odds_df['Opening Spread']
+    if 'Devigged Probability' in swapped_odds_df.columns:
+        swapped_odds_df['Devigged Probability'] = 1 - swapped_odds_df['Devigged Probability']
+    
+    # Try merge with swapped teams
+    logger.info("[cyan]Attempting merge with swapped team ordering...[/cyan]")
+    swapped_result_df = pd.merge(
+        combined_df,
+        swapped_odds_df,
+        on=['Team', 'Home Team', 'Away Team'],
+        how='left'
     )
-    logger.info(f"[cyan]After Evanmiya merge shape:[/cyan] {final_df.shape}")
+    swapped_matches = swapped_result_df['Moneyline'].notna().sum()
+    logger.info(f"Swapped ordering matches: {swapped_matches}")
     
-    # Hasla merge
-    logger.info("[cyan]Before Hasla merge columns:[/cyan] {final_df.columns.tolist()}")
-    logger.info(f"[cyan]Before Hasla merge shape:[/cyan] {final_df.shape}")
-    
-    # Check for team name matches
-    hasla_teams = set(hasla['Team'].unique())
-    final_teams = set(final_df['Team'].unique())
-    common_teams = hasla_teams.intersection(final_teams)
-    logger.info(f"[cyan]Teams in Hasla:[/cyan] {len(hasla_teams)}")
-    logger.info(f"[cyan]Teams in final_df:[/cyan] {len(final_teams)}")
-    logger.info(f"[cyan]Common teams:[/cyan] {len(common_teams)}")
-    
-    # Log all teams from both datasets for comparison
-    logger.info("\n[cyan]All teams from Hasla:[/cyan]")
-    for team in sorted(list(hasla_teams)):
-        logger.info(f"- {team}")
-    logger.info("\n[cyan]All teams from final_df:[/cyan]")
-    for team in sorted(list(final_teams)):
-        logger.info(f"- {team}")
-    
-    # Do the merge
-    final_df = pd.merge(
-        final_df,
-        hasla[['Home Team', 'Away Team', 'Team', 'spread_hasla', 'projected_total_hasla']],  # Only keep needed columns
-        on=['Home Team', 'Away Team', 'Team'],
-        how='left',
-        indicator=True  # This will show which rows matched
-    )
-    
-    # Log merge results
-    merge_counts = final_df['_merge'].value_counts()
-    logger.info("\n[cyan]Merge results:[/cyan]")
-    logger.info(f"Rows from left only: {merge_counts.get('left_only', 0)}")
-    logger.info(f"Rows from both: {merge_counts.get('both', 0)}")
-    
-    # Log some unmatched games
-    unmatched = final_df[final_df['_merge'] == 'left_only']
-    if not unmatched.empty:
-        logger.info("\n[yellow]Sample unmatched games:[/yellow]")
-        for _, row in unmatched.head().iterrows():
-            logger.info(f"- {row['Away Team']} @ {row['Home Team']}")
-    
-    # Drop the indicator column
-    final_df = final_df.drop('_merge', axis=1)
-    
-    logger.info(f"[cyan]After Hasla merge shape:[/cyan] {final_df.shape}")
-    logger.info(f"[cyan]After Hasla merge columns:[/cyan] {final_df.columns.tolist()}")
-    
-    # Check if spread_hasla exists and has values
-    if 'spread_hasla' in final_df.columns:
-        non_null = final_df['spread_hasla'].count()
-        logger.info(f"[cyan]spread_hasla non-null count:[/cyan] {non_null}")
-        if non_null > 0:
-            sample_spreads = final_df[final_df['spread_hasla'].notna()]['spread_hasla'].head()
-            logger.info(f"[cyan]Sample spread_hasla values:[/cyan] {sample_spreads.tolist()}")
-            
-            # Log some matched games with spreads
-            logger.info("\n[cyan]Sample matched games with spreads:[/cyan]")
-            matched = final_df[final_df['spread_hasla'].notna()]
-            for _, row in matched.head().iterrows():
-                logger.info(f"- {row['Away Team']} @ {row['Home Team']}: spread={row['spread_hasla']}")
+    # Use whichever version got more matches
+    if swapped_matches > original_matches:
+        logger.info("[green]✓[/green] Using swapped team ordering (more matches)")
+        result_df = swapped_result_df
     else:
-        logger.error("[red]✗[/red] spread_hasla column not found after merge!")
-
-    # Rename columns FIRST
-    final_df.rename(columns={
-        'Spread': 'Opening Spread',
-        'Spread Price': 'Spread Price',
-        'Moneyline': 'Opening Moneyline',
-        'Projected Total': 'theoddsapi_total'
-    }, inplace=True)
-
-    # Round theoddsapi_total and Opening Spread
-    final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
-    final_df['theoddsapi_total'] = final_df['theoddsapi_total'].apply(
-        lambda x: round(x * 2) / 2 if pd.notnull(x) else np.nan
-    )
+        logger.info("[green]✓[/green] Using original team ordering (more matches)")
     
-    final_df['Opening Spread'] = final_df['Opening Spread'].apply(
-        lambda x: round(x * 2) / 2 if pd.notnull(x) else np.nan
-    )
+    logger.info(f"[green]✓[/green] Merged data has shape: {result_df.shape}")
+    merge_success_count = result_df['Moneyline'].notna().sum()
+    logger.info(f"[cyan]Successfully matched odds for {merge_success_count} / {len(result_df)} rows[/cyan]")
+    
+    return result_df
 
-    # Calculate spread implied probability
-    final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
-    final_df['ml_implied_prob'] = final_df['Opening Moneyline'].apply(american_odds_to_implied_probability)
-
-    # Calculate moneyline probabilities and edge using devigged probabilities
-    win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
-    final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
-    final_df['Moneyline Win Probability'] = (0.5 * final_df['Moneyline Win Probability'] + 0.5 * final_df['Devigged Probability'])
-
-    # Add win probability standard deviation here
-    final_df['Moneyline Std. Dev.'] = final_df[win_prob_cols].std(axis=1, skipna=True).round(3)
-
-    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob'] 
-    # Calculate forecasted spread (average of non-NaN model predictions, including Hasla)
+def process_final_dataframe(final_df):
+    """
+    Process the final dataframe with spreads and totals lookup tables.
+    Apply the requested calculations and return a formatted dataframe.
+    """
+    logger.info("[cyan]Processing final dataframe with lookup tables...[/cyan]")
+    # Set theoddsapi_total for the lookups
+    final_df['theoddsapi_total'] = final_df['Projected Total']
+    
+    # Calculate median of spreads across all models
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    final_df['forecasted_spread'] = final_df[spread_models].median(axis=1, skipna=True)
+    final_df['forecasted_spread'] = final_df[spread_models].median(axis=1)
 
-    # Add debugging for spread values
-    logger.info("[cyan]Checking spread values:[/cyan]")
-    logger.info(f"Opening Spread sample: {final_df['Opening Spread'].head().tolist()}")
-    logger.info(f"Barttorvik spread sample: {final_df['spread_barttorvik'].head().tolist()}")
-    logger.info(f"Kenpom spread sample: {final_df['spread_kenpom'].head().tolist()}")
-    logger.info(f"Evanmiya spread sample: {final_df['spread_evanmiya'].head().tolist()}")
-    logger.info(f"Hasla spread sample: {final_df['spread_hasla'].head().tolist()}")
-    logger.info(f"Forecasted spread sample: {final_df['forecasted_spread'].head().tolist()}")
-
-    # Add debugging for spread data types
-    logger.info("\n[cyan]Checking spread data types:[/cyan]")
-    logger.info(f"Opening Spread dtype: {final_df['Opening Spread'].dtype}")
-    logger.info(f"Forecasted spread dtype: {final_df['forecasted_spread'].dtype}")
-
-    # Calculate Predicted Outcome
-    final_df['Predicted Outcome'] = (0.7 * final_df['Opening Spread'] +
-                                    0.3 * final_df['forecasted_spread'])
-
-    # Add debugging for predicted outcome
-    logger.info("\n[cyan]Checking predicted outcome:[/cyan]")
-    logger.info(f"Predicted Outcome sample: {final_df['Predicted Outcome'].head().tolist()}")
-    logger.info(f"Predicted Outcome dtype: {final_df['Predicted Outcome'].dtype}")
-
-    # Load spreads lookup data
+    final_df['Predicted Outcome'] = (0.6 * final_df['Opening Spread'] +
+                                    0.4 * final_df['forecasted_spread'])
+        # Load spreads lookup data
     try:
-        lookup_df = pd.read_csv('spreads_lookup.csv')
+        spreads_lookup_path = os.path.join(data_dir, 'spreads_lookup.csv')
+        logger.info(f"[cyan]Loading spreads lookup data from {spreads_lookup_path}[/cyan]")
+        lookup_df = pd.read_csv(spreads_lookup_path)
+        
         # Round predicted outcome for matching and handle NaN values
         final_df['Predicted Outcome'] = final_df['Predicted Outcome'].fillna(0).round()
         final_df['Predicted Outcome'] = final_df['Predicted Outcome'].astype(int)
 
-        # Merge with lookup data
+        # Round Opening Spread to nearest 0.5 for proper lookup matching
+        if 'Opening Spread' in final_df.columns:
+            # Round to nearest 0.5 by multiplying by 2, rounding, then dividing by 2
+            final_df['Opening Spread_Rounded'] = (final_df['Opening Spread'] * 2).round() / 2
+        else:
+            final_df['Opening Spread_Rounded'] = 0
+
+        # Calculate spread implied probability from Spread Price
+        if 'Spread Price' in final_df.columns:
+            final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
+        else:
+            # If Spread Price doesn't exist, initialize with 0.5 (50% probability)
+            final_df['spread_implied_prob'] = 0.5
+
+        # Merge with lookup data using the rounded spread
         final_df = final_df.merge(
             lookup_df,
-            left_on=['Opening Spread', 'Predicted Outcome'],
+            left_on=['Opening Spread_Rounded', 'Predicted Outcome'],
             right_on=['spread', 'result'],
             how='left'
         )
@@ -709,10 +648,14 @@ def run_etl():
             final_df['Spread Cover Probability'] -
             final_df['spread_implied_prob']
         )
+        logger.info(f"[green]✓[/green] Successfully applied spreads lookup")
     except FileNotFoundError:
-        print("Warning: spreads_lookup.csv not found")
+        logger.warning("[yellow]⚠[/yellow] spreads_lookup.csv not found")
         final_df['Spread Cover Probability'] = np.nan
         final_df['Edge For Covering Spread'] = np.nan
+        # Clean up temporary columns even if lookup failed
+        final_df.drop(columns=['Opening Spread_Rounded'], inplace=True, errors='ignore')
+    
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik',
                             'projected_total_kenpom', 
@@ -721,6 +664,10 @@ def run_etl():
 
     # Handle missing totals data
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
+    
+    # Make sure theoddsapi_total is rounded to nearest 0.5 for proper lookup
+    final_df['theoddsapi_total_rounded'] = (final_df['theoddsapi_total'] * 2).round() / 2
+    
     final_df['forecasted_total'] = final_df[projected_total_models].median(axis=1, skipna=True)
 
     # Add totals standard deviation here
@@ -731,9 +678,12 @@ def run_etl():
         (0.55 * final_df['theoddsapi_total'].fillna(0) +
         0.45 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
     ).round().astype(pd.Int64Dtype())
+    
     # Load and process totals lookup data
     try:
-        totals_lookup_df = pd.read_csv('totals_lookup.csv')
+        totals_lookup_path = os.path.join(data_dir, 'totals_lookup.csv')
+        logger.info(f"[cyan]Loading totals lookup data from {totals_lookup_path}[/cyan]")
+        totals_lookup_df = pd.read_csv(totals_lookup_path)
 
         # Convert lookup table columns to correct types
         totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
@@ -745,7 +695,7 @@ def run_etl():
         # Use theoddsapi_total directly since it's already rounded to 0.5
         final_df = final_df.merge(
             totals_lookup_df,
-            left_on=['theoddsapi_total', 'average_total'],
+            left_on=['theoddsapi_total_rounded', 'average_total'],
             right_on=['Market Line', 'True Line'],
             how='left'
         )
@@ -753,11 +703,15 @@ def run_etl():
         final_df['Under Cover Probability'] = final_df['Under_Probability']
         final_df.drop(columns=['theoddsapi_total_rounded',
                             'Market Line', 'True Line', 'Over_Probability',
-                            'Under_Probability', 'Push_Probability'], inplace=True, errors='ignore')
+                            'Under_Probability', 'Push_Probability', 'Opening Spread_Rounded',
+                            'spread', 'result'], inplace=True, errors='ignore')
+        logger.info(f"[green]✓[/green] Successfully applied totals lookup")
     except FileNotFoundError:
-        print("Warning: totals_lookup.csv not found. Skipping Over/Under probabilities.")
+        logger.warning("[yellow]⚠[/yellow] totals_lookup.csv not found. Skipping Over/Under probabilities.")
         final_df['Over Cover Probability'] = np.nan
         final_df['Under Cover Probability'] = np.nan
+        # Clean up temporary columns even if lookup failed
+        final_df.drop(columns=['theoddsapi_total_rounded'], inplace=True, errors='ignore')
 
     # Calculate totals implied probabilities and edges
     final_df['over_implied_prob'] = final_df['Over Price'].apply(american_odds_to_implied_probability)
@@ -765,13 +719,37 @@ def run_etl():
     final_df['Over Total Edge'] = final_df['Over Cover Probability'] - final_df['over_implied_prob']
     final_df['Under Total Edge'] = final_df['Under Cover Probability'] - final_df['under_implied_prob']
 
-    # Calculate spread standard deviation here
+    # Calculate spread standard deviation
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
     final_df['Spread Std. Dev.'] = final_df[spread_models].std(axis=1, skipna=True).round(1)
+    
+    # Calculate totals standard deviation
+    projected_total_models = ['projected_total_barttorvik', 'projected_total_kenpom', 
+                             'projected_total_evanmiya', 'projected_total_hasla']
+    final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
+    
+    # Calculate moneyline standard deviation
+    win_prob_models = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
+    final_df['Moneyline Std. Dev.'] = final_df[win_prob_models].std(axis=1, skipna=True).round(3)
+
+    # Calculate moneyline probabilities and edge using devigged probabilities
+    win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
+    final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
+    final_df['Moneyline Win Probability'] = (0.5*final_df['Moneyline Win Probability']+0.5*final_df['Devigged Probability'])
+    final_df['ml_implied_prob'] = final_df['Moneyline'].apply(american_odds_to_implied_probability)
+    final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
 
     # Keep rows with missing devigged probabilities, just fill with 0
     final_df['Devigged Probability'] = final_df['Devigged Probability'].fillna(0)
     final_df['Moneyline Edge'] = final_df['Moneyline Edge'].fillna(0)
+
+    # Rename 'Moneyline' column to 'Opening Moneyline' if it exists
+    if 'Moneyline' in final_df.columns:
+        # Round moneyline values to the nearest integer
+        final_df['Opening Moneyline'] = final_df['Moneyline'].round().astype('Int64')
+    else:
+        logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty 'Opening Moneyline' column")
+        final_df['Opening Moneyline'] = np.nan
 
     # Drop any remaining duplicates after all processing
     final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
@@ -779,6 +757,7 @@ def run_etl():
     logger.info(f"[cyan]Final shape after handling missing devigged probabilities:[/cyan] {final_df.shape}")
 
     final_df = final_df.sort_values('Game Time', ascending=True)
+    
     # Define final column order
     column_order = [
         'Game', 'Game Time', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
@@ -789,10 +768,79 @@ def run_etl():
         'average_total', 'theoddsapi_total', 'Totals Std. Dev.', 'projected_total_barttorvik',
         'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
         'Over Cover Probability', 'Under Cover Probability',
-        'Over Total Edge', 'Under Total Edge']
+        'Over Total Edge', 'Under Total Edge'
+    ]
+    
+    # Only keep columns that exist in the dataframe
+    available_columns = [col for col in column_order if col in final_df.columns]
+    
+    logger.info(f"[green]✓[/green] Final dataframe processing complete")
+    return final_df[available_columns].reset_index(drop=True)
 
-    return final_df[column_order].reset_index(drop=True)
+def run_oddsapi_etl():
+    """
+    Main ETL function to run the OddsAPI workflow
+    """
+    logger.info("=== Starting OddsAPI ETL process ===")
+    
+    # Get odds data
+    logger.info("[cyan]Fetching odds data from API...[/cyan]")
+    odds_df = get_combined_odds()
+    
+    if odds_df.empty:
+        logger.error("[red]✗[/red] Failed to get odds data from API")
+        return pd.DataFrame()
+    
+    logger.info(f"[green]✓[/green] Successfully fetched odds data with {len(odds_df)} rows")
+    
+    # Temporary save for inspection
+    odds_csv_path = os.path.join(data_dir, 'oddsapi_raw.csv')
+    odds_df.to_csv(odds_csv_path, index=False)
+    logger.info(f"[green]✓[/green] Saved raw odds data to {odds_csv_path}")
+    
+    # Merge with combined data
+    logger.info("[cyan]Merging odds data with combined data...[/cyan]")
+    final_df = merge_with_combined_data(odds_df)
+    
+    if final_df.empty:
+        logger.error("[red]✗[/red] Failed to merge odds data with combined data")
+        return pd.DataFrame()
+    
+    # Process final dataframe with lookup tables
+    final_df = process_final_dataframe(final_df)
+    
+    # Save final results
+    output_path = os.path.join(data_dir, 'final_combined_data.csv')
+    final_df.to_csv(output_path, index=False)
+    logger.info(f"[green]✓[/green] Saved final combined data to {output_path}")
+    
+    logger.info("=== OddsAPI ETL process completed successfully ===")
+    return final_df
 
-# Example usage to save combined odds
 if __name__ == "__main__":
-    run_etl().to_csv('CBB Output.csv')
+    logger.info("=== Starting OddsAPI script ===")
+    
+    try:
+        # Run the ETL process
+        result_df = run_oddsapi_etl()
+        
+        if not result_df.empty:
+            output_file = os.path.join(data_dir, 'final_combined_data.csv')
+            logger.info(f"[green]✓[/green] Final data shape: {result_df.shape}")
+            logger.info(f"[green]✓[/green] Final data saved to: {output_file}")
+
+            csv_path = 'CBB_Output.csv'
+            result_df.to_csv(csv_path, index=False)
+            logger.info(f"[green]✓[/green] CSV output saved to: {csv_path}")
+            
+        else:
+            logger.error("[red]✗[/red] Script execution failed")
+            sys.exit(1)
+            
+    except Exception as e:
+        logger.error(f"[red]✗[/red] Error in OddsAPI script: {str(e)}")
+        import traceback
+        logger.error(traceback.format_exc())
+        sys.exit(1)
+        
+    logger.info("=== OddsAPI script completed successfully ===")

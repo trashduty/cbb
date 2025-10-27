@@ -1,15 +1,35 @@
+# /// script
+# dependencies = [
+#   "pandas",
+#   "requests",
+#   "beautifulsoup4",
+#   "numpy",
+#   "rich"
+# ]
+# ///
+
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import numpy as np
 from datetime import datetime, timedelta, timezone
-from logger_setup import log_scraper_execution
-import logging
-from rich.table import Table
-from rich.console import Console
 import re
+from rich.console import Console
+from rich.table import Table
+import os
+import sys
 
 console = Console()
+
+# Determine the project root directory to save files correctly
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(script_dir))
+data_dir = os.path.join(project_root, 'data')
+
+# Ensure data directory exists
+if not os.path.exists(data_dir):
+    os.makedirs(data_dir)
+    print(f"Created data directory: {data_dir}")
 
 def fetch_barttorvik(date=None):
     """
@@ -21,23 +41,21 @@ def fetch_barttorvik(date=None):
     Returns:
         tuple: (DataFrame of games, next_date_url)
     """
-    logger = logging.getLogger('barttorvik')
-    
     headers = {'User-Agent': 'Mozilla/5.0'}
     base_url = "https://www.barttorvik.com/schedule.php"
     
     # Build URL with date parameter if provided
     if date:
         url = f"{base_url}?date={date}&conlimit="
-        logger.info(f"Fetching data for date: {date}")
+        print(f"Fetching data for date: {date}")
     else:
         url = base_url
-        logger.info("Fetching data for current date")
+        print("Fetching data for current date")
 
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
-        logger.info("Successfully retrieved webpage")
+        print("Successfully retrieved webpage")
         
         soup = BeautifulSoup(response.text, 'html.parser')
         games = []
@@ -56,7 +74,7 @@ def fetch_barttorvik(date=None):
             match = re.search(r'date=(\d{8})', next_day_link)
             if match:
                 next_date = match.group(1)
-                logger.info(f"Found next date: {next_date}")
+                print(f"Found next date: {next_date}")
 
         for row in soup.find_all('tr'):
             teams = row.find_all('a', href=lambda x: x and 'team.php' in x)
@@ -67,14 +85,6 @@ def fetch_barttorvik(date=None):
             if not line:
                 continue
 
-            # Log the raw HTML structure for Duke games
-            if "Duke" in teams[0].text or "Duke" in teams[1].text:
-                logger.info(f"Found Duke game in HTML:")
-                logger.info(f"First team (away): {teams[0].text.strip()}")
-                logger.info(f"Second team (home): {teams[1].text.strip()}")
-                logger.info(f"T-Rank line: {line.text.strip()}")
-                logger.info(f"Full row HTML: {row}")
-
             games.append({
                 'Home Team': teams[1].text.strip(),
                 'Away Team': teams[0].text.strip(),
@@ -82,14 +92,13 @@ def fetch_barttorvik(date=None):
                 'Game Date': date if date else datetime.now().strftime('%Y%m%d')
             })
 
-        logger.info(f"Successfully parsed {len(games)} games")
+        print(f"Successfully parsed {len(games)} games")
         return pd.DataFrame(games), next_date
 
     except requests.RequestException as e:
-        logger.error(f"Failed to fetch data: {str(e)}")
+        print(f"Failed to fetch data: {str(e)}")
         raise
 
-@log_scraper_execution
 def fetch_multiple_days(start_date=None, num_days=5):
     """
     Fetch Barttorvik data for multiple consecutive days by following navigation links
@@ -101,8 +110,6 @@ def fetch_multiple_days(start_date=None, num_days=5):
     Returns:
         dict: Dictionary mapping dates to DataFrames of games
     """
-    logger = logging.getLogger('barttorvik')
-    
     all_games = {}
     current_date = start_date
     days_fetched = 0
@@ -122,27 +129,25 @@ def fetch_multiple_days(start_date=None, num_days=5):
             
         # Move to next date
         current_date = next_date
-        logger.info(f"Moving to next date: {current_date}")
+        print(f"Moving to next date: {current_date}")
     
-    logger.info(f"Fetched data for {days_fetched} days")
+    print(f"Fetched data for {days_fetched} days")
     return all_games
 
-def get_barttorvik_df(days_ahead=5):
+def get_barttorvik_df(days_ahead=10):
     """
     Main function to get processed Barttorvik data for multiple days
     
     Args:
         days_ahead (int): Number of days to fetch (including today)
     """
-    logger = logging.getLogger('barttorvik')
-    
     # Get today's date in Eastern time (for display purposes)
     today = datetime.now(timezone.utc)
     eastern = timezone(timedelta(hours=-5))  # EST is UTC-5
     today_eastern = today.astimezone(eastern)
     
     # Fetch games for multiple days by following navigation links
-    logger.info(f"Fetching games for up to {days_ahead} days starting from today")
+    print(f"Fetching games for up to {days_ahead} days starting from today")
     games_by_date = fetch_multiple_days(today_eastern.strftime('%Y%m%d'), days_ahead)
     
     # Transform each day's data
@@ -171,64 +176,71 @@ def get_barttorvik_df(days_ahead=5):
         display_date = datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d')
         date_games = len(df) if not df.empty else 0
         total_games += date_games
-        logger.info(f"[cyan]Fetched {date_games} games for {display_date}[/cyan]")
+        print(f"Fetched {date_games} games for {display_date}")
     
     # Combine all transformed data
     if transformed_dfs:
         combined_df = pd.concat(transformed_dfs, ignore_index=True)
     else:
-        logger.warning("No games found for any of the requested dates")
+        print("No games found for any of the requested dates")
         combined_df = pd.DataFrame(columns=[
             'Home Team', 'Away Team', 'Team', 'Game Date', 
             'spread_barttorvik', 'win_prob_barttorvik', 'projected_total_barttorvik'
         ])
     
-    # Map team names
-    crosswalk = pd.read_csv('crosswalk.csv')
-    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
-    
-    # Create mapping report and get mapped dataframe
-    mapped_df = map_team_names(combined_df)
-    final_games = len(mapped_df) // 2  # Divide by 2 since we have 2 rows per game
-    
-    # Create summary for each date
-    for date, df in games_by_date.items():
-        date_df = combined_df[combined_df['Game Date'] == date]
-        date_games = len(df) if not df.empty else 0
+    # Map team names using crosswalk file from the data directory
+    crosswalk_path = os.path.join(data_dir, 'crosswalk.csv')
+    if os.path.exists(crosswalk_path):
+        crosswalk = pd.read_csv(crosswalk_path)
+        name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
         
-        # Find unmapped teams for this date
-        unmapped = []
-        for team in date_df['Team'].unique() if not date_df.empty else []:
-            if team not in name_map:
-                unmapped.append(team)
+        # Create mapping report and get mapped dataframe
+        mapped_df = map_team_names(combined_df, name_map)
+        final_games = len(mapped_df) // 2  # Divide by 2 since we have 2 rows per game
         
-        # Format unmapped teams string
-        unmapped_count = len(unmapped)
+        # Create summary for each date
+        for date, df in games_by_date.items():
+            date_df = combined_df[combined_df['Game Date'] == date]
+            date_games = len(df) if not df.empty else 0
+            
+            # Find unmapped teams for this date
+            unmapped = []
+            for team in date_df['Team'].unique() if not date_df.empty else []:
+                if team not in name_map:
+                    unmapped.append(team)
+            
+            # Format unmapped teams string
+            unmapped_count = len(unmapped)
+            
+            # Add row to summary table
+            display_date = datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d')
+            summary_table.add_row(
+                display_date,
+                str(date_games),
+                unmapped[0] if unmapped else "None",
+                str(unmapped_count)
+            )
+            
+            # Add additional rows for remaining unmapped teams
+            for team in unmapped[1:]:
+                summary_table.add_row("", "", team, "")
         
-        # Add row to summary table
-        display_date = datetime.strptime(date, '%Y%m%d').strftime('%Y-%m-%d')
-        summary_table.add_row(
-            display_date,
-            str(date_games),
-            unmapped[0] if unmapped else "None",
-            str(unmapped_count)
-        )
-        
-        # Add additional rows for remaining unmapped teams
-        for team in unmapped[1:]:
-            summary_table.add_row("", "", team, "")
-    
-    # Add total row
-    if len(games_by_date) > 1:
-        summary_table.add_row("", "", "", "", style="dim")
-        total_unmapped = len(set(team for team in combined_df['Team'].unique() if team not in name_map)) if not combined_df.empty else 0
-        summary_table.add_row(
-            "Total",
-            str(total_games),
-            f"{final_games} games after mapping",
-            f"{total_unmapped} teams unmapped",
-            style="bold"
-        )
+        # Add total row
+        if len(games_by_date) > 1:
+            summary_table.add_row("", "", "", "", style="dim")
+            total_unmapped = len(set(team for team in combined_df['Team'].unique() if team not in name_map)) if not combined_df.empty else 0
+            summary_table.add_row(
+                "Total",
+                str(total_games),
+                f"{final_games} games after mapping",
+                f"{total_unmapped} teams unmapped",
+                style="bold"
+            )
+    else:
+        print(f"Warning: Crosswalk file not found at {crosswalk_path}")
+        print("Using unmapped data")
+        mapped_df = combined_df
+        final_games = len(mapped_df) // 2
 
     console.print(summary_table)
 
@@ -280,18 +292,15 @@ def get_barttorvik_df(days_ahead=5):
         )
     
     console.print(games_table)
-    logger.info(f"[green]✓[/green] Successfully processed {final_games} games from Barttorvik")
+    print(f"Successfully processed {final_games} games from Barttorvik")
 
     return mapped_df.reset_index(drop=True)
 
-@log_scraper_execution
 def transform_barttorvik_data(df):
     """Transform to two-row-per-game format with team-specific stats"""
-    logger = logging.getLogger('barttorvik')
-    
     # Check if DataFrame is empty and return empty DataFrame with appropriate columns
     if df.empty:
-        logger.warning("Empty DataFrame received, returning empty result with expected columns")
+        print("Empty DataFrame received, returning empty result with expected columns")
         return pd.DataFrame(columns=[
             'Home Team', 'Away Team', 'Team', 'Game Date', 
             'spread_barttorvik', 'win_prob_barttorvik', 'projected_total_barttorvik'
@@ -300,7 +309,7 @@ def transform_barttorvik_data(df):
     pattern = r"^\s*(?P<TeamName>.+?)(?:\s+(?P<Spread>-?\d+\.?\d*))?(?:,\s*(?P<ProjectedScore>\d+-\d+))?\s*\((?P<WinProb>\d+)%\)\s*$"
     extracted = df['T-Rank Line'].str.extract(pattern)
     
-    logger.info("Extracting projected scores and win probabilities")
+    print("Extracting projected scores and win probabilities")
     
     try:
         extracted[['ProjectedHome', 'ProjectedAway']] = (
@@ -309,9 +318,9 @@ def transform_barttorvik_data(df):
             .astype(float)
         )
         extracted['ProjectedTotal'] = extracted['ProjectedHome'] + extracted['ProjectedAway']
-        logger.info("Successfully processed projected scores")
+        print("Successfully processed projected scores")
     except (TypeError, ValueError):
-        logger.warning("Could not process projected scores, setting to NaN")
+        print("Could not process projected scores, setting to NaN")
         extracted['ProjectedTotal'] = np.nan
 
     base_df = df[['Home Team', 'Away Team', 'Game Date']].copy()
@@ -319,7 +328,7 @@ def transform_barttorvik_data(df):
     away_rows = []
     failed_rows = []
 
-    logger.info("Processing individual game records")
+    print("Processing individual game records")
     
     for idx, row in base_df.iterrows():
         line_data = df.at[idx, 'T-Rank Line']
@@ -338,13 +347,23 @@ def transform_barttorvik_data(df):
             # Set spread to 0 if missing
             spread = 0 if pd.isna(spread) else float(spread)
 
-            # Determine favored team
+            # Try both team orderings
+            # First try original ordering
             is_home_favored = team_name == row['Home Team']
             is_away_favored = team_name == row['Away Team']
 
             if not (is_home_favored or is_away_favored):
-                failed_rows.append(f"Row {idx}: '{line_data}' - Could not match team name '{team_name}' to either home or away team")
-                continue
+                # Try swapped ordering
+                is_home_favored = team_name == row['Away Team']
+                is_away_favored = team_name == row['Home Team']
+                if is_home_favored or is_away_favored:
+                    # Swap teams and adjust spread/probability
+                    row['Home Team'], row['Away Team'] = row['Away Team'], row['Home Team']
+                    spread = -spread
+                    win_prob = 100 - float(win_prob)
+                else:
+                    failed_rows.append(f"Row {idx}: '{line_data}' - Could not match team name '{team_name}' to either home or away team")
+                    continue
 
             # Home team record
             home_rows.append({
@@ -381,11 +400,8 @@ def transform_barttorvik_data(df):
     # Combine home and away records
     return pd.DataFrame(home_rows + away_rows)
 
-def map_team_names(df):
+def map_team_names(df, name_map):
     """Map team names using crosswalk"""
-    crosswalk = pd.read_csv('crosswalk.csv')
-    name_map = crosswalk.set_index('barttorvik')['API'].to_dict()
-
     # Create mapping report
     unmapped_teams = {}
     for team in df['Team'].unique():
@@ -409,38 +425,14 @@ def map_team_names(df):
         print(f"\nDropped {original_count - len(mapped_df)} rows due to mapping issues")
 
     return mapped_df
-# # Updated main workflow
-# if __name__ == "__main__":
-#     # Load and transform both datasets
-#     odds_df = pd.read_csv('combined_odds.csv')
-#     barttorvik_raw = fetch_barttorvik()
-#     barttorvik_clean = transform_barttorvik_data(barttorvik_raw)
-#     barttorvik_mapped = map_team_names(barttorvik_clean)
 
-#     # Merge datasets and print unmatched games
-#     merged_df = pd.merge(
-#         odds_df,
-#         barttorvik_mapped,
-#         on=['Home Team', 'Away Team', 'Team'],
-#         how='left'
-#     )
-
-#     # Print games that didn't match
-#     unmatched = merged_df[merged_df['spread_barttorvik'].isna()]
-#     if not unmatched.empty:
-#         print("\nUnmatched games:")
-#         for _, row in unmatched.iterrows():
-#             print(f"- {row['Away Team']} @ {row['Home Team']}")
-
-#     # Drop unmatched rows
-#     rows_before = len(merged_df)
-#     merged_df = merged_df.dropna(subset=['spread_barttorvik', 'win_prob_barttorvik'])
-#     rows_dropped = rows_before - len(merged_df)
-#     if rows_dropped > 0:
-#         print(f"\nDropped {rows_dropped} rows due to missing Barttorvik data")
-
-#     # Add calculated fields
-#     merged_df['edge'] = merged_df['win_prob_barttorvik'] - merged_df['implied_prob']
-#     merged_df['value_bet'] = merged_df['edge'].apply(lambda x: 'Yes' if x > 0.05 else 'No')
-
-#     merged_df.to_csv('value_bets.csv', index=False)
+if __name__ == "__main__":
+    # Run the script to get data for the next 5 days
+    df = get_barttorvik_df(days_ahead=10)
+    
+    # Save the output to a single CSV file
+    output_file = os.path.join(data_dir, 'bt_mapped.csv')
+    df.to_csv(output_file, index=False)
+    print(f"Saved Barttorvik data to: {output_file}")
+    
+    print(f"Final dataframe shape: {df.shape}")

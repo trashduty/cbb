@@ -1,0 +1,37 @@
+{
+  "name": "kp-em-scrape",
+  "version": "1.0.0",
+  "description": "Data scraper for KenPom and EvanMiya basketball analytics websites",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "scrape:all": "node src/index.js",
+    "scrape:kenpom": "node src/scrapers/kenpom-scraper.js",
+    "scrape:evanmiya": "node src/scrapers/evanmiya-scraper.js",
+    "parse:kenpom": "uv run src/parsers/kenpom-parser.py --html-dir kenpom-data --output data/kp.csv",
+    "transform:evanmiya": "node src/transformers/evanmiya-transformer.js"
+  },
+  "keywords": [
+    "basketball",
+    "analytics",
+    "data",
+    "scraper",
+    "kenpom",
+    "evanmiya"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.39.0",
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "playwright": "^1.39.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
