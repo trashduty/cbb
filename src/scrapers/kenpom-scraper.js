@@ -11,6 +11,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+// Load environment variables FIRST before using them in CONFIG
+require('dotenv').config();
+
 // Configuration options
 const CONFIG = {
   waitForNewDays: false, // Set to true if you want to wait for new days to appear
@@ -20,7 +23,7 @@ const CONFIG = {
   outputDir: path.join(__dirname, '../../kenpom-data'), // Directory to save HTML and data
   csvOutputPath: path.join(__dirname, '../../data/kp.csv'), // Fixed output path for the CSV
   headless: true, // Run in headless mode (no browser UI)
-  navigationTimeout: 30000, // Navigation timeout in ms (30 seconds)
+  navigationTimeout: 60000, // Navigation timeout in ms (60 seconds)
   // Load credentials from environment variables
   credentials: {
     email: process.env.EMAIL || '',
@@ -151,65 +154,82 @@ async function runScraper() {
       while (loginAttempts < maxLoginAttempts) {
         try {
           console.log(`Login attempt ${loginAttempts + 1}/${maxLoginAttempts}`);
-          
-          // Try multiple methods to find inputs and fill them
-          try {
-            // Method 1: Standard selectors
-            await page.fill('input[name="email"]', CONFIG.credentials.email);
-            await page.fill('input[name="password"]', CONFIG.credentials.password);
-            await page.click('input[type="submit"], button[type="submit"]');
-          } catch (error) {
-            console.log(`Standard login failed, trying alternative method: ${error.message}`);
-            
-            // Method 2: Form evaluation
-            await page.evaluate((email, password) => {
-              const loginForm = document.querySelector('form#login') || 
-                               Array.from(document.querySelectorAll('form')).find(f => 
-                                 f.action && f.action.includes('login'));
-              
-              if (loginForm) {
-                const emailInput = loginForm.querySelector('input[type="email"], input[name="email"]');
-                const passwordInput = loginForm.querySelector('input[type="password"], input[name="password"]');
-                const submitButton = loginForm.querySelector('input[type="submit"], button[type="submit"]');
-                
-                if (emailInput) emailInput.value = email;
-                if (passwordInput) passwordInput.value = password;
-                if (submitButton) submitButton.click();
-                return true;
-              }
-              return false;
-            }, CONFIG.credentials.email, CONFIG.credentials.password);
+
+          // Verify we have credentials
+          if (!CONFIG.credentials.email || !CONFIG.credentials.password) {
+            throw new Error('Email or password not set in environment variables');
           }
-          
-          // Wait for navigation to complete (shorter timeout)
-          await page.waitForLoadState('domcontentloaded', { timeout: 15000 })
-            .catch(e => console.log(`Navigation timeout: ${e.message}`));
-          
+
+          console.log(`Using email: ${CONFIG.credentials.email.substring(0, 3)}...`);
+
+          // Wait for the form to be ready
+          console.log('Waiting for email input field...');
+          await page.waitForSelector('input[name="email"]', { state: 'visible', timeout: 10000 });
+
+          console.log('Waiting for password input field...');
+          await page.waitForSelector('input[name="password"]', { state: 'visible', timeout: 10000 });
+
+          console.log('Waiting for submit button...');
+          await page.waitForSelector('input[type="submit"]', { state: 'visible', timeout: 10000 });
+
+          // Fill in the credentials
+          console.log('Filling email field...');
+          await page.fill('input[name="email"]', CONFIG.credentials.email);
+
+          console.log('Filling password field...');
+          await page.fill('input[name="password"]', CONFIG.credentials.password);
+
+          // Add a small delay before clicking submit
+          await new Promise(resolve => setTimeout(resolve, 500));
+
+          console.log('Clicking submit button...');
+          await page.click('input[type="submit"]');
+
+          // Wait for navigation to complete
+          console.log('Waiting for navigation after login...');
+          try {
+            await page.waitForURL(url => !url.includes('register-kenpom.php'), {
+              timeout: 30000
+            });
+          } catch (e) {
+            console.log(`Navigation wait timed out: ${e.message}`);
+          }
+
           // Wait a moment for any redirects to complete
-          await new Promise(resolve => setTimeout(resolve, 3000));
-          
+          await new Promise(resolve => setTimeout(resolve, 2000));
+
+          // Check current URL
+          const currentUrl = page.url();
+          console.log(`Current URL after login attempt: ${currentUrl}`);
+
           // Check if login was successful
-          const isLoggedIn = await page.evaluate(() => {
-            return !document.URL.includes('register-kenpom.php') && 
-                   document.querySelectorAll('form input[name="email"]').length === 0;
-          });
-          
+          const isLoggedIn = !currentUrl.includes('register-kenpom.php');
+
           if (isLoggedIn) {
-            console.log('Logged in successfully');
-            
+            console.log('✓ Logged in successfully');
+
             // Save cookies for future use
             const cookies = await context.cookies();
             fs.writeFileSync(cookiesPath, JSON.stringify(cookies, null, 2));
             console.log('Saved cookies to file');
-            
+
             // Navigate to FanMatch with more reliable DOM loading
             await navigateToFanMatch(page);
-            
+
             return true; // Login successful
           } else {
-            console.log('Login unsuccessful, retrying...');
+            console.log('✗ Login unsuccessful - still on login page');
             loginAttempts++;
-            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            // Take a screenshot for debugging
+            const screenshotPath = path.join(CONFIG.outputDir, `login-fail-${loginAttempts}.png`);
+            await page.screenshot({ path: screenshotPath });
+            console.log(`Screenshot saved to ${screenshotPath}`);
+
+            if (loginAttempts < maxLoginAttempts) {
+              console.log('Waiting before retry...');
+              await new Promise(resolve => setTimeout(resolve, 3000));
+            }
           }
         } catch (loginError) {
           console.error(`Login attempt ${loginAttempts + 1} failed:`, loginError.message);

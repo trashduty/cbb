@@ -185,50 +185,92 @@ def parse_fanmatch_html(html_content, date=None):
             # 1. Extract team info directly from links when possible
             try:
                 game_cell = cells[0]
-                
+
                 # Try to get team names directly from links first
                 team_links = game_cell.find_all('a')
                 team_links = [link for link in team_links if 'team.php' in link.get('href', '')]
-                
+
                 if len(team_links) >= 2:
                     # First link is usually away team, second is home team
                     game_data['away_team'] = team_links[0].get_text(strip=True)
                     game_data['home_team'] = team_links[1].get_text(strip=True)
-                    
+
                     # Try to extract seeds
                     seed_spans = game_cell.find_all('span', class_='seed-gray')
                     if len(seed_spans) >= 2:
                         game_data['away_seed'] = seed_spans[0].get_text(strip=True)
                         game_data['home_seed'] = seed_spans[1].get_text(strip=True)
-                    
+
                     # Try to extract conference
                     conf_span = game_cell.find('span', style=lambda value: value and 'font-style:italic' in value)
                     if conf_span:
                         game_data['conference'] = conf_span.get_text(strip=True)
+                elif len(team_links) == 1:
+                    # Handle case where only one team has a link
+                    # Parse the full text to find both teams
+                    full_text = game_cell.get_text(strip=True)
+
+                    # Extract seeds (including "NR" for Not Ranked)
+                    seed_spans = game_cell.find_all('span', class_='seed-gray')
+                    if len(seed_spans) >= 2:
+                        game_data['away_seed'] = seed_spans[0].get_text(strip=True)
+                        game_data['home_seed'] = seed_spans[1].get_text(strip=True)
+
+                    # Check for "vs." or "at" to determine game location
+                    if ' at' in full_text:
+                        # Away at Home format
+                        # Split on "at" and extract team names
+                        parts = full_text.split(' at')
+                        if len(parts) == 2:
+                            # Away team is before "at"
+                            away_part = parts[0].strip()
+                            # Remove seed if present (NR or digits, with optional space)
+                            away_part = re.sub(r'^(NR|\d+)\s*', '', away_part)
+                            game_data['away_team'] = away_part
+
+                            # Home team is after "at"
+                            home_part = parts[1].strip()
+                            # Remove seed if present (NR or digits, with optional space)
+                            home_part = re.sub(r'^(NR|\d+)\s*', '', home_part)
+                            game_data['home_team'] = home_part
+                    elif ' vs.' in full_text:
+                        # Neutral site
+                        parts = full_text.split(' vs.')
+                        if len(parts) == 2:
+                            away_part = parts[0].strip()
+                            away_part = re.sub(r'^(NR|\d+)\s*', '', away_part)
+                            game_data['away_team'] = away_part
+
+                            home_part = parts[1].strip()
+                            home_part = re.sub(r'^(NR|\d+)\s*', '', home_part)
+                            game_data['home_team'] = home_part
                 else:
                     # Fallback to regex parsing if links aren't found
                     team_info = game_cell.get_text(strip=True)
-                    
-                    # Try vs. pattern first
-                    teams_pattern = r'(\d+)\s+([A-Za-z\s\.&+\-\']+)\s+vs\.\s+(\d+)\s+([A-Za-z\s\.&+\-\']+)\s+([A-Z0-9\-]+)'
+
+                    # Updated patterns to handle "NR" (Not Ranked) as well as digits
+                    # Try vs. pattern first (neutral site)
+                    teams_pattern = r'(NR|\d+)\s+([A-Za-z\s\.&+\-\']+?)\s+vs\.\s+(NR|\d+)\s+([A-Za-z\s\.&+\-\']+?)(?:\s+([A-Z0-9\-]+))?$'
                     teams_match = re.search(teams_pattern, team_info)
-                    
+
                     if teams_match:
                         game_data['away_seed'] = teams_match.group(1)
                         game_data['away_team'] = teams_match.group(2).strip()
                         game_data['home_seed'] = teams_match.group(3)
                         game_data['home_team'] = teams_match.group(4).strip()
-                        game_data['conference'] = teams_match.group(5)
+                        if teams_match.group(5):
+                            game_data['conference'] = teams_match.group(5)
                     else:
-                        # Try at pattern
-                        teams_pattern_alt = r'(\d+)\s+([A-Za-z\s\.&+\-\']+)\s+at\s+(\d+)\s+([A-Za-z\s\.&+\-\']+)\s+([A-Z0-9\-]+)'
+                        # Try at pattern (home/away)
+                        teams_pattern_alt = r'(NR|\d+)\s+([A-Za-z\s\.&+\-\']+?)\s+at\s+(NR|\d+)\s+([A-Za-z\s\.&+\-\']+?)(?:\s+([A-Z0-9\-]+))?$'
                         teams_match_alt = re.search(teams_pattern_alt, team_info)
                         if teams_match_alt:
                             game_data['away_seed'] = teams_match_alt.group(1)
                             game_data['away_team'] = teams_match_alt.group(2).strip()
                             game_data['home_seed'] = teams_match_alt.group(3)
                             game_data['home_team'] = teams_match_alt.group(4).strip()
-                            game_data['conference'] = teams_match_alt.group(5)
+                            if teams_match_alt.group(5):
+                                game_data['conference'] = teams_match_alt.group(5)
             except Exception as e:
                 print(f"Warning: Error extracting team info for row {row_index}: {e}")
                 
