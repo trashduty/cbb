@@ -1,64 +1,64 @@
-# name: Basketball Data Scraper
+name: Basketball Data Scraper
 
-# on:
-#   schedule:
-#     # Run every 5 minutes
-#     - cron: '*/5 * * * *'
-#   workflow_dispatch:  # Allow manual triggering
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:  # Allow manual triggering
 
-# permissions:
-#   contents: write
+permissions:
+  contents: write
 
-# jobs:
-#   scrape:
-#     runs-on: ubuntu-latest
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
     
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
         
-#       - name: Set up Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: '18'
-#           cache: 'npm'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
           
-#       - name: Install Node.js dependencies
-#         run: npm ci
+      - name: Install Node.js dependencies
+        run: npm ci
         
-#       - name: Install Playwright browsers
-#         run: npx playwright install --with-deps chromium
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
         
-#       - name: Set up Python
-#         uses: actions/setup-python@v5
-#         with:
-#           python-version: '3.10'
-#           # No pip cache since we're using UV
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          # No pip cache since we're using UV
           
-#       - name: Install UV and Python dependencies
-#         run: |
-#           pip install uv
-#           echo "UV installed successfully: $(uv --version)"
-#           uv pip install --system -r requirements.txt
+      - name: Install UV and Python dependencies
+        run: |
+          pip install uv
+          echo "UV installed successfully: $(uv --version)"
+          uv pip install --system -r requirements.txt
           
-#       - name: Configure credentials
-#         run: |
-#           echo "EMAIL=${{ secrets.EMAIL }}" >> .env
-#           echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
-#           echo "ODDS_API_KEY=${{ secrets.ODDS_API_KEY }}" >> .env
+      - name: Configure credentials
+        run: |
+          echo "EMAIL=${{ secrets.EMAIL }}" >> .env
+          echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
+          echo "ODDS_API_KEY=${{ secrets.ODDS_API_KEY }}" >> .env
           
-#       - name: Run scraper
-#         run: node ./src/index.js
+      - name: Run scraper
+        run: node ./src/index.js
         
-#       - name: Commit and push changes
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git add CBB_Output.csv
-#           # Check if there are changes to commit
-#           if git diff --staged --quiet; then
-#             echo "No changes to commit"
-#           else
-#             git commit -m "Update CBB_Output.csv - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-#             git push -f origin HEAD:${GITHUB_REF}
-#           fi
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CBB_Output.csv
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update CBB_Output.csv - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            git push -f origin HEAD:${GITHUB_REF}
+          fi

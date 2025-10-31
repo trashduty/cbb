@@ -1483,7 +1483,7 @@
     "total": 146,
     "raw_game_text": "124Troyat125Kent St.",
     "raw_prediction_text": "Kent St. 74-72 (59%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Kent, OHMemorial Athletic & Convocatio",
     "raw_thrill_text": "43.06"
   },
@@ -1607,7 +1607,7 @@
     "total": 151,
     "raw_game_text": "181South Alabamaat166Toledo",
     "raw_prediction_text": "Toledo 77-74 (61%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Toledo, OHSavage Arena",
     "raw_thrill_text": "35.810"
   },
@@ -1638,7 +1638,7 @@
     "total": 144,
     "raw_game_text": "176Texas St.at192Bowling Green",
     "raw_prediction_text": "Bowling Green 73-71 (59%)[71]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Bowling Green, OHStroh Center",
     "raw_thrill_text": "35.111"
   },
@@ -1669,7 +1669,7 @@
     "total": 153,
     "raw_game_text": "197Marshallat196Massachusetts",
     "raw_prediction_text": "Massachusetts 78-75 (62%)[74]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Amherst, MAMullins Center",
     "raw_thrill_text": "34.312"
   },
@@ -1700,7 +1700,7 @@
     "total": 154,
     "raw_game_text": "186Indiana St.at189Charlotte",
     "raw_prediction_text": "Charlotte 79-75 (63%)[72]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Charlotte, NCHalton Arena",
     "raw_thrill_text": "34.313"
   },
@@ -1731,7 +1731,7 @@
     "total": 151,
     "raw_game_text": "214Louisianaat255Ball St.",
     "raw_prediction_text": "Ball St. 76-75 (53%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Muncie, INWorthen Arena",
     "raw_thrill_text": "33.914"
   },
@@ -1762,7 +1762,7 @@
     "total": 143,
     "raw_game_text": "200Navyat278Presbyterian",
     "raw_prediction_text": "Navy 72-71 (54%)[69]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Clinton, SCTempleton P.E. Center",
     "raw_thrill_text": "33.115"
   },
@@ -1855,7 +1855,7 @@
     "total": 146,
     "raw_game_text": "226Hamptonat212Milwaukee",
     "raw_prediction_text": "Milwaukee 75-71 (64%)[71]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Milwaukee, WIUW-Milwaukee Panther Arena",
     "raw_thrill_text": "31.718"
   },
@@ -1904,7 +1904,7 @@
     "win_probability": 0.72,
     "brackets_value": "75",
     "game_time": "8:00 am",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Rock Hill, SC",
     "venue": "Rock Hill Sports",
     "thrill_score": "31.520",
@@ -1917,7 +1917,7 @@
     "total": 162,
     "raw_game_text": "219Queensat151Winthrop",
     "raw_prediction_text": "Winthrop 84-78 (72%)[75]",
-    "raw_time_network_text": "8:00 am",
+    "raw_time_network_text": "8:00 amYouTube",
     "raw_location_text": "Rock Hill, SCRock Hill Sports & Events Cent",
     "raw_thrill_text": "31.520"
   },
@@ -1948,7 +1948,7 @@
     "total": 151,
     "raw_game_text": "184Old Dominionat127Miami OH",
     "raw_prediction_text": "Miami OH 79-72 (73%)[71]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Oxford, OHMillett Hall",
     "raw_thrill_text": "31.521"
   },
@@ -2121,7 +2121,7 @@
     "win_probability": 0.71,
     "brackets_value": "70",
     "game_time": "9:00 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Sioux Falls, SD",
     "venue": "Sanford Pentagon",
     "thrill_score": "28.327",
@@ -2134,7 +2134,7 @@
     "total": 144,
     "raw_game_text": "270Merrimackvs.169South Dakota St.",
     "raw_prediction_text": "South Dakota St. 75-69 (71%)[70]",
-    "raw_time_network_text": "9:00 pm",
+    "raw_time_network_text": "9:00 pmYouTube",
     "raw_location_text": "Sioux Falls, SDSanford Pentagon",
     "raw_thrill_text": "28.327"
   },
@@ -2165,7 +2165,7 @@
     "total": 148,
     "raw_game_text": "215North Dakota St.at129Oregon St.",
     "raw_prediction_text": "Oregon St. 78-70 (76%)[68]",
-    "raw_time_network_text": "9:30 pm",
+    "raw_time_network_text": "9:30 pmESPN+",
     "raw_location_text": "Corvallis, ORGill Coliseum",
     "raw_thrill_text": "27.928"
   },
@@ -2196,7 +2196,7 @@
     "total": 150,
     "raw_game_text": "291Bryantat208Siena",
     "raw_prediction_text": "Siena 78-72 (72%)[72]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Albany, NYMVP Arena",
     "raw_thrill_text": "26.529"
   },
@@ -2289,7 +2289,7 @@
     "total": 149,
     "raw_game_text": "350Louisiana Monroeat318Northern Illinois",
     "raw_prediction_text": "Northern Illinois 77-72 (67%)[72]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "DeKalb, ILConvocation Center",
     "raw_thrill_text": "26.032"
   },
@@ -2661,7 +2661,7 @@
     "total": 148,
     "raw_game_text": "253Cleveland St.at99Loyola Chicago",
     "raw_prediction_text": "Loyola Chicago 81-67 (89%)[70]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Chicago, ILGentile Arena",
     "raw_thrill_text": "18.344"
   },
@@ -2785,7 +2785,7 @@
     "total": 159,
     "raw_game_text": "28Missouriat308Howard",
     "raw_prediction_text": "Missouri 89-70 (96%)[73]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Washington, DCBurr Arena",
     "raw_thrill_text": "17.248"
   },
@@ -3653,7 +3653,7 @@
     "total": 144,
     "raw_game_text": "344Denverat116Seattle",
     "raw_prediction_text": "Seattle 80-64 (93%)[71]",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Seattle, WARedhawk Center",
     "raw_thrill_text": "11.876"
   },
@@ -4645,7 +4645,7 @@
     "total": null,
     "raw_game_text": "365Mississippi Valley St.at98UAB",
     "raw_prediction_text": "UAB 89-56 (99.9%)[71]",
-    "raw_time_network_text": "7:30 pm",
+    "raw_time_network_text": "7:30 pmESPN+",
     "raw_location_text": "Birmingham, ALBartow Arena",
     "raw_thrill_text": "6.1108"
   },
@@ -4769,7 +4769,7 @@
     "total": null,
     "raw_game_text": "NROakwood at156Jacksonville St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Jacksonville, ALMathews Coliseum",
     "raw_thrill_text": "0.0109"
   },
@@ -4893,7 +4893,7 @@
     "total": null,
     "raw_game_text": "NRColorado College at199Northern Colorado",
     "raw_prediction_text": "",
-    "raw_time_network_text": "9:30 pm",
+    "raw_time_network_text": "9:30 pmESPN+",
     "raw_location_text": "Greeley, COBank of Colorado Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -5079,7 +5079,7 @@
     "total": null,
     "raw_game_text": "NRRivier at295UMass Lowell",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Lowell, MAKennedy Family Athletic Comple",
     "raw_thrill_text": "0.0109"
   },
@@ -5141,7 +5141,7 @@
     "total": null,
     "raw_game_text": "NRWillamette at268Portland",
     "raw_prediction_text": "",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Portland, ORChiles Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5234,7 +5234,7 @@
     "total": null,
     "raw_game_text": "NRBethesda at115UC Irvine",
     "raw_prediction_text": "",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Irvine, CABren Events Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5313,7 +5313,7 @@
     "predicted_loser_score": null,
     "win_probability": null,
     "brackets_value": null,
-    "game_time": null,
+    "game_time": "7:30 pm",
     "network": null,
     "city_state": "Grambling, LA",
     "venue": "Hobdy Assembly Center",
@@ -5327,7 +5327,7 @@
     "total": null,
     "raw_game_text": "NRHuston Tillotson at304Grambling St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "TBA",
+    "raw_time_network_text": "7:30 pm",
     "raw_location_text": "Grambling, LAHobdy Assembly Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5544,7 +5544,7 @@
     "total": null,
     "raw_game_text": "NRSouthern Arkansas at282Houston Christian",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Houston, TXSharp Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -5668,7 +5668,7 @@
     "total": null,
     "raw_game_text": "NRCincinnati Clermont at281Northern Kentucky",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Highland Heights, KYTruist Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -5792,7 +5792,7 @@
     "total": null,
     "raw_game_text": "NRMcKendree at130Southern Illinois",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Carbondale, ILBanterra Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5854,7 +5854,7 @@
     "total": null,
     "raw_game_text": "NRFisk at242Tennessee St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Nashville, TNGentry Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5916,7 +5916,7 @@
     "total": null,
     "raw_game_text": "NRMenlo at265UC Davis",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Davis, CAUniversity Credit Union Center",
     "raw_thrill_text": "0.0109"
   },
@@ -5978,7 +5978,7 @@
     "total": null,
     "raw_game_text": "NRUnion at118Chattanooga",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Chattanooga, TNMcKenzie Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -6226,7 +6226,7 @@
     "total": null,
     "raw_game_text": "NRWestern New England at209Vermont",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Burlington, VTPatrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -6257,7 +6257,7 @@
     "total": null,
     "raw_game_text": "NRTrinity TX at266Texas A&M Corpus Chris",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:30 pm",
+    "raw_time_network_text": "8:30 pmESPN+",
     "raw_location_text": "Corpus Christi, TXDugan Wellness Center",
     "raw_thrill_text": "0.0109"
   },
@@ -6295,7 +6295,7 @@
   {
     "match_date": "2025-11-03",
     "row_index": 161,
-    "away_team": "UC Santa Cruz",
+    "away_team": "California Santa Cruz",
     "away_seed": "NR",
     "home_team": "San Francisco",
     "home_seed": "84",
@@ -6305,7 +6305,7 @@
     "predicted_loser_score": null,
     "win_probability": null,
     "brackets_value": null,
-    "game_time": null,
+    "game_time": "10:00 pm",
     "network": null,
     "city_state": "San Francisco, CA",
     "venue": "War Memorial Gymnasium",
@@ -6317,9 +6317,9 @@
     "home_win_probability": null,
     "away_win_probability": null,
     "total": null,
-    "raw_game_text": "NRUC Santa Cruz at84San Francisco",
+    "raw_game_text": "NRCalifornia Santa Cruz at84San Francisco",
     "raw_prediction_text": "",
-    "raw_time_network_text": "TBA",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "San Francisco, CAWar Memorial Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -6412,7 +6412,7 @@
     "total": null,
     "raw_game_text": "NRMidway at293Morehead St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Morehead, KYJohnson Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -6430,7 +6430,7 @@
     "win_probability": null,
     "brackets_value": null,
     "game_time": "7:00 pm",
-    "network": null,
+    "network": "FloSports",
     "city_state": "Williamsburg, VA",
     "venue": "Kaplan Arena",
     "thrill_score": "0.0109",
@@ -6443,7 +6443,7 @@
     "total": null,
     "raw_game_text": "NRGeorgian Court at231William & Mary",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmFloSports",
     "raw_location_text": "Williamsburg, VAKaplan Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -6536,7 +6536,7 @@
     "total": null,
     "raw_game_text": "NRBryan at285Austin Peay",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:30 pm",
+    "raw_time_network_text": "8:30 pmESPN+",
     "raw_location_text": "Clarksville, TNF&M Bank Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -6722,7 +6722,7 @@
     "total": 146,
     "raw_game_text": "124Troyat125Kent St.",
     "raw_prediction_text": "Kent St. 74-72 (59%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Kent, OHMemorial Athletic & Convocatio",
     "raw_thrill_text": "43.06"
   },
@@ -6846,7 +6846,7 @@
     "total": 151,
     "raw_game_text": "181South Alabamaat166Toledo",
     "raw_prediction_text": "Toledo 77-74 (61%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Toledo, OHSavage Arena",
     "raw_thrill_text": "35.810"
   },
@@ -6877,7 +6877,7 @@
     "total": 144,
     "raw_game_text": "176Texas St.at192Bowling Green",
     "raw_prediction_text": "Bowling Green 73-71 (59%)[71]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Bowling Green, OHStroh Center",
     "raw_thrill_text": "35.111"
   },
@@ -6908,7 +6908,7 @@
     "total": 153,
     "raw_game_text": "197Marshallat196Massachusetts",
     "raw_prediction_text": "Massachusetts 78-75 (62%)[74]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Amherst, MAMullins Center",
     "raw_thrill_text": "34.312"
   },
@@ -6939,7 +6939,7 @@
     "total": 154,
     "raw_game_text": "186Indiana St.at189Charlotte",
     "raw_prediction_text": "Charlotte 79-75 (63%)[72]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Charlotte, NCHalton Arena",
     "raw_thrill_text": "34.313"
   },
@@ -6970,7 +6970,7 @@
     "total": 151,
     "raw_game_text": "214Louisianaat255Ball St.",
     "raw_prediction_text": "Ball St. 76-75 (53%)[70]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Muncie, INWorthen Arena",
     "raw_thrill_text": "33.914"
   },
@@ -7001,7 +7001,7 @@
     "total": 143,
     "raw_game_text": "200Navyat278Presbyterian",
     "raw_prediction_text": "Navy 72-71 (54%)[69]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Clinton, SCTempleton P.E. Center",
     "raw_thrill_text": "33.115"
   },
@@ -7094,7 +7094,7 @@
     "total": 146,
     "raw_game_text": "226Hamptonat212Milwaukee",
     "raw_prediction_text": "Milwaukee 75-71 (64%)[71]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Milwaukee, WIUW-Milwaukee Panther Arena",
     "raw_thrill_text": "31.718"
   },
@@ -7143,7 +7143,7 @@
     "win_probability": 0.72,
     "brackets_value": "75",
     "game_time": "8:00 am",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Rock Hill, SC",
     "venue": "Rock Hill Sports",
     "thrill_score": "31.520",
@@ -7156,7 +7156,7 @@
     "total": 162,
     "raw_game_text": "219Queensat151Winthrop",
     "raw_prediction_text": "Winthrop 84-78 (72%)[75]",
-    "raw_time_network_text": "8:00 am",
+    "raw_time_network_text": "8:00 amYouTube",
     "raw_location_text": "Rock Hill, SCRock Hill Sports & Events Cent",
     "raw_thrill_text": "31.520"
   },
@@ -7187,7 +7187,7 @@
     "total": 151,
     "raw_game_text": "184Old Dominionat127Miami OH",
     "raw_prediction_text": "Miami OH 79-72 (73%)[71]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Oxford, OHMillett Hall",
     "raw_thrill_text": "31.521"
   },
@@ -7360,7 +7360,7 @@
     "win_probability": 0.71,
     "brackets_value": "70",
     "game_time": "9:00 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Sioux Falls, SD",
     "venue": "Sanford Pentagon",
     "thrill_score": "28.327",
@@ -7373,7 +7373,7 @@
     "total": 144,
     "raw_game_text": "270Merrimackvs.169South Dakota St.",
     "raw_prediction_text": "South Dakota St. 75-69 (71%)[70]",
-    "raw_time_network_text": "9:00 pm",
+    "raw_time_network_text": "9:00 pmYouTube",
     "raw_location_text": "Sioux Falls, SDSanford Pentagon",
     "raw_thrill_text": "28.327"
   },
@@ -7404,7 +7404,7 @@
     "total": 148,
     "raw_game_text": "215North Dakota St.at129Oregon St.",
     "raw_prediction_text": "Oregon St. 78-70 (76%)[68]",
-    "raw_time_network_text": "9:30 pm",
+    "raw_time_network_text": "9:30 pmESPN+",
     "raw_location_text": "Corvallis, ORGill Coliseum",
     "raw_thrill_text": "27.928"
   },
@@ -7435,7 +7435,7 @@
     "total": 150,
     "raw_game_text": "291Bryantat208Siena",
     "raw_prediction_text": "Siena 78-72 (72%)[72]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Albany, NYMVP Arena",
     "raw_thrill_text": "26.529"
   },
@@ -7528,7 +7528,7 @@
     "total": 149,
     "raw_game_text": "350Louisiana Monroeat318Northern Illinois",
     "raw_prediction_text": "Northern Illinois 77-72 (67%)[72]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "DeKalb, ILConvocation Center",
     "raw_thrill_text": "26.032"
   },
@@ -7900,7 +7900,7 @@
     "total": 148,
     "raw_game_text": "253Cleveland St.at99Loyola Chicago",
     "raw_prediction_text": "Loyola Chicago 81-67 (89%)[70]",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Chicago, ILGentile Arena",
     "raw_thrill_text": "18.344"
   },
@@ -8024,7 +8024,7 @@
     "total": 159,
     "raw_game_text": "28Missouriat308Howard",
     "raw_prediction_text": "Missouri 89-70 (96%)[73]",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Washington, DCBurr Arena",
     "raw_thrill_text": "17.248"
   },
@@ -8892,7 +8892,7 @@
     "total": 144,
     "raw_game_text": "344Denverat116Seattle",
     "raw_prediction_text": "Seattle 80-64 (93%)[71]",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Seattle, WARedhawk Center",
     "raw_thrill_text": "11.876"
   },
@@ -9884,7 +9884,7 @@
     "total": null,
     "raw_game_text": "365Mississippi Valley St.at98UAB",
     "raw_prediction_text": "UAB 89-56 (99.9%)[71]",
-    "raw_time_network_text": "7:30 pm",
+    "raw_time_network_text": "7:30 pmESPN+",
     "raw_location_text": "Birmingham, ALBartow Arena",
     "raw_thrill_text": "6.1108"
   },
@@ -10008,7 +10008,7 @@
     "total": null,
     "raw_game_text": "NROakwood at156Jacksonville St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Jacksonville, ALMathews Coliseum",
     "raw_thrill_text": "0.0109"
   },
@@ -10132,7 +10132,7 @@
     "total": null,
     "raw_game_text": "NRColorado College at199Northern Colorado",
     "raw_prediction_text": "",
-    "raw_time_network_text": "9:30 pm",
+    "raw_time_network_text": "9:30 pmESPN+",
     "raw_location_text": "Greeley, COBank of Colorado Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -10318,7 +10318,7 @@
     "total": null,
     "raw_game_text": "NRRivier at295UMass Lowell",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Lowell, MAKennedy Family Athletic Comple",
     "raw_thrill_text": "0.0109"
   },
@@ -10380,7 +10380,7 @@
     "total": null,
     "raw_game_text": "NRWillamette at268Portland",
     "raw_prediction_text": "",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Portland, ORChiles Center",
     "raw_thrill_text": "0.0109"
   },
@@ -10473,7 +10473,7 @@
     "total": null,
     "raw_game_text": "NRBethesda at115UC Irvine",
     "raw_prediction_text": "",
-    "raw_time_network_text": "10:00 pm",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "Irvine, CABren Events Center",
     "raw_thrill_text": "0.0109"
   },
@@ -10552,7 +10552,7 @@
     "predicted_loser_score": null,
     "win_probability": null,
     "brackets_value": null,
-    "game_time": null,
+    "game_time": "7:30 pm",
     "network": null,
     "city_state": "Grambling, LA",
     "venue": "Hobdy Assembly Center",
@@ -10566,7 +10566,7 @@
     "total": null,
     "raw_game_text": "NRHuston Tillotson at304Grambling St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "TBA",
+    "raw_time_network_text": "7:30 pm",
     "raw_location_text": "Grambling, LAHobdy Assembly Center",
     "raw_thrill_text": "0.0109"
   },
@@ -10783,7 +10783,7 @@
     "total": null,
     "raw_game_text": "NRSouthern Arkansas at282Houston Christian",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Houston, TXSharp Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -10907,7 +10907,7 @@
     "total": null,
     "raw_game_text": "NRCincinnati Clermont at281Northern Kentucky",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Highland Heights, KYTruist Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -11031,7 +11031,7 @@
     "total": null,
     "raw_game_text": "NRMcKendree at130Southern Illinois",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Carbondale, ILBanterra Center",
     "raw_thrill_text": "0.0109"
   },
@@ -11093,7 +11093,7 @@
     "total": null,
     "raw_game_text": "NRFisk at242Tennessee St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Nashville, TNGentry Center",
     "raw_thrill_text": "0.0109"
   },
@@ -11155,7 +11155,7 @@
     "total": null,
     "raw_game_text": "NRMenlo at265UC Davis",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:00 pm",
+    "raw_time_network_text": "8:00 pmESPN+",
     "raw_location_text": "Davis, CAUniversity Credit Union Center",
     "raw_thrill_text": "0.0109"
   },
@@ -11217,7 +11217,7 @@
     "total": null,
     "raw_game_text": "NRUnion at118Chattanooga",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Chattanooga, TNMcKenzie Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -11465,7 +11465,7 @@
     "total": null,
     "raw_game_text": "NRWestern New England at209Vermont",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Burlington, VTPatrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -11496,7 +11496,7 @@
     "total": null,
     "raw_game_text": "NRTrinity TX at266Texas A&M Corpus Chris",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:30 pm",
+    "raw_time_network_text": "8:30 pmESPN+",
     "raw_location_text": "Corpus Christi, TXDugan Wellness Center",
     "raw_thrill_text": "0.0109"
   },
@@ -11534,7 +11534,7 @@
   {
     "match_date": "2025-11-03",
     "row_index": 161,
-    "away_team": "UC Santa Cruz",
+    "away_team": "California Santa Cruz",
     "away_seed": "NR",
     "home_team": "San Francisco",
     "home_seed": "84",
@@ -11544,7 +11544,7 @@
     "predicted_loser_score": null,
     "win_probability": null,
     "brackets_value": null,
-    "game_time": null,
+    "game_time": "10:00 pm",
     "network": null,
     "city_state": "San Francisco, CA",
     "venue": "War Memorial Gymnasium",
@@ -11556,9 +11556,9 @@
     "home_win_probability": null,
     "away_win_probability": null,
     "total": null,
-    "raw_game_text": "NRUC Santa Cruz at84San Francisco",
+    "raw_game_text": "NRCalifornia Santa Cruz at84San Francisco",
     "raw_prediction_text": "",
-    "raw_time_network_text": "TBA",
+    "raw_time_network_text": "10:00 pmESPN+",
     "raw_location_text": "San Francisco, CAWar Memorial Gymnasium",
     "raw_thrill_text": "0.0109"
   },
@@ -11651,7 +11651,7 @@
     "total": null,
     "raw_game_text": "NRMidway at293Morehead St.",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmESPN+",
     "raw_location_text": "Morehead, KYJohnson Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -11669,7 +11669,7 @@
     "win_probability": null,
     "brackets_value": null,
     "game_time": "7:00 pm",
-    "network": null,
+    "network": "FloSports",
     "city_state": "Williamsburg, VA",
     "venue": "Kaplan Arena",
     "thrill_score": "0.0109",
@@ -11682,7 +11682,7 @@
     "total": null,
     "raw_game_text": "NRGeorgian Court at231William & Mary",
     "raw_prediction_text": "",
-    "raw_time_network_text": "7:00 pm",
+    "raw_time_network_text": "7:00 pmFloSports",
     "raw_location_text": "Williamsburg, VAKaplan Arena",
     "raw_thrill_text": "0.0109"
   },
@@ -11775,7 +11775,7 @@
     "total": null,
     "raw_game_text": "NRBryan at285Austin Peay",
     "raw_prediction_text": "",
-    "raw_time_network_text": "8:30 pm",
+    "raw_time_network_text": "8:30 pmESPN+",
     "raw_location_text": "Clarksville, TNF&M Bank Arena",
     "raw_thrill_text": "0.0109"
   }
