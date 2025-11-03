@@ -630,9 +630,9 @@ def process_final_dataframe(final_df):
         logger.info(f"[cyan]Loading spreads lookup data from {spreads_lookup_path}[/cyan]")
         spreads_lookup_df = pd.read_csv(spreads_lookup_path)
 
-        # Round market_spread and model_spread to nearest 0.5 for matching
+        # Round market_spread to nearest 0.5 for matching
+        # Predicted Outcome is already rounded to 0.5 from line 624-625
         final_df['market_spread_rounded'] = (final_df['market_spread'] * 2).round() / 2
-        final_df['model_spread_rounded'] = (final_df['model_spread'] * 2).round() / 2
 
         # Calculate spread implied probability from Spread Price
         if 'Spread Price' in final_df.columns:
@@ -641,10 +641,11 @@ def process_final_dataframe(final_df):
             # If Spread Price doesn't exist, initialize with 0.5 (50% probability)
             final_df['spread_implied_prob'] = 0.5
 
-        # Merge with lookup data using total_category, market_spread, and model_spread
+        # Merge with lookup data using total_category, market_spread, and Predicted Outcome (instead of model_spread)
+        # Predicted Outcome already incorporates market (60%) and model (40%) weighting
         final_df = final_df.merge(
             spreads_lookup_df,
-            left_on=['total_category', 'market_spread_rounded', 'model_spread_rounded'],
+            left_on=['total_category', 'market_spread_rounded', 'Predicted Outcome'],
             right_on=['total_category', 'market_spread', 'model_spread'],
             how='left',
             suffixes=('', '_lookup')
@@ -658,7 +659,7 @@ def process_final_dataframe(final_df):
         )
 
         # Clean up temporary and duplicate columns
-        final_df.drop(columns=['market_spread_rounded', 'model_spread_rounded',
+        final_df.drop(columns=['market_spread_rounded',
                                'market_spread_lookup', 'model_spread_lookup'],
                      inplace=True, errors='ignore')
 
