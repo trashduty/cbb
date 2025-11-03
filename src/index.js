@@ -33,10 +33,11 @@ if (!fs.existsSync(dataDir)) {
 function runScript(scriptPath, scriptName) {
   return new Promise((resolve, reject) => {
     console.log(`Starting ${scriptName} scraper...`);
-    
+
     const process = spawn('node', [scriptPath], {
       stdio: 'inherit',
-      shell: true
+      shell: true,
+      env: process.env
     });
     
     process.on('close', (code) => {
@@ -65,10 +66,11 @@ function runScript(scriptPath, scriptName) {
 function runUVScript(scriptPath, scriptName) {
   return new Promise((resolve, reject) => {
     console.log(`Starting ${scriptName} UV script...`);
-    
+
     const process = spawn('uv', ['run', scriptPath], {
       stdio: 'inherit',
-      shell: true
+      shell: true,
+      env: process.env
     });
     
     process.on('close', (code) => {
