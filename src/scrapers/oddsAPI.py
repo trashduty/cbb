@@ -620,9 +620,9 @@ def process_final_dataframe(final_df):
         labels=[1, 2, 3]
     ).astype('Int64')
 
-    # Calculate Predicted Outcome using market_spread and model_spread
-    final_df['Predicted Outcome'] = (0.6 * final_df['market_spread'] +
-                                    0.4 * final_df['model_spread'])
+    # Calculate Predicted Outcome using market_spread and model_spread, rounded to nearest 0.5
+    final_df['Predicted Outcome'] = ((0.6 * final_df['market_spread'] +
+                                    0.4 * final_df['model_spread']) * 2).round() / 2
 
     # Load spreads lookup data using new combined framework
     try:
