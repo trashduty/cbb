@@ -609,8 +609,8 @@ def process_final_dataframe(final_df):
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1)
 
-    # Rename columns for clarity
-    final_df['market_spread'] = final_df['Opening Spread']
+    # Rename columns for clarity and round market_spread to nearest 0.5
+    final_df['market_spread'] = (final_df['Opening Spread'] * 2).round() / 2
     final_df['model_spread'] = final_df['forecasted_spread']
 
     # Create total_category based on market total (for spread predictions)

@@ -40,14 +40,23 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Configure credentials
+      - name: Debug - Check environment variables
         run: |
-          echo "EMAIL=${{ secrets.EMAIL }}" >> .env
-          echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
-          echo "ODDS_API_KEY=${{ secrets.ODDS_API_KEY }}" >> .env
+          echo "Checking if credentials are set..."
+          if [ -z "$EMAIL" ]; then echo "❌ EMAIL is not set"; else echo "✅ EMAIL is set"; fi
+          if [ -z "$PASSWORD" ]; then echo "❌ PASSWORD is not set"; else echo "✅ PASSWORD is set"; fi
+          if [ -z "$ODDS_API_KEY" ]; then echo "❌ ODDS_API_KEY is not set"; else echo "✅ ODDS_API_KEY is set"; fi
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
       - name: Run scraper pipeline
         run: node ./src/index.js
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
       - name: Filter out started games
         run: python src/utils/filter_started_games.py
