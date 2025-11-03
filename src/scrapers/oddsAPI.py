@@ -604,13 +604,25 @@ def process_final_dataframe(final_df):
     logger.info("[cyan]Processing final dataframe with lookup tables...[/cyan]")
     # Set theoddsapi_total for the lookups
     final_df['theoddsapi_total'] = final_df['Projected Total']
-    
+
     # Calculate median of spreads across all models
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
     final_df['forecasted_spread'] = final_df[spread_models].median(axis=1)
 
-    final_df['Predicted Outcome'] = (0.6 * final_df['Opening Spread'] +
-                                    0.4 * final_df['forecasted_spread'])
+    # Rename columns for clarity
+    final_df['market_spread'] = final_df['Opening Spread']
+    final_df['model_spread'] = final_df['forecasted_spread']
+
+    # Create total_category based on market total (for spread predictions)
+    final_df['total_category'] = pd.cut(
+        final_df['theoddsapi_total'],
+        bins=[-float('inf'), 137.5, 145.5, float('inf')],
+        labels=[1, 2, 3]
+    ).astype('Int64')
+
+    # Calculate Predicted Outcome using market_spread and model_spread
+    final_df['Predicted Outcome'] = (0.6 * final_df['market_spread'] +
+                                    0.4 * final_df['model_spread'])
         # Load spreads lookup data
     try:
         spreads_lookup_path = os.path.join(data_dir, 'spreads_lookup.csv')
@@ -658,25 +670,36 @@ def process_final_dataframe(final_df):
     
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik',
-                            'projected_total_kenpom', 
+                            'projected_total_kenpom',
                             'projected_total_evanmiya',
                             'projected_total_hasla']
 
     # Handle missing totals data
     final_df['theoddsapi_total'] = pd.to_numeric(final_df['theoddsapi_total'], errors='coerce')
-    
+
     # Make sure theoddsapi_total is rounded to nearest 0.5 for proper lookup
     final_df['theoddsapi_total_rounded'] = (final_df['theoddsapi_total'] * 2).round() / 2
-    
+
     final_df['forecasted_total'] = final_df[projected_total_models].median(axis=1, skipna=True)
+
+    # Rename columns for clarity
+    final_df['market_total'] = final_df['theoddsapi_total']
+    final_df['model_total'] = final_df['forecasted_total']
+
+    # Create spread_category based on market spread (for total predictions)
+    final_df['spread_category'] = pd.cut(
+        final_df['market_spread'],
+        bins=[-float('inf'), -10.0, -2.5, float('inf')],
+        labels=[1, 2, 3]
+    ).astype('Int64')
 
     # Add totals standard deviation here
     final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
 
-    # Fill missing averages with theoddsapi_total and round to integer
+    # Fill missing averages with market_total and model_total, round to integer
     final_df['average_total'] = (
-        (0.55 * final_df['theoddsapi_total'].fillna(0) +
-        0.45 * final_df['forecasted_total'].fillna(final_df['theoddsapi_total']))
+        (0.6 * final_df['market_total'].fillna(0) +
+        0.4 * final_df['model_total'].fillna(final_df['market_total']))
     ).round().astype(pd.Int64Dtype())
     
     # Load and process totals lookup data
@@ -756,19 +779,33 @@ def process_final_dataframe(final_df):
 
     logger.info(f"[cyan]Final shape after handling missing devigged probabilities:[/cyan] {final_df.shape}")
 
+    # Calculate consensus flags
+    logger.info("[cyan]Calculating consensus flags...[/cyan]")
+    final_df['spread_consensus_flag'] = final_df.apply(calculate_spread_consensus, axis=1)
+    final_df['moneyline_consensus_flag'] = final_df.apply(calculate_moneyline_consensus, axis=1)
+    final_df['over_consensus_flag'] = final_df.apply(calculate_over_consensus, axis=1)
+    final_df['under_consensus_flag'] = final_df.apply(calculate_under_consensus, axis=1)
+    logger.info(f"[green]✓[/green] Consensus flags calculated")
+
     final_df = final_df.sort_values('Game Time', ascending=True)
     
     # Define final column order
     column_order = [
-        'Game', 'Game Time', 'Team', 'Predicted Outcome', 'Spread Cover Probability',
-        'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik', 
+        'Game', 'Game Time', 'Team',
+        # Spread framework columns
+        'total_category', 'market_spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
+        'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik',
         'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
+        # Moneyline columns
         'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Moneyline Std. Dev.',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
-        'average_total', 'theoddsapi_total', 'Totals Std. Dev.', 'projected_total_barttorvik',
-        'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
+        # Totals framework columns
+        'spread_category', 'market_total', 'model_total', 'average_total', 'theoddsapi_total', 'Totals Std. Dev.',
+        'projected_total_barttorvik', 'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
         'Over Cover Probability', 'Under Cover Probability',
-        'Over Total Edge', 'Under Total Edge'
+        'Over Total Edge', 'Under Total Edge',
+        # Consensus flags
+        'spread_consensus_flag', 'moneyline_consensus_flag', 'over_consensus_flag', 'under_consensus_flag'
     ]
     
     # Only keep columns that exist in the dataframe
@@ -776,6 +813,155 @@ def process_final_dataframe(final_df):
     
     logger.info(f"[green]✓[/green] Final dataframe processing complete")
     return final_df[available_columns].reset_index(drop=True)
+
+def calculate_spread_consensus(row):
+    """
+    Calculate spread consensus flag.
+    Returns 1 if all models agree on covering the spread (same sign) and match Edge sign.
+    Returns 0 otherwise or if any values are missing.
+    """
+    try:
+        # Get required values
+        market_spread = row.get('Opening Spread')
+        edge = row.get('Edge For Covering Spread')
+
+        # Model spreads
+        spread_kenpom = row.get('spread_kenpom')
+        spread_evanmiya = row.get('spread_evanmiya')
+        spread_barttorvik = row.get('spread_barttorvik')
+        spread_hasla = row.get('spread_hasla')
+
+        # Check for missing values
+        if pd.isna(market_spread) or pd.isna(edge):
+            return 0
+        if pd.isna(spread_kenpom) or pd.isna(spread_evanmiya) or pd.isna(spread_barttorvik) or pd.isna(spread_hasla):
+            return 0
+
+        # Calculate differences (model_spread - market_spread)
+        diff_kenpom = spread_kenpom - market_spread
+        diff_evanmiya = spread_evanmiya - market_spread
+        diff_barttorvik = spread_barttorvik - market_spread
+        diff_hasla = spread_hasla - market_spread
+
+        # Get signs (using np.sign: -1 for negative, 0 for zero, 1 for positive)
+        sign_kenpom = np.sign(diff_kenpom)
+        sign_evanmiya = np.sign(diff_evanmiya)
+        sign_barttorvik = np.sign(diff_barttorvik)
+        sign_hasla = np.sign(diff_hasla)
+        sign_edge = np.sign(edge)
+
+        # Check if all models have same sign AND match edge sign
+        if (sign_kenpom == sign_evanmiya == sign_barttorvik == sign_hasla == sign_edge):
+            # Make sure the sign is not zero
+            if sign_kenpom != 0:
+                return 1
+
+        return 0
+    except Exception as e:
+        logger.debug(f"Error calculating spread consensus: {e}")
+        return 0
+
+def calculate_moneyline_consensus(row):
+    """
+    Calculate moneyline consensus flag.
+    Returns 1 if all model win probabilities are on the same side of devigged probability.
+    Returns 0 otherwise or if any values are missing.
+    """
+    try:
+        # Get required values
+        devigged_prob = row.get('Devigged Probability')
+        win_prob_kenpom = row.get('win_prob_kenpom')
+        win_prob_evanmiya = row.get('win_prob_evanmiya')
+        win_prob_barttorvik = row.get('win_prob_barttorvik')
+
+        # Check for missing values
+        if pd.isna(devigged_prob):
+            return 0
+        if pd.isna(win_prob_kenpom) or pd.isna(win_prob_evanmiya) or pd.isna(win_prob_barttorvik):
+            return 0
+
+        # Check if all models agree on direction
+        all_above = (win_prob_kenpom > devigged_prob and
+                    win_prob_evanmiya > devigged_prob and
+                    win_prob_barttorvik > devigged_prob)
+
+        all_below = (win_prob_kenpom < devigged_prob and
+                    win_prob_evanmiya < devigged_prob and
+                    win_prob_barttorvik < devigged_prob)
+
+        if all_above or all_below:
+            return 1
+
+        return 0
+    except Exception as e:
+        logger.debug(f"Error calculating moneyline consensus: {e}")
+        return 0
+
+def calculate_over_consensus(row):
+    """
+    Calculate over consensus flag.
+    Returns 1 if all model projected totals are above market total.
+    Returns 0 otherwise or if any values are missing.
+    """
+    try:
+        # Get required values
+        market_total = row.get('market_total')
+        projected_total_kenpom = row.get('projected_total_kenpom')
+        projected_total_evanmiya = row.get('projected_total_evanmiya')
+        projected_total_barttorvik = row.get('projected_total_barttorvik')
+        projected_total_hasla = row.get('projected_total_hasla')
+
+        # Check for missing values
+        if pd.isna(market_total):
+            return 0
+        if (pd.isna(projected_total_kenpom) or pd.isna(projected_total_evanmiya) or
+            pd.isna(projected_total_barttorvik) or pd.isna(projected_total_hasla)):
+            return 0
+
+        # Check if all models favor Over
+        if (projected_total_kenpom > market_total and
+            projected_total_evanmiya > market_total and
+            projected_total_barttorvik > market_total and
+            projected_total_hasla > market_total):
+            return 1
+
+        return 0
+    except Exception as e:
+        logger.debug(f"Error calculating over consensus: {e}")
+        return 0
+
+def calculate_under_consensus(row):
+    """
+    Calculate under consensus flag.
+    Returns 1 if all model projected totals are below market total.
+    Returns 0 otherwise or if any values are missing.
+    """
+    try:
+        # Get required values
+        market_total = row.get('market_total')
+        projected_total_kenpom = row.get('projected_total_kenpom')
+        projected_total_evanmiya = row.get('projected_total_evanmiya')
+        projected_total_barttorvik = row.get('projected_total_barttorvik')
+        projected_total_hasla = row.get('projected_total_hasla')
+
+        # Check for missing values
+        if pd.isna(market_total):
+            return 0
+        if (pd.isna(projected_total_kenpom) or pd.isna(projected_total_evanmiya) or
+            pd.isna(projected_total_barttorvik) or pd.isna(projected_total_hasla)):
+            return 0
+
+        # Check if all models favor Under
+        if (projected_total_kenpom < market_total and
+            projected_total_evanmiya < market_total and
+            projected_total_barttorvik < market_total and
+            projected_total_hasla < market_total):
+            return 1
+
+        return 0
+    except Exception as e:
+        logger.debug(f"Error calculating under consensus: {e}")
+        return 0
 
 def run_oddsapi_etl():
     """

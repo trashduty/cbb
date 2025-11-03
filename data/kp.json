@@ -1379,7 +1379,7 @@
     "game_time": "7:00 pm",
     "network": "ESPNU",
     "city_state": "Boca Raton, FL",
-    "venue": "Baldwin Arena",
+    "venue": "Eleanor R",
     "thrill_score": "47.43",
     "excitement_index": null,
     "game_quality": null,
@@ -1391,7 +1391,7 @@
     "raw_game_text": "90Boston Collegeat145Florida Atlantic",
     "raw_prediction_text": "Boston College 77-75 (59%)[71]",
     "raw_time_network_text": "7:00 pmESPNU",
-    "raw_location_text": "Boca Raton, FLBaldwin Arena",
+    "raw_location_text": "Boca Raton, FLEleanor R. Baldwin Arena",
     "raw_thrill_text": "47.43"
   },
   {
@@ -1408,7 +1408,7 @@
     "win_probability": 0.58,
     "brackets_value": "70",
     "game_time": "6:30 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Rock Hill, SC",
     "venue": "Rock Hill Sports",
     "thrill_score": "47.34",
@@ -1421,7 +1421,7 @@
     "total": 153,
     "raw_game_text": "103High Pointvs.133Furman",
     "raw_prediction_text": "High Point 78-75 (58%)[70]",
-    "raw_time_network_text": "6:30 pm",
+    "raw_time_network_text": "6:30 pmYouTube",
     "raw_location_text": "Rock Hill, SCRock Hill Sports & Events Cent",
     "raw_thrill_text": "47.34"
   },
@@ -1532,7 +1532,7 @@
     "win_probability": 0.62,
     "brackets_value": "71",
     "game_time": "1:30 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Sioux Falls, SD",
     "venue": "Sanford Pentagon",
     "thrill_score": "37.68",
@@ -1545,7 +1545,7 @@
     "total": 151,
     "raw_game_text": "134Murray St.vs.187Nebraska Omaha",
     "raw_prediction_text": "Murray St. 77-74 (62%)[71]",
-    "raw_time_network_text": "1:30 pm",
+    "raw_time_network_text": "1:30 pmYouTube",
     "raw_location_text": "Sioux Falls, SDSanford Pentagon",
     "raw_thrill_text": "37.68"
   },
@@ -1565,7 +1565,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Akron, OH",
-    "venue": "Rhodes Arena",
+    "venue": "James A",
     "thrill_score": "37.59",
     "excitement_index": null,
     "game_quality": null,
@@ -1577,7 +1577,7 @@
     "raw_game_text": "136James Madisonat94Akron",
     "raw_prediction_text": "Akron 80-73 (75%)[71]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Akron, OHRhodes Arena",
+    "raw_location_text": "Akron, OHJames A. Rhodes Arena",
     "raw_thrill_text": "37.59"
   },
   {
@@ -1689,7 +1689,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Charlotte, NC",
-    "venue": "Halton Arena",
+    "venue": "Dale F",
     "thrill_score": "34.313",
     "excitement_index": null,
     "game_quality": null,
@@ -1701,7 +1701,7 @@
     "raw_game_text": "186Indiana St.at189Charlotte",
     "raw_prediction_text": "Charlotte 79-75 (63%)[72]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Charlotte, NCHalton Arena",
+    "raw_location_text": "Charlotte, NCDale F. Halton Arena",
     "raw_thrill_text": "34.313"
   },
   {
@@ -1751,7 +1751,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Clinton, SC",
-    "venue": "Templeton P",
+    "venue": "Ross E",
     "thrill_score": "33.115",
     "excitement_index": null,
     "game_quality": null,
@@ -1763,7 +1763,7 @@
     "raw_game_text": "200Navyat278Presbyterian",
     "raw_prediction_text": "Navy 72-71 (54%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Clinton, SCTempleton P.E. Center",
+    "raw_location_text": "Clinton, SCRoss E. Templeton P.E. Center",
     "raw_thrill_text": "33.115"
   },
   {
@@ -1937,7 +1937,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Oxford, OH",
-    "venue": "Millett Hall",
+    "venue": "John D",
     "thrill_score": "31.521",
     "excitement_index": null,
     "game_quality": null,
@@ -1949,7 +1949,7 @@
     "raw_game_text": "184Old Dominionat127Miami OH",
     "raw_prediction_text": "Miami OH 79-72 (73%)[71]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Oxford, OHMillett Hall",
+    "raw_location_text": "Oxford, OHJohn D. Millett Hall",
     "raw_thrill_text": "31.521"
   },
   {
@@ -1999,7 +1999,7 @@
     "game_time": "8:30 pm",
     "network": null,
     "city_state": "New Orleans, LA",
-    "venue": "Fogelman Arena",
+    "venue": "Fogelman Arena in Devlin Field",
     "thrill_score": "30.823",
     "excitement_index": null,
     "game_quality": null,
@@ -2011,7 +2011,7 @@
     "raw_game_text": "180Samfordat114Tulane",
     "raw_prediction_text": "Tulane 81-73 (77%)[72]",
     "raw_time_network_text": "8:30 pmESPN+",
-    "raw_location_text": "New Orleans, LAFogelman Arena",
+    "raw_location_text": "New Orleans, LAFogelman Arena in Devlin Field",
     "raw_thrill_text": "30.823"
   },
   {
@@ -2309,7 +2309,7 @@
     "game_time": "9:30 pm",
     "network": null,
     "city_state": "Pullman, WA",
-    "venue": "Beasley Coliseum",
+    "venue": "Wallis Beasley Performing Arts",
     "thrill_score": "25.533",
     "excitement_index": null,
     "game_quality": null,
@@ -2321,7 +2321,7 @@
     "raw_game_text": "243Idahoat137Washington St.",
     "raw_prediction_text": "Washington St. 82-74 (79%)[72]",
     "raw_time_network_text": "9:30 pmESPN+",
-    "raw_location_text": "Pullman, WABeasley Coliseum",
+    "raw_location_text": "Pullman, WAWallis Beasley Performing Arts",
     "raw_thrill_text": "25.533"
   },
   {
@@ -2402,7 +2402,7 @@
     "game_time": "9:00 pm",
     "network": null,
     "city_state": "Salt Lake City, UT",
-    "venue": "Huntsman Center",
+    "venue": "Jon M",
     "thrill_score": "23.436",
     "excitement_index": null,
     "game_quality": null,
@@ -2414,7 +2414,7 @@
     "raw_game_text": "160San Jose St.at74Utah",
     "raw_prediction_text": "Utah 80-67 (88%)[71]",
     "raw_time_network_text": "9:00 pmESPN+",
-    "raw_location_text": "Salt Lake City, UTHuntsman Center",
+    "raw_location_text": "Salt Lake City, UTJon M. Huntsman Center",
     "raw_thrill_text": "23.436"
   },
   {
@@ -3146,7 +3146,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "South Bend, IN",
-    "venue": "Purcell Pavilion",
+    "venue": "Purcell Pavilion at the Joyce",
     "thrill_score": "14.460",
     "excitement_index": null,
     "game_quality": null,
@@ -3158,7 +3158,7 @@
     "raw_game_text": "287LIUat77Notre Dame",
     "raw_prediction_text": "Notre Dame 78-61 (93%)[69]",
     "raw_time_network_text": "7:00 pmACC Network Extra",
-    "raw_location_text": "South Bend, INPurcell Pavilion",
+    "raw_location_text": "South Bend, INPurcell Pavilion at the Joyce",
     "raw_thrill_text": "14.460"
   },
   {
@@ -3766,7 +3766,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Kingston, RI",
-    "venue": "Ryan Center",
+    "venue": "Thomas M",
     "thrill_score": "11.380",
     "excitement_index": null,
     "game_quality": null,
@@ -3778,7 +3778,7 @@
     "raw_game_text": "348Stetsonat112Rhode Island",
     "raw_prediction_text": "Rhode Island 85-67 (95%)[72]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Kingston, RIRyan Center",
+    "raw_location_text": "Kingston, RIThomas M. Ryan Center",
     "raw_thrill_text": "11.380"
   },
   {
@@ -3797,7 +3797,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Fort Worth, TX",
-    "venue": "Schollmaier Arena",
+    "venue": "Ed",
     "thrill_score": "11.081",
     "excitement_index": null,
     "game_quality": null,
@@ -3809,7 +3809,7 @@
     "raw_game_text": "297New Orleansat66TCU",
     "raw_prediction_text": "TCU 85-64 (97%)[72]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Fort Worth, TXSchollmaier Arena",
+    "raw_location_text": "Fort Worth, TXEd & Rae Schollmaier Arena",
     "raw_thrill_text": "11.081"
   },
   {
@@ -4045,7 +4045,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Winston-Salem, NC",
-    "venue": "Joel Coliseum",
+    "venue": "LJVM Coliseum",
     "thrill_score": "9.589",
     "excitement_index": null,
     "game_quality": null,
@@ -4057,7 +4057,7 @@
     "raw_game_text": "312Americanat49Wake Forest",
     "raw_prediction_text": "Wake Forest 83-60 (98%)[69]",
     "raw_time_network_text": "8:00 pmACC Network Extra",
-    "raw_location_text": "Winston-Salem, NCJoel Coliseum",
+    "raw_location_text": "Winston-Salem, NCLJVM Coliseum",
     "raw_thrill_text": "9.589"
   },
   {
@@ -4355,7 +4355,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Ames, IA",
-    "venue": "Hilton Coliseum",
+    "venue": "James H",
     "thrill_score": "7.899",
     "excitement_index": null,
     "game_quality": null,
@@ -4367,7 +4367,7 @@
     "raw_game_text": "349Fairleigh Dickinsonat13Iowa St.",
     "raw_prediction_text": "Iowa St. 90-57 (99.9%)[73]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Ames, IAHilton Coliseum",
+    "raw_location_text": "Ames, IAJames H. Hilton Coliseum",
     "raw_thrill_text": "7.899"
   },
   {
@@ -4479,7 +4479,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Richmond, VA",
-    "venue": "Siegel Center",
+    "venue": "Stuart Siegel Center",
     "thrill_score": "7.6103",
     "excitement_index": null,
     "game_quality": null,
@@ -4491,7 +4491,7 @@
     "raw_game_text": "356Wagnerat60VCU",
     "raw_prediction_text": "VCU 80-55 (99%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Richmond, VASiegel Center",
+    "raw_location_text": "Richmond, VAStuart Siegel Center",
     "raw_thrill_text": "7.6103"
   },
   {
@@ -4603,7 +4603,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Storrs, CT",
-    "venue": "Gampel Pavilion",
+    "venue": "Harry A",
     "thrill_score": "7.0107",
     "excitement_index": null,
     "game_quality": null,
@@ -4615,7 +4615,7 @@
     "raw_game_text": "360New Havenat5Connecticut",
     "raw_prediction_text": "Connecticut 92-55 (99.96%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Storrs, CTGampel Pavilion",
+    "raw_location_text": "Storrs, CTHarry A. Gampel Pavilion",
     "raw_thrill_text": "7.0107"
   },
   {
@@ -4758,7 +4758,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Jacksonville, AL",
-    "venue": "Mathews Coliseum",
+    "venue": "Pete Mathews Coliseum",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -4770,7 +4770,7 @@
     "raw_game_text": "NROakwood at156Jacksonville St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Jacksonville, ALMathews Coliseum",
+    "raw_location_text": "Jacksonville, ALPete Mathews Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -4975,7 +4975,7 @@
     "game_time": "7:30 pm",
     "network": null,
     "city_state": "Huntsville, TX",
-    "venue": "Johnson Coliseum",
+    "venue": "Bernard G",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -4987,7 +4987,7 @@
     "raw_game_text": "NRLeTourneau at185Sam Houston St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:30 pmESPN+",
-    "raw_location_text": "Huntsville, TXJohnson Coliseum",
+    "raw_location_text": "Huntsville, TXBernard G. Johnson Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5161,7 +5161,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Syracuse, NY",
-    "venue": "Grant Court",
+    "venue": "Ted Grant Court",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5173,7 +5173,7 @@
     "raw_game_text": "NRSUNY Cobleskill at340Le Moyne",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "Syracuse, NYGrant Court",
+    "raw_location_text": "Syracuse, NYTed Grant Court",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5192,7 +5192,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Dayton, OH",
-    "venue": "Nutter Center",
+    "venue": "Ervin J",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5204,7 +5204,7 @@
     "raw_game_text": "NRFranklin at193Wright St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Dayton, OHNutter Center",
+    "raw_location_text": "Dayton, OHErvin J. Nutter Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5316,7 +5316,7 @@
     "game_time": "7:30 pm",
     "network": null,
     "city_state": "Grambling, LA",
-    "venue": "Hobdy Assembly Center",
+    "venue": "Fredrick C",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5328,7 +5328,7 @@
     "raw_game_text": "NRHuston Tillotson at304Grambling St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:30 pm",
-    "raw_location_text": "Grambling, LAHobdy Assembly Center",
+    "raw_location_text": "Grambling, LAFredrick C. Hobdy Assembly Cen",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5440,7 +5440,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Farmville, VA",
-    "venue": "Brock Center",
+    "venue": "Joan Perry Brock Center",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5452,7 +5452,7 @@
     "raw_game_text": "NRMary Baldwin at220Longwood",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Farmville, VABrock Center",
+    "raw_location_text": "Farmville, VAJoan Perry Brock Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5595,7 +5595,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Norfolk, VA",
-    "venue": "Echols Memorial Hall",
+    "venue": "Joseph G",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5607,7 +5607,7 @@
     "raw_game_text": "NRWashington Adventist at233Norfolk St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "Norfolk, VAEchols Memorial Hall",
+    "raw_location_text": "Norfolk, VAJoseph G. Echols Memorial Hall",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5719,7 +5719,7 @@
     "game_time": "3:00 pm",
     "network": null,
     "city_state": "Nacogdoches, TX",
-    "venue": "Johnson Coliseum",
+    "venue": "William R",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5731,7 +5731,7 @@
     "raw_game_text": "NRMillsaps at234Stephen F. Austin",
     "raw_prediction_text": "",
     "raw_time_network_text": "3:00 pmESPN+",
-    "raw_location_text": "Nacogdoches, TXJohnson Coliseum",
+    "raw_location_text": "Nacogdoches, TXWilliam R. Johnson Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5799,7 +5799,7 @@
   {
     "match_date": "2025-11-03",
     "row_index": 145,
-    "away_team": "Vermont St.",
+    "away_team": "Northern Vermont   Joh",
     "away_seed": "NR",
     "home_team": "Central Connecticut",
     "home_seed": "315",
@@ -5812,7 +5812,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "New Britain, CT",
-    "venue": "Detrick Gymnasium",
+    "venue": "William H",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5821,10 +5821,10 @@
     "home_win_probability": null,
     "away_win_probability": null,
     "total": null,
-    "raw_game_text": "NRVermont St. at315Central Connecticut",
+    "raw_game_text": "NRNorthern Vermont   Joh at315Central Connecticut",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "New Britain, CTDetrick Gymnasium",
+    "raw_location_text": "New Britain, CTWilliam H. Detrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -5874,7 +5874,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Tulsa, OK",
-    "venue": "Reynolds Center",
+    "venue": "Donald W",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -5886,7 +5886,7 @@
     "raw_game_text": "NROklahoma Christian at139Tulsa",
     "raw_prediction_text": "",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Tulsa, OKReynolds Center",
+    "raw_location_text": "Tulsa, OKDonald W. Reynolds Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -6215,7 +6215,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Burlington, VT",
-    "venue": "Patrick Gymnasium",
+    "venue": "Roy L Patrick Gymnasium",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -6227,7 +6227,7 @@
     "raw_game_text": "NRWestern New England at209Vermont",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Burlington, VTPatrick Gymnasium",
+    "raw_location_text": "Burlington, VTRoy L Patrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -6618,7 +6618,7 @@
     "game_time": "7:00 pm",
     "network": "ESPNU",
     "city_state": "Boca Raton, FL",
-    "venue": "Baldwin Arena",
+    "venue": "Eleanor R",
     "thrill_score": "47.43",
     "excitement_index": null,
     "game_quality": null,
@@ -6630,7 +6630,7 @@
     "raw_game_text": "90Boston Collegeat145Florida Atlantic",
     "raw_prediction_text": "Boston College 77-75 (59%)[71]",
     "raw_time_network_text": "7:00 pmESPNU",
-    "raw_location_text": "Boca Raton, FLBaldwin Arena",
+    "raw_location_text": "Boca Raton, FLEleanor R. Baldwin Arena",
     "raw_thrill_text": "47.43"
   },
   {
@@ -6647,7 +6647,7 @@
     "win_probability": 0.58,
     "brackets_value": "70",
     "game_time": "6:30 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Rock Hill, SC",
     "venue": "Rock Hill Sports",
     "thrill_score": "47.34",
@@ -6660,7 +6660,7 @@
     "total": 153,
     "raw_game_text": "103High Pointvs.133Furman",
     "raw_prediction_text": "High Point 78-75 (58%)[70]",
-    "raw_time_network_text": "6:30 pm",
+    "raw_time_network_text": "6:30 pmYouTube",
     "raw_location_text": "Rock Hill, SCRock Hill Sports & Events Cent",
     "raw_thrill_text": "47.34"
   },
@@ -6771,7 +6771,7 @@
     "win_probability": 0.62,
     "brackets_value": "71",
     "game_time": "1:30 pm",
-    "network": null,
+    "network": "YouTube",
     "city_state": "Sioux Falls, SD",
     "venue": "Sanford Pentagon",
     "thrill_score": "37.68",
@@ -6784,7 +6784,7 @@
     "total": 151,
     "raw_game_text": "134Murray St.vs.187Nebraska Omaha",
     "raw_prediction_text": "Murray St. 77-74 (62%)[71]",
-    "raw_time_network_text": "1:30 pm",
+    "raw_time_network_text": "1:30 pmYouTube",
     "raw_location_text": "Sioux Falls, SDSanford Pentagon",
     "raw_thrill_text": "37.68"
   },
@@ -6804,7 +6804,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Akron, OH",
-    "venue": "Rhodes Arena",
+    "venue": "James A",
     "thrill_score": "37.59",
     "excitement_index": null,
     "game_quality": null,
@@ -6816,7 +6816,7 @@
     "raw_game_text": "136James Madisonat94Akron",
     "raw_prediction_text": "Akron 80-73 (75%)[71]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Akron, OHRhodes Arena",
+    "raw_location_text": "Akron, OHJames A. Rhodes Arena",
     "raw_thrill_text": "37.59"
   },
   {
@@ -6928,7 +6928,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Charlotte, NC",
-    "venue": "Halton Arena",
+    "venue": "Dale F",
     "thrill_score": "34.313",
     "excitement_index": null,
     "game_quality": null,
@@ -6940,7 +6940,7 @@
     "raw_game_text": "186Indiana St.at189Charlotte",
     "raw_prediction_text": "Charlotte 79-75 (63%)[72]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Charlotte, NCHalton Arena",
+    "raw_location_text": "Charlotte, NCDale F. Halton Arena",
     "raw_thrill_text": "34.313"
   },
   {
@@ -6990,7 +6990,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Clinton, SC",
-    "venue": "Templeton P",
+    "venue": "Ross E",
     "thrill_score": "33.115",
     "excitement_index": null,
     "game_quality": null,
@@ -7002,7 +7002,7 @@
     "raw_game_text": "200Navyat278Presbyterian",
     "raw_prediction_text": "Navy 72-71 (54%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Clinton, SCTempleton P.E. Center",
+    "raw_location_text": "Clinton, SCRoss E. Templeton P.E. Center",
     "raw_thrill_text": "33.115"
   },
   {
@@ -7176,7 +7176,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Oxford, OH",
-    "venue": "Millett Hall",
+    "venue": "John D",
     "thrill_score": "31.521",
     "excitement_index": null,
     "game_quality": null,
@@ -7188,7 +7188,7 @@
     "raw_game_text": "184Old Dominionat127Miami OH",
     "raw_prediction_text": "Miami OH 79-72 (73%)[71]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Oxford, OHMillett Hall",
+    "raw_location_text": "Oxford, OHJohn D. Millett Hall",
     "raw_thrill_text": "31.521"
   },
   {
@@ -7238,7 +7238,7 @@
     "game_time": "8:30 pm",
     "network": null,
     "city_state": "New Orleans, LA",
-    "venue": "Fogelman Arena",
+    "venue": "Fogelman Arena in Devlin Field",
     "thrill_score": "30.823",
     "excitement_index": null,
     "game_quality": null,
@@ -7250,7 +7250,7 @@
     "raw_game_text": "180Samfordat114Tulane",
     "raw_prediction_text": "Tulane 81-73 (77%)[72]",
     "raw_time_network_text": "8:30 pmESPN+",
-    "raw_location_text": "New Orleans, LAFogelman Arena",
+    "raw_location_text": "New Orleans, LAFogelman Arena in Devlin Field",
     "raw_thrill_text": "30.823"
   },
   {
@@ -7548,7 +7548,7 @@
     "game_time": "9:30 pm",
     "network": null,
     "city_state": "Pullman, WA",
-    "venue": "Beasley Coliseum",
+    "venue": "Wallis Beasley Performing Arts",
     "thrill_score": "25.533",
     "excitement_index": null,
     "game_quality": null,
@@ -7560,7 +7560,7 @@
     "raw_game_text": "243Idahoat137Washington St.",
     "raw_prediction_text": "Washington St. 82-74 (79%)[72]",
     "raw_time_network_text": "9:30 pmESPN+",
-    "raw_location_text": "Pullman, WABeasley Coliseum",
+    "raw_location_text": "Pullman, WAWallis Beasley Performing Arts",
     "raw_thrill_text": "25.533"
   },
   {
@@ -7641,7 +7641,7 @@
     "game_time": "9:00 pm",
     "network": null,
     "city_state": "Salt Lake City, UT",
-    "venue": "Huntsman Center",
+    "venue": "Jon M",
     "thrill_score": "23.436",
     "excitement_index": null,
     "game_quality": null,
@@ -7653,7 +7653,7 @@
     "raw_game_text": "160San Jose St.at74Utah",
     "raw_prediction_text": "Utah 80-67 (88%)[71]",
     "raw_time_network_text": "9:00 pmESPN+",
-    "raw_location_text": "Salt Lake City, UTHuntsman Center",
+    "raw_location_text": "Salt Lake City, UTJon M. Huntsman Center",
     "raw_thrill_text": "23.436"
   },
   {
@@ -8385,7 +8385,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "South Bend, IN",
-    "venue": "Purcell Pavilion",
+    "venue": "Purcell Pavilion at the Joyce",
     "thrill_score": "14.460",
     "excitement_index": null,
     "game_quality": null,
@@ -8397,7 +8397,7 @@
     "raw_game_text": "287LIUat77Notre Dame",
     "raw_prediction_text": "Notre Dame 78-61 (93%)[69]",
     "raw_time_network_text": "7:00 pmACC Network Extra",
-    "raw_location_text": "South Bend, INPurcell Pavilion",
+    "raw_location_text": "South Bend, INPurcell Pavilion at the Joyce",
     "raw_thrill_text": "14.460"
   },
   {
@@ -9005,7 +9005,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Kingston, RI",
-    "venue": "Ryan Center",
+    "venue": "Thomas M",
     "thrill_score": "11.380",
     "excitement_index": null,
     "game_quality": null,
@@ -9017,7 +9017,7 @@
     "raw_game_text": "348Stetsonat112Rhode Island",
     "raw_prediction_text": "Rhode Island 85-67 (95%)[72]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Kingston, RIRyan Center",
+    "raw_location_text": "Kingston, RIThomas M. Ryan Center",
     "raw_thrill_text": "11.380"
   },
   {
@@ -9036,7 +9036,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Fort Worth, TX",
-    "venue": "Schollmaier Arena",
+    "venue": "Ed",
     "thrill_score": "11.081",
     "excitement_index": null,
     "game_quality": null,
@@ -9048,7 +9048,7 @@
     "raw_game_text": "297New Orleansat66TCU",
     "raw_prediction_text": "TCU 85-64 (97%)[72]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Fort Worth, TXSchollmaier Arena",
+    "raw_location_text": "Fort Worth, TXEd & Rae Schollmaier Arena",
     "raw_thrill_text": "11.081"
   },
   {
@@ -9284,7 +9284,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Winston-Salem, NC",
-    "venue": "Joel Coliseum",
+    "venue": "LJVM Coliseum",
     "thrill_score": "9.589",
     "excitement_index": null,
     "game_quality": null,
@@ -9296,7 +9296,7 @@
     "raw_game_text": "312Americanat49Wake Forest",
     "raw_prediction_text": "Wake Forest 83-60 (98%)[69]",
     "raw_time_network_text": "8:00 pmACC Network Extra",
-    "raw_location_text": "Winston-Salem, NCJoel Coliseum",
+    "raw_location_text": "Winston-Salem, NCLJVM Coliseum",
     "raw_thrill_text": "9.589"
   },
   {
@@ -9594,7 +9594,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Ames, IA",
-    "venue": "Hilton Coliseum",
+    "venue": "James H",
     "thrill_score": "7.899",
     "excitement_index": null,
     "game_quality": null,
@@ -9606,7 +9606,7 @@
     "raw_game_text": "349Fairleigh Dickinsonat13Iowa St.",
     "raw_prediction_text": "Iowa St. 90-57 (99.9%)[73]",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Ames, IAHilton Coliseum",
+    "raw_location_text": "Ames, IAJames H. Hilton Coliseum",
     "raw_thrill_text": "7.899"
   },
   {
@@ -9718,7 +9718,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Richmond, VA",
-    "venue": "Siegel Center",
+    "venue": "Stuart Siegel Center",
     "thrill_score": "7.6103",
     "excitement_index": null,
     "game_quality": null,
@@ -9730,7 +9730,7 @@
     "raw_game_text": "356Wagnerat60VCU",
     "raw_prediction_text": "VCU 80-55 (99%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Richmond, VASiegel Center",
+    "raw_location_text": "Richmond, VAStuart Siegel Center",
     "raw_thrill_text": "7.6103"
   },
   {
@@ -9842,7 +9842,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Storrs, CT",
-    "venue": "Gampel Pavilion",
+    "venue": "Harry A",
     "thrill_score": "7.0107",
     "excitement_index": null,
     "game_quality": null,
@@ -9854,7 +9854,7 @@
     "raw_game_text": "360New Havenat5Connecticut",
     "raw_prediction_text": "Connecticut 92-55 (99.96%)[69]",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Storrs, CTGampel Pavilion",
+    "raw_location_text": "Storrs, CTHarry A. Gampel Pavilion",
     "raw_thrill_text": "7.0107"
   },
   {
@@ -9997,7 +9997,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Jacksonville, AL",
-    "venue": "Mathews Coliseum",
+    "venue": "Pete Mathews Coliseum",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10009,7 +10009,7 @@
     "raw_game_text": "NROakwood at156Jacksonville St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Jacksonville, ALMathews Coliseum",
+    "raw_location_text": "Jacksonville, ALPete Mathews Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10214,7 +10214,7 @@
     "game_time": "7:30 pm",
     "network": null,
     "city_state": "Huntsville, TX",
-    "venue": "Johnson Coliseum",
+    "venue": "Bernard G",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10226,7 +10226,7 @@
     "raw_game_text": "NRLeTourneau at185Sam Houston St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:30 pmESPN+",
-    "raw_location_text": "Huntsville, TXJohnson Coliseum",
+    "raw_location_text": "Huntsville, TXBernard G. Johnson Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10400,7 +10400,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Syracuse, NY",
-    "venue": "Grant Court",
+    "venue": "Ted Grant Court",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10412,7 +10412,7 @@
     "raw_game_text": "NRSUNY Cobleskill at340Le Moyne",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "Syracuse, NYGrant Court",
+    "raw_location_text": "Syracuse, NYTed Grant Court",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10431,7 +10431,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Dayton, OH",
-    "venue": "Nutter Center",
+    "venue": "Ervin J",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10443,7 +10443,7 @@
     "raw_game_text": "NRFranklin at193Wright St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Dayton, OHNutter Center",
+    "raw_location_text": "Dayton, OHErvin J. Nutter Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10555,7 +10555,7 @@
     "game_time": "7:30 pm",
     "network": null,
     "city_state": "Grambling, LA",
-    "venue": "Hobdy Assembly Center",
+    "venue": "Fredrick C",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10567,7 +10567,7 @@
     "raw_game_text": "NRHuston Tillotson at304Grambling St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:30 pm",
-    "raw_location_text": "Grambling, LAHobdy Assembly Center",
+    "raw_location_text": "Grambling, LAFredrick C. Hobdy Assembly Cen",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10679,7 +10679,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Farmville, VA",
-    "venue": "Brock Center",
+    "venue": "Joan Perry Brock Center",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10691,7 +10691,7 @@
     "raw_game_text": "NRMary Baldwin at220Longwood",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Farmville, VABrock Center",
+    "raw_location_text": "Farmville, VAJoan Perry Brock Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10834,7 +10834,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Norfolk, VA",
-    "venue": "Echols Memorial Hall",
+    "venue": "Joseph G",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10846,7 +10846,7 @@
     "raw_game_text": "NRWashington Adventist at233Norfolk St.",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "Norfolk, VAEchols Memorial Hall",
+    "raw_location_text": "Norfolk, VAJoseph G. Echols Memorial Hall",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -10958,7 +10958,7 @@
     "game_time": "3:00 pm",
     "network": null,
     "city_state": "Nacogdoches, TX",
-    "venue": "Johnson Coliseum",
+    "venue": "William R",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -10970,7 +10970,7 @@
     "raw_game_text": "NRMillsaps at234Stephen F. Austin",
     "raw_prediction_text": "",
     "raw_time_network_text": "3:00 pmESPN+",
-    "raw_location_text": "Nacogdoches, TXJohnson Coliseum",
+    "raw_location_text": "Nacogdoches, TXWilliam R. Johnson Coliseum",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -11038,7 +11038,7 @@
   {
     "match_date": "2025-11-03",
     "row_index": 145,
-    "away_team": "Vermont St.",
+    "away_team": "Northern Vermont   Joh",
     "away_seed": "NR",
     "home_team": "Central Connecticut",
     "home_seed": "315",
@@ -11051,7 +11051,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "New Britain, CT",
-    "venue": "Detrick Gymnasium",
+    "venue": "William H",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -11060,10 +11060,10 @@
     "home_win_probability": null,
     "away_win_probability": null,
     "total": null,
-    "raw_game_text": "NRVermont St. at315Central Connecticut",
+    "raw_game_text": "NRNorthern Vermont   Joh at315Central Connecticut",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pm",
-    "raw_location_text": "New Britain, CTDetrick Gymnasium",
+    "raw_location_text": "New Britain, CTWilliam H. Detrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -11113,7 +11113,7 @@
     "game_time": "8:00 pm",
     "network": null,
     "city_state": "Tulsa, OK",
-    "venue": "Reynolds Center",
+    "venue": "Donald W",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -11125,7 +11125,7 @@
     "raw_game_text": "NROklahoma Christian at139Tulsa",
     "raw_prediction_text": "",
     "raw_time_network_text": "8:00 pmESPN+",
-    "raw_location_text": "Tulsa, OKReynolds Center",
+    "raw_location_text": "Tulsa, OKDonald W. Reynolds Center",
     "raw_thrill_text": "0.0109"
   },
   {
@@ -11454,7 +11454,7 @@
     "game_time": "7:00 pm",
     "network": null,
     "city_state": "Burlington, VT",
-    "venue": "Patrick Gymnasium",
+    "venue": "Roy L Patrick Gymnasium",
     "thrill_score": "0.0109",
     "excitement_index": null,
     "game_quality": null,
@@ -11466,7 +11466,7 @@
     "raw_game_text": "NRWestern New England at209Vermont",
     "raw_prediction_text": "",
     "raw_time_network_text": "7:00 pmESPN+",
-    "raw_location_text": "Burlington, VTPatrick Gymnasium",
+    "raw_location_text": "Burlington, VTRoy L Patrick Gymnasium",
     "raw_thrill_text": "0.0109"
   },
   {
