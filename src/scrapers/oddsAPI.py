@@ -703,12 +703,12 @@ def process_final_dataframe(final_df):
     # Add totals standard deviation here
     final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
 
-    # Fill missing averages with market_total and model_total, round to integer
+    # Fill missing averages with market_total and model_total, round to nearest 0.5
     final_df['average_total'] = (
         (0.6 * final_df['market_total'].fillna(0) +
-        0.4 * final_df['model_total'].fillna(final_df['market_total']))
-    ).round().astype(pd.Int64Dtype())
-    
+        0.4 * final_df['model_total'].fillna(final_df['market_total'])) * 2
+    ).round() / 2
+
     # Load and process totals lookup data using new combined framework
     try:
         totals_lookup_path = os.path.join(project_root, 'totals_lookup_combined.csv')
@@ -718,14 +718,15 @@ def process_final_dataframe(final_df):
         # Drop any duplicate rows before merging
         final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
 
-        # Round market_total and model_total to nearest 0.5 for matching
+        # Round market_total to nearest 0.5 for matching
+        # average_total is already rounded to 0.5 from line 707-710
         final_df['market_total_rounded'] = (final_df['market_total'] * 2).round() / 2
-        final_df['model_total_rounded'] = (final_df['model_total'] * 2).round() / 2
 
-        # Merge with lookup data using spread_category, market_total, and model_total
+        # Merge with lookup data using spread_category, market_total, and average_total (instead of model_total)
+        # average_total already incorporates market (60%) and model (40%) weighting
         final_df = final_df.merge(
             totals_lookup_df,
-            left_on=['spread_category', 'market_total_rounded', 'model_total_rounded'],
+            left_on=['spread_category', 'market_total_rounded', 'average_total'],
             right_on=['spread_category', 'market_total', 'model_total'],
             how='left',
             suffixes=('', '_lookup')
@@ -736,7 +737,7 @@ def process_final_dataframe(final_df):
         final_df['Under Cover Probability'] = final_df['under_prob']
 
         # Clean up temporary and duplicate columns
-        final_df.drop(columns=['theoddsapi_total_rounded', 'market_total_rounded', 'model_total_rounded',
+        final_df.drop(columns=['theoddsapi_total_rounded', 'market_total_rounded',
                                'market_total_lookup', 'model_total_lookup'],
                      inplace=True, errors='ignore')
 
