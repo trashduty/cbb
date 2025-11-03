@@ -34,13 +34,13 @@ function runScript(scriptPath, scriptName) {
   return new Promise((resolve, reject) => {
     console.log(`Starting ${scriptName} scraper...`);
 
-    const process = spawn('node', [scriptPath], {
+    const childProcess = spawn('node', [scriptPath], {
       stdio: 'inherit',
       shell: true,
       env: process.env
     });
-    
-    process.on('close', (code) => {
+
+    childProcess.on('close', (code) => {
       if (code === 0) {
         console.log(`${scriptName} scraper completed successfully`);
         resolve();
@@ -49,8 +49,8 @@ function runScript(scriptPath, scriptName) {
         reject(new Error(`${scriptName} scraper failed with code ${code}`));
       }
     });
-    
-    process.on('error', (err) => {
+
+    childProcess.on('error', (err) => {
       console.error(`Error running ${scriptName} scraper:`, err);
       reject(err);
     });
@@ -67,13 +67,13 @@ function runUVScript(scriptPath, scriptName) {
   return new Promise((resolve, reject) => {
     console.log(`Starting ${scriptName} UV script...`);
 
-    const process = spawn('uv', ['run', scriptPath], {
+    const childProcess = spawn('uv', ['run', scriptPath], {
       stdio: 'inherit',
       shell: true,
       env: process.env
     });
-    
-    process.on('close', (code) => {
+
+    childProcess.on('close', (code) => {
       if (code === 0) {
         console.log(`${scriptName} script completed successfully`);
         resolve();
@@ -82,8 +82,8 @@ function runUVScript(scriptPath, scriptName) {
         reject(new Error(`${scriptName} script failed with code ${code}`));
       }
     });
-    
-    process.on('error', (err) => {
+
+    childProcess.on('error', (err) => {
       console.error(`Error running ${scriptName} script:`, err);
       reject(err);
     });
