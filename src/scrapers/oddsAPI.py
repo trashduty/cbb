@@ -558,7 +558,7 @@ def merge_with_combined_data(odds_df):
         combined_df,
         odds_df,
         on=['Team', 'Home Team', 'Away Team'],
-        how='left'
+        how='outer'  # Changed from 'left' to 'outer' to keep games from both sources
     )
     original_matches = result_df['Moneyline'].notna().sum()
     logger.info(f"Original ordering matches: {original_matches}")
@@ -578,7 +578,7 @@ def merge_with_combined_data(odds_df):
         combined_df,
         swapped_odds_df,
         on=['Team', 'Home Team', 'Away Team'],
-        how='left'
+        how='outer'  # Changed from 'left' to 'outer' to keep games from both sources
     )
     swapped_matches = swapped_result_df['Moneyline'].notna().sum()
     logger.info(f"Swapped ordering matches: {swapped_matches}")
@@ -623,22 +623,16 @@ def process_final_dataframe(final_df):
     # Calculate Predicted Outcome using market_spread and model_spread
     final_df['Predicted Outcome'] = (0.6 * final_df['market_spread'] +
                                     0.4 * final_df['model_spread'])
-        # Load spreads lookup data
-    try:
-        spreads_lookup_path = os.path.join(data_dir, 'spreads_lookup.csv')
-        logger.info(f"[cyan]Loading spreads lookup data from {spreads_lookup_path}[/cyan]")
-        lookup_df = pd.read_csv(spreads_lookup_path)
-        
-        # Round predicted outcome for matching and handle NaN values
-        final_df['Predicted Outcome'] = final_df['Predicted Outcome'].fillna(0).round()
-        final_df['Predicted Outcome'] = final_df['Predicted Outcome'].astype(int)
 
-        # Round Opening Spread to nearest 0.5 for proper lookup matching
-        if 'Opening Spread' in final_df.columns:
-            # Round to nearest 0.5 by multiplying by 2, rounding, then dividing by 2
-            final_df['Opening Spread_Rounded'] = (final_df['Opening Spread'] * 2).round() / 2
-        else:
-            final_df['Opening Spread_Rounded'] = 0
+    # Load spreads lookup data using new combined framework
+    try:
+        spreads_lookup_path = os.path.join(project_root, 'spreads_lookup_combined.csv')
+        logger.info(f"[cyan]Loading spreads lookup data from {spreads_lookup_path}[/cyan]")
+        spreads_lookup_df = pd.read_csv(spreads_lookup_path)
+
+        # Round market_spread and model_spread to nearest 0.5 for matching
+        final_df['market_spread_rounded'] = (final_df['market_spread'] * 2).round() / 2
+        final_df['model_spread_rounded'] = (final_df['model_spread'] * 2).round() / 2
 
         # Calculate spread implied probability from Spread Price
         if 'Spread Price' in final_df.columns:
@@ -647,26 +641,32 @@ def process_final_dataframe(final_df):
             # If Spread Price doesn't exist, initialize with 0.5 (50% probability)
             final_df['spread_implied_prob'] = 0.5
 
-        # Merge with lookup data using the rounded spread
+        # Merge with lookup data using total_category, market_spread, and model_spread
         final_df = final_df.merge(
-            lookup_df,
-            left_on=['Opening Spread_Rounded', 'Predicted Outcome'],
-            right_on=['spread', 'result'],
-            how='left'
+            spreads_lookup_df,
+            left_on=['total_category', 'market_spread_rounded', 'model_spread_rounded'],
+            right_on=['total_category', 'market_spread', 'model_spread'],
+            how='left',
+            suffixes=('', '_lookup')
         )
+
         # Calculate cover probability and edge
         final_df['Spread Cover Probability'] = final_df['cover_prob']
         final_df['Edge For Covering Spread'] = (
             final_df['Spread Cover Probability'] -
             final_df['spread_implied_prob']
         )
+
+        # Clean up temporary and duplicate columns
+        final_df.drop(columns=['market_spread_rounded', 'model_spread_rounded',
+                               'market_spread_lookup', 'model_spread_lookup'],
+                     inplace=True, errors='ignore')
+
         logger.info(f"[green]✓[/green] Successfully applied spreads lookup")
     except FileNotFoundError:
-        logger.warning("[yellow]⚠[/yellow] spreads_lookup.csv not found")
+        logger.warning("[yellow]⚠[/yellow] spreads_lookup_combined.csv not found")
         final_df['Spread Cover Probability'] = np.nan
         final_df['Edge For Covering Spread'] = np.nan
-        # Clean up temporary columns even if lookup failed
-        final_df.drop(columns=['Opening Spread_Rounded'], inplace=True, errors='ignore')
     
     # Calculate totals projections
     projected_total_models = ['projected_total_barttorvik',
@@ -702,35 +702,40 @@ def process_final_dataframe(final_df):
         0.4 * final_df['model_total'].fillna(final_df['market_total']))
     ).round().astype(pd.Int64Dtype())
     
-    # Load and process totals lookup data
+    # Load and process totals lookup data using new combined framework
     try:
-        totals_lookup_path = os.path.join(data_dir, 'totals_lookup.csv')
+        totals_lookup_path = os.path.join(project_root, 'totals_lookup_combined.csv')
         logger.info(f"[cyan]Loading totals lookup data from {totals_lookup_path}[/cyan]")
         totals_lookup_df = pd.read_csv(totals_lookup_path)
-
-        # Convert lookup table columns to correct types
-        totals_lookup_df['Market Line'] = totals_lookup_df['Market Line'].astype(float)
-        totals_lookup_df['True Line'] = totals_lookup_df['True Line'].astype(pd.Int64Dtype())
 
         # Drop any duplicate rows before merging
         final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
 
-        # Use theoddsapi_total directly since it's already rounded to 0.5
+        # Round market_total and model_total to nearest 0.5 for matching
+        final_df['market_total_rounded'] = (final_df['market_total'] * 2).round() / 2
+        final_df['model_total_rounded'] = (final_df['model_total'] * 2).round() / 2
+
+        # Merge with lookup data using spread_category, market_total, and model_total
         final_df = final_df.merge(
             totals_lookup_df,
-            left_on=['theoddsapi_total_rounded', 'average_total'],
-            right_on=['Market Line', 'True Line'],
-            how='left'
+            left_on=['spread_category', 'market_total_rounded', 'model_total_rounded'],
+            right_on=['spread_category', 'market_total', 'model_total'],
+            how='left',
+            suffixes=('', '_lookup')
         )
-        final_df['Over Cover Probability'] = final_df['Over_Probability']
-        final_df['Under Cover Probability'] = final_df['Under_Probability']
-        final_df.drop(columns=['theoddsapi_total_rounded',
-                            'Market Line', 'True Line', 'Over_Probability',
-                            'Under_Probability', 'Push_Probability', 'Opening Spread_Rounded',
-                            'spread', 'result'], inplace=True, errors='ignore')
+
+        # Map probabilities from lookup table
+        final_df['Over Cover Probability'] = final_df['over_prob']
+        final_df['Under Cover Probability'] = final_df['under_prob']
+
+        # Clean up temporary and duplicate columns
+        final_df.drop(columns=['theoddsapi_total_rounded', 'market_total_rounded', 'model_total_rounded',
+                               'market_total_lookup', 'model_total_lookup'],
+                     inplace=True, errors='ignore')
+
         logger.info(f"[green]✓[/green] Successfully applied totals lookup")
     except FileNotFoundError:
-        logger.warning("[yellow]⚠[/yellow] totals_lookup.csv not found. Skipping Over/Under probabilities.")
+        logger.warning("[yellow]⚠[/yellow] totals_lookup_combined.csv not found. Skipping Over/Under probabilities.")
         final_df['Over Cover Probability'] = np.nan
         final_df['Under Cover Probability'] = np.nan
         # Clean up temporary columns even if lookup failed
