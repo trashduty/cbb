@@ -9,7 +9,6 @@ test_dratings.py
 test_evan.csv
 test_evanmiya.py
 test_massey.py
-crosswalk.csv
 massey_data.csv
 repomix-output.txt
 test.py
