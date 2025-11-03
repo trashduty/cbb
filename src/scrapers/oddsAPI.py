@@ -963,53 +963,90 @@ def calculate_under_consensus(row):
         logger.debug(f"Error calculating under consensus: {e}")
         return 0
 
+def backup_daily_output(csv_path):
+    """
+    Creates a daily backup of the output CSV file in the historical_data folder.
+    Only creates one backup per day (based on ET timezone).
+
+    Args:
+        csv_path (str): Path to the CBB_Output.csv file to backup
+    """
+    try:
+        # Get current date in ET timezone
+        et = timezone('US/Eastern')
+        current_date = datetime.now(et).strftime('%Y-%m-%d')
+
+        # Create historical_data directory if it doesn't exist
+        historical_dir = os.path.join(project_root, 'historical_data')
+        if not os.path.exists(historical_dir):
+            os.makedirs(historical_dir)
+            logger.info(f"[cyan]Created historical_data directory: {historical_dir}[/cyan]")
+
+        # Generate backup filename
+        backup_filename = f"{current_date}_output.csv"
+        backup_path = os.path.join(historical_dir, backup_filename)
+
+        # Check if today's backup already exists
+        if os.path.exists(backup_path):
+            logger.info(f"[yellow]⚠[/yellow] Daily backup already exists: {backup_filename} (skipping)")
+            return
+
+        # Copy the file
+        import shutil
+        shutil.copy2(csv_path, backup_path)
+        logger.info(f"[green]✓[/green] Created daily backup: {backup_filename}")
+
+    except Exception as e:
+        logger.warning(f"[yellow]⚠[/yellow] Failed to create daily backup: {str(e)}")
+        # Don't fail the entire pipeline if backup fails
+
 def run_oddsapi_etl():
     """
     Main ETL function to run the OddsAPI workflow
     """
     logger.info("=== Starting OddsAPI ETL process ===")
-    
+
     # Get odds data
     logger.info("[cyan]Fetching odds data from API...[/cyan]")
     odds_df = get_combined_odds()
-    
+
     if odds_df.empty:
         logger.error("[red]✗[/red] Failed to get odds data from API")
         return pd.DataFrame()
-    
+
     logger.info(f"[green]✓[/green] Successfully fetched odds data with {len(odds_df)} rows")
-    
+
     # Temporary save for inspection
     odds_csv_path = os.path.join(data_dir, 'oddsapi_raw.csv')
     odds_df.to_csv(odds_csv_path, index=False)
     logger.info(f"[green]✓[/green] Saved raw odds data to {odds_csv_path}")
-    
+
     # Merge with combined data
     logger.info("[cyan]Merging odds data with combined data...[/cyan]")
     final_df = merge_with_combined_data(odds_df)
-    
+
     if final_df.empty:
         logger.error("[red]✗[/red] Failed to merge odds data with combined data")
         return pd.DataFrame()
-    
+
     # Process final dataframe with lookup tables
     final_df = process_final_dataframe(final_df)
-    
+
     # Save final results
     output_path = os.path.join(data_dir, 'final_combined_data.csv')
     final_df.to_csv(output_path, index=False)
     logger.info(f"[green]✓[/green] Saved final combined data to {output_path}")
-    
+
     logger.info("=== OddsAPI ETL process completed successfully ===")
     return final_df
 
 if __name__ == "__main__":
     logger.info("=== Starting OddsAPI script ===")
-    
+
     try:
         # Run the ETL process
         result_df = run_oddsapi_etl()
-        
+
         if not result_df.empty:
             output_file = os.path.join(data_dir, 'final_combined_data.csv')
             logger.info(f"[green]✓[/green] Final data shape: {result_df.shape}")
@@ -1018,15 +1055,18 @@ if __name__ == "__main__":
             csv_path = 'CBB_Output.csv'
             result_df.to_csv(csv_path, index=False)
             logger.info(f"[green]✓[/green] CSV output saved to: {csv_path}")
-            
+
+            # Create daily backup
+            backup_daily_output(csv_path)
+
         else:
             logger.error("[red]✗[/red] Script execution failed")
             sys.exit(1)
-            
+
     except Exception as e:
         logger.error(f"[red]✗[/red] Error in OddsAPI script: {str(e)}")
         import traceback
         logger.error(traceback.format_exc())
         sys.exit(1)
-        
+
     logger.info("=== OddsAPI script completed successfully ===")
