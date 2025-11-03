@@ -593,7 +593,13 @@ def merge_with_combined_data(odds_df):
     logger.info(f"[green]✓[/green] Merged data has shape: {result_df.shape}")
     merge_success_count = result_df['Moneyline'].notna().sum()
     logger.info(f"[cyan]Successfully matched odds for {merge_success_count} / {len(result_df)} rows[/cyan]")
-    
+
+    # Filter out rows without Game Time (these are teams with no odds data available)
+    rows_before = len(result_df)
+    result_df = result_df[result_df['Game Time'].notna() & (result_df['Game Time'] != '')]
+    rows_after = len(result_df)
+    logger.info(f"[cyan]Filtered out {rows_before - rows_after} rows without game times[/cyan]")
+
     return result_df
 
 def process_final_dataframe(final_df):
