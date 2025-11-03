@@ -558,7 +558,7 @@ def merge_with_combined_data(odds_df):
         combined_df,
         odds_df,
         on=['Team', 'Home Team', 'Away Team'],
-        how='outer'  # Changed from 'left' to 'outer' to keep games from both sources
+        how='left'
     )
     original_matches = result_df['Moneyline'].notna().sum()
     logger.info(f"Original ordering matches: {original_matches}")
@@ -578,7 +578,7 @@ def merge_with_combined_data(odds_df):
         combined_df,
         swapped_odds_df,
         on=['Team', 'Home Team', 'Away Team'],
-        how='outer'  # Changed from 'left' to 'outer' to keep games from both sources
+        how='left'
     )
     swapped_matches = swapped_result_df['Moneyline'].notna().sum()
     logger.info(f"Swapped ordering matches: {swapped_matches}")
