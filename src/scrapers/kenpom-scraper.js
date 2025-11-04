@@ -320,7 +320,11 @@ async function runScraper() {
     let canContinue = true;
     let reachedLatestDay = false;
     let checkCount = 0;
-    
+
+    // Track starting date to limit scraping to 10 days in advance
+    const startDate = new Date();
+    const maxDaysInAdvance = 10;
+
     // Process to keep going forward through days
     while (canContinue) {
       // Get the current URL
@@ -517,19 +521,30 @@ async function runScraper() {
         const forwardLinks = dayLinks.filter(link => {
           // Convert date to a string key for tracking visited dates
           const dateKey = `${link.month}-${link.day}`;
-          
+
           // Skip if we've already visited this date
           if (visitedDates.has(dateKey)) {
             return false;
           }
-          
+
+          // Check if this date is within maxDaysInAdvance from start
+          if (link.year && link.month && link.day) {
+            const linkDate = new Date(link.year, link.month - 1, link.day);
+            const daysDiff = Math.floor((linkDate - startDate) / (1000 * 60 * 60 * 24));
+
+            if (daysDiff > maxDaysInAdvance) {
+              console.log(`Skipping date ${link.text} - exceeds ${maxDaysInAdvance} day limit (${daysDiff} days from start)`);
+              return false;
+            }
+          }
+
           // Check if this date is in the future relative to our current position
           if (link.month > currentMonth) {
             return true;
           } else if (link.month === currentMonth) {
             return link.day > currentDay;
           }
-          
+
           return false;
         });
         

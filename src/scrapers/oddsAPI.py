@@ -694,9 +694,10 @@ def process_final_dataframe(final_df):
     final_df['model_total'] = final_df['forecasted_total']
 
     # Create spread_category based on market spread (for total predictions)
+    # Use absolute value so both teams in same game get same category
     final_df['spread_category'] = pd.cut(
-        final_df['market_spread'],
-        bins=[-float('inf'), -10.0, -2.5, float('inf')],
+        abs(final_df['market_spread']),
+        bins=[0, 2.5, 10.0, float('inf')],
         labels=[1, 2, 3]
     ).astype('Int64')
 
@@ -830,13 +831,13 @@ def process_final_dataframe(final_df):
 def calculate_spread_consensus(row):
     """
     Calculate spread consensus flag.
-    Returns 1 if all models agree on covering the spread (same sign) and match Edge sign.
+    Returns 1 if all model spreads (in absolute value) are either all greater than
+    or all less than the market spread (in absolute value).
     Returns 0 otherwise or if any values are missing.
     """
     try:
         # Get required values
         market_spread = row.get('Opening Spread')
-        edge = row.get('Edge For Covering Spread')
 
         # Model spreads
         spread_kenpom = row.get('spread_kenpom')
@@ -845,29 +846,31 @@ def calculate_spread_consensus(row):
         spread_hasla = row.get('spread_hasla')
 
         # Check for missing values
-        if pd.isna(market_spread) or pd.isna(edge):
+        if pd.isna(market_spread):
             return 0
         if pd.isna(spread_kenpom) or pd.isna(spread_evanmiya) or pd.isna(spread_barttorvik) or pd.isna(spread_hasla):
             return 0
 
-        # Calculate differences (model_spread - market_spread)
-        diff_kenpom = spread_kenpom - market_spread
-        diff_evanmiya = spread_evanmiya - market_spread
-        diff_barttorvik = spread_barttorvik - market_spread
-        diff_hasla = spread_hasla - market_spread
+        # Use absolute values for comparison
+        abs_market_spread = abs(market_spread)
+        abs_kenpom = abs(spread_kenpom)
+        abs_evanmiya = abs(spread_evanmiya)
+        abs_barttorvik = abs(spread_barttorvik)
+        abs_hasla = abs(spread_hasla)
 
-        # Get signs (using np.sign: -1 for negative, 0 for zero, 1 for positive)
-        sign_kenpom = np.sign(diff_kenpom)
-        sign_evanmiya = np.sign(diff_evanmiya)
-        sign_barttorvik = np.sign(diff_barttorvik)
-        sign_hasla = np.sign(diff_hasla)
-        sign_edge = np.sign(edge)
+        # Check if all models are on the same side
+        all_above = (abs_kenpom > abs_market_spread and
+                     abs_evanmiya > abs_market_spread and
+                     abs_barttorvik > abs_market_spread and
+                     abs_hasla > abs_market_spread)
 
-        # Check if all models have same sign AND match edge sign
-        if (sign_kenpom == sign_evanmiya == sign_barttorvik == sign_hasla == sign_edge):
-            # Make sure the sign is not zero
-            if sign_kenpom != 0:
-                return 1
+        all_below = (abs_kenpom < abs_market_spread and
+                     abs_evanmiya < abs_market_spread and
+                     abs_barttorvik < abs_market_spread and
+                     abs_hasla < abs_market_spread)
+
+        if all_above or all_below:
+            return 1
 
         return 0
     except Exception as e:
