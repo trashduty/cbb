@@ -147,25 +147,27 @@ async function joinDatasets() {
     
     // Create lookup objects for faster joins
     // Use Map instead of plain objects for better performance with larger datasets
-    const emLookup = new Map();
-    const emSwappedLookup = new Map();
-    emData.forEach(item => {
+
+    // Create KenPom lookup with both orderings
+    const kpLookup = new Map();
+    const kpSwappedLookup = new Map();
+    kpData.forEach(item => {
       // Original ordering
       const key = `${item['Team']}_${item['Home Team']}_${item['Away Team']}`;
-      emLookup.set(key, item);
-      
+      kpLookup.set(key, item);
+
       // Swapped ordering
       const swappedKey = `${item['Team']}_${item['Away Team']}_${item['Home Team']}`;
       const swappedItem = {
         ...item,
         'Home Team': item['Away Team'],
         'Away Team': item['Home Team'],
-        'spread_evanmiya': item['spread_evanmiya'] ? -item['spread_evanmiya'] : null,
-        'win_prob_evanmiya': item['win_prob_evanmiya'] ? 1 - item['win_prob_evanmiya'] : null
+        'spread_kenpom': item['spread_kenpom'] ? -item['spread_kenpom'] : null,
+        'win_prob_kenpom': item['win_prob_kenpom'] ? 1 - item['win_prob_kenpom'] : null
       };
-      emSwappedLookup.set(swappedKey, swappedItem);
+      kpSwappedLookup.set(swappedKey, swappedItem);
     });
-    
+
     // Create Barttorvik lookup with both orderings
     const btLookup = new Map();
     const btSwappedLookup = new Map();
@@ -206,39 +208,39 @@ async function joinDatasets() {
       haslaSwappedLookup.set(swappedKey, swappedItem);
     });
     
-    // First perform left join between KenPom and EvanMiya
+    // First perform left join between EvanMiya and KenPom (iterate over EvanMiya to keep all EM games)
     const leftJoinResult = [];
-    
-    // Get all possible EM columns by looking at first record (or any record)
-    const emColumns = emData.length > 0 ? 
-      Object.keys(emData[0]).filter(key => !['Team', 'Home Team', 'Away Team'].includes(key)) : 
+
+    // Get all possible KP columns by looking at first record (or any record)
+    const kpColumns = kpData.length > 0 ?
+      Object.keys(kpData[0]).filter(key => !['Team', 'Home Team', 'Away Team', 'Game Date'].includes(key)) :
       [];
-    
-    for (const kpItem of kpData) {
-      const compositeKey = `${kpItem['Team']}_${kpItem['Home Team']}_${kpItem['Away Team']}`;
-      const swappedKey = `${kpItem['Team']}_${kpItem['Away Team']}_${kpItem['Home Team']}`;
-      
+
+    for (const emItem of emData) {
+      const compositeKey = `${emItem['Team']}_${emItem['Home Team']}_${emItem['Away Team']}`;
+      const swappedKey = `${emItem['Team']}_${emItem['Away Team']}_${emItem['Home Team']}`;
+
       // Try both orderings
-      const emItem = emLookup.get(compositeKey) || emSwappedLookup.get(swappedKey);
-      
-      // Start with KP data
-      const combinedItem = { ...kpItem };
-      
-      // Initialize all EM columns as null
-      emColumns.forEach(col => {
+      const kpItem = kpLookup.get(compositeKey) || kpSwappedLookup.get(swappedKey);
+
+      // Start with EM data
+      const combinedItem = { ...emItem };
+
+      // Initialize all KP columns as null
+      kpColumns.forEach(col => {
         combinedItem[col] = null;
       });
-      
-      // Add EM data if it exists
-      if (emItem) {   
-        emColumns.forEach(col => {
-          combinedItem[col] = emItem[col];
+
+      // Add KP data if it exists
+      if (kpItem) {
+        kpColumns.forEach(col => {
+          combinedItem[col] = kpItem[col];
         });
       }
-      
+
       leftJoinResult.push(combinedItem);
     }
-    
+
     console.log(`Left join produced ${leftJoinResult.length} records`);
     
     // Now perform left join with Barttorvik data
