@@ -280,15 +280,15 @@ def parse_fanmatch_html(html_content, date=None):
                     prediction_cell = cells[1]
                     prediction_text = prediction_cell.get_text(strip=True)
                     
-                    # Parse prediction (format: "Team 75-70 (55%)")
-                    prediction_pattern = r'([A-Za-z\s\.&+\-\']+)\s+(\d+)-(\d+)\s+\((\d+)%\)'
+                    # Parse prediction (format: "Team 75-70 (55%)" or "Team 91-62 (99.6%)")
+                    prediction_pattern = r'([A-Za-z\s\.&+\-\']+)\s+(\d+)-(\d+)\s+\((\d+(?:\.\d+)?)%\)'
                     prediction_match = re.search(prediction_pattern, prediction_text)
-                    
+
                     if prediction_match:
                         game_data['predicted_winner'] = prediction_match.group(1).strip()
                         game_data['predicted_winner_score'] = int(prediction_match.group(2))
                         game_data['predicted_loser_score'] = int(prediction_match.group(3))
-                        game_data['win_probability'] = int(prediction_match.group(4)) / 100  # Convert to decimal
+                        game_data['win_probability'] = float(prediction_match.group(4)) / 100  # Convert to decimal
                     
                     # Extract brackets info if present (e.g., [69])
                     brackets_pattern = r'\[(\d+)\]'

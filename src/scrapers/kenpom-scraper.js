@@ -483,42 +483,7 @@ async function runScraper() {
       });
       
       console.log(`Found ${dayLinks.length} day links on the current page`);
-      
-      // Check if we've reached the limit (only one day link - the previous day)
-      if (dayLinks.length === 1) {
-        console.log('Only one day link found on the page, reached most recent day');
-        
-        // Check if we should wait for new days or exit
-        if (CONFIG.waitForNewDays) {
-          if (!reachedLatestDay) {
-            console.log('Will check periodically for new days');
-            reachedLatestDay = true;
-          }
-          
-          checkCount++;
-          
-          if (checkCount <= CONFIG.maxChecks) {
-            console.log(`Check ${checkCount}/${CONFIG.maxChecks}: Waiting for new day links...`);
-            await new Promise(resolve => setTimeout(resolve, CONFIG.waitTimeBetweenChecks));
-            
-            console.log('Refreshing page to check for new day links...');
-            await page.reload({ waitUntil: 'networkidle' });
-            
-            // Save HTML after refresh
-            await saveHTMLToFile(page, `fanmatch-refresh-${checkCount}.html`);
-          } else {
-            console.log(`Reached maximum number of checks (${CONFIG.maxChecks}). No new days found.`);
-            canContinue = false;
-          }
-        } else {
-          console.log('Exit condition met (only one day link). Stopping navigation.');
-          canContinue = false;
-        }
-        
-        // Skip the rest of the loop
-        continue;
-      }
-      
+
       if (dayLinks.length > 0) {
         // Log all day links found
         dayLinks.forEach(link => {
