@@ -1,11 +1,10 @@
-Game Time,Team,market_spread,model_spread,Predicted Outcome,Edge For Covering Spread
-Nov 11 07:00PM ET,Morehead St Eagles,29.5,24.65,27.5,0.0400692258560322
-Nov 11 07:00PM ET,Army Knights,33.5,27.9,31.5,0.0481402508762097
-Nov 11 07:30PM ET,Eastern Illinois Panthers,24.5,20.05,22.5,0.0432973911604778
-Nov 11 08:00PM ET,Maryland-Eastern Shore Hawks,36.5,30.55,34.0,0.0524691789372875
-Nov 11 08:00PM ET,Wofford Terriers,27.5,22.450000000000003,25.5,0.0400692258560322
-Nov 11 08:30PM ET,Illinois Fighting Illini,-3.5,-9.15,-6.0,0.0558464163570781
-Nov 11 09:00PM ET,Northern Arizona Lumberjacks,35.5,29.75,33.0,0.0627477276062155
-Nov 11 09:00PM ET,UC Riverside Highlanders,19.5,16.25,18.0,0.0312040468018538
-Nov 11 09:00PM ET,Delaware Blue Hens,36.0,29.65,33.5,0.0558464163570781
-Nov 11 09:00PM ET,Hampton Pirates,23.5,17.7,21.0,0.0558464163570781
+Game Time,Team,market_spread,model_spread,Predicted Outcome,Edge For Covering Spread,spread_consensus_flag,Opening Spread
+Nov 11 07:00PM ET,Morehead St Eagles,29.5,24.65,27.5,0.0400692258560322,1,29.5
+Nov 11 07:00PM ET,Army Knights,33.5,27.9,31.5,0.0481402508762097,1,33.5
+Nov 11 07:30PM ET,Eastern Illinois Panthers,24.5,20.05,22.5,0.0432973911604778,1,24.5
+Nov 11 08:00PM ET,Maryland-Eastern Shore Hawks,36.5,30.55,34.0,0.0524691789372875,1,36.5
+Nov 11 08:00PM ET,Wofford Terriers,27.5,22.450000000000003,25.5,0.0400692258560322,1,27.5
+Nov 11 08:30PM ET,Illinois Fighting Illini,-3.5,-9.15,-6.0,0.0558464163570781,1,-3.5
+Nov 11 09:00PM ET,Northern Arizona Lumberjacks,35.5,29.75,33.0,0.0627477276062155,1,35.5
+Nov 11 09:00PM ET,Delaware Blue Hens,36.0,29.65,33.5,0.0558464163570781,1,36.0
+Nov 11 09:00PM ET,Hampton Pirates,23.5,17.7,21.0,0.0604251709358326,1,23.5

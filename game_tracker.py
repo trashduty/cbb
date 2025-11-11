@@ -72,10 +72,11 @@ def filter_spread_games(df):
         (df['spread_consensus_flag'] == 1)
     ].copy()
     
-    # Select required columns
+    # Select required columns (including spread_consensus_flag and Opening Spread)
     spread_cols = [
         'Game Time', 'Team', 'market_spread', 'model_spread', 
-        'Predicted Outcome', 'Edge For Covering Spread'
+        'Predicted Outcome', 'Edge For Covering Spread', 
+        'spread_consensus_flag', 'Opening Spread'
     ]
     
     spread_games = spread_games[spread_cols]
@@ -84,7 +85,7 @@ def filter_spread_games(df):
     return spread_games
 
 def filter_total_games(df):
-    """Filter games meeting total criteria"""
+    """Filter games meeting total criteria (game-based, not team-based)"""
     log("Filtering total games...")
     
     # Filter: (Over Total Edge >= 0.03 AND over_consensus_flag = 1) OR 
@@ -94,13 +95,17 @@ def filter_total_games(df):
         ((df['Under Total Edge'] >= EDGE_THRESHOLD) & (df['under_consensus_flag'] == 1))
     ].copy()
     
-    # Select required columns
+    # Select required columns (using Game instead of Team to track one row per game)
     total_cols = [
-        'Game Time', 'Team', 'market_total', 'model_total', 
-        'Over Total Edge', 'Under Total Edge'
+        'Game Time', 'Game', 'market_total', 'model_total', 
+        'Over Total Edge', 'Under Total Edge', 
+        'over_consensus_flag', 'under_consensus_flag'
     ]
     
     total_games = total_games[total_cols]
+    
+    # Remove duplicates by Game (since CBB_Output has 2 rows per game, one per team)
+    total_games = total_games.drop_duplicates(subset=['Game'], keep='first')
     
     log(f"Found {len(total_games)} qualifying total games")
     return total_games
@@ -133,9 +138,23 @@ def get_game_date(game_time_str):
         log(f"Warning: Could not parse game time '{game_time_str}': {e}")
         return None
 
-def deduplicate_games(new_games, existing_games):
-    """Remove games that already exist in master file"""
+def deduplicate_games(new_games, existing_games, use_game_key=False):
+    """Remove games that already exist in master file
+    
+    Args:
+        new_games: DataFrame of new games to add
+        existing_games: DataFrame of existing games
+        use_game_key: If True, use Game column for deduplication instead of Team
+    """
     if existing_games.empty:
+        return new_games
+    
+    # Check if we're migrating from old format to new format for totals
+    if use_game_key and 'Game' not in existing_games.columns:
+        # Old format detected - need to migrate
+        # Since we can't deduplicate properly, log warning and proceed with all new games
+        log("WARNING: Existing totals file uses old format (Team-based). Migrating to Game-based format.")
+        log("WARNING: Existing entries will be ignored for deduplication. Starting fresh.")
         return new_games
     
     # Add date column for deduplication
@@ -146,9 +165,15 @@ def deduplicate_games(new_games, existing_games):
     new_games = new_games[new_games['game_date'].notna()]
     existing_games = existing_games[existing_games['game_date'].notna()]
     
-    # Create composite key: date + team
-    new_games['dedup_key'] = new_games['game_date'] + '_' + new_games['Team'].astype(str)
-    existing_games['dedup_key'] = existing_games['game_date'] + '_' + existing_games['Team'].astype(str)
+    # Create composite key based on tracking type
+    if use_game_key:
+        # For totals: use date + Game
+        new_games['dedup_key'] = new_games['game_date'] + '_' + new_games['Game'].astype(str)
+        existing_games['dedup_key'] = existing_games['game_date'] + '_' + existing_games['Game'].astype(str)
+    else:
+        # For spreads: use date + Team
+        new_games['dedup_key'] = new_games['game_date'] + '_' + new_games['Team'].astype(str)
+        existing_games['dedup_key'] = existing_games['game_date'] + '_' + existing_games['Team'].astype(str)
     
     # Filter out duplicates
     before_count = len(new_games)
@@ -164,8 +189,15 @@ def deduplicate_games(new_games, existing_games):
     
     return new_games
 
-def append_to_master(new_games, filepath, columns):
-    """Append new games to master file"""
+def append_to_master(new_games, filepath, columns, use_game_key=False):
+    """Append new games to master file
+    
+    Args:
+        new_games: DataFrame of new games to add
+        filepath: Path to master CSV file
+        columns: Column names for the file
+        use_game_key: If True, use Game column for deduplication instead of Team
+    """
     if new_games.empty:
         log("No new games to append")
         return 0
@@ -174,7 +206,7 @@ def append_to_master(new_games, filepath, columns):
     existing_games = load_existing_data(filepath, columns)
     
     # Remove duplicates
-    new_games = deduplicate_games(new_games, existing_games)
+    new_games = deduplicate_games(new_games, existing_games, use_game_key)
     
     if new_games.empty:
         log("All games already exist in master file")
@@ -243,17 +275,21 @@ def main():
             spread_output, 
             spread_games.columns if not spread_games.empty else [
                 'Game Time', 'Team', 'market_spread', 'model_spread', 
-                'Predicted Outcome', 'Edge For Covering Spread'
-            ]
+                'Predicted Outcome', 'Edge For Covering Spread',
+                'spread_consensus_flag', 'Opening Spread'
+            ],
+            use_game_key=False  # Spreads use team-based tracking
         )
         
         total_count = append_to_master(
             total_games,
             total_output,
             total_games.columns if not total_games.empty else [
-                'Game Time', 'Team', 'market_total', 'model_total', 
-                'Over Total Edge', 'Under Total Edge'
-            ]
+                'Game Time', 'Game', 'market_total', 'model_total', 
+                'Over Total Edge', 'Under Total Edge',
+                'over_consensus_flag', 'under_consensus_flag'
+            ],
+            use_game_key=True  # Totals use game-based tracking
         )
         
         # Update summary
