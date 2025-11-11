@@ -42,5 +42,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update game tracking data - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-            git push origin HEAD:${GITHUB_REF}
+            git push
           fi
