@@ -129,7 +129,8 @@ def get_game_date(game_time_str):
         # Parse date only (ignore time for deduplication)
         dt = datetime.strptime(f"{current_year} {time_str_clean}", "%Y %b %d %I:%M%p")
         return dt.strftime('%Y-%m-%d')
-    except:
+    except (ValueError, TypeError, AttributeError) as e:
+        log(f"Warning: Could not parse game time '{game_time_str}': {e}")
         return None
 
 def deduplicate_games(new_games, existing_games):
@@ -141,9 +142,13 @@ def deduplicate_games(new_games, existing_games):
     new_games['game_date'] = new_games['Game Time'].apply(get_game_date)
     existing_games['game_date'] = existing_games['Game Time'].apply(get_game_date)
     
+    # Filter out rows where game_date is None (unparseable dates)
+    new_games = new_games[new_games['game_date'].notna()]
+    existing_games = existing_games[existing_games['game_date'].notna()]
+    
     # Create composite key: date + team
-    new_games['dedup_key'] = new_games['game_date'] + '_' + new_games['Team']
-    existing_games['dedup_key'] = existing_games['game_date'] + '_' + existing_games['Team']
+    new_games['dedup_key'] = new_games['game_date'] + '_' + new_games['Team'].astype(str)
+    existing_games['dedup_key'] = existing_games['game_date'] + '_' + existing_games['Team'].astype(str)
     
     # Filter out duplicates
     before_count = len(new_games)
