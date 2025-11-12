@@ -17,7 +17,6 @@ test_market_odds.py
 /node_modules
 claude.md
 WORKFLOW_UPDATES.md
-historical_data/
 
 # Legacy CSV output files (replaced by Excel)
 master_spread_games.csv
