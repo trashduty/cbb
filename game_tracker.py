@@ -1,7 +1,9 @@
 # /// script
 # dependencies = [
 #   "pandas",
-#   "pytz"
+#   "pytz",
+#   "beautifulsoup4",
+#   "openpyxl"
 # ]
 # ///
 """
@@ -10,9 +12,18 @@ Track College Basketball games that meet specific criteria for testing and analy
 This script:
 1. Reads from CBB_Output.csv
 2. Filters games with high edge values and consensus flags
-3. Appends qualifying games to master CSV files
-4. Prevents duplicate entries
-5. Maintains tracking summary statistics
+3. Imports ALL columns from qualifying games
+4. Loads game results from KenPom FanMatch HTML files
+5. Grades spread and total bets (Win=1, Loss=0, Push=2)
+6. Saves to Excel file with two sheets: "Spreads" and "Totals"
+7. Prevents duplicate entries
+8. Maintains tracking summary statistics
+
+Grading Logic:
+- Spread: Team must cover the spread to win (accounting for favorite/underdog)
+- Total Over: Actual total must exceed betting line
+- Total Under: Actual total must be below betting line
+- Push: When actual margin/total equals the betting line exactly
 """
 
 import pandas as pd
