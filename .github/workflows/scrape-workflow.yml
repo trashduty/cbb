@@ -64,6 +64,7 @@ jobs:
           else
             git commit -m "Update CBB_Output.csv - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
             # Pull with rebase to handle any commits made during this run
-            git pull --rebase origin ${GITHUB_REF#refs/heads/}
+            # Use --autostash to handle any unstaged changes from the scraper run
+            git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
             git push origin HEAD:${GITHUB_REF}
           fi
