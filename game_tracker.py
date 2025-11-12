@@ -33,6 +33,7 @@ import os
 import sys
 import re
 from bs4 import BeautifulSoup
+from difflib import SequenceMatcher
 
 # Define file paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -47,10 +48,63 @@ legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
 # Thresholds
 EDGE_THRESHOLD = 0.03
 
-def log(message):
-    """Print timestamped log message"""
+def log(message, level="INFO"):
+    """Print timestamped log message with level"""
     timestamp = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
-    print(f"[{timestamp}] {message}")
+    print(f"[{timestamp}] [{level}] {message}")
+
+def normalize_team_name(team_name):
+    """Normalize team name for matching
+    
+    - Convert to lowercase
+    - Strip whitespace
+    - Remove extra spaces
+    - Handle common variations
+    """
+    if not team_name:
+        return ""
+    
+    # Convert to lowercase and strip
+    normalized = team_name.lower().strip()
+    
+    # Replace multiple spaces with single space
+    normalized = re.sub(r'\s+', ' ', normalized)
+    
+    # Remove common suffixes that might cause mismatch
+    # (but keep them in a way that allows partial matching)
+    
+    return normalized
+
+def fuzzy_match_teams(team1, team2, threshold=0.85):
+    """Check if two team names match using fuzzy string matching
+    
+    Args:
+        team1: First team name
+        team2: Second team name
+        threshold: Similarity threshold (0.0 to 1.0)
+    
+    Returns:
+        bool: True if teams match, False otherwise
+    """
+    if not team1 or not team2:
+        return False
+    
+    # Normalize both names
+    norm1 = normalize_team_name(team1)
+    norm2 = normalize_team_name(team2)
+    
+    # Exact match after normalization
+    if norm1 == norm2:
+        return True
+    
+    # Fuzzy match using SequenceMatcher
+    ratio = SequenceMatcher(None, norm1, norm2).ratio()
+    
+    # Also check if one is a substring of the other (for cases like "Duke" vs "Duke Blue Devils")
+    if norm1 in norm2 or norm2 in norm1:
+        return True
+    
+    return ratio >= threshold
 
 def load_input_data():
     """Load and validate input CSV"""
@@ -230,6 +284,9 @@ def load_fanmatch_results():
     html_files = [f for f in os.listdir(kenpom_data_dir) 
                   if f.endswith('.html') and f.startswith('fanmatch-')]
     
+    # Filter out fanmatch-initial.html as it's typically a duplicate
+    html_files = [f for f in html_files if f != 'fanmatch-initial.html']
+    
     if not html_files:
         log(f"Warning: No FanMatch HTML files found in {kenpom_data_dir}")
         return {}
@@ -243,13 +300,29 @@ def load_fanmatch_results():
             date_match = re.search(r'fanmatch-(\d{4}-\d{2}-\d{2})', html_file)
             match_date = date_match.group(1) if date_match else None
             
+            if not match_date:
+                log(f"WARNING: Skipping {html_file} - could not extract date from filename", "WARNING")
+                continue
+            
             # Read and parse the HTML file
             file_path = os.path.join(kenpom_data_dir, html_file)
             with open(file_path, 'r', encoding='utf-8') as f:
                 html_content = f.read()
             
+            log(f"Processing {html_file} (date: {match_date})...", "DEBUG")
             games = parse_fanmatch_html(html_content, match_date)
+            
+            # Verify dates match
+            date_mismatch_count = 0
+            for key in games.keys():
+                if key[2] != match_date:
+                    date_mismatch_count += 1
+            
+            if date_mismatch_count > 0:
+                log(f"WARNING: {date_mismatch_count} games have date mismatch in {html_file}", "WARNING")
+            
             all_games.update(games)
+            log(f"Added {len(games)} games from {html_file}", "DEBUG")
             
         except Exception as e:
             log(f"Warning: Error processing {html_file}: {e}")
@@ -323,6 +396,8 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
         DataFrame with added result columns
     """
     log("Adding game results to spread games...")
+    log(f"DEBUG: Processing {len(spread_games)} spread games", "DEBUG")
+    log(f"DEBUG: FanMatch has results for {len(fanmatch_results)} games", "DEBUG")
     
     # Add new columns for results
     spread_games['actual_score_team'] = None
@@ -333,6 +408,24 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
     
     matched_count = 0
     
+    # Log all tracked games for debugging
+    log("=" * 80, "DEBUG")
+    log("TRACKED GAMES FOR GRADING:", "DEBUG")
+    for idx, row in spread_games.iterrows():
+        team = row['Team']
+        game_time = row['Game Time']
+        game_date = get_game_date(game_time)
+        log(f"  - Team: '{team}', Date: {game_date}, Game Time: '{game_time}'", "DEBUG")
+    
+    # Log all FanMatch games for debugging
+    log("=" * 80, "DEBUG")
+    log("FANMATCH GAMES AVAILABLE:", "DEBUG")
+    for (home_team, away_team, match_date), game_data in fanmatch_results.items():
+        pred_winner = game_data.get('predicted_winner_score')
+        pred_loser = game_data.get('predicted_loser_score')
+        log(f"  - Date: {match_date}, Home: '{home_team}', Away: '{away_team}', Scores: {pred_winner}-{pred_loser}", "DEBUG")
+    log("=" * 80, "DEBUG")
+    
     for idx, row in spread_games.iterrows():
         try:
             # Extract team name and date
@@ -341,34 +434,63 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
             game_date = get_game_date(game_time)
             
             if not game_date:
+                log(f"WARNING: Could not parse game date from '{game_time}' for team '{team}'", "WARNING")
                 continue
+            
+            log(f"Attempting to match: Team='{team}', Date={game_date}", "DEBUG")
             
             # Try to find matching game in fanmatch results
             # We need to check both team orderings
             matched = False
+            match_attempts = []
             
             for (home_team, away_team, match_date), game_data in fanmatch_results.items():
+                # Check date match
                 if match_date != game_date:
                     continue
                 
-                # Check if our team is in this game
-                if team == home_team or team == away_team:
+                log(f"  Date matches! Checking teams: FanMatch(home='{home_team}', away='{away_team}') vs Tracked('{team}')", "DEBUG")
+                
+                # Try exact matching first
+                exact_match_home = (team == home_team)
+                exact_match_away = (team == away_team)
+                
+                # Try fuzzy matching if exact fails
+                fuzzy_match_home = fuzzy_match_teams(team, home_team)
+                fuzzy_match_away = fuzzy_match_teams(team, away_team)
+                
+                match_attempts.append({
+                    'fanmatch_home': home_team,
+                    'fanmatch_away': away_team,
+                    'exact_home': exact_match_home,
+                    'exact_away': exact_match_away,
+                    'fuzzy_home': fuzzy_match_home,
+                    'fuzzy_away': fuzzy_match_away
+                })
+                
+                # Check if our team is in this game (using fuzzy matching)
+                if fuzzy_match_home or fuzzy_match_away:
                     # Found a match!
                     predicted_winner_score = game_data.get('predicted_winner_score')
                     predicted_loser_score = game_data.get('predicted_loser_score')
                     
                     if predicted_winner_score is None or predicted_loser_score is None:
+                        log(f"  SKIP: Missing score data (winner={predicted_winner_score}, loser={predicted_loser_score})", "DEBUG")
                         continue
+                    
+                    log(f"  MATCH FOUND! Team '{team}' matched with FanMatch game", "INFO")
+                    log(f"    - Match type: {'Exact' if (exact_match_home or exact_match_away) else 'Fuzzy'}", "INFO")
+                    log(f"    - Scores: {predicted_winner_score}-{predicted_loser_score}", "INFO")
                     
                     # Determine which team won and assign scores
                     # Note: We're using predicted scores as actual scores since FanMatch 
                     # shows predictions, not results. In a real implementation, you'd 
                     # scrape actual game results after games are played.
-                    if team == home_team:
+                    if fuzzy_match_home:
                         spread_games.at[idx, 'actual_score_team'] = predicted_winner_score
                         spread_games.at[idx, 'actual_score_opponent'] = predicted_loser_score
                         actual_margin = predicted_winner_score - predicted_loser_score
-                    else:  # team == away_team
+                    else:  # fuzzy_match_away
                         spread_games.at[idx, 'actual_score_team'] = predicted_loser_score
                         spread_games.at[idx, 'actual_score_opponent'] = predicted_winner_score
                         actual_margin = predicted_loser_score - predicted_winner_score
@@ -378,17 +500,33 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
                     
                     # Grade the spread result
                     market_spread = row['market_spread']
-                    spread_games.at[idx, 'spread_result'] = grade_spread_result(market_spread, actual_margin)
+                    spread_result = grade_spread_result(market_spread, actual_margin)
+                    spread_games.at[idx, 'spread_result'] = spread_result
+                    
+                    result_str = {0: "LOSS", 1: "WIN", 2: "PUSH"}.get(spread_result, "UNKNOWN")
+                    log(f"    - Spread Result: {result_str} (market_spread={market_spread}, actual_margin={actual_margin})", "INFO")
                     
                     matched_count += 1
                     matched = True
                     break
             
+            if not matched:
+                log(f"  NO MATCH: Could not find FanMatch game for team '{team}' on {game_date}", "WARNING")
+                if match_attempts:
+                    log(f"    Checked {len(match_attempts)} games on {game_date}:", "DEBUG")
+                    for attempt in match_attempts:
+                        log(f"      - Home: '{attempt['fanmatch_home']}' (exact={attempt['exact_home']}, fuzzy={attempt['fuzzy_home']})", "DEBUG")
+                        log(f"        Away: '{attempt['fanmatch_away']}' (exact={attempt['exact_away']}, fuzzy={attempt['fuzzy_away']})", "DEBUG")
+            
         except Exception as e:
-            log(f"Warning: Error processing spread game at index {idx}: {e}")
+            log(f"ERROR: Error processing spread game at index {idx}: {e}", "ERROR")
+            import traceback
+            traceback.print_exc()
             continue
     
-    log(f"Matched {matched_count} out of {len(spread_games)} spread games with results")
+    log("=" * 80, "INFO")
+    log(f"SUMMARY: Matched {matched_count} out of {len(spread_games)} spread games with results", "INFO")
+    log("=" * 80, "INFO")
     return spread_games
 
 def add_game_results_to_totals(total_games, fanmatch_results):
@@ -402,6 +540,7 @@ def add_game_results_to_totals(total_games, fanmatch_results):
         DataFrame with added result columns
     """
     log("Adding game results to total games...")
+    log(f"DEBUG: Processing {len(total_games)} total games", "DEBUG")
     
     # Add new columns for results
     total_games['actual_score_team1'] = None
@@ -412,6 +551,16 @@ def add_game_results_to_totals(total_games, fanmatch_results):
     
     matched_count = 0
     
+    # Log all tracked games for debugging
+    log("=" * 80, "DEBUG")
+    log("TRACKED TOTAL GAMES FOR GRADING:", "DEBUG")
+    for idx, row in total_games.iterrows():
+        game = row['Game']
+        game_time = row['Game Time']
+        game_date = get_game_date(game_time)
+        log(f"  - Game: '{game}', Date: {game_date}, Game Time: '{game_time}'", "DEBUG")
+    log("=" * 80, "DEBUG")
+    
     for idx, row in total_games.iterrows():
         try:
             # Extract game info
@@ -420,29 +569,52 @@ def add_game_results_to_totals(total_games, fanmatch_results):
             game_date = get_game_date(game_time)
             
             if not game_date:
+                log(f"WARNING: Could not parse game date from '{game_time}' for game '{game}'", "WARNING")
                 continue
             
             # Parse team names from Game column (format: "Team A vs. Team B")
             teams = re.split(r'\s+vs\.?\s+', game, flags=re.IGNORECASE)
             if len(teams) != 2:
+                log(f"WARNING: Could not parse teams from game string '{game}'", "WARNING")
                 continue
             
             team1, team2 = teams[0].strip(), teams[1].strip()
+            log(f"Attempting to match total game: Team1='{team1}', Team2='{team2}', Date={game_date}", "DEBUG")
             
             # Try to find matching game in fanmatch results
             matched = False
+            match_attempts = []
             
             for (home_team, away_team, match_date), game_data in fanmatch_results.items():
                 if match_date != game_date:
                     continue
                 
+                log(f"  Date matches! Checking teams: FanMatch(home='{home_team}', away='{away_team}') vs Tracked('{team1}' vs '{team2}')", "DEBUG")
+                
+                # Check both orderings with fuzzy matching
+                match_1_home = fuzzy_match_teams(team1, home_team)
+                match_1_away = fuzzy_match_teams(team2, away_team)
+                match_2_home = fuzzy_match_teams(team2, home_team)
+                match_2_away = fuzzy_match_teams(team1, away_team)
+                
+                match_attempts.append({
+                    'fanmatch_home': home_team,
+                    'fanmatch_away': away_team,
+                    'order1_match': match_1_home and match_1_away,
+                    'order2_match': match_2_home and match_2_away
+                })
+                
                 # Check if teams match (in either order)
-                if (team1 in home_team or home_team in team1) and (team2 in away_team or away_team in team2):
+                if match_1_home and match_1_away:
                     predicted_winner_score = game_data.get('predicted_winner_score')
                     predicted_loser_score = game_data.get('predicted_loser_score')
                     
                     if predicted_winner_score is None or predicted_loser_score is None:
+                        log(f"  SKIP: Missing score data", "DEBUG")
                         continue
+                    
+                    log(f"  MATCH FOUND! (Order 1: team1=home, team2=away)", "INFO")
+                    log(f"    - Scores: {predicted_winner_score}-{predicted_loser_score}", "INFO")
                     
                     # Assign scores and calculate total
                     total_games.at[idx, 'actual_score_team1'] = predicted_winner_score
@@ -452,18 +624,28 @@ def add_game_results_to_totals(total_games, fanmatch_results):
                     
                     # Grade both over and under results
                     market_total = row['market_total']
-                    total_games.at[idx, 'over_result'] = grade_total_result('over', market_total, actual_total)
-                    total_games.at[idx, 'under_result'] = grade_total_result('under', market_total, actual_total)
+                    over_result = grade_total_result('over', market_total, actual_total)
+                    under_result = grade_total_result('under', market_total, actual_total)
+                    total_games.at[idx, 'over_result'] = over_result
+                    total_games.at[idx, 'under_result'] = under_result
+                    
+                    over_str = {0: "LOSS", 1: "WIN", 2: "PUSH"}.get(over_result, "UNKNOWN")
+                    under_str = {0: "LOSS", 1: "WIN", 2: "PUSH"}.get(under_result, "UNKNOWN")
+                    log(f"    - Over: {over_str}, Under: {under_str} (market_total={market_total}, actual_total={actual_total})", "INFO")
                     
                     matched_count += 1
                     matched = True
                     break
-                elif (team2 in home_team or home_team in team2) and (team1 in away_team or away_team in team1):
+                elif match_2_home and match_2_away:
                     predicted_winner_score = game_data.get('predicted_winner_score')
                     predicted_loser_score = game_data.get('predicted_loser_score')
                     
                     if predicted_winner_score is None or predicted_loser_score is None:
+                        log(f"  SKIP: Missing score data", "DEBUG")
                         continue
+                    
+                    log(f"  MATCH FOUND! (Order 2: team2=home, team1=away)", "INFO")
+                    log(f"    - Scores: {predicted_winner_score}-{predicted_loser_score}", "INFO")
                     
                     # Assign scores (reversed order)
                     total_games.at[idx, 'actual_score_team1'] = predicted_loser_score
@@ -473,18 +655,36 @@ def add_game_results_to_totals(total_games, fanmatch_results):
                     
                     # Grade both over and under results
                     market_total = row['market_total']
-                    total_games.at[idx, 'over_result'] = grade_total_result('over', market_total, actual_total)
-                    total_games.at[idx, 'under_result'] = grade_total_result('under', market_total, actual_total)
+                    over_result = grade_total_result('over', market_total, actual_total)
+                    under_result = grade_total_result('under', market_total, actual_total)
+                    total_games.at[idx, 'over_result'] = over_result
+                    total_games.at[idx, 'under_result'] = under_result
+                    
+                    over_str = {0: "LOSS", 1: "WIN", 2: "PUSH"}.get(over_result, "UNKNOWN")
+                    under_str = {0: "LOSS", 1: "WIN", 2: "PUSH"}.get(under_result, "UNKNOWN")
+                    log(f"    - Over: {over_str}, Under: {under_str} (market_total={market_total}, actual_total={actual_total})", "INFO")
                     
                     matched_count += 1
                     matched = True
                     break
             
+            if not matched:
+                log(f"  NO MATCH: Could not find FanMatch game for '{game}' on {game_date}", "WARNING")
+                if match_attempts:
+                    log(f"    Checked {len(match_attempts)} games on {game_date}:", "DEBUG")
+                    for attempt in match_attempts:
+                        log(f"      - Home: '{attempt['fanmatch_home']}', Away: '{attempt['fanmatch_away']}'", "DEBUG")
+                        log(f"        Order1 match: {attempt['order1_match']}, Order2 match: {attempt['order2_match']}", "DEBUG")
+            
         except Exception as e:
-            log(f"Warning: Error processing total game at index {idx}: {e}")
+            log(f"ERROR: Error processing total game at index {idx}: {e}", "ERROR")
+            import traceback
+            traceback.print_exc()
             continue
     
-    log(f"Matched {matched_count} out of {len(total_games)} total games with results")
+    log("=" * 80, "INFO")
+    log(f"SUMMARY: Matched {matched_count} out of {len(total_games)} total games with results", "INFO")
+    log("=" * 80, "INFO")
     return total_games
 
 def backup_csv_file(csv_path):
