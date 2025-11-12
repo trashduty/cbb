@@ -40,6 +40,9 @@ input_file = os.path.join(script_dir, 'CBB_Output.csv')
 excel_output = os.path.join(script_dir, 'master_game_tracking.xlsx')
 summary_file = os.path.join(script_dir, 'tracking_summary.csv')
 kenpom_data_dir = os.path.join(script_dir, 'kenpom-data')
+# Legacy CSV files
+legacy_spread_csv = os.path.join(script_dir, 'master_spread_games.csv')
+legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
 
 # Thresholds
 EDGE_THRESHOLD = 0.03
@@ -484,32 +487,146 @@ def add_game_results_to_totals(total_games, fanmatch_results):
     log(f"Matched {matched_count} out of {len(total_games)} total games with results")
     return total_games
 
+def backup_csv_file(csv_path):
+    """Create a backup of the CSV file before migration
+    
+    Args:
+        csv_path: Path to the CSV file to backup
+    
+    Returns:
+        str: Path to backup file, or None if backup failed
+    """
+    if not os.path.exists(csv_path):
+        return None
+    
+    try:
+        backup_path = csv_path.replace('.csv', '_backup.csv')
+        import shutil
+        shutil.copy2(csv_path, backup_path)
+        log(f"Created backup: {backup_path}")
+        return backup_path
+    except Exception as e:
+        log(f"Warning: Could not create backup of {csv_path}: {e}")
+        return None
+
+def load_historical_csv_data():
+    """Load historical data from legacy CSV files
+    
+    Returns:
+        tuple: (spread_df, total_df) - DataFrames from legacy CSV files
+    """
+    spread_df = pd.DataFrame()
+    total_df = pd.DataFrame()
+    
+    # Load legacy spread CSV
+    if os.path.exists(legacy_spread_csv):
+        try:
+            log(f"Found legacy spread CSV: {legacy_spread_csv}")
+            backup_csv_file(legacy_spread_csv)
+            
+            spread_df = pd.read_csv(legacy_spread_csv)
+            log(f"Loaded {len(spread_df)} historical spread records from CSV")
+            
+            # Validate that we have the key columns needed for deduplication
+            if 'Game Time' not in spread_df.columns or 'Team' not in spread_df.columns:
+                log(f"Warning: Legacy spread CSV missing required columns. Skipping migration.")
+                spread_df = pd.DataFrame()
+        except Exception as e:
+            log(f"Warning: Could not load legacy spread CSV: {e}")
+            spread_df = pd.DataFrame()
+    else:
+        log(f"No legacy spread CSV found at {legacy_spread_csv}")
+    
+    # Load legacy total CSV
+    if os.path.exists(legacy_total_csv):
+        try:
+            log(f"Found legacy total CSV: {legacy_total_csv}")
+            backup_csv_file(legacy_total_csv)
+            
+            total_df = pd.read_csv(legacy_total_csv)
+            log(f"Loaded {len(total_df)} historical total records from CSV")
+            
+            # Validate that we have the key columns needed for deduplication
+            if 'Game Time' not in total_df.columns or 'Game' not in total_df.columns:
+                log(f"Warning: Legacy total CSV missing required columns. Skipping migration.")
+                total_df = pd.DataFrame()
+        except Exception as e:
+            log(f"Warning: Could not load legacy total CSV: {e}")
+            total_df = pd.DataFrame()
+    else:
+        log(f"No legacy total CSV found at {legacy_total_csv}")
+    
+    return spread_df, total_df
+
 def load_existing_excel_data():
     """Load existing master Excel file or create new DataFrames
+    
+    Also loads and merges legacy CSV data on first run.
     
     Returns:
         tuple: (spread_df, total_df) - DataFrames for spreads and totals sheets
     """
+    spread_df = pd.DataFrame()
+    total_df = pd.DataFrame()
+    
     if os.path.exists(excel_output):
         log(f"Loading existing data from {excel_output}")
         try:
             spread_df = pd.read_excel(excel_output, sheet_name='Spreads')
-            log(f"Loaded {len(spread_df)} existing spread rows")
+            log(f"Loaded {len(spread_df)} existing spread rows from Excel")
         except Exception as e:
             log(f"Warning: Could not load Spreads sheet: {e}")
             spread_df = pd.DataFrame()
         
         try:
             total_df = pd.read_excel(excel_output, sheet_name='Totals')
-            log(f"Loaded {len(total_df)} existing total rows")
+            log(f"Loaded {len(total_df)} existing total rows from Excel")
         except Exception as e:
             log(f"Warning: Could not load Totals sheet: {e}")
             total_df = pd.DataFrame()
-        
-        return spread_df, total_df
     else:
-        log(f"Creating new Excel file: {excel_output}")
-        return pd.DataFrame(), pd.DataFrame()
+        log(f"Excel file does not exist yet: {excel_output}")
+    
+    # Load and merge historical CSV data
+    log("Checking for historical CSV data to migrate...")
+    csv_spread_df, csv_total_df = load_historical_csv_data()
+    
+    # Merge CSV data with Excel data
+    if not csv_spread_df.empty:
+        if spread_df.empty:
+            spread_df = csv_spread_df
+            log(f"Migrated all {len(csv_spread_df)} spread records from CSV")
+        else:
+            # Merge and deduplicate
+            before_count = len(spread_df)
+            spread_df = pd.concat([spread_df, csv_spread_df], ignore_index=True)
+            # Use deduplication logic
+            spread_df['game_date'] = spread_df['Game Time'].apply(get_game_date)
+            spread_df = spread_df[spread_df['game_date'].notna()]
+            spread_df['dedup_key'] = spread_df['game_date'] + '_' + spread_df['Team'].astype(str)
+            spread_df = spread_df.drop_duplicates(subset=['dedup_key'], keep='first')
+            spread_df = spread_df.drop(columns=['game_date', 'dedup_key'])
+            after_count = len(spread_df)
+            log(f"Merged CSV spread data: {after_count - before_count} new records added")
+    
+    if not csv_total_df.empty:
+        if total_df.empty:
+            total_df = csv_total_df
+            log(f"Migrated all {len(csv_total_df)} total records from CSV")
+        else:
+            # Merge and deduplicate
+            before_count = len(total_df)
+            total_df = pd.concat([total_df, csv_total_df], ignore_index=True)
+            # Use deduplication logic
+            total_df['game_date'] = total_df['Game Time'].apply(get_game_date)
+            total_df = total_df[total_df['game_date'].notna()]
+            total_df['dedup_key'] = total_df['game_date'] + '_' + total_df['Game'].astype(str)
+            total_df = total_df.drop_duplicates(subset=['dedup_key'], keep='first')
+            total_df = total_df.drop(columns=['game_date', 'dedup_key'])
+            after_count = len(total_df)
+            log(f"Merged CSV total data: {after_count - before_count} new records added")
+    
+    return spread_df, total_df
 
 def get_game_date(game_time_str):
     """Extract date from game time string for deduplication"""
@@ -591,8 +708,12 @@ def save_to_excel(spread_games, total_games):
     """
     log("Saving games to Excel file...")
     
-    # Load existing data
+    # Load existing data (includes CSV migration)
     existing_spread, existing_total = load_existing_excel_data()
+    
+    # Log pre-merge counts for validation
+    log(f"Before merge - Existing spread records: {len(existing_spread)}, New spread candidates: {len(spread_games)}")
+    log(f"Before merge - Existing total records: {len(existing_total)}, New total candidates: {len(total_games)}")
     
     # Deduplicate new games
     new_spread_games = deduplicate_games(spread_games, existing_spread, use_game_key=False)
@@ -612,13 +733,24 @@ def save_to_excel(spread_games, total_games):
     else:
         final_total = pd.concat([existing_total, new_total_games], ignore_index=True)
     
+    # Validate data integrity
+    log(f"Data integrity check:")
+    log(f"  Final spread count: {len(final_spread)} (should be >= existing {len(existing_spread)})")
+    log(f"  Final total count: {len(final_total)} (should be >= existing {len(existing_total)})")
+    
+    if len(final_spread) < len(existing_spread):
+        log(f"ERROR: Data loss detected in spreads! Final: {len(final_spread)}, Expected: >= {len(existing_spread)}")
+    
+    if len(final_total) < len(existing_total):
+        log(f"ERROR: Data loss detected in totals! Final: {len(final_total)}, Expected: >= {len(existing_total)}")
+    
     # Save to Excel with multiple sheets
     with pd.ExcelWriter(excel_output, engine='openpyxl') as writer:
         final_spread.to_excel(writer, sheet_name='Spreads', index=False)
         final_total.to_excel(writer, sheet_name='Totals', index=False)
     
     log(f"Saved {len(final_spread)} spread games and {len(final_total)} total games to {excel_output}")
-    log(f"New games added: {spread_count} spreads, {total_count} totals")
+    log(f"New games added this run: {spread_count} spreads, {total_count} totals")
     
     return spread_count, total_count
 
