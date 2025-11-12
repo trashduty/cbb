@@ -70,8 +70,9 @@ def normalize_team_name(team_name):
     # Replace multiple spaces with single space
     normalized = re.sub(r'\s+', ' ', normalized)
     
-    # Remove common suffixes that might cause mismatch
-    # (but keep them in a way that allows partial matching)
+    # Normalize common abbreviations
+    normalized = normalized.replace('st.', 'saint')
+    normalized = normalized.replace(' st ', ' saint ')
     
     return normalized
 
@@ -97,12 +98,31 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
     if norm1 == norm2:
         return True
     
+    # Check if one is a substring of the other at the START (not just anywhere)
+    # This handles cases like "Duke" vs "Duke Blue Devils" (mascot)
+    # but prevents "Florida" vs "Florida Atlantic" (different school)
+    if norm1.startswith(norm2) or norm2.startswith(norm1):
+        longer_str = norm1 if len(norm1) > len(norm2) else norm2
+        shorter_str = norm1 if len(norm1) <= len(norm2) else norm2
+        
+        # Get the extra part after the shorter name
+        extra = longer_str[len(shorter_str):].strip()
+        
+        # If the extra part contains indicators of a different school (not just mascot), don't match
+        different_school_indicators = ['atlantic', ' state', ' tech', ' christian', 
+                                      'southern', 'northern', 'eastern', 'western',
+                                      'central', 'upstate']
+        
+        # Check if any indicator is in the extra part
+        for indicator in different_school_indicators:
+            if indicator in extra:
+                return False
+        
+        # If no different school indicator, it's probably just a mascot - match!
+        return True
+    
     # Fuzzy match using SequenceMatcher
     ratio = SequenceMatcher(None, norm1, norm2).ratio()
-    
-    # Also check if one is a substring of the other (for cases like "Duke" vs "Duke Blue Devils")
-    if norm1 in norm2 or norm2 in norm1:
-        return True
     
     return ratio >= threshold
 
