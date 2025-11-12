@@ -264,14 +264,28 @@ def grade_spread_result(market_spread, actual_margin):
     
     Returns:
         0 = Loss, 1 = Win, 2 = Push
-    """
-    # Calculate the difference between actual margin and spread
-    # For a spread bet to win, the team needs to cover the spread
-    cover_margin = actual_margin - market_spread
     
-    if abs(cover_margin) < 0.01:  # Push (essentially equal)
-        return 2
-    elif cover_margin > 0:  # Covered the spread
+    Examples:
+        - Favorite -5, wins by 6: grade_spread_result(-5, 6) = 1 (Win)
+        - Favorite -5, wins by 5: grade_spread_result(-5, 5) = 2 (Push)
+        - Favorite -5, wins by 4: grade_spread_result(-5, 4) = 0 (Loss)
+        - Underdog +5, loses by 4: grade_spread_result(5, -4) = 1 (Win)
+        - Underdog +5, loses by 5: grade_spread_result(5, -5) = 2 (Push)
+        - Underdog +5, loses by 6: grade_spread_result(5, -6) = 0 (Loss)
+    """
+    # Check for push first - when actual margin equals the absolute value of the spread
+    # For favorite (-5): push when margin is exactly 5
+    # For underdog (+5): push when margin is exactly -5
+    if abs(actual_margin + market_spread) < 0.01:
+        return 2  # Push
+    
+    # For a spread bet to win, the team needs to cover the spread
+    # actual_margin > abs(market_spread) means they beat the spread
+    # Negative spread (favorite): need to win by MORE than abs(spread)
+    # Positive spread (underdog): can lose by LESS than spread or win
+    cover_margin = actual_margin + market_spread
+    
+    if cover_margin > 0:  # Covered the spread
         return 1
     else:  # Did not cover
         return 0
