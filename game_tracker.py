@@ -50,6 +50,7 @@ input_file = os.path.join(script_dir, 'CBB_Output.csv')
 excel_output = os.path.join(script_dir, 'master_game_tracking.xlsx')
 summary_file = os.path.join(script_dir, 'tracking_summary.csv')
 kenpom_data_dir = os.path.join(script_dir, 'kenpom-data')
+crosswalk_file = os.path.join(script_dir, 'data', 'crosswalk.csv')
 # Legacy CSV files
 legacy_spread_csv = os.path.join(script_dir, 'master_spread_games.csv')
 legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
@@ -57,10 +58,72 @@ legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
 # Thresholds
 EDGE_THRESHOLD = 0.03
 
+# Global crosswalk cache
+_CROSSWALK_CACHE = None
+
 def log(message, level="INFO"):
     """Print timestamped log message with level"""
     timestamp = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"[{timestamp}] [{level}] {message}")
+
+def load_team_name_crosswalk():
+    """Load the team name crosswalk from data/crosswalk.csv
+    
+    Returns a dictionary mapping API names (with mascots) to KenPom names
+    """
+    global _CROSSWALK_CACHE
+    
+    # Return cached version if available
+    if _CROSSWALK_CACHE is not None:
+        return _CROSSWALK_CACHE
+    
+    if not os.path.exists(crosswalk_file):
+        log(f"Warning: Crosswalk file not found at {crosswalk_file}", "WARNING")
+        log("Falling back to fuzzy matching", "WARNING")
+        _CROSSWALK_CACHE = {}
+        return _CROSSWALK_CACHE
+    
+    try:
+        df = pd.read_csv(crosswalk_file)
+        
+        # Create mapping from API column to kenpom column
+        crosswalk = {}
+        for _, row in df.iterrows():
+            api_name = row['API']
+            kenpom_name = row['kenpom']
+            
+            if pd.notna(api_name) and pd.notna(kenpom_name):
+                crosswalk[api_name] = kenpom_name
+        
+        log(f"Loaded team name crosswalk with {len(crosswalk)} mappings", "DEBUG")
+        _CROSSWALK_CACHE = crosswalk
+        return crosswalk
+        
+    except Exception as e:
+        log(f"Error loading crosswalk file: {e}", "WARNING")
+        log("Falling back to fuzzy matching", "WARNING")
+        _CROSSWALK_CACHE = {}
+        return _CROSSWALK_CACHE
+
+def map_team_name_to_kenpom(team_name, crosswalk=None):
+    """Map a team name (with mascot) to its KenPom equivalent
+    
+    Args:
+        team_name: Team name from tracked games (e.g., "Oklahoma St Cowboys")
+        crosswalk: Optional crosswalk dictionary (loaded if not provided)
+    
+    Returns:
+        KenPom team name (e.g., "Oklahoma St.") or original name if not found
+    """
+    if crosswalk is None:
+        crosswalk = load_team_name_crosswalk()
+    
+    # Try exact match first
+    if team_name in crosswalk:
+        return crosswalk[team_name]
+    
+    # If not found, return original name (will fall back to fuzzy matching)
+    return team_name
 
 def normalize_team_name(team_name):
     """Normalize team name for matching
@@ -68,7 +131,8 @@ def normalize_team_name(team_name):
     - Convert to lowercase
     - Strip whitespace
     - Remove extra spaces
-    - Handle common variations
+    - Remove common mascot names
+    - Handle common abbreviations
     """
     if not team_name:
         return ""
@@ -79,19 +143,36 @@ def normalize_team_name(team_name):
     # Replace multiple spaces with single space
     normalized = re.sub(r'\s+', ' ', normalized)
     
-    # Normalize common abbreviations
-    normalized = normalized.replace('st.', 'saint')
-    normalized = normalized.replace(' st ', ' saint ')
+    # Normalize common abbreviations (but preserve them for now)
+    normalized = normalized.replace('st.', 'st')
+    
+    # Common mascots to remove for matching
+    mascots = [
+        'eagles', 'hawks', 'knights', 'panthers', 'tigers', 'bears', 'wildcats',
+        'bulldogs', 'cardinals', 'spartans', 'terriers', 'fighting illini', 
+        'crimson tide', 'volunteers', 'blue devils', 'tar heels', 'boilermakers',
+        'gators', 'seminoles', 'sooners', 'longhorns', 'wolverines', 'buckeyes',
+        'trojans', 'bruins', 'golden bears', 'cowboys', 'aggies', 'huskies',
+        'cougars', 'lions', 'jaguars', 'pirates', 'raiders', 'rebels', 'rams',
+        'friars', 'quakers', 'colonels', 'lumberjacks', 'blue hens', 'jaspers',
+        'grizzlies', 'ospreys', 'hornets', 'gauchos', 'monarchs', 'delta devils'
+    ]
+    
+    # Remove mascots from the end of team names
+    for mascot in mascots:
+        if normalized.endswith(' ' + mascot):
+            normalized = normalized[:-len(mascot)-1].strip()
     
     return normalized
 
-def fuzzy_match_teams(team1, team2, threshold=0.85):
-    """Check if two team names match using fuzzy string matching
+def fuzzy_match_teams(team1, team2, threshold=0.85, crosswalk=None):
+    """Check if two team names match using crosswalk lookup and fuzzy string matching
     
     Args:
-        team1: First team name
-        team2: Second team name
-        threshold: Similarity threshold (0.0 to 1.0)
+        team1: First team name (typically from tracked games with mascots)
+        team2: Second team name (typically from FanMatch)
+        threshold: Similarity threshold (0.0 to 1.0) for fuzzy matching
+        crosswalk: Optional crosswalk dictionary (loaded if not provided)
     
     Returns:
         bool: True if teams match, False otherwise
@@ -99,7 +180,24 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
     if not team1 or not team2:
         return False
     
-    # Normalize both names
+    # Load crosswalk if not provided
+    if crosswalk is None:
+        crosswalk = load_team_name_crosswalk()
+    
+    # Try crosswalk lookup first (most accurate)
+    if crosswalk:
+        # Map team1 (API name with mascot) to KenPom name
+        kenpom_name1 = crosswalk.get(team1)
+        if kenpom_name1:
+            # Direct comparison with team2
+            if kenpom_name1 == team2:
+                return True
+            # Also try normalized comparison
+            if normalize_team_name(kenpom_name1) == normalize_team_name(team2):
+                return True
+    
+    # Fallback to fuzzy matching if crosswalk doesn't help
+    # Normalize both names (removes mascots)
     norm1 = normalize_team_name(team1)
     norm2 = normalize_team_name(team2)
     
@@ -108,7 +206,7 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
         return True
     
     # Check if one is a substring of the other at the START (not just anywhere)
-    # This handles cases like "Duke" vs "Duke Blue Devils" (mascot)
+    # This handles cases like "Duke" vs "Duke Blue Devils" (mascot already removed)
     # but prevents "Florida" vs "Florida Atlantic" (different school)
     if norm1.startswith(norm2) or norm2.startswith(norm1):
         longer_str = norm1 if len(norm1) > len(norm2) else norm2
@@ -117,17 +215,17 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
         # Get the extra part after the shorter name
         extra = longer_str[len(shorter_str):].strip()
         
-        # If the extra part contains indicators of a different school (not just mascot), don't match
-        different_school_indicators = ['atlantic', ' state', ' tech', ' christian', 
+        # If the extra part contains indicators of a different school, don't match
+        different_school_indicators = ['atlantic', 'tech', 'christian', 
                                       'southern', 'northern', 'eastern', 'western',
-                                      'central', 'upstate']
+                                      'central', 'upstate', '-']
         
         # Check if any indicator is in the extra part
         for indicator in different_school_indicators:
             if indicator in extra:
                 return False
         
-        # If no different school indicator, it's probably just a mascot - match!
+        # If no different school indicator, it's probably the same school - match!
         return True
     
     # Fuzzy match using SequenceMatcher
@@ -254,8 +352,8 @@ def parse_fanmatch_html(html_content, date=None):
         try:
             cells = row.find_all('td')
             
-            # Skip rows with insufficient cells
-            if len(cells) < 5:
+            # Skip rows with insufficient cells (need at least game and prediction columns)
+            if len(cells) < 2:
                 continue
             
             game_data = {
@@ -428,6 +526,9 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
     log(f"DEBUG: Processing {len(spread_games)} spread games", "DEBUG")
     log(f"DEBUG: FanMatch has results for {len(fanmatch_results)} games", "DEBUG")
     
+    # Load team name crosswalk for accurate matching
+    crosswalk = load_team_name_crosswalk()
+    
     # Add new columns for results
     spread_games['actual_score_team'] = None
     spread_games['actual_score_opponent'] = None
@@ -484,9 +585,9 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
                 exact_match_home = (team == home_team)
                 exact_match_away = (team == away_team)
                 
-                # Try fuzzy matching if exact fails
-                fuzzy_match_home = fuzzy_match_teams(team, home_team)
-                fuzzy_match_away = fuzzy_match_teams(team, away_team)
+                # Try fuzzy matching if exact fails (pass crosswalk for accurate matching)
+                fuzzy_match_home = fuzzy_match_teams(team, home_team, crosswalk=crosswalk)
+                fuzzy_match_away = fuzzy_match_teams(team, away_team, crosswalk=crosswalk)
                 
                 match_attempts.append({
                     'fanmatch_home': home_team,
@@ -571,6 +672,9 @@ def add_game_results_to_totals(total_games, fanmatch_results):
     log("Adding game results to total games...")
     log(f"DEBUG: Processing {len(total_games)} total games", "DEBUG")
     
+    # Load team name crosswalk for accurate matching
+    crosswalk = load_team_name_crosswalk()
+    
     # Add new columns for results
     total_games['actual_score_team1'] = None
     total_games['actual_score_team2'] = None
@@ -620,11 +724,11 @@ def add_game_results_to_totals(total_games, fanmatch_results):
                 
                 log(f"  Date matches! Checking teams: FanMatch(home='{home_team}', away='{away_team}') vs Tracked('{team1}' vs '{team2}')", "DEBUG")
                 
-                # Check both orderings with fuzzy matching
-                match_1_home = fuzzy_match_teams(team1, home_team)
-                match_1_away = fuzzy_match_teams(team2, away_team)
-                match_2_home = fuzzy_match_teams(team2, home_team)
-                match_2_away = fuzzy_match_teams(team1, away_team)
+                # Check both orderings with fuzzy matching (pass crosswalk for accurate matching)
+                match_1_home = fuzzy_match_teams(team1, home_team, crosswalk=crosswalk)
+                match_1_away = fuzzy_match_teams(team2, away_team, crosswalk=crosswalk)
+                match_2_home = fuzzy_match_teams(team2, home_team, crosswalk=crosswalk)
+                match_2_away = fuzzy_match_teams(team1, away_team, crosswalk=crosswalk)
                 
                 match_attempts.append({
                     'fanmatch_home': home_team,
@@ -1212,6 +1316,46 @@ def main():
             log("  No total games qualified (Edge < 0.03 or consensus flags = 0)")
         
         log("=" * 60)
+        
+        # Multi-date FanMatch scraping
+        # Check if we have qualifying games that need results
+        if not spread_games.empty or not total_games.empty:
+            try:
+                log("=" * 60)
+                log("MULTI-DATE FANMATCH SCRAPING")
+                log("=" * 60)
+                
+                # Import scraping module
+                try:
+                    from scrape_fanmatch import scrape_fanmatch_for_tracked_games
+                    
+                    # Check if credentials are available
+                    if os.getenv('EMAIL') and os.getenv('PASSWORD'):
+                        log("KenPom credentials found - attempting to scrape FanMatch data...")
+                        
+                        # Scrape FanMatch data for all unique game dates
+                        success_count = scrape_fanmatch_for_tracked_games(
+                            spread_games,
+                            total_games,
+                            kenpom_data_dir,
+                            headless=True
+                        )
+                        
+                        if success_count > 0:
+                            log(f"Successfully scraped FanMatch data for {success_count} dates")
+                        else:
+                            log("No new FanMatch data was scraped", "WARNING")
+                    else:
+                        log("KenPom credentials not found in environment - skipping scraping", "WARNING")
+                        log("To enable scraping, set EMAIL and PASSWORD in .env file", "WARNING")
+                        
+                except ImportError as ie:
+                    log(f"Could not import scrape_fanmatch module: {ie}", "WARNING")
+                    log("Skipping automatic FanMatch scraping - will use existing HTML files", "WARNING")
+                    
+            except Exception as scrape_error:
+                log(f"Error during FanMatch scraping: {scrape_error}", "WARNING")
+                log("Continuing with existing FanMatch data...", "WARNING")
         
         # Load FanMatch results for grading
         fanmatch_results = load_fanmatch_results()
