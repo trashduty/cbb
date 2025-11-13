@@ -57,11 +57,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add CBB_Output.csv
+          git add CBB_Output.csv historical_data/
           # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Update CBB_Output.csv - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            # Pull with rebase to handle any commits made during this run
+            # Use --autostash to handle any unstaged changes from the scraper run
+            git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
             git push origin HEAD:${GITHUB_REF}
           fi
