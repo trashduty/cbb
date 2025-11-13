@@ -50,6 +50,7 @@ input_file = os.path.join(script_dir, 'CBB_Output.csv')
 excel_output = os.path.join(script_dir, 'master_game_tracking.xlsx')
 summary_file = os.path.join(script_dir, 'tracking_summary.csv')
 kenpom_data_dir = os.path.join(script_dir, 'kenpom-data')
+crosswalk_file = os.path.join(script_dir, 'data', 'crosswalk.csv')
 # Legacy CSV files
 legacy_spread_csv = os.path.join(script_dir, 'master_spread_games.csv')
 legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
@@ -57,10 +58,72 @@ legacy_total_csv = os.path.join(script_dir, 'master_total_games.csv')
 # Thresholds
 EDGE_THRESHOLD = 0.03
 
+# Global crosswalk cache
+_CROSSWALK_CACHE = None
+
 def log(message, level="INFO"):
     """Print timestamped log message with level"""
     timestamp = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
     print(f"[{timestamp}] [{level}] {message}")
+
+def load_team_name_crosswalk():
+    """Load the team name crosswalk from data/crosswalk.csv
+    
+    Returns a dictionary mapping API names (with mascots) to KenPom names
+    """
+    global _CROSSWALK_CACHE
+    
+    # Return cached version if available
+    if _CROSSWALK_CACHE is not None:
+        return _CROSSWALK_CACHE
+    
+    if not os.path.exists(crosswalk_file):
+        log(f"Warning: Crosswalk file not found at {crosswalk_file}", "WARNING")
+        log("Falling back to fuzzy matching", "WARNING")
+        _CROSSWALK_CACHE = {}
+        return _CROSSWALK_CACHE
+    
+    try:
+        df = pd.read_csv(crosswalk_file)
+        
+        # Create mapping from API column to kenpom column
+        crosswalk = {}
+        for _, row in df.iterrows():
+            api_name = row['API']
+            kenpom_name = row['kenpom']
+            
+            if pd.notna(api_name) and pd.notna(kenpom_name):
+                crosswalk[api_name] = kenpom_name
+        
+        log(f"Loaded team name crosswalk with {len(crosswalk)} mappings", "DEBUG")
+        _CROSSWALK_CACHE = crosswalk
+        return crosswalk
+        
+    except Exception as e:
+        log(f"Error loading crosswalk file: {e}", "WARNING")
+        log("Falling back to fuzzy matching", "WARNING")
+        _CROSSWALK_CACHE = {}
+        return _CROSSWALK_CACHE
+
+def map_team_name_to_kenpom(team_name, crosswalk=None):
+    """Map a team name (with mascot) to its KenPom equivalent
+    
+    Args:
+        team_name: Team name from tracked games (e.g., "Oklahoma St Cowboys")
+        crosswalk: Optional crosswalk dictionary (loaded if not provided)
+    
+    Returns:
+        KenPom team name (e.g., "Oklahoma St.") or original name if not found
+    """
+    if crosswalk is None:
+        crosswalk = load_team_name_crosswalk()
+    
+    # Try exact match first
+    if team_name in crosswalk:
+        return crosswalk[team_name]
+    
+    # If not found, return original name (will fall back to fuzzy matching)
+    return team_name
 
 def normalize_team_name(team_name):
     """Normalize team name for matching
@@ -102,13 +165,14 @@ def normalize_team_name(team_name):
     
     return normalized
 
-def fuzzy_match_teams(team1, team2, threshold=0.85):
-    """Check if two team names match using fuzzy string matching
+def fuzzy_match_teams(team1, team2, threshold=0.85, crosswalk=None):
+    """Check if two team names match using crosswalk lookup and fuzzy string matching
     
     Args:
-        team1: First team name
-        team2: Second team name
-        threshold: Similarity threshold (0.0 to 1.0)
+        team1: First team name (typically from tracked games with mascots)
+        team2: Second team name (typically from FanMatch)
+        threshold: Similarity threshold (0.0 to 1.0) for fuzzy matching
+        crosswalk: Optional crosswalk dictionary (loaded if not provided)
     
     Returns:
         bool: True if teams match, False otherwise
@@ -116,6 +180,23 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
     if not team1 or not team2:
         return False
     
+    # Load crosswalk if not provided
+    if crosswalk is None:
+        crosswalk = load_team_name_crosswalk()
+    
+    # Try crosswalk lookup first (most accurate)
+    if crosswalk:
+        # Map team1 (API name with mascot) to KenPom name
+        kenpom_name1 = crosswalk.get(team1)
+        if kenpom_name1:
+            # Direct comparison with team2
+            if kenpom_name1 == team2:
+                return True
+            # Also try normalized comparison
+            if normalize_team_name(kenpom_name1) == normalize_team_name(team2):
+                return True
+    
+    # Fallback to fuzzy matching if crosswalk doesn't help
     # Normalize both names (removes mascots)
     norm1 = normalize_team_name(team1)
     norm2 = normalize_team_name(team2)
@@ -445,6 +526,9 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
     log(f"DEBUG: Processing {len(spread_games)} spread games", "DEBUG")
     log(f"DEBUG: FanMatch has results for {len(fanmatch_results)} games", "DEBUG")
     
+    # Load team name crosswalk for accurate matching
+    crosswalk = load_team_name_crosswalk()
+    
     # Add new columns for results
     spread_games['actual_score_team'] = None
     spread_games['actual_score_opponent'] = None
@@ -501,9 +585,9 @@ def add_game_results_to_spreads(spread_games, fanmatch_results):
                 exact_match_home = (team == home_team)
                 exact_match_away = (team == away_team)
                 
-                # Try fuzzy matching if exact fails
-                fuzzy_match_home = fuzzy_match_teams(team, home_team)
-                fuzzy_match_away = fuzzy_match_teams(team, away_team)
+                # Try fuzzy matching if exact fails (pass crosswalk for accurate matching)
+                fuzzy_match_home = fuzzy_match_teams(team, home_team, crosswalk=crosswalk)
+                fuzzy_match_away = fuzzy_match_teams(team, away_team, crosswalk=crosswalk)
                 
                 match_attempts.append({
                     'fanmatch_home': home_team,
@@ -588,6 +672,9 @@ def add_game_results_to_totals(total_games, fanmatch_results):
     log("Adding game results to total games...")
     log(f"DEBUG: Processing {len(total_games)} total games", "DEBUG")
     
+    # Load team name crosswalk for accurate matching
+    crosswalk = load_team_name_crosswalk()
+    
     # Add new columns for results
     total_games['actual_score_team1'] = None
     total_games['actual_score_team2'] = None
@@ -637,11 +724,11 @@ def add_game_results_to_totals(total_games, fanmatch_results):
                 
                 log(f"  Date matches! Checking teams: FanMatch(home='{home_team}', away='{away_team}') vs Tracked('{team1}' vs '{team2}')", "DEBUG")
                 
-                # Check both orderings with fuzzy matching
-                match_1_home = fuzzy_match_teams(team1, home_team)
-                match_1_away = fuzzy_match_teams(team2, away_team)
-                match_2_home = fuzzy_match_teams(team2, home_team)
-                match_2_away = fuzzy_match_teams(team1, away_team)
+                # Check both orderings with fuzzy matching (pass crosswalk for accurate matching)
+                match_1_home = fuzzy_match_teams(team1, home_team, crosswalk=crosswalk)
+                match_1_away = fuzzy_match_teams(team2, away_team, crosswalk=crosswalk)
+                match_2_home = fuzzy_match_teams(team2, home_team, crosswalk=crosswalk)
+                match_2_away = fuzzy_match_teams(team1, away_team, crosswalk=crosswalk)
                 
                 match_attempts.append({
                     'fanmatch_home': home_team,
