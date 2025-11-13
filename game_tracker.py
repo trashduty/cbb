@@ -68,7 +68,8 @@ def normalize_team_name(team_name):
     - Convert to lowercase
     - Strip whitespace
     - Remove extra spaces
-    - Handle common variations
+    - Remove common mascot names
+    - Handle common abbreviations
     """
     if not team_name:
         return ""
@@ -79,9 +80,25 @@ def normalize_team_name(team_name):
     # Replace multiple spaces with single space
     normalized = re.sub(r'\s+', ' ', normalized)
     
-    # Normalize common abbreviations
-    normalized = normalized.replace('st.', 'saint')
-    normalized = normalized.replace(' st ', ' saint ')
+    # Normalize common abbreviations (but preserve them for now)
+    normalized = normalized.replace('st.', 'st')
+    
+    # Common mascots to remove for matching
+    mascots = [
+        'eagles', 'hawks', 'knights', 'panthers', 'tigers', 'bears', 'wildcats',
+        'bulldogs', 'cardinals', 'spartans', 'terriers', 'fighting illini', 
+        'crimson tide', 'volunteers', 'blue devils', 'tar heels', 'boilermakers',
+        'gators', 'seminoles', 'sooners', 'longhorns', 'wolverines', 'buckeyes',
+        'trojans', 'bruins', 'golden bears', 'cowboys', 'aggies', 'huskies',
+        'cougars', 'lions', 'jaguars', 'pirates', 'raiders', 'rebels', 'rams',
+        'friars', 'quakers', 'colonels', 'lumberjacks', 'blue hens', 'jaspers',
+        'grizzlies', 'ospreys', 'hornets', 'gauchos', 'monarchs', 'delta devils'
+    ]
+    
+    # Remove mascots from the end of team names
+    for mascot in mascots:
+        if normalized.endswith(' ' + mascot):
+            normalized = normalized[:-len(mascot)-1].strip()
     
     return normalized
 
@@ -99,7 +116,7 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
     if not team1 or not team2:
         return False
     
-    # Normalize both names
+    # Normalize both names (removes mascots)
     norm1 = normalize_team_name(team1)
     norm2 = normalize_team_name(team2)
     
@@ -108,7 +125,7 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
         return True
     
     # Check if one is a substring of the other at the START (not just anywhere)
-    # This handles cases like "Duke" vs "Duke Blue Devils" (mascot)
+    # This handles cases like "Duke" vs "Duke Blue Devils" (mascot already removed)
     # but prevents "Florida" vs "Florida Atlantic" (different school)
     if norm1.startswith(norm2) or norm2.startswith(norm1):
         longer_str = norm1 if len(norm1) > len(norm2) else norm2
@@ -117,17 +134,17 @@ def fuzzy_match_teams(team1, team2, threshold=0.85):
         # Get the extra part after the shorter name
         extra = longer_str[len(shorter_str):].strip()
         
-        # If the extra part contains indicators of a different school (not just mascot), don't match
-        different_school_indicators = ['atlantic', ' state', ' tech', ' christian', 
+        # If the extra part contains indicators of a different school, don't match
+        different_school_indicators = ['atlantic', 'tech', 'christian', 
                                       'southern', 'northern', 'eastern', 'western',
-                                      'central', 'upstate']
+                                      'central', 'upstate', '-']
         
         # Check if any indicator is in the extra part
         for indicator in different_school_indicators:
             if indicator in extra:
                 return False
         
-        # If no different school indicator, it's probably just a mascot - match!
+        # If no different school indicator, it's probably the same school - match!
         return True
     
     # Fuzzy match using SequenceMatcher
@@ -254,8 +271,8 @@ def parse_fanmatch_html(html_content, date=None):
         try:
             cells = row.find_all('td')
             
-            # Skip rows with insufficient cells
-            if len(cells) < 5:
+            # Skip rows with insufficient cells (need at least game and prediction columns)
+            if len(cells) < 2:
                 continue
             
             game_data = {
