@@ -1213,6 +1213,46 @@ def main():
         
         log("=" * 60)
         
+        # Multi-date FanMatch scraping
+        # Check if we have qualifying games that need results
+        if not spread_games.empty or not total_games.empty:
+            try:
+                log("=" * 60)
+                log("MULTI-DATE FANMATCH SCRAPING")
+                log("=" * 60)
+                
+                # Import scraping module
+                try:
+                    from scrape_fanmatch import scrape_fanmatch_for_tracked_games
+                    
+                    # Check if credentials are available
+                    if os.getenv('EMAIL') and os.getenv('PASSWORD'):
+                        log("KenPom credentials found - attempting to scrape FanMatch data...")
+                        
+                        # Scrape FanMatch data for all unique game dates
+                        success_count = scrape_fanmatch_for_tracked_games(
+                            spread_games,
+                            total_games,
+                            kenpom_data_dir,
+                            headless=True
+                        )
+                        
+                        if success_count > 0:
+                            log(f"Successfully scraped FanMatch data for {success_count} dates")
+                        else:
+                            log("No new FanMatch data was scraped", "WARNING")
+                    else:
+                        log("KenPom credentials not found in environment - skipping scraping", "WARNING")
+                        log("To enable scraping, set EMAIL and PASSWORD in .env file", "WARNING")
+                        
+                except ImportError as ie:
+                    log(f"Could not import scrape_fanmatch module: {ie}", "WARNING")
+                    log("Skipping automatic FanMatch scraping - will use existing HTML files", "WARNING")
+                    
+            except Exception as scrape_error:
+                log(f"Error during FanMatch scraping: {scrape_error}", "WARNING")
+                log("Continuing with existing FanMatch data...", "WARNING")
+        
         # Load FanMatch results for grading
         fanmatch_results = load_fanmatch_results()
         
