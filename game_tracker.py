@@ -35,6 +35,15 @@ import re
 from bs4 import BeautifulSoup
 from difflib import SequenceMatcher
 
+# Validate openpyxl is available for Excel operations
+try:
+    import openpyxl
+    EXCEL_AVAILABLE = True
+except ImportError:
+    EXCEL_AVAILABLE = False
+    print("WARNING: openpyxl is not installed. Excel file creation will not be available.")
+    print("Install with: pip install openpyxl")
+
 # Define file paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
 input_file = os.path.join(script_dir, 'CBB_Output.csv')
@@ -873,6 +882,10 @@ def deduplicate_games(new_games, existing_games, use_game_key=False):
         existing_games: DataFrame of existing games
         use_game_key: If True, use Game column for deduplication instead of Team
     """
+    # Handle empty new_games DataFrame
+    if new_games.empty:
+        return new_games
+    
     if existing_games.empty:
         return new_games
     
@@ -916,6 +929,75 @@ def deduplicate_games(new_games, existing_games, use_game_key=False):
     
     return new_games
 
+def save_to_csv_fallback(spread_games, total_games):
+    """Fallback function to save data to CSV files if Excel writing fails
+    
+    Args:
+        spread_games: DataFrame of spread games
+        total_games: DataFrame of total games
+    
+    Returns:
+        tuple: (spread_count, total_count) - number of new games added
+    """
+    log("Using CSV fallback for data storage...")
+    
+    csv_spread_file = os.path.join(script_dir, 'master_spread_games.csv')
+    csv_total_file = os.path.join(script_dir, 'master_total_games.csv')
+    
+    spread_count = 0
+    total_count = 0
+    
+    try:
+        # Load existing CSV data
+        existing_spread = pd.DataFrame()
+        existing_total = pd.DataFrame()
+        
+        if os.path.exists(csv_spread_file):
+            existing_spread = pd.read_csv(csv_spread_file)
+            log(f"Loaded {len(existing_spread)} existing spread records from CSV")
+        
+        if os.path.exists(csv_total_file):
+            existing_total = pd.read_csv(csv_total_file)
+            log(f"Loaded {len(existing_total)} existing total records from CSV")
+        
+        # Deduplicate
+        new_spread_games = deduplicate_games(spread_games, existing_spread, use_game_key=False)
+        new_total_games = deduplicate_games(total_games, existing_total, use_game_key=True)
+        
+        spread_count = len(new_spread_games)
+        total_count = len(new_total_games)
+        
+        # Combine with existing data
+        if existing_spread.empty:
+            final_spread = new_spread_games
+        else:
+            final_spread = pd.concat([existing_spread, new_spread_games], ignore_index=True)
+        
+        if existing_total.empty:
+            final_total = new_total_games
+        else:
+            final_total = pd.concat([existing_total, new_total_games], ignore_index=True)
+        
+        # Save to CSV
+        if not final_spread.empty:
+            final_spread.to_csv(csv_spread_file, index=False)
+            log(f"Successfully saved {len(final_spread)} spread games to {csv_spread_file}")
+        
+        if not final_total.empty:
+            final_total.to_csv(csv_total_file, index=False)
+            log(f"Successfully saved {len(final_total)} total games to {csv_total_file}")
+        
+        log(f"CSV fallback completed: {spread_count} new spread games, {total_count} new total games")
+        
+        return spread_count, total_count
+        
+    except Exception as e:
+        log(f"ERROR: CSV fallback also failed: {str(e)}", "ERROR")
+        import traceback
+        log(f"Traceback: {traceback.format_exc()}", "ERROR")
+        return 0, 0
+
+
 def save_to_excel(spread_games, total_games):
     """Save spread and total games to Excel file with separate sheets
     
@@ -927,6 +1009,13 @@ def save_to_excel(spread_games, total_games):
         tuple: (spread_count, total_count) - number of new games added
     """
     log("Saving games to Excel file...")
+    log(f"Target Excel file path: {excel_output}")
+    
+    # Check if openpyxl is available
+    if not EXCEL_AVAILABLE:
+        log("ERROR: openpyxl is not available. Cannot create Excel file.", "ERROR")
+        log("Falling back to CSV output...", "WARNING")
+        return save_to_csv_fallback(spread_games, total_games)
     
     # Load existing data (includes CSV migration)
     existing_spread, existing_total = load_existing_excel_data()
@@ -935,12 +1024,19 @@ def save_to_excel(spread_games, total_games):
     log(f"Before merge - Existing spread records: {len(existing_spread)}, New spread candidates: {len(spread_games)}")
     log(f"Before merge - Existing total records: {len(existing_total)}, New total candidates: {len(total_games)}")
     
+    # Validate input DataFrames
+    log(f"Input data validation:")
+    log(f"  Spread games DataFrame: {len(spread_games)} rows, {len(spread_games.columns) if not spread_games.empty else 0} columns")
+    log(f"  Total games DataFrame: {len(total_games)} rows, {len(total_games.columns) if not total_games.empty else 0} columns")
+    
     # Deduplicate new games
     new_spread_games = deduplicate_games(spread_games, existing_spread, use_game_key=False)
     new_total_games = deduplicate_games(total_games, existing_total, use_game_key=True)
     
     spread_count = len(new_spread_games)
     total_count = len(new_total_games)
+    
+    log(f"After deduplication: {spread_count} new spread games, {total_count} new total games")
     
     # Combine with existing data
     if existing_spread.empty:
@@ -959,20 +1055,78 @@ def save_to_excel(spread_games, total_games):
     log(f"  Final total count: {len(final_total)} (should be >= existing {len(existing_total)})")
     
     if len(final_spread) < len(existing_spread):
-        log(f"ERROR: Data loss detected in spreads! Final: {len(final_spread)}, Expected: >= {len(existing_spread)}")
+        log(f"ERROR: Data loss detected in spreads! Final: {len(final_spread)}, Expected: >= {len(existing_spread)}", "ERROR")
     
     if len(final_total) < len(existing_total):
-        log(f"ERROR: Data loss detected in totals! Final: {len(final_total)}, Expected: >= {len(existing_total)}")
+        log(f"ERROR: Data loss detected in totals! Final: {len(final_total)}, Expected: >= {len(existing_total)}", "ERROR")
     
-    # Save to Excel with multiple sheets
-    with pd.ExcelWriter(excel_output, engine='openpyxl') as writer:
-        final_spread.to_excel(writer, sheet_name='Spreads', index=False)
-        final_total.to_excel(writer, sheet_name='Totals', index=False)
+    # Check if we have data to write
+    if final_spread.empty and final_total.empty:
+        log("WARNING: No data to write to Excel file (both DataFrames are empty)", "WARNING")
+        log("Excel file will not be created/updated", "WARNING")
+        return 0, 0
     
-    log(f"Saved {len(final_spread)} spread games and {len(final_total)} total games to {excel_output}")
-    log(f"New games added this run: {spread_count} spreads, {total_count} totals")
+    # Log DataFrame structure before writing
+    if not final_spread.empty:
+        log(f"Spreads DataFrame structure: shape={final_spread.shape}, columns={list(final_spread.columns[:5])}...", "DEBUG")
+    if not final_total.empty:
+        log(f"Totals DataFrame structure: shape={final_total.shape}, columns={list(final_total.columns[:5])}...", "DEBUG")
     
-    return spread_count, total_count
+    # Save to Excel with multiple sheets - with comprehensive error handling
+    try:
+        log(f"Attempting to write Excel file to: {excel_output}")
+        log(f"Writing {len(final_spread)} spread games and {len(final_total)} total games")
+        
+        # Check file permissions
+        excel_dir = os.path.dirname(excel_output)
+        if not os.access(excel_dir, os.W_OK):
+            log(f"ERROR: No write permission for directory: {excel_dir}", "ERROR")
+            raise PermissionError(f"Cannot write to directory: {excel_dir}")
+        
+        # Check if file exists and is writable
+        if os.path.exists(excel_output):
+            if not os.access(excel_output, os.W_OK):
+                log(f"ERROR: Excel file exists but is not writable: {excel_output}", "ERROR")
+                raise PermissionError(f"Cannot write to file: {excel_output}")
+            log(f"Updating existing Excel file: {excel_output}")
+        else:
+            log(f"Creating new Excel file: {excel_output}")
+        
+        # Write to Excel
+        with pd.ExcelWriter(excel_output, engine='openpyxl') as writer:
+            final_spread.to_excel(writer, sheet_name='Spreads', index=False)
+            log(f"Successfully wrote 'Spreads' sheet with {len(final_spread)} rows")
+            
+            final_total.to_excel(writer, sheet_name='Totals', index=False)
+            log(f"Successfully wrote 'Totals' sheet with {len(final_total)} rows")
+        
+        # Verify the file was created/updated
+        if os.path.exists(excel_output):
+            file_size = os.path.getsize(excel_output)
+            log(f"SUCCESS: Excel file created/updated successfully at {excel_output}")
+            log(f"File size: {file_size} bytes")
+        else:
+            log(f"ERROR: Excel file was not created at {excel_output}", "ERROR")
+            raise FileNotFoundError(f"Excel file was not created: {excel_output}")
+        
+        log(f"Saved {len(final_spread)} spread games and {len(final_total)} total games to {excel_output}")
+        log(f"New games added this run: {spread_count} spreads, {total_count} totals")
+        
+        return spread_count, total_count
+        
+    except PermissionError as e:
+        log(f"ERROR: Permission denied when writing Excel file: {str(e)}", "ERROR")
+        log("The file might be open in another application (Excel, etc.)", "ERROR")
+        log("Falling back to CSV output...", "WARNING")
+        return save_to_csv_fallback(spread_games, total_games)
+        
+    except Exception as e:
+        log(f"ERROR: Failed to write Excel file: {str(e)}", "ERROR")
+        log(f"Error type: {type(e).__name__}", "ERROR")
+        import traceback
+        log(f"Traceback: {traceback.format_exc()}", "ERROR")
+        log("Falling back to CSV output...", "WARNING")
+        return save_to_csv_fallback(spread_games, total_games)
 
 def update_summary(spread_count, total_count):
     """Update tracking summary with run statistics"""
@@ -1031,6 +1185,34 @@ def main():
         spread_games = filter_spread_games(df)
         total_games = filter_total_games(df)
         
+        # Log qualifying games summary before processing
+        log("=" * 60)
+        log("QUALIFYING GAMES SUMMARY:")
+        log(f"  Spread games found: {len(spread_games)}")
+        log(f"  Total games found: {len(total_games)}")
+        
+        if len(spread_games) > 0:
+            log(f"  Spread game details:")
+            for idx, row in spread_games.head(5).iterrows():
+                log(f"    - {row.get('Team', 'N/A')} on {row.get('Game Time', 'N/A')}, Edge: {row.get('Edge For Covering Spread', 0):.3f}")
+            if len(spread_games) > 5:
+                log(f"    ... and {len(spread_games) - 5} more spread games")
+        else:
+            log("  No spread games qualified (Edge < 0.03 or consensus flag = 0)")
+        
+        if len(total_games) > 0:
+            log(f"  Total game details:")
+            for idx, row in total_games.head(5).iterrows():
+                over_edge = row.get('Over Total Edge', 0)
+                under_edge = row.get('Under Total Edge', 0)
+                log(f"    - {row.get('Game', 'N/A')} on {row.get('Game Time', 'N/A')}, Over Edge: {over_edge:.3f}, Under Edge: {under_edge:.3f}")
+            if len(total_games) > 5:
+                log(f"    ... and {len(total_games) - 5} more total games")
+        else:
+            log("  No total games qualified (Edge < 0.03 or consensus flags = 0)")
+        
+        log("=" * 60)
+        
         # Load FanMatch results for grading
         fanmatch_results = load_fanmatch_results()
         
@@ -1042,6 +1224,9 @@ def main():
             total_games = add_game_results_to_totals(total_games, fanmatch_results)
         
         # Save to Excel file
+        log("=" * 60)
+        log("SAVING TO EXCEL FILE")
+        log("=" * 60)
         spread_count, total_count = save_to_excel(spread_games, total_games)
         
         # Update summary
@@ -1055,7 +1240,7 @@ def main():
         sys.exit(0)
         
     except Exception as e:
-        log(f"ERROR: {str(e)}")
+        log(f"ERROR: {str(e)}", "ERROR")
         import traceback
         traceback.print_exc()
         sys.exit(1)
