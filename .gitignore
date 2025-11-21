@@ -23,3 +23,10 @@ master_spread_games.csv
 master_total_games.csv
 master_spread_games_backup.csv
 master_total_games_backup.csv
+
+# KenPom HTML files (intermediate scraping files, not needed in repo)
+kenpom-data/fanmatch-*.html
+kenpom-data/summary.txt
+
+# Logs
+*.log

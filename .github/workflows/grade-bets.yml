@@ -1,0 +1,47 @@
+name: Grade Completed Bets
+
+on:
+  schedule:
+    # Run daily at 6 AM ET (10 AM UTC during EST, 11 AM UTC during EDT)
+    # This gives games from previous night time to complete
+    - cron: '0 11 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install UV
+        run: pip install uv
+
+      - name: Grade completed bets
+        run: uv run src/scrapers/grade_bets.py
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+
+      - name: Commit and push graded results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add graded_results.csv unmatched_games.csv
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No new graded results to commit"
+          else
+            git commit -m "Update graded results - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            # Pull with rebase to handle any commits made during this run
+            git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
+            git push origin HEAD:${GITHUB_REF}
+          fi

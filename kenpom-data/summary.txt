@@ -1,6 +1,14 @@
-Downloaded 5 HTML files:
-- fanmatch-2025-03-14.html
-- fanmatch-2025-03-15.html
-- fanmatch-2025-04-07.html
-- fanmatch-2025-11-03.html
+Downloaded 13 HTML files:
+- fanmatch-2025-11-20.html
+- fanmatch-2025-11-21.html
+- fanmatch-2025-11-22.html
+- fanmatch-2025-11-23.html
+- fanmatch-2025-11-24.html
+- fanmatch-2025-11-25.html
+- fanmatch-2025-11-26.html
+- fanmatch-2025-11-27.html
+- fanmatch-2025-11-28.html
+- fanmatch-2025-11-29.html
+- fanmatch-2025-11-30.html
+- fanmatch-2025-12-01.html
 - fanmatch-initial.html
