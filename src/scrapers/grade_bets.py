@@ -258,6 +258,54 @@ def load_historical_predictions(date_str):
         logger.error(f"[red]✗[/red] Error reading {filename}: {e}")
         return None
 
+def normalize_team_name(name):
+    """
+    Normalize team names to handle variations between data sources.
+
+    Args:
+        name (str): Team name
+
+    Returns:
+        str: Normalized team name
+    """
+    if not name:
+        return name
+
+    # Common abbreviation expansions
+    replacements = {
+        ' St ': ' State ',
+        ' St.': ' State',
+        'St ': 'State ',
+        'St.': 'State',
+        'St ': 'State ',
+        ' Int\'l': ' International',
+        'Int\'l ': 'International ',
+        'UNC ': 'North Carolina ',
+        'UNLV': 'Nevada Las Vegas',
+        'USC ': 'Southern California ',
+        'UCLA': 'California Los Angeles',
+        'TCU': 'Texas Christian',
+        'SMU': 'Southern Methodist',
+        'LSU': 'Louisiana State',
+        'BYU': 'Brigham Young',
+        'UCF': 'Central Florida',
+        'VCU': 'Virginia Commonwealth',
+        'UConn': 'Connecticut',
+        'IUPUI': 'Indiana-Purdue Indianapolis',
+        'SIU ': 'Southern Illinois ',
+        'San José': 'San Jose',
+        'San Jose St': 'San Jose State',
+    }
+
+    normalized = name
+    for old, new in replacements.items():
+        normalized = normalized.replace(old, new)
+
+    # Remove extra spaces and normalize case
+    normalized = ' '.join(normalized.split())
+
+    return normalized
+
 def match_games(scores, predictions_df):
     """
     Match completed games with historical predictions.
@@ -277,11 +325,20 @@ def match_games(scores, predictions_df):
         home_team = score_game['home_team']
         away_team = score_game['away_team']
 
+        # Normalize team names for comparison
+        home_norm = normalize_team_name(home_team)
+        away_norm = normalize_team_name(away_team)
+
+        # Create normalized columns for matching if not already present
+        if 'Home Team Normalized' not in predictions_df.columns:
+            predictions_df['Home Team Normalized'] = predictions_df['Home Team'].apply(normalize_team_name)
+            predictions_df['Away Team Normalized'] = predictions_df['Away Team'].apply(normalize_team_name)
+
         # Try to find matching game in predictions
-        # First try exact home/away match
+        # First try exact home/away match (with normalization)
         mask = (
-            (predictions_df['Home Team'] == home_team) &
-            (predictions_df['Away Team'] == away_team)
+            (predictions_df['Home Team Normalized'] == home_norm) &
+            (predictions_df['Away Team Normalized'] == away_norm)
         )
 
         matches = predictions_df[mask]
@@ -289,8 +346,8 @@ def match_games(scores, predictions_df):
         # If no match, try swapped home/away (ESPN might have different designation)
         if len(matches) == 0:
             mask_swapped = (
-                (predictions_df['Home Team'] == away_team) &
-                (predictions_df['Away Team'] == home_team)
+                (predictions_df['Home Team Normalized'] == away_norm) &
+                (predictions_df['Away Team Normalized'] == home_norm)
             )
             matches = predictions_df[mask_swapped]
 
