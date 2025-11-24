@@ -602,6 +602,45 @@ def merge_with_combined_data(odds_df):
 
     return result_df
 
+def calculate_spread_implied_prob_safe(spread_price):
+    """
+    Safely calculate spread implied probability with validation and defaults.
+    Defaults to -110 (standard spread odds) for missing/invalid data.
+
+    Args:
+        spread_price: American odds for the spread (e.g., -110, +105)
+
+    Returns:
+        float: Implied probability between 0 and 1
+    """
+    # Missing data: use standard -110 odds
+    if pd.isna(spread_price) or spread_price is None:
+        return 0.5238095238095238  # -110 odds = 52.38% implied probability
+
+    try:
+        spread_price = float(spread_price)
+    except (ValueError, TypeError):
+        logger.warning(f"Invalid spread price type: {spread_price}, using -110 default")
+        return 0.5238095238095238
+
+    # Validate spread prices are reasonable (-200 to +200)
+    # Spreads are typically -110 to -120, rarely outside -200 to +200
+    if abs(spread_price) > 200:
+        logger.warning(f"Outlier spread price detected: {spread_price}, using -110 default")
+        return 0.5238095238095238
+
+    # Spread prices should not be between -100 and +100 (except exactly -100 or +100)
+    # This catches cases where the spread line (e.g., 2.5) was mistakenly used as price
+    if -100 < spread_price < -99 or 99 < spread_price < 100:
+        prob = american_odds_to_implied_probability(spread_price)
+        if prob is not None:
+            return prob
+    elif 0 < abs(spread_price) < 100:
+        logger.warning(f"Suspicious spread price (likely spread line, not odds): {spread_price}, using -110 default")
+        return 0.5238095238095238
+
+    return american_odds_to_implied_probability(spread_price)
+
 def process_final_dataframe(final_df):
     """
     Process the final dataframe with spreads and totals lookup tables.
@@ -640,12 +679,20 @@ def process_final_dataframe(final_df):
         # Predicted Outcome is already rounded to 0.5 from line 624-625
         final_df['market_spread_rounded'] = (final_df['market_spread'] * 2).round() / 2
 
-        # Calculate spread implied probability from Spread Price
+        # Calculate spread implied probability from Spread Price using safe validation
         if 'Spread Price' in final_df.columns:
-            final_df['spread_implied_prob'] = final_df['Spread Price'].apply(american_odds_to_implied_probability)
+            logger.info("[cyan]Calculating spread implied probabilities with validation...[/cyan]")
+            final_df['spread_implied_prob'] = final_df['Spread Price'].apply(calculate_spread_implied_prob_safe)
+
+            # Log data quality stats
+            missing_count = final_df['Spread Price'].isna().sum()
+            total_count = len(final_df)
+            default_count = (final_df['spread_implied_prob'] == 0.5238095238095238).sum()
+            logger.info(f"[cyan]Spread Price data quality: {missing_count}/{total_count} missing, {default_count}/{total_count} using -110 default[/cyan]")
         else:
-            # If Spread Price doesn't exist, initialize with 0.5 (50% probability)
-            final_df['spread_implied_prob'] = 0.5
+            # If Spread Price doesn't exist, initialize with standard -110 odds (52.38%)
+            logger.warning("[yellow]⚠[/yellow] 'Spread Price' column not found, using -110 default for all games")
+            final_df['spread_implied_prob'] = 0.5238095238095238
 
         # Merge with lookup data using total_category, market_spread, and Predicted Outcome (instead of model_spread)
         # Predicted Outcome already incorporates market (60%) and model (40%) weighting
