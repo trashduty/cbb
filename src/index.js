@@ -343,8 +343,8 @@ async function runScrapers() {
     // Run the EvanMiya scraper first
     await runScript(path.join(__dirname, 'scrapers', 'evanmiya-scraper.js'), 'EvanMiya');
     
-    // Then run the KenPom scraper
-    await runScript(path.join(__dirname, 'scrapers', 'kenpom-scraper.js'), 'KenPom');
+    // Then run the KenPom API scraper (replaces web scraper to avoid Cloudflare issues)
+    await runScript(path.join(__dirname, 'scrapers', 'kenpom-api.js'), 'KenPom');
     
     // Run the EvanMiya transformer after scrapers have completed
     console.log("Running EvanMiya data transformer...");

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "scrape:all": "node src/index.js",
-    "scrape:kenpom": "node src/scrapers/kenpom-scraper.js",
+    "scrape:kenpom": "node src/scrapers/kenpom-api.js",
+    "scrape:kenpom:legacy": "node src/scrapers/kenpom-scraper.js",
     "scrape:evanmiya": "node src/scrapers/evanmiya-scraper.js",
     "parse:kenpom": "uv run src/parsers/kenpom-parser.py --html-dir kenpom-data --output data/kp.csv",
     "transform:evanmiya": "node src/transformers/evanmiya-transformer.js"
