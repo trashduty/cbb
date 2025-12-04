@@ -49,6 +49,7 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          KENPOM_API_KEY: ${{ secrets.KENPOM_API_KEY }}
 
       - name: Filter out started games
         run: python src/utils/filter_started_games.py
