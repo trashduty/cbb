@@ -1,119 +1,79 @@
 Game,Game Time,Home Team,Away Team,Team,Moneyline,Devigged Probability,Opening Spread,Spread Price,Projected Total,Over Point,Over Price,Under Point,Under Price
-Charleston Cougars vs. Massachusetts Minutemen,Dec 01 08:00PM ET,Charleston Cougars,Massachusetts Minutemen,Massachusetts Minutemen,,,-1.5,100.0,157.5,157.5,-110.0,157.5,-110.0
-Charleston Cougars vs. Massachusetts Minutemen,Dec 01 08:00PM ET,Charleston Cougars,Massachusetts Minutemen,Charleston Cougars,,,1.5,-120.0,157.5,157.5,-110.0,157.5,-110.0
-Missouri Tigers vs. South Dakota Coyotes,Nov 20 08:00PM ET,Missouri Tigers,South Dakota Coyotes,South Dakota Coyotes,2340.816326530612,0.03973536519763306,24.5,-110.0,172.25,172.25,-110.0,172.25,-110.0
-Missouri Tigers vs. South Dakota Coyotes,Nov 20 08:00PM ET,Missouri Tigers,South Dakota Coyotes,Missouri Tigers,-9999.99999999999,0.9602646348023669,-24.5,-110.0,172.25,172.25,-110.0,172.25,-110.0
-Rice Owls vs. Tarleton State Texans,Nov 20 08:00PM ET,Rice Owls,Tarleton State Texans,Tarleton State Texans,175.0,0.35018518518518515,4.75,-110.0,146.0,146.0,-110.0,146.0,-110.0
-Rice Owls vs. Tarleton State Texans,Nov 20 08:00PM ET,Rice Owls,Tarleton State Texans,Rice Owls,-207.47967479674793,0.6498148148148147,-4.75,-110.0,146.0,146.0,-110.0,146.0,-110.0
-North Texas Mean Green vs. Central Arkansas Bears,Nov 20 08:00PM ET,North Texas Mean Green,Central Arkansas Bears,Central Arkansas Bears,850.0,0.10037776578521317,15.5,-109.0,135.0,135.0,-110.0,135.0,-110.0
-Oklahoma Sooners vs. Oral Roberts Golden Eagles,Nov 20 08:00PM ET,Oklahoma Sooners,Oral Roberts Golden Eagles,Oklahoma Sooners,-9999.99999999999,0.952369998044651,-24.5,-110.0,165.75,165.75,-110.0,165.75,-110.0
-Ohio State Buckeyes vs. Western Michigan Broncos,Nov 20 08:00PM ET,Ohio State Buckeyes,Western Michigan Broncos,Western Michigan Broncos,2800.0,0.03365544818393868,26.5,-110.0,160.0,160.0,-110.0,160.0,-110.0
-Ohio State Buckeyes vs. Western Michigan Broncos,Nov 20 08:00PM ET,Ohio State Buckeyes,Western Michigan Broncos,Ohio State Buckeyes,-9999.99999999999,0.9663445518160613,-26.5,-110.0,160.0,160.0,-110.0,160.0,-110.0
-North Texas Mean Green vs. Central Arkansas Bears,Nov 20 08:00PM ET,North Texas Mean Green,Central Arkansas Bears,North Texas Mean Green,-1667.0000000000007,0.8996222342147868,-15.5,-114.0,135.0,135.0,-110.0,135.0,-110.0
-Oklahoma Sooners vs. Oral Roberts Golden Eagles,Nov 20 08:00PM ET,Oklahoma Sooners,Oral Roberts Golden Eagles,Oral Roberts Golden Eagles,1919.5121951219514,0.04763000195534903,24.5,-110.0,165.75,165.75,-110.0,165.75,-110.0
-Wake Forest Demon Deacons vs. Texas Tech Red Raiders,Nov 20 08:30PM ET,Wake Forest Demon Deacons,Texas Tech Red Raiders,Texas Tech Red Raiders,-542.4124513618676,0.8084908943278042,-9.5,-111.5,160.5,160.5,-110.0,160.5,-110.0
-Wake Forest Demon Deacons vs. Texas Tech Red Raiders,Nov 20 08:30PM ET,Wake Forest Demon Deacons,Texas Tech Red Raiders,Wake Forest Demon Deacons,400.0,0.1915091056721958,9.5,-107.5,160.5,160.5,-110.0,160.5,-110.0
-Houston Cougars vs. Rider Broncs,Nov 20 09:00PM ET,Houston Cougars,Rider Broncs,Houston Cougars,-9999.99999999999,0.9711510996858042,-40.5,-110.0,134.5,134.5,-110.0,134.5,-110.0
-Houston Cougars vs. Rider Broncs,Nov 20 09:00PM ET,Houston Cougars,Rider Broncs,Rider Broncs,3300.0,0.028848900314195947,40.5,-110.0,134.5,134.5,-110.0,134.5,-110.0
-Utah Utes vs. Cal Poly Mustangs,Nov 20 09:00PM ET,Utah Utes,Cal Poly Mustangs,Cal Poly Mustangs,737.3134328358209,0.11456004208864921,14.0,-110.0,166.5,166.5,-112.5,166.5,-109.0
-Utah Utes vs. Cal Poly Mustangs,Nov 20 09:00PM ET,Utah Utes,Cal Poly Mustangs,Utah Utes,-1200.0000000000007,0.8854399579113508,-14.0,-110.0,166.5,166.5,-112.5,166.5,-109.0
-Kansas St Wildcats vs. Mississippi St Bulldogs,Nov 20 09:30PM ET,Kansas St Wildcats,Mississippi St Bulldogs,Mississippi St Bulldogs,-135.00000000000003,0.551441114716549,-2.0,-109.0,164.5,164.5,-112.0,164.5,-110.0
-Kansas St Wildcats vs. Mississippi St Bulldogs,Nov 20 09:30PM ET,Kansas St Wildcats,Mississippi St Bulldogs,Kansas St Wildcats,114.0,0.448558885283451,2.0,-110.0,164.5,164.5,-112.0,164.5,-110.0
-UNLV Rebels vs. Saint Joseph's Hawks,Nov 20 10:00PM ET,UNLV Rebels,Saint Joseph's Hawks,UNLV Rebels,-537.2549019607842,0.8066812869889146,-10.0,-110.0,162.5,162.5,-110.0,162.5,-110.0
-USC Trojans vs. Troy Trojans,Nov 20 10:00PM ET,USC Trojans,Troy Trojans,Troy Trojans,1100.0000000000002,0.07975460122699385,18.5,-110.0,158.5,158.5,-110.0,158.5,-110.0
-USC Trojans vs. Troy Trojans,Nov 20 10:00PM ET,USC Trojans,Troy Trojans,USC Trojans,-2500.000000000002,0.9202453987730062,-18.5,-110.0,158.5,158.5,-110.0,158.5,-110.0
-UNLV Rebels vs. Saint Joseph's Hawks,Nov 20 10:00PM ET,UNLV Rebels,Saint Joseph's Hawks,Saint Joseph's Hawks,394.949494949495,0.19331871301108539,10.0,-110.0,162.5,162.5,-110.0,162.5,-110.0
-Tulane Green Wave vs. Utah State Aggies,Nov 21 01:00PM ET,Tulane Green Wave,Utah State Aggies,Tulane Green Wave,443.348623853211,0.17613315019794784,11.0,-110.0,152.5,152.5,-110.0,152.5,-110.0
-Tulane Green Wave vs. Utah State Aggies,Nov 21 01:00PM ET,Tulane Green Wave,Utah State Aggies,Utah State Aggies,-618.7500000000002,0.8238668498020522,-11.0,-106.0,152.5,152.5,-110.0,152.5,-110.0
-IUPUI Jaguars vs. Alabama St Hornets,Nov 21 02:00PM ET,IUPUI Jaguars,Alabama St Hornets,IUPUI Jaguars,109.8809523809524,0.45512073761332916,1.75,-110.0,182.5,182.5,-110.0,182.5,-110.0
-IUPUI Jaguars vs. Alabama St Hornets,Nov 21 02:00PM ET,IUPUI Jaguars,Alabama St Hornets,Alabama St Hornets,-132.78969957081543,0.5448792623866708,-1.75,-110.0,182.5,182.5,-110.0,182.5,-110.0
-Butler Bulldogs vs. South Carolina Gamecocks,Nov 21 02:00PM ET,Butler Bulldogs,South Carolina Gamecocks,South Carolina Gamecocks,110.00000000000001,0.4572564612326044,1.5,-105.0,154.5,154.5,-110.0,154.5,-110.0
-Butler Bulldogs vs. South Carolina Gamecocks,Nov 21 02:00PM ET,Butler Bulldogs,South Carolina Gamecocks,Butler Bulldogs,-129.99999999999997,0.5427435387673957,-1.5,-113.0,154.5,154.5,-110.0,154.5,-110.0
-UT-Arlington Mavericks vs. Campbell Fighting Camels,Nov 21 03:00PM ET,UT-Arlington Mavericks,Campbell Fighting Camels,Campbell Fighting Camels,115.00000000000001,0.44362292051756,1.5,-110.0,154.5,154.5,-110.0,154.5,-110.0
-UT-Arlington Mavericks vs. Campbell Fighting Camels,Nov 21 03:00PM ET,UT-Arlington Mavericks,Campbell Fighting Camels,UT-Arlington Mavericks,-140.00000000000003,0.5563770794824399,-1.5,-110.0,154.5,154.5,-110.0,154.5,-110.0
-Boston College Eagles vs. Davidson Wildcats,Nov 21 03:30PM ET,Boston College Eagles,Davidson Wildcats,Boston College Eagles,-114.99999999999997,0.5108342361863488,-1.0,-106.0,138.5,138.5,-110.0,138.5,-110.0
-Boston College Eagles vs. Davidson Wildcats,Nov 21 03:30PM ET,Boston College Eagles,Davidson Wildcats,Davidson Wildcats,-105.0,0.4891657638136511,1.0,-110.0,138.5,138.5,-110.0,138.5,-110.0
-Charleston Cougars vs. Massachusetts Minutemen,Nov 21 04:00PM ET,Charleston Cougars,Massachusetts Minutemen,Charleston Cougars,-107.46987951807228,0.49458427893542395,-1.0,-107.0,157.0,157.0,-110.0,157.0,-110.0
-BYU Cougars vs. Wisconsin Badgers,Nov 21 04:00PM ET,BYU Cougars,Wisconsin Badgers,BYU Cougars,-190.0,0.6301020408163266,-4.5,-110.0,161.5,161.5,-110.0,161.5,-110.0
-BYU Cougars vs. Wisconsin Badgers,Nov 21 04:00PM ET,BYU Cougars,Wisconsin Badgers,Wisconsin Badgers,159.99999999999997,0.3698979591836735,4.5,-110.0,161.5,161.5,-110.0,161.5,-110.0
-Charleston Cougars vs. Massachusetts Minutemen,Nov 21 04:00PM ET,Charleston Cougars,Massachusetts Minutemen,Massachusetts Minutemen,-112.47058823529412,0.505415721064576,1.0,-110.0,157.0,157.0,-110.0,157.0,-110.0
-Virginia Cavaliers vs. Northwestern Wildcats,Nov 21 05:00PM ET,Virginia Cavaliers,Northwestern Wildcats,Virginia Cavaliers,-190.0,0.6301020408163266,-4.5,-110.0,146.5,146.5,-110.0,146.5,-110.0
-Virginia Cavaliers vs. Northwestern Wildcats,Nov 21 05:00PM ET,Virginia Cavaliers,Northwestern Wildcats,Northwestern Wildcats,159.99999999999997,0.3698979591836735,4.5,-110.0,146.5,146.5,-110.0,146.5,-110.0
-Akron Zips vs. Iona Gaels,Nov 21 05:30PM ET,Akron Zips,Iona Gaels,Akron Zips,-550.0,0.8088235294117646,-10.5,-110.0,169.5,169.5,-110.0,169.5,-110.0
-Akron Zips vs. Iona Gaels,Nov 21 05:30PM ET,Akron Zips,Iona Gaels,Iona Gaels,400.0,0.19117647058823528,10.5,-110.0,169.5,169.5,-110.0,169.5,-110.0
-Lehigh Mountain Hawks vs. Columbia Lions,Nov 21 06:00PM ET,Lehigh Mountain Hawks,Columbia Lions,Lehigh Mountain Hawks,128.44638949671773,0.41871643432051076,2.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
-Air Force Falcons vs. SIU-Edwardsville Cougars,Nov 21 06:00PM ET,Air Force Falcons,SIU-Edwardsville Cougars,Air Force Falcons,125.00000000000001,0.4255319148936171,3.0,-110.0,131.5,131.5,-110.0,131.5,-110.0
-Air Force Falcons vs. SIU-Edwardsville Cougars,Nov 21 06:00PM ET,Air Force Falcons,SIU-Edwardsville Cougars,SIU-Edwardsville Cougars,-150.0,0.574468085106383,-3.0,-110.0,131.5,131.5,-110.0,131.5,-110.0
-Florida St Seminoles vs. Georgia Southern Eagles,Nov 21 06:00PM ET,Florida St Seminoles,Georgia Southern Eagles,Florida St Seminoles,-1999.9999999999975,0.9195402298850575,-16.5,-110.0,176.5,176.5,-110.0,176.5,-110.0
-Florida St Seminoles vs. Georgia Southern Eagles,Nov 21 06:00PM ET,Florida St Seminoles,Georgia Southern Eagles,Georgia Southern Eagles,1100.0000000000002,0.0804597701149425,16.5,-110.0,176.5,176.5,-110.0,176.5,-110.0
-Lehigh Mountain Hawks vs. Columbia Lions,Nov 21 06:00PM ET,Lehigh Mountain Hawks,Columbia Lions,Columbia Lions,-154.90196078431376,0.5812835656794891,-2.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
-Eastern Michigan Eagles vs. Oakland Golden Grizzlies,Nov 21 06:30PM ET,Eastern Michigan Eagles,Oakland Golden Grizzlies,Eastern Michigan Eagles,110.00000000000001,0.4532304725168756,1.5,-103.5,151.75,151.75,-112.5,151.75,-106.5
-Clemson Tigers vs. West Virginia Mountaineers,Nov 21 06:30PM ET,Clemson Tigers,West Virginia Mountaineers,West Virginia Mountaineers,139.99999999999997,0.3982300884955753,3.5,-110.0,134.5,134.5,-110.0,134.5,-110.0
-Eastern Michigan Eagles vs. Oakland Golden Grizzlies,Nov 21 06:30PM ET,Eastern Michigan Eagles,Oakland Golden Grizzlies,Oakland Golden Grizzlies,-135.00000000000003,0.5467695274831245,-1.5,-115.0,151.75,151.75,-112.5,151.75,-106.5
-Michigan St Spartans vs. Detroit Mercy Titans,Nov 21 06:30PM ET,Michigan St Spartans,Detroit Mercy Titans,Michigan St Spartans,-9999.99999999999,0.9711510996858042,-31.5,-110.0,149.0,149.0,-110.0,149.0,-108.0
-Clemson Tigers vs. West Virginia Mountaineers,Nov 21 06:30PM ET,Clemson Tigers,West Virginia Mountaineers,Clemson Tigers,-170.0,0.6017699115044248,-3.5,-110.0,134.5,134.5,-110.0,134.5,-110.0
-Michigan St Spartans vs. Detroit Mercy Titans,Nov 21 06:30PM ET,Michigan St Spartans,Detroit Mercy Titans,Detroit Mercy Titans,3300.0,0.028848900314195947,31.5,-110.0,149.0,149.0,-110.0,149.0,-108.0
-Cincinnati Bearcats vs. Louisville Cardinals,Nov 21 06:30PM ET,Cincinnati Bearcats,Louisville Cardinals,Cincinnati Bearcats,290.00000000000006,0.24516129032258063,8.5,-110.0,163.5,163.5,-110.0,163.5,-110.0
-Appalachian St Mountaineers vs. Charlotte 49ers,Nov 21 06:30PM ET,Appalachian St Mountaineers,Charlotte 49ers,Charlotte 49ers,110.00000000000001,0.4532304725168756,1.75,-105.5,133.5,133.5,-103.5,133.5,-116.0
-Appalachian St Mountaineers vs. Charlotte 49ers,Nov 21 06:30PM ET,Appalachian St Mountaineers,Charlotte 49ers,Appalachian St Mountaineers,-135.00000000000003,0.5467695274831245,-1.75,-112.5,133.5,133.5,-103.5,133.5,-116.0
-Cincinnati Bearcats vs. Louisville Cardinals,Nov 21 06:30PM ET,Cincinnati Bearcats,Louisville Cardinals,Louisville Cardinals,-375.0,0.7548387096774194,-8.5,-110.0,163.5,163.5,-110.0,163.5,-110.0
-Duke Blue Devils vs. Niagara Purple Eagles,Nov 21 07:00PM ET,Duke Blue Devils,Niagara Purple Eagles,Niagara Purple Eagles,,,38.5,-104.0,146.5,146.5,-110.0,146.5,-110.0
-Duke Blue Devils vs. Niagara Purple Eagles,Nov 21 07:00PM ET,Duke Blue Devils,Niagara Purple Eagles,Duke Blue Devils,,,-38.5,-118.0,146.5,146.5,-110.0,146.5,-110.0
-Western Illinois Leathernecks vs. Coastal Carolina Chanticleers,Nov 21 07:00PM ET,Western Illinois Leathernecks,Coastal Carolina Chanticleers,Western Illinois Leathernecks,105.0,0.4632426988922458,2.0,-110.0,136.75,136.75,-110.0,136.75,-109.0
-Western Illinois Leathernecks vs. Coastal Carolina Chanticleers,Nov 21 07:00PM ET,Western Illinois Leathernecks,Coastal Carolina Chanticleers,Coastal Carolina Chanticleers,-129.99999999999997,0.5367573011077543,-2.0,-108.0,136.75,136.75,-110.0,136.75,-109.0
-Kentucky Wildcats vs. Loyola (MD) Greyhounds,Nov 21 07:00PM ET,Kentucky Wildcats,Loyola (MD) Greyhounds,Loyola (MD) Greyhounds,,,34.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
-Kentucky Wildcats vs. Loyola (MD) Greyhounds,Nov 21 07:00PM ET,Kentucky Wildcats,Loyola (MD) Greyhounds,Kentucky Wildcats,,,-34.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
-Florida Gators vs. Merrimack Warriors,Nov 21 07:00PM ET,Florida Gators,Merrimack Warriors,Merrimack Warriors,,,36.5,-110.0,159.5,159.5,-110.0,159.5,-110.0
-East Tennessee St Buccaneers vs. Morehead St Eagles,Nov 21 07:00PM ET,East Tennessee St Buccaneers,Morehead St Eagles,East Tennessee St Buccaneers,-700.0,0.84,-11.5,-106.0,145.25,145.25,-109.0,145.25,-110.0
-East Tennessee St Buccaneers vs. Morehead St Eagles,Nov 21 07:00PM ET,East Tennessee St Buccaneers,Morehead St Eagles,Morehead St Eagles,500.00000000000006,0.15999999999999998,11.5,-110.0,145.25,145.25,-109.0,145.25,-110.0
-Florida Gators vs. Merrimack Warriors,Nov 21 07:00PM ET,Florida Gators,Merrimack Warriors,Florida Gators,,,-36.5,-110.0,159.5,159.5,-110.0,159.5,-110.0
-Drexel Dragons vs. Pennsylvania Quakers,Nov 21 07:00PM ET,Drexel Dragons,Pennsylvania Quakers,Pennsylvania Quakers,179.99999999999997,0.3418803418803419,5.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
-Drexel Dragons vs. Pennsylvania Quakers,Nov 21 07:00PM ET,Drexel Dragons,Pennsylvania Quakers,Drexel Dragons,-220.0,0.6581196581196581,-5.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
-N Colorado Bears vs. St. Thomas (MN) Tommies,Nov 21 07:30PM ET,N Colorado Bears,St. Thomas (MN) Tommies,N Colorado Bears,117.99999999999999,0.43664230974870794,2.5,-108.0,156.5,156.5,-110.0,156.5,-109.0
-N Colorado Bears vs. St. Thomas (MN) Tommies,Nov 21 07:30PM ET,N Colorado Bears,St. Thomas (MN) Tommies,St. Thomas (MN) Tommies,-145.0,0.5633576902512921,-2.5,-110.0,156.5,156.5,-110.0,156.5,-109.0
-UAB Blazers vs. South Alabama Jaguars,Nov 21 07:30PM ET,UAB Blazers,South Alabama Jaguars,South Alabama Jaguars,240.0,0.28169014084507044,7.25,-112.5,150.5,150.5,-110.0,150.5,-110.0
-UAB Blazers vs. South Alabama Jaguars,Nov 21 07:30PM ET,UAB Blazers,South Alabama Jaguars,UAB Blazers,-300.0,0.7183098591549295,-7.25,-105.5,150.5,150.5,-110.0,150.5,-110.0
-Texas State Bobcats vs. Arkansas-Little Rock Trojans,Nov 21 08:00PM ET,Texas State Bobcats,Arkansas-Little Rock Trojans,Arkansas-Little Rock Trojans,155.0,0.37443511943189156,4.5,-110.0,136.5,136.5,-110.0,136.5,-109.0
-Texas A&M Aggies vs. Manhattan Jaspers,Nov 21 08:00PM ET,Texas A&M Aggies,Manhattan Jaspers,Texas A&M Aggies,-6159.090909090912,0.9479806050163399,-23.0,-106.0,167.5,167.5,-110.0,167.5,-110.0
-Texas A&M Aggies vs. Manhattan Jaspers,Nov 21 08:00PM ET,Texas A&M Aggies,Manhattan Jaspers,Manhattan Jaspers,1751.9480519480521,0.05201939498366006,23.0,-110.0,167.5,167.5,-110.0,167.5,-110.0
-South Dakota St Jackrabbits vs. Georgia St Panthers,Nov 21 08:00PM ET,South Dakota St Jackrabbits,Georgia St Panthers,South Dakota St Jackrabbits,-624.9999999999997,0.8258258258258258,-11.5,-110.0,146.25,146.25,-108.0,146.25,-111.0
-South Dakota St Jackrabbits vs. Georgia St Panthers,Nov 21 08:00PM ET,South Dakota St Jackrabbits,Georgia St Panthers,Georgia St Panthers,449.99999999999994,0.1741741741741742,11.5,-110.0,146.25,146.25,-108.0,146.25,-111.0
-Saint Louis Billikens vs. Fort Wayne Mastodons,Nov 21 08:00PM ET,Saint Louis Billikens,Fort Wayne Mastodons,Fort Wayne Mastodons,1150.0,0.07680945347119646,19.25,-110.0,165.75,165.75,-112.5,165.75,-106.5
-Oregon St Beavers vs. Evansville Purple Aces,Nov 21 08:00PM ET,Oregon St Beavers,Evansville Purple Aces,Oregon St Beavers,-375.0,0.759493670886076,-8.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
-Oregon St Beavers vs. Evansville Purple Aces,Nov 21 08:00PM ET,Oregon St Beavers,Evansville Purple Aces,Evansville Purple Aces,300.0,0.24050632911392406,8.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
-Texas State Bobcats vs. Arkansas-Little Rock Trojans,Nov 21 08:00PM ET,Texas State Bobcats,Arkansas-Little Rock Trojans,Texas State Bobcats,-190.0,0.6255648805681084,-4.5,-110.0,136.5,136.5,-110.0,136.5,-109.0
-Loyola (Chi) Ramblers vs. Northern Illinois Huskies,Nov 21 08:00PM ET,Loyola (Chi) Ramblers,Northern Illinois Huskies,Loyola (Chi) Ramblers,-1099.9999999999993,0.8766066838046273,-13.5,-110.0,150.75,150.75,-112.5,150.75,-106.5
-Loyola (Chi) Ramblers vs. Northern Illinois Huskies,Nov 21 08:00PM ET,Loyola (Chi) Ramblers,Northern Illinois Huskies,Northern Illinois Huskies,675.0,0.12339331619537275,13.5,-108.0,150.75,150.75,-112.5,150.75,-106.5
-Arkansas Razorbacks vs. Jackson St Tigers,Nov 21 08:00PM ET,Arkansas Razorbacks,Jackson St Tigers,Arkansas Razorbacks,,,-28.5,-118.0,157.5,157.5,-115.0,157.5,-105.0
-Arkansas Razorbacks vs. Jackson St Tigers,Nov 21 08:00PM ET,Arkansas Razorbacks,Jackson St Tigers,Jackson St Tigers,,,28.5,-104.0,157.5,157.5,-115.0,157.5,-105.0
-Saint Louis Billikens vs. Fort Wayne Mastodons,Nov 21 08:00PM ET,Saint Louis Billikens,Fort Wayne Mastodons,Saint Louis Billikens,-2500.000000000002,0.9231905465288036,-19.25,-108.0,165.75,165.75,-112.5,165.75,-106.5
-LSU Tigers vs. Omaha Mavericks,Nov 21 08:00PM ET,LSU Tigers,Omaha Mavericks,LSU Tigers,-3430.555555555556,0.9298251778086745,-19.5,-110.0,164.5,164.5,-110.0,164.5,-110.0
-LSU Tigers vs. Omaha Mavericks,Nov 21 08:00PM ET,LSU Tigers,Omaha Mavericks,Omaha Mavericks,1263.6363636363637,0.07017482219132565,19.5,-110.0,164.5,164.5,-110.0,164.5,-110.0
-Xavier Musketeers vs. Georgia Bulldogs,Nov 21 09:00PM ET,Xavier Musketeers,Georgia Bulldogs,Georgia Bulldogs,-613.1944444444441,0.8219806887342388,-10.5,-110.0,162.25,162.25,-110.0,162.25,-110.0
-Xavier Musketeers vs. Georgia Bulldogs,Nov 21 09:00PM ET,Xavier Musketeers,Georgia Bulldogs,Xavier Musketeers,437.037037037037,0.17801931126576104,10.5,-110.0,162.25,162.25,-110.0,162.25,-110.0
-San Diego Toreros vs. UC Riverside Highlanders,Nov 21 09:00PM ET,San Diego Toreros,UC Riverside Highlanders,UC Riverside Highlanders,220.0,0.298804780876494,6.5,-110.0,152.25,152.25,-108.0,152.25,-111.0
-SMU Mustangs vs. Arkansas St Red Wolves,Nov 21 09:00PM ET,SMU Mustangs,Arkansas St Red Wolves,SMU Mustangs,-2335.9999999999964,0.9165576772168454,-16.5,-108.0,171.5,171.5,-110.0,171.5,-110.0
-SMU Mustangs vs. Arkansas St Red Wolves,Nov 21 09:00PM ET,SMU Mustangs,Arkansas St Red Wolves,Arkansas St Red Wolves,1045.4545454545455,0.0834423227831546,16.5,-110.0,171.5,171.5,-110.0,171.5,-110.0
-New Mexico St Aggies vs. Samford Bulldogs,Nov 21 09:00PM ET,New Mexico St Aggies,Samford Bulldogs,Samford Bulldogs,310.0,0.2336448598130841,8.5,-105.0,144.5,144.5,-110.0,144.5,-109.0
-San Diego Toreros vs. UC Riverside Highlanders,Nov 21 09:00PM ET,San Diego Toreros,UC Riverside Highlanders,San Diego Toreros,-274.99999999999994,0.7011952191235059,-6.5,-109.0,152.25,152.25,-108.0,152.25,-111.0
-Colorado St Rams vs. Denver Pioneers,Nov 21 09:00PM ET,Colorado St Rams,Denver Pioneers,Denver Pioneers,1100.0000000000002,0.07975460122699385,18.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
-Colorado St Rams vs. Denver Pioneers,Nov 21 09:00PM ET,Colorado St Rams,Denver Pioneers,Colorado St Rams,-2500.000000000002,0.9202453987730062,-18.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
-Colorado Buffaloes vs. UC Davis Aggies,Nov 21 09:00PM ET,Colorado Buffaloes,UC Davis Aggies,UC Davis Aggies,919.5121951219513,0.09377732929700637,15.5,-106.0,155.5,155.5,-110.0,155.5,-110.0
-Colorado Buffaloes vs. UC Davis Aggies,Nov 21 09:00PM ET,Colorado Buffaloes,UC Davis Aggies,Colorado Buffaloes,-1817.9487179487182,0.9062226707029936,-15.5,-110.0,155.5,155.5,-110.0,155.5,-110.0
-New Mexico St Aggies vs. Samford Bulldogs,Nov 21 09:00PM ET,New Mexico St Aggies,Samford Bulldogs,New Mexico St Aggies,-400.0000000000001,0.7663551401869159,-8.5,-113.5,144.5,144.5,-110.0,144.5,-109.0
-Stanford Cardinal vs. Seattle Redhawks,Nov 21 10:00PM ET,Stanford Cardinal,Seattle Redhawks,Stanford Cardinal,-726.3473053892216,0.8428563792826983,-11.5,-105.0,148.5,148.5,-110.0,148.5,-110.0
-Stanford Cardinal vs. Seattle Redhawks,Nov 21 10:00PM ET,Stanford Cardinal,Seattle Redhawks,Seattle Redhawks,510.204081632653,0.15714362071730184,11.5,-115.0,148.5,148.5,-110.0,148.5,-110.0
-Santa Clara Broncos vs. Louisiana Ragin' Cajuns,Nov 21 10:00PM ET,Santa Clara Broncos,Louisiana Ragin' Cajuns,Santa Clara Broncos,-3231.343283582097,0.9271354744245038,-18.0,-110.0,141.5,141.5,-110.0,141.5,-110.0
-Santa Clara Broncos vs. Louisiana Ragin' Cajuns,Nov 21 10:00PM ET,Santa Clara Broncos,Louisiana Ragin' Cajuns,Louisiana Ragin' Cajuns,1211.787072243346,0.07286452557549614,18.0,-110.0,141.5,141.5,-110.0,141.5,-110.0
-Portland Pilots vs. CSU Fullerton Titans,Nov 21 10:00PM ET,Portland Pilots,CSU Fullerton Titans,Portland Pilots,-220.0,0.6581196581196581,-5.5,-110.0,161.25,161.25,-108.0,161.25,-111.0
-Portland Pilots vs. CSU Fullerton Titans,Nov 21 10:00PM ET,Portland Pilots,CSU Fullerton Titans,CSU Fullerton Titans,179.99999999999997,0.3418803418803419,5.5,-110.0,161.25,161.25,-108.0,161.25,-111.0
-Long Beach St 49ers vs. Montana St Bobcats,Nov 21 10:00PM ET,Long Beach St 49ers,Montana St Bobcats,Montana St Bobcats,-170.0,0.6017699115044248,-3.5,-110.0,139.25,139.25,-108.0,139.25,-111.0
-California Golden Bears vs. Sacramento St Hornets,Nov 21 10:00PM ET,California Golden Bears,Sacramento St Hornets,Sacramento St Hornets,1435.4838709677422,0.0627341568084285,20.5,-110.0,156.0,156.0,-110.0,156.0,-108.0
-California Golden Bears vs. Sacramento St Hornets,Nov 21 10:00PM ET,California Golden Bears,Sacramento St Hornets,California Golden Bears,-3603.8961038960992,0.9372658431915715,-20.5,-110.0,156.0,156.0,-110.0,156.0,-108.0
-Long Beach St 49ers vs. Montana St Bobcats,Nov 21 10:00PM ET,Long Beach St 49ers,Montana St Bobcats,Long Beach St 49ers,139.99999999999997,0.3982300884955753,3.5,-108.0,139.25,139.25,-108.0,139.25,-111.0
-UCLA Bruins vs. Presbyterian Blue Hose,Nov 21 10:30PM ET,UCLA Bruins,Presbyterian Blue Hose,Presbyterian Blue Hose,3500.0000000000005,0.02715849209566274,25.5,-104.0,129.5,129.5,-115.0,129.5,-105.0
-UCLA Bruins vs. Presbyterian Blue Hose,Nov 21 10:30PM ET,UCLA Bruins,Presbyterian Blue Hose,UCLA Bruins,-20000.00000000009,0.9728415079043372,-25.5,-118.0,129.5,129.5,-115.0,129.5,-105.0
-Hawai'i Rainbow Warriors vs. Arizona St Sun Devils,Nov 21 12:00AM ET,Hawai'i Rainbow Warriors,Arizona St Sun Devils,Hawai'i Rainbow Warriors,-143.0,0.5630781002924471,-2.0,-110.0,146.0,146.0,-110.0,146.0,-110.0
-Hawai'i Rainbow Warriors vs. Arizona St Sun Devils,Nov 21 12:00AM ET,Hawai'i Rainbow Warriors,Arizona St Sun Devils,Arizona St Sun Devils,118.99543378995435,0.43692189970755285,2.0,-110.0,146.0,146.0,-110.0,146.0,-110.0
-Yale Bulldogs vs. Green Bay Phoenix,Nov 21 12:30PM ET,Yale Bulldogs,Green Bay Phoenix,Green Bay Phoenix,900.0,0.096045197740113,15.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
-Yale Bulldogs vs. Green Bay Phoenix,Nov 21 12:30PM ET,Yale Bulldogs,Green Bay Phoenix,Yale Bulldogs,-1599.9999999999995,0.9039548022598869,-15.5,-110.0,153.5,153.5,-110.0,153.5,-110.0
+Georgetown Hoyas vs. UMBC Retrievers,Dec 03 08:00PM ET,Georgetown Hoyas,UMBC Retrievers,Georgetown Hoyas,-3999.9999999999964,0.9415121255349501,-19.5,-111.0,149.25,149.25,-110.0,149.25,-110.0
+Georgetown Hoyas vs. UMBC Retrievers,Dec 03 08:00PM ET,Georgetown Hoyas,UMBC Retrievers,UMBC Retrievers,1550.0,0.05848787446504993,19.5,-109.0,149.25,149.25,-110.0,149.25,-110.0
+Memphis Tigers vs. New Orleans Privateers,Dec 03 08:00PM ET,Memphis Tigers,New Orleans Privateers,Memphis Tigers,-1439.935064935063,0.8937928254735993,-14.5,-110.0,149.5,149.5,-110.0,149.5,-110.0
+Memphis Tigers vs. New Orleans Privateers,Dec 03 08:00PM ET,Memphis Tigers,New Orleans Privateers,New Orleans Privateers,800.0,0.10620717452640065,14.5,-110.0,149.5,149.5,-110.0,149.5,-110.0
+Iowa State Cyclones vs. Alcorn St Braves,Dec 03 08:00PM ET,Iowa State Cyclones,Alcorn St Braves,Alcorn St Braves,,,42.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
+Iowa State Cyclones vs. Alcorn St Braves,Dec 03 08:00PM ET,Iowa State Cyclones,Alcorn St Braves,Iowa State Cyclones,,,-42.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
+UMKC Kangaroos vs. Idaho State Bengals,Dec 03 08:05PM ET,UMKC Kangaroos,Idaho State Bengals,UMKC Kangaroos,185.0,0.33635187580853815,5.5,-110.0,137.75,137.75,-110.0,137.75,-110.0
+UMKC Kangaroos vs. Idaho State Bengals,Dec 03 08:05PM ET,UMKC Kangaroos,Idaho State Bengals,Idaho State Bengals,-224.99999999999997,0.6636481241914617,-5.5,-110.0,137.75,137.75,-110.0,137.75,-110.0
+South Dakota Coyotes vs. Portland St Vikings,Dec 03 08:05PM ET,South Dakota Coyotes,Portland St Vikings,South Dakota Coyotes,117.99999999999999,0.4394792836366607,2.5,-110.0,158.5,158.5,-107.0,158.5,-112.5
+South Dakota Coyotes vs. Portland St Vikings,Dec 03 08:05PM ET,South Dakota Coyotes,Portland St Vikings,Portland St Vikings,-140.9958506224067,0.5605207163633391,-2.5,-110.0,158.5,158.5,-107.0,158.5,-112.5
+Omaha Mavericks vs. N Colorado Bears,Dec 03 08:05PM ET,Omaha Mavericks,N Colorado Bears,Omaha Mavericks,146.49087221095334,0.39007108702946264,3.5,-110.0,157.0,157.0,-110.0,157.0,-110.0
+Omaha Mavericks vs. N Colorado Bears,Dec 03 08:05PM ET,Omaha Mavericks,N Colorado Bears,N Colorado Bears,-173.4917733089579,0.6099289129705374,-3.5,-110.0,157.0,157.0,-110.0,157.0,-110.0
+Northern Arizona Lumberjacks vs. South Dakota St Jackrabbits,Dec 03 08:05PM ET,Northern Arizona Lumberjacks,South Dakota St Jackrabbits,South Dakota St Jackrabbits,-154.99999999999997,0.5829926410466066,-3.0,-109.0,148.5,148.5,-110.0,148.5,-110.0
+Northern Arizona Lumberjacks vs. South Dakota St Jackrabbits,Dec 03 08:05PM ET,Northern Arizona Lumberjacks,South Dakota St Jackrabbits,Northern Arizona Lumberjacks,130.0,0.4170073589533933,3.0,-110.0,148.5,148.5,-110.0,148.5,-110.0
+Monmouth Hawks vs. Princeton Tigers,Dec 03 08:05PM ET,Monmouth Hawks,Princeton Tigers,Monmouth Hawks,-227.4809160305344,0.66788144810005,-5.0,-110.0,140.0,140.0,-110.0,140.0,-110.0
+Illinois St Redbirds vs. Eastern Kentucky Colonels,Dec 03 08:05PM ET,Illinois St Redbirds,Eastern Kentucky Colonels,Illinois St Redbirds,-1099.9999999999993,0.8800000000000001,-13.0,-110.0,153.5,153.5,-110.0,153.5,-110.0
+Illinois St Redbirds vs. Eastern Kentucky Colonels,Dec 03 08:05PM ET,Illinois St Redbirds,Eastern Kentucky Colonels,Eastern Kentucky Colonels,700.0,0.12000000000000002,13.0,-110.0,153.5,153.5,-110.0,153.5,-110.0
+Evansville Purple Aces vs. Ball State Cardinals,Dec 03 08:05PM ET,Evansville Purple Aces,Ball State Cardinals,Evansville Purple Aces,-285.0,0.7089157966581563,-6.5,-110.0,136.5,136.5,-110.0,136.5,-110.0
+Evansville Purple Aces vs. Ball State Cardinals,Dec 03 08:05PM ET,Evansville Purple Aces,Ball State Cardinals,Ball State Cardinals,228.9969604863222,0.2910842033418438,6.5,-110.0,136.5,136.5,-110.0,136.5,-110.0
+Alabama A&M Bulldogs vs. Tennessee St Tigers,Dec 03 08:05PM ET,Alabama A&M Bulldogs,Tennessee St Tigers,Tennessee St Tigers,-191.99999999999997,0.6309403437815975,-4.5,-110.0,147.5,147.5,-110.0,147.5,-113.0
+Alabama A&M Bulldogs vs. Tennessee St Tigers,Dec 03 08:05PM ET,Alabama A&M Bulldogs,Tennessee St Tigers,Alabama A&M Bulldogs,159.99999999999997,0.3690596562184025,4.5,-110.0,147.5,147.5,-110.0,147.5,-113.0
+Monmouth Hawks vs. Princeton Tigers,Dec 03 08:05PM ET,Monmouth Hawks,Princeton Tigers,Princeton Tigers,189.49913644214163,0.33211855189995004,5.0,-110.0,140.0,140.0,-110.0,140.0,-110.0
+Montana St Bobcats vs. St. Thomas (MN) Tommies,Dec 03 09:00PM ET,Montana St Bobcats,St. Thomas (MN) Tommies,Montana St Bobcats,-141.49068322981367,0.560878423860746,-2.5,-109.0,147.0,147.0,-110.0,147.0,-110.0
+Wisconsin Badgers vs. Northwestern Wildcats,Dec 03 09:00PM ET,Wisconsin Badgers,Northwestern Wildcats,Wisconsin Badgers,-500.00000000000017,0.7983193277310924,-9.5,-110.0,155.5,155.5,-110.0,155.5,-110.0
+Weber State Wildcats vs. Oral Roberts Golden Eagles,Dec 03 09:00PM ET,Weber State Wildcats,Oral Roberts Golden Eagles,Weber State Wildcats,-357.48633879781426,0.7487970143294612,-7.5,-110.0,158.0,158.0,-110.0,158.0,-110.0
+Weber State Wildcats vs. Oral Roberts Golden Eagles,Dec 03 09:00PM ET,Weber State Wildcats,Oral Roberts Golden Eagles,Oral Roberts Golden Eagles,281.4678899082569,0.2512029856705388,7.5,-110.0,158.0,158.0,-110.0,158.0,-110.0
+Rice Owls vs. Texas State Bobcats,Dec 03 09:00PM ET,Rice Owls,Texas State Bobcats,Texas State Bobcats,136.9957805907173,0.4067627441764672,3.0,-112.0,133.5,133.5,-110.0,133.5,-110.0
+Rice Owls vs. Texas State Bobcats,Dec 03 09:00PM ET,Rice Owls,Texas State Bobcats,Rice Owls,-160.00000000000003,0.5932372558235329,-3.0,-106.5,133.5,133.5,-110.0,133.5,-110.0
+Montana St Bobcats vs. St. Thomas (MN) Tommies,Dec 03 09:00PM ET,Montana St Bobcats,St. Thomas (MN) Tommies,St. Thomas (MN) Tommies,117.99999999999999,0.43912157613925396,2.5,-111.0,147.0,147.0,-110.0,147.0,-110.0
+Montana Grizzlies vs. North Dakota St Bison,Dec 03 09:00PM ET,Montana Grizzlies,North Dakota St Bison,North Dakota St Bison,150.0,0.3847595252966895,3.5,-110.0,152.25,152.25,-110.0,152.25,-110.0
+Wisconsin Badgers vs. Northwestern Wildcats,Dec 03 09:00PM ET,Wisconsin Badgers,Northwestern Wildcats,Northwestern Wildcats,375.0,0.20168067226890757,9.5,-108.0,155.5,155.5,-110.0,155.5,-110.0
+Idaho Vandals vs. North Dakota Fighting Hawks,Dec 03 09:00PM ET,Idaho Vandals,North Dakota Fighting Hawks,North Dakota Fighting Hawks,437.8810408921933,0.17824012721971905,10.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
+Idaho Vandals vs. North Dakota Fighting Hawks,Dec 03 09:00PM ET,Idaho Vandals,North Dakota Fighting Hawks,Idaho Vandals,-599.9999999999998,0.821759872780281,-10.5,-110.0,151.5,151.5,-110.0,151.5,-110.0
+Denver Pioneers vs. Eastern Washington Eagles,Dec 03 09:00PM ET,Denver Pioneers,Eastern Washington Eagles,Eastern Washington Eagles,-100.0,0.4782608695652174,1.5,-110.5,154.5,154.5,-110.0,154.5,-110.0
+Denver Pioneers vs. Eastern Washington Eagles,Dec 03 09:00PM ET,Denver Pioneers,Eastern Washington Eagles,Denver Pioneers,-119.99999999999997,0.5217391304347826,-1.5,-110.0,154.5,154.5,-110.0,154.5,-110.0
+BYU Cougars vs. Cal Baptist Lancers,Dec 03 09:00PM ET,BYU Cougars,Cal Baptist Lancers,Cal Baptist Lancers,1300.0000000000002,0.0682196339434276,19.5,-110.0,153.5,153.5,-112.5,153.5,-108.5
+BYU Cougars vs. Cal Baptist Lancers,Dec 03 09:00PM ET,BYU Cougars,Cal Baptist Lancers,BYU Cougars,-3999.9999999999964,0.9317803660565724,-19.5,-110.0,153.5,153.5,-112.5,153.5,-108.5
+Air Force Falcons vs. Pacific Tigers,Dec 03 09:00PM ET,Air Force Falcons,Pacific Tigers,Pacific Tigers,-242.48175182481765,0.6799017601309866,-5.5,-110.0,135.0,135.0,-110.0,135.0,-110.0
+Air Force Falcons vs. Pacific Tigers,Dec 03 09:00PM ET,Air Force Falcons,Pacific Tigers,Air Force Falcons,200.00000000000003,0.3200982398690135,5.5,-110.0,135.0,135.0,-110.0,135.0,-110.0
+Montana Grizzlies vs. North Dakota St Bison,Dec 03 09:00PM ET,Montana Grizzlies,North Dakota St Bison,Montana Grizzlies,-177.4774774774775,0.6152404747033104,-3.5,-110.0,152.25,152.25,-110.0,152.25,-110.0
+Vanderbilt Commodores vs. SMU Mustangs,Dec 03 09:15PM ET,Vanderbilt Commodores,SMU Mustangs,Vanderbilt Commodores,-634.9999999999998,0.8294643191987146,-11.25,-109.5,166.0,166.0,-110.0,166.0,-110.0
+Vanderbilt Commodores vs. SMU Mustangs,Dec 03 09:15PM ET,Vanderbilt Commodores,SMU Mustangs,SMU Mustangs,462.9840142095915,0.17053568080128545,11.25,-110.0,166.0,166.0,-110.0,166.0,-110.0
+Texas Longhorns vs. Virginia Cavaliers,Dec 03 09:15PM ET,Texas Longhorns,Virginia Cavaliers,Virginia Cavaliers,135.49893842887474,0.4077170472269082,2.75,-105.0,154.5,154.5,-110.0,154.5,-110.0
+Texas Longhorns vs. Virginia Cavaliers,Dec 03 09:15PM ET,Texas Longhorns,Virginia Cavaliers,Texas Longhorns,-160.9961685823755,0.5922829527730918,-2.75,-115.0,154.5,154.5,-110.0,154.5,-110.0
+Auburn Tigers vs. NC State Wolfpack,Dec 03 09:15PM ET,Auburn Tigers,NC State Wolfpack,NC State Wolfpack,234.92537313432834,0.28604887636572557,6.5,-110.0,163.0,163.0,-110.0,163.0,-110.0
+Georgia Tech Yellow Jackets vs. Mississippi St Bulldogs,Dec 03 09:15PM ET,Georgia Tech Yellow Jackets,Mississippi St Bulldogs,Georgia Tech Yellow Jackets,115.00000000000001,0.447405997144217,2.5,-111.0,150.5,150.5,-110.0,150.5,-110.0
+Auburn Tigers vs. NC State Wolfpack,Dec 03 09:15PM ET,Auburn Tigers,NC State Wolfpack,Auburn Tigers,-292.48407643312106,0.7139511236342745,-6.5,-110.0,163.0,163.0,-110.0,163.0,-110.0
+Georgia Tech Yellow Jackets vs. Mississippi St Bulldogs,Dec 03 09:15PM ET,Georgia Tech Yellow Jackets,Mississippi St Bulldogs,Mississippi St Bulldogs,-135.00000000000003,0.552594002855783,-2.5,-108.0,150.5,150.5,-110.0,150.5,-110.0
+Oregon St Beavers vs. Vermont Catamounts,Dec 03 09:30PM ET,Oregon St Beavers,Vermont Catamounts,Oregon St Beavers,-180.00000000000003,0.6164383561643836,-3.5,-110.0,143.5,143.5,-110.0,143.5,-110.0
+Oregon St Beavers vs. Vermont Catamounts,Dec 03 09:30PM ET,Oregon St Beavers,Vermont Catamounts,Vermont Catamounts,150.0,0.3835616438356164,3.5,-110.0,143.5,143.5,-110.0,143.5,-110.0
+Santa Clara Broncos vs. Utah Tech Trailblazers,Dec 03 10:00PM ET,Santa Clara Broncos,Utah Tech Trailblazers,Utah Tech Trailblazers,1448.3870967741939,0.061866772831906724,20.0,-110.0,146.0,146.0,-112.5,146.0,-107.5
+San Francisco Dons vs. North Alabama Lions,Dec 03 10:00PM ET,San Francisco Dons,North Alabama Lions,San Francisco Dons,-3096.8750000000027,0.9264346325327197,-17.0,-110.0,145.5,145.5,-110.0,145.5,-110.0
+Santa Clara Broncos vs. Utah Tech Trailblazers,Dec 03 10:00PM ET,Santa Clara Broncos,Utah Tech Trailblazers,Santa Clara Broncos,-4737.113402061853,0.9381332271680932,-20.0,-110.0,146.0,146.0,-112.5,146.0,-107.5
+San Diego St Aztecs vs. Utah Valley Wolverines,Dec 03 10:00PM ET,San Diego St Aztecs,Utah Valley Wolverines,Utah Valley Wolverines,332.48554913294794,0.22122847341743346,8.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
+San Diego St Aztecs vs. Utah Valley Wolverines,Dec 03 10:00PM ET,San Diego St Aztecs,Utah Valley Wolverines,San Diego St Aztecs,-437.4883720930233,0.7787715265825667,-8.5,-110.0,144.5,144.5,-110.0,144.5,-110.0
+San Francisco Dons vs. North Alabama Lions,Dec 03 10:00PM ET,San Francisco Dons,North Alabama Lions,North Alabama Lions,1200.0,0.07356536746728032,17.0,-110.0,145.5,145.5,-110.0,145.5,-110.0
+Washington Huskies vs. UCLA Bruins,Dec 03 11:00PM ET,Washington Huskies,UCLA Bruins,UCLA Bruins,-129.99999999999997,0.5427435387673957,-1.5,-110.5,141.5,141.5,-110.0,141.5,-110.0
+Washington Huskies vs. UCLA Bruins,Dec 03 11:00PM ET,Washington Huskies,UCLA Bruins,Washington Huskies,110.00000000000001,0.4572564612326044,1.5,-109.0,141.5,141.5,-110.0,141.5,-110.0
+South Florida Bulls vs. Utah State Aggies,Dec 04 07:00PM ET,South Florida Bulls,Utah State Aggies,South Florida Bulls,123.48993288590603,0.42850930108582813,2.5,-110.0,162.25,162.25,-110.0,162.25,-110.0
+Merrimack Warriors vs. Rider Broncs,Dec 04 07:00PM ET,Merrimack Warriors,Rider Broncs,Rider Broncs,319.7619047619048,0.22821383205471388,8.0,-108.0,137.5,137.5,-110.0,137.5,-110.0
+Merrimack Warriors vs. Rider Broncs,Dec 04 07:00PM ET,Merrimack Warriors,Rider Broncs,Merrimack Warriors,-414.56310679611664,0.771786167945286,-8.0,-110.0,137.5,137.5,-110.0,137.5,-110.0
+South Florida Bulls vs. Utah State Aggies,Dec 04 07:00PM ET,South Florida Bulls,Utah State Aggies,Utah State Aggies,-147.9838709677419,0.5714906989141718,-2.5,-108.0,162.25,162.25,-110.0,162.25,-110.0
+Green Bay Phoenix vs. Robert Morris Colonials,Dec 04 07:00PM ET,Green Bay Phoenix,Robert Morris Colonials,Green Bay Phoenix,105.49878345498783,0.4656211760543738,1.75,-110.0,139.5,139.5,-107.5,139.5,-111.5
+Davidson Wildcats vs. The Citadel Bulldogs,Dec 04 07:00PM ET,Davidson Wildcats,The Citadel Bulldogs,The Citadel Bulldogs,1548.4848484848485,0.058463700427783184,20.5,-110.0,142.75,142.75,-110.0,142.75,-110.0
+Davidson Wildcats vs. The Citadel Bulldogs,Dec 04 07:00PM ET,Davidson Wildcats,The Citadel Bulldogs,Davidson Wildcats,-4235.632183908035,0.941536299572217,-20.5,-110.0,142.75,142.75,-110.0,142.75,-110.0
+Green Bay Phoenix vs. Robert Morris Colonials,Dec 04 07:00PM ET,Green Bay Phoenix,Robert Morris Colonials,Robert Morris Colonials,-126.49006622516556,0.5343788239456262,-1.75,-110.0,139.5,139.5,-107.5,139.5,-111.5
+UC Santa Barbara Gauchos vs. Long Beach St 49ers,Dec 04 09:00PM ET,UC Santa Barbara Gauchos,Long Beach St 49ers,Long Beach St 49ers,594.9640287769784,0.1378421261404205,12.5,-103.5,146.5,146.5,-110.0,146.5,-110.0
+UC Santa Barbara Gauchos vs. Long Beach St 49ers,Dec 04 09:00PM ET,UC Santa Barbara Gauchos,Long Beach St 49ers,UC Santa Barbara Gauchos,-900.0000000000002,0.8621578738595795,-12.5,-113.0,146.5,146.5,-110.0,146.5,-110.0
+CSU Fullerton Titans vs. Cal Poly Mustangs,Dec 04 10:00PM ET,CSU Fullerton Titans,Cal Poly Mustangs,CSU Fullerton Titans,110.99526066350711,0.45445814006090274,1.5,-108.0,174.75,174.75,-110.0,174.75,-110.0
+CSU Fullerton Titans vs. Cal Poly Mustangs,Dec 04 10:00PM ET,CSU Fullerton Titans,Cal Poly Mustangs,Cal Poly Mustangs,-131.98275862068968,0.5455418599390973,-1.5,-110.0,174.75,174.75,-110.0,174.75,-110.0
+CSU Northridge Matadors vs. CSU Bakersfield Roadrunners,Dec 04 10:00PM ET,CSU Northridge Matadors,CSU Bakersfield Roadrunners,CSU Bakersfield Roadrunners,212.48000000000005,0.30704986489805947,5.25,-110.0,157.5,157.5,-110.0,157.5,-110.0
+CSU Northridge Matadors vs. CSU Bakersfield Roadrunners,Dec 04 10:00PM ET,CSU Northridge Matadors,CSU Bakersfield Roadrunners,CSU Northridge Matadors,-259.99999999999994,0.6929501351019407,-5.25,-110.0,157.5,157.5,-110.0,157.5,-110.0
+UC Irvine Anteaters vs. UC Riverside Highlanders,Dec 04 10:00PM ET,UC Irvine Anteaters,UC Riverside Highlanders,UC Irvine Anteaters,-836.1702127659574,0.8555582432012163,-11.25,-110.0,141.0,141.0,-114.0,141.0,-105.0
+UC Irvine Anteaters vs. UC Riverside Highlanders,Dec 04 10:00PM ET,UC Irvine Anteaters,UC Riverside Highlanders,UC Riverside Highlanders,563.1578947368422,0.14444175679878363,11.25,-110.0,141.0,141.0,-114.0,141.0,-105.0
+Hawai'i Rainbow Warriors vs. UC Davis Aggies,Dec 05 12:00AM ET,Hawai'i Rainbow Warriors,UC Davis Aggies,Hawai'i Rainbow Warriors,-587.6811594202898,0.8173979970496339,-9.25,-107.5,143.5,143.5,-110.0,143.5,-109.0
+Hawai'i Rainbow Warriors vs. UC Davis Aggies,Dec 05 12:00AM ET,Hawai'i Rainbow Warriors,UC Davis Aggies,UC Davis Aggies,423.8095238095238,0.18260200295036602,9.25,-110.5,143.5,143.5,-110.0,143.5,-109.0
+Michigan St Spartans vs. Duke Blue Devils,Dec 06 12:00PM ET,Michigan St Spartans,Duke Blue Devils,Duke Blue Devils,-110.00000000000001,0.5,0.25,-119.0,139.5,139.5,-110.0,139.5,-110.0
+Michigan St Spartans vs. Duke Blue Devils,Dec 06 12:00PM ET,Michigan St Spartans,Duke Blue Devils,Michigan St Spartans,-110.00000000000001,0.5,-0.25,-3.0,139.5,139.5,-110.0,139.5,-110.0

@@ -1,517 +1,381 @@
 Home Team,Away Team,Team,Game Date,spread_hasla,win_prob_hasla,projected_total_hasla
-Rider Broncs,Houston Cougars,Rider Broncs,20251122,35.7,,136.07
-Holy Cross Crusaders,Sacred Heart Pioneers,Holy Cross Crusaders,20251122,7.2,,150.92
-Norfolk St Spartans,Hampton Pirates,Hampton Pirates,20251122,2.9,,136.84
-Norfolk St Spartans,Hampton Pirates,Norfolk St Spartans,20251122,-2.9,,136.84
-Hampton Pirates,Norfolk St Spartans,Norfolk St Spartans,20251122,-2.9,,136.84
-Hampton Pirates,Norfolk St Spartans,Hampton Pirates,20251122,2.9,,136.84
-Old Dominion Monarchs,Morgan St Bears,Morgan St Bears,20251122,10.9,,157.8
-Old Dominion Monarchs,Morgan St Bears,Old Dominion Monarchs,20251122,-10.9,,157.8
-Morgan St Bears,Old Dominion Monarchs,Old Dominion Monarchs,20251122,-10.9,,157.8
-Morgan St Bears,Old Dominion Monarchs,Morgan St Bears,20251122,10.9,,157.8
-Marist Red Foxes,Army Knights,Army Knights,20251122,9.8,,136.87
-Marist Red Foxes,Army Knights,Marist Red Foxes,20251122,-9.8,,136.87
-Army Knights,Marist Red Foxes,Marist Red Foxes,20251122,-9.8,,136.87
-Army Knights,Marist Red Foxes,Army Knights,20251122,9.8,,136.87
-Holy Cross Crusaders,Sacred Heart Pioneers,Sacred Heart Pioneers,20251122,-7.2,,150.92
-Air Force Falcons,SIU-Edwardsville Cougars,SIU-Edwardsville Cougars,20251122,-3.3,,134.13
-SIU-Edwardsville Cougars,Air Force Falcons,Air Force Falcons,20251122,3.3,,134.13
-SIU-Edwardsville Cougars,Air Force Falcons,SIU-Edwardsville Cougars,20251122,-3.3,,134.13
-Fresno St Bulldogs,New Orleans Privateers,New Orleans Privateers,20251122,7.7,,154.44
-Fresno St Bulldogs,New Orleans Privateers,Fresno St Bulldogs,20251122,-7.7,,154.44
-New Orleans Privateers,Fresno St Bulldogs,Fresno St Bulldogs,20251122,-7.7,,154.44
-New Orleans Privateers,Fresno St Bulldogs,New Orleans Privateers,20251122,7.7,,154.44
-Siena Saints,Albany Great Danes,Albany Great Danes,20251122,8.6,,141.09
-Siena Saints,Albany Great Danes,Siena Saints,20251122,-8.6,,141.09
-Albany Great Danes,Siena Saints,Siena Saints,20251122,-8.6,,141.09
-Albany Great Danes,Siena Saints,Albany Great Danes,20251122,8.6,,141.09
-Drexel Dragons,Pennsylvania Quakers,Pennsylvania Quakers,20251122,4.6,,143.14999999999998
-Drexel Dragons,Pennsylvania Quakers,Drexel Dragons,20251122,-4.6,,143.14999999999998
-Pennsylvania Quakers,Drexel Dragons,Drexel Dragons,20251122,-4.6,,143.14999999999998
-Air Force Falcons,SIU-Edwardsville Cougars,Air Force Falcons,20251122,3.3,,134.13
-Pennsylvania Quakers,Drexel Dragons,Pennsylvania Quakers,20251122,4.6,,143.14999999999998
-Sacred Heart Pioneers,Holy Cross Crusaders,Sacred Heart Pioneers,20251122,-7.2,,150.92
-CSU Fullerton Titans,Portland Pilots,CSU Fullerton Titans,20251122,6.7,,146.5
-Central Michigan Chippewas,Marquette Golden Eagles,Central Michigan Chippewas,20251122,22.2,,151.87
-Illinois Fighting Illini,LIU Sharks,LIU Sharks,20251122,28.7,,153.26999999999998
-Illinois Fighting Illini,LIU Sharks,Illinois Fighting Illini,20251122,-28.7,,153.26999999999998
-LIU Sharks,Illinois Fighting Illini,Illinois Fighting Illini,20251122,-28.7,,153.26999999999998
-LIU Sharks,Illinois Fighting Illini,LIU Sharks,20251122,28.7,,153.26999999999998
-Canisius Golden Griffins,Maryland-Eastern Shore Hawks,Maryland-Eastern Shore Hawks,20251122,2.3,,133.13
-Canisius Golden Griffins,Maryland-Eastern Shore Hawks,Canisius Golden Griffins,20251122,-2.3,,133.13
-Maryland-Eastern Shore Hawks,Canisius Golden Griffins,Canisius Golden Griffins,20251122,-2.3,,133.13
-Maryland-Eastern Shore Hawks,Canisius Golden Griffins,Maryland-Eastern Shore Hawks,20251122,2.3,,133.13
-Stonehill Skyhawks,Lafayette Leopards,Lafayette Leopards,20251122,3.8,,142.14
-Stonehill Skyhawks,Lafayette Leopards,Stonehill Skyhawks,20251122,-3.8,,142.14
-Lafayette Leopards,Stonehill Skyhawks,Stonehill Skyhawks,20251122,-3.8,,142.14
-Lafayette Leopards,Stonehill Skyhawks,Lafayette Leopards,20251122,3.8,,142.14
-Sacred Heart Pioneers,Holy Cross Crusaders,Holy Cross Crusaders,20251122,7.2,,150.92
-IUPUI Jaguars,Alabama St Hornets,Alabama St Hornets,20251122,-4.1,,157.05
-Alabama St Hornets,IUPUI Jaguars,IUPUI Jaguars,20251122,4.1,,157.05
-Alabama St Hornets,IUPUI Jaguars,Alabama St Hornets,20251122,-4.1,,157.05
-West Georgia Wolves,South Carolina Upstate Spartans,South Carolina Upstate Spartans,20251122,3.7,,157.26999999999998
-West Georgia Wolves,South Carolina Upstate Spartans,West Georgia Wolves,20251122,-3.7,,157.26999999999998
-South Carolina Upstate Spartans,West Georgia Wolves,West Georgia Wolves,20251122,-3.7,,157.26999999999998
-South Carolina Upstate Spartans,West Georgia Wolves,South Carolina Upstate Spartans,20251122,3.7,,157.26999999999998
-Western Illinois Leathernecks,Coastal Carolina Chanticleers,Coastal Carolina Chanticleers,20251122,0.3,,134.2
-Western Illinois Leathernecks,Coastal Carolina Chanticleers,Western Illinois Leathernecks,20251122,-0.3,,134.2
-Coastal Carolina Chanticleers,Western Illinois Leathernecks,Western Illinois Leathernecks,20251122,-0.3,,134.2
-Coastal Carolina Chanticleers,Western Illinois Leathernecks,Coastal Carolina Chanticleers,20251122,0.3,,134.2
-Portland Pilots,CSU Fullerton Titans,CSU Fullerton Titans,20251122,6.7,,146.5
-Portland Pilots,CSU Fullerton Titans,Portland Pilots,20251122,-6.7,,146.5
-CSU Fullerton Titans,Portland Pilots,Portland Pilots,20251122,-6.7,,146.5
-IUPUI Jaguars,Alabama St Hornets,IUPUI Jaguars,20251122,4.1,,157.05
-Lehigh Mountain Hawks,Columbia Lions,Columbia Lions,20251122,0.5,,146.64
-Lehigh Mountain Hawks,Columbia Lions,Lehigh Mountain Hawks,20251122,-0.5,,146.64
-Columbia Lions,Lehigh Mountain Hawks,Lehigh Mountain Hawks,20251122,-0.5,,146.64
-Eastern Michigan Eagles,Oakland Golden Grizzlies,Oakland Golden Grizzlies,20251122,-2.0,,144.43
-Eastern Michigan Eagles,Oakland Golden Grizzlies,Eastern Michigan Eagles,20251122,2.0,,144.43
-Oakland Golden Grizzlies,Eastern Michigan Eagles,Eastern Michigan Eagles,20251122,2.0,,144.43
-Oakland Golden Grizzlies,Eastern Michigan Eagles,Oakland Golden Grizzlies,20251122,-2.0,,144.43
-Appalachian St Mountaineers,Charlotte 49ers,Charlotte 49ers,20251122,2.1,,134.09
-Appalachian St Mountaineers,Charlotte 49ers,Appalachian St Mountaineers,20251122,-2.1,,134.09
-Charlotte 49ers,Appalachian St Mountaineers,Appalachian St Mountaineers,20251122,-2.1,,134.09
-Charlotte 49ers,Appalachian St Mountaineers,Charlotte 49ers,20251122,2.1,,134.09
-Loyola (Chi) Ramblers,Northern Illinois Huskies,Northern Illinois Huskies,20251122,13.0,,150.74
-Loyola (Chi) Ramblers,Northern Illinois Huskies,Loyola (Chi) Ramblers,20251122,-13.0,,150.74
-Northern Illinois Huskies,Loyola (Chi) Ramblers,Loyola (Chi) Ramblers,20251122,-13.0,,150.74
-Northern Illinois Huskies,Loyola (Chi) Ramblers,Northern Illinois Huskies,20251122,13.0,,150.74
-South Dakota St Jackrabbits,Georgia St Panthers,Georgia St Panthers,20251122,9.1,,151.85
-UC Riverside Highlanders,San Diego Toreros,UC Riverside Highlanders,20251122,7.0,,155.7
-South Dakota St Jackrabbits,Georgia St Panthers,South Dakota St Jackrabbits,20251122,-9.1,,151.85
-Georgia St Panthers,South Dakota St Jackrabbits,Georgia St Panthers,20251122,9.1,,151.85
-Cal Baptist Lancers,Grambling St Tigers,Grambling St Tigers,20251122,8.6,,138.91
-Cal Baptist Lancers,Grambling St Tigers,Cal Baptist Lancers,20251122,-8.6,,138.91
-Grambling St Tigers,Cal Baptist Lancers,Cal Baptist Lancers,20251122,-8.6,,138.91
-Grambling St Tigers,Cal Baptist Lancers,Grambling St Tigers,20251122,8.6,,138.91
-UT-Arlington Mavericks,Campbell Fighting Camels,Campbell Fighting Camels,20251122,-3.9,,148.98000000000002
-UT-Arlington Mavericks,Campbell Fighting Camels,UT-Arlington Mavericks,20251122,3.9,,148.98000000000002
-Campbell Fighting Camels,UT-Arlington Mavericks,UT-Arlington Mavericks,20251122,3.9,,148.98000000000002
-Campbell Fighting Camels,UT-Arlington Mavericks,Campbell Fighting Camels,20251122,-3.9,,148.98000000000002
-St. Thomas (MN) Tommies,N Colorado Bears,N Colorado Bears,20251122,-0.4,,153.57999999999998
-St. Thomas (MN) Tommies,N Colorado Bears,St. Thomas (MN) Tommies,20251122,0.4,,153.57999999999998
-N Colorado Bears,St. Thomas (MN) Tommies,St. Thomas (MN) Tommies,20251122,0.4,,153.57999999999998
-N Colorado Bears,St. Thomas (MN) Tommies,N Colorado Bears,20251122,-0.4,,153.57999999999998
-Georgia St Panthers,South Dakota St Jackrabbits,South Dakota St Jackrabbits,20251122,-9.1,,151.85
-UC Riverside Highlanders,San Diego Toreros,San Diego Toreros,20251122,-7.0,,155.7
-San Diego Toreros,UC Riverside Highlanders,San Diego Toreros,20251122,-7.0,,155.7
-San Diego Toreros,UC Riverside Highlanders,UC Riverside Highlanders,20251122,7.0,,155.7
-Columbia Lions,Lehigh Mountain Hawks,Columbia Lions,20251122,0.5,,146.64
-Texas State Bobcats,Arkansas-Little Rock Trojans,Arkansas-Little Rock Trojans,20251122,8.3,,140.87
-Texas State Bobcats,Arkansas-Little Rock Trojans,Texas State Bobcats,20251122,-8.3,,140.87
-Arkansas-Little Rock Trojans,Texas State Bobcats,Texas State Bobcats,20251122,-8.3,,140.87
-Arkansas-Little Rock Trojans,Texas State Bobcats,Arkansas-Little Rock Trojans,20251122,8.3,,140.87
-East Carolina Pirates,Charleston Southern Buccaneers,Charleston Southern Buccaneers,20251122,10.3,,151.82
-East Carolina Pirates,Charleston Southern Buccaneers,East Carolina Pirates,20251122,-10.3,,151.82
-Charleston Southern Buccaneers,East Carolina Pirates,East Carolina Pirates,20251122,-10.3,,151.82
-Charleston Southern Buccaneers,East Carolina Pirates,Charleston Southern Buccaneers,20251122,10.3,,151.82
-Long Beach St 49ers,Montana St Bobcats,Montana St Bobcats,20251122,-1.1,,137.55
-Long Beach St 49ers,Montana St Bobcats,Long Beach St 49ers,20251122,1.1,,137.55
-Montana St Bobcats,Long Beach St 49ers,Long Beach St 49ers,20251122,1.1,,137.55
-Montana St Bobcats,Long Beach St 49ers,Montana St Bobcats,20251122,-1.1,,137.55
-San Jos√© St Spartans,Southern Jaguars,Southern Jaguars,20251122,5.2,,148.26
-San Jos√© St Spartans,Southern Jaguars,San Jos√© St Spartans,20251122,-5.2,,148.26
-Southern Jaguars,San Jos√© St Spartans,San Jos√© St Spartans,20251122,-5.2,,148.26
-Southern Jaguars,San Jos√© St Spartans,Southern Jaguars,20251122,5.2,,148.26
-Pepperdine Waves,Stephen F. Austin Lumberjacks,Stephen F. Austin Lumberjacks,20251122,3.3,,152.82
-Pepperdine Waves,Stephen F. Austin Lumberjacks,Pepperdine Waves,20251122,-3.3,,152.82
-Stephen F. Austin Lumberjacks,Pepperdine Waves,Pepperdine Waves,20251122,-3.3,,152.82
-Stephen F. Austin Lumberjacks,Pepperdine Waves,Stephen F. Austin Lumberjacks,20251122,3.3,,152.82
-East Tennessee St Buccaneers,Morehead St Eagles,Morehead St Eagles,20251122,8.0,,140.82
-East Tennessee St Buccaneers,Morehead St Eagles,East Tennessee St Buccaneers,20251122,-8.0,,140.82
-Morehead St Eagles,East Tennessee St Buccaneers,East Tennessee St Buccaneers,20251122,-8.0,,140.82
-Morehead St Eagles,East Tennessee St Buccaneers,Morehead St Eagles,20251122,8.0,,140.82
-Charleston Cougars,Massachusetts Minutemen,Massachusetts Minutemen,20251122,-0.8,,159.78
-Charleston Cougars,Massachusetts Minutemen,Charleston Cougars,20251122,0.8,,159.78
-Massachusetts Minutemen,Charleston Cougars,Charleston Cougars,20251122,0.8,,159.78
-Massachusetts Minutemen,Charleston Cougars,Massachusetts Minutemen,20251122,-0.8,,159.78
-Central Michigan Chippewas,Marquette Golden Eagles,Marquette Golden Eagles,20251122,-22.2,,151.87
-New Mexico St Aggies,Samford Bulldogs,Samford Bulldogs,20251122,9.0,,145.22
-Marquette Golden Eagles,Central Michigan Chippewas,Marquette Golden Eagles,20251122,-22.2,,151.87
-Coppin St Eagles,VCU Rams,Coppin St Eagles,20251122,32.5,,147.33
-Southern Miss Golden Eagles,North Florida Ospreys,North Florida Ospreys,20251122,4.9,,162.53
-Southern Miss Golden Eagles,North Florida Ospreys,Southern Miss Golden Eagles,20251122,-4.9,,162.53
-Weber State Wildcats,UT-Arlington Mavericks,UT-Arlington Mavericks,20251122,2.2,,147.32999999999998
-Weber State Wildcats,UT-Arlington Mavericks,Weber State Wildcats,20251122,-2.2,,147.32999999999998
-UT-Arlington Mavericks,Weber State Wildcats,Weber State Wildcats,20251122,-2.2,,147.32999999999998
-UT-Arlington Mavericks,Weber State Wildcats,UT-Arlington Mavericks,20251122,2.2,,147.32999999999998
-Lipscomb Bisons,Western Carolina Catamounts,Western Carolina Catamounts,20251122,6.6,,151.7
-Lipscomb Bisons,Western Carolina Catamounts,Lipscomb Bisons,20251122,-6.6,,151.7
-Western Carolina Catamounts,Lipscomb Bisons,Lipscomb Bisons,20251122,-6.6,,151.7
-Western Carolina Catamounts,Lipscomb Bisons,Western Carolina Catamounts,20251122,6.6,,151.7
-Prairie View Panthers,Tenn-Martin Skyhawks,Tenn-Martin Skyhawks,20251122,-10.1,,148.49
-Prairie View Panthers,Tenn-Martin Skyhawks,Prairie View Panthers,20251122,10.1,,148.49
-Tenn-Martin Skyhawks,Prairie View Panthers,Prairie View Panthers,20251122,10.1,,148.49
-North Florida Ospreys,Southern Miss Golden Eagles,North Florida Ospreys,20251122,4.9,,162.53
-Tenn-Martin Skyhawks,Prairie View Panthers,Tenn-Martin Skyhawks,20251122,-10.1,,148.49
-Eastern Kentucky Colonels,Mercer Bears,Eastern Kentucky Colonels,20251122,-7.6,,154.4
-Mercer Bears,Eastern Kentucky Colonels,Eastern Kentucky Colonels,20251122,-7.6,,154.4
-Mercer Bears,Eastern Kentucky Colonels,Mercer Bears,20251122,7.6,,154.4
-Missouri St Bears,UT Rio Grande Valley Vaqueros,UT Rio Grande Valley Vaqueros,20251122,4.5,,148.60000000000002
-Missouri St Bears,UT Rio Grande Valley Vaqueros,Missouri St Bears,20251122,-4.5,,148.60000000000002
-UT Rio Grande Valley Vaqueros,Missouri St Bears,Missouri St Bears,20251122,-4.5,,148.60000000000002
-UT Rio Grande Valley Vaqueros,Missouri St Bears,UT Rio Grande Valley Vaqueros,20251122,4.5,,148.60000000000002
-Navy Midshipmen,NJIT Highlanders,NJIT Highlanders,20251122,12.8,,138.41
-Navy Midshipmen,NJIT Highlanders,Navy Midshipmen,20251122,-12.8,,138.41
-NJIT Highlanders,Navy Midshipmen,Navy Midshipmen,20251122,-12.8,,138.41
-NJIT Highlanders,Navy Midshipmen,NJIT Highlanders,20251122,12.8,,138.41
-Indiana St Sycamores,Ball State Cardinals,Ball State Cardinals,20251122,10.0,,154.95999999999998
-Indiana St Sycamores,Ball State Cardinals,Indiana St Sycamores,20251122,-10.0,,154.95999999999998
-Eastern Kentucky Colonels,Mercer Bears,Mercer Bears,20251122,7.6,,154.4
-Ball State Cardinals,Indiana St Sycamores,Indiana St Sycamores,20251122,-10.0,,154.95999999999998
-North Florida Ospreys,Southern Miss Golden Eagles,Southern Miss Golden Eagles,20251122,-4.9,,162.53
-Fairfield Stags,Le Moyne Dolphins,Le Moyne Dolphins,20251122,-1.1,,150.19
-Binghamton Bearcats,Maryland-Eastern Shore Hawks,Maryland-Eastern Shore Hawks,20251122,3.3,,134.36
-Binghamton Bearcats,Maryland-Eastern Shore Hawks,Binghamton Bearcats,20251122,-3.3,,134.36
-Stetson Hatters,VMI Keydets,VMI Keydets,20251122,0.1,,148.09
-Stetson Hatters,VMI Keydets,Stetson Hatters,20251122,-0.1,,148.09
-VMI Keydets,Stetson Hatters,Stetson Hatters,20251122,-0.1,,148.09
-VMI Keydets,Stetson Hatters,VMI Keydets,20251122,0.1,,148.09
-CSU Bakersfield Roadrunners,Miss Valley St Delta Devils,Miss Valley St Delta Devils,20251122,16.4,,141.77
-CSU Bakersfield Roadrunners,Miss Valley St Delta Devils,CSU Bakersfield Roadrunners,20251122,-16.4,,141.77
-Miss Valley St Delta Devils,CSU Bakersfield Roadrunners,CSU Bakersfield Roadrunners,20251122,-16.4,,141.77
-Miss Valley St Delta Devils,CSU Bakersfield Roadrunners,Miss Valley St Delta Devils,20251122,16.4,,141.77
-Saint Peter's Peacocks,UMass Lowell River Hawks,UMass Lowell River Hawks,20251122,5.4,,149.65
-Saint Peter's Peacocks,UMass Lowell River Hawks,Saint Peter's Peacocks,20251122,-5.4,,149.65
-UMass Lowell River Hawks,Saint Peter's Peacocks,Saint Peter's Peacocks,20251122,-5.4,,149.65
-Fairfield Stags,Le Moyne Dolphins,Fairfield Stags,20251122,1.1,,150.19
-UMass Lowell River Hawks,Saint Peter's Peacocks,UMass Lowell River Hawks,20251122,5.4,,149.65
-North Dakota Fighting Hawks,Coastal Carolina Chanticleers,North Dakota Fighting Hawks,20251122,1.5,,139.57999999999998
-Coastal Carolina Chanticleers,North Dakota Fighting Hawks,North Dakota Fighting Hawks,20251122,1.5,,139.57999999999998
-Coastal Carolina Chanticleers,North Dakota Fighting Hawks,Coastal Carolina Chanticleers,20251122,-1.5,,139.57999999999998
-Niagara Purple Eagles,Howard Bison,Howard Bison,20251122,-1.8,,142.05
-Niagara Purple Eagles,Howard Bison,Niagara Purple Eagles,20251122,1.8,,142.05
-Howard Bison,Niagara Purple Eagles,Niagara Purple Eagles,20251122,1.8,,142.05
-Howard Bison,Niagara Purple Eagles,Howard Bison,20251122,-1.8,,142.05
-UL Monroe Warhawks,Morehead St Eagles,Morehead St Eagles,20251122,-9.0,,144.89
-UL Monroe Warhawks,Morehead St Eagles,UL Monroe Warhawks,20251122,9.0,,144.89
-Morehead St Eagles,UL Monroe Warhawks,UL Monroe Warhawks,20251122,9.0,,144.89
-Morehead St Eagles,UL Monroe Warhawks,Morehead St Eagles,20251122,-9.0,,144.89
-Le Moyne Dolphins,Fairfield Stags,Fairfield Stags,20251122,1.1,,150.19
-Le Moyne Dolphins,Fairfield Stags,Le Moyne Dolphins,20251122,-1.1,,150.19
-North Dakota Fighting Hawks,Coastal Carolina Chanticleers,Coastal Carolina Chanticleers,20251122,-1.5,,139.57999999999998
-Ball State Cardinals,Indiana St Sycamores,Ball State Cardinals,20251122,10.0,,154.95999999999998
-Chattanooga Mocs,North Alabama Lions,North Alabama Lions,20251122,5.4,,148.26999999999998
-Chattanooga Mocs,North Alabama Lions,Chattanooga Mocs,20251122,-5.4,,148.26999999999998
-Milwaukee Panthers,Wichita St Shockers,Milwaukee Panthers,20251122,12.1,,155.78
-UC Irvine Anteaters,Northern Iowa Panthers,Northern Iowa Panthers,20251122,-0.6,,138.21
-UC Irvine Anteaters,Northern Iowa Panthers,UC Irvine Anteaters,20251122,0.6,,138.21
-Northern Iowa Panthers,UC Irvine Anteaters,UC Irvine Anteaters,20251122,0.6,,138.21
-Northern Iowa Panthers,UC Irvine Anteaters,Northern Iowa Panthers,20251122,-0.6,,138.21
-Nevada Wolf Pack,UC Santa Barbara Gauchos,UC Santa Barbara Gauchos,20251122,6.6,,147.29
-Nevada Wolf Pack,UC Santa Barbara Gauchos,Nevada Wolf Pack,20251122,-6.6,,147.29
-UC Santa Barbara Gauchos,Nevada Wolf Pack,Nevada Wolf Pack,20251122,-6.6,,147.29
-UC Santa Barbara Gauchos,Nevada Wolf Pack,UC Santa Barbara Gauchos,20251122,6.6,,147.29
-Minnesota Golden Gophers,San Francisco Dons,San Francisco Dons,20251122,-3.4,,135.99
-Minnesota Golden Gophers,San Francisco Dons,Minnesota Golden Gophers,20251122,3.4,,135.99
-San Francisco Dons,Minnesota Golden Gophers,Minnesota Golden Gophers,20251122,3.4,,135.99
-San Francisco Dons,Minnesota Golden Gophers,San Francisco Dons,20251122,-3.4,,135.99
-Milwaukee Panthers,Wichita St Shockers,Wichita St Shockers,20251122,-12.1,,155.78
-Dayton Flyers,North Carolina Central Eagles,North Carolina Central Eagles,20251122,22.3,,146.39999999999998
-North Carolina Central Eagles,Dayton Flyers,Dayton Flyers,20251122,-22.3,,146.39999999999998
-North Carolina Central Eagles,Dayton Flyers,North Carolina Central Eagles,20251122,22.3,,146.39999999999998
-Penn State Nittany Lions,Providence Friars,Providence Friars,20251122,-0.9,,161.81
-Penn State Nittany Lions,Providence Friars,Penn State Nittany Lions,20251122,0.9,,161.81
-Providence Friars,Penn State Nittany Lions,Penn State Nittany Lions,20251122,0.9,,161.81
-Providence Friars,Penn State Nittany Lions,Providence Friars,20251122,-0.9,,161.81
-Oklahoma St Cowboys,Nicholls St Colonels,Nicholls St Colonels,20251122,19.5,,154.09
-Oklahoma St Cowboys,Nicholls St Colonels,Oklahoma St Cowboys,20251122,-19.5,,154.09
-Nicholls St Colonels,Oklahoma St Cowboys,Oklahoma St Cowboys,20251122,-19.5,,154.09
-Nicholls St Colonels,Oklahoma St Cowboys,Nicholls St Colonels,20251122,19.5,,154.09
-VCU Rams,Coppin St Eagles,Coppin St Eagles,20251122,32.5,,147.33
-VCU Rams,Coppin St Eagles,VCU Rams,20251122,-32.5,,147.33
-Coppin St Eagles,VCU Rams,VCU Rams,20251122,-32.5,,147.33
-Dayton Flyers,North Carolina Central Eagles,Dayton Flyers,20251122,-22.3,,146.39999999999998
-Wichita St Shockers,Milwaukee Panthers,Wichita St Shockers,20251122,-12.1,,155.78
-Wichita St Shockers,Milwaukee Panthers,Milwaukee Panthers,20251122,12.1,,155.78
-Wagner Seahawks,Georgetown Hoyas,Wagner Seahawks,20251122,19.1,,134.92000000000002
-North Alabama Lions,Chattanooga Mocs,Chattanooga Mocs,20251122,-5.4,,148.26999999999998
-North Alabama Lions,Chattanooga Mocs,North Alabama Lions,20251122,5.4,,148.26999999999998
-Boston Univ. Terriers,Harvard Crimson,Harvard Crimson,20251122,-4.2,,143.9
-Boston Univ. Terriers,Harvard Crimson,Boston Univ. Terriers,20251122,4.2,,143.9
-Harvard Crimson,Boston Univ. Terriers,Boston Univ. Terriers,20251122,4.2,,143.9
-Harvard Crimson,Boston Univ. Terriers,Harvard Crimson,20251122,-4.2,,143.9
-CSU Fullerton Titans,St. Thomas (MN) Tommies,St. Thomas (MN) Tommies,20251122,-10.8,,150.56
-CSU Fullerton Titans,St. Thomas (MN) Tommies,CSU Fullerton Titans,20251122,10.8,,150.56
-St. Thomas (MN) Tommies,CSU Fullerton Titans,CSU Fullerton Titans,20251122,10.8,,150.56
-St. Thomas (MN) Tommies,CSU Fullerton Titans,St. Thomas (MN) Tommies,20251122,-10.8,,150.56
-Portland Pilots,N Colorado Bears,N Colorado Bears,20251122,-4.4,,149.57999999999998
-Portland Pilots,N Colorado Bears,Portland Pilots,20251122,4.4,,149.57999999999998
-N Colorado Bears,Portland Pilots,Portland Pilots,20251122,4.4,,149.57999999999998
-N Colorado Bears,Portland Pilots,N Colorado Bears,20251122,-4.4,,149.57999999999998
-Kent State Golden Flashes,Cleveland St Vikings,Cleveland St Vikings,20251122,11.8,,157.88
-Kent State Golden Flashes,Cleveland St Vikings,Kent State Golden Flashes,20251122,-11.8,,157.88
-Cleveland St Vikings,Kent State Golden Flashes,Kent State Golden Flashes,20251122,-11.8,,157.88
-Cleveland St Vikings,Kent State Golden Flashes,Cleveland St Vikings,20251122,11.8,,157.88
-Northeastern Huskies,Duquesne Dukes,Duquesne Dukes,20251122,-5.8,,143.94
-Northeastern Huskies,Duquesne Dukes,Northeastern Huskies,20251122,5.8,,143.94
-Duquesne Dukes,Northeastern Huskies,Northeastern Huskies,20251122,5.8,,143.94
-Duquesne Dukes,Northeastern Huskies,Duquesne Dukes,20251122,-5.8,,143.94
-Richmond Spiders,Gardner-Webb Bulldogs,Gardner-Webb Bulldogs,20251122,20.2,,147.47
-Richmond Spiders,Gardner-Webb Bulldogs,Richmond Spiders,20251122,-20.2,,147.47
-Gardner-Webb Bulldogs,Richmond Spiders,Richmond Spiders,20251122,-20.2,,147.47
-Gardner-Webb Bulldogs,Richmond Spiders,Gardner-Webb Bulldogs,20251122,20.2,,147.47
-Georgetown Hoyas,Wagner Seahawks,Wagner Seahawks,20251122,19.1,,134.92000000000002
-Georgetown Hoyas,Wagner Seahawks,Georgetown Hoyas,20251122,-19.1,,134.92000000000002
-Wagner Seahawks,Georgetown Hoyas,Georgetown Hoyas,20251122,-19.1,,134.92000000000002
-Marquette Golden Eagles,Central Michigan Chippewas,Central Michigan Chippewas,20251122,22.2,,151.87
-New Mexico St Aggies,Samford Bulldogs,New Mexico St Aggies,20251122,-9.0,,145.22
-Samford Bulldogs,New Mexico St Aggies,New Mexico St Aggies,20251122,-9.0,,145.22
-Samford Bulldogs,New Mexico St Aggies,Samford Bulldogs,20251122,9.0,,145.22
-UNC Greensboro Spartans,Queens,Queens,20251122,-11.7,,144.78
-UNC Greensboro Spartans,Queens,UNC Greensboro Spartans,20251122,11.7,,144.78
-North Texas Mean Green,Central Arkansas Bears,Central Arkansas Bears,20251122,19.3,,133.93
-North Texas Mean Green,Central Arkansas Bears,North Texas Mean Green,20251122,-19.3,,133.93
-Central Arkansas Bears,North Texas Mean Green,North Texas Mean Green,20251122,-19.3,,133.93
-Central Arkansas Bears,North Texas Mean Green,Central Arkansas Bears,20251122,19.3,,133.93
-Florida Atlantic Owls,Pacific Tigers,Pacific Tigers,20251122,8.7,,153.60000000000002
-Florida Atlantic Owls,Pacific Tigers,Florida Atlantic Owls,20251122,-8.7,,153.60000000000002
-Pacific Tigers,Florida Atlantic Owls,Florida Atlantic Owls,20251122,-8.7,,153.60000000000002
-Pacific Tigers,Florida Atlantic Owls,Pacific Tigers,20251122,8.7,,153.60000000000002
-St. Bonaventure Bonnies,Robert Morris Colonials,Robert Morris Colonials,20251122,10.5,,145.43
-St. Bonaventure Bonnies,Robert Morris Colonials,St. Bonaventure Bonnies,20251122,-10.5,,145.43
-Robert Morris Colonials,St. Bonaventure Bonnies,St. Bonaventure Bonnies,20251122,-10.5,,145.43
-Queens,UNC Greensboro Spartans,Queens,20251122,-11.7,,144.78
-Robert Morris Colonials,St. Bonaventure Bonnies,Robert Morris Colonials,20251122,10.5,,145.43
-Utah Utes,Cal Poly Mustangs,Utah Utes,20251122,-11.9,,164.73000000000002
-Cal Poly Mustangs,Utah Utes,Utah Utes,20251122,-11.9,,164.73000000000002
-Cal Poly Mustangs,Utah Utes,Cal Poly Mustangs,20251122,11.9,,164.73000000000002
-Hawai'i Rainbow Warriors,Arizona St Sun Devils,Arizona St Sun Devils,20251122,-0.1,,144.03
-Hawai'i Rainbow Warriors,Arizona St Sun Devils,Hawai'i Rainbow Warriors,20251122,0.1,,144.03
-Arizona St Sun Devils,Hawai'i Rainbow Warriors,Hawai'i Rainbow Warriors,20251122,0.1,,144.03
-Arizona St Sun Devils,Hawai'i Rainbow Warriors,Arizona St Sun Devils,20251122,-0.1,,144.03
-UIC Flames,High Point Panthers,High Point Panthers,20251122,-4.9,,153.32999999999998
-UIC Flames,High Point Panthers,UIC Flames,20251122,4.9,,153.32999999999998
-High Point Panthers,UIC Flames,UIC Flames,20251122,4.9,,153.32999999999998
-High Point Panthers,UIC Flames,High Point Panthers,20251122,-4.9,,153.32999999999998
-UNLV Rebels,Saint Joseph's Hawks,Saint Joseph's Hawks,20251122,7.7,,153.95
-UNLV Rebels,Saint Joseph's Hawks,UNLV Rebels,20251122,-7.7,,153.95
-Utah Utes,Cal Poly Mustangs,Cal Poly Mustangs,20251122,11.9,,164.73000000000002
-Saint Joseph's Hawks,UNLV Rebels,UNLV Rebels,20251122,-7.7,,153.95
-Queens,UNC Greensboro Spartans,UNC Greensboro Spartans,20251122,11.7,,144.78
-Arkansas-Pine Bluff Golden Lions,Marshall Thundering Herd,Marshall Thundering Herd,20251122,-19.2,,160.76
-Brown Bears,Stony Brook Seawolves,Stony Brook Seawolves,20251122,-0.2,,138.89
-Brown Bears,Stony Brook Seawolves,Brown Bears,20251122,0.2,,138.89
-Fordham Rams,LIU Sharks,LIU Sharks,20251122,5.4,,145.22
-Fordham Rams,LIU Sharks,Fordham Rams,20251122,-5.4,,145.22
-LIU Sharks,Fordham Rams,Fordham Rams,20251122,-5.4,,145.22
-LIU Sharks,Fordham Rams,LIU Sharks,20251122,5.4,,145.22
-Southern Indiana Screaming Eagles,Incarnate Word Cardinals,Incarnate Word Cardinals,20251122,-4.6,,143.03
-Southern Indiana Screaming Eagles,Incarnate Word Cardinals,Southern Indiana Screaming Eagles,20251122,4.6,,143.03
-Incarnate Word Cardinals,Southern Indiana Screaming Eagles,Southern Indiana Screaming Eagles,20251122,4.6,,143.03
-Incarnate Word Cardinals,Southern Indiana Screaming Eagles,Incarnate Word Cardinals,20251122,-4.6,,143.03
-Princeton Tigers,Northeastern Huskies,Northeastern Huskies,20251122,0.9,,141.61
-Princeton Tigers,Northeastern Huskies,Princeton Tigers,20251122,-0.9,,141.61
-Northeastern Huskies,Princeton Tigers,Princeton Tigers,20251122,-0.9,,141.61
-Arkansas-Pine Bluff Golden Lions,Marshall Thundering Herd,Arkansas-Pine Bluff Golden Lions,20251122,19.2,,160.76
-Northeastern Huskies,Princeton Tigers,Northeastern Huskies,20251122,0.9,,141.61
-Rice Owls,Tarleton State Texans,Rice Owls,20251122,-4.9,,141.82999999999998
-Tarleton State Texans,Rice Owls,Rice Owls,20251122,-4.9,,141.82999999999998
-Tarleton State Texans,Rice Owls,Tarleton State Texans,20251122,4.9,,141.82999999999998
-Miami (OH) RedHawks,Mercyhurst Lakers,Mercyhurst Lakers,20251122,14.5,,143.2
-Miami (OH) RedHawks,Mercyhurst Lakers,Miami (OH) RedHawks,20251122,-14.5,,143.2
-Mercyhurst Lakers,Miami (OH) RedHawks,Miami (OH) RedHawks,20251122,-14.5,,143.2
-Mercyhurst Lakers,Miami (OH) RedHawks,Mercyhurst Lakers,20251122,14.5,,143.2
-Cornell Big Red,Colgate Raiders,Colgate Raiders,20251122,4.2,,162.64999999999998
-Cornell Big Red,Colgate Raiders,Cornell Big Red,20251122,-4.2,,162.64999999999998
-Colgate Raiders,Cornell Big Red,Cornell Big Red,20251122,-4.2,,162.64999999999998
-Colgate Raiders,Cornell Big Red,Colgate Raiders,20251122,4.2,,162.64999999999998
-Marshall Thundering Herd,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff Golden Lions,20251122,19.2,,160.76
-Marshall Thundering Herd,Arkansas-Pine Bluff Golden Lions,Marshall Thundering Herd,20251122,-19.2,,160.76
-Rice Owls,Tarleton State Texans,Tarleton State Texans,20251122,4.9,,141.82999999999998
-Saint Joseph's Hawks,UNLV Rebels,Saint Joseph's Hawks,20251122,7.7,,153.95
-Miami Hurricanes,Elon Phoenix,Elon Phoenix,20251122,17.4,,153.48
-Miami Hurricanes,Elon Phoenix,Miami Hurricanes,20251122,-17.4,,153.48
-Texas Southern Tigers,Vanderbilt Commodores,Texas Southern Tigers,20251122,28.5,,158.05
-New Mexico Lobos,Nebraska Cornhuskers,Nebraska Cornhuskers,20251122,-8.7,,151.49
-New Mexico Lobos,Nebraska Cornhuskers,New Mexico Lobos,20251122,8.7,,151.49
-Nebraska Cornhuskers,New Mexico Lobos,New Mexico Lobos,20251122,8.7,,151.49
-Nebraska Cornhuskers,New Mexico Lobos,Nebraska Cornhuskers,20251122,-8.7,,151.49
-Indiana Hoosiers,Lindenwood Lions,Lindenwood Lions,20251122,29.5,,156.19
-Indiana Hoosiers,Lindenwood Lions,Indiana Hoosiers,20251122,-29.5,,156.19
-Lindenwood Lions,Indiana Hoosiers,Indiana Hoosiers,20251122,-29.5,,156.19
-Lindenwood Lions,Indiana Hoosiers,Lindenwood Lions,20251122,29.5,,156.19
-Wake Forest Demon Deacons,Texas Tech Red Raiders,Texas Tech Red Raiders,20251122,-5.2,,148.55
-Wake Forest Demon Deacons,Texas Tech Red Raiders,Wake Forest Demon Deacons,20251122,5.2,,148.55
-Texas Tech Red Raiders,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20251122,5.2,,148.55
-Texas Tech Red Raiders,Wake Forest Demon Deacons,Texas Tech Red Raiders,20251122,-5.2,,148.55
-Texas Southern Tigers,Vanderbilt Commodores,Vanderbilt Commodores,20251122,-28.5,,158.05
-St. John's Red Storm,Bucknell Bison,Bucknell Bison,20251122,27.2,,151.72
-Bucknell Bison,St. John's Red Storm,St. John's Red Storm,20251122,-27.2,,151.72
-Bucknell Bison,St. John's Red Storm,Bucknell Bison,20251122,27.2,,151.72
-Tennessee Volunteers,Tennessee St Tigers,Tennessee St Tigers,20251122,26.3,,151.85
-Tennessee Volunteers,Tennessee St Tigers,Tennessee Volunteers,20251122,-26.3,,151.85
-Tennessee St Tigers,Tennessee Volunteers,Tennessee Volunteers,20251122,-26.3,,151.85
-Tennessee St Tigers,Tennessee Volunteers,Tennessee St Tigers,20251122,26.3,,151.85
-Memphis Tigers,Purdue Boilermakers,Purdue Boilermakers,20251122,-11.7,,153.35
-Memphis Tigers,Purdue Boilermakers,Memphis Tigers,20251122,11.7,,153.35
-Purdue Boilermakers,Memphis Tigers,Memphis Tigers,20251122,11.7,,153.35
-Purdue Boilermakers,Memphis Tigers,Purdue Boilermakers,20251122,-11.7,,153.35
-Houston Cougars,Rider Broncs,Rider Broncs,20251122,35.7,,136.07
-Houston Cougars,Rider Broncs,Houston Cougars,20251122,-35.7,,136.07
-Rider Broncs,Houston Cougars,Houston Cougars,20251122,-35.7,,136.07
-St. John's Red Storm,Bucknell Bison,St. John's Red Storm,20251122,-27.2,,151.72
-Vanderbilt Commodores,Texas Southern Tigers,Vanderbilt Commodores,20251122,-28.5,,158.05
-Vanderbilt Commodores,Texas Southern Tigers,Texas Southern Tigers,20251122,28.5,,158.05
-Troy Trojans,USC Trojans,Troy Trojans,20251122,14.6,,152.55
-Elon Phoenix,Miami Hurricanes,Miami Hurricanes,20251122,-17.4,,153.48
-Elon Phoenix,Miami Hurricanes,Elon Phoenix,20251122,17.4,,153.48
-UCF Knights,Pittsburgh Panthers,Pittsburgh Panthers,20251122,-1.3,,155.19
-UCF Knights,Pittsburgh Panthers,UCF Knights,20251122,1.3,,155.19
-Pittsburgh Panthers,UCF Knights,UCF Knights,20251122,1.3,,155.19
-Pittsburgh Panthers,UCF Knights,Pittsburgh Panthers,20251122,-1.3,,155.19
-Oklahoma Sooners,Oral Roberts Golden Eagles,Oral Roberts Golden Eagles,20251122,20.3,,158.8
-Oklahoma Sooners,Oral Roberts Golden Eagles,Oklahoma Sooners,20251122,-20.3,,158.8
-Oral Roberts Golden Eagles,Oklahoma Sooners,Oklahoma Sooners,20251122,-20.3,,158.8
-Oral Roberts Golden Eagles,Oklahoma Sooners,Oral Roberts Golden Eagles,20251122,20.3,,158.8
-Kansas St Wildcats,Mississippi St Bulldogs,Mississippi St Bulldogs,20251122,-3.6,,155.24
-Kansas St Wildcats,Mississippi St Bulldogs,Kansas St Wildcats,20251122,3.6,,155.24
-Mississippi St Bulldogs,Kansas St Wildcats,Kansas St Wildcats,20251122,3.6,,155.24
-Mississippi St Bulldogs,Kansas St Wildcats,Mississippi St Bulldogs,20251122,-3.6,,155.24
-Missouri Tigers,South Dakota Coyotes,South Dakota Coyotes,20251122,23.3,,168.45
-Missouri Tigers,South Dakota Coyotes,Missouri Tigers,20251122,-23.3,,168.45
-South Dakota Coyotes,Missouri Tigers,Missouri Tigers,20251122,-23.3,,168.45
-South Dakota Coyotes,Missouri Tigers,South Dakota Coyotes,20251122,23.3,,168.45
-Ohio State Buckeyes,Western Michigan Broncos,Western Michigan Broncos,20251122,22.2,,151.55
-Ohio State Buckeyes,Western Michigan Broncos,Ohio State Buckeyes,20251122,-22.2,,151.55
-Western Michigan Broncos,Ohio State Buckeyes,Ohio State Buckeyes,20251122,-22.2,,151.55
-Western Michigan Broncos,Ohio State Buckeyes,Western Michigan Broncos,20251122,22.2,,151.55
-Iowa Hawkeyes,Chicago St Cougars,Chicago St Cougars,20251122,24.2,,159.05
-Iowa Hawkeyes,Chicago St Cougars,Iowa Hawkeyes,20251122,-24.2,,159.05
-Chicago St Cougars,Iowa Hawkeyes,Iowa Hawkeyes,20251122,-24.2,,159.05
-Chicago St Cougars,Iowa Hawkeyes,Chicago St Cougars,20251122,24.2,,159.05
-USC Trojans,Troy Trojans,Troy Trojans,20251122,14.6,,152.55
-USC Trojans,Troy Trojans,USC Trojans,20251122,-14.6,,152.55
-Troy Trojans,USC Trojans,USC Trojans,20251122,-14.6,,152.55
-Stony Brook Seawolves,Brown Bears,Stony Brook Seawolves,20251122,-0.2,,138.89
-Stony Brook Seawolves,Brown Bears,Brown Bears,20251122,0.2,,138.89
-Northern Kentucky Norse,Central Michigan Chippewas,Northern Kentucky Norse,20251122,3.7,,146.78
-Northern Kentucky Norse,Central Michigan Chippewas,Central Michigan Chippewas,20251122,-3.7,,146.78
-Rutgers Scarlet Knights,Central Connecticut St Blue Devils,Rutgers Scarlet Knights,20251122,-15.7,,143.22
-Central Connecticut St Blue Devils,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20251122,-15.7,,143.22
-Central Connecticut St Blue Devils,Rutgers Scarlet Knights,Central Connecticut St Blue Devils,20251122,15.7,,143.22
-Florida St Seminoles,Georgia Southern Eagles,Georgia Southern Eagles,20251122,16.8,,161.14
-Florida St Seminoles,Georgia Southern Eagles,Florida St Seminoles,20251122,-16.8,,161.14
-Georgia Southern Eagles,Florida St Seminoles,Florida St Seminoles,20251122,-16.8,,161.14
-Georgia Southern Eagles,Florida St Seminoles,Georgia Southern Eagles,20251122,16.8,,161.14
-Colorado Buffaloes,UC Davis Aggies,UC Davis Aggies,20251122,13.6,,148.24
-Colorado Buffaloes,UC Davis Aggies,Colorado Buffaloes,20251122,-13.6,,148.24
-UC Davis Aggies,Colorado Buffaloes,Colorado Buffaloes,20251122,-13.6,,148.24
-UC Davis Aggies,Colorado Buffaloes,UC Davis Aggies,20251122,13.6,,148.24
-Stanford Cardinal,Seattle Redhawks,Seattle Redhawks,20251122,9.7,,146.85
-Stanford Cardinal,Seattle Redhawks,Stanford Cardinal,20251122,-9.7,,146.85
-Rutgers Scarlet Knights,Central Connecticut St Blue Devils,Central Connecticut St Blue Devils,20251122,15.7,,143.22
-Seattle Redhawks,Stanford Cardinal,Stanford Cardinal,20251122,-9.7,,146.85
-Texas A&M Aggies,Manhattan Jaspers,Manhattan Jaspers,20251122,18.8,,152.38
-Texas A&M Aggies,Manhattan Jaspers,Texas A&M Aggies,20251122,-18.8,,152.38
-Manhattan Jaspers,Texas A&M Aggies,Texas A&M Aggies,20251122,-18.8,,152.38
-Manhattan Jaspers,Texas A&M Aggies,Manhattan Jaspers,20251122,18.8,,152.38
-Santa Clara Broncos,Louisiana Ragin' Cajuns,Louisiana Ragin' Cajuns,20251122,18.0,,143.51999999999998
-Santa Clara Broncos,Louisiana Ragin' Cajuns,Santa Clara Broncos,20251122,-18.0,,143.51999999999998
-Louisiana Ragin' Cajuns,Santa Clara Broncos,Santa Clara Broncos,20251122,-18.0,,143.51999999999998
-Louisiana Ragin' Cajuns,Santa Clara Broncos,Louisiana Ragin' Cajuns,20251122,18.0,,143.51999999999998
-Green Bay Phoenix,Yale Bulldogs,Yale Bulldogs,20251122,-20.4,,157.22
-Green Bay Phoenix,Yale Bulldogs,Green Bay Phoenix,20251122,20.4,,157.22
-Yale Bulldogs,Green Bay Phoenix,Green Bay Phoenix,20251122,20.4,,157.22
-Yale Bulldogs,Green Bay Phoenix,Yale Bulldogs,20251122,-20.4,,157.22
-Saint Louis Billikens,Fort Wayne Mastodons,Fort Wayne Mastodons,20251122,18.4,,156.82
-Seattle Redhawks,Stanford Cardinal,Seattle Redhawks,20251122,9.7,,146.85
-Akron Zips,Iona Gaels,Akron Zips,20251122,-6.2,,163.5
-Akron Zips,Iona Gaels,Iona Gaels,20251122,6.2,,163.5
-Iona Gaels,Akron Zips,Iona Gaels,20251122,6.2,,163.5
-Tulsa Golden Hurricane,Austin Peay Governors,Austin Peay Governors,20251122,9.0,,140.58999999999997
-Tulsa Golden Hurricane,Austin Peay Governors,Tulsa Golden Hurricane,20251122,-9.0,,140.58999999999997
-Austin Peay Governors,Tulsa Golden Hurricane,Tulsa Golden Hurricane,20251122,-9.0,,140.58999999999997
-Austin Peay Governors,Tulsa Golden Hurricane,Austin Peay Governors,20251122,9.0,,140.58999999999997
-Evansville Purple Aces,Oregon St Beavers,Oregon St Beavers,20251122,-9.3,,143.25
-Evansville Purple Aces,Oregon St Beavers,Evansville Purple Aces,20251122,9.3,,143.25
-Oregon St Beavers,Evansville Purple Aces,Evansville Purple Aces,20251122,9.3,,143.25
-Oregon St Beavers,Evansville Purple Aces,Oregon St Beavers,20251122,-9.3,,143.25
-Grand Canyon Antelopes,Northwestern St Demons,Northwestern St Demons,20251122,15.1,,152.19
-Grand Canyon Antelopes,Northwestern St Demons,Grand Canyon Antelopes,20251122,-15.1,,152.19
-Northwestern St Demons,Grand Canyon Antelopes,Grand Canyon Antelopes,20251122,-15.1,,152.19
-Northwestern St Demons,Grand Canyon Antelopes,Northwestern St Demons,20251122,15.1,,152.19
-Boston College Eagles,Davidson Wildcats,Davidson Wildcats,20251122,-4.4,,139.03
-Boston College Eagles,Davidson Wildcats,Boston College Eagles,20251122,4.4,,139.03
-Davidson Wildcats,Boston College Eagles,Boston College Eagles,20251122,4.4,,139.03
-Davidson Wildcats,Boston College Eagles,Davidson Wildcats,20251122,-4.4,,139.03
-Radford Highlanders,UNC Wilmington Seahawks,UNC Wilmington Seahawks,20251122,-7.2,,144.13
-Radford Highlanders,UNC Wilmington Seahawks,Radford Highlanders,20251122,7.2,,144.13
-UNC Wilmington Seahawks,Radford Highlanders,Radford Highlanders,20251122,7.2,,144.13
-UNC Wilmington Seahawks,Radford Highlanders,UNC Wilmington Seahawks,20251122,-7.2,,144.13
-California Golden Bears,Sacramento St Hornets,Sacramento St Hornets,20251122,17.3,,151.18
-California Golden Bears,Sacramento St Hornets,California Golden Bears,20251122,-17.3,,151.18
-Sacramento St Hornets,California Golden Bears,California Golden Bears,20251122,-17.3,,151.18
-Sacramento St Hornets,California Golden Bears,Sacramento St Hornets,20251122,17.3,,151.18
-UAB Blazers,South Alabama Jaguars,South Alabama Jaguars,20251122,11.9,,145.5
-UAB Blazers,South Alabama Jaguars,UAB Blazers,20251122,-11.9,,145.5
-South Alabama Jaguars,UAB Blazers,UAB Blazers,20251122,-11.9,,145.5
-South Alabama Jaguars,UAB Blazers,South Alabama Jaguars,20251122,11.9,,145.5
-Iona Gaels,Akron Zips,Akron Zips,20251122,-6.2,,163.5
-Saint Louis Billikens,Fort Wayne Mastodons,Saint Louis Billikens,20251122,-18.4,,156.82
-Maryland-Eastern Shore Hawks,Binghamton Bearcats,Maryland-Eastern Shore Hawks,20251122,3.3,,134.36
-Fort Wayne Mastodons,Saint Louis Billikens,Saint Louis Billikens,20251122,-18.4,,156.82
-South Carolina Gamecocks,Butler Bulldogs,Butler Bulldogs,20251122,-1.8,,149.22
-Clemson Tigers,West Virginia Mountaineers,West Virginia Mountaineers,20251122,3.7,,133.51999999999998
-Clemson Tigers,West Virginia Mountaineers,Clemson Tigers,20251122,-3.7,,133.51999999999998
-Michigan St Spartans,Detroit Mercy Titans,Detroit Mercy Titans,20251122,26.3,,145.11
-Michigan St Spartans,Detroit Mercy Titans,Michigan St Spartans,20251122,-26.3,,145.11
-Detroit Mercy Titans,Michigan St Spartans,Michigan St Spartans,20251122,-26.3,,145.11
-Detroit Mercy Titans,Michigan St Spartans,Detroit Mercy Titans,20251122,26.3,,145.11
-Xavier Musketeers,Georgia Bulldogs,Georgia Bulldogs,20251122,-7.2,,156.8
-Xavier Musketeers,Georgia Bulldogs,Xavier Musketeers,20251122,7.2,,156.8
-Georgia Bulldogs,Xavier Musketeers,Xavier Musketeers,20251122,7.2,,156.8
-Georgia Bulldogs,Xavier Musketeers,Georgia Bulldogs,20251122,-7.2,,156.8
-UCLA Bruins,Presbyterian Blue Hose,Presbyterian Blue Hose,20251122,24.1,,133.34
-UCLA Bruins,Presbyterian Blue Hose,UCLA Bruins,20251122,-24.1,,133.34
-Presbyterian Blue Hose,UCLA Bruins,UCLA Bruins,20251122,-24.1,,133.34
-West Virginia Mountaineers,Clemson Tigers,West Virginia Mountaineers,20251122,3.7,,133.51999999999998
-Presbyterian Blue Hose,UCLA Bruins,Presbyterian Blue Hose,20251122,24.1,,133.34
-Florida Gators,Merrimack Warriors,Florida Gators,20251122,-26.2,,149.17000000000002
-Merrimack Warriors,Florida Gators,Florida Gators,20251122,-26.2,,149.17000000000002
-Merrimack Warriors,Florida Gators,Merrimack Warriors,20251122,26.2,,149.17000000000002
-BYU Cougars,Wisconsin Badgers,Wisconsin Badgers,20251122,5.1,,159.76999999999998
-BYU Cougars,Wisconsin Badgers,BYU Cougars,20251122,-5.1,,159.76999999999998
-Wisconsin Badgers,BYU Cougars,BYU Cougars,20251122,-5.1,,159.76999999999998
-Wisconsin Badgers,BYU Cougars,Wisconsin Badgers,20251122,5.1,,159.76999999999998
-Duke Blue Devils,Niagara Purple Eagles,Niagara Purple Eagles,20251122,34.6,,142.66
-Duke Blue Devils,Niagara Purple Eagles,Duke Blue Devils,20251122,-34.6,,142.66
-Niagara Purple Eagles,Duke Blue Devils,Duke Blue Devils,20251122,-34.6,,142.66
-Niagara Purple Eagles,Duke Blue Devils,Niagara Purple Eagles,20251122,34.6,,142.66
-Central Michigan Chippewas,Northern Kentucky Norse,Northern Kentucky Norse,20251122,3.7,,146.78
-Central Michigan Chippewas,Northern Kentucky Norse,Central Michigan Chippewas,20251122,-3.7,,146.78
-Florida Gators,Merrimack Warriors,Merrimack Warriors,20251122,26.2,,149.17000000000002
-West Virginia Mountaineers,Clemson Tigers,Clemson Tigers,20251122,-3.7,,133.51999999999998
-Louisville Cardinals,Cincinnati Bearcats,Louisville Cardinals,20251122,-4.8,,150.61
-Louisville Cardinals,Cincinnati Bearcats,Cincinnati Bearcats,20251122,4.8,,150.61
-South Carolina Gamecocks,Butler Bulldogs,South Carolina Gamecocks,20251122,1.8,,149.22
-Butler Bulldogs,South Carolina Gamecocks,South Carolina Gamecocks,20251122,1.8,,149.22
-Butler Bulldogs,South Carolina Gamecocks,Butler Bulldogs,20251122,-1.8,,149.22
-LSU Tigers,Omaha Mavericks,Omaha Mavericks,20251122,16.3,,156.64999999999998
-LSU Tigers,Omaha Mavericks,LSU Tigers,20251122,-16.3,,156.64999999999998
-Omaha Mavericks,LSU Tigers,LSU Tigers,20251122,-16.3,,156.64999999999998
-Omaha Mavericks,LSU Tigers,Omaha Mavericks,20251122,16.3,,156.64999999999998
-Tulane Green Wave,Utah State Aggies,Utah State Aggies,20251122,-10.3,,152.8
-Tulane Green Wave,Utah State Aggies,Tulane Green Wave,20251122,10.3,,152.8
-Utah State Aggies,Tulane Green Wave,Tulane Green Wave,20251122,10.3,,152.8
-Utah State Aggies,Tulane Green Wave,Utah State Aggies,20251122,-10.3,,152.8
-Colorado St Rams,Denver Pioneers,Denver Pioneers,20251122,22.3,,152.74
-Colorado St Rams,Denver Pioneers,Colorado St Rams,20251122,-22.3,,152.74
-Denver Pioneers,Colorado St Rams,Colorado St Rams,20251122,-22.3,,152.74
-Denver Pioneers,Colorado St Rams,Denver Pioneers,20251122,22.3,,152.74
-Arkansas Razorbacks,Jackson St Tigers,Jackson St Tigers,20251122,26.3,,155.86
-Arkansas Razorbacks,Jackson St Tigers,Arkansas Razorbacks,20251122,-26.3,,155.86
-Jackson St Tigers,Arkansas Razorbacks,Arkansas Razorbacks,20251122,-26.3,,155.86
-Jackson St Tigers,Arkansas Razorbacks,Jackson St Tigers,20251122,26.3,,155.86
-Virginia Cavaliers,Northwestern Wildcats,Northwestern Wildcats,20251122,-1.5,,136.07
-Virginia Cavaliers,Northwestern Wildcats,Virginia Cavaliers,20251122,1.5,,136.07
-Northwestern Wildcats,Virginia Cavaliers,Virginia Cavaliers,20251122,1.5,,136.07
-Northwestern Wildcats,Virginia Cavaliers,Northwestern Wildcats,20251122,-1.5,,136.07
-SMU Mustangs,Arkansas St Red Wolves,Arkansas St Red Wolves,20251122,15.5,,164.76999999999998
-SMU Mustangs,Arkansas St Red Wolves,SMU Mustangs,20251122,-15.5,,164.76999999999998
-Arkansas St Red Wolves,SMU Mustangs,SMU Mustangs,20251122,-15.5,,164.76999999999998
-Arkansas St Red Wolves,SMU Mustangs,Arkansas St Red Wolves,20251122,15.5,,164.76999999999998
-Cincinnati Bearcats,Louisville Cardinals,Louisville Cardinals,20251122,-4.8,,150.61
-Cincinnati Bearcats,Louisville Cardinals,Cincinnati Bearcats,20251122,4.8,,150.61
-Fort Wayne Mastodons,Saint Louis Billikens,Fort Wayne Mastodons,20251122,18.4,,156.82
-Maryland-Eastern Shore Hawks,Binghamton Bearcats,Binghamton Bearcats,20251122,-3.3,,134.36
+Alcorn St Braves,Iowa State Cyclones,Alcorn St Braves,20251205,38.0,,151.29
+Mt. St. Mary's Mountaineers,Sacred Heart Pioneers,Mt. St. Mary's Mountaineers,20251205,-2.8,,152.3
+Sacred Heart Pioneers,Mt. St. Mary's Mountaineers,Mt. St. Mary's Mountaineers,20251205,-2.8,,152.3
+Sacred Heart Pioneers,Mt. St. Mary's Mountaineers,Sacred Heart Pioneers,20251205,2.8,,152.3
+Evansville Purple Aces,Ball State Cardinals,Ball State Cardinals,20251205,5.2,,138.17
+Evansville Purple Aces,Ball State Cardinals,Evansville Purple Aces,20251205,-5.2,,138.17
+Ball State Cardinals,Evansville Purple Aces,Evansville Purple Aces,20251205,-5.2,,138.17
+Ball State Cardinals,Evansville Purple Aces,Ball State Cardinals,20251205,5.2,,138.17
+Western Michigan Broncos,Southern Indiana Screaming Eagles,Southern Indiana Screaming Eagles,20251205,3.1,,145.99
+Western Michigan Broncos,Southern Indiana Screaming Eagles,Western Michigan Broncos,20251205,-3.1,,145.99
+Southern Indiana Screaming Eagles,Western Michigan Broncos,Western Michigan Broncos,20251205,-3.1,,145.99
+Southern Indiana Screaming Eagles,Western Michigan Broncos,Southern Indiana Screaming Eagles,20251205,3.1,,145.99
+Dartmouth Big Green,New Hampshire Wildcats,New Hampshire Wildcats,20251205,11.0,,151.11
+Dartmouth Big Green,New Hampshire Wildcats,Dartmouth Big Green,20251205,-11.0,,151.11
+New Hampshire Wildcats,Dartmouth Big Green,Dartmouth Big Green,20251205,-11.0,,151.11
+New Hampshire Wildcats,Dartmouth Big Green,New Hampshire Wildcats,20251205,11.0,,151.11
+Ohio Bobcats,Maine Black Bears,Maine Black Bears,20251205,7.3,,139.85000000000002
+Ohio Bobcats,Maine Black Bears,Ohio Bobcats,20251205,-7.3,,139.85000000000002
+Maine Black Bears,Ohio Bobcats,Ohio Bobcats,20251205,-7.3,,139.85000000000002
+Maine Black Bears,Ohio Bobcats,Maine Black Bears,20251205,7.3,,139.85000000000002
+Mt. St. Mary's Mountaineers,Sacred Heart Pioneers,Sacred Heart Pioneers,20251205,2.8,,152.3
+IUPUI Jaguars,Detroit Mercy Titans,IUPUI Jaguars,20251205,4.2,,175.47
+IUPUI Jaguars,Detroit Mercy Titans,Detroit Mercy Titans,20251205,-4.2,,175.47
+Detroit Mercy Titans,IUPUI Jaguars,Detroit Mercy Titans,20251205,-4.2,,175.47
+UC Irvine Anteaters,UC Riverside Highlanders,UC Irvine Anteaters,20251205,-11.7,,145.62
+UC Riverside Highlanders,UC Irvine Anteaters,UC Irvine Anteaters,20251205,-11.7,,145.62
+UC Riverside Highlanders,UC Irvine Anteaters,UC Riverside Highlanders,20251205,11.7,,145.62
+Davidson Wildcats,The Citadel Bulldogs,The Citadel Bulldogs,20251205,25.5,,144.5
+Davidson Wildcats,The Citadel Bulldogs,Davidson Wildcats,20251205,-25.5,,144.5
+The Citadel Bulldogs,Davidson Wildcats,Davidson Wildcats,20251205,-25.5,,144.5
+The Citadel Bulldogs,Davidson Wildcats,The Citadel Bulldogs,20251205,25.5,,144.5
+South Florida Bulls,Utah State Aggies,Utah State Aggies,20251205,-4.6,,161.49
+South Florida Bulls,Utah State Aggies,South Florida Bulls,20251205,4.6,,161.49
+South Carolina Upstate Spartans,Coastal Carolina Chanticleers,Coastal Carolina Chanticleers,20251205,4.0,,144.63
+Utah State Aggies,South Florida Bulls,South Florida Bulls,20251205,4.6,,161.49
+UL Monroe Warhawks,Miss Valley St Delta Devils,Miss Valley St Delta Devils,20251205,6.4,,153.38
+UL Monroe Warhawks,Miss Valley St Delta Devils,UL Monroe Warhawks,20251205,-6.4,,153.38
+Miss Valley St Delta Devils,UL Monroe Warhawks,UL Monroe Warhawks,20251205,-6.4,,153.38
+Miss Valley St Delta Devils,UL Monroe Warhawks,Miss Valley St Delta Devils,20251205,6.4,,153.38
+Central Arkansas Bears,Arkansas-Little Rock Trojans,Arkansas-Little Rock Trojans,20251205,1.0,,137.93
+Central Arkansas Bears,Arkansas-Little Rock Trojans,Central Arkansas Bears,20251205,-1.0,,137.93
+Arkansas-Little Rock Trojans,Central Arkansas Bears,Central Arkansas Bears,20251205,-1.0,,137.93
+Arkansas-Little Rock Trojans,Central Arkansas Bears,Arkansas-Little Rock Trojans,20251205,1.0,,137.93
+Detroit Mercy Titans,IUPUI Jaguars,IUPUI Jaguars,20251205,4.2,,175.47
+Utah State Aggies,South Florida Bulls,Utah State Aggies,20251205,-4.6,,161.49
+South Carolina Upstate Spartans,Coastal Carolina Chanticleers,South Carolina Upstate Spartans,20251205,-4.0,,144.63
+Coastal Carolina Chanticleers,South Carolina Upstate Spartans,South Carolina Upstate Spartans,20251205,-4.0,,144.63
+Coastal Carolina Chanticleers,South Carolina Upstate Spartans,Coastal Carolina Chanticleers,20251205,4.0,,144.63
+Weber State Wildcats,Oral Roberts Golden Eagles,Oral Roberts Golden Eagles,20251205,6.2,,156.15
+Weber State Wildcats,Oral Roberts Golden Eagles,Weber State Wildcats,20251205,-6.2,,156.15
+Oral Roberts Golden Eagles,Weber State Wildcats,Weber State Wildcats,20251205,-6.2,,156.15
+Oral Roberts Golden Eagles,Weber State Wildcats,Oral Roberts Golden Eagles,20251205,6.2,,156.15
+Radford Highlanders,Southern Miss Golden Eagles,Southern Miss Golden Eagles,20251205,-0.8,,153.51
+Radford Highlanders,Southern Miss Golden Eagles,Radford Highlanders,20251205,0.8,,153.51
+Southern Miss Golden Eagles,Radford Highlanders,Radford Highlanders,20251205,0.8,,153.51
+Southern Miss Golden Eagles,Radford Highlanders,Southern Miss Golden Eagles,20251205,-0.8,,153.51
+Idaho Vandals,North Dakota Fighting Hawks,North Dakota Fighting Hawks,20251205,11.0,,145.31
+Drexel Dragons,American Eagles,Drexel Dragons,20251205,6.6,,137.87
+Idaho Vandals,North Dakota Fighting Hawks,Idaho Vandals,20251205,-11.0,,145.31
+North Dakota Fighting Hawks,Idaho Vandals,North Dakota Fighting Hawks,20251205,11.0,,145.31
+Florida Int'l Golden Panthers,Florida Gulf Coast Eagles,Florida Gulf Coast Eagles,20251205,-0.8,,146.37
+Florida Int'l Golden Panthers,Florida Gulf Coast Eagles,Florida Int'l Golden Panthers,20251205,0.8,,146.37
+Florida Gulf Coast Eagles,Florida Int'l Golden Panthers,Florida Int'l Golden Panthers,20251205,0.8,,146.37
+Florida Gulf Coast Eagles,Florida Int'l Golden Panthers,Florida Gulf Coast Eagles,20251205,-0.8,,146.37
+Massachusetts Minutemen,Harvard Crimson,Harvard Crimson,20251205,3.7,,147.64
+Massachusetts Minutemen,Harvard Crimson,Massachusetts Minutemen,20251205,-3.7,,147.64
+Harvard Crimson,Massachusetts Minutemen,Massachusetts Minutemen,20251205,-3.7,,147.64
+Harvard Crimson,Massachusetts Minutemen,Harvard Crimson,20251205,3.7,,147.64
+North Dakota Fighting Hawks,Idaho Vandals,Idaho Vandals,20251205,-11.0,,145.31
+UC Irvine Anteaters,UC Riverside Highlanders,UC Riverside Highlanders,20251205,11.7,,145.62
+Drexel Dragons,American Eagles,American Eagles,20251205,-6.6,,137.87
+American Eagles,Drexel Dragons,Drexel Dragons,20251205,6.6,,137.87
+Delaware St Hornets,Navy Midshipmen,Navy Midshipmen,20251205,-10.1,,142.28
+Delaware St Hornets,Navy Midshipmen,Delaware St Hornets,20251205,10.1,,142.28
+Navy Midshipmen,Delaware St Hornets,Delaware St Hornets,20251205,10.1,,142.28
+Navy Midshipmen,Delaware St Hornets,Navy Midshipmen,20251205,-10.1,,142.28
+Georgia Southern Eagles,Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,20251205,2.7,,142.51999999999998
+Georgia Southern Eagles,Louisiana Tech Bulldogs,Georgia Southern Eagles,20251205,-2.7,,142.51999999999998
+Louisiana Tech Bulldogs,Georgia Southern Eagles,Georgia Southern Eagles,20251205,-2.7,,142.51999999999998
+Louisiana Tech Bulldogs,Georgia Southern Eagles,Louisiana Tech Bulldogs,20251205,2.7,,142.51999999999998
+Lamar Cardinals,Louisiana Ragin' Cajuns,Louisiana Ragin' Cajuns,20251205,9.5,,128.09
+American Eagles,Drexel Dragons,American Eagles,20251205,-6.6,,137.87
+Lamar Cardinals,Louisiana Ragin' Cajuns,Lamar Cardinals,20251205,-9.5,,128.09
+Louisiana Ragin' Cajuns,Lamar Cardinals,Louisiana Ragin' Cajuns,20251205,9.5,,128.09
+Monmouth Hawks,Princeton Tigers,Princeton Tigers,20251205,5.8,,142.95
+Monmouth Hawks,Princeton Tigers,Monmouth Hawks,20251205,-5.8,,142.95
+Princeton Tigers,Monmouth Hawks,Monmouth Hawks,20251205,-5.8,,142.95
+Princeton Tigers,Monmouth Hawks,Princeton Tigers,20251205,5.8,,142.95
+Denver Pioneers,Eastern Washington Eagles,Eastern Washington Eagles,20251205,5.1,,156.68
+Denver Pioneers,Eastern Washington Eagles,Denver Pioneers,20251205,-5.1,,156.68
+Eastern Washington Eagles,Denver Pioneers,Denver Pioneers,20251205,-5.1,,156.68
+Eastern Washington Eagles,Denver Pioneers,Eastern Washington Eagles,20251205,5.1,,156.68
+Louisiana Ragin' Cajuns,Lamar Cardinals,Lamar Cardinals,20251205,-9.5,,128.09
+Wofford Terriers,Presbyterian Blue Hose,Presbyterian Blue Hose,20251205,10.4,,134.66
+Long Beach St 49ers,UC Santa Barbara Gauchos,Long Beach St 49ers,20251205,11.5,,146.18
+UC Santa Barbara Gauchos,Long Beach St 49ers,UC Santa Barbara Gauchos,20251205,-11.5,,146.18
+San Diego Toreros,San Jos√© St Spartans,San Jos√© St Spartans,20251205,-5.9,,148.57
+San Diego Toreros,San Jos√© St Spartans,San Diego Toreros,20251205,5.9,,148.57
+Marist Red Foxes,Mt. St. Mary's Mountaineers,Mt. St. Mary's Mountaineers,20251205,12.0,,134.7
+Marist Red Foxes,Mt. St. Mary's Mountaineers,Marist Red Foxes,20251205,-12.0,,134.7
+Mt. St. Mary's Mountaineers,Marist Red Foxes,Marist Red Foxes,20251205,-12.0,,134.7
+Mt. St. Mary's Mountaineers,Marist Red Foxes,Mt. St. Mary's Mountaineers,20251205,12.0,,134.7
+Iona Gaels,Quinnipiac Bobcats,Quinnipiac Bobcats,20251205,5.2,,161.32
+Iona Gaels,Quinnipiac Bobcats,Iona Gaels,20251205,-5.2,,161.32
+Quinnipiac Bobcats,Iona Gaels,Iona Gaels,20251205,-5.2,,161.32
+Quinnipiac Bobcats,Iona Gaels,Quinnipiac Bobcats,20251205,5.2,,161.32
+East Tennessee St Buccaneers,South Alabama Jaguars,South Alabama Jaguars,20251205,5.4,,138.82999999999998
+East Tennessee St Buccaneers,South Alabama Jaguars,East Tennessee St Buccaneers,20251205,-5.4,,138.82999999999998
+South Alabama Jaguars,East Tennessee St Buccaneers,East Tennessee St Buccaneers,20251205,-5.4,,138.82999999999998
+South Alabama Jaguars,East Tennessee St Buccaneers,South Alabama Jaguars,20251205,5.4,,138.82999999999998
+Drake Bulldogs,UAB Blazers,UAB Blazers,20251205,3.6,,145.55
+Drake Bulldogs,UAB Blazers,Drake Bulldogs,20251205,-3.6,,145.55
+UAB Blazers,Drake Bulldogs,Drake Bulldogs,20251205,-3.6,,145.55
+UAB Blazers,Drake Bulldogs,UAB Blazers,20251205,3.6,,145.55
+High Point Panthers,NJIT Highlanders,NJIT Highlanders,20251205,27.3,,152.38
+San Jos√© St Spartans,San Diego Toreros,San Jos√© St Spartans,20251205,-5.9,,148.57
+San Jos√© St Spartans,San Diego Toreros,San Diego Toreros,20251205,5.9,,148.57
+Niagara Purple Eagles,Siena Saints,Niagara Purple Eagles,20251205,14.2,,131.37
+Niagara Purple Eagles,Siena Saints,Siena Saints,20251205,-14.2,,131.37
+Mercyhurst Lakers,Lafayette Leopards,Lafayette Leopards,20251205,-2.5,,133.42
+Mercyhurst Lakers,Lafayette Leopards,Mercyhurst Lakers,20251205,2.5,,133.42
+Saint Peter's Peacocks,Canisius Golden Griffins,Canisius Golden Griffins,20251205,6.3,,136.62
+Saint Peter's Peacocks,Canisius Golden Griffins,Saint Peter's Peacocks,20251205,-6.3,,136.62
+Canisius Golden Griffins,Saint Peter's Peacocks,Saint Peter's Peacocks,20251205,-6.3,,136.62
+Canisius Golden Griffins,Saint Peter's Peacocks,Canisius Golden Griffins,20251205,6.3,,136.62
+Manhattan Jaspers,Fairfield Stags,Fairfield Stags,20251205,2.0,,155.18
+Manhattan Jaspers,Fairfield Stags,Manhattan Jaspers,20251205,-2.0,,155.18
+Fairfield Stags,Manhattan Jaspers,Manhattan Jaspers,20251205,-2.0,,155.18
+High Point Panthers,NJIT Highlanders,High Point Panthers,20251205,-27.3,,152.38
+Fairfield Stags,Manhattan Jaspers,Fairfield Stags,20251205,2.0,,155.18
+Brown Bears,Bryant Bulldogs,Brown Bears,20251205,-5.3,,132.07
+Bryant Bulldogs,Brown Bears,Brown Bears,20251205,-5.3,,132.07
+Bryant Bulldogs,Brown Bears,Bryant Bulldogs,20251205,5.3,,132.07
+Bethune-Cookman Wildcats,South Carolina St Bulldogs,South Carolina St Bulldogs,20251205,16.8,,149.06
+Bethune-Cookman Wildcats,South Carolina St Bulldogs,Bethune-Cookman Wildcats,20251205,-16.8,,149.06
+South Carolina St Bulldogs,Bethune-Cookman Wildcats,Bethune-Cookman Wildcats,20251205,-16.8,,149.06
+South Carolina St Bulldogs,Bethune-Cookman Wildcats,South Carolina St Bulldogs,20251205,16.8,,149.06
+Siena Saints,Niagara Purple Eagles,Niagara Purple Eagles,20251205,14.2,,131.37
+Siena Saints,Niagara Purple Eagles,Siena Saints,20251205,-14.2,,131.37
+Brown Bears,Bryant Bulldogs,Bryant Bulldogs,20251205,5.3,,132.07
+NJIT Highlanders,High Point Panthers,High Point Panthers,20251205,-27.3,,152.38
+NJIT Highlanders,High Point Panthers,NJIT Highlanders,20251205,27.3,,152.38
+Xavier Musketeers,Cincinnati Bearcats,Cincinnati Bearcats,20251205,9.1,,142.98
+Merrimack Warriors,Rider Broncs,Merrimack Warriors,20251205,-13.0,,140.46
+Rider Broncs,Merrimack Warriors,Merrimack Warriors,20251205,-13.0,,140.46
+Rider Broncs,Merrimack Warriors,Rider Broncs,20251205,13.0,,140.46
+CSU Northridge Matadors,CSU Bakersfield Roadrunners,CSU Bakersfield Roadrunners,20251205,6.2,,154.57999999999998
+CSU Northridge Matadors,CSU Bakersfield Roadrunners,CSU Northridge Matadors,20251205,-6.2,,154.57999999999998
+CSU Bakersfield Roadrunners,CSU Northridge Matadors,CSU Northridge Matadors,20251205,-6.2,,154.57999999999998
+CSU Bakersfield Roadrunners,CSU Northridge Matadors,CSU Bakersfield Roadrunners,20251205,6.2,,154.57999999999998
+CSU Fullerton Titans,Cal Poly Mustangs,Cal Poly Mustangs,20251205,0.1,,169.01
+CSU Fullerton Titans,Cal Poly Mustangs,CSU Fullerton Titans,20251205,-0.1,,169.01
+Merrimack Warriors,Rider Broncs,Rider Broncs,20251205,13.0,,140.46
+Cal Poly Mustangs,CSU Fullerton Titans,CSU Fullerton Titans,20251205,-0.1,,169.01
+Green Bay Phoenix,Robert Morris Colonials,Robert Morris Colonials,20251205,-0.2,,142.34
+Green Bay Phoenix,Robert Morris Colonials,Green Bay Phoenix,20251205,0.2,,142.34
+Robert Morris Colonials,Green Bay Phoenix,Green Bay Phoenix,20251205,0.2,,142.34
+Robert Morris Colonials,Green Bay Phoenix,Robert Morris Colonials,20251205,-0.2,,142.34
+Hawai'i Rainbow Warriors,UC Davis Aggies,UC Davis Aggies,20251205,6.3,,142.87
+Hawai'i Rainbow Warriors,UC Davis Aggies,Hawai'i Rainbow Warriors,20251205,-6.3,,142.87
+UC Davis Aggies,Hawai'i Rainbow Warriors,Hawai'i Rainbow Warriors,20251205,-6.3,,142.87
+UC Davis Aggies,Hawai'i Rainbow Warriors,UC Davis Aggies,20251205,6.3,,142.87
+UC Santa Barbara Gauchos,Long Beach St 49ers,Long Beach St 49ers,20251205,11.5,,146.18
+Cal Poly Mustangs,CSU Fullerton Titans,Cal Poly Mustangs,20251205,0.1,,169.01
+Long Beach St 49ers,UC Santa Barbara Gauchos,UC Santa Barbara Gauchos,20251205,-11.5,,146.18
+Texas A&M-Commerce Lions,UConn Huskies,Texas A&M-Commerce Lions,20251205,35.6,,136.99
+UConn Huskies,Texas A&M-Commerce Lions,UConn Huskies,20251205,-35.6,,136.99
+Xavier Musketeers,Cincinnati Bearcats,Xavier Musketeers,20251205,-9.1,,142.98
+Cincinnati Bearcats,Xavier Musketeers,Xavier Musketeers,20251205,-9.1,,142.98
+Cincinnati Bearcats,Xavier Musketeers,Cincinnati Bearcats,20251205,9.1,,142.98
+McNeese Cowboys,Northwestern St Demons,Northwestern St Demons,20251205,22.3,,143.96
+McNeese Cowboys,Northwestern St Demons,McNeese Cowboys,20251205,-22.3,,143.96
+Northwestern St Demons,McNeese Cowboys,McNeese Cowboys,20251205,-22.3,,143.96
+Northwestern St Demons,McNeese Cowboys,Northwestern St Demons,20251205,22.3,,143.96
+VCU Rams,Samford Bulldogs,Samford Bulldogs,20251205,20.4,,147.65
+VCU Rams,Samford Bulldogs,VCU Rams,20251205,-20.4,,147.65
+Texas A&M-Commerce Lions,UConn Huskies,UConn Huskies,20251205,-35.6,,136.99
+Samford Bulldogs,VCU Rams,VCU Rams,20251205,-20.4,,147.65
+TCU Horned Frogs,Notre Dame Fighting Irish,Notre Dame Fighting Irish,20251205,9.8,,140.03
+TCU Horned Frogs,Notre Dame Fighting Irish,TCU Horned Frogs,20251205,-9.8,,140.03
+Notre Dame Fighting Irish,TCU Horned Frogs,TCU Horned Frogs,20251205,-9.8,,140.03
+Notre Dame Fighting Irish,TCU Horned Frogs,Notre Dame Fighting Irish,20251205,9.8,,140.03
+Kentucky Wildcats,Gonzaga Bulldogs,Gonzaga Bulldogs,20251205,3.1,,154.45
+Kentucky Wildcats,Gonzaga Bulldogs,Kentucky Wildcats,20251205,-3.1,,154.45
+Gonzaga Bulldogs,Kentucky Wildcats,Kentucky Wildcats,20251205,-3.1,,154.45
+Gonzaga Bulldogs,Kentucky Wildcats,Gonzaga Bulldogs,20251205,3.1,,154.45
+UConn Huskies,Texas A&M-Commerce Lions,Texas A&M-Commerce Lions,20251205,35.6,,136.99
+Samford Bulldogs,VCU Rams,Samford Bulldogs,20251205,20.4,,147.65
+Wofford Terriers,Presbyterian Blue Hose,Wofford Terriers,20251205,-10.4,,134.66
+Presbyterian Blue Hose,Wofford Terriers,Wofford Terriers,20251205,-10.4,,134.66
+Presbyterian Blue Hose,Wofford Terriers,Presbyterian Blue Hose,20251205,10.4,,134.66
+Belmont Bruins,Richmond Spiders,Richmond Spiders,20251205,6.4,,152.13
+Belmont Bruins,Richmond Spiders,Belmont Bruins,20251205,-6.4,,152.13
+Richmond Spiders,Belmont Bruins,Belmont Bruins,20251205,-6.4,,152.13
+Richmond Spiders,Belmont Bruins,Richmond Spiders,20251205,6.4,,152.13
+West Virginia Mountaineers,Coppin St Eagles,Coppin St Eagles,20251205,32.5,,134.71
+West Virginia Mountaineers,Coppin St Eagles,West Virginia Mountaineers,20251205,-32.5,,134.71
+Coppin St Eagles,West Virginia Mountaineers,West Virginia Mountaineers,20251205,-32.5,,134.71
+Coppin St Eagles,West Virginia Mountaineers,Coppin St Eagles,20251205,32.5,,134.71
+Seton Hall Pirates,Central Connecticut St Blue Devils,Central Connecticut St Blue Devils,20251205,16.6,,134.03
+Seton Hall Pirates,Central Connecticut St Blue Devils,Seton Hall Pirates,20251205,-16.6,,134.03
+Central Connecticut St Blue Devils,Seton Hall Pirates,Seton Hall Pirates,20251205,-16.6,,134.03
+Central Connecticut St Blue Devils,Seton Hall Pirates,Central Connecticut St Blue Devils,20251205,16.6,,134.03
+Akron Zips,Bucknell Bison,Bucknell Bison,20251205,23.9,,161.02
+Akron Zips,Bucknell Bison,Akron Zips,20251205,-23.9,,161.02
+Bucknell Bison,Akron Zips,Akron Zips,20251205,-23.9,,161.02
+Bucknell Bison,Akron Zips,Bucknell Bison,20251205,23.9,,161.02
+San Diego St Aztecs,Utah Valley Wolverines,Utah Valley Wolverines,20251205,11.5,,149.79000000000002
+San Diego St Aztecs,Utah Valley Wolverines,San Diego St Aztecs,20251205,-11.5,,149.79000000000002
+Utah Valley Wolverines,San Diego St Aztecs,San Diego St Aztecs,20251205,-11.5,,149.79000000000002
+Southern Illinois Salukis,High Point Panthers,Southern Illinois Salukis,20251205,9.8,,159.07
+Southern Illinois Salukis,High Point Panthers,High Point Panthers,20251205,-9.8,,159.07
+High Point Panthers,Southern Illinois Salukis,High Point Panthers,20251205,-9.8,,159.07
+High Point Panthers,Southern Illinois Salukis,Southern Illinois Salukis,20251205,9.8,,159.07
+San Francisco Dons,North Alabama Lions,North Alabama Lions,20251205,12.5,,146.78
+San Francisco Dons,North Alabama Lions,San Francisco Dons,20251205,-12.5,,146.78
+North Alabama Lions,San Francisco Dons,San Francisco Dons,20251205,-12.5,,146.78
+North Alabama Lions,San Francisco Dons,North Alabama Lions,20251205,12.5,,146.78
+Georgetown Hoyas,UMBC Retrievers,UMBC Retrievers,20251205,19.6,,144.6
+Georgetown Hoyas,UMBC Retrievers,Georgetown Hoyas,20251205,-19.6,,144.6
+UMBC Retrievers,Georgetown Hoyas,Georgetown Hoyas,20251205,-19.6,,144.6
+UMBC Retrievers,Georgetown Hoyas,UMBC Retrievers,20251205,19.6,,144.6
+UNC Wilmington Seahawks,Marshall Thundering Herd,Marshall Thundering Herd,20251205,9.8,,147.57999999999998
+Utah Valley Wolverines,San Diego St Aztecs,Utah Valley Wolverines,20251205,11.5,,149.79000000000002
+UNC Wilmington Seahawks,Marshall Thundering Herd,UNC Wilmington Seahawks,20251205,-9.8,,147.57999999999998
+Marshall Thundering Herd,UNC Wilmington Seahawks,Marshall Thundering Herd,20251205,9.8,,147.57999999999998
+Georgia Tech Yellow Jackets,Mississippi St Bulldogs,Mississippi St Bulldogs,20251205,-1.9,,145.46
+Georgia Tech Yellow Jackets,Mississippi St Bulldogs,Georgia Tech Yellow Jackets,20251205,1.9,,145.46
+Mississippi St Bulldogs,Georgia Tech Yellow Jackets,Georgia Tech Yellow Jackets,20251205,1.9,,145.46
+Mississippi St Bulldogs,Georgia Tech Yellow Jackets,Mississippi St Bulldogs,20251205,-1.9,,145.46
+Memphis Tigers,New Orleans Privateers,New Orleans Privateers,20251205,14.3,,151.65
+Memphis Tigers,New Orleans Privateers,Memphis Tigers,20251205,-14.3,,151.65
+New Orleans Privateers,Memphis Tigers,Memphis Tigers,20251205,-14.3,,151.65
+New Orleans Privateers,Memphis Tigers,New Orleans Privateers,20251205,14.3,,151.65
+Marshall Thundering Herd,UNC Wilmington Seahawks,UNC Wilmington Seahawks,20251205,-9.8,,147.57999999999998
+Washington Huskies,UCLA Bruins,UCLA Bruins,20251205,-0.3,,138.5
+Washington Huskies,UCLA Bruins,Washington Huskies,20251205,0.3,,138.5
+UCLA Bruins,Washington Huskies,Washington Huskies,20251205,0.3,,138.5
+Cal Baptist Lancers,BYU Cougars,Cal Baptist Lancers,20251205,19.2,,150.48000000000002
+Arkansas Razorbacks,Louisville Cardinals,Louisville Cardinals,20251205,-0.6,,161.89
+Arkansas Razorbacks,Louisville Cardinals,Arkansas Razorbacks,20251205,0.6,,161.89
+Louisville Cardinals,Arkansas Razorbacks,Arkansas Razorbacks,20251205,0.6,,161.89
+Louisville Cardinals,Arkansas Razorbacks,Louisville Cardinals,20251205,-0.6,,161.89
+Minnesota Golden Gophers,Indiana Hoosiers,Indiana Hoosiers,20251205,-14.2,,137.76
+Minnesota Golden Gophers,Indiana Hoosiers,Minnesota Golden Gophers,20251205,14.2,,137.76
+Indiana Hoosiers,Minnesota Golden Gophers,Minnesota Golden Gophers,20251205,14.2,,137.76
+Indiana Hoosiers,Minnesota Golden Gophers,Indiana Hoosiers,20251205,-14.2,,137.76
+Cal Baptist Lancers,BYU Cougars,BYU Cougars,20251205,-19.2,,150.48000000000002
+Alabama Crimson Tide,Clemson Tigers,Clemson Tigers,20251205,9.0,,165.39
+Clemson Tigers,Alabama Crimson Tide,Alabama Crimson Tide,20251205,-9.0,,165.39
+Clemson Tigers,Alabama Crimson Tide,Clemson Tigers,20251205,9.0,,165.39
+Vanderbilt Commodores,SMU Mustangs,SMU Mustangs,20251205,13.3,,165.31
+Vanderbilt Commodores,SMU Mustangs,Vanderbilt Commodores,20251205,-13.3,,165.31
+SMU Mustangs,Vanderbilt Commodores,Vanderbilt Commodores,20251205,-13.3,,165.31
+SMU Mustangs,Vanderbilt Commodores,SMU Mustangs,20251205,13.3,,165.31
+Iowa State Cyclones,Alcorn St Braves,Alcorn St Braves,20251205,38.0,,151.29
+Iowa State Cyclones,Alcorn St Braves,Iowa State Cyclones,20251205,-38.0,,151.29
+Alcorn St Braves,Iowa State Cyclones,Iowa State Cyclones,20251205,-38.0,,151.29
+Alabama Crimson Tide,Clemson Tigers,Alabama Crimson Tide,20251205,-9.0,,165.39
+Eastern Kentucky Colonels,Illinois St Redbirds,Eastern Kentucky Colonels,20251205,11.0,,148.4
+BYU Cougars,Cal Baptist Lancers,BYU Cougars,20251205,-19.2,,150.48000000000002
+NC State Wolfpack,Auburn Tigers,NC State Wolfpack,20251205,9.7,,164.88
+UCLA Bruins,Washington Huskies,UCLA Bruins,20251205,-0.3,,138.5
+Texas Longhorns,Virginia Cavaliers,Virginia Cavaliers,20251205,0.9,,145.8
+Texas Longhorns,Virginia Cavaliers,Texas Longhorns,20251205,-0.9,,145.8
+Virginia Cavaliers,Texas Longhorns,Texas Longhorns,20251205,-0.9,,145.8
+Virginia Cavaliers,Texas Longhorns,Virginia Cavaliers,20251205,0.9,,145.8
+Boston College Eagles,LSU Tigers,LSU Tigers,20251205,-11.1,,143.01
+Boston College Eagles,LSU Tigers,Boston College Eagles,20251205,11.1,,143.01
+LSU Tigers,Boston College Eagles,Boston College Eagles,20251205,11.1,,143.01
+LSU Tigers,Boston College Eagles,LSU Tigers,20251205,-11.1,,143.01
+BYU Cougars,Cal Baptist Lancers,Cal Baptist Lancers,20251205,19.2,,150.48000000000002
+Wisconsin Badgers,Northwestern Wildcats,Northwestern Wildcats,20251205,5.9,,153.23000000000002
+Northwestern Wildcats,Wisconsin Badgers,Wisconsin Badgers,20251205,-5.9,,153.23000000000002
+Northwestern Wildcats,Wisconsin Badgers,Northwestern Wildcats,20251205,5.9,,153.23000000000002
+Santa Clara Broncos,Utah Tech Trailblazers,Utah Tech Trailblazers,20251205,26.6,,142.91
+Santa Clara Broncos,Utah Tech Trailblazers,Santa Clara Broncos,20251205,-26.6,,142.91
+Utah Tech Trailblazers,Santa Clara Broncos,Santa Clara Broncos,20251205,-26.6,,142.91
+Utah Tech Trailblazers,Santa Clara Broncos,Utah Tech Trailblazers,20251205,26.6,,142.91
+Auburn Tigers,NC State Wolfpack,NC State Wolfpack,20251205,9.7,,164.88
+Auburn Tigers,NC State Wolfpack,Auburn Tigers,20251205,-9.7,,164.88
+NC State Wolfpack,Auburn Tigers,Auburn Tigers,20251205,-9.7,,164.88
+Wisconsin Badgers,Northwestern Wildcats,Wisconsin Badgers,20251205,-5.9,,153.23000000000002
+Eastern Kentucky Colonels,Illinois St Redbirds,Illinois St Redbirds,20251205,-11.0,,148.4
+Illinois St Redbirds,Eastern Kentucky Colonels,Illinois St Redbirds,20251205,-11.0,,148.4
+Illinois St Redbirds,Eastern Kentucky Colonels,Eastern Kentucky Colonels,20251205,11.0,,148.4
+UIC Flames,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff Golden Lions,20251205,15.8,,162.6
+UIC Flames,Arkansas-Pine Bluff Golden Lions,UIC Flames,20251205,-15.8,,162.6
+Arkansas-Pine Bluff Golden Lions,UIC Flames,UIC Flames,20251205,-15.8,,162.6
+Arkansas-Pine Bluff Golden Lions,UIC Flames,Arkansas-Pine Bluff Golden Lions,20251205,15.8,,162.6
+Northern Kentucky Norse,Cleveland St Vikings,Cleveland St Vikings,20251205,11.3,,153.61
+Northern Kentucky Norse,Cleveland St Vikings,Northern Kentucky Norse,20251205,-11.3,,153.61
+Cleveland St Vikings,Northern Kentucky Norse,Northern Kentucky Norse,20251205,-11.3,,153.61
+Cleveland St Vikings,Northern Kentucky Norse,Cleveland St Vikings,20251205,11.3,,153.61
+Northern Arizona Lumberjacks,South Dakota St Jackrabbits,South Dakota St Jackrabbits,20251205,-1.8,,142.25
+Gardner-Webb Bulldogs,Queens,Gardner-Webb Bulldogs,20251205,20.4,,159.23
+Northern Arizona Lumberjacks,South Dakota St Jackrabbits,Northern Arizona Lumberjacks,20251205,1.8,,142.25
+South Dakota St Jackrabbits,Northern Arizona Lumberjacks,South Dakota St Jackrabbits,20251205,-1.8,,142.25
+Stephen F. Austin Lumberjacks,UT Rio Grande Valley Vaqueros,UT Rio Grande Valley Vaqueros,20251205,5.9,,152.23000000000002
+Stephen F. Austin Lumberjacks,UT Rio Grande Valley Vaqueros,Stephen F. Austin Lumberjacks,20251205,-5.9,,152.23000000000002
+UT Rio Grande Valley Vaqueros,Stephen F. Austin Lumberjacks,Stephen F. Austin Lumberjacks,20251205,-5.9,,152.23000000000002
+UT Rio Grande Valley Vaqueros,Stephen F. Austin Lumberjacks,UT Rio Grande Valley Vaqueros,20251205,5.9,,152.23000000000002
+UMKC Kangaroos,Idaho State Bengals,Idaho State Bengals,20251205,-7.2,,136.93
+UMKC Kangaroos,Idaho State Bengals,UMKC Kangaroos,20251205,7.2,,136.93
+Idaho State Bengals,UMKC Kangaroos,UMKC Kangaroos,20251205,7.2,,136.93
+Idaho State Bengals,UMKC Kangaroos,Idaho State Bengals,20251205,-7.2,,136.93
+South Dakota St Jackrabbits,Northern Arizona Lumberjacks,Northern Arizona Lumberjacks,20251205,1.8,,142.25
+Oregon St Beavers,Vermont Catamounts,Vermont Catamounts,20251205,1.3,,144.39999999999998
+Gardner-Webb Bulldogs,Queens,Queens,20251205,-20.4,,159.23
+Queens,Gardner-Webb Bulldogs,Gardner-Webb Bulldogs,20251205,20.4,,159.23
+Alabama A&M Bulldogs,Tennessee St Tigers,Tennessee St Tigers,20251205,-5.0,,149.64999999999998
+Alabama A&M Bulldogs,Tennessee St Tigers,Alabama A&M Bulldogs,20251205,5.0,,149.64999999999998
+Tennessee St Tigers,Alabama A&M Bulldogs,Alabama A&M Bulldogs,20251205,5.0,,149.64999999999998
+Tennessee St Tigers,Alabama A&M Bulldogs,Tennessee St Tigers,20251205,-5.0,,149.64999999999998
+Elon Phoenix,Furman Paladins,Furman Paladins,20251205,2.2,,152.97
+Elon Phoenix,Furman Paladins,Elon Phoenix,20251205,-2.2,,152.97
+Furman Paladins,Elon Phoenix,Elon Phoenix,20251205,-2.2,,152.97
+Furman Paladins,Elon Phoenix,Furman Paladins,20251205,2.2,,152.97
+Rice Owls,Texas State Bobcats,Texas State Bobcats,20251205,5.8,,134.2
+Queens,Gardner-Webb Bulldogs,Queens,20251205,-20.4,,159.23
+Rice Owls,Texas State Bobcats,Rice Owls,20251205,-5.8,,134.2
+Texas State Bobcats,Rice Owls,Texas State Bobcats,20251205,5.8,,134.2
+South Dakota Coyotes,Portland St Vikings,Portland St Vikings,20251205,-1.3,,162.35
+South Dakota Coyotes,Portland St Vikings,South Dakota Coyotes,20251205,1.3,,162.35
+Portland St Vikings,South Dakota Coyotes,South Dakota Coyotes,20251205,1.3,,162.35
+Portland St Vikings,South Dakota Coyotes,Portland St Vikings,20251205,-1.3,,162.35
+Holy Cross Crusaders,Northeastern Huskies,Northeastern Huskies,20251205,-6.1,,141.06
+Holy Cross Crusaders,Northeastern Huskies,Holy Cross Crusaders,20251205,6.1,,141.06
+Northeastern Huskies,Holy Cross Crusaders,Holy Cross Crusaders,20251205,6.1,,141.06
+Northeastern Huskies,Holy Cross Crusaders,Northeastern Huskies,20251205,-6.1,,141.06
+Texas State Bobcats,Rice Owls,Rice Owls,20251205,-5.8,,134.2
+Lafayette Leopards,Mercyhurst Lakers,Lafayette Leopards,20251205,-2.5,,133.42
+Oregon St Beavers,Vermont Catamounts,Oregon St Beavers,20251205,-1.3,,144.39999999999998
+Vermont Catamounts,Oregon St Beavers,Vermont Catamounts,20251205,1.3,,144.39999999999998
+Omaha Mavericks,N Colorado Bears,N Colorado Bears,20251205,-2.1,,158.97
+Omaha Mavericks,N Colorado Bears,Omaha Mavericks,20251205,2.1,,158.97
+N Colorado Bears,Omaha Mavericks,Omaha Mavericks,20251205,2.1,,158.97
+N Colorado Bears,Omaha Mavericks,N Colorado Bears,20251205,-2.1,,158.97
+Kent State Golden Flashes,Austin Peay Governors,Austin Peay Governors,20251205,7.5,,148.88
+Kent State Golden Flashes,Austin Peay Governors,Kent State Golden Flashes,20251205,-7.5,,148.88
+Austin Peay Governors,Kent State Golden Flashes,Kent State Golden Flashes,20251205,-7.5,,148.88
+Austin Peay Governors,Kent State Golden Flashes,Austin Peay Governors,20251205,7.5,,148.88
+James Madison Dukes,North Carolina Central Eagles,North Carolina Central Eagles,20251205,22.1,,145.53
+Pacific Tigers,Air Force Falcons,Pacific Tigers,20251205,-7.5,,131.76
+James Madison Dukes,North Carolina Central Eagles,James Madison Dukes,20251205,-22.1,,145.53
+North Carolina Central Eagles,James Madison Dukes,North Carolina Central Eagles,20251205,22.1,,145.53
+Towson Tigers,Cornell Big Red,Cornell Big Red,20251205,2.7,,150.56
+Towson Tigers,Cornell Big Red,Towson Tigers,20251205,-2.7,,150.56
+Cornell Big Red,Towson Tigers,Towson Tigers,20251205,-2.7,,150.56
+Cornell Big Red,Towson Tigers,Cornell Big Red,20251205,2.7,,150.56
+Columbia Lions,Hofstra Pride,Hofstra Pride,20251205,4.9,,145.28
+Columbia Lions,Hofstra Pride,Columbia Lions,20251205,-4.9,,145.28
+Hofstra Pride,Columbia Lions,Columbia Lions,20251205,-4.9,,145.28
+Hofstra Pride,Columbia Lions,Hofstra Pride,20251205,4.9,,145.28
+North Carolina Central Eagles,James Madison Dukes,James Madison Dukes,20251205,-22.1,,145.53
+Vermont Catamounts,Oregon St Beavers,Oregon St Beavers,20251205,-1.3,,144.39999999999998
+Pacific Tigers,Air Force Falcons,Air Force Falcons,20251205,7.5,,131.76
+Air Force Falcons,Pacific Tigers,Pacific Tigers,20251205,-7.5,,131.76
+Montana Grizzlies,North Dakota St Bison,North Dakota St Bison,20251205,2.8,,148.89
+Montana Grizzlies,North Dakota St Bison,Montana Grizzlies,20251205,-2.8,,148.89
+North Dakota St Bison,Montana Grizzlies,Montana Grizzlies,20251205,-2.8,,148.89
+North Dakota St Bison,Montana Grizzlies,North Dakota St Bison,20251205,2.8,,148.89
+Oakland Golden Grizzlies,Fort Wayne Mastodons,Fort Wayne Mastodons,20251205,10.4,,162.16
+Oakland Golden Grizzlies,Fort Wayne Mastodons,Oakland Golden Grizzlies,20251205,-10.4,,162.16
+Fort Wayne Mastodons,Oakland Golden Grizzlies,Oakland Golden Grizzlies,20251205,-10.4,,162.16
+Fort Wayne Mastodons,Oakland Golden Grizzlies,Fort Wayne Mastodons,20251205,10.4,,162.16
+Youngstown St Penguins,Wright St Raiders,Wright St Raiders,20251205,3.0,,144.37
+Air Force Falcons,Pacific Tigers,Air Force Falcons,20251205,7.5,,131.76
+Youngstown St Penguins,Wright St Raiders,Youngstown St Penguins,20251205,-3.0,,144.37
+Wright St Raiders,Youngstown St Penguins,Wright St Raiders,20251205,3.0,,144.37
+Montana St Bobcats,St. Thomas (MN) Tommies,St. Thomas (MN) Tommies,20251205,3.6,,143.67000000000002
+Montana St Bobcats,St. Thomas (MN) Tommies,Montana St Bobcats,20251205,-3.6,,143.67000000000002
+St. Thomas (MN) Tommies,Montana St Bobcats,Montana St Bobcats,20251205,-3.6,,143.67000000000002
+St. Thomas (MN) Tommies,Montana St Bobcats,St. Thomas (MN) Tommies,20251205,3.6,,143.67000000000002
+Lipscomb Bisons,Tennessee Tech Golden Eagles,Tennessee Tech Golden Eagles,20251205,11.5,,147.01999999999998
+Lipscomb Bisons,Tennessee Tech Golden Eagles,Lipscomb Bisons,20251205,-11.5,,147.01999999999998
+Tennessee Tech Golden Eagles,Lipscomb Bisons,Lipscomb Bisons,20251205,-11.5,,147.01999999999998
+Tennessee Tech Golden Eagles,Lipscomb Bisons,Tennessee Tech Golden Eagles,20251205,11.5,,147.01999999999998
+Wright St Raiders,Youngstown St Penguins,Youngstown St Penguins,20251205,-3.0,,144.37
+Lafayette Leopards,Mercyhurst Lakers,Mercyhurst Lakers,20251205,2.5,,133.42
