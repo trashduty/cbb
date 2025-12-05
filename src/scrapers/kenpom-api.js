@@ -183,15 +183,19 @@ async function main() {
 
   console.log(`\nTotal games fetched: ${allGames.length}`);
 
-  if (allGames.length === 0) {
-    console.log('No games found. Check API key and date range.');
-    process.exit(1);
-  }
-
-  // Transform and write CSV
-  const csvRows = transformToCSV(allGames);
   const outputPath = path.join(CONFIG.dataDir, 'kp.csv');
-  writeCSV(csvRows, outputPath);
+
+  if (allGames.length === 0) {
+    console.log('No games found for today (games may have already completed).');
+    // Write empty CSV with headers so pipeline can continue
+    const headers = 'Home Team,Away Team,Team,Game Date,spread_kenpom,win_prob_kenpom,projected_total_kenpom';
+    fs.writeFileSync(outputPath, headers + '\n');
+    console.log(`Wrote empty CSV with headers to ${outputPath}`);
+  } else {
+    // Transform and write CSV
+    const csvRows = transformToCSV(allGames);
+    writeCSV(csvRows, outputPath);
+  }
 
   console.log('\nKenPom API scrape completed successfully!');
 }
