@@ -343,8 +343,12 @@ async function runScrapers() {
     // Run the EvanMiya scraper first
     await runScript(path.join(__dirname, 'scrapers', 'evanmiya-scraper.js'), 'EvanMiya');
     
-    // Then run the KenPom API scraper (replaces web scraper to avoid Cloudflare issues)
-    await runScript(path.join(__dirname, 'scrapers', 'kenpom-api.js'), 'KenPom');
+    // Then run the KenPom API scraper (non-fatal - continue if it fails)
+    try {
+      await runScript(path.join(__dirname, 'scrapers', 'kenpom-api.js'), 'KenPom');
+    } catch (err) {
+      console.warn('KenPom scraper failed (non-fatal), continuing without KenPom data...');
+    }
     
     // Run the EvanMiya transformer after scrapers have completed
     console.log("Running EvanMiya data transformer...");
@@ -366,9 +370,13 @@ async function runScrapers() {
     // Join the datasets
     await joinDatasets();
     
-    // Run the OddsAPI UV script after joining datasets
-    const oddsAPIScript = path.join(__dirname, 'scrapers', 'oddsAPI.py');
-    await runUVScript(oddsAPIScript, 'OddsAPI');
+    // Run the OddsAPI UV script after joining datasets (non-fatal)
+    try {
+      const oddsAPIScript = path.join(__dirname, 'scrapers', 'oddsAPI.py');
+      await runUVScript(oddsAPIScript, 'OddsAPI');
+    } catch (err) {
+      console.warn('OddsAPI script failed (non-fatal), continuing...');
+    }
     
     console.log("=== All scrapers and transformers completed successfully ===");
     console.log("Files created/updated:");
