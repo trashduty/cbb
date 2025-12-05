@@ -650,9 +650,15 @@ def process_final_dataframe(final_df):
     # Set theoddsapi_total for the lookups
     final_df['theoddsapi_total'] = final_df['Projected Total']
 
-    # Calculate median of spreads across all models
+    # Calculate median of spreads across all models (only use columns that exist)
     spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    final_df['forecasted_spread'] = final_df[spread_models].median(axis=1)
+    available_spread_models = [col for col in spread_models if col in final_df.columns]
+    if available_spread_models:
+        final_df['forecasted_spread'] = final_df[available_spread_models].median(axis=1)
+        logger.info(f"[cyan]Using spread models: {available_spread_models}[/cyan]")
+    else:
+        final_df['forecasted_spread'] = 0
+        logger.warning("[yellow]⚠[/yellow] No spread model columns available")
 
     # Rename columns for clarity and round market_spread to nearest 0.5
     final_df['market_spread'] = (final_df['Opening Spread'] * 2).round() / 2
@@ -803,22 +809,38 @@ def process_final_dataframe(final_df):
     final_df['Over Total Edge'] = final_df['Over Cover Probability'] - final_df['over_implied_prob']
     final_df['Under Total Edge'] = final_df['Under Cover Probability'] - final_df['under_implied_prob']
 
-    # Calculate spread standard deviation
-    spread_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    final_df['Spread Std. Dev.'] = final_df[spread_models].std(axis=1, skipna=True).round(1)
+    # Calculate spread standard deviation (only use columns that exist)
+    spread_std_models = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
+    available_spread_std_models = [col for col in spread_std_models if col in final_df.columns]
+    if available_spread_std_models:
+        final_df['Spread Std. Dev.'] = final_df[available_spread_std_models].std(axis=1, skipna=True).round(1)
+    else:
+        final_df['Spread Std. Dev.'] = 0
     
-    # Calculate totals standard deviation
-    projected_total_models = ['projected_total_barttorvik', 'projected_total_kenpom', 
+    # Calculate totals standard deviation (only use columns that exist)
+    projected_total_models = ['projected_total_barttorvik', 'projected_total_kenpom',
                              'projected_total_evanmiya', 'projected_total_hasla']
-    final_df['Totals Std. Dev.'] = final_df[projected_total_models].std(axis=1, skipna=True).round(1)
-    
-    # Calculate moneyline standard deviation
+    available_total_models = [col for col in projected_total_models if col in final_df.columns]
+    if available_total_models:
+        final_df['Totals Std. Dev.'] = final_df[available_total_models].std(axis=1, skipna=True).round(1)
+    else:
+        final_df['Totals Std. Dev.'] = 0
+
+    # Calculate moneyline standard deviation (only use columns that exist)
     win_prob_models = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
-    final_df['Moneyline Std. Dev.'] = final_df[win_prob_models].std(axis=1, skipna=True).round(3)
+    available_win_prob_models = [col for col in win_prob_models if col in final_df.columns]
+    if available_win_prob_models:
+        final_df['Moneyline Std. Dev.'] = final_df[available_win_prob_models].std(axis=1, skipna=True).round(3)
+    else:
+        final_df['Moneyline Std. Dev.'] = 0
 
     # Calculate moneyline probabilities and edge using devigged probabilities
     win_prob_cols = ['win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya']
-    final_df['Moneyline Win Probability'] = final_df[win_prob_cols].median(axis=1, skipna=True)
+    available_win_prob_cols = [col for col in win_prob_cols if col in final_df.columns]
+    if available_win_prob_cols:
+        final_df['Moneyline Win Probability'] = final_df[available_win_prob_cols].median(axis=1, skipna=True)
+    else:
+        final_df['Moneyline Win Probability'] = 0.5
     final_df['Moneyline Win Probability'] = (0.5*final_df['Moneyline Win Probability']+0.5*final_df['Devigged Probability'])
     final_df['ml_implied_prob'] = final_df['Moneyline'].apply(american_odds_to_implied_probability)
     final_df['Moneyline Edge'] = final_df['Moneyline Win Probability'] - final_df['ml_implied_prob']
