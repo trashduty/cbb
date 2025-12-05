@@ -1123,8 +1123,8 @@ if __name__ == "__main__":
             backup_daily_output(csv_path)
 
         else:
-            logger.error("[red]✗[/red] Script execution failed")
-            sys.exit(1)
+            logger.warning("[yellow]⚠[/yellow] No odds data available (games may have completed)")
+            # Don't fail - just skip updating the output file
 
     except Exception as e:
         logger.error(f"[red]✗[/red] Error in OddsAPI script: {str(e)}")
