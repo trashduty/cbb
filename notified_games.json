@@ -19,5 +19,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-07T20:49:48.618823+00:00"
+  },
+  "Ohio State Buckeyes vs. Illinois Fighting Illini|Ohio State Buckeyes|moneyline": {
+    "game": "Ohio State Buckeyes vs. Illinois Fighting Illini",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0618230265238636,
+    "notified_at": "2025-12-07T22:07:42.304857+00:00"
   }
 }
