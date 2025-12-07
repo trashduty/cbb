@@ -1,1 +1,16 @@
-{}
+{
+  "Gonzaga Bulldogs vs. North Florida Ospreys|North Florida Ospreys|spread": {
+    "game": "Gonzaga Bulldogs vs. North Florida Ospreys",
+    "team": "North Florida Ospreys",
+    "edge_type": "spread",
+    "edge_value": 0.0558464163570781,
+    "notified_at": "2025-12-07T20:46:44.293225+00:00"
+  },
+  "Texas Longhorns vs. Southern Jaguars|Southern Jaguars|spread": {
+    "game": "Texas Longhorns vs. Southern Jaguars",
+    "team": "Southern Jaguars",
+    "edge_type": "spread",
+    "edge_value": 0.0458064605089295,
+    "notified_at": "2025-12-07T20:46:44.514372+00:00"
+  }
+}
