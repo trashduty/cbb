@@ -3527,3 +3527,131 @@ date,type,home_team,away_team,reason
 2025-12-06,prediction_no_score,Rhode Island Rams,Providence Friars,Prediction exists but game not completed (postponed?)
 2025-12-06,prediction_no_score,Old Dominion Monarchs,Richmond Spiders,Prediction exists but game not completed (postponed?)
 2025-12-06,prediction_no_score,CSU Fullerton Titans,Hawai'i Rainbow Warriors,Prediction exists but game not completed (postponed?)
+2025-12-05,score_no_prediction,Green Bay Phoenix,Robert Morris Colonials,Game completed but not in predictions
+2025-12-05,score_no_prediction,Merrimack Warriors,Rider Broncs,Game completed but not in predictions
+2025-12-05,score_no_prediction,Davidson Wildcats,The Citadel Bulldogs,Game completed but not in predictions
+2025-12-05,score_no_prediction,South Florida Bulls,Utah State Aggies,Game completed but not in predictions
+2025-12-05,score_no_prediction,UC Santa Barbara Gauchos,Long Beach St 49ers,Game completed but not in predictions
+2025-12-05,score_no_prediction,CSU Northridge Matadors,CSU Bakersfield Roadrunners,Game completed but not in predictions
+2025-12-05,score_no_prediction,CSU Fullerton Titans,Cal Poly Mustangs,Game completed but not in predictions
+2025-12-05,score_no_prediction,UC Irvine Anteaters,UC Riverside Highlanders,Game completed but not in predictions
+2025-12-05,score_no_prediction,Hawai'i Rainbow Warriors,UC Davis Aggies,Game completed but not in predictions
+2025-12-05,prediction_no_score,Gonzaga Bulldogs,Kentucky Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Canisius Golden Griffins,Saint Peter's Peacocks,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Mercyhurst Lakers,Lafayette Leopards,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Fairfield Stags,Manhattan Jaspers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,South Carolina St Bulldogs,Bethune-Cookman Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Bryant Bulldogs,Brown Bears,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Niagara Purple Eagles,Siena Saints,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Mt. St. Mary's Mountaineers,Marist Red Foxes,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,NJIT Highlanders,High Point Panthers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Quinnipiac Bobcats,Iona Gaels,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,South Alabama Jaguars,East Tennessee St Buccaneers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Samford Bulldogs,VCU Rams,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Northwestern St Demons,McNeese Cowboys,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,UAB Blazers,Drake Bulldogs,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Cincinnati Bearcats,Xavier Musketeers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Notre Dame Fighting Irish,TCU Horned Frogs,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Louisville Cardinals,Indiana Hoosiers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Illinois Fighting Illini,Tennessee Volunteers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Auburn Tigers,Arizona Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Iowa State Cyclones,Purdue Boilermakers,Prediction exists but game not completed (postponed?)
+2025-12-05,prediction_no_score,Duke Blue Devils,Michigan St Spartans,Prediction exists but game not completed (postponed?)
+2025-12-06,score_no_prediction,Brown Bears,Bryant Bulldogs,Game completed but not in predictions
+2025-12-06,score_no_prediction,Kentucky Wildcats,Gonzaga Bulldogs,Game completed but not in predictions
+2025-12-06,score_no_prediction,Siena Saints,Niagara Purple Eagles,Game completed but not in predictions
+2025-12-06,score_no_prediction,Lafayette Leopards,Mercyhurst Lakers,Game completed but not in predictions
+2025-12-06,score_no_prediction,Saint Peter's Peacocks,Canisius Golden Griffins,Game completed but not in predictions
+2025-12-06,score_no_prediction,East Tennessee St Buccaneers,South Alabama Jaguars,Game completed but not in predictions
+2025-12-06,score_no_prediction,High Point Panthers,NJIT Highlanders,Game completed but not in predictions
+2025-12-06,score_no_prediction,Manhattan Jaspers,Fairfield Stags,Game completed but not in predictions
+2025-12-06,score_no_prediction,Iona Gaels,Quinnipiac Bobcats,Game completed but not in predictions
+2025-12-06,score_no_prediction,Marist Red Foxes,Mt. St. Mary's Mountaineers,Game completed but not in predictions
+2025-12-06,score_no_prediction,VCU Rams,Samford Bulldogs,Game completed but not in predictions
+2025-12-06,score_no_prediction,Bethune-Cookman Wildcats,South Carolina St Bulldogs,Game completed but not in predictions
+2025-12-06,score_no_prediction,Xavier Musketeers,Cincinnati Bearcats,Game completed but not in predictions
+2025-12-06,score_no_prediction,UConn Huskies,East Texas A&M Lions,Game completed but not in predictions
+2025-12-06,score_no_prediction,McNeese Cowboys,Northwestern St Demons,Game completed but not in predictions
+2025-12-06,score_no_prediction,Drake Bulldogs,UAB Blazers,Game completed but not in predictions
+2025-12-06,score_no_prediction,TCU Horned Frogs,Notre Dame Fighting Irish,Game completed but not in predictions
+2025-12-06,score_no_prediction,San José St Spartans,San Diego Toreros,Game completed but not in predictions
+2025-12-06,score_no_prediction,Boston College Eagles,New Haven Chargers,Game completed but not in predictions
+2025-12-06,score_no_prediction,GW Revolutionaries,William & Mary Tribe,Game completed but not in predictions
+2025-12-06,score_no_prediction,New Orleans Privateers,Houston Christian Huskies,Game completed but not in predictions
+2025-12-06,prediction_no_score,Cal Baptist Lancers,Utah Utes,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Pennsylvania Quakers,Villanova Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Oklahoma St Cowboys,Grand Canyon Antelopes,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Ole Miss Rebels,St. John's Red Storm,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Florida St Seminoles,Houston Cougars,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Wichita St Shockers,Northern Iowa Panthers,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Illinois Fighting Illini,Tennessee Volunteers,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Santa Clara Broncos,New Mexico Lobos,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Auburn Tigers,Arizona Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,Oklahoma Sooners,Arizona St Sun Devils,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,CSU Northridge Matadors,UC Irvine Anteaters,Prediction exists but game not completed (postponed?)
+2025-12-06,prediction_no_score,CSU Fullerton Titans,Hawai'i Rainbow Warriors,Prediction exists but game not completed (postponed?)
+2025-12-07,score_no_prediction,New Hampshire Wildcats,Boston Univ. Terriers,Game completed but not in predictions
+2025-12-07,score_no_prediction,Utah Utes,Cal Baptist Lancers,Game completed but not in predictions
+2025-12-07,score_no_prediction,Cal Poly Mustangs,UC Riverside Highlanders,Game completed but not in predictions
+2025-12-07,score_no_prediction,Lamar Cardinals,Texas A&M-CC Islanders,Game completed but not in predictions
+2025-12-07,score_no_prediction,Grand Canyon Antelopes,Oklahoma St Cowboys,Game completed but not in predictions
+2025-12-07,score_no_prediction,Villanova Wildcats,Pennsylvania Quakers,Game completed but not in predictions
+2025-12-07,score_no_prediction,Bradley Braves,Northern Illinois Huskies,Game completed but not in predictions
+2025-12-07,score_no_prediction,Illinois St Redbirds,Chicago St Cougars,Game completed but not in predictions
+2025-12-07,score_no_prediction,Eastern Illinois Panthers,Lindenwood Lions,Game completed but not in predictions
+2025-12-07,score_no_prediction,Milwaukee Panthers,Robert Morris Colonials,Game completed but not in predictions
+2025-12-07,score_no_prediction,North Dakota Fighting Hawks,Montana Grizzlies,Game completed but not in predictions
+2025-12-07,score_no_prediction,Oral Roberts Golden Eagles,Montana St Bobcats,Game completed but not in predictions
+2025-12-07,score_no_prediction,N Colorado Bears,South Dakota Coyotes,Game completed but not in predictions
+2025-12-07,score_no_prediction,Houston Cougars,Florida St Seminoles,Game completed but not in predictions
+2025-12-07,score_no_prediction,North Dakota St Bison,Northern Arizona Lumberjacks,Game completed but not in predictions
+2025-12-07,score_no_prediction,Tennessee Volunteers,Illinois Fighting Illini,Game completed but not in predictions
+2025-12-07,score_no_prediction,St. John's Red Storm,Ole Miss Rebels,Game completed but not in predictions
+2025-12-07,score_no_prediction,Northern Iowa Panthers,Wichita St Shockers,Game completed but not in predictions
+2025-12-07,score_no_prediction,DePaul Blue Demons,Arkansas-Pine Bluff Golden Lions,Game completed but not in predictions
+2025-12-07,score_no_prediction,UC Santa Barbara Gauchos,CSU Bakersfield Roadrunners,Game completed but not in predictions
+2025-12-07,score_no_prediction,Long Beach St 49ers,UC San Diego Tritons,Game completed but not in predictions
+2025-12-07,score_no_prediction,New Mexico Lobos,Santa Clara Broncos,Game completed but not in predictions
+2025-12-07,score_no_prediction,Arkansas-Little Rock Trojans,Arkansas St Red Wolves,Game completed but not in predictions
+2025-12-07,score_no_prediction,UC Irvine Anteaters,CSU Northridge Matadors,Game completed but not in predictions
+2025-12-07,score_no_prediction,Arizona Wildcats,Auburn Tigers,Game completed but not in predictions
+2025-12-07,score_no_prediction,Arizona St Sun Devils,Oklahoma Sooners,Game completed but not in predictions
+2025-12-07,score_no_prediction,Hawai'i Rainbow Warriors,CSU Fullerton Titans,Game completed but not in predictions
+2025-12-07,prediction_no_score,Missouri Tigers,Kansas Jayhawks,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Fairfield Stags,Merrimack Warriors,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Southern Indiana Screaming Eagles,Indiana St Sycamores,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Central Connecticut St Blue Devils,Northeastern Huskies,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Weber State Wildcats,St. Thomas (MN) Tommies,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Niagara Purple Eagles,Saint Peter's Peacocks,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Austin Peay Governors,UT Rio Grande Valley Vaqueros,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Manhattan Jaspers,Marist Red Foxes,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Rider Broncs,Quinnipiac Bobcats,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Iona Gaels,Sacred Heart Pioneers,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Florida Atlantic Owls,Florida Gulf Coast Eagles,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Canisius Golden Griffins,Siena Saints,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,UIC Flames,Yale Bulldogs,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Saint Mary's Gaels,Davidson Wildcats,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Utah State Aggies,Charlotte 49ers,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,UTSA Roadrunners,Alabama Crimson Tide,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,St. Francis (PA) Red Flash,Radford Highlanders,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Central Michigan Chippewas,Saint Louis Billikens,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,LSU Tigers,Texas Tech Red Raiders,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,UL Monroe Warhawks,Stephen F. Austin Lumberjacks,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Alabama St Hornets,Tenn-Martin Skyhawks,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,UNLV Rebels,Stanford Cardinal,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Towson Tigers,UCF Knights,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Hofstra Pride,Pittsburgh Panthers,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,San Francisco Dons,Mississippi St Bulldogs,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Northwestern St Demons,SE Louisiana Lions,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Belmont Bruins,Middle Tennessee Blue Raiders,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,SMU Mustangs,Texas A&M Aggies,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Nevada Wolf Pack,Washington St Cougars,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Green Bay Phoenix,Wright St Raiders,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Georgetown Hoyas,North Carolina Tar Heels,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Creighton Bluejays,Nebraska Cornhuskers,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Alabama A&M Bulldogs,Lipscomb Bisons,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,TCU Horned Frogs,North Texas Mean Green,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Cornell Big Red,Samford Bulldogs,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,UTEP Miners,Seattle Redhawks,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,North Florida Ospreys,Gonzaga Bulldogs,Prediction exists but game not completed (postponed?)
+2025-12-07,prediction_no_score,Air Force Falcons,Navy Midshipmen,Prediction exists but game not completed (postponed?)
