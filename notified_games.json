@@ -26,5 +26,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0618230265238636,
     "notified_at": "2025-12-07T22:07:42.304857+00:00"
+  },
+  "Samford Bulldogs vs. Cornell Big Red|Cornell Big Red|spread": {
+    "game": "Samford Bulldogs vs. Cornell Big Red",
+    "team": "Cornell Big Red",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-07T23:49:20.248244+00:00"
+  },
+  "Samford Bulldogs vs. Cornell Big Red|Cornell Big Red|moneyline": {
+    "game": "Samford Bulldogs vs. Cornell Big Red",
+    "team": "Cornell Big Red",
+    "edge_type": "moneyline",
+    "edge_value": 0.047099156227916,
+    "notified_at": "2025-12-07T23:49:20.487103+00:00"
   }
 }
