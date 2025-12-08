@@ -57,3 +57,61 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-09,Kentucky,North Carolina Central,home,99.8,87,56
 2025-12-09,Maryland Eastern Shore,Virginia,away,1.0,53,80
 2025-12-09,Virginia,Maryland Eastern Shore,home,99.0,80,53
+2025-12-10,Wisconsin,Nebraska,away,47.0,79,80
+2025-12-10,Nebraska,Wisconsin,home,53.0,80,79
+2025-12-10,New Mexico,VCU,away,21.0,71,80
+2025-12-10,VCU,New Mexico,home,79.0,80,71
+2025-12-10,Western Kentucky,Marshall,away,50.0,80,81
+2025-12-10,Marshall,Western Kentucky,home,50.0,81,80
+2025-12-10,Liberty,N.C. State,away,17.0,74,84
+2025-12-10,N.C. State,Liberty,home,83.0,84,74
+2025-12-10,Boston College,Massachusetts,away,55.0,70,68
+2025-12-10,Massachusetts,Boston College,home,45.0,68,70
+2025-12-10,Miami OH,UNC Asheville,away,63.0,79,75
+2025-12-10,UNC Asheville,Miami OH,home,37.0,75,79
+2025-12-10,Fresno St.,CSUN,away,59.0,79,76
+2025-12-10,CSUN,Fresno St.,home,41.0,76,79
+2025-12-10,Eastern Michigan,Purdue Fort Wayne,away,52.0,75,74
+2025-12-10,Purdue Fort Wayne,Eastern Michigan,home,48.0,74,75
+2025-12-10,Southern,Texas St.,away,48.0,70,71
+2025-12-10,Texas St.,Southern,home,52.0,71,70
+2025-12-10,Eastern Kentucky,Eastern Illinois,away,58.0,76,74
+2025-12-10,Eastern Illinois,Eastern Kentucky,home,42.0,74,76
+2025-12-10,Merrimack,Princeton,away,40.0,66,69
+2025-12-10,Princeton,Merrimack,home,60.0,69,66
+2025-12-10,Colgate,St. Bonaventure,away,21.0,67,76
+2025-12-10,St. Bonaventure,Colgate,home,79.0,76,67
+2025-12-10,Duquesne,Boise St.,away,12.0,68,80
+2025-12-10,Boise St.,Duquesne,home,88.0,80,68
+2025-12-10,New Haven,NJIT,away,47.0,65,66
+2025-12-10,NJIT,New Haven,home,53.0,66,65
+2025-12-10,Tennessee Martin,Southern Illinois,away,22.0,68,76
+2025-12-10,Southern Illinois,Tennessee Martin,home,78.0,76,68
+2025-12-10,Charleston,South Florida,away,14.0,71,83
+2025-12-10,South Florida,Charleston,home,86.0,83,71
+2025-12-10,Idaho St.,Utah Valley,away,15.0,65,76
+2025-12-10,Utah Valley,Idaho St.,home,85.0,76,65
+2025-12-10,Minnesota,Purdue,away,5.0,61,80
+2025-12-10,Purdue,Minnesota,home,95.0,80,61
+2025-12-10,Weber St.,Kansas City,away,73.0,79,72
+2025-12-10,Kansas City,Weber St.,home,27.0,72,79
+2025-12-10,Maine,Boston University,away,28.0,63,69
+2025-12-10,Boston University,Maine,home,72.0,69,63
+2025-12-10,Idaho,Notre Dame,away,11.0,66,79
+2025-12-10,Notre Dame,Idaho,home,89.0,79,66
+2025-12-10,Bryant,Iona,away,17.0,68,79
+2025-12-10,Iona,Bryant,home,83.0,79,68
+2025-12-10,Fairleigh Dickinson,Fordham,away,14.0,67,79
+2025-12-10,Fordham,Fairleigh Dickinson,home,86.0,79,67
+2025-12-10,Lamar,San Diego St.,away,5.0,60,78
+2025-12-10,San Diego St.,Lamar,home,95.0,78,60
+2025-12-10,Norfolk St.,Baylor,away,3.0,63,83
+2025-12-10,Baylor,Norfolk St.,home,97.0,83,63
+2025-12-10,Delaware,George Washington,away,4.0,70,89
+2025-12-10,George Washington,Delaware,home,96.0,89,70
+2025-12-10,Albany,Yale,away,6.0,67,85
+2025-12-10,Yale,Albany,home,94.0,85,67
+2025-12-10,Arkansas Pine Bluff,Tulsa,away,2.0,67,90
+2025-12-10,Tulsa,Arkansas Pine Bluff,home,98.0,90,67
+2025-12-10,Jackson St.,Houston,away,0.4000000000000057,51,81
+2025-12-10,Houston,Jackson St.,home,99.6,81,51
