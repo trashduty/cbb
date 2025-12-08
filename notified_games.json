@@ -40,5 +40,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.047099156227916,
     "notified_at": "2025-12-07T23:49:20.487103+00:00"
+  },
+  "New Orleans Privateers vs. Incarnate Word Cardinals|New Orleans Privateers|over": {
+    "game": "New Orleans Privateers vs. Incarnate Word Cardinals",
+    "team": "New Orleans Privateers",
+    "edge_type": "over",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-08T04:27:24.442418+00:00"
+  },
+  "New Orleans Privateers vs. Incarnate Word Cardinals|Incarnate Word Cardinals|over": {
+    "game": "New Orleans Privateers vs. Incarnate Word Cardinals",
+    "team": "Incarnate Word Cardinals",
+    "edge_type": "over",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-08T04:27:24.904589+00:00"
+  },
+  "Ohio State Buckeyes vs. Illinois Fighting Illini|Ohio State Buckeyes|spread": {
+    "game": "Ohio State Buckeyes vs. Illinois Fighting Illini",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-08T04:27:25.189075+00:00"
   }
 }
