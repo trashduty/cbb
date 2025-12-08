@@ -68,5 +68,19 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-08T18:47:32.741195+00:00"
+  },
+  "Arizona St Sun Devils vs. Northern Arizona Lumberjacks|Arizona St Sun Devils|under": {
+    "game": "Arizona St Sun Devils vs. Northern Arizona Lumberjacks",
+    "team": "Arizona St Sun Devils",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-08T20:26:25.932628+00:00"
+  },
+  "Arizona St Sun Devils vs. Northern Arizona Lumberjacks|Northern Arizona Lumberjacks|under": {
+    "game": "Arizona St Sun Devils vs. Northern Arizona Lumberjacks",
+    "team": "Northern Arizona Lumberjacks",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-08T20:26:26.237224+00:00"
   }
 }
