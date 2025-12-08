@@ -11,3 +11,49 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-08,Texas,Southern,home,93.0,86,70
 2025-12-08,Mississippi Valley St.,Kansas St.,away,0.09999999999999432,60,94
 2025-12-08,Kansas St.,Mississippi Valley St.,home,99.9,94,60
+2025-12-09,Florida,Connecticut,away,37.0,72,75
+2025-12-09,Connecticut,Florida,home,63.0,75,72
+2025-12-09,Illinois,Ohio St.,away,58.0,79,77
+2025-12-09,Ohio St.,Illinois,home,42.0,77,79
+2025-12-09,BYU,Clemson,away,67.0,79,74
+2025-12-09,Clemson,BYU,home,33.0,74,79
+2025-12-09,McNeese,Rhode Island,away,51.0,72,71
+2025-12-09,Rhode Island,McNeese,home,49.0,71,72
+2025-12-09,Villanova,Michigan,away,9.0,66,81
+2025-12-09,Michigan,Villanova,home,91.0,81,66
+2025-12-09,Penn St.,Indiana,away,15.0,70,82
+2025-12-09,Indiana,Penn St.,home,85.0,82,70
+2025-12-09,Columbia,Stony Brook,away,64.0,75,71
+2025-12-09,Stony Brook,Columbia,home,36.0,71,75
+2025-12-09,Buffalo,UMBC,away,52.0,75,74
+2025-12-09,UMBC,Buffalo,home,48.0,74,75
+2025-12-09,Loyola MD,VMI,away,50.0,76,75
+2025-12-09,VMI,Loyola MD,home,50.0,75,76
+2025-12-09,Bucknell,Rider,away,51.0,70,69
+2025-12-09,Rider,Bucknell,home,49.0,69,70
+2025-12-09,Howard,North Carolina A&T,away,37.0,72,76
+2025-12-09,North Carolina A&T,Howard,home,63.0,76,72
+2025-12-09,South Dakota St.,Ball St.,away,69.0,72,67
+2025-12-09,Ball St.,South Dakota St.,home,31.0,67,72
+2025-12-09,Long Beach St.,San Jose St.,away,27.0,67,74
+2025-12-09,San Jose St.,Long Beach St.,home,73.0,74,67
+2025-12-09,USC,San Diego,away,94.0,88,71
+2025-12-09,San Diego,USC,home,6.0,71,88
+2025-12-09,South Dakota,Wyoming,away,9.0,71,86
+2025-12-09,Wyoming,South Dakota,home,91.0,86,71
+2025-12-09,Brown,Providence,away,6.0,65,82
+2025-12-09,Providence,Brown,home,94.0,82,65
+2025-12-09,Northern Arizona,Arizona St.,away,7.0,68,84
+2025-12-09,Arizona St.,Northern Arizona,home,93.0,84,68
+2025-12-09,Dartmouth,Colorado St.,away,5.0,70,88
+2025-12-09,Colorado St.,Dartmouth,home,95.0,88,70
+2025-12-09,Little Rock,West Virginia,away,4.0,56,76
+2025-12-09,West Virginia,Little Rock,home,96.0,76,56
+2025-12-09,Morgan St.,DePaul,away,4.0,65,85
+2025-12-09,DePaul,Morgan St.,home,96.0,85,65
+2025-12-09,Coppin St.,Saint Joseph's,away,4.0,62,82
+2025-12-09,Saint Joseph's,Coppin St.,home,96.0,82,62
+2025-12-09,North Carolina Central,Kentucky,away,0.20000000000000284,56,87
+2025-12-09,Kentucky,North Carolina Central,home,99.8,87,56
+2025-12-09,Maryland Eastern Shore,Virginia,away,1.0,53,80
+2025-12-09,Virginia,Maryland Eastern Shore,home,99.0,80,53
