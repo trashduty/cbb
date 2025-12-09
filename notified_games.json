@@ -145,5 +145,12 @@
     "edge_type": "spread",
     "edge_value": 0.0736540076468051,
     "notified_at": "2025-12-09T14:26:22.098964+00:00"
+  },
+  "Rider Broncs vs. Bucknell Bison|Rider Broncs|moneyline": {
+    "game": "Rider Broncs vs. Bucknell Bison",
+    "team": "Rider Broncs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0420349272763443,
+    "notified_at": "2025-12-09T14:42:34.249585+00:00"
   }
 }
