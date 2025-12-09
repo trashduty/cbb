@@ -103,5 +103,26 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-08T23:49:32.876801+00:00"
+  },
+  "Kentucky Wildcats vs. North Carolina Central Eagles|North Carolina Central Eagles|over": {
+    "game": "Kentucky Wildcats vs. North Carolina Central Eagles",
+    "team": "North Carolina Central Eagles",
+    "edge_type": "over",
+    "edge_value": 0.4455407063009916,
+    "notified_at": "2025-12-09T03:59:45.603333+00:00"
+  },
+  "West Virginia Mountaineers vs. Arkansas-Little Rock Trojans|Arkansas-Little Rock Trojans|spread": {
+    "game": "West Virginia Mountaineers vs. Arkansas-Little Rock Trojans",
+    "team": "Arkansas-Little Rock Trojans",
+    "edge_type": "spread",
+    "edge_value": 0.04533385732922,
+    "notified_at": "2025-12-09T03:59:45.877337+00:00"
+  },
+  "Kentucky Wildcats vs. North Carolina Central Eagles|Kentucky Wildcats|over": {
+    "game": "Kentucky Wildcats vs. North Carolina Central Eagles",
+    "team": "Kentucky Wildcats",
+    "edge_type": "over",
+    "edge_value": 0.4455407063009916,
+    "notified_at": "2025-12-09T03:59:46.068376+00:00"
   }
 }
