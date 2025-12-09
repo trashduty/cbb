@@ -194,5 +194,19 @@
     "edge_type": "spread",
     "edge_value": 0.0525438081738851,
     "notified_at": "2025-12-09T22:08:35.158639+00:00"
+  },
+  "Southern Illinois Salukis vs. Tenn-Martin Skyhawks|Southern Illinois Salukis|under": {
+    "game": "Southern Illinois Salukis vs. Tenn-Martin Skyhawks",
+    "team": "Southern Illinois Salukis",
+    "edge_type": "under",
+    "edge_value": 0.0103745196031598,
+    "notified_at": "2025-12-09T22:25:30.015431+00:00"
+  },
+  "Southern Illinois Salukis vs. Tenn-Martin Skyhawks|Tenn-Martin Skyhawks|under": {
+    "game": "Southern Illinois Salukis vs. Tenn-Martin Skyhawks",
+    "team": "Tenn-Martin Skyhawks",
+    "edge_type": "under",
+    "edge_value": 0.0103745196031598,
+    "notified_at": "2025-12-09T22:25:30.417316+00:00"
   }
 }
