@@ -138,5 +138,12 @@
     "edge_type": "spread",
     "edge_value": 0.1034572011110769,
     "notified_at": "2025-12-09T14:09:46.719728+00:00"
+  },
+  "Virginia Cavaliers vs. Maryland-Eastern Shore Hawks|Maryland-Eastern Shore Hawks|spread": {
+    "game": "Virginia Cavaliers vs. Maryland-Eastern Shore Hawks",
+    "team": "Maryland-Eastern Shore Hawks",
+    "edge_type": "spread",
+    "edge_value": 0.0736540076468051,
+    "notified_at": "2025-12-09T14:26:22.098964+00:00"
   }
 }
