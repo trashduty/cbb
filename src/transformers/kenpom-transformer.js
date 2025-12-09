@@ -41,7 +41,7 @@ async function transformKenPomData() {
     const awayTeam = row.side === 'away' ? row.team : row.opponent;
     const teamScore = parseInt(row.team_score);
     const oppScore = parseInt(row.opp_score);
-    const spread = teamScore - oppScore;
+    const spread = oppScore - teamScore;
     const winProb = parseFloat(row.win_prob) / 100; // Convert percentage to decimal
     const projectedTotal = teamScore + oppScore;
     const gameDate = row.date.replace(/-/g, ''); // 2025-12-08 -> 20251208
