@@ -208,5 +208,19 @@
     "edge_type": "under",
     "edge_value": 0.0103745196031598,
     "notified_at": "2025-12-09T22:25:30.417316+00:00"
+  },
+  "Rhode Island Rams vs. McNeese Cowboys|McNeese Cowboys|under": {
+    "game": "Rhode Island Rams vs. McNeese Cowboys",
+    "team": "McNeese Cowboys",
+    "edge_type": "under",
+    "edge_value": 0.0134502139970634,
+    "notified_at": "2025-12-09T23:25:41.549554+00:00"
+  },
+  "Rhode Island Rams vs. McNeese Cowboys|Rhode Island Rams|under": {
+    "game": "Rhode Island Rams vs. McNeese Cowboys",
+    "team": "Rhode Island Rams",
+    "edge_type": "under",
+    "edge_value": 0.0134502139970634,
+    "notified_at": "2025-12-09T23:25:41.873558+00:00"
   }
 }
