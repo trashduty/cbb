@@ -152,5 +152,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0420349272763443,
     "notified_at": "2025-12-09T14:42:34.249585+00:00"
+  },
+  "Nebraska Cornhuskers vs. Wisconsin Badgers|Nebraska Cornhuskers|spread": {
+    "game": "Nebraska Cornhuskers vs. Wisconsin Badgers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-09T18:56:04.814279+00:00"
+  },
+  "Nebraska Cornhuskers vs. Wisconsin Badgers|Nebraska Cornhuskers|moneyline": {
+    "game": "Nebraska Cornhuskers vs. Wisconsin Badgers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0420492548327038,
+    "notified_at": "2025-12-09T18:56:05.267659+00:00"
   }
 }
