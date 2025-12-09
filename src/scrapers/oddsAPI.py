@@ -857,6 +857,13 @@ def process_final_dataframe(final_df):
         logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty 'Opening Moneyline' column")
         final_df['Opening Moneyline'] = np.nan
 
+    # Add 'Opening Total' column from the Over Point (same as Under Point for totals)
+    if 'Over Point' in final_df.columns:
+        final_df['Opening Total'] = final_df['Over Point']
+    else:
+        logger.warning("[yellow]⚠[/yellow] 'Over Point' column not found, creating empty 'Opening Total' column")
+        final_df['Opening Total'] = np.nan
+
     # Drop any remaining duplicates after all processing
     final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
 
@@ -883,7 +890,7 @@ def process_final_dataframe(final_df):
         'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Moneyline Std. Dev.',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
         # Totals framework columns
-        'spread_category', 'market_total', 'model_total', 'average_total', 'theoddsapi_total', 'Totals Std. Dev.',
+        'spread_category', 'market_total', 'model_total', 'average_total', 'Opening Total', 'theoddsapi_total', 'Totals Std. Dev.',
         'projected_total_barttorvik', 'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
         'Over Cover Probability', 'Under Cover Probability',
         'Over Total Edge', 'Under Total Edge',
@@ -1048,15 +1055,18 @@ def calculate_under_consensus(row):
         logger.debug(f"Error calculating under consensus: {e}")
         return 0
 
+
 def backup_daily_output(csv_path):
     """
     Creates a daily backup of the output CSV file in the historical_data folder.
-    Only creates one backup per day (based on ET timezone).
+    Only creates {date}_output.csv once per day (first capture).
 
     Args:
         csv_path (str): Path to the CBB_Output.csv file to backup
     """
     try:
+        import shutil
+
         # Get current date in ET timezone
         et = timezone('US/Eastern')
         current_date = datetime.now(et).strftime('%Y-%m-%d')
@@ -1067,23 +1077,78 @@ def backup_daily_output(csv_path):
             os.makedirs(historical_dir)
             logger.info(f"[cyan]Created historical_data directory: {historical_dir}[/cyan]")
 
-        # Generate backup filename
+        # Daily backup - only created once per day (first capture)
         backup_filename = f"{current_date}_output.csv"
         backup_path = os.path.join(historical_dir, backup_filename)
 
-        # Check if today's backup already exists
-        if os.path.exists(backup_path):
-            logger.info(f"[yellow]⚠[/yellow] Daily backup already exists: {backup_filename} (skipping)")
-            return
-
-        # Copy the file
-        import shutil
-        shutil.copy2(csv_path, backup_path)
-        logger.info(f"[green]✓[/green] Created daily backup: {backup_filename}")
+        if not os.path.exists(backup_path):
+            shutil.copy2(csv_path, backup_path)
+            logger.info(f"[green]✓[/green] Created daily backup: {backup_filename}")
+        else:
+            logger.info(f"[cyan]Daily backup already exists: {backup_filename}[/cyan]")
 
     except Exception as e:
         logger.warning(f"[yellow]⚠[/yellow] Failed to create daily backup: {str(e)}")
         # Don't fail the entire pipeline if backup fails
+
+
+def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
+    """
+    Preserve existing opening odds values from the previous output.
+
+    When a game already has Opening Spread/Moneyline/Total values from a previous run,
+    keep those values instead of overwriting with current lines. This ensures we capture
+    the TRUE opening lines (first time we saw the game), not the current lines.
+
+    Args:
+        new_df (pd.DataFrame): New dataframe with current odds
+        existing_csv_path (str): Path to existing CBB_Output.csv
+
+    Returns:
+        pd.DataFrame: Dataframe with preserved opening values
+    """
+    if not os.path.exists(existing_csv_path):
+        logger.info("[cyan]No existing CBB_Output.csv found, all values are opening values[/cyan]")
+        return new_df
+
+    try:
+        existing_df = pd.read_csv(existing_csv_path)
+
+        # Create lookup from existing data keyed by (Game, Team)
+        existing_lookup = {}
+        for _, row in existing_df.iterrows():
+            key = (row.get('Game'), row.get('Team'))
+            existing_lookup[key] = {
+                'Opening Spread': row.get('Opening Spread'),
+                'Opening Moneyline': row.get('Opening Moneyline'),
+                'Opening Total': row.get('Opening Total')
+            }
+
+        # Preserve opening values for games that already exist
+        preserved_count = 0
+        for idx, row in new_df.iterrows():
+            key = (row.get('Game'), row.get('Team'))
+            if key in existing_lookup:
+                existing_vals = existing_lookup[key]
+
+                # Only preserve if existing value is not null
+                if pd.notna(existing_vals.get('Opening Spread')):
+                    new_df.at[idx, 'Opening Spread'] = existing_vals['Opening Spread']
+                if pd.notna(existing_vals.get('Opening Moneyline')):
+                    new_df.at[idx, 'Opening Moneyline'] = existing_vals['Opening Moneyline']
+                if pd.notna(existing_vals.get('Opening Total')):
+                    new_df.at[idx, 'Opening Total'] = existing_vals['Opening Total']
+                preserved_count += 1
+
+        if preserved_count > 0:
+            logger.info(f"[green]✓[/green] Preserved opening odds for {preserved_count} existing games")
+
+        return new_df
+
+    except Exception as e:
+        logger.warning(f"[yellow]⚠[/yellow] Error preserving opening odds: {e}")
+        return new_df
+
 
 def run_oddsapi_etl():
     """
@@ -1138,6 +1203,10 @@ if __name__ == "__main__":
             logger.info(f"[green]✓[/green] Final data saved to: {output_file}")
 
             csv_path = 'CBB_Output.csv'
+
+            # Preserve opening odds from previous run (don't overwrite first-seen values)
+            result_df = preserve_opening_odds(result_df, csv_path)
+
             result_df.to_csv(csv_path, index=False)
             logger.info(f"[green]✓[/green] CSV output saved to: {csv_path}")
 

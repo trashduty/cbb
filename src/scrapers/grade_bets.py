@@ -50,6 +50,9 @@ historical_dir = os.path.join(project_root, 'historical_data')
 graded_results_path = os.path.join(project_root, 'graded_results.csv')
 unmatched_games_path = os.path.join(project_root, 'unmatched_games.csv')
 
+# Cache for historical odds to avoid redundant API calls
+_historical_odds_cache = {}
+
 def fetch_scores_espn(date_str):
     """
     Fetch completed game scores from ESPN API for a specific date.
@@ -219,7 +222,7 @@ def fetch_scores(days_from=3, use_espn=False, specific_dates=None):
 
 def load_historical_predictions(date_str):
     """
-    Load historical predictions for a specific date.
+    Load historical predictions for a specific date (opening lines).
 
     Args:
         date_str (str): Date string in format 'YYYY-MM-DD'
@@ -252,11 +255,210 @@ def load_historical_predictions(date_str):
                 lambda x: pd.Series(parse_game(x))
             )
 
-        logger.info(f"[green]✓[/green] Loaded {len(df)} predictions from {filename}")
+        logger.info(f"[green]✓[/green] Loaded {len(df)} opening predictions from {filename}")
         return df
     except Exception as e:
         logger.error(f"[red]✗[/red] Error reading {filename}: {e}")
         return None
+
+
+def fetch_historical_odds(snapshot_time, sport="basketball_ncaab"):
+    """
+    Fetch historical odds from the Odds API for a specific timestamp.
+
+    Args:
+        snapshot_time (str): ISO8601 timestamp (e.g., '2024-12-08T13:00:00Z')
+        sport (str): Sport key
+
+    Returns:
+        dict: Historical odds data keyed by (home_team, away_team)
+    """
+    global _historical_odds_cache
+
+    # Check cache first
+    cache_key = f"{sport}_{snapshot_time}"
+    if cache_key in _historical_odds_cache:
+        return _historical_odds_cache[cache_key]
+
+    api_key = os.getenv("ODDS_API_KEY")
+    if not api_key:
+        logger.warning("[yellow]⚠[/yellow] ODDS_API_KEY not found, skipping historical odds fetch")
+        return {}
+
+    url = f"https://api.the-odds-api.com/v4/historical/sports/{sport}/odds/"
+    params = {
+        'apiKey': api_key,
+        'regions': 'us',
+        'markets': 'h2h,spreads,totals',
+        'oddsFormat': 'american',
+        'date': snapshot_time
+    }
+
+    try:
+        logger.info(f"[cyan]Fetching historical odds for {snapshot_time}[/cyan]")
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+        result = response.json()
+
+        # Parse the odds data into a lookup dictionary
+        odds_lookup = {}
+        data = result.get('data', [])
+
+        for game in data:
+            home_team = game.get('home_team')
+            away_team = game.get('away_team')
+
+            if not home_team or not away_team:
+                continue
+
+            # Extract odds from bookmakers (use first available or consensus)
+            game_odds = {
+                'home_team': home_team,
+                'away_team': away_team,
+                'spread_home': None,
+                'spread_away': None,
+                'total': None,
+                'moneyline_home': None,
+                'moneyline_away': None
+            }
+
+            for bookmaker in game.get('bookmakers', []):
+                for market in bookmaker.get('markets', []):
+                    market_key = market.get('key')
+                    outcomes = market.get('outcomes', [])
+
+                    if market_key == 'spreads':
+                        for outcome in outcomes:
+                            if outcome.get('name') == home_team:
+                                game_odds['spread_home'] = outcome.get('point')
+                            elif outcome.get('name') == away_team:
+                                game_odds['spread_away'] = outcome.get('point')
+
+                    elif market_key == 'totals':
+                        for outcome in outcomes:
+                            if outcome.get('name') == 'Over':
+                                game_odds['total'] = outcome.get('point')
+
+                    elif market_key == 'h2h':
+                        for outcome in outcomes:
+                            if outcome.get('name') == home_team:
+                                game_odds['moneyline_home'] = outcome.get('price')
+                            elif outcome.get('name') == away_team:
+                                game_odds['moneyline_away'] = outcome.get('price')
+
+                # Break after first bookmaker with data (or could aggregate)
+                if game_odds['spread_home'] is not None:
+                    break
+
+            odds_lookup[(home_team, away_team)] = game_odds
+
+        # Cache the result
+        _historical_odds_cache[cache_key] = odds_lookup
+
+        logger.info(f"[green]✓[/green] Fetched historical odds for {len(odds_lookup)} games")
+        return odds_lookup
+
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 422:
+            logger.warning(f"[yellow]⚠[/yellow] No historical data available for {snapshot_time}")
+        else:
+            logger.warning(f"[yellow]⚠[/yellow] HTTP error fetching historical odds: {e}")
+        return {}
+    except Exception as e:
+        logger.warning(f"[yellow]⚠[/yellow] Error fetching historical odds: {e}")
+        return {}
+
+
+def get_opening_closing_odds(home_team, away_team, game_date_str):
+    """
+    Get opening and closing odds for a specific game from the backup file.
+
+    Opening odds: From 'Opening Spread', 'Opening Moneyline', 'Opening Total' columns
+                  (these are preserved first-seen values)
+    Closing odds: From 'market_spread', 'Moneyline', 'market_total' columns
+                  (these are the last values before the game was removed)
+
+    Args:
+        home_team (str): Home team name
+        away_team (str): Away team name
+        game_date_str (str): Game date in YYYY-MM-DD format
+
+    Returns:
+        dict: Opening and closing odds data
+    """
+    result = {
+        'opening_spread': None,
+        'closing_spread': None,
+        'opening_total': None,
+        'closing_total': None,
+        'opening_moneyline': None,
+        'closing_moneyline': None,
+        'opening_moneyline_away': None,
+        'closing_moneyline_away': None
+    }
+
+    try:
+        backup_file = os.path.join(historical_dir, f"{game_date_str}_output.csv")
+
+        if not os.path.exists(backup_file):
+            logger.debug(f"Backup file not found: {backup_file}")
+            return result
+
+        backup_df = pd.read_csv(backup_file)
+
+        # Parse Home Team and Away Team from Game column if not present
+        if 'Home Team' not in backup_df.columns or 'Away Team' not in backup_df.columns:
+            def parse_game(game_str):
+                if pd.isna(game_str):
+                    return None, None
+                parts = game_str.split(' vs. ')
+                if len(parts) == 2:
+                    return parts[1], parts[0]  # home, away (format is "Away vs. Home")
+                return None, None
+
+            backup_df[['Home Team', 'Away Team']] = backup_df['Game'].apply(
+                lambda x: pd.Series(parse_game(x))
+            )
+
+        # Match by home_team and away_team
+        match = backup_df[
+            (backup_df['Home Team'] == home_team) &
+            (backup_df['Away Team'] == away_team)
+        ]
+
+        if match.empty:
+            logger.debug(f"No data found in backup for {home_team} vs {away_team}")
+            return result
+
+        # Get the home team row (spread is from home team perspective)
+        home_row = match[match['Team'] == home_team]
+        if not home_row.empty:
+            row = home_row.iloc[0]
+
+            # Opening values (preserved first-seen values)
+            result['opening_spread'] = row.get('Opening Spread')
+            result['opening_total'] = row.get('Opening Total') or row.get('market_total')
+            result['opening_moneyline'] = row.get('Opening Moneyline')
+
+            # Closing values (current/last values before game started)
+            result['closing_spread'] = row.get('market_spread')
+            result['closing_total'] = row.get('market_total')
+            result['closing_moneyline'] = row.get('Moneyline')
+
+        # Get away team's moneylines
+        away_row = match[match['Team'] == away_team]
+        if not away_row.empty:
+            away_data = away_row.iloc[0]
+            result['opening_moneyline_away'] = away_data.get('Opening Moneyline')
+            result['closing_moneyline_away'] = away_data.get('Moneyline')
+
+        logger.debug(f"Found opening/closing odds from backup for {home_team} vs {away_team}")
+        return result
+
+    except Exception as e:
+        logger.warning(f"[yellow]⚠[/yellow] Error getting opening/closing odds: {e}")
+        return result
+
 
 def normalize_team_name(name):
     """
@@ -540,6 +742,10 @@ def grade_matched_game(matched_game):
     """
     Grade all bets for a matched game.
 
+    Opening/closing odds are read from the {date}_output.csv backup file:
+    - Opening: 'Opening Spread', 'Opening Moneyline', 'Opening Total' (preserved first-seen values)
+    - Closing: 'market_spread', 'Moneyline', 'market_total' (last values before game started)
+
     Args:
         matched_game (dict): Dictionary with 'score_data' and 'prediction_data'
 
@@ -574,6 +780,40 @@ def grade_matched_game(matched_game):
     total_results = grade_total_bet(prediction_row, home_score, away_score)
     moneyline_results = grade_moneyline_bet(prediction_row, home_score, away_score)
 
+    # Determine if this is the home or away team
+    team = prediction_row['Team']
+    pred_home_team = prediction_row['Home Team']
+    is_home = (team == pred_home_team)
+
+    # Get opening/closing odds from backup file
+    odds_data = get_opening_closing_odds(home_team, away_team, game_date_str)
+
+    # If we're the away team, we need to flip the spread sign and use away moneylines
+    if odds_data and not is_home:
+        if odds_data.get('opening_spread') is not None:
+            odds_data['opening_spread'] = -odds_data['opening_spread']
+        if odds_data.get('closing_spread') is not None:
+            odds_data['closing_spread'] = -odds_data['closing_spread']
+        # For moneyline, use away team's moneyline
+        odds_data['opening_moneyline'] = odds_data.get('opening_moneyline_away')
+        odds_data['closing_moneyline'] = odds_data.get('closing_moneyline_away')
+
+    # Get opening/closing line data from backup file, fall back to prediction file
+    opening_spread = odds_data.get('opening_spread') if odds_data else None
+    closing_spread = odds_data.get('closing_spread') if odds_data else None
+    opening_total = odds_data.get('opening_total') if odds_data else None
+    closing_total = odds_data.get('closing_total') if odds_data else None
+    opening_moneyline = odds_data.get('opening_moneyline') if odds_data else None
+    closing_moneyline = odds_data.get('closing_moneyline') if odds_data else None
+
+    # Fall back to prediction file data for opening if not available from backup
+    if opening_spread is None:
+        opening_spread = prediction_row.get('Opening Spread')
+    if opening_moneyline is None:
+        opening_moneyline = prediction_row.get('Opening Moneyline')
+    if opening_total is None:
+        opening_total = prediction_row.get('Opening Total')
+
     # Compile results
     graded = {
         'date': game_date_str,
@@ -585,15 +825,18 @@ def grade_matched_game(matched_game):
         'away_score': away_score,
         'game_completed': True,
 
-        # Spread data
-        'opening_spread': prediction_row.get('Opening Spread'),
+        # Spread data (opening and closing)
+        'opening_spread': opening_spread,
+        'closing_spread': closing_spread,
         'predicted_outcome': prediction_row.get('Predicted Outcome'),
         'spread_cover_probability': prediction_row.get('Spread Cover Probability'),
         'spread_covered': spread_results['spread_covered'],
         'spread_edge': prediction_row.get('Edge For Covering Spread'),
         'spread_edge_realized': spread_results['spread_edge_realized'],
 
-        # Total data
+        # Total data (opening and closing)
+        'opening_total': opening_total,
+        'closing_total': closing_total,
         'market_total': prediction_row.get('market_total'),
         'actual_total': total_results['actual_total'],
         'over_cover_probability': prediction_row.get('Over Cover Probability'),
@@ -605,8 +848,9 @@ def grade_matched_game(matched_game):
         'over_edge_realized': total_results['over_edge_realized'],
         'under_edge_realized': total_results['under_edge_realized'],
 
-        # Moneyline data
-        'opening_moneyline': prediction_row.get('Opening Moneyline'),
+        # Moneyline data (opening and closing)
+        'opening_moneyline': opening_moneyline,
+        'closing_moneyline': closing_moneyline,
         'moneyline_win_probability': prediction_row.get('Moneyline Win Probability'),
         'moneyline_won': moneyline_results['moneyline_won'],
         'moneyline_edge': prediction_row.get('Moneyline Edge'),
@@ -739,6 +983,10 @@ def main(use_espn=False, espn_dates=None):
     """
     Main execution function.
 
+    Opening/closing odds are read from the {date}_output.csv backup file:
+    - Opening: 'Opening Spread', 'Opening Moneyline', 'Opening Total' (preserved first-seen values)
+    - Closing: 'market_spread', 'Moneyline', 'market_total' (last values before game started)
+
     Args:
         use_espn (bool): Use ESPN API instead of OddsAPI
         espn_dates (list): Specific dates to fetch from ESPN (YYYY-MM-DD format)
@@ -776,7 +1024,7 @@ def main(use_espn=False, espn_dates=None):
     for date_str in sorted(scores_by_date.keys()):
         logger.info(f"\n[bold cyan]Processing date: {date_str}[/bold cyan]")
 
-        # Load historical predictions for this date
+        # Load historical predictions for this date (opening lines)
         predictions_df = load_historical_predictions(date_str)
 
         if predictions_df is None:
