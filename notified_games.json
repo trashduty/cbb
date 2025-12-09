@@ -131,5 +131,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0401311271749479,
     "notified_at": "2025-12-09T06:10:34.772604+00:00"
+  },
+  "Kentucky Wildcats vs. North Carolina Central Eagles|North Carolina Central Eagles|spread": {
+    "game": "Kentucky Wildcats vs. North Carolina Central Eagles",
+    "team": "North Carolina Central Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.1034572011110769,
+    "notified_at": "2025-12-09T14:09:46.719728+00:00"
   }
 }
