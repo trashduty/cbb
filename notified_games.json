@@ -180,5 +180,12 @@
     "edge_type": "under",
     "edge_value": 0.0103652785285063,
     "notified_at": "2025-12-09T20:37:29.423374+00:00"
+  },
+  "Houston Cougars vs. Jackson St Tigers|Jackson St Tigers|spread": {
+    "game": "Houston Cougars vs. Jackson St Tigers",
+    "team": "Jackson St Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0421681152904829,
+    "notified_at": "2025-12-09T21:07:27.207751+00:00"
   }
 }
