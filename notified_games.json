@@ -124,5 +124,12 @@
     "edge_type": "over",
     "edge_value": 0.4455407063009916,
     "notified_at": "2025-12-09T03:59:46.068376+00:00"
+  },
+  "North Carolina A&T Aggies vs. Howard Bison|Howard Bison|moneyline": {
+    "game": "North Carolina A&T Aggies vs. Howard Bison",
+    "team": "Howard Bison",
+    "edge_type": "moneyline",
+    "edge_value": 0.0401311271749479,
+    "notified_at": "2025-12-09T06:10:34.772604+00:00"
   }
 }
