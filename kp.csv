@@ -117,17 +117,33 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-10,Houston,Jackson St.,home,99.6,81,51
 2025-12-11,Iowa,Iowa St.,away,12.0,65,78
 2025-12-11,Iowa St.,Iowa,home,88.0,78,65
-2025-12-11,UT Arlington,UT Rio Grande Valley,away,41.0,70,72
-2025-12-11,UT Rio Grande Valley,UT Arlington,home,59.0,72,70
+2025-12-11,UT Arlington,UT Rio Grande Valley,away,40.0,70,73
+2025-12-11,UT Rio Grande Valley,UT Arlington,home,60.0,73,70
 2025-12-11,Green Bay,IU Indy,away,60.0,85,82
 2025-12-11,IU Indy,Green Bay,home,40.0,82,85
 2025-12-11,North Dakota St.,Cal St. Bakersfield,away,67.0,76,71
 2025-12-11,Cal St. Bakersfield,North Dakota St.,home,33.0,71,76
-2025-12-11,Appalachian St.,East Carolina,away,32.0,66,71
-2025-12-11,East Carolina,Appalachian St.,home,68.0,71,66
-2025-12-11,Saint Joseph's,Syracuse,away,10.0,65,78
-2025-12-11,Syracuse,Saint Joseph's,home,90.0,78,65
+2025-12-11,Appalachian St.,East Carolina,away,32.0,65,71
+2025-12-11,East Carolina,Appalachian St.,home,68.0,71,65
+2025-12-11,Saint Joseph's,Syracuse,away,10.0,65,79
+2025-12-11,Syracuse,Saint Joseph's,home,90.0,79,65
 2025-12-11,Western Carolina,Virginia Tech,away,4.0,66,85
 2025-12-11,Virginia Tech,Western Carolina,home,96.0,85,66
 2025-12-11,Alabama St.,Missouri,away,3.0,67,89
 2025-12-11,Missouri,Alabama St.,home,97.0,89,67
+2025-12-12,Texas,Connecticut,away,11.0,68,81
+2025-12-12,Connecticut,Texas,home,89.0,81,68
+2025-12-12,East Tennessee St.,Austin Peay,away,62.0,72,69
+2025-12-12,Austin Peay,East Tennessee St.,home,38.0,69,72
+2025-12-12,Cal Baptist,Eastern Washington,away,66.0,79,74
+2025-12-12,Eastern Washington,Cal Baptist,home,34.0,74,79
+2025-12-12,Maryland Eastern Shore,North Carolina A&T,away,30.0,63,68
+2025-12-12,North Carolina A&T,Maryland Eastern Shore,home,70.0,68,63
+2025-12-12,Army,UMBC,away,24.0,70,77
+2025-12-12,UMBC,Army,home,76.0,77,70
+2025-12-12,Missouri St.,Xavier,away,8.0,65,81
+2025-12-12,Xavier,Missouri St.,home,92.0,81,65
+2025-12-12,East Texas A&M,McNeese,away,6.0,61,79
+2025-12-12,McNeese,East Texas A&M,home,94.0,79,61
+2025-12-12,South Carolina St.,Queens,away,7.0,70,86
+2025-12-12,Queens,South Carolina St.,home,93.0,86,70
