@@ -222,5 +222,33 @@
     "edge_type": "under",
     "edge_value": 0.0134502139970634,
     "notified_at": "2025-12-09T23:25:41.873558+00:00"
+  },
+  "Ohio State Buckeyes vs. Illinois Fighting Illini|Ohio State Buckeyes|under": {
+    "game": "Ohio State Buckeyes vs. Illinois Fighting Illini",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2025-12-10T00:29:36.147549+00:00"
+  },
+  "Ohio State Buckeyes vs. Illinois Fighting Illini|Illinois Fighting Illini|under": {
+    "game": "Ohio State Buckeyes vs. Illinois Fighting Illini",
+    "team": "Illinois Fighting Illini",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2025-12-10T00:29:36.494341+00:00"
+  },
+  "Colorado St Rams vs. Dartmouth Big Green|Colorado St Rams|over": {
+    "game": "Colorado St Rams vs. Dartmouth Big Green",
+    "team": "Colorado St Rams",
+    "edge_type": "over",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-10T00:29:36.822123+00:00"
+  },
+  "Colorado St Rams vs. Dartmouth Big Green|Dartmouth Big Green|over": {
+    "game": "Colorado St Rams vs. Dartmouth Big Green",
+    "team": "Dartmouth Big Green",
+    "edge_type": "over",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-10T00:29:37.061908+00:00"
   }
 }
