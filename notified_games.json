@@ -257,5 +257,12 @@
     "edge_type": "spread",
     "edge_value": 0.0469705371051696,
     "notified_at": "2025-12-10T14:09:16.485144+00:00"
+  },
+  "CSU Northridge Matadors vs. Fresno St Bulldogs|under": {
+    "game": "CSU Northridge Matadors vs. Fresno St Bulldogs",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-10T17:26:17.983301+00:00"
   }
 }
