@@ -171,6 +171,11 @@ def create_spread_embed(row):
                 "name": "Opening Spread",
                 "value":  format_decimal(row['Opening Spread'], 1),
                 "inline": True
+            },
+            {
+                "name": "Current Spread",
+                "value": format_decimal(row['market_spread'], 1),
+                "inline": True
             }
         ],
         "timestamp":  datetime.now(timezone.utc).isoformat()
@@ -228,8 +233,13 @@ def create_over_embed(row):
                 "inline": True
             },
             {
-                "name": "Market Total",
+                "name": "Current Total",
                 "value": format_decimal(row['market_total'], 1),
+                "inline": True
+            },
+            {
+                "name": "Opening Total",
+                "value": format_decimal(row['Opening Total'], 1),
                 "inline": True
             },
             {
@@ -263,8 +273,13 @@ def create_under_embed(row):
                 "inline": True
             },
             {
-                "name": "Market Total",
+                "name": "Current Total",
                 "value": format_decimal(row['market_total'], 1),
+                "inline": True
+            },
+            {
+                "name": "Opening Total",
+                "value": format_decimal(row['Opening Total'], 1),
                 "inline": True
             },
             {
