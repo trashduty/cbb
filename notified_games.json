@@ -250,5 +250,12 @@
     "edge_type": "over",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-10T00:29:37.061908+00:00"
+  },
+  "NC State Wolfpack vs. Liberty Flames|Liberty Flames|spread": {
+    "game": "NC State Wolfpack vs. Liberty Flames",
+    "team": "Liberty Flames",
+    "edge_type": "spread",
+    "edge_value": 0.0469705371051696,
+    "notified_at": "2025-12-10T14:09:16.485144+00:00"
   }
 }
