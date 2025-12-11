@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** December 11, 2025 at 12:11 PM ET
+**Last Updated:** December 11, 2025 at 12:18 PM ET
 
-**Season Record Period:** 2025-11-13 to 2025-12-08
+**Season Record Period:** 2025-11-13 to 2025-12-10
 
-**Total Games Graded:** 396 games (792 team-rows)
+**Total Games Graded:** 404 games (808 team-rows)
 
 ---
 
@@ -16,21 +16,21 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 32-57 | 36.0% | -27.91 |
+| 0-1.9% | 34-57 | 37.4% | -26.09 |
 | 2-3.9% | 18-17 | 51.4% | -0.64 |
-| 4-5.9% | 12-6 | 66.7% | +4.91 |
+| 4-5.9% | 12-7 | 63.2% | +3.91 |
 | 6%+ | 1-5 | 16.7% | -4.09 |
-| **Total** | **63-85** | **42.6%** | **-27.73** |
+| **Total** | **65-86** | **43.0%** | **-26.91** |
 
 ### Moneyline Bets
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 51-109 | 31.9% | -62.64 |
+| 0-1.9% | 51-113 | 31.1% | -66.64 |
 | 2-3.9% | 11-22 | 33.3% | -12.00 |
 | 4-5.9% | 2-5 | 28.6% | -3.18 |
 | 6%+ | 1-1 | 50.0% | -0.09 |
-| **Total** | **65-137** | **32.2%** | **-77.91** |
+| **Total** | **65-141** | **31.6%** | **-81.91** |
 
 ### Over Bets
 
@@ -46,11 +46,11 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 34-12 | 73.9% | +18.91 |
+| 0-1.9% | 34-14 | 70.8% | +16.91 |
 | 2-3.9% | 4-4 | 50.0% | -0.36 |
 | 4-5.9% | 4-0 | 100.0% | +3.64 |
 | 6%+ | 2-2 | 50.0% | -0.18 |
-| **Total** | **44-18** | **71.0%** | **+22.01** |
+| **Total** | **44-20** | **68.8%** | **+20.01** |
 
 ---
 
