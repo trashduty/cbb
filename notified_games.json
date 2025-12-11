@@ -271,5 +271,12 @@
     "edge_type": "over",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-11T03:43:32.896876+00:00"
+  },
+  "Missouri Tigers vs. Alabama St Hornets|Alabama St Hornets|spread": {
+    "game": "Missouri Tigers vs. Alabama St Hornets",
+    "team": "Alabama St Hornets",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-11T15:09:51.424717+00:00"
   }
 }
