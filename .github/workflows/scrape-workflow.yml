@@ -51,14 +51,22 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           KENPOM_API_KEY: ${{ secrets.KENPOM_API_KEY }}
 
+      - name: Grade completed games (before filtering)
+        run: uv run src/scrapers/grade_bets.py
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+
       - name: Filter out started games
         run: python src/utils/filter_started_games.py
+
+      - name: Generate model record report
+        run: uv run src/utils/generate_model_record.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add CBB_Output.csv historical_data/
+          git add CBB_Output.csv historical_data/ data/kp.csv data/kp_mapped.csv graded_results.csv model_record.csv docs/
           # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"

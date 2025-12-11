@@ -220,9 +220,50 @@ def fetch_scores(days_from=3, use_espn=False, specific_dates=None):
         logger.error(f"[red]✗[/red] Error fetching scores: {e}")
         return []
 
+def load_predictions_from_cbb_output():
+    """
+    Load predictions from CBB_Output.csv (contains opening edges).
+
+    This should be called BEFORE filter_started_games.py removes completed games.
+
+    Returns:
+        pd.DataFrame or None: Predictions with opening edges or None if file not found
+    """
+    cbb_output_path = os.path.join(project_root, 'CBB_Output.csv')
+
+    if not os.path.exists(cbb_output_path):
+        logger.warning(f"[yellow]⚠[/yellow] CBB_Output.csv not found")
+        return None
+
+    try:
+        df = pd.read_csv(cbb_output_path)
+
+        # Parse Home Team and Away Team from Game column if not present
+        # Game format is "Away Team vs. Home Team"
+        if 'Home Team' not in df.columns or 'Away Team' not in df.columns:
+            def parse_game(game_str):
+                if pd.isna(game_str):
+                    return None, None
+                parts = game_str.split(' vs. ')
+                if len(parts) == 2:
+                    return parts[1], parts[0]  # home, away
+                return None, None
+
+            df[['Home Team', 'Away Team']] = df['Game'].apply(
+                lambda x: pd.Series(parse_game(x))
+            )
+
+        logger.info(f"[green]✓[/green] Loaded {len(df)} predictions from CBB_Output.csv")
+        return df
+    except Exception as e:
+        logger.error(f"[red]✗[/red] Error reading CBB_Output.csv: {e}")
+        return None
+
+
 def load_historical_predictions(date_str):
     """
     Load historical predictions for a specific date (opening lines).
+    DEPRECATED: Use load_predictions_from_cbb_output() instead.
 
     Args:
         date_str (str): Date string in format 'YYYY-MM-DD'
@@ -814,6 +855,12 @@ def grade_matched_game(matched_game):
     if opening_total is None:
         opening_total = prediction_row.get('Opening Total')
 
+    # Get opening edge values (these are preserved from first detection)
+    opening_spread_edge = prediction_row.get('Opening Spread Edge')
+    opening_moneyline_edge = prediction_row.get('Opening Moneyline Edge')
+    opening_over_edge = prediction_row.get('Opening Over Edge')
+    opening_under_edge = prediction_row.get('Opening Under Edge')
+
     # Compile results
     graded = {
         'date': game_date_str,
@@ -831,7 +878,8 @@ def grade_matched_game(matched_game):
         'predicted_outcome': prediction_row.get('Predicted Outcome'),
         'spread_cover_probability': prediction_row.get('Spread Cover Probability'),
         'spread_covered': spread_results['spread_covered'],
-        'spread_edge': prediction_row.get('Edge For Covering Spread'),
+        'opening_spread_edge': opening_spread_edge,  # Edge at first detection (for model record)
+        'spread_edge': prediction_row.get('Edge For Covering Spread'),  # Current edge
         'spread_edge_realized': spread_results['spread_edge_realized'],
 
         # Total data (opening and closing)
@@ -843,8 +891,10 @@ def grade_matched_game(matched_game):
         'under_cover_probability': prediction_row.get('Under Cover Probability'),
         'over_hit': total_results['over_hit'],
         'under_hit': total_results['under_hit'],
-        'over_edge': prediction_row.get('Over Total Edge'),
-        'under_edge': prediction_row.get('Under Total Edge'),
+        'opening_over_edge': opening_over_edge,  # Edge at first detection (for model record)
+        'opening_under_edge': opening_under_edge,  # Edge at first detection (for model record)
+        'over_edge': prediction_row.get('Over Total Edge'),  # Current edge
+        'under_edge': prediction_row.get('Under Total Edge'),  # Current edge
         'over_edge_realized': total_results['over_edge_realized'],
         'under_edge_realized': total_results['under_edge_realized'],
 
@@ -853,7 +903,8 @@ def grade_matched_game(matched_game):
         'closing_moneyline': closing_moneyline,
         'moneyline_win_probability': prediction_row.get('Moneyline Win Probability'),
         'moneyline_won': moneyline_results['moneyline_won'],
-        'moneyline_edge': prediction_row.get('Moneyline Edge'),
+        'opening_moneyline_edge': opening_moneyline_edge,  # Edge at first detection (for model record)
+        'moneyline_edge': prediction_row.get('Moneyline Edge'),  # Current edge
         'moneyline_edge_realized': moneyline_results['moneyline_edge_realized'],
 
         # Consensus flags
@@ -979,17 +1030,17 @@ def log_unmatched_games(unmatched_scores, unmatched_predictions, date_str):
         combined_unmatched.to_csv(unmatched_games_path, index=False)
         logger.info(f"[yellow]⚠[/yellow] Logged {len(unmatched_data)} unmatched games to unmatched_games.csv")
 
-def main(use_espn=False, espn_dates=None):
+def main(use_espn=False, espn_dates=None, use_historical=False):
     """
     Main execution function.
 
-    Opening/closing odds are read from the {date}_output.csv backup file:
-    - Opening: 'Opening Spread', 'Opening Moneyline', 'Opening Total' (preserved first-seen values)
-    - Closing: 'market_spread', 'Moneyline', 'market_total' (last values before game started)
+    By default, reads predictions from CBB_Output.csv which contains preserved opening edges.
+    This should be run BEFORE filter_started_games.py removes completed games.
 
     Args:
         use_espn (bool): Use ESPN API instead of OddsAPI
         espn_dates (list): Specific dates to fetch from ESPN (YYYY-MM-DD format)
+        use_historical (bool): Use historical_data/ backups instead of CBB_Output.csv (legacy mode)
     """
     logger.info("=== Starting Bet Grading Process ===")
 
@@ -1020,26 +1071,61 @@ def main(use_espn=False, espn_dates=None):
 
     all_new_results = []
 
-    # Process each date
-    for date_str in sorted(scores_by_date.keys()):
-        logger.info(f"\n[bold cyan]Processing date: {date_str}[/bold cyan]")
+    if use_historical:
+        # Legacy mode: use historical_data/ backups
+        logger.info("[cyan]Using historical_data/ backups (legacy mode)[/cyan]")
+        for date_str in sorted(scores_by_date.keys()):
+            logger.info(f"\n[bold cyan]Processing date: {date_str}[/bold cyan]")
 
-        # Load historical predictions for this date (opening lines)
-        predictions_df = load_historical_predictions(date_str)
+            predictions_df = load_historical_predictions(date_str)
+
+            if predictions_df is None:
+                logger.warning(f"[yellow]⚠[/yellow] Skipping {date_str} - no predictions file found")
+                continue
+
+            date_scores = scores_by_date[date_str]
+            matched, unmatched_scores, unmatched_predictions = match_games(date_scores, predictions_df)
+
+            for matched_game in matched:
+                prediction_row = matched_game['prediction_data']
+
+                if check_already_graded(
+                    existing_graded,
+                    date_str,
+                    prediction_row['Game'],
+                    prediction_row['Team']
+                ):
+                    logger.debug(f"[dim]Skipping already graded: {prediction_row['Game']} - {prediction_row['Team']}[/dim]")
+                    continue
+
+                graded_result = grade_matched_game(matched_game)
+
+                if graded_result:
+                    all_new_results.append(graded_result)
+
+            log_unmatched_games(unmatched_scores, unmatched_predictions, date_str)
+    else:
+        # New mode: use CBB_Output.csv directly (contains preserved opening edges)
+        logger.info("[cyan]Using CBB_Output.csv for opening edges[/cyan]")
+        predictions_df = load_predictions_from_cbb_output()
 
         if predictions_df is None:
-            logger.warning(f"[yellow]⚠[/yellow] Skipping {date_str} - no predictions file found")
-            continue
+            logger.warning("[yellow]⚠[/yellow] No predictions found in CBB_Output.csv")
+            return
 
-        # Match games
-        date_scores = scores_by_date[date_str]
-        matched, unmatched_scores, unmatched_predictions = match_games(date_scores, predictions_df)
+        # Process all completed scores against predictions
+        all_scores = []
+        for date_scores in scores_by_date.values():
+            all_scores.extend(date_scores)
 
-        # Grade matched games
+        matched, unmatched_scores, unmatched_predictions = match_games(all_scores, predictions_df)
+
         for matched_game in matched:
             prediction_row = matched_game['prediction_data']
+            score_data = matched_game['score_data']
+            game_date = datetime.fromisoformat(score_data['commence_time'].replace('Z', '+00:00'))
+            date_str = game_date.strftime('%Y-%m-%d')
 
-            # Check if already graded
             if check_already_graded(
                 existing_graded,
                 date_str,
@@ -1049,14 +1135,14 @@ def main(use_espn=False, espn_dates=None):
                 logger.debug(f"[dim]Skipping already graded: {prediction_row['Game']} - {prediction_row['Team']}[/dim]")
                 continue
 
-            # Grade the game
             graded_result = grade_matched_game(matched_game)
 
             if graded_result:
                 all_new_results.append(graded_result)
 
-        # Log unmatched games
-        log_unmatched_games(unmatched_scores, unmatched_predictions, date_str)
+        # Log unmatched with today's date since we're using live data
+        today_str = datetime.now(pytz.timezone('US/Eastern')).strftime('%Y-%m-%d')
+        log_unmatched_games(unmatched_scores, unmatched_predictions, today_str)
 
     # Append all new results
     if all_new_results:
@@ -1104,10 +1190,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Grade historical bet predictions')
     parser.add_argument('--espn', action='store_true', help='Use ESPN API instead of OddsAPI')
     parser.add_argument('--dates', nargs='+', help='Specific dates to fetch (YYYY-MM-DD format)')
+    parser.add_argument('--historical', action='store_true',
+                        help='Use historical_data/ backups instead of CBB_Output.csv (legacy mode)')
     args = parser.parse_args()
 
     try:
-        main(use_espn=args.espn, espn_dates=args.dates)
+        main(use_espn=args.espn, espn_dates=args.dates, use_historical=args.historical)
     except Exception as e:
         logger.error(f"[red]✗[/red] Error in grading script: {e}")
         import traceback

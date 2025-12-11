@@ -849,6 +849,13 @@ def process_final_dataframe(final_df):
     final_df['Devigged Probability'] = final_df['Devigged Probability'].fillna(0)
     final_df['Moneyline Edge'] = final_df['Moneyline Edge'].fillna(0)
 
+    # Create Opening Edge columns (will be preserved via preserve_opening_odds)
+    # These capture the edge at the time the game first appeared
+    final_df['Opening Spread Edge'] = final_df['Edge For Covering Spread']
+    final_df['Opening Moneyline Edge'] = final_df['Moneyline Edge']
+    final_df['Opening Over Edge'] = final_df['Over Total Edge']
+    final_df['Opening Under Edge'] = final_df['Under Total Edge']
+
     # Rename 'Moneyline' column to 'Opening Moneyline' if it exists
     if 'Moneyline' in final_df.columns:
         # Round moneyline values to the nearest integer
@@ -884,16 +891,16 @@ def process_final_dataframe(final_df):
         'Game', 'Game Time', 'Team',
         # Spread framework columns
         'total_category', 'market_spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
-        'Opening Spread', 'Edge For Covering Spread', 'Spread Std. Dev.', 'spread_barttorvik',
+        'Opening Spread', 'Edge For Covering Spread', 'Opening Spread Edge', 'Spread Std. Dev.', 'spread_barttorvik',
         'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
         # Moneyline columns
-        'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Moneyline Std. Dev.',
+        'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Opening Moneyline Edge', 'Moneyline Std. Dev.',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
         # Totals framework columns
         'spread_category', 'market_total', 'model_total', 'average_total', 'Opening Total', 'theoddsapi_total', 'Totals Std. Dev.',
         'projected_total_barttorvik', 'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
         'Over Cover Probability', 'Under Cover Probability',
-        'Over Total Edge', 'Under Total Edge',
+        'Over Total Edge', 'Under Total Edge', 'Opening Over Edge', 'Opening Under Edge',
         # Consensus flags
         'spread_consensus_flag', 'moneyline_consensus_flag', 'over_consensus_flag', 'under_consensus_flag'
     ]
@@ -1094,11 +1101,11 @@ def backup_daily_output(csv_path):
 
 def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
     """
-    Preserve existing opening odds values from the previous output.
+    Preserve existing opening odds and edge values from the previous output.
 
-    When a game already has Opening Spread/Moneyline/Total values from a previous run,
+    When a game already has Opening Spread/Moneyline/Total/Edge values from a previous run,
     keep those values instead of overwriting with current lines. This ensures we capture
-    the TRUE opening lines (first time we saw the game), not the current lines.
+    the TRUE opening lines and edges (first time we saw the game), not the current values.
 
     Args:
         new_df (pd.DataFrame): New dataframe with current odds
@@ -1121,7 +1128,12 @@ def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
             existing_lookup[key] = {
                 'Opening Spread': row.get('Opening Spread'),
                 'Opening Moneyline': row.get('Opening Moneyline'),
-                'Opening Total': row.get('Opening Total')
+                'Opening Total': row.get('Opening Total'),
+                # Opening edge values (preserved like opening lines)
+                'Opening Spread Edge': row.get('Opening Spread Edge'),
+                'Opening Moneyline Edge': row.get('Opening Moneyline Edge'),
+                'Opening Over Edge': row.get('Opening Over Edge'),
+                'Opening Under Edge': row.get('Opening Under Edge'),
             }
 
         # Preserve opening values for games that already exist
@@ -1138,10 +1150,19 @@ def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
                     new_df.at[idx, 'Opening Moneyline'] = existing_vals['Opening Moneyline']
                 if pd.notna(existing_vals.get('Opening Total')):
                     new_df.at[idx, 'Opening Total'] = existing_vals['Opening Total']
+                # Preserve opening edge values
+                if pd.notna(existing_vals.get('Opening Spread Edge')):
+                    new_df.at[idx, 'Opening Spread Edge'] = existing_vals['Opening Spread Edge']
+                if pd.notna(existing_vals.get('Opening Moneyline Edge')):
+                    new_df.at[idx, 'Opening Moneyline Edge'] = existing_vals['Opening Moneyline Edge']
+                if pd.notna(existing_vals.get('Opening Over Edge')):
+                    new_df.at[idx, 'Opening Over Edge'] = existing_vals['Opening Over Edge']
+                if pd.notna(existing_vals.get('Opening Under Edge')):
+                    new_df.at[idx, 'Opening Under Edge'] = existing_vals['Opening Under Edge']
                 preserved_count += 1
 
         if preserved_count > 0:
-            logger.info(f"[green]✓[/green] Preserved opening odds for {preserved_count} existing games")
+            logger.info(f"[green]✓[/green] Preserved opening odds and edges for {preserved_count} existing games")
 
         return new_df
 
