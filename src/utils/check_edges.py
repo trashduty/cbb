@@ -309,9 +309,9 @@ def check_edges():
         
         # Check Spread Edge
         if pd.notna(row. get('Edge For Covering Spread')) and row['Edge For Covering Spread'] >= SPREAD_THRESHOLD:
-            # Check if at least 3 out of 4 spread sources have values
+            # Check if at least 4 out of 4 spread sources have values
             spread_source_count = count_non_null_spread_sources(row)
-            if spread_source_count >= 3:
+            if spread_source_count >= 4:
                 game_id = create_game_id(row, 'spread')
                 if game_id not in notified_games:
                     print(f"\n🎯 Spread edge found:  {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
@@ -346,9 +346,9 @@ def check_edges():
         
         # Check Over Total Edge
         if pd.notna(row.get('Over Total Edge')) and row['Over Total Edge'] >= TOTAL_THRESHOLD:
-            # Check if at least 3 out of 4 total sources have values
+            # Check if at least 4 out of 4 total sources have values
             total_source_count = count_non_null_total_sources(row)
-            if total_source_count >= 3:
+            if total_source_count >= 4:
                 # Use game-level ID instead of team-specific ID
                 game_id = create_total_game_id(row, 'over')
                 # Check both notified_games and current session
