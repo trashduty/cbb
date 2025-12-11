@@ -264,5 +264,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2025-12-10T17:26:17.983301+00:00"
+  },
+  "Iowa State Cyclones vs. Iowa Hawkeyes|over": {
+    "game": "Iowa State Cyclones vs. Iowa Hawkeyes",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-11T03:43:32.896876+00:00"
   }
 }
