@@ -285,5 +285,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0409071085230666,
     "notified_at": "2025-12-12T17:39:01.135157+00:00"
+  },
+  "Alabama Crimson Tide vs. Arizona Wildcats|Arizona Wildcats|moneyline": {
+    "game": "Alabama Crimson Tide vs. Arizona Wildcats",
+    "team": "Arizona Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.041588836548899,
+    "notified_at": "2025-12-12T18:12:25.447550+00:00"
   }
 }
