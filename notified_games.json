@@ -334,5 +334,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.1947070735411856,
     "notified_at": "2025-12-12T22:08:27.305626+00:00"
+  },
+  "Louisiana Tech Bulldogs vs. Louisiana Ragin' Cajuns|under": {
+    "game": "Louisiana Tech Bulldogs vs. Louisiana Ragin' Cajuns",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011999412749575,
+    "notified_at": "2025-12-12T23:25:22.108618+00:00"
   }
 }
