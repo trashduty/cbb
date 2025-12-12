@@ -278,5 +278,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-11T15:09:51.424717+00:00"
+  },
+  "Texas Tech Red Raiders vs. Arkansas Razorbacks|Arkansas Razorbacks|moneyline": {
+    "game": "Texas Tech Red Raiders vs. Arkansas Razorbacks",
+    "team": "Arkansas Razorbacks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0409071085230666,
+    "notified_at": "2025-12-12T17:39:01.135157+00:00"
   }
 }
