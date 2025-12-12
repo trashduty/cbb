@@ -292,5 +292,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.041588836548899,
     "notified_at": "2025-12-12T18:12:25.447550+00:00"
+  },
+  "Florida St Seminoles vs. Massachusetts Minutemen|Massachusetts Minutemen|moneyline": {
+    "game": "Florida St Seminoles vs. Massachusetts Minutemen",
+    "team": "Massachusetts Minutemen",
+    "edge_type": "moneyline",
+    "edge_value": 0.0583666171285739,
+    "notified_at": "2025-12-12T21:07:53.744552+00:00"
   }
 }
