@@ -313,5 +313,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0504927587124121,
     "notified_at": "2025-12-12T21:49:47.542671+00:00"
+  },
+  "Rice Owls vs. Arkansas St Red Wolves|Rice Owls|moneyline": {
+    "game": "Rice Owls vs. Arkansas St Red Wolves",
+    "team": "Rice Owls",
+    "edge_type": "moneyline",
+    "edge_value": 0.0525276617869071,
+    "notified_at": "2025-12-12T22:08:26.510877+00:00"
+  },
+  "CSU Bakersfield Roadrunners vs. Pepperdine Waves|CSU Bakersfield Roadrunners|moneyline": {
+    "game": "CSU Bakersfield Roadrunners vs. Pepperdine Waves",
+    "team": "CSU Bakersfield Roadrunners",
+    "edge_type": "moneyline",
+    "edge_value": 0.0451269706427079,
+    "notified_at": "2025-12-12T22:08:26.836031+00:00"
+  },
+  "Tulane Green Wave vs. UC San Diego Tritons|UC San Diego Tritons|moneyline": {
+    "game": "Tulane Green Wave vs. UC San Diego Tritons",
+    "team": "UC San Diego Tritons",
+    "edge_type": "moneyline",
+    "edge_value": 0.1947070735411856,
+    "notified_at": "2025-12-12T22:08:27.305626+00:00"
   }
 }
