@@ -299,5 +299,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0583666171285739,
     "notified_at": "2025-12-12T21:07:53.744552+00:00"
+  },
+  "Robert Morris Colonials vs. Toledo Rockets|Robert Morris Colonials|moneyline": {
+    "game": "Robert Morris Colonials vs. Toledo Rockets",
+    "team": "Robert Morris Colonials",
+    "edge_type": "moneyline",
+    "edge_value": 0.0663663138007023,
+    "notified_at": "2025-12-12T21:49:47.292057+00:00"
+  },
+  "Utah State Aggies vs. Illinois St Redbirds|Illinois St Redbirds|moneyline": {
+    "game": "Utah State Aggies vs. Illinois St Redbirds",
+    "team": "Illinois St Redbirds",
+    "edge_type": "moneyline",
+    "edge_value": 0.0504927587124121,
+    "notified_at": "2025-12-12T21:49:47.542671+00:00"
   }
 }
