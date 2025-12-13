@@ -359,16 +359,16 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-14,High Point,Appalachian St.,home,86.0,79,67
 2025-12-14,Ball St.,Campbell,away,21.0,67,76
 2025-12-14,Campbell,Ball St.,home,79.0,76,67
-2025-12-14,Washington St.,USC,away,6.0,72,90
-2025-12-14,USC,Washington St.,home,94.0,90,72
+2025-12-14,Washington St.,USC,away,6.0,72,89
+2025-12-14,USC,Washington St.,home,94.0,89,72
 2025-12-14,Queens,Wake Forest,away,6.0,72,89
 2025-12-14,Wake Forest,Queens,home,94.0,89,72
 2025-12-14,Chicago St.,Loyola Chicago,away,17.0,67,78
 2025-12-14,Loyola Chicago,Chicago St.,home,83.0,78,67
 2025-12-14,Bethune Cookman,Missouri,away,6.0,66,84
 2025-12-14,Missouri,Bethune Cookman,home,94.0,84,66
-2025-12-14,Texas Southern,Minnesota,away,8.0,64,79
-2025-12-14,Minnesota,Texas Southern,home,92.0,79,64
+2025-12-14,Texas Southern,Minnesota,away,8.0,63,79
+2025-12-14,Minnesota,Texas Southern,home,92.0,79,63
 2025-12-14,Western Michigan,Iowa,away,2.0,61,83
 2025-12-14,Iowa,Western Michigan,home,98.0,83,61
 2025-12-14,Jacksonville,Texas A&M,away,3.0,63,83
@@ -381,3 +381,17 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-14,Virginia Tech,Maryland Eastern Shore,home,98.0,80,57
 2025-12-14,Eastern Illinois,Iowa St.,away,0.04000000000000625,52,89
 2025-12-14,Iowa St.,Eastern Illinois,home,99.96,89,52
+2025-12-15,Wyoming,South Dakota St.,away,67.0,77,72
+2025-12-15,South Dakota St.,Wyoming,home,33.0,72,77
+2025-12-15,North Alabama,Alabama A&M,away,51.0,69,68
+2025-12-15,Alabama A&M,North Alabama,home,49.0,68,69
+2025-12-15,East Texas A&M,Southeastern Louisiana,away,38.0,67,71
+2025-12-15,Southeastern Louisiana,East Texas A&M,home,62.0,71,67
+2025-12-15,McNeese,Houston Christian,away,84.0,76,64
+2025-12-15,Houston Christian,McNeese,home,16.0,64,76
+2025-12-15,Wofford,Gardner Webb,away,76.0,81,73
+2025-12-15,Gardner Webb,Wofford,home,24.0,73,81
+2025-12-15,Incarnate Word,TCU,away,7.0,64,81
+2025-12-15,TCU,Incarnate Word,home,93.0,81,64
+2025-12-15,Niagara,VCU,away,1.0,56,84
+2025-12-15,VCU,Niagara,home,99.0,84,56
