@@ -467,5 +467,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-13T22:07:35.911595+00:00"
+  },
+  "Iowa Hawkeyes vs. Western Michigan Broncos|over": {
+    "game": "Iowa Hawkeyes vs. Western Michigan Broncos",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.4298201444357596,
+    "notified_at": "2025-12-13T23:08:10.512922+00:00"
   }
 }
