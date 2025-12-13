@@ -404,5 +404,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-13T03:02:40.203149+00:00"
+  },
+  "Delaware Blue Hens vs. CSU Northridge Matadors|over": {
+    "game": "Delaware Blue Hens vs. CSU Northridge Matadors",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2025-12-13T04:30:10.616825+00:00"
   }
 }
