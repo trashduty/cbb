@@ -341,5 +341,12 @@
     "edge_type": "under",
     "edge_value": 0.011999412749575,
     "notified_at": "2025-12-12T23:25:22.108618+00:00"
+  },
+  "Belmont Bruins vs. UIC Flames|under": {
+    "game": "Belmont Bruins vs. UIC Flames",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0155019363801393,
+    "notified_at": "2025-12-13T00:28:06.783676+00:00"
   }
 }
