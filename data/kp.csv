@@ -359,16 +359,16 @@ High Point,Appalachian St.,Appalachian St.,20251214,12,0.14,146
 High Point,Appalachian St.,High Point,20251214,-12,0.86,146
 Campbell,Ball St.,Ball St.,20251214,9,0.21,143
 Campbell,Ball St.,Campbell,20251214,-9,0.79,143
-USC,Washington St.,Washington St.,20251214,18,0.06,162
-USC,Washington St.,USC,20251214,-18,0.94,162
+USC,Washington St.,Washington St.,20251214,17,0.06,161
+USC,Washington St.,USC,20251214,-17,0.94,161
 Wake Forest,Queens,Queens,20251214,17,0.06,161
 Wake Forest,Queens,Wake Forest,20251214,-17,0.94,161
 Loyola Chicago,Chicago St.,Chicago St.,20251214,11,0.17,145
 Loyola Chicago,Chicago St.,Loyola Chicago,20251214,-11,0.83,145
 Missouri,Bethune Cookman,Bethune Cookman,20251214,18,0.06,150
 Missouri,Bethune Cookman,Missouri,20251214,-18,0.94,150
-Minnesota,Texas Southern,Texas Southern,20251214,15,0.08,143
-Minnesota,Texas Southern,Minnesota,20251214,-15,0.92,143
+Minnesota,Texas Southern,Texas Southern,20251214,16,0.08,142
+Minnesota,Texas Southern,Minnesota,20251214,-16,0.92,142
 Iowa,Western Michigan,Western Michigan,20251214,22,0.02,144
 Iowa,Western Michigan,Iowa,20251214,-22,0.98,144
 Texas A&M,Jacksonville,Jacksonville,20251214,20,0.03,146
@@ -381,3 +381,17 @@ Virginia Tech,Maryland Eastern Shore,Maryland Eastern Shore,20251214,23,0.02,137
 Virginia Tech,Maryland Eastern Shore,Virginia Tech,20251214,-23,0.98,137
 Iowa St.,Eastern Illinois,Eastern Illinois,20251214,37,0.0004000000000000625,141
 Iowa St.,Eastern Illinois,Iowa St.,20251214,-37,0.9995999999999999,141
+South Dakota St.,Wyoming,Wyoming,20251215,-5,0.67,149
+South Dakota St.,Wyoming,South Dakota St.,20251215,5,0.33,149
+Alabama A&M,North Alabama,North Alabama,20251215,-1,0.51,137
+Alabama A&M,North Alabama,Alabama A&M,20251215,1,0.49,137
+Southeastern Louisiana,East Texas A&M,East Texas A&M,20251215,4,0.38,138
+Southeastern Louisiana,East Texas A&M,Southeastern Louisiana,20251215,-4,0.62,138
+Houston Christian,McNeese,McNeese,20251215,-12,0.84,140
+Houston Christian,McNeese,Houston Christian,20251215,12,0.16,140
+Gardner Webb,Wofford,Wofford,20251215,-8,0.76,154
+Gardner Webb,Wofford,Gardner Webb,20251215,8,0.24,154
+TCU,Incarnate Word,Incarnate Word,20251215,17,0.07,145
+TCU,Incarnate Word,TCU,20251215,-17,0.93,145
+VCU,Niagara,Niagara,20251215,28,0.01,140
+VCU,Niagara,VCU,20251215,-28,0.99,140
