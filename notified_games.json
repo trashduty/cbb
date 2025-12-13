@@ -460,5 +460,12 @@
     "edge_type": "over",
     "edge_value": 0.0103555120713323,
     "notified_at": "2025-12-13T15:36:32.404242+00:00"
+  },
+  "Texas A&M Aggies vs. Jacksonville Dolphins|Jacksonville Dolphins|spread": {
+    "game": "Texas A&M Aggies vs. Jacksonville Dolphins",
+    "team": "Jacksonville Dolphins",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-13T22:07:35.911595+00:00"
   }
 }
