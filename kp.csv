@@ -147,3 +147,237 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-12,McNeese,East Texas A&M,home,94.0,79,61
 2025-12-12,South Carolina St.,Queens,away,7.0,70,86
 2025-12-12,Queens,South Carolina St.,home,93.0,86,70
+2025-12-13,Arizona,Alabama,away,52.0,87,86
+2025-12-13,Alabama,Arizona,home,48.0,86,87
+2025-12-13,Kansas,N.C. State,away,46.0,75,76
+2025-12-13,N.C. State,Kansas,home,54.0,76,75
+2025-12-13,Arkansas,Texas Tech,away,45.0,75,76
+2025-12-13,Texas Tech,Arkansas,home,55.0,76,75
+2025-12-13,Indiana,Kentucky,away,36.0,74,78
+2025-12-13,Kentucky,Indiana,home,64.0,78,74
+2025-12-13,SMU,LSU,away,44.0,77,79
+2025-12-13,LSU,SMU,home,56.0,79,77
+2025-12-13,Oklahoma St.,Oklahoma,away,52.0,84,83
+2025-12-13,Oklahoma,Oklahoma St.,home,48.0,83,84
+2025-12-13,Nebraska,Illinois,away,23.0,73,81
+2025-12-13,Illinois,Nebraska,home,77.0,81,73
+2025-12-13,Santa Clara,Arizona St.,away,51.0,79,78
+2025-12-13,Arizona St.,Santa Clara,home,49.0,78,79
+2025-12-13,West Virginia,Ohio St.,away,35.0,69,73
+2025-12-13,Ohio St.,West Virginia,home,65.0,73,69
+2025-12-13,UCLA,Gonzaga,away,17.0,69,79
+2025-12-13,Gonzaga,UCLA,home,83.0,79,69
+2025-12-13,Providence,Butler,away,31.0,81,87
+2025-12-13,Butler,Providence,home,69.0,87,81
+2025-12-13,Kansas St.,Creighton,away,33.0,76,81
+2025-12-13,Creighton,Kansas St.,home,67.0,81,76
+2025-12-13,Mississippi St.,Utah,away,57.0,78,76
+2025-12-13,Utah,Mississippi St.,home,43.0,76,78
+2025-12-13,Cincinnati,Georgia,away,20.0,72,81
+2025-12-13,Georgia,Cincinnati,home,80.0,81,72
+2025-12-13,Akron,Murray St.,away,74.0,90,83
+2025-12-13,Murray St.,Akron,home,26.0,83,90
+2025-12-13,George Washington,Florida,away,14.0,76,88
+2025-12-13,Florida,George Washington,home,86.0,88,76
+2025-12-13,Michigan St.,Penn St.,away,83.0,78,67
+2025-12-13,Penn St.,Michigan St.,home,17.0,67,78
+2025-12-13,New Mexico St.,Tulsa,away,33.0,72,77
+2025-12-13,Tulsa,New Mexico St.,home,67.0,77,72
+2025-12-13,Southern Illinois,Richmond,away,34.0,74,79
+2025-12-13,Richmond,Southern Illinois,home,66.0,79,74
+2025-12-13,Memphis,Louisville,away,12.0,73,86
+2025-12-13,Louisville,Memphis,home,88.0,86,73
+2025-12-13,Illinois St.,Utah St.,away,19.0,69,78
+2025-12-13,Utah St.,Illinois St.,home,81.0,78,69
+2025-12-13,Michigan,Maryland,away,95.0,84,66
+2025-12-13,Maryland,Michigan,home,5.0,66,84
+2025-12-13,Stanford,San Jose St.,away,67.0,75,70
+2025-12-13,San Jose St.,Stanford,home,33.0,70,75
+2025-12-13,UC Santa Barbara,Utah Valley,away,27.0,73,80
+2025-12-13,Utah Valley,UC Santa Barbara,home,73.0,80,73
+2025-12-13,Wright St.,Marshall,away,42.0,72,75
+2025-12-13,Marshall,Wright St.,home,58.0,75,72
+2025-12-13,DePaul,Wichita St.,away,28.0,68,74
+2025-12-13,Wichita St.,DePaul,home,72.0,74,68
+2025-12-13,Toledo,Robert Morris,away,46.0,76,77
+2025-12-13,Robert Morris,Toledo,home,54.0,77,76
+2025-12-13,San Francisco,Saint Louis,away,17.0,69,80
+2025-12-13,Saint Louis,San Francisco,home,83.0,80,69
+2025-12-13,UNC Wilmington,Valparaiso,away,63.0,70,66
+2025-12-13,Valparaiso,UNC Wilmington,home,37.0,66,70
+2025-12-13,Hofstra,Syracuse,away,22.0,66,75
+2025-12-13,Syracuse,Hofstra,home,78.0,75,66
+2025-12-13,Arkansas St.,Rice,away,56.0,77,75
+2025-12-13,Rice,Arkansas St.,home,44.0,75,77
+2025-12-13,St. Thomas,UNC Asheville,away,49.0,73,74
+2025-12-13,UNC Asheville,St. Thomas,home,51.0,74,73
+2025-12-13,Massachusetts,Florida St.,away,25.0,75,82
+2025-12-13,Florida St.,Massachusetts,home,75.0,82,75
+2025-12-13,North Dakota St.,Drake,away,31.0,67,73
+2025-12-13,Drake,North Dakota St.,home,69.0,73,67
+2025-12-13,Montana St.,Oregon St.,away,41.0,68,71
+2025-12-13,Oregon St.,Montana St.,home,59.0,71,68
+2025-12-13,Oakland,Northern Iowa,away,25.0,70,77
+2025-12-13,Northern Iowa,Oakland,home,75.0,77,70
+2025-12-13,UC San Diego,Tulane,away,74.0,81,74
+2025-12-13,Tulane,UC San Diego,home,26.0,74,81
+2025-12-13,Pittsburgh,Villanova,away,16.0,64,75
+2025-12-13,Villanova,Pittsburgh,home,84.0,75,64
+2025-12-13,St. Bonaventure,Ohio,away,73.0,79,72
+2025-12-13,Ohio,St. Bonaventure,home,27.0,72,79
+2025-12-13,Northern Kentucky,Bellarmine,away,58.0,77,75
+2025-12-13,Bellarmine,Northern Kentucky,home,42.0,75,77
+2025-12-13,Miami OH,Eastern Kentucky,away,72.0,84,78
+2025-12-13,Eastern Kentucky,Miami OH,home,28.0,78,84
+2025-12-13,Duquesne,Nevada,away,19.0,72,81
+2025-12-13,Nevada,Duquesne,home,81.0,81,72
+2025-12-13,CSUN,Delaware,away,39.0,75,78
+2025-12-13,Delaware,CSUN,home,61.0,78,75
+2025-12-13,Georgia Southern,West Georgia,away,57.0,78,77
+2025-12-13,West Georgia,Georgia Southern,home,43.0,77,78
+2025-12-13,Rutgers,Seton Hall,away,16.0,61,71
+2025-12-13,Seton Hall,Rutgers,home,84.0,71,61
+2025-12-13,Northern Arizona,San Diego,away,42.0,73,76
+2025-12-13,San Diego,Northern Arizona,home,58.0,76,73
+2025-12-13,Cal St. Fullerton,Denver,away,38.0,83,87
+2025-12-13,Denver,Cal St. Fullerton,home,62.0,87,83
+2025-12-13,La Salle,LIU,away,39.0,69,72
+2025-12-13,LIU,La Salle,home,61.0,72,69
+2025-12-13,Hampton,Howard,away,61.0,73,70
+2025-12-13,Howard,Hampton,home,39.0,70,73
+2025-12-13,Mount St. Mary's,Loyola MD,away,51.0,75,74
+2025-12-13,Loyola MD,Mount St. Mary's,home,49.0,74,75
+2025-12-13,Boston University,Dartmouth,away,37.0,74,78
+2025-12-13,Dartmouth,Boston University,home,63.0,78,74
+2025-12-13,Marquette,Purdue,away,4.0,67,85
+2025-12-13,Purdue,Marquette,home,96.0,85,67
+2025-12-13,Pepperdine,Cal St. Bakersfield,away,42.0,71,73
+2025-12-13,Cal St. Bakersfield,Pepperdine,home,58.0,73,71
+2025-12-13,UC Davis,Oregon,away,18.0,67,77
+2025-12-13,Oregon,UC Davis,home,82.0,77,67
+2025-12-13,Southeastern Louisiana,Houston Christian,away,39.0,66,69
+2025-12-13,Houston Christian,Southeastern Louisiana,home,61.0,69,66
+2025-12-13,Prairie View A&M,South Dakota,away,34.0,78,82
+2025-12-13,South Dakota,Prairie View A&M,home,66.0,82,78
+2025-12-13,Sacred Heart,NJIT,away,63.0,77,73
+2025-12-13,NJIT,Sacred Heart,home,37.0,73,77
+2025-12-13,Niagara,Morgan St.,away,48.0,70,71
+2025-12-13,Morgan St.,Niagara,home,52.0,71,70
+2025-12-13,Marist,Bryant,away,68.0,65,59
+2025-12-13,Bryant,Marist,home,32.0,59,65
+2025-12-13,Southern Miss,Mississippi,away,13.0,65,78
+2025-12-13,Mississippi,Southern Miss,home,87.0,78,65
+2025-12-13,Jacksonville St.,Georgia St.,away,65.0,68,64
+2025-12-13,Georgia St.,Jacksonville St.,home,35.0,64,68
+2025-12-13,Tennessee St.,UNLV,away,19.0,76,85
+2025-12-13,UNLV,Tennessee St.,home,81.0,85,76
+2025-12-13,Manhattan,Fordham,away,27.0,70,77
+2025-12-13,Fordham,Manhattan,home,73.0,77,70
+2025-12-13,Central Connecticut,Binghamton,away,69.0,70,65
+2025-12-13,Binghamton,Central Connecticut,home,31.0,65,70
+2025-12-13,Western Illinois,North Dakota,away,29.0,68,75
+2025-12-13,North Dakota,Western Illinois,home,71.0,75,68
+2025-12-13,Central Michigan,Stony Brook,away,23.0,68,77
+2025-12-13,Stony Brook,Central Michigan,home,77.0,77,68
+2025-12-13,Illinois Chicago,Belmont,away,11.0,68,81
+2025-12-13,Belmont,Illinois Chicago,home,89.0,81,68
+2025-12-13,UTEP,Hawaii,away,14.0,61,72
+2025-12-13,Hawaii,UTEP,home,86.0,72,61
+2025-12-13,Chattanooga,Auburn,away,6.0,67,84
+2025-12-13,Auburn,Chattanooga,home,94.0,84,67
+2025-12-13,Coastal Carolina,Grand Canyon,away,13.0,64,76
+2025-12-13,Grand Canyon,Coastal Carolina,home,87.0,76,64
+2025-12-13,Canisius,Maine,away,27.0,58,65
+2025-12-13,Maine,Canisius,home,73.0,65,58
+2025-12-13,Mercer,Clemson,away,4.0,66,85
+2025-12-13,Clemson,Mercer,home,96.0,85,66
+2025-12-13,Delaware St.,Longwood,away,20.0,66,76
+2025-12-13,Longwood,Delaware St.,home,80.0,76,66
+2025-12-13,UMass Lowell,Quinnipiac,away,14.0,72,84
+2025-12-13,Quinnipiac,UMass Lowell,home,86.0,84,72
+2025-12-13,Northern Illinois,Elon,away,15.0,73,84
+2025-12-13,Elon,Northern Illinois,home,85.0,84,73
+2025-12-13,Old Dominion,George Mason,away,8.0,64,79
+2025-12-13,George Mason,Old Dominion,home,92.0,79,64
+2025-12-13,Iona,St. John's,away,2.0,69,91
+2025-12-13,St. John's,Iona,home,98.0,91,69
+2025-12-13,Louisiana,Louisiana Tech,away,17.0,57,67
+2025-12-13,Louisiana Tech,Louisiana,home,83.0,67,57
+2025-12-13,Mercyhurst,Davidson,away,10.0,60,74
+2025-12-13,Davidson,Mercyhurst,home,90.0,74,60
+2025-12-13,New Orleans,Houston,away,1.0,59,83
+2025-12-13,Houston,New Orleans,home,99.0,83,59
+2025-12-13,Albany,Florida Atlantic,away,8.0,68,83
+2025-12-13,Florida Atlantic,Albany,home,92.0,83,68
+2025-12-13,Saint Peter's,Georgetown,away,7.0,62,79
+2025-12-13,Georgetown,Saint Peter's,home,93.0,79,62
+2025-12-13,Evansville,Notre Dame,away,5.0,61,79
+2025-12-13,Notre Dame,Evansville,home,95.0,79,61
+2025-12-13,UTSA,Colorado,away,4.0,67,86
+2025-12-13,Colorado,UTSA,home,96.0,86,67
+2025-12-13,Central Arkansas,Vanderbilt,away,0.4000000000000057,63,93
+2025-12-13,Vanderbilt,Central Arkansas,home,99.6,93,63
+2025-12-13,USC Upstate,North Carolina,away,1.0,62,86
+2025-12-13,North Carolina,USC Upstate,home,99.0,86,62
+2025-12-13,Northwestern St.,California,away,4.0,65,84
+2025-12-13,California,Northwestern St.,home,96.0,84,65
+2025-12-13,UC Riverside,BYU,away,1.0,62,90
+2025-12-13,BYU,UC Riverside,home,99.0,90,62
+2025-12-13,Jackson St.,Northwestern,away,3.0,61,82
+2025-12-13,Northwestern,Jackson St.,home,97.0,82,61
+2025-12-13,Southern Utah,Washington,away,2.0,63,86
+2025-12-13,Washington,Southern Utah,home,98.0,86,63
+2025-12-13,North Florida,Dayton,away,1.0,67,91
+2025-12-13,Dayton,North Florida,home,99.0,91,67
+2025-12-13,Louisiana Monroe,Miami FL,away,0.20000000000000284,61,92
+2025-12-13,Miami FL,Louisiana Monroe,home,99.8,92,61
+2025-12-13,The Citadel,South Carolina,away,1.0,60,84
+2025-12-13,South Carolina,The Citadel,home,99.0,84,60
+2025-12-14,Saint Mary's,Boise St.,away,51.0,69,68
+2025-12-14,Boise St.,Saint Mary's,home,49.0,68,69
+2025-12-14,North Texas,South Alabama,away,50.0,66,67
+2025-12-14,South Alabama,North Texas,home,50.0,67,66
+2025-12-14,Indiana St.,Milwaukee,away,46.0,76,77
+2025-12-14,Milwaukee,Indiana St.,home,54.0,77,76
+2025-12-14,Troy,UAB,away,25.0,70,78
+2025-12-14,UAB,Troy,home,75.0,78,70
+2025-12-14,Kent St.,Portland,away,71.0,85,79
+2025-12-14,Portland,Kent St.,home,29.0,79,85
+2025-12-14,Charlotte,Charleston,away,37.0,68,72
+2025-12-14,Charleston,Charlotte,home,63.0,72,68
+2025-12-14,Buffalo,East Carolina,away,54.0,75,73
+2025-12-14,East Carolina,Buffalo,home,46.0,73,75
+2025-12-14,Monmouth,Fairfield,away,58.0,75,72
+2025-12-14,Fairfield,Monmouth,home,42.0,72,75
+2025-12-14,Merrimack,Vermont,away,30.0,68,73
+2025-12-14,Vermont,Merrimack,home,70.0,73,68
+2025-12-14,Detroit Mercy,Purdue Fort Wayne,away,28.0,74,81
+2025-12-14,Purdue Fort Wayne,Detroit Mercy,home,72.0,81,74
+2025-12-14,Florida Gulf Coast,New Mexico,away,12.0,72,85
+2025-12-14,New Mexico,Florida Gulf Coast,home,88.0,85,72
+2025-12-14,Appalachian St.,High Point,away,14.0,67,79
+2025-12-14,High Point,Appalachian St.,home,86.0,79,67
+2025-12-14,Ball St.,Campbell,away,21.0,67,76
+2025-12-14,Campbell,Ball St.,home,79.0,76,67
+2025-12-14,Washington St.,USC,away,6.0,72,90
+2025-12-14,USC,Washington St.,home,94.0,90,72
+2025-12-14,Queens,Wake Forest,away,6.0,72,89
+2025-12-14,Wake Forest,Queens,home,94.0,89,72
+2025-12-14,Chicago St.,Loyola Chicago,away,17.0,67,78
+2025-12-14,Loyola Chicago,Chicago St.,home,83.0,78,67
+2025-12-14,Bethune Cookman,Missouri,away,6.0,66,84
+2025-12-14,Missouri,Bethune Cookman,home,94.0,84,66
+2025-12-14,Texas Southern,Minnesota,away,8.0,64,79
+2025-12-14,Minnesota,Texas Southern,home,92.0,79,64
+2025-12-14,Western Michigan,Iowa,away,2.0,61,83
+2025-12-14,Iowa,Western Michigan,home,98.0,83,61
+2025-12-14,Jacksonville,Texas A&M,away,3.0,63,83
+2025-12-14,Texas A&M,Jacksonville,home,97.0,83,63
+2025-12-14,Coppin St.,Radford,away,7.0,68,84
+2025-12-14,Radford,Coppin St.,home,93.0,84,68
+2025-12-14,Saint Francis,Temple,away,6.0,67,84
+2025-12-14,Temple,Saint Francis,home,94.0,84,67
+2025-12-14,Maryland Eastern Shore,Virginia Tech,away,2.0,57,80
+2025-12-14,Virginia Tech,Maryland Eastern Shore,home,98.0,80,57
+2025-12-14,Eastern Illinois,Iowa St.,away,0.04000000000000625,52,89
+2025-12-14,Iowa St.,Eastern Illinois,home,99.96,89,52
