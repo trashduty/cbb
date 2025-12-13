@@ -453,5 +453,12 @@
     "edge_type": "spread",
     "edge_value": 0.0432973911604778,
     "notified_at": "2025-12-13T14:49:57.827069+00:00"
+  },
+  "Utah Utes vs. Mississippi St Bulldogs|over": {
+    "game": "Utah Utes vs. Mississippi St Bulldogs",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-13T15:36:32.404242+00:00"
   }
 }
