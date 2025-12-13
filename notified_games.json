@@ -432,5 +432,19 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-13T07:07:55.279280+00:00"
+  },
+  "Bryant Bulldogs vs. Marist Red Foxes|under": {
+    "game": "Bryant Bulldogs vs. Marist Red Foxes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0127704976143193,
+    "notified_at": "2025-12-13T14:25:10.807215+00:00"
+  },
+  "Kentucky Wildcats vs. Indiana Hoosiers|under": {
+    "game": "Kentucky Wildcats vs. Indiana Hoosiers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103652785285063,
+    "notified_at": "2025-12-13T14:25:11.771111+00:00"
   }
 }
