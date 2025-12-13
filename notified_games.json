@@ -362,5 +362,47 @@
     "edge_type": "moneyline",
     "edge_value": 0.0441313637149987,
     "notified_at": "2025-12-13T02:22:12.783848+00:00"
+  },
+  "North Carolina Tar Heels vs. South Carolina Upstate Spartans|South Carolina Upstate Spartans|spread": {
+    "game": "North Carolina Tar Heels vs. South Carolina Upstate Spartans",
+    "team": "South Carolina Upstate Spartans",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-13T03:02:38.686641+00:00"
+  },
+  "Houston Cougars vs. New Orleans Privateers|New Orleans Privateers|spread": {
+    "game": "Houston Cougars vs. New Orleans Privateers",
+    "team": "New Orleans Privateers",
+    "edge_type": "spread",
+    "edge_value": 0.0598508700966058,
+    "notified_at": "2025-12-13T03:02:39.038124+00:00"
+  },
+  "Binghamton Bearcats vs. Central Connecticut St Blue Devils|Binghamton Bearcats|moneyline": {
+    "game": "Binghamton Bearcats vs. Central Connecticut St Blue Devils",
+    "team": "Binghamton Bearcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0430144268052963,
+    "notified_at": "2025-12-13T03:02:39.249635+00:00"
+  },
+  "BYU Cougars vs. UC Riverside Highlanders|UC Riverside Highlanders|spread": {
+    "game": "BYU Cougars vs. UC Riverside Highlanders",
+    "team": "UC Riverside Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-13T03:02:39.519044+00:00"
+  },
+  "Alabama Crimson Tide vs. Arizona Wildcats|under": {
+    "game": "Alabama Crimson Tide vs. Arizona Wildcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-13T03:02:39.811356+00:00"
+  },
+  "Florida St Seminoles vs. Massachusetts Minutemen|Massachusetts Minutemen|spread": {
+    "game": "Florida St Seminoles vs. Massachusetts Minutemen",
+    "team": "Massachusetts Minutemen",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-13T03:02:40.203149+00:00"
   }
 }
