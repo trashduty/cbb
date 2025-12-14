@@ -495,5 +495,12 @@
     "edge_type": "over",
     "edge_value": 0.515736516512314,
     "notified_at": "2025-12-14T18:54:37.433795+00:00"
+  },
+  "Gardner-Webb Bulldogs vs. Wofford Terriers|Wofford Terriers|moneyline": {
+    "game": "Gardner-Webb Bulldogs vs. Wofford Terriers",
+    "team": "Wofford Terriers",
+    "edge_type": "moneyline",
+    "edge_value": 0.2281377012803689,
+    "notified_at": "2025-12-14T19:49:45.291343+00:00"
   }
 }
