@@ -481,5 +481,12 @@
     "edge_type": "over",
     "edge_value": 0.0103555120713323,
     "notified_at": "2025-12-14T04:27:54.440811+00:00"
+  },
+  "Virginia Tech Hokies vs. Maryland-Eastern Shore Hawks|Maryland-Eastern Shore Hawks|spread": {
+    "game": "Virginia Tech Hokies vs. Maryland-Eastern Shore Hawks",
+    "team": "Maryland-Eastern Shore Hawks",
+    "edge_type": "spread",
+    "edge_value": 0.0432973911604778,
+    "notified_at": "2025-12-14T04:46:50.075082+00:00"
   }
 }
