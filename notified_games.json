@@ -488,5 +488,12 @@
     "edge_type": "spread",
     "edge_value": 0.0432973911604778,
     "notified_at": "2025-12-14T04:46:50.075082+00:00"
+  },
+  "Alabama A&M Bulldogs vs. North Alabama Lions|over": {
+    "game": "Alabama A&M Bulldogs vs. North Alabama Lions",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.515736516512314,
+    "notified_at": "2025-12-14T18:54:37.433795+00:00"
   }
 }
