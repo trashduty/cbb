@@ -474,5 +474,12 @@
     "edge_type": "over",
     "edge_value": 0.4298201444357596,
     "notified_at": "2025-12-13T23:08:10.512922+00:00"
+  },
+  "East Carolina Pirates vs. Buffalo Bulls|over": {
+    "game": "East Carolina Pirates vs. Buffalo Bulls",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-14T04:27:54.440811+00:00"
   }
 }
