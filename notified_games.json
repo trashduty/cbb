@@ -516,5 +516,19 @@
     "edge_type": "under",
     "edge_value": 0.0212832663635167,
     "notified_at": "2025-12-15T21:26:04.839908+00:00"
+  },
+  "Oklahoma Sooners vs. UMKC Kangaroos|under": {
+    "game": "Oklahoma Sooners vs. UMKC Kangaroos",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2025-12-15T22:25:40.851093+00:00"
+  },
+  "Kansas Jayhawks vs. Towson Tigers|under": {
+    "game": "Kansas Jayhawks vs. Towson Tigers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2025-12-15T22:25:41.138055+00:00"
   }
 }
