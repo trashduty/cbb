@@ -537,5 +537,12 @@
     "edge_type": "spread",
     "edge_value": 0.0493156428694395,
     "notified_at": "2025-12-15T23:08:44.779777+00:00"
+  },
+  "Northwestern Wildcats vs. Valparaiso Beacons|under": {
+    "game": "Northwestern Wildcats vs. Valparaiso Beacons",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-15T23:25:36.271481+00:00"
   }
 }
