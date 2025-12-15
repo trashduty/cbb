@@ -509,5 +509,12 @@
     "edge_type": "spread",
     "edge_value": 0.0564895871039796,
     "notified_at": "2025-12-15T19:37:07.281822+00:00"
+  },
+  "Dayton Flyers vs. Florida St Seminoles|under": {
+    "game": "Dayton Flyers vs. Florida St Seminoles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0212832663635167,
+    "notified_at": "2025-12-15T21:26:04.839908+00:00"
   }
 }
