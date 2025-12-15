@@ -530,5 +530,12 @@
     "edge_type": "under",
     "edge_value": 0.0178699212250362,
     "notified_at": "2025-12-15T22:25:41.138055+00:00"
+  },
+  "Duke Blue Devils vs. Lipscomb Bisons|Lipscomb Bisons|spread": {
+    "game": "Duke Blue Devils vs. Lipscomb Bisons",
+    "team": "Lipscomb Bisons",
+    "edge_type": "spread",
+    "edge_value": 0.0493156428694395,
+    "notified_at": "2025-12-15T23:08:44.779777+00:00"
   }
 }
