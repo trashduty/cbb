@@ -502,5 +502,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.2281377012803689,
     "notified_at": "2025-12-14T19:49:45.291343+00:00"
+  },
+  "Texas Tech Red Raiders vs. N Colorado Bears|N Colorado Bears|spread": {
+    "game": "Texas Tech Red Raiders vs. N Colorado Bears",
+    "team": "N Colorado Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0564895871039796,
+    "notified_at": "2025-12-15T19:37:07.281822+00:00"
   }
 }
