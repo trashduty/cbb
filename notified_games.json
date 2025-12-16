@@ -544,5 +544,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2025-12-15T23:25:36.271481+00:00"
+  },
+  "Georgia Tech Yellow Jackets vs. Marist Red Foxes|under": {
+    "game": "Georgia Tech Yellow Jackets vs. Marist Red Foxes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150361385004683,
+    "notified_at": "2025-12-16T03:07:41.600550+00:00"
   }
 }
