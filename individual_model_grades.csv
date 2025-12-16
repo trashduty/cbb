@@ -1,0 +1,5 @@
+model_name,spread_accuracy,spread_mean_absolute_error,spread_rmse,spread_total_games,moneyline_accuracy,moneyline_brier_score,moneyline_log_loss,moneyline_total_games,total_over_under_accuracy,total_mean_absolute_error,total_rmse,total_total_games
+Barttorvik,50.0,20.8,27.45,788,72.66,0.1749,0.5192,790,,13.23,16.51,790
+Kenpom,48.98,21.11,27.46,788,75.51,0.1667,0.4993,788,,13.22,16.35,788
+Evan Miya,49.88,21.25,27.83,808,75.0,0.171,0.5154,808,,12.83,16.09,808
+Hasla,50.28,21.2,27.69,726,0.0,0.0,0.0,0,,13.39,16.59,726
