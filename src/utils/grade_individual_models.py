@@ -8,7 +8,7 @@
 Grade individual model predictions (Kenpom, Barttorvik, Evan Miya, Hasla).
 
 This script:
-1. Reads CBB_Output.csv (individual model predictions) and graded_results.csv (actual outcomes)
+1. Reads historical_data/*.csv files (individual model predictions) and graded_results.csv (actual outcomes)
 2. Matches predictions to outcomes on: game, team, and date
 3. Grades each model individually for spreads, moneylines, and totals
 4. Outputs:
@@ -71,37 +71,6 @@ MODELS = {
         'name': 'Hasla'
     }
 }
-
-
-def parse_game_date(game_time_str):
-    """
-    Parse game date from 'Game Time' column format: "Dec 16 06:00PM ET"
-    
-    Args:
-        game_time_str (str): Game time string
-        
-    Returns:
-        str: Date in YYYY-MM-DD format or None if parsing fails
-    """
-    if pd.isna(game_time_str):
-        return None
-    
-    try:
-        # Extract date part (e.g., "Dec 16")
-        parts = game_time_str.split()
-        if len(parts) >= 2:
-            month_str = parts[0]
-            day_str = parts[1]
-            
-            # Use current year (2025 for this season)
-            year = 2025
-            date_str = f"{month_str} {day_str} {year}"
-            dt = datetime.strptime(date_str, "%b %d %Y")
-            return dt.strftime("%Y-%m-%d")
-    except Exception as e:
-        logger.warning(f"Failed to parse date from '{game_time_str}': {e}")
-    
-    return None
 
 
 def load_data():
@@ -384,6 +353,7 @@ def grade_all_models(merged_df):
             spread_results = grade_spread(predicted_spread, row['actual_margin'])
             
             # Grade moneyline (if model has win probability)
+            win_prob = None
             if model_info['win_prob_col']:
                 win_prob = row.get(model_info['win_prob_col'])
                 moneyline_results = grade_moneyline(win_prob, row['actual_win'])
@@ -444,7 +414,8 @@ def grade_all_models(merged_df):
             ml_log_loss = ml_data['log_loss'].mean()
             ml_total_games = len(ml_data)
         else:
-            ml_accuracy = ml_brier = ml_log_loss = ml_total_games = 0
+            ml_accuracy = ml_brier = ml_log_loss = None
+            ml_total_games = 0
         
         # Total statistics
         total_data = model_data[model_data['total_error'].notna()]
@@ -460,17 +431,17 @@ def grade_all_models(merged_df):
         
         model_summaries[model_info['name']] = {
             'model_name': model_info['name'],
-            'spread_accuracy': round(spread_accuracy, 2),
-            'spread_mean_absolute_error': round(spread_mae, 2),
-            'spread_rmse': round(spread_rmse, 2),
+            'spread_accuracy': round(spread_accuracy, 2) if spread_total_games > 0 else None,
+            'spread_mean_absolute_error': round(spread_mae, 2) if spread_total_games > 0 else None,
+            'spread_rmse': round(spread_rmse, 2) if spread_total_games > 0 else None,
             'spread_total_games': spread_total_games,
-            'moneyline_accuracy': round(ml_accuracy, 2),
-            'moneyline_brier_score': round(ml_brier, 4),
-            'moneyline_log_loss': round(ml_log_loss, 4),
+            'moneyline_accuracy': round(ml_accuracy, 2) if ml_accuracy is not None else None,
+            'moneyline_brier_score': round(ml_brier, 4) if ml_brier is not None else None,
+            'moneyline_log_loss': round(ml_log_loss, 4) if ml_log_loss is not None else None,
             'moneyline_total_games': ml_total_games,
             'total_over_under_accuracy': total_ou_accuracy,  # Not calculable
-            'total_mean_absolute_error': round(total_mae, 2),
-            'total_rmse': round(total_rmse, 2),
+            'total_mean_absolute_error': round(total_mae, 2) if total_total_games > 0 else None,
+            'total_rmse': round(total_rmse, 2) if total_total_games > 0 else None,
             'total_total_games': total_total_games
         }
     
