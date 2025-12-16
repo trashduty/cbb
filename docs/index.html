@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <title>CBB Betting Analysis</title>
+    
+    <!-- 
+    ====================================================================
+    GITHUB PAGES SETUP INSTRUCTIONS:
+    1. Go to your repository on GitHub
+    2. Click on "Settings" tab
+    3. Scroll down to "Pages" section in the left sidebar
+    4. Under "Source", select "Deploy from a branch"
+    5. Select branch "main" (or your default branch)
+    6. Select folder "/docs"
+    7. Click "Save"
+    8. Your site will be published at: https://trashduty.github.io/cbb/
+    ====================================================================
+    -->
+    
+    <!-- jQuery (required by DataTables) -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+    <!-- DataTables CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    
+    <!-- Papa Parse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .last-updated {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error {
+            background-color: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        table.dataTable {
+            width: 100% !important;
+            border-collapse: collapse;
+        }
+        
+        table.dataTable thead th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        table.dataTable tbody tr {
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        table.dataTable tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        table.dataTable tbody tr:hover {
+            background-color: #e8f4f8;
+        }
+        
+        table.dataTable tbody td {
+            padding: 10px 8px;
+            font-size: 14px;
+        }
+        
+        .dataTables_wrapper .dataTables_filter input {
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        
+        .dataTables_wrapper .dataTables_length select {
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin: 0 8px;
+        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            table.dataTable tbody td {
+                font-size: 12px;
+                padding: 6px 4px;
+            }
+            
+            table.dataTable thead th {
+                font-size: 12px;
+                padding: 8px 4px;
+            }
+        }
+        
+        /* Color-coded cells */
+        .prob-cell, .edge-cell {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-info">
+            <h1>CBB Betting Analysis</h1>
+            <div class="last-updated" id="lastUpdated">Loading...</div>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+        
+        <div id="tableContainer" style="display: none;">
+            <table id="cbbTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Team</th>
+                        <th>Game Time</th>
+                        <th>Predicted Outcome</th>
+                        <th>Current Spread</th>
+                        <th>Spread Cover Probability</th>
+                        <th>Edge For Covering Spread</th>
+                        <th>Spread Consensus</th>
+                        <th>Current Moneyline</th>
+                        <th>Moneyline Win Probability</th>
+                        <th>Moneyline Edge</th>
+                        <th>Moneyline Consensus</th>
+                        <th>Predicted Total</th>
+                        <th>Market Total</th>
+                        <th>Over Cover Probability</th>
+                        <th>Under Cover Probability</th>
+                        <th>Over Total Edge</th>
+                        <th>Under Total Edge</th>
+                        <th>Over Consensus</th>
+                        <th>Under Consensus</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        // Column mapping from CSV to display
+        const columnMapping = {
+            'Game': 'Game',
+            'Team': 'Team',
+            'Game Time': 'Game Time',
+            'Predicted Outcome': 'Predicted Outcome',
+            'market_spread': 'Current Spread',
+            'Spread Cover Probability': 'Spread Cover Probability',
+            'Edge For Covering Spread': 'Edge For Covering Spread',
+            'spread_consensus_flag': 'Spread Consensus',
+            'Opening Moneyline': 'Current Moneyline',
+            'Moneyline Win Probability': 'Moneyline Win Probability',
+            'Moneyline Edge': 'Moneyline Edge',
+            'moneyline_consensus_flag': 'Moneyline Consensus',
+            'average_total': 'Predicted Total',
+            'market_total': 'Market Total',
+            'Over Cover Probability': 'Over Cover Probability',
+            'Under Cover Probability': 'Under Cover Probability',
+            'Over Total Edge': 'Over Total Edge',
+            'Under Total Edge': 'Under Total Edge',
+            'over_consensus_flag': 'Over Consensus',
+            'under_consensus_flag': 'Under Consensus'
+        };
+        
+        // Function to get color based on probability (0-1)
+        function getProbabilityColor(value) {
+            if (value < 0.45) {
+                // Red gradient: darker red at 0
+                const intensity = Math.floor((0.45 - value) / 0.45 * 200);
+                return `rgb(${255}, ${255 - intensity}, ${255 - intensity})`;
+            } else if (value <= 0.55) {
+                // Light yellow/neutral
+                return '#fffde7';
+            } else {
+                // Green gradient: darker green at 1.0
+                const intensity = Math.floor((value - 0.55) / 0.45 * 200);
+                return `rgb(${255 - intensity}, ${255}, ${255 - intensity})`;
+            }
+        }
+        
+        // Function to get color based on edge (can be negative or positive)
+        function getEdgeColor(value) {
+            if (value < -0.02) {
+                // Red gradient: darker red for more negative
+                const intensity = Math.floor(Math.min(Math.abs(value) / 0.15, 1) * 200);
+                return `rgb(${255}, ${255 - intensity}, ${255 - intensity})`;
+            } else if (value <= 0.02) {
+                // Light yellow/neutral
+                return '#fffde7';
+            } else {
+                // Green gradient: darker green for more positive
+                const intensity = Math.floor(Math.min(value / 0.15, 1) * 200);
+                return `rgb(${255 - intensity}, ${255}, ${255 - intensity})`;
+            }
+        }
+        
+        // Function to format consensus flag
+        function formatConsensus(value) {
+            return value == 1 ? 'Y' : 'N';
+        }
+        
+        // Function to round to 2 decimal places
+        function roundTo2(value) {
+            if (value === null || value === undefined || value === '') return '';
+            return Number(value).toFixed(2);
+        }
+        
+        // Function to load and display CSV data
+        function loadData() {
+            const csvUrl = `https://raw.githubusercontent.com/trashduty/cbb/main/CBB_Output.csv?timestamp=${Date.now()}`;
+            
+            fetch(csvUrl, {
+                cache: 'no-cache',
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        displayData(results.data);
+                        document.getElementById('loading').style.display = 'none';
+                        document.getElementById('tableContainer').style.display = 'block';
+                        document.getElementById('lastUpdated').textContent = `Last Updated: ${new Date().toLocaleString()}`;
+                    },
+                    error: function(error) {
+                        showError(`Error parsing CSV: ${error.message}`);
+                    }
+                });
+            })
+            .catch(error => {
+                showError(`Error loading data: ${error.message}`);
+            });
+        }
+        
+        // Function to display data in table
+        function displayData(data) {
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+            
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                // Define the columns we want to display in order
+                const columns = [
+                    { csv: 'Game', display: 'Game', type: 'text' },
+                    { csv: 'Team', display: 'Team', type: 'text' },
+                    { csv: 'Game Time', display: 'Game Time', type: 'text' },
+                    { csv: 'Predicted Outcome', display: 'Predicted Outcome', type: 'decimal' },
+                    { csv: 'market_spread', display: 'Current Spread', type: 'decimal' },
+                    { csv: 'Spread Cover Probability', display: 'Spread Cover Probability', type: 'probability' },
+                    { csv: 'Edge For Covering Spread', display: 'Edge For Covering Spread', type: 'edge' },
+                    { csv: 'spread_consensus_flag', display: 'Spread Consensus', type: 'consensus' },
+                    { csv: 'Opening Moneyline', display: 'Current Moneyline', type: 'decimal' },
+                    { csv: 'Moneyline Win Probability', display: 'Moneyline Win Probability', type: 'probability' },
+                    { csv: 'Moneyline Edge', display: 'Moneyline Edge', type: 'edge' },
+                    { csv: 'moneyline_consensus_flag', display: 'Moneyline Consensus', type: 'consensus' },
+                    { csv: 'average_total', display: 'Predicted Total', type: 'decimal' },
+                    { csv: 'market_total', display: 'Market Total', type: 'decimal' },
+                    { csv: 'Over Cover Probability', display: 'Over Cover Probability', type: 'probability' },
+                    { csv: 'Under Cover Probability', display: 'Under Cover Probability', type: 'probability' },
+                    { csv: 'Over Total Edge', display: 'Over Total Edge', type: 'edge' },
+                    { csv: 'Under Total Edge', display: 'Under Total Edge', type: 'edge' },
+                    { csv: 'over_consensus_flag', display: 'Over Consensus', type: 'consensus' },
+                    { csv: 'under_consensus_flag', display: 'Under Consensus', type: 'consensus' }
+                ];
+                
+                columns.forEach(col => {
+                    const td = document.createElement('td');
+                    let value = row[col.csv];
+                    
+                    // Apply transformations based on type
+                    if (col.type === 'consensus') {
+                        td.textContent = formatConsensus(value);
+                    } else if (col.type === 'probability') {
+                        if (value !== null && value !== undefined && value !== '') {
+                            td.textContent = roundTo2(value);
+                            td.style.backgroundColor = getProbabilityColor(value);
+                            td.className = 'prob-cell';
+                        }
+                    } else if (col.type === 'edge') {
+                        if (value !== null && value !== undefined && value !== '') {
+                            td.textContent = roundTo2(value);
+                            td.style.backgroundColor = getEdgeColor(value);
+                            td.className = 'edge-cell';
+                        }
+                    } else if (col.type === 'decimal') {
+                        td.textContent = value !== null && value !== undefined && value !== '' ? roundTo2(value) : '';
+                    } else {
+                        td.textContent = value || '';
+                    }
+                    
+                    tr.appendChild(td);
+                });
+                
+                tableBody.appendChild(tr);
+            });
+            
+            // Initialize DataTables
+            $('#cbbTable').DataTable({
+                pageLength: 25,
+                order: [[2, 'asc']], // Sort by Game Time by default
+                responsive: true,
+                language: {
+                    search: "Filter:",
+                    lengthMenu: "Show _MENU_ entries",
+                    info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                    infoEmpty: "Showing 0 to 0 of 0 entries",
+                    infoFiltered: "(filtered from _MAX_ total entries)"
+                }
+            });
+        }
+        
+        // Function to show error message
+        function showError(message) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').textContent = message;
+            document.getElementById('error').style.display = 'block';
+        }
+        
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
