@@ -565,5 +565,12 @@
     "edge_type": "over",
     "edge_value": 0.0178699212250362,
     "notified_at": "2025-12-16T14:10:02.658646+00:00"
+  },
+  "BYU Cougars vs. Pacific Tigers|Pacific Tigers|spread": {
+    "game": "BYU Cougars vs. Pacific Tigers",
+    "team": "Pacific Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0423476491870872,
+    "notified_at": "2025-12-16T14:27:05.703297+00:00"
   }
 }
