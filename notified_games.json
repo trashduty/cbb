@@ -572,5 +572,12 @@
     "edge_type": "spread",
     "edge_value": 0.0423476491870872,
     "notified_at": "2025-12-16T14:27:05.703297+00:00"
+  },
+  "Texas Longhorns vs. Le Moyne Dolphins|Le Moyne Dolphins|spread": {
+    "game": "Texas Longhorns vs. Le Moyne Dolphins",
+    "team": "Le Moyne Dolphins",
+    "edge_type": "spread",
+    "edge_value": 0.0558464163570781,
+    "notified_at": "2025-12-16T14:44:02.086480+00:00"
   }
 }
