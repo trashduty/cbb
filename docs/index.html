@@ -227,30 +227,6 @@
     </div>
     
     <script>
-        // Column mapping from CSV to display
-        const columnMapping = {
-            'Game': 'Game',
-            'Team': 'Team',
-            'Game Time': 'Game Time',
-            'Predicted Outcome': 'Predicted Outcome',
-            'market_spread': 'Current Spread',
-            'Spread Cover Probability': 'Spread Cover Probability',
-            'Edge For Covering Spread': 'Edge For Covering Spread',
-            'spread_consensus_flag': 'Spread Consensus',
-            'Opening Moneyline': 'Current Moneyline',
-            'Moneyline Win Probability': 'Moneyline Win Probability',
-            'Moneyline Edge': 'Moneyline Edge',
-            'moneyline_consensus_flag': 'Moneyline Consensus',
-            'average_total': 'Predicted Total',
-            'market_total': 'Market Total',
-            'Over Cover Probability': 'Over Cover Probability',
-            'Under Cover Probability': 'Under Cover Probability',
-            'Over Total Edge': 'Over Total Edge',
-            'Under Total Edge': 'Under Total Edge',
-            'over_consensus_flag': 'Over Consensus',
-            'under_consensus_flag': 'Under Consensus'
-        };
-        
         // Function to get color based on probability (0-1)
         function getProbabilityColor(value) {
             if (value < 0.45) {
