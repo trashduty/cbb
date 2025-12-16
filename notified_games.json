@@ -558,5 +558,12 @@
     "edge_type": "under",
     "edge_value": 0.435280773854876,
     "notified_at": "2025-12-16T07:25:19.690727+00:00"
+  },
+  "Texas Longhorns vs. Le Moyne Dolphins|over": {
+    "game": "Texas Longhorns vs. Le Moyne Dolphins",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2025-12-16T14:10:02.658646+00:00"
   }
 }
