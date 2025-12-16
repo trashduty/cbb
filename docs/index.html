@@ -272,7 +272,9 @@
         
         // Function to load and display CSV data
         function loadData() {
-            const csvUrl = `https://raw.githubusercontent.com/trashduty/cbb/main/CBB_Output.csv?timestamp=${Date.now()}`;
+            // Use relative path to avoid CORS issues
+            // CSV file is copied to docs folder by GitHub Actions workflow
+            const csvUrl = `./CBB_Output.csv?timestamp=${Date.now()}`;
             
             fetch(csvUrl, {
                 cache: 'no-cache',
@@ -304,6 +306,7 @@
                 });
             })
             .catch(error => {
+                console.error('Fetch error details:', error);
                 showError(`Error loading data: ${error.message}`);
             });
         }
