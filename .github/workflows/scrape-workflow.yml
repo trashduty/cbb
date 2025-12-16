@@ -62,6 +62,9 @@ jobs:
       - name: Generate model record report
         run: uv run src/utils/generate_model_record.py
 
+      - name: Copy CSV to docs folder
+        run: cp CBB_Output.csv docs/CBB_Output.csv
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
