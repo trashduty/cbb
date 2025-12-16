@@ -551,5 +551,12 @@
     "edge_type": "under",
     "edge_value": 0.0150361385004683,
     "notified_at": "2025-12-16T03:07:41.600550+00:00"
+  },
+  "UMass Lowell River Hawks vs. Sacred Heart Pioneers|under": {
+    "game": "UMass Lowell River Hawks vs. Sacred Heart Pioneers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.435280773854876,
+    "notified_at": "2025-12-16T07:25:19.690727+00:00"
   }
 }
