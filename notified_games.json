@@ -656,5 +656,19 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-17T14:42:31.987143+00:00"
+  },
+  "Old Dominion Monarchs vs. James Madison Dukes|Old Dominion Monarchs|spread": {
+    "game": "Old Dominion Monarchs vs. James Madison Dukes",
+    "team": "Old Dominion Monarchs",
+    "edge_type": "spread",
+    "edge_value": 0.0412057186393031,
+    "notified_at": "2025-12-17T15:09:55.905979+00:00"
+  },
+  "Old Dominion Monarchs vs. James Madison Dukes|Old Dominion Monarchs|moneyline": {
+    "game": "Old Dominion Monarchs vs. James Madison Dukes",
+    "team": "Old Dominion Monarchs",
+    "edge_type": "moneyline",
+    "edge_value": 0.04778852223467,
+    "notified_at": "2025-12-17T15:09:56.298622+00:00"
   }
 }
