@@ -621,5 +621,12 @@
     "edge_type": "over",
     "edge_value": 0.0150273245156961,
     "notified_at": "2025-12-17T04:03:18.517026+00:00"
+  },
+  "Cincinnati Bearcats vs. Alabama St Hornets|Alabama St Hornets|spread": {
+    "game": "Cincinnati Bearcats vs. Alabama St Hornets",
+    "team": "Alabama St Hornets",
+    "edge_type": "spread",
+    "edge_value": 0.0432973911604778,
+    "notified_at": "2025-12-17T06:47:27.600456+00:00"
   }
 }
