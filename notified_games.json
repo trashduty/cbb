@@ -635,5 +635,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0494716164244919,
     "notified_at": "2025-12-17T14:09:28.670541+00:00"
+  },
+  "Florida A&M Rattlers vs. Jacksonville Dolphins|Florida A&M Rattlers|spread": {
+    "game": "Florida A&M Rattlers vs. Jacksonville Dolphins",
+    "team": "Florida A&M Rattlers",
+    "edge_type": "spread",
+    "edge_value": 0.0432973911604778,
+    "notified_at": "2025-12-17T14:26:17.685399+00:00"
   }
 }
