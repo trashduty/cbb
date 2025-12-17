@@ -642,5 +642,19 @@
     "edge_type": "spread",
     "edge_value": 0.0432973911604778,
     "notified_at": "2025-12-17T14:26:17.685399+00:00"
+  },
+  "Florida A&M Rattlers vs. Jacksonville Dolphins|Florida A&M Rattlers|moneyline": {
+    "game": "Florida A&M Rattlers vs. Jacksonville Dolphins",
+    "team": "Florida A&M Rattlers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0474960508742803,
+    "notified_at": "2025-12-17T14:42:31.600660+00:00"
+  },
+  "Saint Louis Billikens vs. Bethune-Cookman Wildcats|Bethune-Cookman Wildcats|spread": {
+    "game": "Saint Louis Billikens vs. Bethune-Cookman Wildcats",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-17T14:42:31.987143+00:00"
   }
 }
