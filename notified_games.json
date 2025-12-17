@@ -684,5 +684,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-17T16:10:23.850057+00:00"
+  },
+  "Washington St Cougars vs. Eastern Washington Eagles|Eastern Washington Eagles|moneyline": {
+    "game": "Washington St Cougars vs. Eastern Washington Eagles",
+    "team": "Eastern Washington Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0408208785916803,
+    "notified_at": "2025-12-17T16:27:15.680953+00:00"
   }
 }
