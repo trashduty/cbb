@@ -30,6 +30,11 @@ SPREAD_THRESHOLD = 0.04  # 4%
 MONEYLINE_THRESHOLD = 0.04  # 4%
 TOTAL_THRESHOLD = 0.01  # 1%
 
+# Maximum edge thresholds to filter out likely data errors
+MAX_SPREAD_THRESHOLD = 0.10  # 10%
+MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
+MAX_TOTAL_THRESHOLD = 0.10  # 10%
+
 # Time threshold - only alert on games more than 6 hours away
 HOURS_BEFORE_GAME = 6
 
@@ -324,88 +329,104 @@ def check_edges():
         
         # Check Spread Edge
         if pd.notna(row. get('Edge For Covering Spread')) and row['Edge For Covering Spread'] >= SPREAD_THRESHOLD:
-            # Check if at least 4 out of 4 spread sources have values
-            spread_source_count = count_non_null_spread_sources(row)
-            if spread_source_count >= 4:
-                game_id = create_game_id(row, 'spread')
+            # Check if edge exceeds maximum threshold (likely data error)
+            if row['Edge For Covering Spread'] > MAX_SPREAD_THRESHOLD:
+                print(f"  ⚠️ Skipping spread edge for {row['Team']} - edge too high ({format_percentage(row['Edge For Covering Spread'])}) - likely data error")
+            else:
+                # Check if at least 4 out of 4 spread sources have values
+                spread_source_count = count_non_null_spread_sources(row)
+                if spread_source_count >= 4:
+                    game_id = create_game_id(row, 'spread')
+                    if game_id not in notified_games:
+                        print(f"\n🎯 Spread edge found:  {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
+                        embed = create_spread_embed(row)
+                        if send_discord_notification(embed):
+                            new_notified[game_id] = {
+                                "game": row['Game'],
+                                "team": row['Team'],
+                                "edge_type": "spread",
+                                "edge_value": row['Edge For Covering Spread'],
+                                "notified_at": datetime.now(timezone.utc).isoformat()
+                            }
+                            notifications_sent += 1
+                else:
+                    print(f"  ⏭️ Skipping spread edge for {row['Team']} - only {spread_source_count}/4 sources")
+        
+        # Check Moneyline Edge
+        if pd.notna(row.get('Moneyline Edge')) and row['Moneyline Edge'] >= MONEYLINE_THRESHOLD:
+            # Check if edge exceeds maximum threshold (likely data error)
+            if row['Moneyline Edge'] > MAX_MONEYLINE_THRESHOLD:
+                print(f"  ⚠️ Skipping moneyline edge for {row['Team']} - edge too high ({format_percentage(row['Moneyline Edge'])}) - likely data error")
+            else:
+                game_id = create_game_id(row, 'moneyline')
                 if game_id not in notified_games:
-                    print(f"\n🎯 Spread edge found:  {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
-                    embed = create_spread_embed(row)
+                    print(f"\n💰 Moneyline edge found: {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
+                    embed = create_moneyline_embed(row)
                     if send_discord_notification(embed):
                         new_notified[game_id] = {
                             "game": row['Game'],
                             "team": row['Team'],
-                            "edge_type": "spread",
-                            "edge_value": row['Edge For Covering Spread'],
+                            "edge_type": "moneyline",
+                            "edge_value": row['Moneyline Edge'],
                             "notified_at": datetime.now(timezone.utc).isoformat()
                         }
                         notifications_sent += 1
-            else:
-                print(f"  ⏭️ Skipping spread edge for {row['Team']} - only {spread_source_count}/4 sources")
-        
-        # Check Moneyline Edge
-        if pd.notna(row.get('Moneyline Edge')) and row['Moneyline Edge'] >= MONEYLINE_THRESHOLD:
-            game_id = create_game_id(row, 'moneyline')
-            if game_id not in notified_games:
-                print(f"\n💰 Moneyline edge found: {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
-                embed = create_moneyline_embed(row)
-                if send_discord_notification(embed):
-                    new_notified[game_id] = {
-                        "game": row['Game'],
-                        "team": row['Team'],
-                        "edge_type": "moneyline",
-                        "edge_value": row['Moneyline Edge'],
-                        "notified_at": datetime.now(timezone.utc).isoformat()
-                    }
-                    notifications_sent += 1
         
         # Check Over Total Edge
         if pd.notna(row.get('Over Total Edge')) and row['Over Total Edge'] >= TOTAL_THRESHOLD:
-            # Check if at least 4 out of 4 total sources have values
-            total_source_count = count_non_null_total_sources(row)
-            if total_source_count >= 4:
-                # Use game-level ID instead of team-specific ID
-                game_id = create_total_game_id(row, 'over')
-                # Check both notified_games and current session
-                if game_id not in notified_games and game_id not in total_alerts_sent:
-                    print(f"\n📈 Over total edge found: {row['Game']} ({format_percentage(row['Over Total Edge'])}) - {total_source_count}/4 sources")
-                    embed = create_over_embed(row)
-                    if send_discord_notification(embed):
-                        new_notified[game_id] = {
-                            "game": row['Game'],
-                            "team": "N/A",  # Not team-specific
-                            "edge_type": "over",
-                            "edge_value": row['Over Total Edge'],
-                            "notified_at": datetime.now(timezone.utc).isoformat()
-                        }
-                        total_alerts_sent.add(game_id)
-                        notifications_sent += 1
+            # Check if edge exceeds maximum threshold (likely data error)
+            if row['Over Total Edge'] > MAX_TOTAL_THRESHOLD:
+                print(f"  ⚠️ Skipping over total edge for {row['Game']} - edge too high ({format_percentage(row['Over Total Edge'])}) - likely data error")
             else:
-                print(f"  ⏭️ Skipping over total edge for {row['Game']} - only {total_source_count}/4 sources")
+                # Check if at least 4 out of 4 total sources have values
+                total_source_count = count_non_null_total_sources(row)
+                if total_source_count >= 4:
+                    # Use game-level ID instead of team-specific ID
+                    game_id = create_total_game_id(row, 'over')
+                    # Check both notified_games and current session
+                    if game_id not in notified_games and game_id not in total_alerts_sent:
+                        print(f"\n📈 Over total edge found: {row['Game']} ({format_percentage(row['Over Total Edge'])}) - {total_source_count}/4 sources")
+                        embed = create_over_embed(row)
+                        if send_discord_notification(embed):
+                            new_notified[game_id] = {
+                                "game": row['Game'],
+                                "team": "N/A",  # Not team-specific
+                                "edge_type": "over",
+                                "edge_value": row['Over Total Edge'],
+                                "notified_at": datetime.now(timezone.utc).isoformat()
+                            }
+                            total_alerts_sent.add(game_id)
+                            notifications_sent += 1
+                else:
+                    print(f"  ⏭️ Skipping over total edge for {row['Game']} - only {total_source_count}/4 sources")
         
         # Check Under Total Edge
-        if pd.notna(row.get('Under Total Edge')) and row['Under Total Edge'] >= TOTAL_THRESHOLD: 
-            # Check if at least 3 out of 4 total sources have values
-            total_source_count = count_non_null_total_sources(row)
-            if total_source_count >= 3:
-                # Use game-level ID instead of team-specific ID
-                game_id = create_total_game_id(row, 'under')
-                # Check both notified_games and current session
-                if game_id not in notified_games and game_id not in total_alerts_sent:
-                    print(f"\n📉 Under total edge found: {row['Game']} ({format_percentage(row['Under Total Edge'])}) - {total_source_count}/4 sources")
-                    embed = create_under_embed(row)
-                    if send_discord_notification(embed):
-                        new_notified[game_id] = {
-                            "game": row['Game'],
-                            "team": "N/A",  # Not team-specific
-                            "edge_type": "under",
-                            "edge_value": row['Under Total Edge'],
-                            "notified_at": datetime.now(timezone.utc).isoformat()
-                        }
-                        total_alerts_sent.add(game_id)
-                        notifications_sent += 1
-            else: 
-                print(f"  ⏭️ Skipping under total edge for {row['Game']} - only {total_source_count}/4 sources")
+        if pd.notna(row.get('Under Total Edge')) and row['Under Total Edge'] >= TOTAL_THRESHOLD:
+            # Check if edge exceeds maximum threshold (likely data error)
+            if row['Under Total Edge'] > MAX_TOTAL_THRESHOLD:
+                print(f"  ⚠️ Skipping under total edge for {row['Game']} - edge too high ({format_percentage(row['Under Total Edge'])}) - likely data error")
+            else:
+                # Check if at least 3 out of 4 total sources have values
+                total_source_count = count_non_null_total_sources(row)
+                if total_source_count >= 3:
+                    # Use game-level ID instead of team-specific ID
+                    game_id = create_total_game_id(row, 'under')
+                    # Check both notified_games and current session
+                    if game_id not in notified_games and game_id not in total_alerts_sent:
+                        print(f"\n📉 Under total edge found: {row['Game']} ({format_percentage(row['Under Total Edge'])}) - {total_source_count}/4 sources")
+                        embed = create_under_embed(row)
+                        if send_discord_notification(embed):
+                            new_notified[game_id] = {
+                                "game": row['Game'],
+                                "team": "N/A",  # Not team-specific
+                                "edge_type": "under",
+                                "edge_value": row['Under Total Edge'],
+                                "notified_at": datetime.now(timezone.utc).isoformat()
+                            }
+                            total_alerts_sent.add(game_id)
+                            notifications_sent += 1
+                else:
+                    print(f"  ⏭️ Skipping under total edge for {row['Game']} - only {total_source_count}/4 sources")
     
     # Update notified games with new notifications
     if new_notified:
