@@ -691,5 +691,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0408208785916803,
     "notified_at": "2025-12-17T16:27:15.680953+00:00"
+  },
+  "Wake Forest Demon Deacons vs. Longwood Lancers|under": {
+    "game": "Wake Forest Demon Deacons vs. Longwood Lancers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-17T17:10:44.432134+00:00"
   }
 }
