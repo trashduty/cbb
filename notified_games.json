@@ -677,5 +677,12 @@
     "edge_type": "over",
     "edge_value": 0.0103555120713323,
     "notified_at": "2025-12-17T15:26:36.379981+00:00"
+  },
+  "NC State Wolfpack vs. Texas Southern Tigers|Texas Southern Tigers|spread": {
+    "game": "NC State Wolfpack vs. Texas Southern Tigers",
+    "team": "Texas Southern Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-17T16:10:23.850057+00:00"
   }
 }
