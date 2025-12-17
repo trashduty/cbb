@@ -705,5 +705,12 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-17T18:12:57.973350+00:00"
+  },
+  "Eastern Illinois Panthers vs. SIU-Edwardsville Cougars|Eastern Illinois Panthers|moneyline": {
+    "game": "Eastern Illinois Panthers vs. SIU-Edwardsville Cougars",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0555597040497168,
+    "notified_at": "2025-12-17T23:25:35.050866+00:00"
   }
 }
