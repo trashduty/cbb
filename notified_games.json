@@ -698,5 +698,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2025-12-17T17:10:44.432134+00:00"
+  },
+  "USC Trojans vs. UTSA Roadrunners|under": {
+    "game": "USC Trojans vs. UTSA Roadrunners",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-17T18:12:57.973350+00:00"
   }
 }
