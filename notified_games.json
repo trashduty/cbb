@@ -740,5 +740,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0519904623623249,
     "notified_at": "2025-12-18T18:48:34.852371+00:00"
+  },
+  "Washington Huskies vs. Seattle Redhawks|Seattle Redhawks|moneyline": {
+    "game": "Washington Huskies vs. Seattle Redhawks",
+    "team": "Seattle Redhawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0525137032697807,
+    "notified_at": "2025-12-18T21:35:41.485149+00:00"
   }
 }
