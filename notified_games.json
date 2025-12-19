@@ -803,5 +803,19 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-19T17:49:46.246695+00:00"
+  },
+  "Appalachian St Mountaineers vs. Georgia St Panthers|under": {
+    "game": "Appalachian St Mountaineers vs. Georgia St Panthers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0135218092181041,
+    "notified_at": "2025-12-19T20:39:44.480641+00:00"
+  },
+  "Cal Baptist Lancers vs. Sacramento St Hornets|under": {
+    "game": "Cal Baptist Lancers vs. Sacramento St Hornets",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0127542129206035,
+    "notified_at": "2025-12-19T20:39:45.479736+00:00"
   }
 }
