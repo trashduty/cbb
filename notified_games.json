@@ -796,5 +796,12 @@
     "edge_type": "over",
     "edge_value": 0.0188673826669464,
     "notified_at": "2025-12-19T17:25:08.443098+00:00"
+  },
+  "Florida St Seminoles vs. Miss Valley St Delta Devils|under": {
+    "game": "Florida St Seminoles vs. Miss Valley St Delta Devils",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-19T17:49:46.246695+00:00"
   }
 }
