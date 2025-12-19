@@ -761,5 +761,12 @@
     "edge_type": "spread",
     "edge_value": 0.0542486292002473,
     "notified_at": "2025-12-19T02:26:42.525304+00:00"
+  },
+  "Wisconsin Badgers vs. Villanova Wildcats|Villanova Wildcats|spread": {
+    "game": "Wisconsin Badgers vs. Villanova Wildcats",
+    "team": "Villanova Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-19T03:06:56.349548+00:00"
   }
 }
