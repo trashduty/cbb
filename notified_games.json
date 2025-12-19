@@ -775,5 +775,12 @@
     "edge_type": "spread",
     "edge_value": 0.0516836277143365,
     "notified_at": "2025-12-19T04:05:41.673825+00:00"
+  },
+  "Western Kentucky Hilltoppers vs. Tulsa Golden Hurricane|over": {
+    "game": "Western Kentucky Hilltoppers vs. Tulsa Golden Hurricane",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-19T14:40:43.398933+00:00"
   }
 }
