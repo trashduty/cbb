@@ -782,5 +782,12 @@
     "edge_type": "over",
     "edge_value": 0.0103555120713323,
     "notified_at": "2025-12-19T14:40:43.398933+00:00"
+  },
+  "UC Irvine Anteaters vs. Belmont Bruins|under": {
+    "game": "UC Irvine Anteaters vs. Belmont Bruins",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2025-12-19T16:44:03.121605+00:00"
   }
 }
