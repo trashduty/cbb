@@ -747,5 +747,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0525137032697807,
     "notified_at": "2025-12-18T21:35:41.485149+00:00"
+  },
+  "Florida St Seminoles vs. Miss Valley St Delta Devils|Miss Valley St Delta Devils|spread": {
+    "game": "Florida St Seminoles vs. Miss Valley St Delta Devils",
+    "team": "Miss Valley St Delta Devils",
+    "edge_type": "spread",
+    "edge_value": 0.0714966378722655,
+    "notified_at": "2025-12-19T02:26:42.341901+00:00"
+  },
+  "BYU Cougars vs. Abilene Christian Wildcats|Abilene Christian Wildcats|spread": {
+    "game": "BYU Cougars vs. Abilene Christian Wildcats",
+    "team": "Abilene Christian Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0542486292002473,
+    "notified_at": "2025-12-19T02:26:42.525304+00:00"
   }
 }
