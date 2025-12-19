@@ -768,5 +768,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-19T03:06:56.349548+00:00"
+  },
+  "Baylor Bears vs. Alcorn St Braves|Alcorn St Braves|spread": {
+    "game": "Baylor Bears vs. Alcorn St Braves",
+    "team": "Alcorn St Braves",
+    "edge_type": "spread",
+    "edge_value": 0.0516836277143365,
+    "notified_at": "2025-12-19T04:05:41.673825+00:00"
   }
 }
