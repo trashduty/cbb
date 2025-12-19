@@ -824,5 +824,12 @@
     "edge_type": "under",
     "edge_value": 0.0126339354023873,
     "notified_at": "2025-12-19T22:25:36.563339+00:00"
+  },
+  "Colorado Buffaloes vs. Stanford Cardinal|over": {
+    "game": "Colorado Buffaloes vs. Stanford Cardinal",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0160927467242296,
+    "notified_at": "2025-12-19T22:38:52.774457+00:00"
   }
 }
