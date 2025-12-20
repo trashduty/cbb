@@ -866,5 +866,12 @@
     "edge_type": "spread",
     "edge_value": 0.0564895871039796,
     "notified_at": "2025-12-20T20:08:04.967340+00:00"
+  },
+  "Cleveland St Vikings vs. Milwaukee Panthers|Cleveland St Vikings|moneyline": {
+    "game": "Cleveland St Vikings vs. Milwaukee Panthers",
+    "team": "Cleveland St Vikings",
+    "edge_type": "moneyline",
+    "edge_value": 0.0582153539175056,
+    "notified_at": "2025-12-20T20:25:43.615494+00:00"
   }
 }
