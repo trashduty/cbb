@@ -845,5 +845,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0450350435835652,
     "notified_at": "2025-12-20T14:25:25.023279+00:00"
+  },
+  "Santa Clara Broncos vs. Loyola (Chi) Ramblers|Santa Clara Broncos|spread": {
+    "game": "Santa Clara Broncos vs. Loyola (Chi) Ramblers",
+    "team": "Santa Clara Broncos",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-20T15:07:38.672190+00:00"
+  },
+  "Richmond Spiders vs. The Citadel Bulldogs|Richmond Spiders|spread": {
+    "game": "Richmond Spiders vs. The Citadel Bulldogs",
+    "team": "Richmond Spiders",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-20T15:07:38.874035+00:00"
   }
 }
