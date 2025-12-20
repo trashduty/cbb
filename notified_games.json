@@ -859,5 +859,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-20T15:07:38.874035+00:00"
+  },
+  "Iowa State Cyclones vs. Long Beach St 49ers|Long Beach St 49ers|spread": {
+    "game": "Iowa State Cyclones vs. Long Beach St 49ers",
+    "team": "Long Beach St 49ers",
+    "edge_type": "spread",
+    "edge_value": 0.0564895871039796,
+    "notified_at": "2025-12-20T20:08:04.967340+00:00"
   }
 }
