@@ -873,5 +873,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0582153539175056,
     "notified_at": "2025-12-20T20:25:43.615494+00:00"
+  },
+  "New Mexico St Aggies vs. Sam Houston St Bearkats|under": {
+    "game": "New Mexico St Aggies vs. Sam Houston St Bearkats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0243611143122287,
+    "notified_at": "2025-12-20T21:24:38.128119+00:00"
   }
 }
