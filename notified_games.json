@@ -880,5 +880,12 @@
     "edge_type": "under",
     "edge_value": 0.0243611143122287,
     "notified_at": "2025-12-20T21:24:38.128119+00:00"
+  },
+  "Florida Gators vs. Colgate Raiders|Colgate Raiders|spread": {
+    "game": "Florida Gators vs. Colgate Raiders",
+    "team": "Colgate Raiders",
+    "edge_type": "spread",
+    "edge_value": 0.0714966378722655,
+    "notified_at": "2025-12-20T21:49:36.549149+00:00"
   }
 }
