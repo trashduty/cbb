@@ -950,5 +950,12 @@
     "edge_type": "spread",
     "edge_value": 0.0432973911604778,
     "notified_at": "2025-12-21T06:26:21.755047+00:00"
+  },
+  "Cleveland St Vikings vs. Milwaukee Panthers|over": {
+    "game": "Cleveland St Vikings vs. Milwaukee Panthers",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2025-12-21T14:07:37.182754+00:00"
   }
 }
