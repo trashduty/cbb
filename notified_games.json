@@ -985,5 +985,12 @@
     "edge_type": "spread",
     "edge_value": 0.0430456534710467,
     "notified_at": "2025-12-21T20:08:31.267278+00:00"
+  },
+  "Towson Tigers vs. Sacred Heart Pioneers|under": {
+    "game": "Towson Tigers vs. Sacred Heart Pioneers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0111365072116804,
+    "notified_at": "2025-12-21T21:35:50.582836+00:00"
   }
 }
