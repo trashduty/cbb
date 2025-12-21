@@ -1,6 +1,6 @@
 # CBB Model Record
 
-**Last Updated:** December 20, 2025 at 11:57 PM ET
+**Last Updated:** December 21, 2025 at 12:06 AM ET
 
 **Season Record Period:** 2025-11-13 to 2025-12-10
 
