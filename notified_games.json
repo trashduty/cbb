@@ -964,5 +964,12 @@
     "edge_type": "under",
     "edge_value": 0.0150273245156959,
     "notified_at": "2025-12-21T14:37:42.223499+00:00"
+  },
+  "UTEP Miners vs. Norfolk St Spartans|under": {
+    "game": "UTEP Miners vs. Norfolk St Spartans",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2025-12-21T16:41:03.087368+00:00"
   }
 }
