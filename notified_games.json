@@ -992,5 +992,12 @@
     "edge_type": "under",
     "edge_value": 0.0111365072116804,
     "notified_at": "2025-12-21T21:35:50.582836+00:00"
+  },
+  "BYU Cougars vs. Eastern Washington Eagles|Eastern Washington Eagles|spread": {
+    "game": "BYU Cougars vs. Eastern Washington Eagles",
+    "team": "Eastern Washington Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-21T22:25:25.664005+00:00"
   }
 }
