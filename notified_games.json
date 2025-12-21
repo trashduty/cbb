@@ -1013,5 +1013,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-21T23:25:15.668888+00:00"
+  },
+  "Florida St Seminoles vs. Jacksonville Dolphins|Jacksonville Dolphins|spread": {
+    "game": "Florida St Seminoles vs. Jacksonville Dolphins",
+    "team": "Jacksonville Dolphins",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-21T23:36:20.508183+00:00"
   }
 }
