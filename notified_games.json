@@ -922,5 +922,12 @@
     "edge_type": "spread",
     "edge_value": 0.0478761457392323,
     "notified_at": "2025-12-20T23:08:09.572620+00:00"
+  },
+  "NC State Wolfpack vs. Ole Miss Rebels|over": {
+    "game": "NC State Wolfpack vs. Ole Miss Rebels",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0150273245156961,
+    "notified_at": "2025-12-21T02:49:03.373891+00:00"
   }
 }
