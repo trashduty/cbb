@@ -957,5 +957,12 @@
     "edge_type": "over",
     "edge_value": 0.011130608835512,
     "notified_at": "2025-12-21T14:07:37.182754+00:00"
+  },
+  "UMKC Kangaroos vs. Austin Peay Governors|under": {
+    "game": "UMKC Kangaroos vs. Austin Peay Governors",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2025-12-21T14:37:42.223499+00:00"
   }
 }
