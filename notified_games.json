@@ -929,5 +929,19 @@
     "edge_type": "over",
     "edge_value": 0.0150273245156961,
     "notified_at": "2025-12-21T02:49:03.373891+00:00"
+  },
+  "Saint Louis Billikens vs. New Hampshire Wildcats|under": {
+    "game": "Saint Louis Billikens vs. New Hampshire Wildcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-21T05:24:57.826063+00:00"
+  },
+  "Michigan Wolverines vs. La Salle Explorers|under": {
+    "game": "Michigan Wolverines vs. La Salle Explorers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-21T05:24:58.087432+00:00"
   }
 }
