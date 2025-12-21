@@ -943,5 +943,12 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-21T05:24:58.087432+00:00"
+  },
+  "Alabama A&M Bulldogs vs. Chattanooga Mocs|Alabama A&M Bulldogs|spread": {
+    "game": "Alabama A&M Bulldogs vs. Chattanooga Mocs",
+    "team": "Alabama A&M Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0432973911604778,
+    "notified_at": "2025-12-21T06:26:21.755047+00:00"
   }
 }
