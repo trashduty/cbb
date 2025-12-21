@@ -851,79 +851,101 @@ Missouri,Illinois,Illinois,20251222,-8,0.76,160
 Missouri,Illinois,Missouri,20251222,8,0.24,160
 Saint Mary's,Northern Iowa,Northern Iowa,20251222,10,0.19,128
 Saint Mary's,Northern Iowa,Saint Mary's,20251222,-10,0.81,128
-Oral Roberts,UT Arlington,UT Arlington,20251222,-3,0.61,141
-Oral Roberts,UT Arlington,Oral Roberts,20251222,3,0.39,141
+Oral Roberts,UT Arlington,UT Arlington,20251222,-3,0.62,141
+Oral Roberts,UT Arlington,Oral Roberts,20251222,3,0.38,141
 UC Santa Barbara,Portland,Portland,20251222,7,0.28,153
 UC Santa Barbara,Portland,UC Santa Barbara,20251222,-7,0.72,153
-CSUN,Sacramento St.,Sacramento St.,20251222,6,0.3,160
-CSUN,Sacramento St.,CSUN,20251222,-6,0.7,160
-Wright St.,Eastern Michigan,Eastern Michigan,20251222,7,0.26,139
-Wright St.,Eastern Michigan,Wright St.,20251222,-7,0.74,139
+CSUN,Sacramento St.,Sacramento St.,20251222,6,0.31,160
+CSUN,Sacramento St.,CSUN,20251222,-6,0.69,160
+Wright St.,Eastern Michigan,Eastern Michigan,20251222,7,0.27,139
+Wright St.,Eastern Michigan,Wright St.,20251222,-7,0.73,139
+Saint Joseph's,Coastal Carolina,Coastal Carolina,20251222,6,0.28,142
+Saint Joseph's,Coastal Carolina,Saint Joseph's,20251222,-6,0.72,142
 Texas Southern,Abilene Christian,Abilene Christian,20251222,-5,0.67,143
 Texas Southern,Abilene Christian,Texas Southern,20251222,5,0.33,143
-Saint Joseph's,Coastal Carolina,Coastal Carolina,20251222,6,0.27,142
-Saint Joseph's,Coastal Carolina,Saint Joseph's,20251222,-6,0.73,142
-UTSA,Seattle,Seattle,20251222,-8,0.78,142
-UTSA,Seattle,UTSA,20251222,8,0.22,142
+UTSA,Seattle,Seattle,20251222,-9,0.79,143
+UTSA,Seattle,UTSA,20251222,9,0.21,143
+Rhode Island,Northeastern,Northeastern,20251222,11,0.17,143
+Rhode Island,Northeastern,Rhode Island,20251222,-11,0.83,143
 Towson,Sacred Heart,Sacred Heart,20251222,8,0.22,142
 Towson,Sacred Heart,Towson,20251222,-8,0.78,142
-Western Illinois,SIUE,SIUE,20251222,-6,0.69,134
-Western Illinois,SIUE,Western Illinois,20251222,6,0.31,134
-Rhode Island,Northeastern,Northeastern,20251222,11,0.16,141
-Rhode Island,Northeastern,Rhode Island,20251222,-11,0.84,141
+Western Illinois,SIUE,SIUE,20251222,-5,0.69,135
+Western Illinois,SIUE,Western Illinois,20251222,5,0.31,135
 Kansas,Davidson,Davidson,20251222,17,0.06,137
 Kansas,Davidson,Kansas,20251222,-17,0.94,137
-Temple,Princeton,Princeton,20251222,10,0.19,146
-Temple,Princeton,Temple,20251222,-10,0.81,146
+Temple,Princeton,Princeton,20251222,10,0.2,146
+Temple,Princeton,Temple,20251222,-10,0.8,146
 Indiana,Siena,Siena,20251222,18,0.05,140
 Indiana,Siena,Indiana,20251222,-18,0.95,140
-Washington,San Diego,San Diego,20251222,17,0.06,153
-Washington,San Diego,Washington,20251222,-17,0.94,153
-Fordham,New Haven,New Haven,20251222,10,0.16,128
-Fordham,New Haven,Fordham,20251222,-10,0.84,128
-Creighton,Utah Tech,Utah Tech,20251222,18,0.05,140
-Creighton,Utah Tech,Creighton,20251222,-18,0.95,140
+Washington,San Diego,San Diego,20251222,17,0.05,153
+Washington,San Diego,Washington,20251222,-17,0.95,153
+Fordham,New Haven,New Haven,20251222,11,0.16,129
+Fordham,New Haven,Fordham,20251222,-11,0.84,129
+Creighton,Utah Tech,Utah Tech,20251222,18,0.05,142
+Creighton,Utah Tech,Creighton,20251222,-18,0.95,142
 High Point,Bryant,Bryant,20251222,16,0.07,154
 High Point,Bryant,High Point,20251222,-16,0.93,154
-Virginia,American,American,20251222,23,0.02,155
-Virginia,American,Virginia,20251222,-23,0.98,155
+Tulsa,Denver,Denver,20251222,18,0.05,168
+Tulsa,Denver,Tulsa,20251222,-18,0.95,168
+Virginia,American,American,20251222,22,0.02,156
+Virginia,American,Virginia,20251222,-22,0.98,156
 Memphis,Alabama St.,Alabama St.,20251222,18,0.05,148
 Memphis,Alabama St.,Memphis,20251222,-18,0.95,148
-Florida St.,Jacksonville,Jacksonville,20251222,17,0.07,153
-Florida St.,Jacksonville,Florida St.,20251222,-17,0.93,153
-Tulsa,Denver,Denver,20251222,19,0.04,167
-Tulsa,Denver,Tulsa,20251222,-19,0.96,167
-BYU,Eastern Washington,Eastern Washington,20251222,30,0.0040000000000000565,162
-BYU,Eastern Washington,BYU,20251222,-30,0.996,162
+Florida St.,Jacksonville,Jacksonville,20251222,16,0.07,154
+Florida St.,Jacksonville,Florida St.,20251222,-16,0.93,154
 Duquesne,Canisius,Canisius,20251222,16,0.08,142
 Duquesne,Canisius,Duquesne,20251222,-16,0.92,142
-Arizona,Bethune Cookman,Bethune Cookman,20251222,32,0.0020000000000000282,152
-Arizona,Bethune Cookman,Arizona,20251222,-32,0.998,152
-North Carolina,East Carolina,East Carolina,20251222,25,0.01,145
-North Carolina,East Carolina,North Carolina,20251222,-25,0.99,145
+BYU,Eastern Washington,Eastern Washington,20251222,30,0.0029999999999999714,164
+BYU,Eastern Washington,BYU,20251222,-30,0.997,164
+North Carolina,East Carolina,East Carolina,20251222,24,0.01,144
+North Carolina,East Carolina,North Carolina,20251222,-24,0.99,144
+Arizona,Bethune Cookman,Bethune Cookman,20251222,33,0.0020000000000000282,149
+Arizona,Bethune Cookman,Arizona,20251222,-33,0.998,149
 Georgia,West Georgia,West Georgia,20251222,29,0.0040000000000000565,165
 Georgia,West Georgia,Georgia,20251222,-29,0.996,165
-LSU,Prairie View A&M,Prairie View A&M,20251222,26,0.01,156
-LSU,Prairie View A&M,LSU,20251222,-26,0.99,156
-Wisconsin,Central Michigan,Central Michigan,20251222,24,0.01,152
-Wisconsin,Central Michigan,Wisconsin,20251222,-24,0.99,152
-Grand Canyon,IU Indy,IU Indy,20251222,23,0.02,163
-Grand Canyon,IU Indy,Grand Canyon,20251222,-23,0.98,163
-Boston College,Fairleigh Dickinson,Fairleigh Dickinson,20251222,19,0.04,141
-Boston College,Fairleigh Dickinson,Boston College,20251222,-19,0.96,141
-Syracuse,Stonehill,Stonehill,20251222,22,0.02,136
-Syracuse,Stonehill,Syracuse,20251222,-22,0.98,136
+LSU,Prairie View A&M,Prairie View A&M,20251222,27,0.01,157
+LSU,Prairie View A&M,LSU,20251222,-27,0.99,157
+Wisconsin,Central Michigan,Central Michigan,20251222,25,0.01,153
+Wisconsin,Central Michigan,Wisconsin,20251222,-25,0.99,153
+Boston College,Fairleigh Dickinson,Fairleigh Dickinson,20251222,19,0.04,143
+Boston College,Fairleigh Dickinson,Boston College,20251222,-19,0.96,143
+Grand Canyon,IU Indy,IU Indy,20251222,25,0.01,165
+Grand Canyon,IU Indy,Grand Canyon,20251222,-25,0.99,165
+Syracuse,Stonehill,Stonehill,20251222,22,0.02,138
+Syracuse,Stonehill,Syracuse,20251222,-22,0.98,138
 Oklahoma,Stetson,Stetson,20251222,26,0.01,150
 Oklahoma,Stetson,Oklahoma,20251222,-26,0.99,150
-Butler,NJIT,NJIT,20251222,28,0.01,148
-Butler,NJIT,Butler,20251222,-28,0.99,148
+Butler,NJIT,NJIT,20251222,27,0.01,145
+Butler,NJIT,Butler,20251222,-27,0.99,145
 Texas,Maryland Eastern Shore,Maryland Eastern Shore,20251222,26,0.01,138
 Texas,Maryland Eastern Shore,Texas,20251222,-26,0.99,138
-VCU,Rider,Rider,20251222,27,0.01,139
-VCU,Rider,VCU,20251222,-27,0.99,139
-South Carolina,South Carolina St.,South Carolina St.,20251222,25,0.01,145
-South Carolina,South Carolina St.,South Carolina,20251222,-25,0.99,145
-Georgetown,Coppin St.,Coppin St.,20251222,29,0.005,149
-Georgetown,Coppin St.,Georgetown,20251222,-29,0.995,149
+VCU,Rider,Rider,20251222,28,0.01,140
+VCU,Rider,VCU,20251222,-28,0.99,140
+South Carolina,South Carolina St.,South Carolina St.,20251222,26,0.01,146
+South Carolina,South Carolina St.,South Carolina,20251222,-26,0.99,146
+Georgetown,Coppin St.,Coppin St.,20251222,28,0.01,150
+Georgetown,Coppin St.,Georgetown,20251222,-28,0.99,150
 West Virginia,Mississippi Valley St.,Mississippi Valley St.,20251222,34,0.0009999999999999432,134
 West Virginia,Mississippi Valley St.,West Virginia,20251222,-34,0.9990000000000001,134
+Seton Hall,Villanova,Villanova,20251223,1,0.47,133
+Seton Hall,Villanova,Seton Hall,20251223,-1,0.53,133
+UCF,Florida Atlantic,Florida Atlantic,20251223,11,0.16,163
+UCF,Florida Atlantic,UCF,20251223,-11,0.84,163
+Missouri St.,Lindenwood,Lindenwood,20251223,1,0.45,145
+Missouri St.,Lindenwood,Missouri St.,20251223,-1,0.55,145
+Campbell,Green Bay,Green Bay,20251223,4,0.35,150
+Campbell,Green Bay,Campbell,20251223,-4,0.65,150
+Cal St. Bakersfield,Idaho,Idaho,20251223,-4,0.65,152
+Cal St. Bakersfield,Idaho,Cal St. Bakersfield,20251223,4,0.35,152
+Army,Binghamton,Binghamton,20251223,7,0.24,143
+Army,Binghamton,Army,20251223,-7,0.76,143
+St. John's,Harvard,Harvard,20251223,21,0.03,147
+St. John's,Harvard,St. John's,20251223,-21,0.97,147
+Ohio St.,Grambling St.,Grambling St.,20251223,21,0.03,149
+Ohio St.,Grambling St.,Ohio St.,20251223,-21,0.97,149
+UCLA,UC Riverside,UC Riverside,20251223,21,0.03,149
+UCLA,UC Riverside,UCLA,20251223,-21,0.97,149
+Kentucky,Bellarmine,Bellarmine,20251223,26,0.01,152
+Kentucky,Bellarmine,Kentucky,20251223,-26,0.99,152
+Loyola Marymount,Morgan St.,Morgan St.,20251223,21,0.03,143
+Loyola Marymount,Morgan St.,Loyola Marymount,20251223,-21,0.97,143
