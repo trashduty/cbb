@@ -971,5 +971,19 @@
     "edge_type": "under",
     "edge_value": 0.0150273245156959,
     "notified_at": "2025-12-21T16:41:03.087368+00:00"
+  },
+  "Indiana Hoosiers vs. Siena Saints|Siena Saints|spread": {
+    "game": "Indiana Hoosiers vs. Siena Saints",
+    "team": "Siena Saints",
+    "edge_type": "spread",
+    "edge_value": 0.0597177524084252,
+    "notified_at": "2025-12-21T20:08:30.402904+00:00"
+  },
+  "Wright St Raiders vs. Eastern Michigan Eagles|Wright St Raiders|spread": {
+    "game": "Wright St Raiders vs. Eastern Michigan Eagles",
+    "team": "Wright St Raiders",
+    "edge_type": "spread",
+    "edge_value": 0.0430456534710467,
+    "notified_at": "2025-12-21T20:08:31.267278+00:00"
   }
 }
