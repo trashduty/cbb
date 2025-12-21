@@ -999,5 +999,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-21T22:25:25.664005+00:00"
+  },
+  "Saint Mary's Gaels vs. Northern Iowa Panthers|under": {
+    "game": "Saint Mary's Gaels vs. Northern Iowa Panthers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0143265443869095,
+    "notified_at": "2025-12-21T23:08:01.792217+00:00"
   }
 }
