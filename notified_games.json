@@ -1076,5 +1076,26 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-22T05:25:32.998770+00:00"
+  },
+  "UTEP Miners vs. North Dakota St Bison|under": {
+    "game": "UTEP Miners vs. North Dakota St Bison",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0227622641792982,
+    "notified_at": "2025-12-22T14:09:14.881201+00:00"
+  },
+  "Florida St Seminoles vs. Jacksonville Dolphins|under": {
+    "game": "Florida St Seminoles vs. Jacksonville Dolphins",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137597318856851,
+    "notified_at": "2025-12-22T14:09:16.728789+00:00"
+  },
+  "Norfolk St Spartans vs. UC Irvine Anteaters|under": {
+    "game": "Norfolk St Spartans vs. UC Irvine Anteaters",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0227725217768617,
+    "notified_at": "2025-12-22T14:09:17.046815+00:00"
   }
 }
