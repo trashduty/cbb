@@ -1069,5 +1069,12 @@
     "edge_type": "spread",
     "edge_value": 0.0432973911604778,
     "notified_at": "2025-12-22T03:36:45.261595+00:00"
+  },
+  "Creighton Bluejays vs. Utah Tech Trailblazers|under": {
+    "game": "Creighton Bluejays vs. Utah Tech Trailblazers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-22T05:25:32.998770+00:00"
   }
 }
