@@ -1020,5 +1020,33 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-21T23:36:20.508183+00:00"
+  },
+  "Georgia Bulldogs vs. West Georgia Wolves|West Georgia Wolves|spread": {
+    "game": "Georgia Bulldogs vs. West Georgia Wolves",
+    "team": "West Georgia Wolves",
+    "edge_type": "spread",
+    "edge_value": 0.0458064605089295,
+    "notified_at": "2025-12-22T01:12:04.768468+00:00"
+  },
+  "West Virginia Mountaineers vs. Miss Valley St Delta Devils|Miss Valley St Delta Devils|spread": {
+    "game": "West Virginia Mountaineers vs. Miss Valley St Delta Devils",
+    "team": "Miss Valley St Delta Devils",
+    "edge_type": "spread",
+    "edge_value": 0.0669542100014224,
+    "notified_at": "2025-12-22T01:12:05.045316+00:00"
+  },
+  "Texas Longhorns vs. Maryland-Eastern Shore Hawks|Maryland-Eastern Shore Hawks|spread": {
+    "game": "Texas Longhorns vs. Maryland-Eastern Shore Hawks",
+    "team": "Maryland-Eastern Shore Hawks",
+    "edge_type": "spread",
+    "edge_value": 0.0597177524084252,
+    "notified_at": "2025-12-22T01:12:05.388319+00:00"
+  },
+  "Arizona Wildcats vs. Bethune-Cookman Wildcats|Bethune-Cookman Wildcats|spread": {
+    "game": "Arizona Wildcats vs. Bethune-Cookman Wildcats",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2025-12-22T01:12:05.581238+00:00"
   }
 }
