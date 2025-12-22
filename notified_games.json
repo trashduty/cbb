@@ -1118,5 +1118,12 @@
     "edge_type": "spread",
     "edge_value": 0.0410405642591011,
     "notified_at": "2025-12-22T15:26:06.674467+00:00"
+  },
+  "Temple Owls vs. Princeton Tigers|over": {
+    "game": "Temple Owls vs. Princeton Tigers",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2025-12-22T17:25:16.439249+00:00"
   }
 }
