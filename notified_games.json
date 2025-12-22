@@ -1097,5 +1097,19 @@
     "edge_type": "under",
     "edge_value": 0.0227725217768617,
     "notified_at": "2025-12-22T14:09:17.046815+00:00"
+  },
+  "Saint Joseph's Hawks vs. Coastal Carolina Chanticleers|under": {
+    "game": "Saint Joseph's Hawks vs. Coastal Carolina Chanticleers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0118564187013748,
+    "notified_at": "2025-12-22T14:26:00.779839+00:00"
+  },
+  "Oklahoma Sooners vs. Stetson Hatters|Stetson Hatters|spread": {
+    "game": "Oklahoma Sooners vs. Stetson Hatters",
+    "team": "Stetson Hatters",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-22T14:26:01.275359+00:00"
   }
 }
