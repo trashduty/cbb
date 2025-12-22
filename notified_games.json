@@ -1048,5 +1048,19 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2025-12-22T01:12:05.581238+00:00"
+  },
+  "Wisconsin Badgers vs. Central Michigan Chippewas|under": {
+    "game": "Wisconsin Badgers vs. Central Michigan Chippewas",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2025-12-22T01:57:53.919781+00:00"
+  },
+  "CSU Northridge Matadors vs. Sacramento St Hornets|Sacramento St Hornets|moneyline": {
+    "game": "CSU Northridge Matadors vs. Sacramento St Hornets",
+    "team": "Sacramento St Hornets",
+    "edge_type": "moneyline",
+    "edge_value": 0.0444522114097424,
+    "notified_at": "2025-12-22T01:57:54.184888+00:00"
   }
 }
