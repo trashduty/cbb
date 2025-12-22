@@ -1125,5 +1125,19 @@
     "edge_type": "over",
     "edge_value": 0.0137517570229503,
     "notified_at": "2025-12-22T17:25:16.439249+00:00"
+  },
+  "Kentucky Wildcats vs. Bellarmine Knights|Bellarmine Knights|spread": {
+    "game": "Kentucky Wildcats vs. Bellarmine Knights",
+    "team": "Bellarmine Knights",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-22T19:24:39.017498+00:00"
+  },
+  "Ohio State Buckeyes vs. Grambling St Tigers|Grambling St Tigers|spread": {
+    "game": "Ohio State Buckeyes vs. Grambling St Tigers",
+    "team": "Grambling St Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0558464163570781,
+    "notified_at": "2025-12-22T19:24:39.254065+00:00"
   }
 }
