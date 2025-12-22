@@ -1111,5 +1111,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-22T14:26:01.275359+00:00"
+  },
+  "Boston College Eagles vs. Fairleigh Dickinson Knights|Boston College Eagles|spread": {
+    "game": "Boston College Eagles vs. Fairleigh Dickinson Knights",
+    "team": "Boston College Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0410405642591011,
+    "notified_at": "2025-12-22T15:26:06.674467+00:00"
   }
 }
