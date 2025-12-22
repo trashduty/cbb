@@ -1062,5 +1062,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0444522114097424,
     "notified_at": "2025-12-22T01:57:54.184888+00:00"
+  },
+  "South Carolina Gamecocks vs. South Carolina St Bulldogs|South Carolina St Bulldogs|spread": {
+    "game": "South Carolina Gamecocks vs. South Carolina St Bulldogs",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0432973911604778,
+    "notified_at": "2025-12-22T03:36:45.261595+00:00"
   }
 }
