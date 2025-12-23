@@ -1146,5 +1146,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2025-12-23T06:48:15.777063+00:00"
+  },
+  "Loyola Marymount Lions vs. Morgan St Bears|under": {
+    "game": "Loyola Marymount Lions vs. Morgan St Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2025-12-23T14:25:48.034215+00:00"
   }
 }
