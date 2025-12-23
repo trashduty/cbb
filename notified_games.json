@@ -1139,5 +1139,12 @@
     "edge_type": "spread",
     "edge_value": 0.0558464163570781,
     "notified_at": "2025-12-22T19:24:39.254065+00:00"
+  },
+  "CSU Bakersfield Roadrunners vs. Idaho Vandals|under": {
+    "game": "CSU Bakersfield Roadrunners vs. Idaho Vandals",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2025-12-23T06:48:15.777063+00:00"
   }
 }
