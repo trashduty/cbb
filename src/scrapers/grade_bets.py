@@ -991,11 +991,27 @@ def grade_matched_game(matched_game):
     if closing_total is None:
         closing_total = prediction_row.get('closing_total')
 
-    # Get opening edge values (handle both column naming conventions)
-    opening_spread_edge = prediction_row.get('Opening Spread Edge') or prediction_row.get('opening_spread_edge')
-    opening_moneyline_edge = prediction_row.get('Opening Moneyline Edge') or prediction_row.get('opening_moneyline_edge')
-    opening_over_edge = prediction_row.get('Opening Over Edge') or prediction_row.get('opening_over_edge')
-    opening_under_edge = prediction_row.get('Opening Under Edge') or prediction_row.get('opening_under_edge')
+    # Get opening edge values (handle all column naming conventions)
+    opening_spread_edge = (
+        prediction_row.get('Opening Spread Edge') or
+        prediction_row.get('opening_spread_edge') or
+        prediction_row.get('Edge For Covering Spread')  # historical_data format
+    )
+    opening_moneyline_edge = (
+        prediction_row.get('Opening Moneyline Edge') or
+        prediction_row.get('opening_moneyline_edge') or
+        prediction_row.get('Moneyline Edge')  # historical_data format
+    )
+    opening_over_edge = (
+        prediction_row.get('Opening Over Edge') or
+        prediction_row.get('opening_over_edge') or
+        prediction_row.get('Over Total Edge')  # historical_data format
+    )
+    opening_under_edge = (
+        prediction_row.get('Opening Under Edge') or
+        prediction_row.get('opening_under_edge') or
+        prediction_row.get('Under Total Edge')  # historical_data format
+    )
 
     # Get closing edge values (from game_snapshots.csv)
     closing_spread_edge = prediction_row.get('closing_spread_edge')
