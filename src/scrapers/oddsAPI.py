@@ -856,12 +856,15 @@ def process_final_dataframe(final_df):
     final_df['Opening Over Edge'] = final_df['Over Total Edge']
     final_df['Opening Under Edge'] = final_df['Under Total Edge']
 
-    # Rename 'Moneyline' column to 'Opening Moneyline' if it exists
+    # Create Current Moneyline and Opening Moneyline columns
     if 'Moneyline' in final_df.columns:
         # Round moneyline values to the nearest integer
-        final_df['Opening Moneyline'] = final_df['Moneyline'].round().astype('Int64')
+        final_df['Current Moneyline'] = final_df['Moneyline'].round().astype('Int64')
+        # Opening Moneyline starts as current value, will be preserved via preserve_opening_odds()
+        final_df['Opening Moneyline'] = final_df['Current Moneyline']
     else:
-        logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty 'Opening Moneyline' column")
+        logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty moneyline columns")
+        final_df['Current Moneyline'] = np.nan
         final_df['Opening Moneyline'] = np.nan
 
     # Add 'Opening Total' column from the Over Point (same as Under Point for totals)
@@ -870,6 +873,10 @@ def process_final_dataframe(final_df):
     else:
         logger.warning("[yellow]⚠[/yellow] 'Over Point' column not found, creating empty 'Opening Total' column")
         final_df['Opening Total'] = np.nan
+
+    # Add 'Opening Odds Time' timestamp (when opening odds were first captured)
+    # This will be preserved via preserve_opening_odds() for existing games
+    final_df['Opening Odds Time'] = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
     # Drop any remaining duplicates after all processing
     final_df = final_df.drop_duplicates(subset=['Game', 'Team'], keep='first')
@@ -888,13 +895,13 @@ def process_final_dataframe(final_df):
     
     # Define final column order
     column_order = [
-        'Game', 'Game Time', 'Team',
+        'Game', 'Game Time', 'Opening Odds Time', 'Team',
         # Spread framework columns
         'total_category', 'market_spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
         'Opening Spread', 'Edge For Covering Spread', 'Opening Spread Edge', 'Spread Std. Dev.', 'spread_barttorvik',
         'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
         # Moneyline columns
-        'Moneyline Win Probability', 'Opening Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Opening Moneyline Edge', 'Moneyline Std. Dev.',
+        'Moneyline Win Probability', 'Opening Moneyline', 'Current Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Opening Moneyline Edge', 'Moneyline Std. Dev.',
         'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
         # Totals framework columns
         'spread_category', 'market_total', 'model_total', 'average_total', 'Opening Total', 'theoddsapi_total', 'Totals Std. Dev.',
@@ -1129,6 +1136,7 @@ def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
                 'Opening Spread': row.get('Opening Spread'),
                 'Opening Moneyline': row.get('Opening Moneyline'),
                 'Opening Total': row.get('Opening Total'),
+                'Opening Odds Time': row.get('Opening Odds Time'),
                 # Opening edge values (preserved like opening lines)
                 'Opening Spread Edge': row.get('Opening Spread Edge'),
                 'Opening Moneyline Edge': row.get('Opening Moneyline Edge'),
@@ -1150,6 +1158,8 @@ def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
                     new_df.at[idx, 'Opening Moneyline'] = existing_vals['Opening Moneyline']
                 if pd.notna(existing_vals.get('Opening Total')):
                     new_df.at[idx, 'Opening Total'] = existing_vals['Opening Total']
+                if pd.notna(existing_vals.get('Opening Odds Time')):
+                    new_df.at[idx, 'Opening Odds Time'] = existing_vals['Opening Odds Time']
                 # Preserve opening edge values
                 if pd.notna(existing_vals.get('Opening Spread Edge')):
                     new_df.at[idx, 'Opening Spread Edge'] = existing_vals['Opening Spread Edge']

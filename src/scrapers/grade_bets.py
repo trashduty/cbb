@@ -49,6 +49,7 @@ project_root = os.path.dirname(os.path.dirname(script_dir))
 historical_dir = os.path.join(project_root, 'historical_data')
 graded_results_path = os.path.join(project_root, 'graded_results.csv')
 unmatched_games_path = os.path.join(project_root, 'unmatched_games.csv')
+game_snapshots_path = os.path.join(project_root, 'game_snapshots.csv')
 
 # Cache for historical odds to avoid redundant API calls
 _historical_odds_cache = {}
@@ -301,6 +302,132 @@ def load_historical_predictions(date_str):
     except Exception as e:
         logger.error(f"[red]✗[/red] Error reading {filename}: {e}")
         return None
+
+
+def load_predictions_from_game_snapshots():
+    """
+    Load predictions from game_snapshots.csv (contains true opening AND closing data).
+
+    This is the preferred data source for grading as it captures data at tip-off time
+    with both opening values (first-seen) and closing values (at tip-off).
+
+    Returns:
+        pd.DataFrame or None: Predictions with opening/closing data or None if file not found
+    """
+    if not os.path.exists(game_snapshots_path):
+        logger.warning(f"[yellow]⚠[/yellow] game_snapshots.csv not found")
+        return None
+
+    try:
+        df = pd.read_csv(game_snapshots_path)
+
+        # Rename columns to match expected format for grading
+        # game_snapshots uses lowercase column names
+        column_map = {
+            'game': 'Game',
+            'team': 'Team',
+            'game_time': 'Game Time',
+            'game_date': 'game_date',
+        }
+        df = df.rename(columns=column_map)
+
+        # Parse Home Team and Away Team from Game column if not present
+        if 'Home Team' not in df.columns or 'Away Team' not in df.columns:
+            def parse_game(game_str):
+                if pd.isna(game_str):
+                    return None, None
+                parts = game_str.split(' vs. ')
+                if len(parts) == 2:
+                    return parts[1], parts[0]  # home, away (format is "Away vs. Home")
+                return None, None
+
+            df[['Home Team', 'Away Team']] = df['Game'].apply(
+                lambda x: pd.Series(parse_game(x))
+            )
+
+        logger.info(f"[green]✓[/green] Loaded {len(df)} game snapshots from game_snapshots.csv")
+        return df
+    except Exception as e:
+        logger.error(f"[red]✗[/red] Error reading game_snapshots.csv: {e}")
+        return None
+
+
+def grade_model_spread(model_spread, opening_spread, actual_margin):
+    """
+    Grade if a model's spread prediction covered against opening line.
+
+    Args:
+        model_spread: What the model predicted (e.g., -5.5)
+        opening_spread: The opening market spread (e.g., -3.0)
+        actual_margin: team_score - opponent_score
+
+    Returns:
+        1 if model was on correct side, 0 if wrong, None if data missing
+    """
+    if pd.isna(model_spread) or pd.isna(opening_spread) or pd.isna(actual_margin):
+        return None
+
+    # Did team actually cover the opening spread?
+    team_covered = (actual_margin + opening_spread) > 0
+
+    # Was model on the correct side?
+    # If model_spread < opening_spread, model thinks team is better than market
+    model_said_cover = model_spread < opening_spread
+
+    return 1 if (model_said_cover == team_covered) else 0
+
+
+def grade_model_moneyline(model_win_prob, team_won):
+    """
+    Grade if model's pick won.
+
+    Args:
+        model_win_prob: Model's win probability for this team
+        team_won: Whether the team won (True/False/None)
+
+    Returns:
+        1 if model picked correctly, 0 if wrong, None if data missing
+    """
+    if pd.isna(model_win_prob) or team_won is None:
+        return None
+
+    model_picked = model_win_prob > 0.5
+    return 1 if (model_picked and team_won) or (not model_picked and not team_won) else 0
+
+
+def grade_model_total(model_total, opening_total, actual_total):
+    """
+    Grade if model's total prediction was correct.
+
+    Args:
+        model_total: What the model predicted for total points
+        opening_total: The opening market total line
+        actual_total: Actual combined score
+
+    Returns:
+        (over_hit, under_hit) - 1/0 for each, None if data missing
+    """
+    if pd.isna(model_total) or pd.isna(opening_total) or pd.isna(actual_total):
+        return None, None
+
+    model_said_over = model_total > opening_total
+    actual_over = actual_total > opening_total
+    actual_under = actual_total < opening_total
+
+    # Push case
+    if actual_total == opening_total:
+        return None, None
+
+    if model_said_over:
+        # Model predicted over
+        over_hit = 1 if actual_over else 0
+        under_hit = 0 if actual_over else 1
+    else:
+        # Model predicted under
+        over_hit = 0 if actual_under else 1
+        under_hit = 1 if actual_under else 0
+
+    return over_hit, under_hit
 
 
 def fetch_historical_odds(snapshot_time, sport="basketball_ncaab"):
@@ -848,18 +975,33 @@ def grade_matched_game(matched_game):
     closing_moneyline = odds_data.get('closing_moneyline') if odds_data else None
 
     # Fall back to prediction file data for opening if not available from backup
+    # Handle both CBB_Output.csv column names (Title Case) and game_snapshots.csv (lowercase)
     if opening_spread is None:
-        opening_spread = prediction_row.get('Opening Spread')
+        opening_spread = prediction_row.get('Opening Spread') or prediction_row.get('opening_spread')
     if opening_moneyline is None:
-        opening_moneyline = prediction_row.get('Opening Moneyline')
+        opening_moneyline = prediction_row.get('Opening Moneyline') or prediction_row.get('opening_moneyline')
     if opening_total is None:
-        opening_total = prediction_row.get('Opening Total')
+        opening_total = prediction_row.get('Opening Total') or prediction_row.get('opening_total')
 
-    # Get opening edge values (these are preserved from first detection)
-    opening_spread_edge = prediction_row.get('Opening Spread Edge')
-    opening_moneyline_edge = prediction_row.get('Opening Moneyline Edge')
-    opening_over_edge = prediction_row.get('Opening Over Edge')
-    opening_under_edge = prediction_row.get('Opening Under Edge')
+    # Fall back to prediction file for closing if not available from backup
+    if closing_spread is None:
+        closing_spread = prediction_row.get('closing_spread')
+    if closing_moneyline is None:
+        closing_moneyline = prediction_row.get('closing_moneyline')
+    if closing_total is None:
+        closing_total = prediction_row.get('closing_total')
+
+    # Get opening edge values (handle both column naming conventions)
+    opening_spread_edge = prediction_row.get('Opening Spread Edge') or prediction_row.get('opening_spread_edge')
+    opening_moneyline_edge = prediction_row.get('Opening Moneyline Edge') or prediction_row.get('opening_moneyline_edge')
+    opening_over_edge = prediction_row.get('Opening Over Edge') or prediction_row.get('opening_over_edge')
+    opening_under_edge = prediction_row.get('Opening Under Edge') or prediction_row.get('opening_under_edge')
+
+    # Get closing edge values (from game_snapshots.csv)
+    closing_spread_edge = prediction_row.get('closing_spread_edge')
+    closing_moneyline_edge = prediction_row.get('closing_moneyline_edge')
+    closing_over_edge = prediction_row.get('closing_over_edge')
+    closing_under_edge = prediction_row.get('closing_under_edge')
 
     # Compile results
     graded = {
@@ -875,44 +1017,121 @@ def grade_matched_game(matched_game):
         # Spread data (opening and closing)
         'opening_spread': opening_spread,
         'closing_spread': closing_spread,
-        'predicted_outcome': prediction_row.get('Predicted Outcome'),
-        'spread_cover_probability': prediction_row.get('Spread Cover Probability'),
+        'predicted_outcome': prediction_row.get('Predicted Outcome') or prediction_row.get('predicted_outcome'),
+        'spread_cover_probability': prediction_row.get('Spread Cover Probability') or prediction_row.get('spread_cover_probability'),
         'spread_covered': spread_results['spread_covered'],
-        'opening_spread_edge': opening_spread_edge,  # Edge at first detection (for model record)
-        'spread_edge': prediction_row.get('Edge For Covering Spread'),  # Current edge
+        'opening_spread_edge': opening_spread_edge,
+        'closing_spread_edge': closing_spread_edge,
         'spread_edge_realized': spread_results['spread_edge_realized'],
 
         # Total data (opening and closing)
         'opening_total': opening_total,
         'closing_total': closing_total,
-        'market_total': prediction_row.get('market_total'),
+        'market_total': prediction_row.get('market_total') or prediction_row.get('closing_total'),
         'actual_total': total_results['actual_total'],
-        'over_cover_probability': prediction_row.get('Over Cover Probability'),
-        'under_cover_probability': prediction_row.get('Under Cover Probability'),
+        'over_cover_probability': prediction_row.get('Over Cover Probability') or prediction_row.get('over_cover_probability'),
+        'under_cover_probability': prediction_row.get('Under Cover Probability') or prediction_row.get('under_cover_probability'),
         'over_hit': total_results['over_hit'],
         'under_hit': total_results['under_hit'],
-        'opening_over_edge': opening_over_edge,  # Edge at first detection (for model record)
-        'opening_under_edge': opening_under_edge,  # Edge at first detection (for model record)
-        'over_edge': prediction_row.get('Over Total Edge'),  # Current edge
-        'under_edge': prediction_row.get('Under Total Edge'),  # Current edge
+        'opening_over_edge': opening_over_edge,
+        'opening_under_edge': opening_under_edge,
+        'closing_over_edge': closing_over_edge,
+        'closing_under_edge': closing_under_edge,
         'over_edge_realized': total_results['over_edge_realized'],
         'under_edge_realized': total_results['under_edge_realized'],
 
         # Moneyline data (opening and closing)
         'opening_moneyline': opening_moneyline,
         'closing_moneyline': closing_moneyline,
-        'moneyline_win_probability': prediction_row.get('Moneyline Win Probability'),
+        'moneyline_win_probability': prediction_row.get('Moneyline Win Probability') or prediction_row.get('moneyline_win_probability'),
         'moneyline_won': moneyline_results['moneyline_won'],
-        'opening_moneyline_edge': opening_moneyline_edge,  # Edge at first detection (for model record)
-        'moneyline_edge': prediction_row.get('Moneyline Edge'),  # Current edge
+        'opening_moneyline_edge': opening_moneyline_edge,
+        'closing_moneyline_edge': closing_moneyline_edge,
         'moneyline_edge_realized': moneyline_results['moneyline_edge_realized'],
 
         # Consensus flags
         'spread_consensus_flag': prediction_row.get('spread_consensus_flag'),
         'moneyline_consensus_flag': prediction_row.get('moneyline_consensus_flag'),
         'over_consensus_flag': prediction_row.get('over_consensus_flag'),
-        'under_consensus_flag': prediction_row.get('under_consensus_flag')
+        'under_consensus_flag': prediction_row.get('under_consensus_flag'),
+
+        # Data source (for distinguishing game_snapshot vs historical_backup)
+        'data_source': prediction_row.get('data_source', 'cbb_output'),
     }
+
+    # Calculate actual margin for individual model grading
+    if is_home:
+        actual_margin = home_score - away_score
+    else:
+        actual_margin = away_score - home_score
+
+    # Determine if team won for moneyline grading
+    if is_home:
+        team_won = home_score > away_score
+    else:
+        team_won = away_score > home_score
+    if home_score == away_score:
+        team_won = None
+
+    # Get opening total for total grading (use first available)
+    grade_opening_total = opening_total if opening_total is not None else prediction_row.get('opening_total')
+    actual_total = total_results['actual_total']
+
+    # ===== Individual Model Grading =====
+
+    # Get individual model predictions (handle both column naming conventions)
+    spread_kenpom = prediction_row.get('spread_kenpom')
+    spread_barttorvik = prediction_row.get('spread_barttorvik')
+    spread_evanmiya = prediction_row.get('spread_evanmiya')
+    spread_hasla = prediction_row.get('spread_hasla')
+
+    win_prob_kenpom = prediction_row.get('win_prob_kenpom')
+    win_prob_barttorvik = prediction_row.get('win_prob_barttorvik')
+    win_prob_evanmiya = prediction_row.get('win_prob_evanmiya')
+
+    proj_total_kenpom = prediction_row.get('projected_total_kenpom')
+    proj_total_barttorvik = prediction_row.get('projected_total_barttorvik')
+    proj_total_evanmiya = prediction_row.get('projected_total_evanmiya')
+    proj_total_hasla = prediction_row.get('projected_total_hasla')
+
+    # Store model predictions
+    graded['spread_kenpom'] = spread_kenpom
+    graded['spread_barttorvik'] = spread_barttorvik
+    graded['spread_evanmiya'] = spread_evanmiya
+    graded['spread_hasla'] = spread_hasla
+    graded['win_prob_kenpom'] = win_prob_kenpom
+    graded['win_prob_barttorvik'] = win_prob_barttorvik
+    graded['win_prob_evanmiya'] = win_prob_evanmiya
+    graded['projected_total_kenpom'] = proj_total_kenpom
+    graded['projected_total_barttorvik'] = proj_total_barttorvik
+    graded['projected_total_evanmiya'] = proj_total_evanmiya
+    graded['projected_total_hasla'] = proj_total_hasla
+
+    # Grade individual model spreads (against opening line)
+    graded['spread_covered_kenpom'] = grade_model_spread(spread_kenpom, opening_spread, actual_margin)
+    graded['spread_covered_barttorvik'] = grade_model_spread(spread_barttorvik, opening_spread, actual_margin)
+    graded['spread_covered_evanmiya'] = grade_model_spread(spread_evanmiya, opening_spread, actual_margin)
+    graded['spread_covered_hasla'] = grade_model_spread(spread_hasla, opening_spread, actual_margin)
+
+    # Grade individual model moneylines
+    graded['moneyline_won_kenpom'] = grade_model_moneyline(win_prob_kenpom, team_won)
+    graded['moneyline_won_barttorvik'] = grade_model_moneyline(win_prob_barttorvik, team_won)
+    graded['moneyline_won_evanmiya'] = grade_model_moneyline(win_prob_evanmiya, team_won)
+
+    # Grade individual model totals
+    over_kenpom, under_kenpom = grade_model_total(proj_total_kenpom, grade_opening_total, actual_total)
+    over_barttorvik, under_barttorvik = grade_model_total(proj_total_barttorvik, grade_opening_total, actual_total)
+    over_evanmiya, under_evanmiya = grade_model_total(proj_total_evanmiya, grade_opening_total, actual_total)
+    over_hasla, under_hasla = grade_model_total(proj_total_hasla, grade_opening_total, actual_total)
+
+    graded['over_hit_kenpom'] = over_kenpom
+    graded['over_hit_barttorvik'] = over_barttorvik
+    graded['over_hit_evanmiya'] = over_evanmiya
+    graded['over_hit_hasla'] = over_hasla
+    graded['under_hit_kenpom'] = under_kenpom
+    graded['under_hit_barttorvik'] = under_barttorvik
+    graded['under_hit_evanmiya'] = under_evanmiya
+    graded['under_hit_hasla'] = under_hasla
 
     return graded
 
@@ -1034,8 +1253,10 @@ def main(use_espn=False, espn_dates=None, use_historical=False):
     """
     Main execution function.
 
-    By default, reads predictions from CBB_Output.csv which contains preserved opening edges.
-    This should be run BEFORE filter_started_games.py removes completed games.
+    Data source priority:
+    1. game_snapshots.csv - Contains true opening AND closing data captured at tip-off (preferred)
+    2. CBB_Output.csv - Contains opening edges but games may be filtered out
+    3. historical_data/ backups - Morning snapshots (legacy mode, --historical flag)
 
     Args:
         use_espn (bool): Use ESPN API instead of OddsAPI
@@ -1105,12 +1326,18 @@ def main(use_espn=False, espn_dates=None, use_historical=False):
 
             log_unmatched_games(unmatched_scores, unmatched_predictions, date_str)
     else:
-        # New mode: use CBB_Output.csv directly (contains preserved opening edges)
-        logger.info("[cyan]Using CBB_Output.csv for opening edges[/cyan]")
-        predictions_df = load_predictions_from_cbb_output()
+        # Preferred mode: Try game_snapshots.csv first (has true opening AND closing data)
+        # Fall back to CBB_Output.csv if snapshots not available
+        predictions_df = load_predictions_from_game_snapshots()
+
+        if predictions_df is not None:
+            logger.info("[cyan]Using game_snapshots.csv (preferred - has true opening AND closing data)[/cyan]")
+        else:
+            logger.info("[cyan]game_snapshots.csv not found, falling back to CBB_Output.csv[/cyan]")
+            predictions_df = load_predictions_from_cbb_output()
 
         if predictions_df is None:
-            logger.warning("[yellow]⚠[/yellow] No predictions found in CBB_Output.csv")
+            logger.warning("[yellow]⚠[/yellow] No predictions found in game_snapshots.csv or CBB_Output.csv")
             return
 
         # Process all completed scores against predictions
