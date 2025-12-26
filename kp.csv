@@ -949,3 +949,45 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2025-12-23,Kentucky,Bellarmine,home,99.0,89,63
 2025-12-23,Morgan St.,Loyola Marymount,away,3.0,61,82
 2025-12-23,Loyola Marymount,Morgan St.,home,97.0,82,61
+2025-12-27,CSUN,Stanford,away,10.0,75,90
+2025-12-27,Stanford,CSUN,home,90.0,90,75
+2025-12-28,San Francisco,Seattle,away,45.0,71,72
+2025-12-28,Seattle,San Francisco,home,55.0,72,71
+2025-12-28,Saint Mary's,Loyola Marymount,away,76.0,72,64
+2025-12-28,Loyola Marymount,Saint Mary's,home,24.0,64,72
+2025-12-28,Santa Clara,Oregon St.,away,65.0,77,73
+2025-12-28,Oregon St.,Santa Clara,home,35.0,73,77
+2025-12-28,Liberty,FIU,away,61.0,78,75
+2025-12-28,FIU,Liberty,home,39.0,75,78
+2025-12-28,Washington St.,Portland,away,61.0,78,75
+2025-12-28,Portland,Washington St.,home,39.0,75,78
+2025-12-28,Pacific,San Diego,away,68.0,77,72
+2025-12-28,San Diego,Pacific,home,32.0,72,77
+2025-12-28,Harvard,Colgate,away,37.0,69,73
+2025-12-28,Colgate,Harvard,home,63.0,73,69
+2025-12-28,Norfolk St.,Louisiana,away,58.0,65,63
+2025-12-28,Louisiana,Norfolk St.,home,42.0,63,65
+2025-12-28,Winthrop,Texas Tech,away,7.0,74,90
+2025-12-28,Texas Tech,Winthrop,home,93.0,90,74
+2025-12-28,Northern Colorado,Colorado,away,12.0,74,87
+2025-12-28,Colorado,Northern Colorado,home,88.0,87,74
+2025-12-28,Old Dominion,Maryland,away,13.0,70,82
+2025-12-28,Maryland,Old Dominion,home,87.0,82,70
+2025-12-28,Charleston Southern,Richmond,away,11.0,71,84
+2025-12-28,Richmond,Charleston Southern,home,89.0,84,71
+2025-12-28,Penn,George Mason,away,9.0,68,83
+2025-12-28,George Mason,Penn,home,91.0,83,68
+2025-12-28,Columbia,North Florida,away,87.0,87,74
+2025-12-28,North Florida,Columbia,home,13.0,74,87
+2025-12-28,Gonzaga,Pepperdine,away,99.0,88,62
+2025-12-28,Pepperdine,Gonzaga,home,1.0,62,88
+2025-12-28,Nebraska Omaha,Oregon,away,8.0,70,85
+2025-12-28,Oregon,Nebraska Omaha,home,92.0,85,70
+2025-12-28,Le Moyne,Boston College,away,14.0,67,79
+2025-12-28,Boston College,Le Moyne,home,86.0,79,67
+2025-12-28,Cal St. Fullerton,SMU,away,4.0,75,95
+2025-12-28,SMU,Cal St. Fullerton,home,96.0,95,75
+2025-12-28,Florida A&M,Georgia Tech,away,6.0,65,82
+2025-12-28,Georgia Tech,Florida A&M,home,94.0,82,65
+2025-12-28,Louisiana Monroe,Kansas St.,away,0.4000000000000057,69,99
+2025-12-28,Kansas St.,Louisiana Monroe,home,99.6,99,69
