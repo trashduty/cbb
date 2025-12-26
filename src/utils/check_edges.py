@@ -35,6 +35,9 @@ MAX_SPREAD_THRESHOLD = 0.10  # 10%
 MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
 MAX_TOTAL_THRESHOLD = 0.10  # 10%
 
+# Maximum line movement threshold (points)
+MAX_LINE_MOVEMENT = 2.5
+
 # Time threshold - only alert on games more than 6 hours away
 HOURS_BEFORE_GAME = 6
 
@@ -73,7 +76,7 @@ def create_total_game_id(row, edge_type):
 def parse_game_time(game_time_str):
     """Parse game time string to datetime object."""
     try:
-        # Format: "Dec 10 07:00PM ET"
+        # Format: \"Dec 10 07:00PM ET\"
         # Parse without year, then add current year
         dt = datetime.strptime(game_time_str. replace(" ET", ""), "%b %d %I:%M%p")
         current_year = datetime.now().year
@@ -87,6 +90,19 @@ def parse_game_time(game_time_str):
     except Exception as e:
         print(f"Warning: Could not parse game time '{game_time_str}': {e}")
         return None
+
+def format_opening_time(opening_time_str):
+    """Convert opening odds time from UTC to ET and format it."""
+    if pd.isna(opening_time_str) or opening_time_str == "N/A":
+        return "N/A"
+    try:
+        # Format: \"2025-12-26 12:00:00 UTC\"
+        dt_utc = datetime.strptime(opening_time_str, "%Y-%m-%d %H:%M:%S UTC")
+        # UTC to ET (approx UTC-5)
+        dt_et = dt_utc - timedelta(hours=5)
+        return dt_et.strftime("%b %d %I:%M%p ET")
+    except Exception as e:
+        return opening_time_str
 
 def is_game_far_enough(game_time_str):
     """Check if game is more than 6 hours away."""
@@ -151,10 +167,11 @@ def send_discord_notification(embed_data):
 def create_spread_embed(row):
     """Create Discord embed for spread edge alert."""
     edge_value = row['Edge For Covering Spread']
+    opening_time = format_opening_time(row.get('Opening Odds Time'))
     
     embed = {
         "title": f"🎯 Spread Edge Alert: {row['Team']}",
-        "description": f"**{row['Game']}**\n{row['Game Time']}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
         "color": 0x00FF00,  # Green
         "fields": [
             {
@@ -191,10 +208,11 @@ def create_spread_embed(row):
 def create_moneyline_embed(row):
     """Create Discord embed for moneyline edge alert."""
     edge_value = row['Moneyline Edge']
+    opening_time = format_opening_time(row.get('Opening Odds Time'))
     
     embed = {
         "title": f"💰 Moneyline Edge Alert: {row['Team']}",
-        "description": f"**{row['Game']}**\n{row['Game Time']}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
         "color": 0x00FF00,  # Green
         "fields": [
             {
@@ -211,6 +229,11 @@ def create_moneyline_embed(row):
                 "name":  "Opening Moneyline",
                 "value": format_decimal(row['Opening Moneyline'], 0),
                 "inline": True
+            },
+            {
+                "name":  "Current Moneyline",
+                "value": format_decimal(row['Current Moneyline'], 0),
+                "inline": True
             }
         ],
         "timestamp": datetime.now(timezone. utc).isoformat()
@@ -221,10 +244,11 @@ def create_moneyline_embed(row):
 def create_over_embed(row):
     """Create Discord embed for over total edge alert."""
     edge_value = row['Over Total Edge']
+    opening_time = format_opening_time(row.get('Opening Odds Time'))
     
     embed = {
         "title": f"📈 Over Total Edge Alert",
-        "description": f"**{row['Game']}**\n{row['Game Time']}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
         "color": 0x0099FF,  # Blue
         "fields": [
             {
@@ -261,10 +285,11 @@ def create_over_embed(row):
 def create_under_embed(row):
     """Create Discord embed for under total edge alert."""
     edge_value = row['Under Total Edge']
+    opening_time = format_opening_time(row.get('Opening Odds Time'))
     
     embed = {
         "title": f"📉 Under Total Edge Alert",
-        "description": f"**{row['Game']}**\n{row['Game Time']}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
         "color": 0xFF9900,  # Orange
         "fields": [
             {
@@ -332,6 +357,9 @@ def check_edges():
             # Check if edge exceeds maximum threshold (likely data error)
             if row['Edge For Covering Spread'] > MAX_SPREAD_THRESHOLD:
                 print(f"  ⚠️ Skipping spread edge for {row['Team']} - edge too high ({format_percentage(row['Edge For Covering Spread'])}) - likely data error")
+            # Check for line movement limit
+            elif pd.notna(row.get('market_spread')) and pd.notna(row.get('Opening Spread')) and abs(row['market_spread'] - row['Opening Spread']) > MAX_LINE_MOVEMENT:
+                print(f"  ⏭️ Skipping spread edge for {row['Team']} - line moved > {MAX_LINE_MOVEMENT} points ({row['Opening Spread']} -> {row['market_spread']})")
             else:
                 # Check if at least 4 out of 4 spread sources have values
                 spread_source_count = count_non_null_spread_sources(row)
@@ -377,6 +405,9 @@ def check_edges():
             # Check if edge exceeds maximum threshold (likely data error)
             if row['Over Total Edge'] > MAX_TOTAL_THRESHOLD:
                 print(f"  ⚠️ Skipping over total edge for {row['Game']} - edge too high ({format_percentage(row['Over Total Edge'])}) - likely data error")
+            # Check for line movement limit
+            elif pd.notna(row.get('market_total')) and pd.notna(row.get('Opening Total')) and abs(row['market_total'] - row['Opening Total']) > MAX_LINE_MOVEMENT:
+                print(f"  ⏭️ Skipping over total edge for {row['Game']} - line moved > {MAX_LINE_MOVEMENT} points ({row['Opening Total']} -> {row['market_total']})")
             else:
                 # Check if at least 4 out of 4 total sources have values
                 total_source_count = count_non_null_total_sources(row)
@@ -405,6 +436,9 @@ def check_edges():
             # Check if edge exceeds maximum threshold (likely data error)
             if row['Under Total Edge'] > MAX_TOTAL_THRESHOLD:
                 print(f"  ⚠️ Skipping under total edge for {row['Game']} - edge too high ({format_percentage(row['Under Total Edge'])}) - likely data error")
+            # Check for line movement limit
+            elif pd.notna(row.get('market_total')) and pd.notna(row.get('Opening Total')) and abs(row['market_total'] - row['Opening Total']) > MAX_LINE_MOVEMENT:
+                print(f"  ⏭️ Skipping under total edge for {row['Game']} - line moved > {MAX_LINE_MOVEMENT} points ({row['Opening Total']} -> {row['market_total']})")
             else:
                 # Check if at least 3 out of 4 total sources have values
                 total_source_count = count_non_null_total_sources(row)
