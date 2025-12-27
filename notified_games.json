@@ -1160,5 +1160,12 @@
     "edge_type": "under",
     "edge_value": 0.0235131005503324,
     "notified_at": "2025-12-26T18:28:45.493418+00:00"
+  },
+  "Oregon St Beavers vs. Santa Clara Broncos|under": {
+    "game": "Oregon St Beavers vs. Santa Clara Broncos",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2025-12-27T19:35:15.839978+00:00"
   }
 }
