@@ -1202,5 +1202,12 @@
     "edge_type": "under",
     "edge_value": 0.0160381552167401,
     "notified_at": "2025-12-28T19:23:57.986145+00:00"
+  },
+  "Coppin St Eagles vs. UMBC Retrievers|under": {
+    "game": "Coppin St Eagles vs. UMBC Retrievers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0275139650541391,
+    "notified_at": "2025-12-28T21:25:27.593579+00:00"
   }
 }
