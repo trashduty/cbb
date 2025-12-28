@@ -1209,5 +1209,19 @@
     "edge_type": "under",
     "edge_value": 0.0275139650541391,
     "notified_at": "2025-12-28T21:25:27.593579+00:00"
+  },
+  "William & Mary Tribe vs. Towson Tigers|William & Mary Tribe|moneyline": {
+    "game": "William & Mary Tribe vs. Towson Tigers",
+    "team": "William & Mary Tribe",
+    "edge_type": "moneyline",
+    "edge_value": 0.0691898252476843,
+    "notified_at": "2025-12-28T22:39:17.703202+00:00"
+  },
+  "Robert Morris Colonials vs. Northern Kentucky Norse|Robert Morris Colonials|moneyline": {
+    "game": "Robert Morris Colonials vs. Northern Kentucky Norse",
+    "team": "Robert Morris Colonials",
+    "edge_type": "moneyline",
+    "edge_value": 0.0594695747258405,
+    "notified_at": "2025-12-28T22:39:17.983058+00:00"
   }
 }
