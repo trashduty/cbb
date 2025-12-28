@@ -1167,5 +1167,12 @@
     "edge_type": "under",
     "edge_value": 0.0150273245156959,
     "notified_at": "2025-12-27T19:35:15.839978+00:00"
+  },
+  "Pepperdine Waves vs. Gonzaga Bulldogs|Pepperdine Waves|spread": {
+    "game": "Pepperdine Waves vs. Gonzaga Bulldogs",
+    "team": "Pepperdine Waves",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-28T14:08:07.190364+00:00"
   }
 }
