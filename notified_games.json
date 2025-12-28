@@ -1174,5 +1174,33 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-28T14:08:07.190364+00:00"
+  },
+  "Sacred Heart Pioneers vs. Merrimack Warriors|Sacred Heart Pioneers|moneyline": {
+    "game": "Sacred Heart Pioneers vs. Merrimack Warriors",
+    "team": "Sacred Heart Pioneers",
+    "edge_type": "moneyline",
+    "edge_value": 0.040509084386015,
+    "notified_at": "2025-12-28T19:23:56.497697+00:00"
+  },
+  "William & Mary Tribe vs. Towson Tigers|under": {
+    "game": "William & Mary Tribe vs. Towson Tigers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0328729849078428,
+    "notified_at": "2025-12-28T19:23:56.918953+00:00"
+  },
+  "Louisiana Tech Bulldogs vs. UTEP Miners|under": {
+    "game": "Louisiana Tech Bulldogs vs. UTEP Miners",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0173057478467509,
+    "notified_at": "2025-12-28T19:23:57.601452+00:00"
+  },
+  "Northern Iowa Panthers vs. Valparaiso Beacons|under": {
+    "game": "Northern Iowa Panthers vs. Valparaiso Beacons",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0160381552167401,
+    "notified_at": "2025-12-28T19:23:57.986145+00:00"
   }
 }
