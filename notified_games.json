@@ -1265,5 +1265,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0492530859328724,
     "notified_at": "2025-12-29T14:26:06.448696+00:00"
+  },
+  "Louisiana Tech Bulldogs vs. UTEP Miners|Louisiana Tech Bulldogs|moneyline": {
+    "game": "Louisiana Tech Bulldogs vs. UTEP Miners",
+    "team": "Louisiana Tech Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0471348767504573,
+    "notified_at": "2025-12-29T15:08:57.087122+00:00"
   }
 }
