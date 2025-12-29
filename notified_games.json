@@ -1258,5 +1258,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0410454737895914,
     "notified_at": "2025-12-29T06:32:15.536199+00:00"
+  },
+  "Cleveland St Vikings vs. IUPUI Jaguars|Cleveland St Vikings|moneyline": {
+    "game": "Cleveland St Vikings vs. IUPUI Jaguars",
+    "team": "Cleveland St Vikings",
+    "edge_type": "moneyline",
+    "edge_value": 0.0492530859328724,
+    "notified_at": "2025-12-29T14:26:06.448696+00:00"
   }
 }
