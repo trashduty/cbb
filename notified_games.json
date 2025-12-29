@@ -1286,5 +1286,12 @@
     "edge_type": "spread",
     "edge_value": 0.0549117930187821,
     "notified_at": "2025-12-29T20:26:25.544299+00:00"
+  },
+  "Davidson Wildcats vs. Duquesne Dukes|Davidson Wildcats|moneyline": {
+    "game": "Davidson Wildcats vs. Duquesne Dukes",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0428714630195412,
+    "notified_at": "2025-12-29T23:08:11.096704+00:00"
   }
 }
