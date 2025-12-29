@@ -1272,5 +1272,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0471348767504573,
     "notified_at": "2025-12-29T15:08:57.087122+00:00"
+  },
+  "Eastern Michigan Eagles vs. Massachusetts Minutemen|under": {
+    "game": "Eastern Michigan Eagles vs. Massachusetts Minutemen",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0126339354023873,
+    "notified_at": "2025-12-29T19:35:20.039256+00:00"
   }
 }
