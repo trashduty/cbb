@@ -1230,5 +1230,12 @@
     "edge_type": "under",
     "edge_value": 0.0118564187013748,
     "notified_at": "2025-12-29T01:12:10.126237+00:00"
+  },
+  "Delaware Blue Hens vs. Missouri St Bears|under": {
+    "game": "Delaware Blue Hens vs. Missouri St Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0219699139296366,
+    "notified_at": "2025-12-29T01:58:16.363358+00:00"
   }
 }
