@@ -991,3 +991,161 @@ Georgia Tech,Florida A&M,Florida A&M,20251228,17,0.06,147
 Georgia Tech,Florida A&M,Georgia Tech,20251228,-17,0.94,147
 Kansas St.,Louisiana Monroe,Louisiana Monroe,20251228,30,0.0040000000000000565,168
 Kansas St.,Louisiana Monroe,Kansas St.,20251228,-30,0.996,168
+California,Louisville,Louisville,20251230,-6,0.71,160
+California,Louisville,California,20251230,6,0.29,160
+Creighton,Butler,Butler,20251230,4,0.36,152
+Creighton,Butler,Creighton,20251230,-4,0.64,152
+Stanford,Notre Dame,Notre Dame,20251230,1,0.44,149
+Stanford,Notre Dame,Stanford,20251230,-1,0.56,149
+Boise St.,New Mexico,New Mexico,20251230,5,0.31,145
+Boise St.,New Mexico,Boise St.,20251230,-5,0.69,145
+Marquette,Seton Hall,Seton Hall,20251230,-4,0.64,140
+Marquette,Seton Hall,Marquette,20251230,4,0.36,140
+Colorado St.,Nevada,Nevada,20251230,5,0.36,149
+Colorado St.,Nevada,Colorado St.,20251230,-5,0.64,149
+Bowling Green,Miami OH,Miami OH,20251230,4,0.37,154
+Bowling Green,Miami OH,Bowling Green,20251230,-4,0.63,154
+Miami FL,Pittsburgh,Pittsburgh,20251230,10,0.2,148
+Miami FL,Pittsburgh,Miami FL,20251230,-10,0.8,148
+Davidson,Duquesne,Duquesne,20251230,4,0.39,154
+Davidson,Duquesne,Davidson,20251230,-4,0.61,154
+Oregon St.,San Francisco,San Francisco,20251230,-4,0.65,142
+Oregon St.,San Francisco,Oregon St.,20251230,4,0.35,142
+Loyola Marymount,Pacific,Pacific,20251230,4,0.37,136
+Loyola Marymount,Pacific,Loyola Marymount,20251230,-4,0.63,136
+Charlotte,Temple,Temple,20251230,1,0.45,147
+Charlotte,Temple,Charlotte,20251230,-1,0.55,147
+Seattle,Washington St.,Washington St.,20251230,6,0.3,144
+Seattle,Washington St.,Seattle,20251230,-6,0.7,144
+Eastern Michigan,Massachusetts,Massachusetts,20251230,1,0.47,145
+Eastern Michigan,Massachusetts,Eastern Michigan,20251230,-1,0.53,145
+San Jose St.,San Diego St.,San Diego St.,20251230,-9,0.8,145
+San Jose St.,San Diego St.,San Jose St.,20251230,9,0.2,145
+Princeton,Vermont,Vermont,20251230,-1,0.56,143
+Princeton,Vermont,Princeton,20251230,1,0.44,143
+Fresno St.,Utah St.,Utah St.,20251230,-13,0.88,151
+Fresno St.,Utah St.,Fresno St.,20251230,13,0.12,151
+Tennessee Tech,Tennessee St.,Tennessee St.,20251230,1,0.47,153
+Tennessee Tech,Tennessee St.,Tennessee Tech,20251230,-1,0.53,153
+North Carolina,Florida St.,Florida St.,20251230,15,0.08,159
+North Carolina,Florida St.,North Carolina,20251230,-15,0.92,159
+Northern Illinois,Buffalo,Buffalo,20251230,-6,0.69,154
+Northern Illinois,Buffalo,Northern Illinois,20251230,6,0.31,154
+Central Michigan,Ohio,Ohio,20251230,-5,0.68,151
+Central Michigan,Ohio,Central Michigan,20251230,5,0.32,151
+Portland,Santa Clara,Santa Clara,20251230,-12,0.87,156
+Portland,Santa Clara,Portland,20251230,12,0.13,156
+Toledo,Western Michigan,Western Michigan,20251230,9,0.21,163
+Toledo,Western Michigan,Toledo,20251230,-9,0.79,163
+Incarnate Word,Southeastern Louisiana,Southeastern Louisiana,20251230,8,0.24,142
+Incarnate Word,Southeastern Louisiana,Incarnate Word,20251230,-8,0.76,142
+Pepperdine,Saint Mary's,Saint Mary's,20251230,-16,0.92,140
+Pepperdine,Saint Mary's,Pepperdine,20251230,16,0.08,140
+San Diego,Gonzaga,Gonzaga,20251230,-26,0.99,158
+San Diego,Gonzaga,San Diego,20251230,26,0.01,158
+Air Force,Wyoming,Wyoming,20251230,-11,0.85,141
+Air Force,Wyoming,Air Force,20251230,11,0.15,141
+Wisconsin,Milwaukee,Milwaukee,20251230,19,0.04,161
+Wisconsin,Milwaukee,Wisconsin,20251230,-19,0.96,161
+The Citadel,East Tennessee St.,East Tennessee St.,20251230,-13,0.89,149
+The Citadel,East Tennessee St.,The Citadel,20251230,13,0.11,149
+Northwestern,Howard,Howard,20251230,18,0.05,146
+Northwestern,Howard,Northwestern,20251230,-18,0.95,146
+South Carolina,Albany,Albany,20251230,18,0.05,148
+South Carolina,Albany,South Carolina,20251230,-18,0.95,148
+Nebraska,New Hampshire,New Hampshire,20251230,29,0.0040000000000000565,145
+Nebraska,New Hampshire,Nebraska,20251230,-29,0.996,145
+Tennessee,South Carolina St.,South Carolina St.,20251230,38,0.00030000000000001136,148
+Tennessee,South Carolina St.,Tennessee,20251230,-38,0.9997,148
+Virginia Tech,Virginia,Virginia,20251231,-4,0.63,156
+Virginia Tech,Virginia,Virginia Tech,20251231,4,0.37,156
+Syracuse,Clemson,Clemson,20251231,-2,0.57,142
+Syracuse,Clemson,Syracuse,20251231,2,0.43,142
+Richmond,George Washington,George Washington,20251231,-1,0.52,161
+Richmond,George Washington,Richmond,20251231,1,0.48,161
+Georgetown,St. John's,St. John's,20251231,-8,0.77,156
+Georgetown,St. John's,Georgetown,20251231,8,0.23,156
+N.C. State,Wake Forest,Wake Forest,20251231,9,0.2,161
+N.C. State,Wake Forest,N.C. State,20251231,-9,0.8,161
+UAB,Wichita St.,Wichita St.,20251231,2,0.42,148
+UAB,Wichita St.,UAB,20251231,-2,0.58,148
+Xavier,Connecticut,Connecticut,20251231,-13,0.87,145
+Xavier,Connecticut,Xavier,20251231,13,0.13,145
+Furman,Mercer,Mercer,20251231,3,0.38,155
+Furman,Mercer,Furman,20251231,-3,0.62,155
+VCU,St. Bonaventure,St. Bonaventure,20251231,11,0.16,155
+VCU,St. Bonaventure,VCU,20251231,-11,0.84,155
+Elon,Charleston,Charleston,20251231,5,0.35,157
+Elon,Charleston,Elon,20251231,-5,0.65,157
+Hampton,Towson,Towson,20251231,-4,0.62,134
+Hampton,Towson,Hampton,20251231,4,0.38,134
+East Carolina,Tulane,Tulane,20251231,-1,0.53,147
+East Carolina,Tulane,East Carolina,20251231,1,0.47,147
+Monmouth,Campbell,Campbell,20251231,2,0.41,154
+Monmouth,Campbell,Monmouth,20251231,-2,0.59,154
+Texas A&M Corpus Chris,New Orleans,New Orleans,20251231,2,0.41,148
+Texas A&M Corpus Chris,New Orleans,Texas A&M Corpus Chris,20251231,-2,0.59,148
+Western Carolina,Wofford,Wofford,20251231,1,0.49,153
+Western Carolina,Wofford,Western Carolina,20251231,-1,0.51,153
+USC Upstate,Radford,Radford,20251231,2,0.42,158
+USC Upstate,Radford,USC Upstate,20251231,-2,0.58,158
+Memphis,North Texas,North Texas,20251231,10,0.19,132
+Memphis,North Texas,Memphis,20251231,-10,0.81,132
+UNC Asheville,High Point,High Point,20251231,-8,0.77,158
+UNC Asheville,High Point,UNC Asheville,20251231,8,0.23,158
+North Carolina A&T,Northeastern,Northeastern,20251231,-2,0.59,152
+North Carolina A&T,Northeastern,North Carolina A&T,20251231,2,0.41,152
+East Texas A&M,Lamar,Lamar,20251231,1,0.5,145
+East Texas A&M,Lamar,East Texas A&M,20251231,-1,0.5,145
+La Salle,George Mason,George Mason,20251231,-8,0.77,138
+La Salle,George Mason,La Salle,20251231,8,0.23,138
+UT Rio Grande Valley,Nicholls,Nicholls,20251231,6,0.3,150
+UT Rio Grande Valley,Nicholls,UT Rio Grande Valley,20251231,-6,0.7,150
+Old Dominion,Appalachian St.,Appalachian St.,20251231,4,0.36,136
+Old Dominion,Appalachian St.,Old Dominion,20251231,-4,0.64,136
+Northwestern St.,Stephen F. Austin,Stephen F. Austin,20251231,-6,0.71,146
+Northwestern St.,Stephen F. Austin,Northwestern St.,20251231,6,0.29,146
+Holy Cross,Bucknell,Bucknell,20251231,1,0.5,141
+Holy Cross,Bucknell,Holy Cross,20251231,-1,0.5,141
+Louisiana,South Alabama,South Alabama,20251231,-4,0.65,128
+Louisiana,South Alabama,Louisiana,20251231,4,0.35,128
+Villanova,DePaul,DePaul,20251231,15,0.09,139
+Villanova,DePaul,Villanova,20251231,-15,0.91,139
+Lehigh,Army,Army,20251231,4,0.36,144
+Lehigh,Army,Lehigh,20251231,-4,0.64,144
+Lafayette,Colgate,Colgate,20251231,-6,0.71,148
+Lafayette,Colgate,Lafayette,20251231,6,0.29,148
+Navy,Boston University,Boston University,20251231,6,0.28,144
+Navy,Boston University,Navy,20251231,-6,0.72,144
+Longwood,Winthrop,Winthrop,20251231,-9,0.79,163
+Longwood,Winthrop,Longwood,20251231,9,0.21,163
+American,Loyola MD,Loyola MD,20251231,8,0.24,156
+American,Loyola MD,American,20251231,-8,0.76,156
+Troy,Texas St.,Texas St.,20251231,9,0.19,141
+Troy,Texas St.,Troy,20251231,-9,0.81,141
+North Dakota St.,South Dakota,South Dakota,20251231,10,0.18,162
+North Dakota St.,South Dakota,North Dakota St.,20251231,-10,0.82,162
+William & Mary,Stony Brook,Stony Brook,20251231,11,0.16,155
+William & Mary,Stony Brook,William & Mary,20251231,-11,0.84,155
+Duke,Georgia Tech,Georgia Tech,20251231,24,0.02,150
+Duke,Georgia Tech,Duke,20251231,-24,0.98,150
+Dayton,Fordham,Fordham,20251231,13,0.11,137
+Dayton,Fordham,Dayton,20251231,-13,0.89,137
+Denver,Kansas City,Kansas City,20251231,10,0.2,160
+Denver,Kansas City,Denver,20251231,-10,0.8,160
+Tulsa,Rice,Rice,20251231,15,0.08,153
+Tulsa,Rice,Tulsa,20251231,-15,0.92,153
+UNC Wilmington,Drexel,Drexel,20251231,13,0.12,141
+UNC Wilmington,Drexel,UNC Wilmington,20251231,-13,0.88,141
+Gardner Webb,Charleston Southern,Charleston Southern,20251231,-11,0.85,159
+Gardner Webb,Charleston Southern,Gardner Webb,20251231,11,0.15,159
+Florida Atlantic,UTSA,UTSA,20251231,14,0.1,152
+Florida Atlantic,UTSA,Florida Atlantic,20251231,-14,0.9,152
+Saint Louis,Saint Joseph's,Saint Joseph's,20251231,20,0.04,154
+Saint Louis,Saint Joseph's,Saint Louis,20251231,-20,0.96,154
+Rhode Island,Loyola Chicago,Loyola Chicago,20251231,14,0.1,146
+Rhode Island,Loyola Chicago,Rhode Island,20251231,-14,0.9,146
+Penn,NJIT,NJIT,20251231,13,0.12,149
+Penn,NJIT,Penn,20251231,-13,0.88,149
+Marshall,Georgia St.,Georgia St.,20251231,14,0.09,150
+Marshall,Georgia St.,Marshall,20251231,-14,0.91,150
