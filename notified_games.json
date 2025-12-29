@@ -1223,5 +1223,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0594695747258405,
     "notified_at": "2025-12-28T22:39:17.983058+00:00"
+  },
+  "Murray St Racers vs. Southern Illinois Salukis|under": {
+    "game": "Murray St Racers vs. Southern Illinois Salukis",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0118564187013748,
+    "notified_at": "2025-12-29T01:12:10.126237+00:00"
   }
 }
