@@ -1251,5 +1251,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0413783536647072,
     "notified_at": "2025-12-29T04:10:28.512844+00:00"
+  },
+  "UT Rio Grande Valley Vaqueros vs. New Orleans Privateers|UT Rio Grande Valley Vaqueros|moneyline": {
+    "game": "UT Rio Grande Valley Vaqueros vs. New Orleans Privateers",
+    "team": "UT Rio Grande Valley Vaqueros",
+    "edge_type": "moneyline",
+    "edge_value": 0.0410454737895914,
+    "notified_at": "2025-12-29T06:32:15.536199+00:00"
   }
 }
