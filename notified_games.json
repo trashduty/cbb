@@ -1300,5 +1300,12 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2025-12-30T00:56:14.740103+00:00"
+  },
+  "San Diego Toreros vs. Gonzaga Bulldogs|under": {
+    "game": "San Diego Toreros vs. Gonzaga Bulldogs",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103683480534146,
+    "notified_at": "2025-12-30T07:50:15.340105+00:00"
   }
 }
