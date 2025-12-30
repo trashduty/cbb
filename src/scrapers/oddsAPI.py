@@ -76,14 +76,12 @@ def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,to
                 logger.info(f"Game: {game['away_team']} @ {game['home_team']}")
                 logger.info(f"Raw timestamp: {game['commence_time']}")
             
-            # Filter out live games using commence_time
-            current_time = datetime.now(timezone('UTC'))
-            data = [game for game in data if datetime.strptime(game['commence_time'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone('UTC')) > current_time]
-            logger.info(f"[cyan]Filtered to {len(data)} upcoming games[/cyan]")
-            
+            # Note: Don't filter started games here - let filter_started_games.py handle it
+            # so game snapshots can be captured before removal
+
             # Create a rich table to display the data
             table = Table(
-                title=f"OddsAPI Request ({len(data)} upcoming games)",
+                title=f"OddsAPI Request ({len(data)} games)",
                 show_header=True,
                 header_style="bold magenta",
                 show_lines=False,
