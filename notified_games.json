@@ -1314,5 +1314,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2025-12-30T15:08:59.829933+00:00"
+  },
+  "South Carolina Upstate Spartans vs. Radford Highlanders|South Carolina Upstate Spartans|spread": {
+    "game": "South Carolina Upstate Spartans vs. Radford Highlanders",
+    "team": "South Carolina Upstate Spartans",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2025-12-30T21:50:24.964283+00:00"
   }
 }
