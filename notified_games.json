@@ -1328,5 +1328,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0575085305522945,
     "notified_at": "2025-12-30T22:07:55.622500+00:00"
+  },
+  "South Carolina Upstate Spartans vs. Radford Highlanders|South Carolina Upstate Spartans|moneyline": {
+    "game": "South Carolina Upstate Spartans vs. Radford Highlanders",
+    "team": "South Carolina Upstate Spartans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0410594940222002,
+    "notified_at": "2025-12-30T23:49:44.142257+00:00"
   }
 }
