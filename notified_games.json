@@ -1321,5 +1321,12 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2025-12-30T21:50:24.964283+00:00"
+  },
+  "Monmouth Hawks vs. Campbell Fighting Camels|Monmouth Hawks|moneyline": {
+    "game": "Monmouth Hawks vs. Campbell Fighting Camels",
+    "team": "Monmouth Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0575085305522945,
+    "notified_at": "2025-12-30T22:07:55.622500+00:00"
   }
 }
