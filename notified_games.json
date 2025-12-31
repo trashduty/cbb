@@ -1342,5 +1342,12 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2025-12-31T04:06:03.005449+00:00"
+  },
+  "UNC Asheville Bulldogs vs. High Point Panthers|UNC Asheville Bulldogs|moneyline": {
+    "game": "UNC Asheville Bulldogs vs. High Point Panthers",
+    "team": "UNC Asheville Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.040894367899444,
+    "notified_at": "2025-12-31T05:25:36.874371+00:00"
   }
 }
