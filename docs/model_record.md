@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** December 30, 2025 at 11:16 PM ET
+**Last Updated:** December 30, 2025 at 11:33 PM ET
 
 **Season Record Period:** 2025-11-03 to 2025-12-31
 
-**Total Games Graded:** 273 games (546 team-rows)
+**Total Games Graded:** 274 games (548 team-rows)
 
 ---
 
