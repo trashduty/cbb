@@ -64,7 +64,7 @@ def get_edge_tier(edge_value):
     return None
 
 
-def calculate_record(df, edge_col, outcome_col, bet_type):
+def calculate_record(df, edge_col, outcome_col, bet_type, consensus_col=None):
     """
     Calculate win/loss record by edge tier.
 
@@ -73,10 +73,15 @@ def calculate_record(df, edge_col, outcome_col, bet_type):
         edge_col: Column name for opening edge
         outcome_col: Column name for outcome (1=win, 0=loss)
         bet_type: Name of bet type for reporting
+        consensus_col: Optional column name for consensus flag (1=consensus)
 
     Returns:
         List of dictionaries with tier records
     """
+    # Filter by consensus if specified
+    if consensus_col and consensus_col in df.columns:
+        df = df[df[consensus_col] == 1]
+    
     records = []
 
     for tier in EDGE_TIERS:
@@ -120,6 +125,49 @@ def calculate_record(df, edge_col, outcome_col, bet_type):
         })
 
     return records
+
+
+def calculate_individual_model_record(df, outcome_col, model_name):
+    """
+    Calculate overall record for an individual model (no edge tiers).
+    
+    Args:
+        df: DataFrame with graded results
+        outcome_col: Column name for outcome (1=win, 0=loss)
+        model_name: Name of the model for reporting
+        
+    Returns:
+        Dictionary with model record
+    """
+    # Filter out missing values
+    valid_df = df[df[outcome_col].notna()]
+    
+    if len(valid_df) == 0:
+        return {
+            'model_name': model_name,
+            'wins': 0,
+            'losses': 0,
+            'total': 0,
+            'win_rate': None,
+            'profit_units': 0
+        }
+    
+    wins = (valid_df[outcome_col] == 1).sum()
+    losses = (valid_df[outcome_col] == 0).sum()
+    total = wins + losses
+    win_rate = wins / total if total > 0 else None
+    
+    # Calculate profit assuming -110 standard juice
+    profit_units = (wins * 0.909) - losses
+    
+    return {
+        'model_name': model_name,
+        'wins': wins,
+        'losses': losses,
+        'total': total,
+        'win_rate': win_rate,
+        'profit_units': round(profit_units, 2)
+    }
 
 
 def generate_model_record(df):
@@ -191,46 +239,124 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 """
 
-    # Generate tables for each bet type
-    for bet_type in ['Spread', 'Moneyline', 'Over', 'Under']:
-        type_df = record_df[record_df['bet_type'] == bet_type]
+    # Determine which columns to use
+    spread_edge_col = 'opening_spread_edge' if 'opening_spread_edge' in graded_df.columns else 'spread_edge'
+    ml_edge_col = 'opening_moneyline_edge' if 'opening_moneyline_edge' in graded_df.columns else 'moneyline_edge'
+    over_edge_col = 'opening_over_edge' if 'opening_over_edge' in graded_df.columns else 'over_edge'
+    under_edge_col = 'opening_under_edge' if 'opening_under_edge' in graded_df.columns else 'under_edge'
 
-        md += f"### {bet_type} Bets\n\n"
-        md += "| Edge Tier | Record | Win Rate | Profit (Units) |\n"
-        md += "|-----------|--------|----------|----------------|\n"
+    # Generate tables for each bet type (All Bets and Consensus Only)
+    bet_configs = [
+        ('Spread', spread_edge_col, 'spread_covered', 'spread_consensus_flag'),
+        ('Moneyline', ml_edge_col, 'moneyline_won', 'moneyline_consensus_flag'),
+        ('Over', over_edge_col, 'over_hit', 'over_consensus_flag'),
+        ('Under', under_edge_col, 'under_hit', 'under_consensus_flag'),
+    ]
+    
+    for bet_type, edge_col, outcome_col, consensus_col in bet_configs:
+        # All Bets section
+        md += f"### {bet_type} Bets - All\n\n"
+        all_records = calculate_record(graded_df, edge_col, outcome_col, bet_type)
+        md += generate_bet_table(all_records)
+        
+        # Consensus Only section
+        md += f"### {bet_type} Bets - Consensus Only\n\n"
+        consensus_records = calculate_record(graded_df, edge_col, outcome_col, bet_type, consensus_col)
+        md += generate_bet_table(consensus_records)
 
-        total_wins = 0
-        total_losses = 0
-        total_profit = 0
+    # Individual Model Performance sections
+    md += """---
 
-        for _, row in type_df.iterrows():
-            wins = int(row['wins'])
-            losses = int(row['losses'])
-            total = int(row['total'])
-            win_rate = f"{row['win_rate']*100:.1f}%" if pd.notna(row['win_rate']) else "N/A"
-            profit = row['profit_units']
-            profit_str = f"+{profit:.2f}" if profit >= 0 else f"{profit:.2f}"
+## Individual Model Performance
 
-            total_wins += wins
-            total_losses += losses
-            total_profit += profit
+Performance of each individual predictive model, calculated across all games regardless of edge.
 
-            md += f"| {row['edge_tier']} | {wins}-{losses} | {win_rate} | {profit_str} |\n"
+"""
 
-        # Add totals row
-        total_games = total_wins + total_losses
-        total_win_rate = f"{total_wins/total_games*100:.1f}%" if total_games > 0 else "N/A"
-        total_profit_str = f"+{total_profit:.2f}" if total_profit >= 0 else f"{total_profit:.2f}"
-        md += f"| **Total** | **{total_wins}-{total_losses}** | **{total_win_rate}** | **{total_profit_str}** |\n"
-        md += "\n"
+    # Spread models
+    md += "### Individual Model Performance - Spread Bets\n\n"
+    md += "| Model | Record | Win Rate | Profit (Units) |\n"
+    md += "|-------|--------|----------|----------------|\n"
+    
+    spread_models = [
+        ('KenPom', 'spread_covered_kenpom'),
+        ('Bart Torvik', 'spread_covered_barttorvik'),
+        ('Evan Miya', 'spread_covered_evanmiya'),
+        ('Haslametrics', 'spread_covered_hasla'),
+    ]
+    
+    for model_name, col in spread_models:
+        if col in graded_df.columns:
+            record = calculate_individual_model_record(graded_df, col, model_name)
+            md += format_individual_model_row(record)
+    
+    md += "\n"
+    
+    # Moneyline models
+    md += "### Individual Model Performance - Moneyline Bets\n\n"
+    md += "| Model | Record | Win Rate | Profit (Units) |\n"
+    md += "|-------|--------|----------|----------------|\n"
+    
+    ml_models = [
+        ('KenPom', 'moneyline_won_kenpom'),
+        ('Bart Torvik', 'moneyline_won_barttorvik'),
+        ('Evan Miya', 'moneyline_won_evanmiya'),
+    ]
+    
+    for model_name, col in ml_models:
+        if col in graded_df.columns:
+            record = calculate_individual_model_record(graded_df, col, model_name)
+            md += format_individual_model_row(record)
+    
+    md += "\n"
+    
+    # Total models - Over
+    md += "### Individual Model Performance - Over Bets\n\n"
+    md += "| Model | Record | Win Rate | Profit (Units) |\n"
+    md += "|-------|--------|----------|----------------|\n"
+    
+    over_models = [
+        ('KenPom', 'over_hit_kenpom'),
+        ('Bart Torvik', 'over_hit_barttorvik'),
+        ('Evan Miya', 'over_hit_evanmiya'),
+        ('Haslametrics', 'over_hit_hasla'),
+    ]
+    
+    for model_name, col in over_models:
+        if col in graded_df.columns:
+            record = calculate_individual_model_record(graded_df, col, model_name)
+            md += format_individual_model_row(record)
+    
+    md += "\n"
+    
+    # Total models - Under
+    md += "### Individual Model Performance - Under Bets\n\n"
+    md += "| Model | Record | Win Rate | Profit (Units) |\n"
+    md += "|-------|--------|----------|----------------|\n"
+    
+    under_models = [
+        ('KenPom', 'under_hit_kenpom'),
+        ('Bart Torvik', 'under_hit_barttorvik'),
+        ('Evan Miya', 'under_hit_evanmiya'),
+        ('Haslametrics', 'under_hit_hasla'),
+    ]
+    
+    for model_name, col in under_models:
+        if col in graded_df.columns:
+            record = calculate_individual_model_record(graded_df, col, model_name)
+            md += format_individual_model_row(record)
+    
+    md += "\n"
 
     md += """---
 
 ## Methodology
 
 - **Opening Edge**: The difference between our model's predicted probability and the market's implied probability when the game first appeared in our system
+- **Consensus**: All individual models agree on the direction of the bet
 - **Profit Calculation**: Assumes flat betting at -110 standard juice (+0.909 units per win, -1 unit per loss)
 - **Edge Tiers**: Games are bucketed by their opening edge percentage
+- **Individual Model Performance**: Each model's performance across all games, regardless of edge
 
 ## Notes
 
@@ -241,6 +367,50 @@ The opening edge is calculated when a game first appears in our system, comparin
 """
 
     return md
+
+
+def generate_bet_table(records):
+    """Generate markdown table for bet records."""
+    md = "| Edge Tier | Record | Win Rate | Profit (Units) |\n"
+    md += "|-----------|--------|----------|----------------|\n"
+    
+    total_wins = 0
+    total_losses = 0
+    total_profit = 0
+    
+    for record in records:
+        wins = int(record['wins'])
+        losses = int(record['losses'])
+        total = int(record['total'])
+        win_rate = f"{record['win_rate']*100:.1f}%" if pd.notna(record['win_rate']) else "N/A"
+        profit = record['profit_units']
+        profit_str = f"+{profit:.2f}" if profit >= 0 else f"{profit:.2f}"
+        
+        total_wins += wins
+        total_losses += losses
+        total_profit += profit
+        
+        md += f"| {record['edge_tier']} | {wins}-{losses} | {win_rate} | {profit_str} |\n"
+    
+    # Add totals row
+    total_games = total_wins + total_losses
+    total_win_rate = f"{total_wins/total_games*100:.1f}%" if total_games > 0 else "N/A"
+    total_profit_str = f"+{total_profit:.2f}" if total_profit >= 0 else f"{total_profit:.2f}"
+    md += f"| **Total** | **{total_wins}-{total_losses}** | **{total_win_rate}** | **{total_profit_str}** |\n"
+    md += "\n"
+    
+    return md
+
+
+def format_individual_model_row(record):
+    """Format a single row for individual model performance table."""
+    wins = int(record['wins'])
+    losses = int(record['losses'])
+    win_rate = f"{record['win_rate']*100:.1f}%" if pd.notna(record['win_rate']) and record['win_rate'] is not None else "N/A"
+    profit = record['profit_units']
+    profit_str = f"+{profit:.2f}" if profit >= 0 else f"{profit:.2f}"
+    
+    return f"| {record['model_name']} | {wins}-{losses} | {win_rate} | {profit_str} |\n"
 
 
 def main():
