@@ -328,6 +328,15 @@ def load_predictions_from_game_snapshots():
             'team': 'Team',
             'game_time': 'Game Time',
             'game_date': 'game_date',
+            'opening_spread': 'Opening Spread',
+            'opening_moneyline': 'Opening Moneyline',
+            'opening_total': 'Opening Total',
+            'closing_total': 'market_total',
+            'spread_cover_probability': 'Spread Cover Probability',
+            'over_cover_probability': 'Over Cover Probability',
+            'under_cover_probability': 'Under Cover Probability',
+            'moneyline_win_probability': 'Moneyline Win Probability',
+            'devigged_probability': 'Devigged Probability',
         }
         df = df.rename(columns=column_map)
 
