@@ -1157,38 +1157,38 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-01,Belmont,Bradley,home,76.0,80,72
 2026-01-01,Oakland,Youngstown St.,away,47.0,79,80
 2026-01-01,Youngstown St.,Oakland,home,53.0,80,79
-2026-01-01,Cal Baptist,UT Arlington,away,51.0,68,67
-2026-01-01,UT Arlington,Cal Baptist,home,49.0,67,68
+2026-01-01,Cal Baptist,UT Arlington,away,52.0,68,67
+2026-01-01,UT Arlington,Cal Baptist,home,48.0,67,68
 2026-01-01,Northern Colorado,Montana St.,away,44.0,74,76
 2026-01-01,Montana St.,Northern Colorado,home,56.0,76,74
-2026-01-01,Murray St.,Illinois Chicago,away,72.0,85,78
-2026-01-01,Illinois Chicago,Murray St.,home,28.0,78,85
-2026-01-01,UC Santa Barbara,Cal St. Fullerton,away,62.0,84,80
-2026-01-01,Cal St. Fullerton,UC Santa Barbara,home,38.0,80,84
-2026-01-01,Florida Gulf Coast,Central Arkansas,away,52.0,78,77
-2026-01-01,Central Arkansas,Florida Gulf Coast,home,48.0,77,78
-2026-01-01,Portland St.,Weber St.,away,46.0,75,76
-2026-01-01,Weber St.,Portland St.,home,54.0,76,75
-2026-01-01,CSUN,UC Davis,away,35.0,80,85
-2026-01-01,UC Davis,CSUN,home,65.0,85,80
+2026-01-01,Murray St.,Illinois Chicago,away,71.0,85,78
+2026-01-01,Illinois Chicago,Murray St.,home,29.0,78,85
+2026-01-01,UC Santa Barbara,Cal St. Fullerton,away,63.0,84,80
+2026-01-01,Cal St. Fullerton,UC Santa Barbara,home,37.0,80,84
+2026-01-01,Florida Gulf Coast,Central Arkansas,away,52.0,79,78
+2026-01-01,Central Arkansas,Florida Gulf Coast,home,48.0,78,79
+2026-01-01,Portland St.,Weber St.,away,45.0,75,76
+2026-01-01,Weber St.,Portland St.,home,55.0,76,75
+2026-01-01,CSUN,UC Davis,away,35.0,81,85
+2026-01-01,UC Davis,CSUN,home,65.0,85,81
 2026-01-01,Georgia Southern,Coastal Carolina,away,41.0,77,80
 2026-01-01,Coastal Carolina,Georgia Southern,home,59.0,80,77
 2026-01-01,Chattanooga,UNC Greensboro,away,51.0,75,74
 2026-01-01,UNC Greensboro,Chattanooga,home,49.0,74,75
-2026-01-01,Bellarmine,West Georgia,away,55.0,78,77
-2026-01-01,West Georgia,Bellarmine,home,45.0,77,78
-2026-01-01,Milwaukee,Wright St.,away,27.0,72,78
-2026-01-01,Wright St.,Milwaukee,home,73.0,78,72
-2026-01-01,UC San Diego,Cal Poly,away,81.0,90,80
-2026-01-01,Cal Poly,UC San Diego,home,19.0,80,90
+2026-01-01,Bellarmine,West Georgia,away,55.0,79,77
+2026-01-01,West Georgia,Bellarmine,home,45.0,77,79
+2026-01-01,Milwaukee,Wright St.,away,26.0,71,78
+2026-01-01,Wright St.,Milwaukee,home,74.0,78,71
+2026-01-01,UC San Diego,Cal Poly,away,82.0,90,80
+2026-01-01,Cal Poly,UC San Diego,home,18.0,80,90
 2026-01-01,Utah Tech,Abilene Christian,away,36.0,66,71
 2026-01-01,Abilene Christian,Utah Tech,home,64.0,71,66
-2026-01-01,Tennessee Tech,Little Rock,away,49.0,73,74
-2026-01-01,Little Rock,Tennessee Tech,home,51.0,74,73
 2026-01-01,Oral Roberts,North Dakota,away,48.0,75,76
 2026-01-01,North Dakota,Oral Roberts,home,52.0,76,75
-2026-01-01,Hawaii,UC Riverside,away,77.0,77,69
-2026-01-01,UC Riverside,Hawaii,home,23.0,69,77
+2026-01-01,Hawaii,UC Riverside,away,76.0,77,69
+2026-01-01,UC Riverside,Hawaii,home,24.0,69,77
+2026-01-01,Tennessee Tech,Little Rock,away,46.0,73,74
+2026-01-01,Little Rock,Tennessee Tech,home,54.0,74,73
 2026-01-01,Eastern Kentucky,Queens,away,31.0,81,86
 2026-01-01,Queens,Eastern Kentucky,home,69.0,86,81
 2026-01-01,Samford,VMI,away,63.0,78,74
@@ -1199,20 +1199,20 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-01,South Dakota St.,Nebraska Omaha,home,73.0,80,73
 2026-01-01,Valparaiso,Southern Illinois,away,21.0,68,77
 2026-01-01,Southern Illinois,Valparaiso,home,79.0,77,68
+2026-01-01,Northern Arizona,Montana,away,26.0,72,79
+2026-01-01,Montana,Northern Arizona,home,74.0,79,72
 2026-01-01,UC Irvine,Cal St. Bakersfield,away,77.0,74,66
 2026-01-01,Cal St. Bakersfield,UC Irvine,home,23.0,66,74
-2026-01-01,Northern Arizona,Montana,away,26.0,71,79
-2026-01-01,Montana,Northern Arizona,home,74.0,79,71
-2026-01-01,Sacramento St.,Idaho St.,away,22.0,70,78
-2026-01-01,Idaho St.,Sacramento St.,home,78.0,78,70
-2026-01-01,Indiana St.,Northern Iowa,away,16.0,59,69
-2026-01-01,Northern Iowa,Indiana St.,home,84.0,69,59
+2026-01-01,Indiana St.,Northern Iowa,away,16.0,59,70
+2026-01-01,Northern Iowa,Indiana St.,home,84.0,70,59
+2026-01-01,Sacramento St.,Idaho St.,away,22.0,69,78
+2026-01-01,Idaho St.,Sacramento St.,home,78.0,78,69
 2026-01-01,Morehead St.,Lindenwood,away,25.0,71,78
 2026-01-01,Lindenwood,Morehead St.,home,75.0,78,71
 2026-01-01,Southern Miss,Louisiana Monroe,away,80.0,83,74
 2026-01-01,Louisiana Monroe,Southern Miss,home,20.0,74,83
-2026-01-01,Eastern Illinois,Southeast Missouri,away,20.0,68,78
-2026-01-01,Southeast Missouri,Eastern Illinois,home,80.0,78,68
+2026-01-01,Eastern Illinois,Southeast Missouri,away,20.0,69,78
+2026-01-01,Southeast Missouri,Eastern Illinois,home,80.0,78,69
 2026-01-01,Southern Indiana,SIUE,away,21.0,65,74
 2026-01-01,SIUE,Southern Indiana,home,79.0,74,65
 2026-01-01,Stetson,North Alabama,away,20.0,68,77
@@ -1227,3 +1227,67 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-01,Illinois St.,Evansville,home,94.0,81,64
 2026-01-01,Western Illinois,Tennessee Martin,away,12.0,62,75
 2026-01-01,Tennessee Martin,Western Illinois,home,88.0,75,62
+2026-01-02,Michigan St.,Nebraska,away,46.0,72,74
+2026-01-02,Nebraska,Michigan St.,home,54.0,74,72
+2026-01-02,Notre Dame,California,away,42.0,69,71
+2026-01-02,California,Notre Dame,home,58.0,71,69
+2026-01-02,Oregon,Maryland,away,48.0,75,76
+2026-01-02,Maryland,Oregon,home,52.0,76,75
+2026-01-02,Louisville,Stanford,away,82.0,86,75
+2026-01-02,Stanford,Louisville,home,18.0,75,86
+2026-01-02,Sam Houston St.,Western Kentucky,away,49.0,82,83
+2026-01-02,Western Kentucky,Sam Houston St.,home,51.0,83,82
+2026-01-02,USC,Michigan,away,5.0,74,93
+2026-01-02,Michigan,USC,home,95.0,93,74
+2026-01-02,Ohio St.,Rutgers,away,79.0,79,70
+2026-01-02,Rutgers,Ohio St.,home,21.0,70,79
+2026-01-02,Loyola Marymount,Washington St.,away,49.0,71,72
+2026-01-02,Washington St.,Loyola Marymount,home,51.0,72,71
+2026-01-02,New Mexico St.,FIU,away,51.0,79,78
+2026-01-02,FIU,New Mexico St.,home,49.0,78,79
+2026-01-02,Siena,Iona,away,41.0,72,75
+2026-01-02,Iona,Siena,home,59.0,75,72
+2026-01-02,Kennesaw St.,Liberty,away,24.0,76,84
+2026-01-02,Liberty,Kennesaw St.,home,76.0,84,76
+2026-01-02,Oregon St.,Pacific,away,32.0,68,73
+2026-01-02,Pacific,Oregon St.,home,68.0,73,68
+2026-01-02,West Virginia,Iowa St.,away,5.0,62,80
+2026-01-02,Iowa St.,West Virginia,home,95.0,80,62
+2026-01-02,Robert Morris,Detroit Mercy,away,56.0,75,73
+2026-01-02,Detroit Mercy,Robert Morris,home,44.0,73,75
+2026-01-02,Louisiana Tech,Middle Tennessee,away,30.0,63,69
+2026-01-02,Middle Tennessee,Louisiana Tech,home,70.0,69,63
+2026-01-02,UTEP,Missouri St.,away,40.0,64,67
+2026-01-02,Missouri St.,UTEP,home,60.0,67,64
+2026-01-02,Jacksonville St.,Delaware,away,55.0,66,65
+2026-01-02,Delaware,Jacksonville St.,home,45.0,65,66
+2026-01-02,Wagner,Chicago St.,away,56.0,75,74
+2026-01-02,Chicago St.,Wagner,home,44.0,74,75
+2026-01-02,Marist,Saint Peter's,away,67.0,67,62
+2026-01-02,Saint Peter's,Marist,home,33.0,62,67
+2026-01-02,Mount St. Mary's,Merrimack,away,36.0,67,71
+2026-01-02,Merrimack,Mount St. Mary's,home,64.0,71,67
+2026-01-02,Central Connecticut,LIU,away,29.0,71,78
+2026-01-02,LIU,Central Connecticut,home,71.0,78,71
+2026-01-02,San Diego,San Francisco,away,18.0,70,79
+2026-01-02,San Francisco,San Diego,home,82.0,79,70
+2026-01-02,Fairfield,Canisius,away,61.0,71,67
+2026-01-02,Canisius,Fairfield,home,39.0,67,71
+2026-01-02,Seattle,Gonzaga,away,2.0,65,87
+2026-01-02,Gonzaga,Seattle,home,98.0,87,65
+2026-01-02,Sacred Heart,Niagara,away,66.0,75,70
+2026-01-02,Niagara,Sacred Heart,home,34.0,70,75
+2026-01-02,New Haven,Stonehill,away,40.0,63,65
+2026-01-02,Stonehill,New Haven,home,60.0,65,63
+2026-01-02,Le Moyne,Saint Francis,away,69.0,82,76
+2026-01-02,Saint Francis,Le Moyne,home,31.0,76,82
+2026-01-02,Quinnipiac,Manhattan,away,78.0,84,76
+2026-01-02,Manhattan,Quinnipiac,home,22.0,76,84
+2026-01-02,Fairleigh Dickinson,Mercyhurst,away,26.0,66,74
+2026-01-02,Mercyhurst,Fairleigh Dickinson,home,74.0,74,66
+2026-01-02,Lamar,McNeese,away,8.0,63,79
+2026-01-02,McNeese,Lamar,home,92.0,79,63
+2026-01-02,Pepperdine,Santa Clara,away,6.0,66,83
+2026-01-02,Santa Clara,Pepperdine,home,94.0,83,66
+2026-01-02,Portland,Saint Mary's,away,3.0,64,85
+2026-01-02,Saint Mary's,Portland,home,97.0,85,64
