@@ -1335,5 +1335,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0410594940222002,
     "notified_at": "2025-12-30T23:49:44.142257+00:00"
+  },
+  "Rhode Island Rams vs. Loyola (Chi) Ramblers|Rhode Island Rams|spread": {
+    "game": "Rhode Island Rams vs. Loyola (Chi) Ramblers",
+    "team": "Rhode Island Rams",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2025-12-31T04:06:03.005449+00:00"
   }
 }
