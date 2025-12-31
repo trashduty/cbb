@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** December 30, 2025 at 07:44 PM ET
+**Last Updated:** December 30, 2025 at 08:13 PM ET
 
 **Season Record Period:** 2025-11-03 to 2025-12-30
 
-**Total Games Graded:** 254 games (508 team-rows)
+**Total Games Graded:** 256 games (512 team-rows)
 
 ---
 
@@ -46,11 +46,11 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 20-12 | 62.5% | +6.18 |
+| 0-1.9% | 22-12 | 64.7% | +8.00 |
 | 2-3.9% | 6-4 | 60.0% | +1.45 |
 | 4-5.9% | 0-0 | N/A | +0.00 |
 | 6%+ | 2-0 | 100.0% | +1.82 |
-| **Total** | **28-16** | **63.6%** | **+9.45** |
+| **Total** | **30-16** | **65.2%** | **+11.27** |
 
 ---
 
