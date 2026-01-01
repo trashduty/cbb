@@ -1349,5 +1349,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.040894367899444,
     "notified_at": "2025-12-31T05:25:36.874371+00:00"
+  },
+  "Central Arkansas Bears vs. Florida Gulf Coast Eagles|under": {
+    "game": "Central Arkansas Bears vs. Florida Gulf Coast Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-01T05:16:15.889584+00:00"
+  },
+  "Arkansas-Little Rock Trojans vs. Tennessee Tech Golden Eagles|over": {
+    "game": "Arkansas-Little Rock Trojans vs. Tennessee Tech Golden Eagles",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103652785285063,
+    "notified_at": "2026-01-01T05:16:16.398636+00:00"
+  },
+  "Northern Iowa Panthers vs. Indiana St Sycamores|under": {
+    "game": "Northern Iowa Panthers vs. Indiana St Sycamores",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150361385004683,
+    "notified_at": "2026-01-01T05:16:16.704993+00:00"
   }
 }
