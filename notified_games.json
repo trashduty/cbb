@@ -1370,5 +1370,12 @@
     "edge_type": "under",
     "edge_value": 0.0150361385004683,
     "notified_at": "2026-01-01T05:16:16.704993+00:00"
+  },
+  "Western Kentucky Hilltoppers vs. Sam Houston St Bearkats|Sam Houston St Bearkats|moneyline": {
+    "game": "Western Kentucky Hilltoppers vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0449120227562722,
+    "notified_at": "2026-01-01T20:09:13.769645+00:00"
   }
 }
