@@ -1405,5 +1405,12 @@
     "edge_type": "spread",
     "edge_value": 0.0714966378722655,
     "notified_at": "2026-01-02T18:29:09.113852+00:00"
+  },
+  "Cincinnati Bearcats vs. Houston Cougars|Cincinnati Bearcats|moneyline": {
+    "game": "Cincinnati Bearcats vs. Houston Cougars",
+    "team": "Cincinnati Bearcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0577725856697819,
+    "notified_at": "2026-01-02T19:06:46.818462+00:00"
   }
 }
