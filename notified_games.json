@@ -1384,5 +1384,26 @@
     "edge_type": "over",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-02T17:50:09.807441+00:00"
+  },
+  "Kansas St Wildcats vs. BYU Cougars|Kansas St Wildcats|spread": {
+    "game": "Kansas St Wildcats vs. BYU Cougars",
+    "team": "Kansas St Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0714966378722655,
+    "notified_at": "2026-01-02T18:29:08.355599+00:00"
+  },
+  "Kansas St Wildcats vs. BYU Cougars|Kansas St Wildcats|moneyline": {
+    "game": "Kansas St Wildcats vs. BYU Cougars",
+    "team": "Kansas St Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0751709597115394,
+    "notified_at": "2026-01-02T18:29:08.643325+00:00"
+  },
+  "South Carolina Gamecocks vs. Vanderbilt Commodores|South Carolina Gamecocks|spread": {
+    "game": "South Carolina Gamecocks vs. Vanderbilt Commodores",
+    "team": "South Carolina Gamecocks",
+    "edge_type": "spread",
+    "edge_value": 0.0714966378722655,
+    "notified_at": "2026-01-02T18:29:09.113852+00:00"
   }
 }
