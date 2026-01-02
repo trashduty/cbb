@@ -1454,5 +1454,12 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2026-01-02T23:07:57.717453+00:00"
+  },
+  "Miami (OH) RedHawks vs. Akron Zips|over": {
+    "game": "Miami (OH) RedHawks vs. Akron Zips",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0158335850426964,
+    "notified_at": "2026-01-02T23:25:23.021747+00:00"
   }
 }
