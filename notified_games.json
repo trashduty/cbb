@@ -1412,5 +1412,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0577725856697819,
     "notified_at": "2026-01-02T19:06:46.818462+00:00"
+  },
+  "South Carolina Gamecocks vs. Vanderbilt Commodores|South Carolina Gamecocks|moneyline": {
+    "game": "South Carolina Gamecocks vs. Vanderbilt Commodores",
+    "team": "South Carolina Gamecocks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0560234963061501,
+    "notified_at": "2026-01-02T20:08:42.121293+00:00"
   }
 }
