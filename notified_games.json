@@ -1440,5 +1440,19 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2026-01-02T22:25:46.320978+00:00"
+  },
+  "Massachusetts Minutemen vs. Bowling Green Falcons|Massachusetts Minutemen|spread": {
+    "game": "Massachusetts Minutemen vs. Bowling Green Falcons",
+    "team": "Massachusetts Minutemen",
+    "edge_type": "spread",
+    "edge_value": 0.0406100801502296,
+    "notified_at": "2026-01-02T23:07:57.257018+00:00"
+  },
+  "Furman Paladins vs. Western Carolina Catamounts|Furman Paladins|spread": {
+    "game": "Furman Paladins vs. Western Carolina Catamounts",
+    "team": "Furman Paladins",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2026-01-02T23:07:57.717453+00:00"
   }
 }
