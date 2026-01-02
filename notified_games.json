@@ -1419,5 +1419,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0560234963061501,
     "notified_at": "2026-01-02T20:08:42.121293+00:00"
+  },
+  "Georgia Tech Yellow Jackets vs. Boston College Eagles|under": {
+    "game": "Georgia Tech Yellow Jackets vs. Boston College Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0135277075942725,
+    "notified_at": "2026-01-02T22:25:45.750777+00:00"
+  },
+  "Eastern Michigan Eagles vs. Ohio Bobcats|under": {
+    "game": "Eastern Michigan Eagles vs. Ohio Bobcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0211458059980014,
+    "notified_at": "2026-01-02T22:25:45.971049+00:00"
+  },
+  "Eastern Michigan Eagles vs. Ohio Bobcats|Eastern Michigan Eagles|spread": {
+    "game": "Eastern Michigan Eagles vs. Ohio Bobcats",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2026-01-02T22:25:46.320978+00:00"
   }
 }
