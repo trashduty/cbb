@@ -7498,3 +7498,8 @@ date,type,home_team,away_team,reason
 2026-01-01,prediction_no_score,Jacksonville Dolphins,Lipscomb Bisons,Prediction exists but game not completed (postponed?)
 2026-01-01,prediction_no_score,Bellarmine Knights,West Georgia Wolves,Prediction exists but game not completed (postponed?)
 2026-01-01,prediction_no_score,North Florida Ospreys,Austin Peay Governors,Prediction exists but game not completed (postponed?)
+2026-01-02,score_no_prediction,Princeton Tigers,Vermont Catamounts,Game completed but not in predictions
+2026-01-02,score_no_prediction,San José St Spartans,San Diego St Aztecs,Game completed but not in predictions
+2026-01-02,score_no_prediction,East Texas A&M Lions,Lamar Cardinals,Game completed but not in predictions
+2026-01-02,score_no_prediction,Richmond Spiders,GW Revolutionaries,Game completed but not in predictions
+2026-01-02,score_no_prediction,Queens University Royals,Eastern Kentucky Colonels,Game completed but not in predictions
