@@ -1503,5 +1503,12 @@
     "edge_type": "over",
     "edge_value": 0.0137517570229503,
     "notified_at": "2026-01-03T03:42:07.174110+00:00"
+  },
+  "Austin Peay Governors vs. Jacksonville Dolphins|under": {
+    "game": "Austin Peay Governors vs. Jacksonville Dolphins",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-01-03T04:27:23.613696+00:00"
   }
 }
