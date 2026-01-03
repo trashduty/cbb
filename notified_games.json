@@ -1489,5 +1489,12 @@
     "edge_type": "over",
     "edge_value": 0.0158414143796555,
     "notified_at": "2026-01-03T02:25:11.564015+00:00"
+  },
+  "Eastern Michigan Eagles vs. Ohio Bobcats|Eastern Michigan Eagles|moneyline": {
+    "game": "Eastern Michigan Eagles vs. Ohio Bobcats",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0424377544258259,
+    "notified_at": "2026-01-03T03:04:43.949693+00:00"
   }
 }
