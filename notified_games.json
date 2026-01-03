@@ -1552,5 +1552,19 @@
     "edge_type": "over",
     "edge_value": 0.0150273245156961,
     "notified_at": "2026-01-03T19:49:40.881486+00:00"
+  },
+  "Evansville Purple Aces vs. Northern Iowa Panthers|Northern Iowa Panthers|spread": {
+    "game": "Evansville Purple Aces vs. Northern Iowa Panthers",
+    "team": "Northern Iowa Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0445828742975339,
+    "notified_at": "2026-01-03T20:08:42.882382+00:00"
+  },
+  "Northern Kentucky Norse vs. Youngstown St Penguins|Youngstown St Penguins|spread": {
+    "game": "Northern Kentucky Norse vs. Youngstown St Penguins",
+    "team": "Youngstown St Penguins",
+    "edge_type": "spread",
+    "edge_value": 0.0406100801502296,
+    "notified_at": "2026-01-03T20:08:43.370287+00:00"
   }
 }
