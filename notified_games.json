@@ -1461,5 +1461,26 @@
     "edge_type": "over",
     "edge_value": 0.0158335850426964,
     "notified_at": "2026-01-02T23:25:23.021747+00:00"
+  },
+  "New Hampshire Wildcats vs. Vermont Catamounts|over": {
+    "game": "New Hampshire Wildcats vs. Vermont Catamounts",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0212832663635167,
+    "notified_at": "2026-01-03T01:35:22.979883+00:00"
+  },
+  "Holy Cross Crusaders vs. Navy Midshipmen|over": {
+    "game": "Holy Cross Crusaders vs. Navy Midshipmen",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0135218092181041,
+    "notified_at": "2026-01-03T01:35:23.297429+00:00"
+  },
+  "Jackson St Tigers vs. Alcorn St Braves|over": {
+    "game": "Jackson St Tigers vs. Alcorn St Braves",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0367678664201946,
+    "notified_at": "2026-01-03T01:35:23.925830+00:00"
   }
 }
