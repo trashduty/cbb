@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 02, 2026 at 10:15 PM ET
+**Last Updated:** January 02, 2026 at 10:44 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-03
 
-**Total Games Graded:** 420 games (840 team-rows)
+**Total Games Graded:** 421 games (842 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 365-385 | 48.7% | -53.21 |
+| KenPom | 365-387 | 48.5% | -55.21 |
 | Bart Torvik | 376-348 | 51.9% | -6.22 |
-| Evan Miya | 400-436 | 47.8% | -72.40 |
-| Haslametrics | 388-398 | 49.4% | -45.31 |
+| Evan Miya | 402-436 | 48.0% | -70.58 |
+| Haslametrics | 388-400 | 49.2% | -47.31 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 591-163 | 78.4% | +374.22 |
+| KenPom | 591-165 | 78.2% | +372.22 |
 | Bart Torvik | 590-134 | 81.5% | +402.31 |
-| Evan Miya | 674-166 | 80.2% | +446.67 |
+| Evan Miya | 674-168 | 80.0% | +444.67 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 356-352 | 50.3% | -28.40 |
+| KenPom | 356-354 | 50.1% | -30.40 |
 | Bart Torvik | 314-358 | 46.7% | -72.57 |
-| Evan Miya | 384-404 | 48.7% | -54.94 |
-| Haslametrics | 362-382 | 48.7% | -52.94 |
+| Evan Miya | 384-406 | 48.6% | -56.94 |
+| Haslametrics | 362-384 | 48.5% | -54.94 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 352-356 | 49.7% | -36.03 |
+| KenPom | 354-356 | 49.9% | -34.21 |
 | Bart Torvik | 358-314 | 53.3% | +11.42 |
-| Evan Miya | 404-384 | 51.3% | -16.76 |
-| Haslametrics | 382-362 | 51.3% | -14.76 |
+| Evan Miya | 406-384 | 51.4% | -14.95 |
+| Haslametrics | 384-362 | 51.5% | -12.94 |
 
 ---
 
