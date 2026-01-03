@@ -1531,5 +1531,19 @@
     "edge_type": "over",
     "edge_value": 0.0253741337439894,
     "notified_at": "2026-01-03T05:39:42.540524+00:00"
+  },
+  "Miami (OH) RedHawks vs. Akron Zips|Miami (OH) RedHawks|moneyline": {
+    "game": "Miami (OH) RedHawks vs. Akron Zips",
+    "team": "Miami (OH) RedHawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0550659366678383,
+    "notified_at": "2026-01-03T14:26:00.832389+00:00"
+  },
+  "Texas A&M Aggies vs. LSU Tigers|LSU Tigers|moneyline": {
+    "game": "Texas A&M Aggies vs. LSU Tigers",
+    "team": "LSU Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0460257895275234,
+    "notified_at": "2026-01-03T14:26:01.306110+00:00"
   }
 }
