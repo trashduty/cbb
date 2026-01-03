@@ -1545,5 +1545,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0460257895275234,
     "notified_at": "2026-01-03T14:26:01.306110+00:00"
+  },
+  "Marist Red Foxes vs. Iona Gaels|over": {
+    "game": "Marist Red Foxes vs. Iona Gaels",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0150273245156961,
+    "notified_at": "2026-01-03T19:49:40.881486+00:00"
   }
 }
