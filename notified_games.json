@@ -1482,5 +1482,12 @@
     "edge_type": "over",
     "edge_value": 0.0367678664201946,
     "notified_at": "2026-01-03T01:35:23.925830+00:00"
+  },
+  "Northwestern St Demons vs. New Orleans Privateers|over": {
+    "game": "Northwestern St Demons vs. New Orleans Privateers",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0158414143796555,
+    "notified_at": "2026-01-03T02:25:11.564015+00:00"
   }
 }
