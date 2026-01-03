@@ -1510,5 +1510,19 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-01-03T04:27:23.613696+00:00"
+  },
+  "Georgia Bulldogs vs. Auburn Tigers|under": {
+    "game": "Georgia Bulldogs vs. Auburn Tigers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-03T05:25:00.981088+00:00"
+  },
+  "Lipscomb Bisons vs. North Florida Ospreys|under": {
+    "game": "Lipscomb Bisons vs. North Florida Ospreys",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103683480534146,
+    "notified_at": "2026-01-03T05:25:01.311292+00:00"
   }
 }
