@@ -1524,5 +1524,12 @@
     "edge_type": "under",
     "edge_value": 0.0103683480534146,
     "notified_at": "2026-01-03T05:25:01.311292+00:00"
+  },
+  "Miss Valley St Delta Devils vs. Alabama St Hornets|over": {
+    "game": "Miss Valley St Delta Devils vs. Alabama St Hornets",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0253741337439894,
+    "notified_at": "2026-01-03T05:39:42.540524+00:00"
   }
 }
