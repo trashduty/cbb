@@ -1566,5 +1566,12 @@
     "edge_type": "spread",
     "edge_value": 0.0406100801502296,
     "notified_at": "2026-01-03T20:08:43.370287+00:00"
+  },
+  "IUPUI Jaguars vs. Wright St Raiders|Wright St Raiders|spread": {
+    "game": "IUPUI Jaguars vs. Wright St Raiders",
+    "team": "Wright St Raiders",
+    "edge_type": "spread",
+    "edge_value": 0.0406100801502296,
+    "notified_at": "2026-01-03T20:39:20.089577+00:00"
   }
 }
