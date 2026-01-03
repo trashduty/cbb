@@ -1496,5 +1496,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0424377544258259,
     "notified_at": "2026-01-03T03:04:43.949693+00:00"
+  },
+  "High Point Panthers vs. Longwood Lancers|over": {
+    "game": "High Point Panthers vs. Longwood Lancers",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2026-01-03T03:42:07.174110+00:00"
   }
 }
