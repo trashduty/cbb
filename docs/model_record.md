@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 03, 2026 at 01:05 AM ET
+**Last Updated:** January 03, 2026 at 01:25 AM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-03
 
-**Total Games Graded:** 429 games (858 team-rows)
+**Total Games Graded:** 430 games (860 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 375-393 | 48.8% | -52.12 |
+| KenPom | 377-393 | 49.0% | -50.31 |
 | Bart Torvik | 376-348 | 51.9% | -6.22 |
-| Evan Miya | 412-442 | 48.2% | -67.49 |
-| Haslametrics | 396-408 | 49.3% | -48.04 |
+| Evan Miya | 414-442 | 48.4% | -65.67 |
+| Haslametrics | 398-408 | 49.4% | -46.22 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 607-165 | 78.6% | +386.76 |
+| KenPom | 609-165 | 78.7% | +388.58 |
 | Bart Torvik | 590-134 | 81.5% | +402.31 |
-| Evan Miya | 690-168 | 80.4% | +459.21 |
+| Evan Miya | 692-168 | 80.5% | +461.03 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 360-366 | 49.6% | -38.76 |
+| KenPom | 362-366 | 49.7% | -36.94 |
 | Bart Torvik | 314-358 | 46.7% | -72.57 |
-| Evan Miya | 388-418 | 48.1% | -65.31 |
-| Haslametrics | 366-396 | 48.0% | -63.31 |
+| Evan Miya | 390-418 | 48.3% | -63.49 |
+| Haslametrics | 368-396 | 48.2% | -61.49 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 366-360 | 50.4% | -27.31 |
+| KenPom | 366-362 | 50.3% | -29.31 |
 | Bart Torvik | 358-314 | 53.3% | +11.42 |
-| Evan Miya | 418-388 | 51.9% | -8.04 |
-| Haslametrics | 396-366 | 52.0% | -6.04 |
+| Evan Miya | 418-390 | 51.7% | -10.04 |
+| Haslametrics | 396-368 | 51.8% | -8.04 |
 
 ---
 
