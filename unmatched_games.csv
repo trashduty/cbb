@@ -7503,3 +7503,37 @@ date,type,home_team,away_team,reason
 2026-01-02,score_no_prediction,East Texas A&M Lions,Lamar Cardinals,Game completed but not in predictions
 2026-01-02,score_no_prediction,Richmond Spiders,GW Revolutionaries,Game completed but not in predictions
 2026-01-02,score_no_prediction,Queens University Royals,Eastern Kentucky Colonels,Game completed but not in predictions
+2026-01-03,score_no_prediction,East Texas A&M Lions,Lamar Cardinals,Game completed but not in predictions
+2026-01-03,score_no_prediction,Richmond Spiders,GW Revolutionaries,Game completed but not in predictions
+2026-01-03,score_no_prediction,Queens University Royals,Eastern Kentucky Colonels,Game completed but not in predictions
+2026-01-03,score_no_prediction,Stonehill Skyhawks,New Haven Chargers,Game completed but not in predictions
+2026-01-03,prediction_no_score,SE Louisiana Lions,Incarnate Word Cardinals,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Ohio Bobcats,Central Michigan Chippewas,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Wyoming Cowboys,Air Force Falcons,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Howard Bison,Northwestern Wildcats,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Albany Great Danes,South Carolina Gamecocks,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,East Tennessee St Buccaneers,The Citadel Bulldogs,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Western Michigan Broncos,Toledo Rockets,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Florida St Seminoles,North Carolina Tar Heels,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Temple Owls,Charlotte 49ers,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Pittsburgh Panthers,Miami Hurricanes,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Duquesne Dukes,Davidson Wildcats,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Miami (OH) RedHawks,Bowling Green Falcons,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Milwaukee Panthers,Wisconsin Badgers,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Seton Hall Pirates,Marquette Golden Eagles,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,South Carolina St Bulldogs,Tennessee Volunteers,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Massachusetts Minutemen,Eastern Michigan Eagles,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Tennessee St Tigers,Tennessee Tech Golden Eagles,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Saint Mary's Gaels,Pepperdine Waves,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Utah State Aggies,Fresno St Bulldogs,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Nevada Wolf Pack,Colorado St Rams,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Louisville Cardinals,California Golden Bears,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,New Hampshire Wildcats,Nebraska Cornhuskers,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Notre Dame Fighting Irish,Stanford Cardinal,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Butler Bulldogs,Creighton Bluejays,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Gonzaga Bulldogs,San Diego Toreros,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Washington St Cougars,Seattle Redhawks,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Santa Clara Broncos,Portland Pilots,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,San Francisco Dons,Oregon St Beavers,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,Pacific Tigers,Loyola Marymount Lions,Prediction exists but game not completed (postponed?)
+2026-01-03,prediction_no_score,New Mexico Lobos,Boise State Broncos,Prediction exists but game not completed (postponed?)
