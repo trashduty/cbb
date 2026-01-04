@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 03, 2026 at 10:25 PM ET
+**Last Updated:** January 03, 2026 at 11:02 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-04
 
-**Total Games Graded:** 539 games (1078 team-rows)
+**Total Games Graded:** 541 games (1082 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 488-500 | 49.4% | -56.41 |
+| KenPom | 492-500 | 49.6% | -52.77 |
 | Bart Torvik | 457-429 | 51.6% | -13.59 |
-| Evan Miya | 518-556 | 48.2% | -85.14 |
-| Haslametrics | 514-508 | 50.3% | -40.77 |
+| Evan Miya | 518-560 | 48.1% | -89.14 |
+| Haslametrics | 518-508 | 50.5% | -37.14 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 761-231 | 76.7% | +460.75 |
+| KenPom | 763-233 | 76.6% | +460.57 |
 | Bart Torvik | 706-180 | 79.7% | +461.75 |
-| Evan Miya | 834-244 | 77.4% | +514.11 |
+| Evan Miya | 836-246 | 77.3% | +513.92 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 474-472 | 50.1% | -41.13 |
+| KenPom | 476-474 | 50.1% | -41.32 |
 | Bart Torvik | 400-434 | 48.0% | -70.40 |
-| Evan Miya | 502-524 | 48.9% | -67.68 |
-| Haslametrics | 480-500 | 49.0% | -63.68 |
+| Evan Miya | 504-526 | 48.9% | -67.86 |
+| Haslametrics | 482-502 | 49.0% | -63.86 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 472-474 | 49.9% | -44.95 |
+| KenPom | 474-476 | 49.9% | -45.13 |
 | Bart Torvik | 434-400 | 52.0% | -5.49 |
-| Evan Miya | 524-502 | 51.1% | -25.68 |
-| Haslametrics | 500-480 | 51.0% | -25.50 |
+| Evan Miya | 526-504 | 51.1% | -25.87 |
+| Haslametrics | 502-482 | 51.0% | -25.68 |
 
 ---
 
