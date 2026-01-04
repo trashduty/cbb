@@ -1608,5 +1608,12 @@
     "edge_type": "spread",
     "edge_value": 0.0144424253735896,
     "notified_at": "2026-01-04T20:26:13.326045+00:00"
+  },
+  "Charleston Cougars vs. William & Mary Tribe|William & Mary Tribe|moneyline": {
+    "game": "Charleston Cougars vs. William & Mary Tribe",
+    "team": "William & Mary Tribe",
+    "edge_type": "moneyline",
+    "edge_value": 0.0405939797172443,
+    "notified_at": "2026-01-04T21:49:40.642505+00:00"
   }
 }
