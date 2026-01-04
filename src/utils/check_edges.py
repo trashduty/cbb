@@ -26,20 +26,20 @@ csv_file = os.path.join(project_root, 'CBB_Output.csv')
 notified_file = os.path.join(project_root, 'notified_games.json')
 
 # Edge thresholds
-SPREAD_THRESHOLD = 0.04  # 4%
+SPREAD_THRESHOLD = 0.01  # 1%
 MONEYLINE_THRESHOLD = 0.04  # 4%
 TOTAL_THRESHOLD = 0.01  # 1%
 
 # Maximum edge thresholds to filter out likely data errors
-MAX_SPREAD_THRESHOLD = 0.10  # 10%
+MAX_SPREAD_THRESHOLD = 0.05  # 5%
 MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
-MAX_TOTAL_THRESHOLD = 0.10  # 10%
+MAX_TOTAL_THRESHOLD = 0.05  # 5%
 
 # Maximum line movement threshold (points)
-MAX_LINE_MOVEMENT = 2.5
+MAX_LINE_MOVEMENT = 0.5
 
-# Time threshold - only alert on games more than 6 hours away
-HOURS_BEFORE_GAME = 6
+# Time threshold - only alert on games more than 10 hours away
+HOURS_BEFORE_GAME = 18
 
 # Discord webhook URL from environment
 DISCORD_WEBHOOK_URL = os.environ.get('DISCORD_WEBHOOK_URL')
