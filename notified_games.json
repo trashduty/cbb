@@ -1615,5 +1615,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0405939797172443,
     "notified_at": "2026-01-04T21:49:40.642505+00:00"
+  },
+  "Princeton Tigers vs. Pennsylvania Quakers|Pennsylvania Quakers|spread": {
+    "game": "Princeton Tigers vs. Pennsylvania Quakers",
+    "team": "Pennsylvania Quakers",
+    "edge_type": "spread",
+    "edge_value": 0.0191100878082424,
+    "notified_at": "2026-01-04T23:50:29.703520+00:00"
   }
 }
