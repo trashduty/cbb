@@ -9,7 +9,7 @@ Check for betting edges in CBB_Output.csv and send Discord notifications.
 
 This script monitors CBB_Output.csv for games with positive betting edges and
 sends Discord alerts when thresholds are met, with deduplication to avoid
-repeated notifications for the same games. 
+repeated notifications for the same games.  
 """
 
 import pandas as pd
@@ -29,6 +29,9 @@ notified_file = os.path.join(project_root, 'notified_games.json')
 SPREAD_THRESHOLD = 0.01  # 1%
 MONEYLINE_THRESHOLD = 0.04  # 4%
 TOTAL_THRESHOLD = 0.01  # 1%
+
+# Minimum win probability for moneyline alerts
+MIN_MONEYLINE_WIN_PROBABILITY = 0.45  # 45%
 
 # Maximum edge thresholds to filter out likely data errors
 MAX_SPREAD_THRESHOLD = 0.05  # 5%
@@ -53,7 +56,7 @@ def load_notified_games():
         with open(notified_file, 'r') as f:
             return json.load(f)
     except Exception as e:
-        print(f"Warning: Could not load notified games:  {e}")
+        print(f"Warning: Could not load notified games:   {e}")
         return {}
 
 def save_notified_games(notified_games):
@@ -63,7 +66,7 @@ def save_notified_games(notified_games):
             json.dump(notified_games, f, indent=2)
         print(f"Updated {notified_file}")
     except Exception as e:
-        print(f"Error saving notified games: {e}")
+        print(f"Error saving notified games:  {e}")
 
 def create_game_id(row, edge_type):
     """Create a unique identifier for a game + team + edge type combination."""
@@ -78,7 +81,7 @@ def parse_game_time(game_time_str):
     try:
         # Format: \"Dec 10 07:00PM ET\"
         # Parse without year, then add current year
-        dt = datetime.strptime(game_time_str. replace(" ET", ""), "%b %d %I:%M%p")
+        dt = datetime.strptime(game_time_str.  replace(" ET", ""), "%b %d %I:%M%p")
         current_year = datetime.now().year
         dt = dt.replace(year=current_year)
         
@@ -101,13 +104,13 @@ def format_opening_time(opening_time_str):
         # UTC to ET (approx UTC-5)
         dt_et = dt_utc - timedelta(hours=5)
         return dt_et.strftime("%b %d %I:%M%p ET")
-    except Exception as e:
+    except Exception as e: 
         return opening_time_str
 
 def is_game_far_enough(game_time_str):
     """Check if game is more than 6 hours away."""
     game_time = parse_game_time(game_time_str)
-    if game_time is None: 
+    if game_time is None:  
         return False
     
     now = datetime.now(timezone.utc).replace(tzinfo=None)
@@ -115,7 +118,7 @@ def is_game_far_enough(game_time_str):
     
     hours_until_game = time_until_game.total_seconds() / 3600
     
-    if hours_until_game < HOURS_BEFORE_GAME:
+    if hours_until_game < HOURS_BEFORE_GAME: 
         print(f"  ⏰ Skipping - game is only {hours_until_game:.1f} hours away (threshold: {HOURS_BEFORE_GAME})")
         return False
     
@@ -124,14 +127,14 @@ def is_game_far_enough(game_time_str):
 def count_non_null_spread_sources(row):
     """Count how many spread projection sources have values."""
     spread_columns = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    count = sum(1 for col in spread_columns if pd.notna(row. get(col)))
+    count = sum(1 for col in spread_columns if pd.notna(row.  get(col)))
     return count
 
 def count_non_null_total_sources(row):
     """Count how many total projection sources have values."""
     total_columns = ['projected_total_barttorvik', 'projected_total_kenpom', 
                      'projected_total_evanmiya', 'projected_total_hasla']
-    count = sum(1 for col in total_columns if pd.notna(row.get(col)))
+    count = sum(1 for col in total_columns if pd.notna(row. get(col)))
     return count
 
 def format_percentage(value):
@@ -148,17 +151,17 @@ def format_decimal(value, decimals=2):
 
 def send_discord_notification(embed_data):
     """Send a notification to Discord via webhook."""
-    if not DISCORD_WEBHOOK_URL: 
-        print("Warning:  DISCORD_WEBHOOK_URL not set, skipping notification")
+    if not DISCORD_WEBHOOK_URL:  
+        print("Warning:   DISCORD_WEBHOOK_URL not set, skipping notification")
         return False
     
     try:
         payload = {
-            "embeds":  [embed_data]
+            "embeds":   [embed_data]
         }
         response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
         response.raise_for_status()
-        print(f"✓ Sent Discord notification: {embed_data['title']}")
+        print(f"✓ Sent Discord notification:  {embed_data['title']}")
         return True
     except Exception as e:
         print(f"Error sending Discord notification: {e}")
@@ -170,28 +173,28 @@ def create_spread_embed(row):
     opening_time = format_opening_time(row.get('Opening Odds Time'))
     
     embed = {
-        "title": f"🎯 Spread Edge Alert: {row['Team']}",
+        "title": f"🎯 Spread Edge Alert:  {row['Team']}",
         "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
         "color": 0x00FF00,  # Green
         "fields": [
             {
                 "name": "Edge For Covering Spread",
                 "value": format_percentage(edge_value),
-                "inline": True
+                "inline":  True
             },
             {
-                "name":  "Predicted Outcome",
+                "name":   "Predicted Outcome",
                 "value": format_decimal(row['Predicted Outcome'], 1),
                 "inline": True
             },
             {
-                "name": "Spread Cover Probability",
-                "value": format_percentage(row['Spread Cover Probability']),
-                "inline":  True
+                "name":  "Spread Cover Probability",
+                "value":  format_percentage(row['Spread Cover Probability']),
+                "inline":   True
             },
             {
                 "name": "Opening Spread",
-                "value":  format_decimal(row['Opening Spread'], 1),
+                "value":   format_decimal(row['Opening Spread'], 1),
                 "inline": True
             },
             {
@@ -200,7 +203,7 @@ def create_spread_embed(row):
                 "inline": True
             }
         ],
-        "timestamp":  datetime.now(timezone.utc).isoformat()
+        "timestamp":   datetime.now(timezone.utc).isoformat()
     }
     
     return embed
@@ -212,7 +215,7 @@ def create_moneyline_embed(row):
     
     embed = {
         "title": f"💰 Moneyline Edge Alert: {row['Team']}",
-        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time:  {opening_time}",
         "color": 0x00FF00,  # Green
         "fields": [
             {
@@ -221,22 +224,22 @@ def create_moneyline_embed(row):
                 "inline": True
             },
             {
-                "name": "Moneyline Win Probability",
-                "value":  format_percentage(row['Moneyline Win Probability']),
+                "name":  "Moneyline Win Probability",
+                "value":   format_percentage(row['Moneyline Win Probability']),
                 "inline": True
             },
             {
-                "name":  "Opening Moneyline",
+                "name":   "Opening Moneyline",
                 "value": format_decimal(row['Opening Moneyline'], 0),
                 "inline": True
             },
             {
-                "name":  "Current Moneyline",
+                "name":   "Current Moneyline",
                 "value": format_decimal(row['Current Moneyline'], 0),
                 "inline": True
             }
         ],
-        "timestamp": datetime.now(timezone. utc).isoformat()
+        "timestamp":  datetime.now(timezone.  utc).isoformat()
     }
     
     return embed
@@ -244,11 +247,11 @@ def create_moneyline_embed(row):
 def create_over_embed(row):
     """Create Discord embed for over total edge alert."""
     edge_value = row['Over Total Edge']
-    opening_time = format_opening_time(row.get('Opening Odds Time'))
+    opening_time = format_opening_time(row. get('Opening Odds Time'))
     
     embed = {
         "title": f"📈 Over Total Edge Alert",
-        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time:  {opening_time}",
         "color": 0x0099FF,  # Blue
         "fields": [
             {
@@ -258,13 +261,54 @@ def create_over_embed(row):
             },
             {
                 "name": "Over Cover Probability",
-                "value":  format_percentage(row['Over Cover Probability']),
+                "value":   format_percentage(row['Over Cover Probability']),
                 "inline": True
             },
             {
                 "name": "Current Total",
                 "value": format_decimal(row['market_total'], 1),
                 "inline": True
+            },
+            {
+                "name": "Opening Total",
+                "value": format_decimal(row['Opening Total'], 1),
+                "inline": True
+            },
+            {
+                "name":   "Model Total",
+                "value": format_decimal(row['model_total'], 2),
+                "inline": True
+            }
+        ],
+        "timestamp": datetime.now(timezone.  utc).isoformat()
+    }
+    
+    return embed
+
+def create_under_embed(row):
+    """Create Discord embed for under total edge alert."""
+    edge_value = row['Under Total Edge']
+    opening_time = format_opening_time(row. get('Opening Odds Time'))
+    
+    embed = {
+        "title": f"📉 Under Total Edge Alert",
+        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
+        "color":  0xFF9900,  # Orange
+        "fields": [
+            {
+                "name": "Under Total Edge",
+                "value": format_percentage(edge_value),
+                "inline": True
+            },
+            {
+                "name": "Under Cover Probability",
+                "value":  format_percentage(row['Under Cover Probability']),
+                "inline": True
+            },
+            {
+                "name": "Current Total",
+                "value": format_decimal(row['market_total'], 1),
+                "inline":  True
             },
             {
                 "name": "Opening Total",
@@ -274,48 +318,7 @@ def create_over_embed(row):
             {
                 "name":  "Model Total",
                 "value": format_decimal(row['model_total'], 2),
-                "inline": True
-            }
-        ],
-        "timestamp": datetime.now(timezone. utc).isoformat()
-    }
-    
-    return embed
-
-def create_under_embed(row):
-    """Create Discord embed for under total edge alert."""
-    edge_value = row['Under Total Edge']
-    opening_time = format_opening_time(row.get('Opening Odds Time'))
-    
-    embed = {
-        "title": f"📉 Under Total Edge Alert",
-        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
-        "color": 0xFF9900,  # Orange
-        "fields": [
-            {
-                "name": "Under Total Edge",
-                "value": format_percentage(edge_value),
-                "inline": True
-            },
-            {
-                "name": "Under Cover Probability",
-                "value": format_percentage(row['Under Cover Probability']),
-                "inline": True
-            },
-            {
-                "name": "Current Total",
-                "value": format_decimal(row['market_total'], 1),
-                "inline": True
-            },
-            {
-                "name": "Opening Total",
-                "value": format_decimal(row['Opening Total'], 1),
-                "inline": True
-            },
-            {
-                "name": "Model Total",
-                "value": format_decimal(row['model_total'], 2),
-                "inline":  True
+                "inline":   True
             }
         ],
         "timestamp": datetime.now(timezone.utc).isoformat()
@@ -353,12 +356,12 @@ def check_edges():
             continue
         
         # Check Spread Edge
-        if pd.notna(row. get('Edge For Covering Spread')) and row['Edge For Covering Spread'] >= SPREAD_THRESHOLD:
+        if pd.notna(row. get('Edge For Covering Spread')) and row['Edge For Covering Spread'] >= SPREAD_THRESHOLD: 
             # Check if edge exceeds maximum threshold (likely data error)
             if row['Edge For Covering Spread'] > MAX_SPREAD_THRESHOLD:
                 print(f"  ⚠️ Skipping spread edge for {row['Team']} - edge too high ({format_percentage(row['Edge For Covering Spread'])}) - likely data error")
             # Check for line movement limit
-            elif pd.notna(row.get('market_spread')) and pd.notna(row.get('Opening Spread')) and abs(row['market_spread'] - row['Opening Spread']) > MAX_LINE_MOVEMENT:
+            elif pd.notna(row. get('market_spread')) and pd.notna(row.get('Opening Spread')) and abs(row['market_spread'] - row['Opening Spread']) > MAX_LINE_MOVEMENT:
                 print(f"  ⏭️ Skipping spread edge for {row['Team']} - line moved > {MAX_LINE_MOVEMENT} points ({row['Opening Spread']} -> {row['market_spread']})")
             else:
                 # Check if at least 4 out of 4 spread sources have values
@@ -366,7 +369,7 @@ def check_edges():
                 if spread_source_count >= 4:
                     game_id = create_game_id(row, 'spread')
                     if game_id not in notified_games:
-                        print(f"\n🎯 Spread edge found:  {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
+                        print(f"\n🎯 Spread edge found:   {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
                         embed = create_spread_embed(row)
                         if send_discord_notification(embed):
                             new_notified[game_id] = {
@@ -381,14 +384,17 @@ def check_edges():
                     print(f"  ⏭️ Skipping spread edge for {row['Team']} - only {spread_source_count}/4 sources")
         
         # Check Moneyline Edge
-        if pd.notna(row.get('Moneyline Edge')) and row['Moneyline Edge'] >= MONEYLINE_THRESHOLD:
+        if pd.notna(row. get('Moneyline Edge')) and row['Moneyline Edge'] >= MONEYLINE_THRESHOLD:
             # Check if edge exceeds maximum threshold (likely data error)
-            if row['Moneyline Edge'] > MAX_MONEYLINE_THRESHOLD:
+            if row['Moneyline Edge'] > MAX_MONEYLINE_THRESHOLD: 
                 print(f"  ⚠️ Skipping moneyline edge for {row['Team']} - edge too high ({format_percentage(row['Moneyline Edge'])}) - likely data error")
+            # Check if win probability meets minimum threshold
+            elif pd.notna(row.get('Moneyline Win Probability')) and row['Moneyline Win Probability'] < MIN_MONEYLINE_WIN_PROBABILITY:
+                print(f"  ⏭️ Skipping moneyline edge for {row['Team']} - win probability too low ({format_percentage(row['Moneyline Win Probability'])}, threshold: {format_percentage(MIN_MONEYLINE_WIN_PROBABILITY)})")
             else:
                 game_id = create_game_id(row, 'moneyline')
                 if game_id not in notified_games:
-                    print(f"\n💰 Moneyline edge found: {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
+                    print(f"\n💰 Moneyline edge found:  {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
                     embed = create_moneyline_embed(row)
                     if send_discord_notification(embed):
                         new_notified[game_id] = {
@@ -451,10 +457,10 @@ def check_edges():
                         embed = create_under_embed(row)
                         if send_discord_notification(embed):
                             new_notified[game_id] = {
-                                "game": row['Game'],
+                                "game":  row['Game'],
                                 "team": "N/A",  # Not team-specific
                                 "edge_type": "under",
-                                "edge_value": row['Under Total Edge'],
+                                "edge_value":  row['Under Total Edge'],
                                 "notified_at": datetime.now(timezone.utc).isoformat()
                             }
                             total_alerts_sent.add(game_id)
@@ -481,7 +487,7 @@ if __name__ == "__main__":
     try:
         notifications_sent = check_edges()
         sys.exit(0)
-    except Exception as e: 
+    except Exception as e:  
         print(f"ERROR: {e}")
         import traceback
         traceback.print_exc()
