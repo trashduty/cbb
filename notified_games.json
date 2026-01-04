@@ -1573,5 +1573,12 @@
     "edge_type": "spread",
     "edge_value": 0.0406100801502296,
     "notified_at": "2026-01-03T20:39:20.089577+00:00"
+  },
+  "Chicago St Cougars vs. LIU Sharks|Chicago St Cougars|moneyline": {
+    "game": "Chicago St Cougars vs. LIU Sharks",
+    "team": "Chicago St Cougars",
+    "edge_type": "moneyline",
+    "edge_value": 0.0464897822679578,
+    "notified_at": "2026-01-04T01:12:29.573555+00:00"
   }
 }
