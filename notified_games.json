@@ -1580,5 +1580,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0464897822679578,
     "notified_at": "2026-01-04T01:12:29.573555+00:00"
+  },
+  "Green Bay Phoenix vs. Milwaukee Panthers|Green Bay Phoenix|spread": {
+    "game": "Green Bay Phoenix vs. Milwaukee Panthers",
+    "team": "Green Bay Phoenix",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-04T19:24:19.209160+00:00"
+  },
+  "Charleston Cougars vs. William & Mary Tribe|William & Mary Tribe|spread": {
+    "game": "Charleston Cougars vs. William & Mary Tribe",
+    "team": "William & Mary Tribe",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-04T19:24:19.684689+00:00"
   }
 }
