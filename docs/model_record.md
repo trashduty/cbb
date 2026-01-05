@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 04, 2026 at 09:36 PM ET
+**Last Updated:** January 04, 2026 at 10:26 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-05
 
-**Total Games Graded:** 580 games (1160 team-rows)
+**Total Games Graded:** 583 games (1166 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 536-534 | 50.1% | -46.78 |
+| KenPom | 540-536 | 50.2% | -45.14 |
 | Bart Torvik | 487-463 | 51.3% | -20.32 |
-| Evan Miya | 560-596 | 48.4% | -86.96 |
-| Haslametrics | 544-558 | 49.4% | -63.50 |
+| Evan Miya | 564-598 | 48.5% | -85.32 |
+| Haslametrics | 550-558 | 49.6% | -58.05 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 821-253 | 76.4% | +493.29 |
+| KenPom | 827-253 | 76.6% | +498.74 |
 | Bart Torvik | 756-194 | 79.6% | +493.20 |
-| Evan Miya | 896-264 | 77.2% | +550.46 |
+| Evan Miya | 902-264 | 77.4% | +555.92 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 512-514 | 49.9% | -48.59 |
+| KenPom | 518-514 | 50.2% | -43.14 |
 | Bart Torvik | 426-470 | 47.5% | -82.77 |
-| Evan Miya | 540-566 | 48.8% | -75.14 |
-| Haslametrics | 516-542 | 48.8% | -72.96 |
+| Evan Miya | 546-566 | 49.1% | -69.69 |
+| Haslametrics | 522-542 | 49.1% | -67.50 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 514-512 | 50.1% | -44.77 |
+| KenPom | 514-518 | 49.8% | -50.77 |
 | Bart Torvik | 470-426 | 52.5% | +1.23 |
-| Evan Miya | 566-540 | 51.2% | -25.51 |
-| Haslametrics | 542-516 | 51.2% | -23.32 |
+| Evan Miya | 566-546 | 50.9% | -31.51 |
+| Haslametrics | 542-522 | 50.9% | -29.32 |
 
 ---
 
