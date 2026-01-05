@@ -1643,5 +1643,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-05T23:25:38.639159+00:00"
+  },
+  "Boston College Eagles vs. NC State Wolfpack|Boston College Eagles|spread": {
+    "game": "Boston College Eagles vs. NC State Wolfpack",
+    "team": "Boston College Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-05T23:37:52.808458+00:00"
   }
 }
