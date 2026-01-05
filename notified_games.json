@@ -1622,5 +1622,19 @@
     "edge_type": "spread",
     "edge_value": 0.0191100878082424,
     "notified_at": "2026-01-04T23:50:29.703520+00:00"
+  },
+  "Ball State Cardinals vs. Eastern Michigan Eagles|Eastern Michigan Eagles|moneyline": {
+    "game": "Ball State Cardinals vs. Eastern Michigan Eagles",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0441304347826086,
+    "notified_at": "2026-01-05T23:08:21.655446+00:00"
+  },
+  "Kansas Jayhawks vs. TCU Horned Frogs|Kansas Jayhawks|spread": {
+    "game": "Kansas Jayhawks vs. TCU Horned Frogs",
+    "team": "Kansas Jayhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-05T23:08:22.062706+00:00"
   }
 }
