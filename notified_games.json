@@ -1636,5 +1636,12 @@
     "edge_type": "spread",
     "edge_value": 0.0108932112821685,
     "notified_at": "2026-01-05T23:08:22.062706+00:00"
+  },
+  "Ohio Bobcats vs. Massachusetts Minutemen|Massachusetts Minutemen|spread": {
+    "game": "Ohio Bobcats vs. Massachusetts Minutemen",
+    "team": "Massachusetts Minutemen",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-05T23:25:38.639159+00:00"
   }
 }
