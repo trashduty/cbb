@@ -39,10 +39,10 @@ MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
 MAX_TOTAL_THRESHOLD = 0.05  # 5%
 
 # Maximum line movement threshold (points)
-MAX_LINE_MOVEMENT = 0.5
+MAX_LINE_MOVEMENT = 1.0
 
 # Time threshold - only alert on games more than 10 hours away
-HOURS_BEFORE_GAME = 18
+HOURS_BEFORE_GAME = 10
 
 # Discord webhook URL from environment
 DISCORD_WEBHOOK_URL = os.environ.get('DISCORD_WEBHOOK_URL')
