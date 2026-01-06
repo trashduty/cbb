@@ -1671,5 +1671,12 @@
     "edge_type": "spread",
     "edge_value": 0.0105114627326285,
     "notified_at": "2026-01-06T03:11:32.322572+00:00"
+  },
+  "Miami (OH) RedHawks vs. Western Michigan Broncos|Miami (OH) RedHawks|spread": {
+    "game": "Miami (OH) RedHawks vs. Western Michigan Broncos",
+    "team": "Miami (OH) RedHawks",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2026-01-06T04:21:28.168696+00:00"
   }
 }
