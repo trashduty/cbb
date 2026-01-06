@@ -1707,28 +1707,28 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-06,Air Force,Utah St.,home,3.0,59,80
 2026-01-06,Central Michigan,Akron,away,2.0,71,94
 2026-01-06,Akron,Central Michigan,home,98.0,94,71
-2026-01-07,Alabama,Vanderbilt,away,27.0,86,92
-2026-01-07,Vanderbilt,Alabama,home,73.0,92,86
-2026-01-07,Iowa St.,Baylor,away,72.0,85,78
-2026-01-07,Baylor,Iowa St.,home,28.0,78,85
-2026-01-07,Saint Louis,VCU,away,41.0,83,86
-2026-01-07,VCU,Saint Louis,home,59.0,86,83
-2026-01-07,SMU,Clemson,away,40.0,75,77
-2026-01-07,Clemson,SMU,home,60.0,77,75
+2026-01-07,Alabama,Vanderbilt,away,27.0,85,92
+2026-01-07,Vanderbilt,Alabama,home,73.0,92,85
+2026-01-07,Iowa St.,Baylor,away,72.0,84,78
+2026-01-07,Baylor,Iowa St.,home,28.0,78,84
+2026-01-07,Saint Louis,VCU,away,41.0,83,85
+2026-01-07,VCU,Saint Louis,home,59.0,85,83
+2026-01-07,SMU,Clemson,away,40.0,74,77
+2026-01-07,Clemson,SMU,home,60.0,77,74
 2026-01-07,Miami FL,Wake Forest,away,49.0,77,78
 2026-01-07,Wake Forest,Miami FL,home,51.0,78,77
 2026-01-07,Arkansas,Mississippi,away,64.0,79,75
 2026-01-07,Mississippi,Arkansas,home,36.0,75,79
 2026-01-07,Oklahoma,Mississippi St.,away,48.0,79,80
 2026-01-07,Mississippi St.,Oklahoma,home,52.0,80,79
-2026-01-07,Connecticut,Providence,away,80.0,82,73
-2026-01-07,Providence,Connecticut,home,20.0,73,82
-2026-01-07,Creighton,Villanova,away,25.0,66,74
-2026-01-07,Villanova,Creighton,home,75.0,74,66
-2026-01-07,Indiana,Maryland,away,73.0,77,71
-2026-01-07,Maryland,Indiana,home,27.0,71,77
-2026-01-07,Belmont,Northern Iowa,away,41.0,66,68
-2026-01-07,Northern Iowa,Belmont,home,59.0,68,66
+2026-01-07,Connecticut,Providence,away,80.0,82,72
+2026-01-07,Providence,Connecticut,home,20.0,72,82
+2026-01-07,Creighton,Villanova,away,25.0,66,73
+2026-01-07,Villanova,Creighton,home,75.0,73,66
+2026-01-07,Indiana,Maryland,away,73.0,77,70
+2026-01-07,Maryland,Indiana,home,27.0,70,77
+2026-01-07,Belmont,Northern Iowa,away,42.0,65,68
+2026-01-07,Northern Iowa,Belmont,home,58.0,68,65
 2026-01-07,Stanford,Virginia Tech,away,32.0,72,77
 2026-01-07,Virginia Tech,Stanford,home,68.0,77,72
 2026-01-07,Missouri,Kentucky,away,20.0,73,82
@@ -1737,26 +1737,26 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-07,North Texas,South Florida,home,46.0,70,71
 2026-01-07,Florida Atlantic,UAB,away,37.0,78,81
 2026-01-07,UAB,Florida Atlantic,home,63.0,81,78
-2026-01-07,Xavier,Marquette,away,41.0,77,79
-2026-01-07,Marquette,Xavier,home,59.0,79,77
-2026-01-07,Richmond,St. Bonaventure,away,36.0,75,79
-2026-01-07,St. Bonaventure,Richmond,home,64.0,79,75
-2026-01-07,Troy,Arkansas St.,away,43.0,78,80
-2026-01-07,Arkansas St.,Troy,home,57.0,80,78
-2026-01-07,California,Virginia,away,16.0,69,80
-2026-01-07,Virginia,California,home,84.0,80,69
+2026-01-07,Xavier,Marquette,away,42.0,77,79
+2026-01-07,Marquette,Xavier,home,58.0,79,77
+2026-01-07,California,Virginia,away,16.0,68,79
+2026-01-07,Virginia,California,home,84.0,79,68
+2026-01-07,Richmond,St. Bonaventure,away,35.0,74,79
+2026-01-07,St. Bonaventure,Richmond,home,65.0,79,74
+2026-01-07,Troy,Arkansas St.,away,42.0,78,80
+2026-01-07,Arkansas St.,Troy,home,58.0,80,78
 2026-01-07,Washington,Purdue,away,8.0,67,82
 2026-01-07,Purdue,Washington,home,92.0,82,67
 2026-01-07,Grand Canyon,Boise St.,away,20.0,64,73
 2026-01-07,Boise St.,Grand Canyon,home,80.0,73,64
-2026-01-07,Duquesne,Saint Joseph's,away,59.0,78,75
-2026-01-07,Saint Joseph's,Duquesne,home,41.0,75,78
-2026-01-07,Illinois St.,Valparaiso,away,72.0,72,66
-2026-01-07,Valparaiso,Illinois St.,home,28.0,66,72
-2026-01-07,Southern Illinois,Illinois Chicago,away,64.0,76,72
-2026-01-07,Illinois Chicago,Southern Illinois,home,36.0,72,76
-2026-01-07,Marshall,James Madison,away,49.0,78,79
-2026-01-07,James Madison,Marshall,home,51.0,79,78
+2026-01-07,Duquesne,Saint Joseph's,away,59.0,77,75
+2026-01-07,Saint Joseph's,Duquesne,home,41.0,75,77
+2026-01-07,Illinois St.,Valparaiso,away,71.0,72,66
+2026-01-07,Valparaiso,Illinois St.,home,29.0,66,72
+2026-01-07,Southern Illinois,Illinois Chicago,away,63.0,76,72
+2026-01-07,Illinois Chicago,Southern Illinois,home,37.0,72,76
+2026-01-07,Marshall,James Madison,away,50.0,78,79
+2026-01-07,James Madison,Marshall,home,50.0,79,78
 2026-01-07,George Mason,Fordham,away,70.0,70,64
 2026-01-07,Fordham,George Mason,home,30.0,64,70
 2026-01-07,Utah,Colorado,away,21.0,78,87
@@ -1771,40 +1771,40 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-07,Arizona,Kansas St.,home,97.0,94,73
 2026-01-07,Missouri St.,Kennesaw St.,away,35.0,73,77
 2026-01-07,Kennesaw St.,Missouri St.,home,65.0,77,73
-2026-01-07,Furman,Chattanooga,away,60.0,75,72
-2026-01-07,Chattanooga,Furman,home,40.0,72,75
-2026-01-07,Davidson,Loyola Chicago,away,66.0,73,68
-2026-01-07,Loyola Chicago,Davidson,home,34.0,68,73
+2026-01-07,Furman,Chattanooga,away,60.0,74,72
+2026-01-07,Chattanooga,Furman,home,40.0,72,74
+2026-01-07,Davidson,Loyola Chicago,away,66.0,72,68
+2026-01-07,Loyola Chicago,Davidson,home,34.0,68,72
 2026-01-07,American,Colgate,away,33.0,72,77
 2026-01-07,Colgate,American,home,67.0,77,72
 2026-01-07,Charleston Southern,Winthrop,away,26.0,78,85
 2026-01-07,Winthrop,Charleston Southern,home,74.0,85,78
 2026-01-07,Charlotte,UTSA,away,63.0,73,70
 2026-01-07,UTSA,Charlotte,home,37.0,70,73
-2026-01-07,Boston University,Lafayette,away,48.0,74,75
-2026-01-07,Lafayette,Boston University,home,52.0,75,74
-2026-01-07,Presbyterian,Radford,away,35.0,72,76
-2026-01-07,Radford,Presbyterian,home,65.0,76,72
+2026-01-07,Boston University,Lafayette,away,48.0,73,74
+2026-01-07,Lafayette,Boston University,home,52.0,74,73
+2026-01-07,Presbyterian,Radford,away,35.0,71,76
+2026-01-07,Radford,Presbyterian,home,65.0,76,71
 2026-01-07,UNC Greensboro,Wofford,away,32.0,74,79
 2026-01-07,Wofford,UNC Greensboro,home,68.0,79,74
-2026-01-07,Western Carolina,Samford,away,32.0,73,78
-2026-01-07,Samford,Western Carolina,home,68.0,78,73
+2026-01-07,Western Carolina,Samford,away,33.0,73,78
+2026-01-07,Samford,Western Carolina,home,67.0,78,73
 2026-01-07,Longwood,UNC Asheville,away,34.0,72,76
 2026-01-07,UNC Asheville,Longwood,home,66.0,76,72
-2026-01-07,Holy Cross,Lehigh,away,42.0,69,71
-2026-01-07,Lehigh,Holy Cross,home,58.0,71,69
-2026-01-07,Purdue Fort Wayne,Youngstown St.,away,27.0,70,77
-2026-01-07,Youngstown St.,Purdue Fort Wayne,home,73.0,77,70
-2026-01-07,Loyola MD,Army,away,35.0,73,78
-2026-01-07,Army,Loyola MD,home,65.0,78,73
+2026-01-07,Holy Cross,Lehigh,away,42.0,68,71
+2026-01-07,Lehigh,Holy Cross,home,58.0,71,68
 2026-01-07,Murray St.,Evansville,away,83.0,84,73
 2026-01-07,Evansville,Murray St.,home,17.0,73,84
-2026-01-07,Bucknell,Navy,away,24.0,65,73
-2026-01-07,Navy,Bucknell,home,76.0,73,65
+2026-01-07,Purdue Fort Wayne,Youngstown St.,away,27.0,70,77
+2026-01-07,Youngstown St.,Purdue Fort Wayne,home,73.0,77,70
+2026-01-07,Loyola MD,Army,away,35.0,73,77
+2026-01-07,Army,Loyola MD,home,65.0,77,73
+2026-01-07,Bucknell,Navy,away,23.0,65,73
+2026-01-07,Navy,Bucknell,home,77.0,73,65
 2026-01-07,La Salle,Rhode Island,away,17.0,61,72
 2026-01-07,Rhode Island,La Salle,home,83.0,72,61
-2026-01-07,East Carolina,Temple,away,16.0,70,80
-2026-01-07,Temple,East Carolina,home,84.0,80,70
+2026-01-07,East Carolina,Temple,away,17.0,70,80
+2026-01-07,Temple,East Carolina,home,83.0,80,70
 2026-01-07,South Dakota,St. Thomas,away,13.0,75,87
 2026-01-07,St. Thomas,South Dakota,home,87.0,87,75
 2026-01-07,Rice,Wichita St.,away,10.0,64,78
@@ -1813,5 +1813,119 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-07,East Tennessee St.,VMI,home,93.0,83,67
 2026-01-07,The Citadel,Mercer,away,5.0,67,85
 2026-01-07,Mercer,The Citadel,home,95.0,85,67
-2026-01-07,Gardner Webb,High Point,away,1.0,71,96
-2026-01-07,High Point,Gardner Webb,home,99.0,96,71
+2026-01-07,Gardner Webb,High Point,away,1.0,70,96
+2026-01-07,High Point,Gardner Webb,home,99.0,96,70
+2026-01-08,Ohio St.,Oregon,away,54.0,78,76
+2026-01-08,Oregon,Ohio St.,home,46.0,76,78
+2026-01-08,San Francisco,Loyola Marymount,away,48.0,68,69
+2026-01-08,Loyola Marymount,San Francisco,home,52.0,69,68
+2026-01-08,Northwestern,Michigan St.,away,13.0,64,77
+2026-01-08,Michigan St.,Northwestern,home,87.0,77,64
+2026-01-08,Santa Clara,Gonzaga,away,8.0,74,89
+2026-01-08,Gonzaga,Santa Clara,home,92.0,89,74
+2026-01-08,Hofstra,Towson,away,59.0,67,65
+2026-01-08,Towson,Hofstra,home,41.0,65,67
+2026-01-08,Western Kentucky,New Mexico St.,away,36.0,76,79
+2026-01-08,New Mexico St.,Western Kentucky,home,64.0,79,76
+2026-01-08,William & Mary,Monmouth,away,63.0,79,75
+2026-01-08,Monmouth,William & Mary,home,37.0,75,79
+2026-01-08,Seattle,Oregon St.,away,63.0,72,68
+2026-01-08,Oregon St.,Seattle,home,37.0,68,72
+2026-01-08,UC Davis,UC Santa Barbara,away,40.0,74,77
+2026-01-08,UC Santa Barbara,UC Davis,home,60.0,77,74
+2026-01-08,Liberty,Louisiana Tech,away,63.0,68,65
+2026-01-08,Louisiana Tech,Liberty,home,37.0,65,68
+2026-01-08,Idaho St.,Northern Colorado,away,39.0,75,77
+2026-01-08,Northern Colorado,Idaho St.,home,61.0,77,75
+2026-01-08,UNC Wilmington,Northeastern,away,64.0,75,71
+2026-01-08,Northeastern,UNC Wilmington,home,36.0,71,75
+2026-01-08,Montana,Idaho,away,41.0,76,78
+2026-01-08,Idaho,Montana,home,59.0,78,76
+2026-01-08,Pacific,Portland,away,65.0,75,70
+2026-01-08,Portland,Pacific,home,35.0,70,75
+2026-01-08,Montana St.,Eastern Washington,away,60.0,79,76
+2026-01-08,Eastern Washington,Montana St.,home,40.0,76,79
+2026-01-08,Austin Peay,Florida Gulf Coast,away,34.0,74,78
+2026-01-08,Florida Gulf Coast,Austin Peay,home,66.0,78,74
+2026-01-08,Central Arkansas,Bellarmine,away,51.0,79,78
+2026-01-08,Bellarmine,Central Arkansas,home,49.0,78,79
+2026-01-08,Cal Poly,CSUN,away,33.0,83,87
+2026-01-08,CSUN,Cal Poly,home,67.0,87,83
+2026-01-08,Middle Tennessee,UTEP,away,66.0,70,65
+2026-01-08,UTEP,Middle Tennessee,home,34.0,65,70
+2026-01-08,Weber St.,Northern Arizona,away,56.0,76,74
+2026-01-08,Northern Arizona,Weber St.,home,44.0,74,76
+2026-01-08,Old Dominion,Coastal Carolina,away,42.0,73,75
+2026-01-08,Coastal Carolina,Old Dominion,home,58.0,75,73
+2026-01-08,West Georgia,North Florida,away,55.0,84,83
+2026-01-08,North Florida,West Georgia,home,45.0,83,84
+2026-01-08,UC Riverside,Cal St. Bakersfield,away,43.0,76,78
+2026-01-08,Cal St. Bakersfield,UC Riverside,home,57.0,78,76
+2026-01-08,Appalachian St.,Georgia St.,away,54.0,69,68
+2026-01-08,Georgia St.,Appalachian St.,home,46.0,68,69
+2026-01-08,Queens,Jacksonville,away,63.0,79,75
+2026-01-08,Jacksonville,Queens,home,37.0,75,79
+2026-01-08,Tennessee Martin,Morehead St.,away,58.0,69,67
+2026-01-08,Morehead St.,Tennessee Martin,home,42.0,67,69
+2026-01-08,Abilene Christian,Tarleton St.,away,29.0,69,75
+2026-01-08,Tarleton St.,Abilene Christian,home,71.0,75,69
+2026-01-08,Hampton,Campbell,away,33.0,72,77
+2026-01-08,Campbell,Hampton,home,67.0,77,72
+2026-01-08,Stony Brook,Drexel,away,43.0,67,69
+2026-01-08,Drexel,Stony Brook,home,57.0,69,67
+2026-01-08,Pepperdine,San Diego,away,34.0,70,74
+2026-01-08,San Diego,Pepperdine,home,66.0,74,70
+2026-01-08,Elon,North Carolina A&T,away,71.0,85,79
+2026-01-08,North Carolina A&T,Elon,home,29.0,79,85
+2026-01-08,UMass Lowell,Bryant,away,44.0,72,74
+2026-01-08,Bryant,UMass Lowell,home,56.0,74,72
+2026-01-08,Utah Tech,Cal Baptist,away,27.0,66,73
+2026-01-08,Cal Baptist,Utah Tech,home,73.0,73,66
+2026-01-08,Tennessee Tech,Eastern Illinois,away,44.0,69,71
+2026-01-08,Eastern Illinois,Tennessee Tech,home,56.0,71,69
+2026-01-08,Chicago St.,Fairleigh Dickinson,away,45.0,74,75
+2026-01-08,Fairleigh Dickinson,Chicago St.,home,55.0,75,74
+2026-01-08,Denver,South Dakota St.,away,26.0,79,86
+2026-01-08,South Dakota St.,Denver,home,74.0,86,79
+2026-01-08,Southeast Missouri,Southern Indiana,away,66.0,76,71
+2026-01-08,Southern Indiana,Southeast Missouri,home,34.0,71,76
+2026-01-08,North Alabama,Eastern Kentucky,away,34.0,72,76
+2026-01-08,Eastern Kentucky,North Alabama,home,66.0,76,72
+2026-01-08,New Hampshire,NJIT,away,49.0,67,68
+2026-01-08,NJIT,New Hampshire,home,51.0,68,67
+2026-01-08,Little Rock,SIUE,away,32.0,65,70
+2026-01-08,SIUE,Little Rock,home,68.0,70,65
+2026-01-08,Texas St.,Southern Miss,away,26.0,69,76
+2026-01-08,Southern Miss,Texas St.,home,74.0,76,69
+2026-01-08,North Dakota,Nebraska Omaha,away,28.0,71,77
+2026-01-08,Nebraska Omaha,North Dakota,home,72.0,77,71
+2026-01-08,New Haven,Le Moyne,away,31.0,68,74
+2026-01-08,Le Moyne,New Haven,home,69.0,74,68
+2026-01-08,Long Beach St.,UC Irvine,away,20.0,66,75
+2026-01-08,UC Irvine,Long Beach St.,home,80.0,75,66
+2026-01-08,North Dakota St.,Kansas City,away,78.0,76,67
+2026-01-08,Kansas City,North Dakota St.,home,22.0,67,76
+2026-01-08,Tennessee St.,Western Illinois,away,74.0,76,69
+2026-01-08,Western Illinois,Tennessee St.,home,26.0,69,76
+2026-01-08,Louisiana Monroe,Louisiana,away,28.0,67,73
+2026-01-08,Louisiana,Louisiana Monroe,home,72.0,73,67
+2026-01-08,Cal St. Fullerton,UC San Diego,away,11.0,77,91
+2026-01-08,UC San Diego,Cal St. Fullerton,home,89.0,91,77
+2026-01-08,Stonehill,Central Connecticut,away,24.0,63,71
+2026-01-08,Central Connecticut,Stonehill,home,76.0,71,63
+2026-01-08,Mercyhurst,LIU,away,19.0,66,76
+2026-01-08,LIU,Mercyhurst,home,81.0,76,66
+2026-01-08,Maine,UMBC,away,22.0,62,70
+2026-01-08,UMBC,Maine,home,78.0,70,62
+2026-01-08,Delaware,Sam Houston St.,away,14.0,68,80
+2026-01-08,Sam Houston St.,Delaware,home,86.0,80,68
+2026-01-08,Rutgers,Illinois,away,2.0,62,84
+2026-01-08,Illinois,Rutgers,home,98.0,84,62
+2026-01-08,Lipscomb,Stetson,away,85.0,81,69
+2026-01-08,Stetson,Lipscomb,home,15.0,69,81
+2026-01-08,Saint Francis,Wagner,away,17.0,69,79
+2026-01-08,Wagner,Saint Francis,home,83.0,79,69
+2026-01-08,Binghamton,Vermont,away,6.0,66,83
+2026-01-08,Vermont,Binghamton,home,94.0,83,66
+2026-01-08,Southern Utah,Utah Valley,away,3.0,66,87
+2026-01-08,Utah Valley,Southern Utah,home,97.0,87,66
