@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 05, 2026 at 09:40 PM ET
+**Last Updated:** January 05, 2026 at 10:20 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-06
 
-**Total Games Graded:** 599 games (1198 team-rows)
+**Total Games Graded:** 600 games (1200 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 558-550 | 50.4% | -42.78 |
+| KenPom | 560-550 | 50.5% | -40.96 |
 | Bart Torvik | 487-465 | 51.2% | -22.32 |
-| Evan Miya | 581-613 | 48.7% | -84.87 |
-| Haslametrics | 567-573 | 49.7% | -57.60 |
+| Evan Miya | 581-615 | 48.6% | -86.87 |
+| Haslametrics | 567-575 | 49.6% | -59.60 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 842-270 | 75.7% | +495.38 |
+| KenPom | 844-270 | 75.8% | +497.20 |
 | Bart Torvik | 756-196 | 79.4% | +491.20 |
-| Evan Miya | 918-280 | 76.6% | +554.46 |
+| Evan Miya | 920-280 | 76.7% | +556.28 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 534-530 | 50.2% | -44.59 |
+| KenPom | 534-532 | 50.1% | -46.59 |
 | Bart Torvik | 428-470 | 47.7% | -80.95 |
-| Evan Miya | 562-582 | 49.1% | -71.14 |
-| Haslametrics | 538-558 | 49.1% | -68.96 |
+| Evan Miya | 562-584 | 49.0% | -73.14 |
+| Haslametrics | 538-560 | 49.0% | -70.96 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 530-534 | 49.8% | -52.23 |
+| KenPom | 532-534 | 49.9% | -50.41 |
 | Bart Torvik | 470-428 | 52.3% | -0.77 |
-| Evan Miya | 582-562 | 50.9% | -32.96 |
-| Haslametrics | 558-538 | 50.9% | -30.78 |
+| Evan Miya | 584-562 | 51.0% | -31.14 |
+| Haslametrics | 560-538 | 51.0% | -28.96 |
 
 ---
 
