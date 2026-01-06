@@ -1748,5 +1748,19 @@
     "edge_type": "spread",
     "edge_value": 0.032741267628341,
     "notified_at": "2026-01-06T20:09:27.867919+00:00"
+  },
+  "Vanderbilt Commodores vs. Alabama Crimson Tide|Vanderbilt Commodores|spread": {
+    "game": "Vanderbilt Commodores vs. Alabama Crimson Tide",
+    "team": "Vanderbilt Commodores",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:41:04.758430+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. Davidson Wildcats|Davidson Wildcats|moneyline": {
+    "game": "Loyola (Chi) Ramblers vs. Davidson Wildcats",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0691304347826087,
+    "notified_at": "2026-01-06T20:41:05.081025+00:00"
   }
 }
