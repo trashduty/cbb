@@ -1657,5 +1657,19 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2026-01-06T00:30:06.454800+00:00"
+  },
+  "LSU Tigers vs. South Carolina Gamecocks|LSU Tigers|spread": {
+    "game": "LSU Tigers vs. South Carolina Gamecocks",
+    "team": "LSU Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.015134350650711,
+    "notified_at": "2026-01-06T03:11:32.041399+00:00"
+  },
+  "Florida Gators vs. Georgia Bulldogs|Georgia Bulldogs|spread": {
+    "game": "Florida Gators vs. Georgia Bulldogs",
+    "team": "Georgia Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326285,
+    "notified_at": "2026-01-06T03:11:32.322572+00:00"
   }
 }
