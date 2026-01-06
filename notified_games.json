@@ -1650,5 +1650,12 @@
     "edge_type": "spread",
     "edge_value": 0.0144424253735896,
     "notified_at": "2026-01-05T23:37:52.808458+00:00"
+  },
+  "Akron Zips vs. Central Michigan Chippewas|Akron Zips|spread": {
+    "game": "Akron Zips vs. Central Michigan Chippewas",
+    "team": "Akron Zips",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2026-01-06T00:30:06.454800+00:00"
   }
 }
