@@ -1678,5 +1678,75 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2026-01-06T04:21:28.168696+00:00"
+  },
+  "Fordham Rams vs. George Mason Patriots|Fordham Rams|spread": {
+    "game": "Fordham Rams vs. George Mason Patriots",
+    "team": "Fordham Rams",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-06T20:09:24.873455+00:00"
+  },
+  "St. Bonaventure Bonnies vs. Richmond Spiders|Richmond Spiders|spread": {
+    "game": "St. Bonaventure Bonnies vs. Richmond Spiders",
+    "team": "Richmond Spiders",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:09:25.160047+00:00"
+  },
+  "Jacksonville St Gamecocks vs. Florida Int'l Golden Panthers|Florida Int'l Golden Panthers|spread": {
+    "game": "Jacksonville St Gamecocks vs. Florida Int'l Golden Panthers",
+    "team": "Florida Int'l Golden Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:09:25.549933+00:00"
+  },
+  "Temple Owls vs. East Carolina Pirates|Temple Owls|spread": {
+    "game": "Temple Owls vs. East Carolina Pirates",
+    "team": "Temple Owls",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-06T20:09:25.880423+00:00"
+  },
+  "Mercer Bears vs. The Citadel Bulldogs|Mercer Bears|spread": {
+    "game": "Mercer Bears vs. The Citadel Bulldogs",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:09:26.158841+00:00"
+  },
+  "Youngstown St Penguins vs. Fort Wayne Mastodons|Youngstown St Penguins|spread": {
+    "game": "Youngstown St Penguins vs. Fort Wayne Mastodons",
+    "team": "Youngstown St Penguins",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:09:26.614178+00:00"
+  },
+  "Evansville Purple Aces vs. Murray St Racers|Murray St Racers|spread": {
+    "game": "Evansville Purple Aces vs. Murray St Racers",
+    "team": "Murray St Racers",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-01-06T20:09:27.061329+00:00"
+  },
+  "St. Thomas (MN) Tommies vs. South Dakota Coyotes|St. Thomas (MN) Tommies|spread": {
+    "game": "St. Thomas (MN) Tommies vs. South Dakota Coyotes",
+    "team": "St. Thomas (MN) Tommies",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-06T20:09:27.316935+00:00"
+  },
+  "Clemson Tigers vs. SMU Mustangs|SMU Mustangs|spread": {
+    "game": "Clemson Tigers vs. SMU Mustangs",
+    "team": "SMU Mustangs",
+    "edge_type": "spread",
+    "edge_value": 0.0186605680772774,
+    "notified_at": "2026-01-06T20:09:27.541821+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. Davidson Wildcats|Davidson Wildcats|spread": {
+    "game": "Loyola (Chi) Ramblers vs. Davidson Wildcats",
+    "team": "Davidson Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.032741267628341,
+    "notified_at": "2026-01-06T20:09:27.867919+00:00"
   }
 }
