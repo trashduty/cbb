@@ -1783,5 +1783,61 @@
     "edge_type": "spread",
     "edge_value": 0.032741267628341,
     "notified_at": "2026-01-07T19:50:09.621998+00:00"
+  },
+  "Drexel Dragons vs. Stony Brook Seawolves|Stony Brook Seawolves|spread": {
+    "game": "Drexel Dragons vs. Stony Brook Seawolves",
+    "team": "Stony Brook Seawolves",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-07T20:09:33.673572+00:00"
+  },
+  "Louisiana Tech Bulldogs vs. Liberty Flames|Louisiana Tech Bulldogs|spread": {
+    "game": "Louisiana Tech Bulldogs vs. Liberty Flames",
+    "team": "Louisiana Tech Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-07T20:09:33.997490+00:00"
+  },
+  "North Carolina A&T Aggies vs. Elon Phoenix|over": {
+    "game": "North Carolina A&T Aggies vs. Elon Phoenix",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0290329267565925,
+    "notified_at": "2026-01-07T20:09:34.277431+00:00"
+  },
+  "Morehead St Eagles vs. Tenn-Martin Skyhawks|Morehead St Eagles|spread": {
+    "game": "Morehead St Eagles vs. Tenn-Martin Skyhawks",
+    "team": "Morehead St Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.027313572530116,
+    "notified_at": "2026-01-07T20:09:34.531325+00:00"
+  },
+  "N Colorado Bears vs. Idaho State Bengals|under": {
+    "game": "N Colorado Bears vs. Idaho State Bengals",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0158335850426964,
+    "notified_at": "2026-01-07T20:09:35.182833+00:00"
+  },
+  "Utah Valley Wolverines vs. Southern Utah Thunderbirds|Utah Valley Wolverines|spread": {
+    "game": "Utah Valley Wolverines vs. Southern Utah Thunderbirds",
+    "team": "Utah Valley Wolverines",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2026-01-07T20:09:35.426864+00:00"
+  },
+  "Southern Indiana Screaming Eagles vs. SE Missouri St Redhawks|Southern Indiana Screaming Eagles|spread": {
+    "game": "Southern Indiana Screaming Eagles vs. SE Missouri St Redhawks",
+    "team": "Southern Indiana Screaming Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-07T20:09:35.680691+00:00"
+  },
+  "New Mexico St Aggies vs. Western Kentucky Hilltoppers|New Mexico St Aggies|spread": {
+    "game": "New Mexico St Aggies vs. Western Kentucky Hilltoppers",
+    "team": "New Mexico St Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-07T20:09:35.932152+00:00"
   }
 }
