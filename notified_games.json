@@ -1867,5 +1867,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-07T20:54:06.042107+00:00"
+  },
+  "SIU-Edwardsville Cougars vs. Arkansas-Little Rock Trojans|SIU-Edwardsville Cougars|spread": {
+    "game": "SIU-Edwardsville Cougars vs. Arkansas-Little Rock Trojans",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-07T22:08:16.721680+00:00"
   }
 }
