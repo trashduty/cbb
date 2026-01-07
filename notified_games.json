@@ -1888,5 +1888,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0461211415423081,
     "notified_at": "2026-01-07T22:51:51.563705+00:00"
+  },
+  "North Florida Ospreys vs. West Georgia Wolves|North Florida Ospreys|spread": {
+    "game": "North Florida Ospreys vs. West Georgia Wolves",
+    "team": "North Florida Ospreys",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-07T23:50:40.434601+00:00"
+  },
+  "Eastern Illinois Panthers vs. Tennessee Tech Golden Eagles|Eastern Illinois Panthers|moneyline": {
+    "game": "Eastern Illinois Panthers vs. Tennessee Tech Golden Eagles",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0412889963798045,
+    "notified_at": "2026-01-07T23:50:40.669939+00:00"
+  },
+  "Towson Tigers vs. Hofstra Pride|Hofstra Pride|moneyline": {
+    "game": "Towson Tigers vs. Hofstra Pride",
+    "team": "Hofstra Pride",
+    "edge_type": "moneyline",
+    "edge_value": 0.0409613557174532,
+    "notified_at": "2026-01-07T23:50:41.074275+00:00"
   }
 }
