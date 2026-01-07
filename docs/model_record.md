@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 07, 2026 at 01:06 AM ET
+**Last Updated:** January 07, 2026 at 01:25 AM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-07
 
-**Total Games Graded:** 627 games (1254 team-rows)
+**Total Games Graded:** 628 games (1256 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 583-579 | 50.2% | -49.05 |
+| KenPom | 583-581 | 50.1% | -51.05 |
 | Bart Torvik | 487-467 | 51.0% | -24.32 |
-| Evan Miya | 603-645 | 48.3% | -96.87 |
-| Haslametrics | 585-609 | 49.0% | -77.24 |
+| Evan Miya | 605-645 | 48.4% | -95.05 |
+| Haslametrics | 585-611 | 48.9% | -79.24 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 888-280 | 76.0% | +527.19 |
+| KenPom | 888-282 | 75.9% | +525.19 |
 | Bart Torvik | 758-196 | 79.5% | +493.02 |
-| Evan Miya | 964-290 | 76.9% | +586.28 |
+| Evan Miya | 964-292 | 76.8% | +584.28 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 554-562 | 49.6% | -58.41 |
+| KenPom | 554-564 | 49.6% | -60.41 |
 | Bart Torvik | 430-470 | 47.8% | -79.13 |
-| Evan Miya | 582-614 | 48.7% | -84.96 |
-| Haslametrics | 558-590 | 48.6% | -82.78 |
+| Evan Miya | 582-616 | 48.6% | -86.96 |
+| Haslametrics | 558-592 | 48.5% | -84.78 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 562-554 | 50.4% | -43.14 |
+| KenPom | 564-554 | 50.4% | -41.32 |
 | Bart Torvik | 470-430 | 52.2% | -2.77 |
-| Evan Miya | 614-582 | 51.3% | -23.87 |
-| Haslametrics | 590-558 | 51.4% | -21.69 |
+| Evan Miya | 616-582 | 51.4% | -22.06 |
+| Haslametrics | 592-558 | 51.5% | -19.87 |
 
 ---
 
