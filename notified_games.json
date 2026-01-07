@@ -1776,5 +1776,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-07T05:10:56.694484+00:00"
+  },
+  "Towson Tigers vs. Hofstra Pride|Hofstra Pride|spread": {
+    "game": "Towson Tigers vs. Hofstra Pride",
+    "team": "Hofstra Pride",
+    "edge_type": "spread",
+    "edge_value": 0.032741267628341,
+    "notified_at": "2026-01-07T19:50:09.621998+00:00"
   }
 }
