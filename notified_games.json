@@ -1853,5 +1853,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-07T20:26:42.084615+00:00"
+  },
+  "UTEP Miners vs. Middle Tennessee Blue Raiders|Middle Tennessee Blue Raiders|spread": {
+    "game": "UTEP Miners vs. Middle Tennessee Blue Raiders",
+    "team": "Middle Tennessee Blue Raiders",
+    "edge_type": "spread",
+    "edge_value": 0.0166304459350659,
+    "notified_at": "2026-01-07T20:42:10.993267+00:00"
   }
 }
