@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 06, 2026 at 10:20 PM ET
+**Last Updated:** January 06, 2026 at 10:55 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-07
 
-**Total Games Graded:** 617 games (1234 team-rows)
+**Total Games Graded:** 619 games (1238 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 574-570 | 50.2% | -48.23 |
+| KenPom | 575-573 | 50.1% | -50.32 |
 | Bart Torvik | 487-467 | 51.0% | -24.32 |
-| Evan Miya | 595-635 | 48.4% | -94.14 |
-| Haslametrics | 577-599 | 49.1% | -74.51 |
+| Evan Miya | 597-637 | 48.4% | -94.33 |
+| Haslametrics | 579-601 | 49.1% | -74.69 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 872-276 | 76.0% | +516.65 |
+| KenPom | 876-276 | 76.0% | +520.28 |
 | Bart Torvik | 758-196 | 79.5% | +493.02 |
-| Evan Miya | 948-286 | 76.8% | +575.73 |
+| Evan Miya | 952-286 | 76.9% | +579.37 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 544-554 | 49.5% | -59.50 |
+| KenPom | 546-556 | 49.5% | -59.69 |
 | Bart Torvik | 430-470 | 47.8% | -79.13 |
-| Evan Miya | 572-606 | 48.6% | -86.05 |
-| Haslametrics | 548-582 | 48.5% | -83.87 |
+| Evan Miya | 574-608 | 48.6% | -86.23 |
+| Haslametrics | 550-584 | 48.5% | -84.05 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 554-544 | 50.5% | -40.41 |
+| KenPom | 556-546 | 50.5% | -40.60 |
 | Bart Torvik | 470-430 | 52.2% | -2.77 |
-| Evan Miya | 606-572 | 51.4% | -21.15 |
-| Haslametrics | 582-548 | 51.5% | -18.96 |
+| Evan Miya | 608-574 | 51.4% | -21.33 |
+| Haslametrics | 584-550 | 51.5% | -19.14 |
 
 ---
 
