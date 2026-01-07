@@ -1839,5 +1839,19 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-07T20:09:35.932152+00:00"
+  },
+  "UC San Diego Tritons vs. CSU Fullerton Titans|UC San Diego Tritons|spread": {
+    "game": "UC San Diego Tritons vs. CSU Fullerton Titans",
+    "team": "UC San Diego Tritons",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-07T20:26:41.566522+00:00"
+  },
+  "Oregon Ducks vs. Ohio State Buckeyes|Ohio State Buckeyes|spread": {
+    "game": "Oregon Ducks vs. Ohio State Buckeyes",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-07T20:26:42.084615+00:00"
   }
 }
