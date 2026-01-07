@@ -1860,5 +1860,12 @@
     "edge_type": "spread",
     "edge_value": 0.0166304459350659,
     "notified_at": "2026-01-07T20:42:10.993267+00:00"
+  },
+  "Campbell Fighting Camels vs. Hampton Pirates|Hampton Pirates|spread": {
+    "game": "Campbell Fighting Camels vs. Hampton Pirates",
+    "team": "Hampton Pirates",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-07T20:54:06.042107+00:00"
   }
 }
