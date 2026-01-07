@@ -1874,5 +1874,12 @@
     "edge_type": "spread",
     "edge_value": 0.0154719658609231,
     "notified_at": "2026-01-07T22:08:16.721680+00:00"
+  },
+  "Eastern Illinois Panthers vs. Tennessee Tech Golden Eagles|Eastern Illinois Panthers|spread": {
+    "game": "Eastern Illinois Panthers vs. Tennessee Tech Golden Eagles",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0458683165555784,
+    "notified_at": "2026-01-07T22:40:29.130669+00:00"
   }
 }
