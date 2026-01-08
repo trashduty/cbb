@@ -1923,5 +1923,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-08T03:35:44.017842+00:00"
+  },
+  "Colorado St Rams vs. UNLV Rebels|Colorado St Rams|spread": {
+    "game": "Colorado St Rams vs. UNLV Rebels",
+    "team": "Colorado St Rams",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-08T23:08:29.329480+00:00"
   }
 }
