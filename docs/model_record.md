@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 08, 2026 at 01:05 AM ET
+**Last Updated:** January 08, 2026 at 01:26 AM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-08
 
-**Total Games Graded:** 681 games (1362 team-rows)
+**Total Games Graded:** 682 games (1364 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 633-635 | 49.9% | -59.60 |
+| KenPom | 633-637 | 49.8% | -61.60 |
 | Bart Torvik | 495-469 | 51.3% | -19.04 |
-| Evan Miya | 658-696 | 48.6% | -97.88 |
-| Haslametrics | 646-652 | 49.8% | -64.79 |
+| Evan Miya | 658-698 | 48.5% | -99.88 |
+| Haslametrics | 646-654 | 49.7% | -66.79 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 959-317 | 75.2% | +554.73 |
+| KenPom | 959-319 | 75.0% | +552.73 |
 | Bart Torvik | 766-198 | 79.5% | +498.29 |
-| Evan Miya | 1036-326 | 76.1% | +615.72 |
+| Evan Miya | 1036-328 | 76.0% | +613.72 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 602-620 | 49.3% | -72.78 |
+| KenPom | 602-622 | 49.2% | -74.78 |
 | Bart Torvik | 434-476 | 47.7% | -81.49 |
-| Evan Miya | 630-672 | 48.4% | -99.33 |
-| Haslametrics | 604-648 | 48.2% | -98.96 |
+| Evan Miya | 630-674 | 48.3% | -101.33 |
+| Haslametrics | 604-650 | 48.2% | -100.96 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 620-602 | 50.7% | -38.42 |
+| KenPom | 622-602 | 50.8% | -36.60 |
 | Bart Torvik | 476-434 | 52.3% | -1.32 |
-| Evan Miya | 672-630 | 51.6% | -19.15 |
-| Haslametrics | 648-604 | 51.8% | -14.97 |
+| Evan Miya | 674-630 | 51.7% | -17.33 |
+| Haslametrics | 650-604 | 51.8% | -13.15 |
 
 ---
 
