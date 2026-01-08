@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 07, 2026 at 11:45 PM ET
+**Last Updated:** January 07, 2026 at 11:59 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-08
 
-**Total Games Graded:** 680 games (1360 team-rows)
+**Total Games Graded:** 681 games (1362 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 631-635 | 49.8% | -61.42 |
+| KenPom | 633-635 | 49.9% | -59.60 |
 | Bart Torvik | 495-469 | 51.3% | -19.04 |
-| Evan Miya | 658-694 | 48.7% | -95.88 |
-| Haslametrics | 644-652 | 49.7% | -66.60 |
+| Evan Miya | 658-696 | 48.6% | -97.88 |
+| Haslametrics | 646-652 | 49.8% | -64.79 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 957-317 | 75.1% | +552.91 |
+| KenPom | 959-317 | 75.2% | +554.73 |
 | Bart Torvik | 766-198 | 79.5% | +498.29 |
-| Evan Miya | 1034-326 | 76.0% | +613.91 |
+| Evan Miya | 1036-326 | 76.1% | +615.72 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 600-620 | 49.2% | -74.60 |
+| KenPom | 602-620 | 49.3% | -72.78 |
 | Bart Torvik | 434-476 | 47.7% | -81.49 |
-| Evan Miya | 628-672 | 48.3% | -101.15 |
-| Haslametrics | 602-648 | 48.2% | -100.78 |
+| Evan Miya | 630-672 | 48.4% | -99.33 |
+| Haslametrics | 604-648 | 48.2% | -98.96 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 620-600 | 50.8% | -36.42 |
+| KenPom | 620-602 | 50.7% | -38.42 |
 | Bart Torvik | 476-434 | 52.3% | -1.32 |
-| Evan Miya | 672-628 | 51.7% | -17.15 |
-| Haslametrics | 648-602 | 51.8% | -12.97 |
+| Evan Miya | 672-630 | 51.6% | -19.15 |
+| Haslametrics | 648-604 | 51.8% | -14.97 |
 
 ---
 
