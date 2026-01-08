@@ -1916,5 +1916,12 @@
     "edge_type": "spread",
     "edge_value": 0.0108932112821685,
     "notified_at": "2026-01-08T00:30:22.265728+00:00"
+  },
+  "Georgia St Panthers vs. Appalachian St Mountaineers|under": {
+    "game": "Georgia St Panthers vs. Appalachian St Mountaineers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-08T03:35:44.017842+00:00"
   }
 }
