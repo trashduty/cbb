@@ -1909,5 +1909,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0409613557174532,
     "notified_at": "2026-01-07T23:50:41.074275+00:00"
+  },
+  "UMBC Retrievers vs. Maine Black Bears|UMBC Retrievers|spread": {
+    "game": "UMBC Retrievers vs. Maine Black Bears",
+    "team": "UMBC Retrievers",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-08T00:30:22.265728+00:00"
   }
 }
