@@ -1937,5 +1937,19 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-09T00:30:04.833417+00:00"
+  },
+  "Kentucky Wildcats vs. Mississippi St Bulldogs|under": {
+    "game": "Kentucky Wildcats vs. Mississippi St Bulldogs",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2026-01-09T19:36:50.101498+00:00"
+  },
+  "Kentucky Wildcats vs. Mississippi St Bulldogs|Mississippi St Bulldogs|spread": {
+    "game": "Kentucky Wildcats vs. Mississippi St Bulldogs",
+    "team": "Mississippi St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0358041207605864,
+    "notified_at": "2026-01-09T19:36:50.598524+00:00"
   }
 }
