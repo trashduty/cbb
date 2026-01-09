@@ -1958,5 +1958,40 @@
     "edge_type": "spread",
     "edge_value": 0.0400692258560322,
     "notified_at": "2026-01-09T20:10:00.427679+00:00"
+  },
+  "Louisiana Ragin' Cajuns vs. Troy Trojans|Louisiana Ragin' Cajuns|spread": {
+    "game": "Louisiana Ragin' Cajuns vs. Troy Trojans",
+    "team": "Louisiana Ragin' Cajuns",
+    "edge_type": "spread",
+    "edge_value": 0.032741267628341,
+    "notified_at": "2026-01-09T22:25:47.980870+00:00"
+  },
+  "Davidson Wildcats vs. Rhode Island Rams|Davidson Wildcats|spread": {
+    "game": "Davidson Wildcats vs. Rhode Island Rams",
+    "team": "Davidson Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.027313572530116,
+    "notified_at": "2026-01-09T22:25:48.399887+00:00"
+  },
+  "Columbia Lions vs. Harvard Crimson|Columbia Lions|spread": {
+    "game": "Columbia Lions vs. Harvard Crimson",
+    "team": "Columbia Lions",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T22:25:48.640720+00:00"
+  },
+  "Northeastern Huskies vs. Towson Tigers|Northeastern Huskies|spread": {
+    "game": "Northeastern Huskies vs. Towson Tigers",
+    "team": "Northeastern Huskies",
+    "edge_type": "spread",
+    "edge_value": 0.0312040468018538,
+    "notified_at": "2026-01-09T22:25:48.890347+00:00"
+  },
+  "Northeastern Huskies vs. Towson Tigers|under": {
+    "game": "Northeastern Huskies vs. Towson Tigers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0158335850426964,
+    "notified_at": "2026-01-09T22:25:50.030933+00:00"
   }
 }
