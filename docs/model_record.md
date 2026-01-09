@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 08, 2026 at 11:46 PM ET
+**Last Updated:** January 08, 2026 at 11:59 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-09
 
-**Total Games Graded:** 728 games (1456 team-rows)
+**Total Games Graded:** 729 games (1458 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 674-682 | 49.7% | -69.33 |
+| KenPom | 674-684 | 49.6% | -71.33 |
 | Bart Torvik | 501-475 | 51.3% | -19.59 |
-| Evan Miya | 694-748 | 48.1% | -117.15 |
-| Haslametrics | 685-699 | 49.5% | -76.33 |
+| Evan Miya | 694-750 | 48.1% | -119.15 |
+| Haslametrics | 685-701 | 49.4% | -78.33 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1027-343 | 75.0% | +590.54 |
+| KenPom | 1029-343 | 75.0% | +592.36 |
 | Bart Torvik | 776-200 | 79.5% | +505.38 |
-| Evan Miya | 1104-352 | 75.8% | +651.54 |
+| Evan Miya | 1106-352 | 75.9% | +653.35 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 646-670 | 49.1% | -82.79 |
+| KenPom | 648-670 | 49.2% | -80.97 |
 | Bart Torvik | 438-484 | 47.5% | -85.86 |
-| Evan Miya | 674-722 | 48.3% | -109.33 |
-| Haslametrics | 648-696 | 48.2% | -106.97 |
+| Evan Miya | 676-722 | 48.4% | -107.52 |
+| Haslametrics | 650-696 | 48.3% | -105.15 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 670-646 | 50.9% | -36.97 |
+| KenPom | 670-648 | 50.8% | -38.97 |
 | Bart Torvik | 484-438 | 52.5% | +1.96 |
-| Evan Miya | 722-674 | 51.7% | -17.70 |
-| Haslametrics | 696-648 | 51.8% | -15.34 |
+| Evan Miya | 722-676 | 51.6% | -19.70 |
+| Haslametrics | 696-650 | 51.7% | -17.34 |
 
 ---
 
