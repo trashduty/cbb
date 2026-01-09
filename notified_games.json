@@ -1951,5 +1951,12 @@
     "edge_type": "spread",
     "edge_value": 0.0358041207605864,
     "notified_at": "2026-01-09T19:36:50.598524+00:00"
+  },
+  "Michigan Wolverines vs. Wisconsin Badgers|Michigan Wolverines|spread": {
+    "game": "Michigan Wolverines vs. Wisconsin Badgers",
+    "team": "Michigan Wolverines",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2026-01-09T20:10:00.427679+00:00"
   }
 }
