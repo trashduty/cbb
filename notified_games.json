@@ -2105,5 +2105,12 @@
     "edge_type": "spread",
     "edge_value": 0.024653400649521,
     "notified_at": "2026-01-09T23:38:03.958073+00:00"
+  },
+  "Florida Gators vs. Tennessee Volunteers|Tennessee Volunteers|spread": {
+    "game": "Florida Gators vs. Tennessee Volunteers",
+    "team": "Tennessee Volunteers",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T23:50:11.857241+00:00"
   }
 }
