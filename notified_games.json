@@ -2021,5 +2021,61 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-09T22:40:33.368178+00:00"
+  },
+  "Lindenwood Lions vs. Arkansas-Little Rock Trojans|Lindenwood Lions|spread": {
+    "game": "Lindenwood Lions vs. Arkansas-Little Rock Trojans",
+    "team": "Lindenwood Lions",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-01-09T23:08:29.282016+00:00"
+  },
+  "Cal Poly Mustangs vs. UC Davis Aggies|Cal Poly Mustangs|spread": {
+    "game": "Cal Poly Mustangs vs. UC Davis Aggies",
+    "team": "Cal Poly Mustangs",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-09T23:08:29.521124+00:00"
+  },
+  "Eastern Washington Eagles vs. Montana Grizzlies|Montana Grizzlies|spread": {
+    "game": "Eastern Washington Eagles vs. Montana Grizzlies",
+    "team": "Montana Grizzlies",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-09T23:08:29.745983+00:00"
+  },
+  "Bradley Braves vs. Northern Iowa Panthers|under": {
+    "game": "Bradley Braves vs. Northern Iowa Panthers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0135218092181041,
+    "notified_at": "2026-01-09T23:08:30.235463+00:00"
+  },
+  "Bradley Braves vs. Northern Iowa Panthers|Northern Iowa Panthers|spread": {
+    "game": "Bradley Braves vs. Northern Iowa Panthers",
+    "team": "Northern Iowa Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.032741267628341,
+    "notified_at": "2026-01-09T23:08:30.646706+00:00"
+  },
+  "Stony Brook Seawolves vs. UNC Wilmington Seahawks|Stony Brook Seawolves|spread": {
+    "game": "Stony Brook Seawolves vs. UNC Wilmington Seahawks",
+    "team": "Stony Brook Seawolves",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-09T23:08:31.108336+00:00"
+  },
+  "N Colorado Bears vs. Weber State Wildcats|under": {
+    "game": "N Colorado Bears vs. Weber State Wildcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0135218092181041,
+    "notified_at": "2026-01-09T23:08:31.580644+00:00"
+  },
+  "Santa Clara Broncos vs. Loyola Marymount Lions|Santa Clara Broncos|spread": {
+    "game": "Santa Clara Broncos vs. Loyola Marymount Lions",
+    "team": "Santa Clara Broncos",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T23:08:31.837501+00:00"
   }
 }
