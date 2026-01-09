@@ -2077,5 +2077,19 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-09T23:08:31.837501+00:00"
+  },
+  "Tulsa Golden Hurricane vs. South Florida Bulls|Tulsa Golden Hurricane|spread": {
+    "game": "Tulsa Golden Hurricane vs. South Florida Bulls",
+    "team": "Tulsa Golden Hurricane",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T23:25:42.139260+00:00"
+  },
+  "Oral Roberts Golden Eagles vs. St. Thomas (MN) Tommies|Oral Roberts Golden Eagles|spread": {
+    "game": "Oral Roberts Golden Eagles vs. St. Thomas (MN) Tommies",
+    "team": "Oral Roberts Golden Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0209847221467234,
+    "notified_at": "2026-01-09T23:25:42.413156+00:00"
   }
 }
