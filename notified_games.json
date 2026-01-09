@@ -1993,5 +1993,33 @@
     "edge_type": "under",
     "edge_value": 0.0158335850426964,
     "notified_at": "2026-01-09T22:25:50.030933+00:00"
+  },
+  "UT-Arlington Mavericks vs. Abilene Christian Wildcats|UT-Arlington Mavericks|spread": {
+    "game": "UT-Arlington Mavericks vs. Abilene Christian Wildcats",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-09T22:40:32.163500+00:00"
+  },
+  "Massachusetts Minutemen vs. Ball State Cardinals|Massachusetts Minutemen|spread": {
+    "game": "Massachusetts Minutemen vs. Ball State Cardinals",
+    "team": "Massachusetts Minutemen",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T22:40:32.619563+00:00"
+  },
+  "Morehead St Eagles vs. SE Missouri St Redhawks|Morehead St Eagles|spread": {
+    "game": "Morehead St Eagles vs. SE Missouri St Redhawks",
+    "team": "Morehead St Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-09T22:40:32.999369+00:00"
+  },
+  "Sam Houston St Bearkats vs. Liberty Flames|Sam Houston St Bearkats|spread": {
+    "game": "Sam Houston St Bearkats vs. Liberty Flames",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T22:40:33.368178+00:00"
   }
 }
