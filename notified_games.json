@@ -2091,5 +2091,19 @@
     "edge_type": "spread",
     "edge_value": 0.0209847221467234,
     "notified_at": "2026-01-09T23:25:42.413156+00:00"
+  },
+  "Mercer Bears vs. Wofford Terriers|Mercer Bears|spread": {
+    "game": "Mercer Bears vs. Wofford Terriers",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-09T23:38:03.575194+00:00"
+  },
+  "CSU Fullerton Titans vs. CSU Northridge Matadors|CSU Fullerton Titans|spread": {
+    "game": "CSU Fullerton Titans vs. CSU Northridge Matadors",
+    "team": "CSU Fullerton Titans",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-09T23:38:03.958073+00:00"
   }
 }
