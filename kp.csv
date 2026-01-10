@@ -2255,3 +2255,77 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-10,LIU,Saint Francis,home,95.0,86,67
 2026-01-10,Mississippi Valley St.,Prairie View A&M,away,4.0,67,86
 2026-01-10,Prairie View A&M,Mississippi Valley St.,home,96.0,86,67
+2026-01-11,Illinois,Iowa,away,52.0,72,71
+2026-01-11,Iowa,Illinois,home,48.0,71,72
+2026-01-11,Ohio St.,Washington,away,47.0,76,77
+2026-01-11,Washington,Ohio St.,home,53.0,77,76
+2026-01-11,Memphis,Florida Atlantic,away,49.0,75,76
+2026-01-11,Florida Atlantic,Memphis,home,51.0,76,75
+2026-01-11,Cincinnati,UCF,away,28.0,70,76
+2026-01-11,UCF,Cincinnati,home,72.0,76,70
+2026-01-11,Northwestern,Rutgers,away,67.0,75,70
+2026-01-11,Rutgers,Northwestern,home,33.0,70,75
+2026-01-11,Wright St.,Oakland,away,35.0,78,83
+2026-01-11,Oakland,Wright St.,home,65.0,83,78
+2026-01-11,North Texas,Wichita St.,away,30.0,61,67
+2026-01-11,Wichita St.,North Texas,home,70.0,67,61
+2026-01-11,Northern Kentucky,Green Bay,away,53.0,74,73
+2026-01-11,Green Bay,Northern Kentucky,home,47.0,73,74
+2026-01-11,Charlotte,Rice,away,54.0,70,69
+2026-01-11,Rice,Charlotte,home,46.0,69,70
+2026-01-11,Merrimack,Saint Peter's,away,47.0,65,66
+2026-01-11,Saint Peter's,Merrimack,home,53.0,66,65
+2026-01-11,Siena,Mount St. Mary's,away,64.0,71,67
+2026-01-11,Mount St. Mary's,Siena,home,36.0,67,71
+2026-01-11,Quinnipiac,Sacred Heart,away,71.0,80,74
+2026-01-11,Sacred Heart,Quinnipiac,home,29.0,74,80
+2026-01-11,Purdue Fort Wayne,Robert Morris,away,30.0,70,76
+2026-01-11,Robert Morris,Purdue Fort Wayne,home,70.0,76,70
+2026-01-11,UAB,East Carolina,away,76.0,78,70
+2026-01-11,East Carolina,UAB,home,24.0,70,78
+2026-01-11,Saint Joseph's,Richmond,away,19.0,70,80
+2026-01-11,Richmond,Saint Joseph's,home,81.0,80,70
+2026-01-11,Cleveland St.,Detroit Mercy,away,27.0,77,84
+2026-01-11,Detroit Mercy,Cleveland St.,home,73.0,84,77
+2026-01-11,Niagara,Manhattan,away,28.0,69,76
+2026-01-11,Manhattan,Niagara,home,72.0,76,69
+2026-01-11,IU Indy,Milwaukee,away,14.0,80,92
+2026-01-11,Milwaukee,IU Indy,home,86.0,92,80
+2026-01-11,Canisius,Iona,away,16.0,66,77
+2026-01-11,Iona,Canisius,home,84.0,77,66
+2026-01-11,Marist,Rider,away,86.0,69,57
+2026-01-11,Rider,Marist,home,14.0,57,69
+2026-01-12,Navy,American,away,50.0,72,73
+2026-01-12,American,Navy,home,50.0,73,72
+2026-01-12,New Orleans,Southeastern Louisiana,away,53.0,73,72
+2026-01-12,Southeastern Louisiana,New Orleans,home,47.0,72,73
+2026-01-12,Southern,Bethune Cookman,away,44.0,77,78
+2026-01-12,Bethune Cookman,Southern,home,56.0,78,77
+2026-01-12,Incarnate Word,Stephen F. Austin,away,24.0,68,75
+2026-01-12,Stephen F. Austin,Incarnate Word,home,76.0,75,68
+2026-01-12,UT Rio Grande Valley,Northwestern St.,away,62.0,74,71
+2026-01-12,Northwestern St.,UT Rio Grande Valley,home,38.0,71,74
+2026-01-12,North Carolina Central,Morgan St.,away,54.0,74,73
+2026-01-12,Morgan St.,North Carolina Central,home,46.0,73,74
+2026-01-12,Arkansas Pine Bluff,Prairie View A&M,away,32.0,82,87
+2026-01-12,Prairie View A&M,Arkansas Pine Bluff,home,68.0,87,82
+2026-01-12,South Carolina St.,Coppin St.,away,59.0,74,72
+2026-01-12,Coppin St.,South Carolina St.,home,41.0,72,74
+2026-01-12,Grambling St.,Florida A&M,away,67.0,75,70
+2026-01-12,Florida A&M,Grambling St.,home,33.0,70,75
+2026-01-12,Texas A&M Corpus Chris,East Texas A&M,away,70.0,72,66
+2026-01-12,East Texas A&M,Texas A&M Corpus Chris,home,30.0,66,72
+2026-01-12,Houston Christian,Lamar,away,28.0,64,70
+2026-01-12,Lamar,Houston Christian,home,72.0,70,64
+2026-01-12,Alcorn St.,Alabama St.,away,26.0,75,82
+2026-01-12,Alabama St.,Alcorn St.,home,74.0,82,75
+2026-01-12,Nicholls,McNeese,away,12.0,68,81
+2026-01-12,McNeese,Nicholls,home,88.0,81,68
+2026-01-12,Jackson St.,Alabama A&M,away,25.0,68,75
+2026-01-12,Alabama A&M,Jackson St.,home,75.0,75,68
+2026-01-12,Maryland Eastern Shore,Norfolk St.,away,25.0,60,67
+2026-01-12,Norfolk St.,Maryland Eastern Shore,home,75.0,67,60
+2026-01-12,Delaware St.,Howard,away,15.0,59,70
+2026-01-12,Howard,Delaware St.,home,85.0,70,59
+2026-01-12,Mississippi Valley St.,Texas Southern,away,10.0,66,80
+2026-01-12,Texas Southern,Mississippi Valley St.,home,90.0,80,66
