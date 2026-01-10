@@ -2119,5 +2119,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-10T00:56:35.045844+00:00"
+  },
+  "Air Force Falcons vs. New Mexico Lobos|Air Force Falcons|spread": {
+    "game": "Air Force Falcons vs. New Mexico Lobos",
+    "team": "Air Force Falcons",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-10T01:37:55.248556+00:00"
   }
 }
