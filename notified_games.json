@@ -2266,5 +2266,12 @@
     "edge_type": "spread",
     "edge_value": 0.01214209412589,
     "notified_at": "2026-01-10T14:07:52.485112+00:00"
+  },
+  "Sacred Heart Pioneers vs. Quinnipiac Bobcats|Quinnipiac Bobcats|spread": {
+    "game": "Sacred Heart Pioneers vs. Quinnipiac Bobcats",
+    "team": "Quinnipiac Bobcats",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-10T22:38:55.181793+00:00"
   }
 }
