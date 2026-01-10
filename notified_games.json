@@ -2245,5 +2245,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0458518487098347,
     "notified_at": "2026-01-10T04:45:56.385805+00:00"
+  },
+  "Texas Southern Tigers vs. Arkansas-Pine Bluff Golden Lions|Texas Southern Tigers|moneyline": {
+    "game": "Texas Southern Tigers vs. Arkansas-Pine Bluff Golden Lions",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0409578944891088,
+    "notified_at": "2026-01-10T05:39:08.367637+00:00"
   }
 }
