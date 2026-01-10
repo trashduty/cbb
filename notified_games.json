@@ -2189,5 +2189,26 @@
     "edge_type": "spread",
     "edge_value": 0.0287684734810367,
     "notified_at": "2026-01-10T02:26:59.941263+00:00"
+  },
+  "Coastal Carolina Chanticleers vs. Appalachian St Mountaineers|under": {
+    "game": "Coastal Carolina Chanticleers vs. Appalachian St Mountaineers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0219699139296366,
+    "notified_at": "2026-01-10T03:06:50.968579+00:00"
+  },
+  "Pennsylvania Quakers vs. Brown Bears|Pennsylvania Quakers|spread": {
+    "game": "Pennsylvania Quakers vs. Brown Bears",
+    "team": "Pennsylvania Quakers",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-10T03:06:51.277748+00:00"
+  },
+  "UC Riverside Highlanders vs. UC San Diego Tritons|over": {
+    "game": "UC Riverside Highlanders vs. UC San Diego Tritons",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-10T03:06:51.582581+00:00"
   }
 }
