@@ -2259,5 +2259,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-10T06:45:06.984027+00:00"
+  },
+  "San Diego St Aztecs vs. Fresno St Bulldogs|Fresno St Bulldogs|spread": {
+    "game": "San Diego St Aztecs vs. Fresno St Bulldogs",
+    "team": "Fresno St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.01214209412589,
+    "notified_at": "2026-01-10T14:07:52.485112+00:00"
   }
 }
