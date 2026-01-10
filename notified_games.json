@@ -2126,5 +2126,68 @@
     "edge_type": "spread",
     "edge_value": 0.0108932112821685,
     "notified_at": "2026-01-10T01:37:55.248556+00:00"
+  },
+  "Boston Univ. Terriers vs. Army Knights|over": {
+    "game": "Boston Univ. Terriers vs. Army Knights",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0102697040659835,
+    "notified_at": "2026-01-10T02:26:57.179722+00:00"
+  },
+  "South Carolina Upstate Spartans vs. Winthrop Eagles|South Carolina Upstate Spartans|spread": {
+    "game": "South Carolina Upstate Spartans vs. Winthrop Eagles",
+    "team": "South Carolina Upstate Spartans",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-01-10T02:26:57.620287+00:00"
+  },
+  "Binghamton Bearcats vs. UMass Lowell River Hawks|over": {
+    "game": "Binghamton Bearcats vs. UMass Lowell River Hawks",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0135277075942725,
+    "notified_at": "2026-01-10T02:26:57.926281+00:00"
+  },
+  "Albany Great Danes vs. Bryant Bulldogs|Albany Great Danes|spread": {
+    "game": "Albany Great Danes vs. Bryant Bulldogs",
+    "team": "Albany Great Danes",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-10T02:26:58.265803+00:00"
+  },
+  "NJIT Highlanders vs. Maine Black Bears|under": {
+    "game": "NJIT Highlanders vs. Maine Black Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.019591658077563,
+    "notified_at": "2026-01-10T02:26:58.714833+00:00"
+  },
+  "NJIT Highlanders vs. Maine Black Bears|NJIT Highlanders|spread": {
+    "game": "NJIT Highlanders vs. Maine Black Bears",
+    "team": "NJIT Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-10T02:26:59.138770+00:00"
+  },
+  "Jacksonville Dolphins vs. West Georgia Wolves|West Georgia Wolves|spread": {
+    "game": "Jacksonville Dolphins vs. West Georgia Wolves",
+    "team": "West Georgia Wolves",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-10T02:26:59.384807+00:00"
+  },
+  "Florida Gulf Coast Eagles vs. Lipscomb Bisons|Florida Gulf Coast Eagles|spread": {
+    "game": "Florida Gulf Coast Eagles vs. Lipscomb Bisons",
+    "team": "Florida Gulf Coast Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-10T02:26:59.665668+00:00"
+  },
+  "Eastern Kentucky Colonels vs. Central Arkansas Bears|Central Arkansas Bears|spread": {
+    "game": "Eastern Kentucky Colonels vs. Central Arkansas Bears",
+    "team": "Central Arkansas Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-01-10T02:26:59.941263+00:00"
   }
 }
