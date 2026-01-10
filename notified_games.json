@@ -2210,5 +2210,19 @@
     "edge_type": "over",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-10T03:06:51.582581+00:00"
+  },
+  "Le Moyne Dolphins vs. Central Connecticut St Blue Devils|over": {
+    "game": "Le Moyne Dolphins vs. Central Connecticut St Blue Devils",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0158414143796555,
+    "notified_at": "2026-01-10T03:42:50.221293+00:00"
+  },
+  "American Eagles vs. Holy Cross Crusaders|over": {
+    "game": "American Eagles vs. Holy Cross Crusaders",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0135218092181041,
+    "notified_at": "2026-01-10T03:42:50.576340+00:00"
   }
 }
