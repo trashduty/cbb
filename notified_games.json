@@ -2224,5 +2224,12 @@
     "edge_type": "over",
     "edge_value": 0.0135218092181041,
     "notified_at": "2026-01-10T03:42:50.576340+00:00"
+  },
+  "Elon Phoenix vs. Campbell Fighting Camels|over": {
+    "game": "Elon Phoenix vs. Campbell Fighting Camels",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-01-10T04:27:13.877401+00:00"
   }
 }
