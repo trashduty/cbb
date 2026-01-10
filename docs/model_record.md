@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 09, 2026 at 10:46 PM ET
+**Last Updated:** January 09, 2026 at 11:06 PM ET
 
 **Season Record Period:** 2025-11-03 to 2026-01-10
 
-**Total Games Graded:** 749 games (1498 team-rows)
+**Total Games Graded:** 750 games (1500 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 695-703 | 49.7% | -71.24 |
+| KenPom | 697-703 | 49.8% | -69.43 |
 | Bart Torvik | 503-475 | 51.4% | -17.77 |
-| Evan Miya | 713-771 | 48.0% | -122.88 |
-| Haslametrics | 707-719 | 49.6% | -76.34 |
+| Evan Miya | 713-773 | 48.0% | -124.88 |
+| Haslametrics | 709-719 | 49.6% | -74.52 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1055-357 | 74.7% | +602.00 |
+| KenPom | 1057-357 | 74.8% | +603.81 |
 | Bart Torvik | 778-200 | 79.6% | +507.20 |
-| Evan Miya | 1132-366 | 75.6% | +662.99 |
+| Evan Miya | 1132-368 | 75.5% | +660.99 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 658-698 | 48.5% | -99.88 |
+| KenPom | 658-700 | 48.5% | -101.88 |
 | Bart Torvik | 438-486 | 47.4% | -87.86 |
-| Evan Miya | 686-750 | 47.8% | -126.43 |
-| Haslametrics | 660-724 | 47.7% | -124.06 |
+| Evan Miya | 686-752 | 47.7% | -128.43 |
+| Haslametrics | 660-726 | 47.6% | -126.06 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 698-658 | 51.5% | -23.52 |
+| KenPom | 700-658 | 51.5% | -21.70 |
 | Bart Torvik | 486-438 | 52.6% | +3.77 |
-| Evan Miya | 750-686 | 52.2% | -4.25 |
-| Haslametrics | 724-660 | 52.3% | -1.88 |
+| Evan Miya | 752-686 | 52.3% | -2.43 |
+| Haslametrics | 726-660 | 52.4% | -0.07 |
 
 ---
 
