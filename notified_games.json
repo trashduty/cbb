@@ -2252,5 +2252,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0409578944891088,
     "notified_at": "2026-01-10T05:39:08.367637+00:00"
+  },
+  "Southern Miss Golden Eagles vs. UL Monroe Warhawks|Southern Miss Golden Eagles|spread": {
+    "game": "Southern Miss Golden Eagles vs. UL Monroe Warhawks",
+    "team": "Southern Miss Golden Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-10T06:45:06.984027+00:00"
   }
 }
