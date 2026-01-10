@@ -2112,5 +2112,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-09T23:50:11.857241+00:00"
+  },
+  "South Dakota Coyotes vs. Denver Pioneers|South Dakota Coyotes|spread": {
+    "game": "South Dakota Coyotes vs. Denver Pioneers",
+    "team": "South Dakota Coyotes",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-10T00:56:35.045844+00:00"
   }
 }
