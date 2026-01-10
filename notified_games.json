@@ -2231,5 +2231,19 @@
     "edge_type": "over",
     "edge_value": 0.0130148987755176,
     "notified_at": "2026-01-10T04:27:13.877401+00:00"
+  },
+  "Wagner Seahawks vs. Mercyhurst Lakers|Wagner Seahawks|spread": {
+    "game": "Wagner Seahawks vs. Mercyhurst Lakers",
+    "team": "Wagner Seahawks",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-10T04:45:56.140805+00:00"
+  },
+  "NJIT Highlanders vs. Maine Black Bears|NJIT Highlanders|moneyline": {
+    "game": "NJIT Highlanders vs. Maine Black Bears",
+    "team": "NJIT Highlanders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0458518487098347,
+    "notified_at": "2026-01-10T04:45:56.385805+00:00"
   }
 }
