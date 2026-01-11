@@ -2294,5 +2294,12 @@
     "edge_type": "under",
     "edge_value": 0.0290329267565924,
     "notified_at": "2026-01-11T18:45:34.290393+00:00"
+  },
+  "Alabama St Hornets vs. Alcorn St Braves|over": {
+    "game": "Alabama St Hornets vs. Alcorn St Braves",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0150273245156961,
+    "notified_at": "2026-01-11T19:49:41.125066+00:00"
   }
 }
