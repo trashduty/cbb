@@ -2287,5 +2287,12 @@
     "edge_type": "spread",
     "edge_value": 0.01214209412589,
     "notified_at": "2026-01-11T04:59:10.195340+00:00"
+  },
+  "Norfolk St Spartans vs. Maryland-Eastern Shore Hawks|under": {
+    "game": "Norfolk St Spartans vs. Maryland-Eastern Shore Hawks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0290329267565924,
+    "notified_at": "2026-01-11T18:45:34.290393+00:00"
   }
 }
