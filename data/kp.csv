@@ -2295,37 +2295,107 @@ Iona,Canisius,Canisius,20260111,11,0.16,143
 Iona,Canisius,Iona,20260111,-11,0.84,143
 Rider,Marist,Marist,20260111,-12,0.86,126
 Rider,Marist,Rider,20260111,12,0.14,126
-American,Navy,Navy,20260112,1,0.5,145
-American,Navy,American,20260112,-1,0.5,145
-Southeastern Louisiana,New Orleans,New Orleans,20260112,-1,0.53,145
-Southeastern Louisiana,New Orleans,Southeastern Louisiana,20260112,1,0.47,145
-Bethune Cookman,Southern,Southern,20260112,1,0.44,155
-Bethune Cookman,Southern,Bethune Cookman,20260112,-1,0.56,155
-Stephen F. Austin,Incarnate Word,Incarnate Word,20260112,7,0.24,143
-Stephen F. Austin,Incarnate Word,Stephen F. Austin,20260112,-7,0.76,143
-Northwestern St.,UT Rio Grande Valley,UT Rio Grande Valley,20260112,-3,0.62,145
-Northwestern St.,UT Rio Grande Valley,Northwestern St.,20260112,3,0.38,145
+American,Navy,Navy,20260112,-1,0.55,143
+American,Navy,American,20260112,1,0.45,143
+Southeastern Louisiana,New Orleans,New Orleans,20260112,1,0.48,145
+Southeastern Louisiana,New Orleans,Southeastern Louisiana,20260112,-1,0.52,145
+Northwestern St.,UT Rio Grande Valley,UT Rio Grande Valley,20260112,-2,0.58,146
+Northwestern St.,UT Rio Grande Valley,Northwestern St.,20260112,2,0.42,146
+Prairie View A&M,Arkansas Pine Bluff,Arkansas Pine Bluff,20260112,3,0.39,167
+Prairie View A&M,Arkansas Pine Bluff,Prairie View A&M,20260112,-3,0.61,167
+Bethune Cookman,Southern,Southern,20260112,3,0.37,153
+Bethune Cookman,Southern,Bethune Cookman,20260112,-3,0.63,153
+Florida A&M,Grambling St.,Grambling St.,20260112,-3,0.61,143
+Florida A&M,Grambling St.,Florida A&M,20260112,3,0.39,143
+East Texas A&M,Texas A&M Corpus Chris,Texas A&M Corpus Chris,20260112,-5,0.66,139
+East Texas A&M,Texas A&M Corpus Chris,East Texas A&M,20260112,5,0.34,139
+Stephen F. Austin,Incarnate Word,Incarnate Word,20260112,9,0.21,141
+Stephen F. Austin,Incarnate Word,Stephen F. Austin,20260112,-9,0.79,141
 Morgan St.,North Carolina Central,North Carolina Central,20260112,-1,0.54,147
 Morgan St.,North Carolina Central,Morgan St.,20260112,1,0.46,147
-Prairie View A&M,Arkansas Pine Bluff,Arkansas Pine Bluff,20260112,5,0.32,169
-Prairie View A&M,Arkansas Pine Bluff,Prairie View A&M,20260112,-5,0.68,169
-Coppin St.,South Carolina St.,South Carolina St.,20260112,-2,0.59,146
-Coppin St.,South Carolina St.,Coppin St.,20260112,2,0.41,146
-Florida A&M,Grambling St.,Grambling St.,20260112,-5,0.67,145
-Florida A&M,Grambling St.,Florida A&M,20260112,5,0.33,145
-East Texas A&M,Texas A&M Corpus Chris,Texas A&M Corpus Chris,20260112,-6,0.7,138
-East Texas A&M,Texas A&M Corpus Chris,East Texas A&M,20260112,6,0.3,138
-Lamar,Houston Christian,Houston Christian,20260112,6,0.28,134
-Lamar,Houston Christian,Lamar,20260112,-6,0.72,134
-Alabama St.,Alcorn St.,Alcorn St.,20260112,7,0.26,157
-Alabama St.,Alcorn St.,Alabama St.,20260112,-7,0.74,157
-McNeese,Nicholls,Nicholls,20260112,13,0.12,149
-McNeese,Nicholls,McNeese,20260112,-13,0.88,149
-Alabama A&M,Jackson St.,Jackson St.,20260112,7,0.25,143
-Alabama A&M,Jackson St.,Alabama A&M,20260112,-7,0.75,143
-Norfolk St.,Maryland Eastern Shore,Maryland Eastern Shore,20260112,7,0.25,127
-Norfolk St.,Maryland Eastern Shore,Norfolk St.,20260112,-7,0.75,127
-Howard,Delaware St.,Delaware St.,20260112,11,0.15,129
-Howard,Delaware St.,Howard,20260112,-11,0.85,129
-Texas Southern,Mississippi Valley St.,Mississippi Valley St.,20260112,14,0.1,146
-Texas Southern,Mississippi Valley St.,Texas Southern,20260112,-14,0.9,146
+Coppin St.,South Carolina St.,South Carolina St.,20260112,-2,0.59,148
+Coppin St.,South Carolina St.,Coppin St.,20260112,2,0.41,148
+Alabama St.,Alcorn St.,Alcorn St.,20260112,5,0.31,155
+Alabama St.,Alcorn St.,Alabama St.,20260112,-5,0.69,155
+McNeese,Nicholls,Nicholls,20260112,12,0.14,150
+McNeese,Nicholls,McNeese,20260112,-12,0.86,150
+Alabama A&M,Jackson St.,Jackson St.,20260112,6,0.3,140
+Alabama A&M,Jackson St.,Alabama A&M,20260112,-6,0.7,140
+Lamar,Houston Christian,Houston Christian,20260112,7,0.25,133
+Lamar,Houston Christian,Lamar,20260112,-7,0.75,133
+Norfolk St.,Maryland Eastern Shore,Maryland Eastern Shore,20260112,7,0.28,127
+Norfolk St.,Maryland Eastern Shore,Norfolk St.,20260112,-7,0.72,127
+Howard,Delaware St.,Delaware St.,20260112,11,0.17,129
+Howard,Delaware St.,Howard,20260112,-11,0.83,129
+Texas Southern,Mississippi Valley St.,Mississippi Valley St.,20260112,12,0.14,142
+Texas Southern,Mississippi Valley St.,Texas Southern,20260112,-12,0.86,142
+Kansas,Iowa St.,Iowa St.,20260113,-4,0.65,146
+Kansas,Iowa St.,Kansas,20260113,4,0.35,146
+Louisville,Virginia,Virginia,20260113,3,0.39,157
+Louisville,Virginia,Louisville,20260113,-3,0.61,157
+Oklahoma,Florida,Florida,20260113,-6,0.69,154
+Oklahoma,Florida,Oklahoma,20260113,6,0.31,154
+Seton Hall,Connecticut,Connecticut,20260113,-5,0.68,129
+Seton Hall,Connecticut,Seton Hall,20260113,5,0.32,129
+Providence,Villanova,Villanova,20260113,-2,0.61,158
+Providence,Villanova,Providence,20260113,2,0.39,158
+Oklahoma St.,Baylor,Baylor,20260113,2,0.43,170
+Oklahoma St.,Baylor,Oklahoma St.,20260113,-2,0.57,170
+Mississippi St.,Alabama,Alabama,20260113,-6,0.7,170
+Mississippi St.,Alabama,Mississippi St.,20260113,6,0.3,170
+Notre Dame,Miami FL,Miami FL,20260113,-2,0.57,144
+Notre Dame,Miami FL,Notre Dame,20260113,2,0.43,144
+Michigan St.,Indiana,Indiana,20260113,7,0.27,141
+Michigan St.,Indiana,Michigan St.,20260113,-7,0.73,141
+Minnesota,Wisconsin,Wisconsin,20260113,-3,0.6,143
+Minnesota,Wisconsin,Minnesota,20260113,3,0.4,143
+Tennessee,Texas A&M,Texas A&M,20260113,8,0.23,156
+Tennessee,Texas A&M,Tennessee,20260113,-8,0.77,156
+San Francisco,Saint Mary's,Saint Mary's,20260113,-5,0.67,141
+San Francisco,Saint Mary's,San Francisco,20260113,5,0.33,141
+Duquesne,Dayton,Dayton,20260113,-4,0.64,154
+Duquesne,Dayton,Duquesne,20260113,4,0.36,154
+UNLV,Boise St.,Boise St.,20260113,-4,0.64,148
+UNLV,Boise St.,UNLV,20260113,4,0.36,148
+Fresno St.,Colorado St.,Colorado St.,20260113,-4,0.63,140
+Fresno St.,Colorado St.,Fresno St.,20260113,4,0.37,140
+New Mexico,Grand Canyon,Grand Canyon,20260113,8,0.22,140
+New Mexico,Grand Canyon,New Mexico,20260113,-8,0.78,140
+Houston,West Virginia,West Virginia,20260113,12,0.13,128
+Houston,West Virginia,Houston,20260113,-12,0.87,128
+Buffalo,Kent St.,Kent St.,20260113,1,0.46,167
+Buffalo,Kent St.,Buffalo,20260113,-1,0.54,167
+Nebraska,Oregon,Oregon,20260113,13,0.13,147
+Nebraska,Oregon,Nebraska,20260113,-13,0.87,147
+Syracuse,Florida St.,Florida St.,20260113,9,0.21,159
+Syracuse,Florida St.,Syracuse,20260113,-9,0.79,159
+Creighton,Georgetown,Georgetown,20260113,10,0.17,148
+Creighton,Georgetown,Creighton,20260113,-10,0.83,148
+Toledo,Ohio,Ohio,20260113,3,0.39,157
+Toledo,Ohio,Toledo,20260113,-3,0.61,157
+Western Michigan,Massachusetts,Massachusetts,20260113,-1,0.55,157
+Western Michigan,Massachusetts,Western Michigan,20260113,1,0.45,157
+USC,Maryland,Maryland,20260113,12,0.15,150
+USC,Maryland,USC,20260113,-12,0.85,150
+Evansville,Bradley,Bradley,20260113,-6,0.7,142
+Evansville,Bradley,Evansville,20260113,6,0.3,142
+St. John's,Marquette,Marquette,20260113,17,0.07,155
+St. John's,Marquette,St. John's,20260113,-17,0.93,155
+Northern Iowa,Illinois Chicago,Illinois Chicago,20260113,9,0.2,123
+Northern Iowa,Illinois Chicago,Northern Iowa,20260113,-9,0.8,123
+Belmont,Valparaiso,Valparaiso,20260113,12,0.13,148
+Belmont,Valparaiso,Belmont,20260113,-12,0.87,148
+Loyola Chicago,George Mason,George Mason,20260113,-11,0.84,143
+Loyola Chicago,George Mason,Loyola Chicago,20260113,11,0.16,143
+Clemson,Boston College,Boston College,20260113,16,0.07,130
+Clemson,Boston College,Clemson,20260113,-16,0.93,130
+Eastern Michigan,Northern Illinois,Northern Illinois,20260113,10,0.18,138
+Eastern Michigan,Northern Illinois,Eastern Michigan,20260113,-10,0.82,138
+Eastern Illinois,Western Illinois,Western Illinois,20260113,9,0.21,129
+Eastern Illinois,Western Illinois,Eastern Illinois,20260113,-9,0.79,129
+San Jose St.,Air Force,Air Force,20260113,11,0.16,133
+San Jose St.,Air Force,San Jose St.,20260113,-11,0.84,133
+Miami OH,Central Michigan,Central Michigan,20260113,18,0.05,154
+Miami OH,Central Michigan,Miami OH,20260113,-18,0.95,154
+Akron,Ball St.,Ball St.,20260113,22,0.02,156
+Akron,Ball St.,Akron,20260113,-22,0.98,156
