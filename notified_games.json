@@ -2364,5 +2364,26 @@
     "edge_type": "spread",
     "edge_value": 0.0154719658609231,
     "notified_at": "2026-01-12T20:10:15.815578+00:00"
+  },
+  "Minnesota Golden Gophers vs. Wisconsin Badgers|under": {
+    "game": "Minnesota Golden Gophers vs. Wisconsin Badgers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-12T20:26:32.027262+00:00"
+  },
+  "Syracuse Orange vs. Florida St Seminoles|Syracuse Orange|spread": {
+    "game": "Syracuse Orange vs. Florida St Seminoles",
+    "team": "Syracuse Orange",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-12T20:26:32.304797+00:00"
+  },
+  "USC Trojans vs. Maryland Terrapins|USC Trojans|spread": {
+    "game": "USC Trojans vs. Maryland Terrapins",
+    "team": "USC Trojans",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-12T20:26:32.644480+00:00"
   }
 }
