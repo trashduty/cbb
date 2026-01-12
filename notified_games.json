@@ -2392,5 +2392,12 @@
     "edge_type": "spread",
     "edge_value": 0.0289037155541542,
     "notified_at": "2026-01-12T22:25:22.687292+00:00"
+  },
+  "Buffalo Bulls vs. Kent State Golden Flashes|Buffalo Bulls|moneyline": {
+    "game": "Buffalo Bulls vs. Kent State Golden Flashes",
+    "team": "Buffalo Bulls",
+    "edge_type": "moneyline",
+    "edge_value": 0.0494911517532589,
+    "notified_at": "2026-01-12T22:38:53.578716+00:00"
   }
 }
