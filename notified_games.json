@@ -2308,5 +2308,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0491514255590133,
     "notified_at": "2026-01-12T04:10:42.658347+00:00"
+  },
+  "Florida A&M Rattlers vs. Grambling St Tigers|Grambling St Tigers|moneyline": {
+    "game": "Florida A&M Rattlers vs. Grambling St Tigers",
+    "team": "Grambling St Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0416022050854286,
+    "notified_at": "2026-01-12T05:26:33.018928+00:00"
   }
 }
