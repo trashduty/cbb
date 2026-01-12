@@ -2315,5 +2315,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0416022050854286,
     "notified_at": "2026-01-12T05:26:33.018928+00:00"
+  },
+  "St. John's Red Storm vs. Marquette Golden Eagles|St. John's Red Storm|spread": {
+    "game": "St. John's Red Storm vs. Marquette Golden Eagles",
+    "team": "St. John's Red Storm",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-12T19:49:34.442543+00:00"
+  },
+  "Buffalo Bulls vs. Kent State Golden Flashes|Buffalo Bulls|spread": {
+    "game": "Buffalo Bulls vs. Kent State Golden Flashes",
+    "team": "Buffalo Bulls",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-01-12T19:49:34.857658+00:00"
   }
 }
