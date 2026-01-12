@@ -2301,5 +2301,12 @@
     "edge_type": "over",
     "edge_value": 0.0150273245156961,
     "notified_at": "2026-01-11T19:49:41.125066+00:00"
+  },
+  "Bethune-Cookman Wildcats vs. Southern Jaguars|Bethune-Cookman Wildcats|moneyline": {
+    "game": "Bethune-Cookman Wildcats vs. Southern Jaguars",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0491514255590133,
+    "notified_at": "2026-01-12T04:10:42.658347+00:00"
   }
 }
