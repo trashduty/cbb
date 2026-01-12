@@ -2329,5 +2329,40 @@
     "edge_type": "spread",
     "edge_value": 0.0287684734810367,
     "notified_at": "2026-01-12T19:49:34.857658+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. George Mason Patriots|George Mason Patriots|spread": {
+    "game": "Loyola (Chi) Ramblers vs. George Mason Patriots",
+    "team": "George Mason Patriots",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-12T20:10:14.304217+00:00"
+  },
+  "Miami (OH) RedHawks vs. Central Michigan Chippewas|Miami (OH) RedHawks|spread": {
+    "game": "Miami (OH) RedHawks vs. Central Michigan Chippewas",
+    "team": "Miami (OH) RedHawks",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2026-01-12T20:10:14.763249+00:00"
+  },
+  "Eastern Illinois Panthers vs. Western Illinois Leathernecks|Eastern Illinois Panthers|spread": {
+    "game": "Eastern Illinois Panthers vs. Western Illinois Leathernecks",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.032741267628341,
+    "notified_at": "2026-01-12T20:10:15.139926+00:00"
+  },
+  "Oklahoma St Cowboys vs. Baylor Bears|Oklahoma St Cowboys|spread": {
+    "game": "Oklahoma St Cowboys vs. Baylor Bears",
+    "team": "Oklahoma St Cowboys",
+    "edge_type": "spread",
+    "edge_value": 0.0400692258560322,
+    "notified_at": "2026-01-12T20:10:15.508518+00:00"
+  },
+  "Fresno St Bulldogs vs. Colorado St Rams|Fresno St Bulldogs|spread": {
+    "game": "Fresno St Bulldogs vs. Colorado St Rams",
+    "team": "Fresno St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-12T20:10:15.815578+00:00"
   }
 }
