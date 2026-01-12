@@ -2399,5 +2399,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0494911517532589,
     "notified_at": "2026-01-12T22:38:53.578716+00:00"
+  },
+  "Nebraska Cornhuskers vs. Oregon Ducks|Nebraska Cornhuskers|spread": {
+    "game": "Nebraska Cornhuskers vs. Oregon Ducks",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-12T23:24:42.633333+00:00"
   }
 }
