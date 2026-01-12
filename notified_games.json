@@ -2385,5 +2385,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-12T20:26:32.644480+00:00"
+  },
+  "San Francisco Dons vs. Saint Mary's Gaels|San Francisco Dons|spread": {
+    "game": "San Francisco Dons vs. Saint Mary's Gaels",
+    "team": "San Francisco Dons",
+    "edge_type": "spread",
+    "edge_value": 0.0289037155541542,
+    "notified_at": "2026-01-12T22:25:22.687292+00:00"
   }
 }
