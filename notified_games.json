@@ -2455,5 +2455,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-13T20:26:41.103202+00:00"
+  },
+  "Washington Huskies vs. Michigan Wolverines|under": {
+    "game": "Washington Huskies vs. Michigan Wolverines",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0160301803540053,
+    "notified_at": "2026-01-13T20:41:50.443928+00:00"
   }
 }
