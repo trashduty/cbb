@@ -2469,5 +2469,19 @@
     "edge_type": "spread",
     "edge_value": 0.027313572530116,
     "notified_at": "2026-01-13T22:26:05.482638+00:00"
+  },
+  "LSU Tigers vs. Kentucky Wildcats|LSU Tigers|moneyline": {
+    "game": "LSU Tigers vs. Kentucky Wildcats",
+    "team": "LSU Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0522186174647479,
+    "notified_at": "2026-01-13T22:41:33.519737+00:00"
+  },
+  "Arizona Wildcats vs. Arizona St Sun Devils|under": {
+    "game": "Arizona Wildcats vs. Arizona St Sun Devils",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2026-01-13T22:41:33.870051+00:00"
   }
 }
