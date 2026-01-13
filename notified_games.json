@@ -2483,5 +2483,12 @@
     "edge_type": "under",
     "edge_value": 0.0137517570229503,
     "notified_at": "2026-01-13T22:41:33.870051+00:00"
+  },
+  "Canisius Golden Griffins vs. Niagara Purple Eagles|Canisius Golden Griffins|moneyline": {
+    "game": "Canisius Golden Griffins vs. Niagara Purple Eagles",
+    "team": "Canisius Golden Griffins",
+    "edge_type": "moneyline",
+    "edge_value": 0.0422580140516958,
+    "notified_at": "2026-01-13T23:25:35.047976+00:00"
   }
 }
