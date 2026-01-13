@@ -2406,5 +2406,54 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-12T23:24:42.633333+00:00"
+  },
+  "Kennesaw St Owls vs. Florida Int'l Golden Panthers|Florida Int'l Golden Panthers|spread": {
+    "game": "Kennesaw St Owls vs. Florida Int'l Golden Panthers",
+    "team": "Florida Int'l Golden Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-13T20:26:38.960217+00:00"
+  },
+  "Jacksonville St Gamecocks vs. Sam Houston St Bearkats|Sam Houston St Bearkats|spread": {
+    "game": "Jacksonville St Gamecocks vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-13T20:26:39.188728+00:00"
+  },
+  "Saint Joseph's Hawks vs. St. Bonaventure Bonnies|Saint Joseph's Hawks|spread": {
+    "game": "Saint Joseph's Hawks vs. St. Bonaventure Bonnies",
+    "team": "Saint Joseph's Hawks",
+    "edge_type": "spread",
+    "edge_value": 0.024653400649521,
+    "notified_at": "2026-01-13T20:26:39.542578+00:00"
+  },
+  "Georgia Tech Yellow Jackets vs. Pittsburgh Panthers|Georgia Tech Yellow Jackets|spread": {
+    "game": "Georgia Tech Yellow Jackets vs. Pittsburgh Panthers",
+    "team": "Georgia Tech Yellow Jackets",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-13T20:26:39.831166+00:00"
+  },
+  "South Florida Bulls vs. East Carolina Pirates|South Florida Bulls|spread": {
+    "game": "South Florida Bulls vs. East Carolina Pirates",
+    "team": "South Florida Bulls",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-13T20:26:40.037536+00:00"
+  },
+  "Canisius Golden Griffins vs. Niagara Purple Eagles|Canisius Golden Griffins|spread": {
+    "game": "Canisius Golden Griffins vs. Niagara Purple Eagles",
+    "team": "Canisius Golden Griffins",
+    "edge_type": "spread",
+    "edge_value": 0.0445828742975339,
+    "notified_at": "2026-01-13T20:26:40.452525+00:00"
+  },
+  "Wyoming Cowboys vs. San Diego St Aztecs|Wyoming Cowboys|spread": {
+    "game": "Wyoming Cowboys vs. San Diego St Aztecs",
+    "team": "Wyoming Cowboys",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-13T20:26:41.103202+00:00"
   }
 }
