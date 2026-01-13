@@ -2462,5 +2462,12 @@
     "edge_type": "under",
     "edge_value": 0.0160301803540053,
     "notified_at": "2026-01-13T20:41:50.443928+00:00"
+  },
+  "Texas State Bobcats vs. Louisiana Ragin' Cajuns|Louisiana Ragin' Cajuns|spread": {
+    "game": "Texas State Bobcats vs. Louisiana Ragin' Cajuns",
+    "team": "Louisiana Ragin' Cajuns",
+    "edge_type": "spread",
+    "edge_value": 0.027313572530116,
+    "notified_at": "2026-01-13T22:26:05.482638+00:00"
   }
 }
