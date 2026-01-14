@@ -2518,5 +2518,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-14T14:10:43.931477+00:00"
+  },
+  "Texas Longhorns vs. Vanderbilt Commodores|Vanderbilt Commodores|spread": {
+    "game": "Texas Longhorns vs. Vanderbilt Commodores",
+    "team": "Vanderbilt Commodores",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-14T14:44:20.532923+00:00"
   }
 }
