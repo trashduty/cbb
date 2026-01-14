@@ -37,6 +37,10 @@ logging.basicConfig(
 logger = logging.getLogger("rich")
 console = Console()
 
+# Bookmakers to fetch from The Odds API (5 major US books)
+ALLOWED_BOOKMAKERS = ["draftkings", "fanduel", "betmgm", "caesars", "espnbet"]
+BOOKMAKERS_PARAM = ",".join(ALLOWED_BOOKMAKERS)
+
 # Determine the project root directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(os.path.dirname(script_dir))
@@ -61,7 +65,7 @@ def get_odds_data(sport="basketball_ncaab", region="us", markets="h2h,spreads,to
         raise ValueError("ODDSAPI key not found in environment variables.")
 
     base_url = "https://api.the-odds-api.com"
-    odds_url = f"{base_url}/v4/sports/{sport}/odds/?apiKey={key}&regions={region}&markets={markets}&oddsFormat=american"
+    odds_url = f"{base_url}/v4/sports/{sport}/odds/?apiKey={key}&bookmakers={BOOKMAKERS_PARAM}&markets={markets}&oddsFormat=american"
 
     try:
         logger.info(f"[cyan]Fetching odds data for {sport}[/cyan]")
@@ -201,10 +205,13 @@ def get_moneyline_odds(data):
     """
     Processes moneyline odds into a DataFrame with two rows per game (home and away teams),
     using the median price across all available bookmakers and includes devigged probabilities.
+    Also extracts DraftKings-specific values for opening odds.
     Only includes games where both home and away prices are available for proper devigging.
     """
     # Dictionary to store all moneylines for each team in each game
     moneyline_dict = {}
+    # Dictionary to store DraftKings-specific moneylines
+    dk_moneyline_dict = {}
 
     for game in data:
         game_time = game.get('commence_time')  # Keep original ISO format
@@ -220,10 +227,14 @@ def get_moneyline_odds(data):
         # Initialize empty lists to hold moneylines from each bookmaker
         moneyline_dict.setdefault((game_key, 'home'), [])
         moneyline_dict.setdefault((game_key, 'away'), [])
+        # Initialize DraftKings tracking
+        dk_moneyline_dict.setdefault((game_key, 'home'), None)
+        dk_moneyline_dict.setdefault((game_key, 'away'), None)
 
         # Collect all moneylines from each sportsbook
         for bookmaker in game.get('bookmakers', []):
             sportsbook = bookmaker.get('title')
+            sportsbook_key = bookmaker.get('key')
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'h2h':
                     outcomes = market.get('outcomes', [])
@@ -233,8 +244,14 @@ def get_moneyline_odds(data):
 
                         if team_name == home_team and price is not None:
                             moneyline_dict[(game_key, 'home')].append(price)
+                            # Track DraftKings specifically
+                            if sportsbook_key == 'draftkings':
+                                dk_moneyline_dict[(game_key, 'home')] = price
                         elif team_name == away_team and price is not None:
                             moneyline_dict[(game_key, 'away')].append(price)
+                            # Track DraftKings specifically
+                            if sportsbook_key == 'draftkings':
+                                dk_moneyline_dict[(game_key, 'away')] = price
 
     # Build final records with median prices and devigged probabilities
     h2h_records = []
@@ -271,6 +288,10 @@ def get_moneyline_odds(data):
         game_time, teams = game_key.split('_', 1)
         home_team, away_team = teams.split('_vs_')
 
+        # Get DraftKings-specific moneylines
+        dk_home_ml = dk_moneyline_dict.get((game_key, 'home'))
+        dk_away_ml = dk_moneyline_dict.get((game_key, 'away'))
+
         # Add home team record
         h2h_records.append({
             'Game Time': game_time,  # Keep ISO format
@@ -279,6 +300,7 @@ def get_moneyline_odds(data):
             'Team': home_team,
             'Moneyline': med_home_price,
             'Devigged Probability': devigged_home_prob,
+            'DK_Moneyline': dk_home_ml,
             'Sportsbook': 'CONSENSUS'
         })
 
@@ -290,6 +312,7 @@ def get_moneyline_odds(data):
             'Team': away_team,
             'Moneyline': med_away_price,
             'Devigged Probability': devigged_away_prob,
+            'DK_Moneyline': dk_away_ml,
             'Sportsbook': 'CONSENSUS'
         })
 
@@ -299,13 +322,16 @@ def get_spread_odds(data):
     """
     Processes spread odds into a DataFrame with two rows per game (home and away teams),
     using the median of all available sportsbooks.
+    Also extracts DraftKings-specific values for opening odds.
     """
     # Dictionary to store all spreads and prices for each team in each game
     spread_dict = {}
+    # Dictionary to store DraftKings-specific spreads
+    dk_spread_dict = {}
 
     # Add debugging for raw data
     logger.info("[cyan]Processing spread odds from API data[/cyan]")
-    
+
     for game in data:
         game_time = game.get('commence_time')
         home_team = game.get('home_team')
@@ -320,9 +346,13 @@ def get_spread_odds(data):
         # Initialize empty lists to hold spreads and prices from each bookmaker
         spread_dict.setdefault((game_key, 'home'), {'points': [], 'prices': []})
         spread_dict.setdefault((game_key, 'away'), {'points': [], 'prices': []})
+        # Initialize DraftKings tracking
+        dk_spread_dict.setdefault((game_key, 'home'), {'point': None, 'price': None})
+        dk_spread_dict.setdefault((game_key, 'away'), {'point': None, 'price': None})
 
         # Collect spreads from each sportsbook
         for bookmaker in game.get('bookmakers', []):
+            sportsbook_key = bookmaker.get('key')
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'spreads':
                     outcomes = market.get('outcomes', [])
@@ -334,9 +364,17 @@ def get_spread_odds(data):
                         if team_name == home_team and point is not None and price is not None:
                             spread_dict[(game_key, 'home')]['points'].append(point)
                             spread_dict[(game_key, 'home')]['prices'].append(price)
+                            # Track DraftKings specifically
+                            if sportsbook_key == 'draftkings':
+                                dk_spread_dict[(game_key, 'home')]['point'] = point
+                                dk_spread_dict[(game_key, 'home')]['price'] = price
                         elif team_name == away_team and point is not None and price is not None:
                             spread_dict[(game_key, 'away')]['points'].append(point)
                             spread_dict[(game_key, 'away')]['prices'].append(price)
+                            # Track DraftKings specifically
+                            if sportsbook_key == 'draftkings':
+                                dk_spread_dict[(game_key, 'away')]['point'] = point
+                                dk_spread_dict[(game_key, 'away')]['price'] = price
 
     # Build final records with median spreads and prices
     spreads_records = []
@@ -358,6 +396,9 @@ def get_spread_odds(data):
         else:
             team_name = away_team
 
+        # Get DraftKings-specific values
+        dk_values = dk_spread_dict.get((game_key, side), {})
+
         spreads_records.append({
             'Game Time': game_time,
             'Home Team': home_team,
@@ -365,6 +406,8 @@ def get_spread_odds(data):
             'Team': team_name,
             'Spread': med_point,
             'Spread Price': med_price,
+            'DK_Spread': dk_values.get('point'),
+            'DK_Spread_Price': dk_values.get('price'),
             'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
         })
 
@@ -374,9 +417,12 @@ def get_totals_odds(data):
     """
     Processes totals odds into a DataFrame with one row per game,
     using the median of all available sportsbooks for over/under lines and prices.
+    Also extracts DraftKings-specific values for opening odds.
     """
     # Dictionary to store all totals data for each game
     totals_dict = {}
+    # Dictionary to store DraftKings-specific totals
+    dk_totals_dict = {}
 
     for game in data:
         game_time = game.get('commence_time')
@@ -397,9 +443,13 @@ def get_totals_odds(data):
                 'under_points': [],
                 'under_prices': []
             }
+        # Initialize DraftKings tracking
+        if game_key not in dk_totals_dict:
+            dk_totals_dict[game_key] = {'total': None}
 
         # Collect totals from each sportsbook
         for bookmaker in game.get('bookmakers', []):
+            sportsbook_key = bookmaker.get('key')
             for market in bookmaker.get('markets', []):
                 if market.get('key') == 'totals':
                     outcomes = market.get('outcomes', [])
@@ -407,6 +457,9 @@ def get_totals_odds(data):
                         if outcome.get('name') == 'Over':
                             if outcome.get('point') is not None:
                                 totals_dict[game_key]['over_points'].append(outcome['point'])
+                                # Track DraftKings specifically (over point = total)
+                                if sportsbook_key == 'draftkings':
+                                    dk_totals_dict[game_key]['total'] = outcome['point']
                             if outcome.get('price') is not None:
                                 totals_dict[game_key]['over_prices'].append(outcome['price'])
                         elif outcome.get('name') == 'Under':
@@ -434,6 +487,9 @@ def get_totals_odds(data):
         game_time, teams = game_key.split('_', 1)
         home_team, away_team = teams.split('_vs_')
 
+        # Get DraftKings-specific total
+        dk_values = dk_totals_dict.get(game_key, {})
+
         totals_records.append({
             'Game Time': game_time,
             'Home Team': home_team,
@@ -443,6 +499,7 @@ def get_totals_odds(data):
             'Over Price': med_over_price,
             'Under Point': med_under_point,
             'Under Price': med_under_price,
+            'DK_Total': dk_values.get('total'),
             'Sportsbook': 'CONSENSUS'  # Indicates this is a median across books
         })
 
@@ -469,7 +526,7 @@ def get_combined_odds():
     logger.info(f"\n[cyan]Sample Game Times from moneyline_df:[/cyan]\n{moneyline_df['Game Time'].head()}")
     
     spreads_df = get_spread_odds(filtered_data).drop(columns=['Sportsbook']).rename(
-        columns={'Spread': 'Opening Spread'})
+        columns={'Spread': 'Consensus Spread'})
     logger.info(f"\n[cyan]Sample Game Times from spreads_df:[/cyan]\n{spreads_df['Game Time'].head()}")
     
     totals_df = get_totals_odds(filtered_data).drop(columns=['Sportsbook'])
@@ -566,7 +623,9 @@ def merge_with_combined_data(odds_df):
     swapped_odds_df = odds_df.copy()
     swapped_odds_df['Home Team'], swapped_odds_df['Away Team'] = odds_df['Away Team'], odds_df['Home Team']
     # Adjust spreads and probabilities for the swap
-    swapped_odds_df['Opening Spread'] = -swapped_odds_df['Opening Spread']
+    swapped_odds_df['Consensus Spread'] = -swapped_odds_df['Consensus Spread']
+    if 'DK_Spread' in swapped_odds_df.columns:
+        swapped_odds_df['DK_Spread'] = -swapped_odds_df['DK_Spread']
     if 'Devigged Probability' in swapped_odds_df.columns:
         swapped_odds_df['Devigged Probability'] = 1 - swapped_odds_df['Devigged Probability']
     
@@ -659,7 +718,7 @@ def process_final_dataframe(final_df):
         logger.warning("[yellow]⚠[/yellow] No spread model columns available")
 
     # Rename columns for clarity and round market_spread to nearest 0.5
-    final_df['market_spread'] = (final_df['Opening Spread'] * 2).round() / 2
+    final_df['market_spread'] = (final_df['Consensus Spread'] * 2).round() / 2
     final_df['model_spread'] = final_df['forecasted_spread']
 
     # Create total_category based on market total (for spread predictions)
@@ -847,30 +906,48 @@ def process_final_dataframe(final_df):
     final_df['Devigged Probability'] = final_df['Devigged Probability'].fillna(0)
     final_df['Moneyline Edge'] = final_df['Moneyline Edge'].fillna(0)
 
-    # Create Opening Edge columns (will be preserved via preserve_opening_odds)
-    # These capture the edge at the time the game first appeared
-    final_df['Opening Spread Edge'] = final_df['Edge For Covering Spread']
-    final_df['Opening Moneyline Edge'] = final_df['Moneyline Edge']
-    final_df['Opening Over Edge'] = final_df['Over Total Edge']
-    final_df['Opening Under Edge'] = final_df['Under Total Edge']
-
-    # Create Current Moneyline and Opening Moneyline columns
+    # Create Current Moneyline from consensus
     if 'Moneyline' in final_df.columns:
-        # Round moneyline values to the nearest integer
         final_df['Current Moneyline'] = final_df['Moneyline'].round().astype('Int64')
-        # Opening Moneyline starts as current value, will be preserved via preserve_opening_odds()
-        final_df['Opening Moneyline'] = final_df['Current Moneyline']
     else:
-        logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty moneyline columns")
+        logger.warning("[yellow]⚠[/yellow] 'Moneyline' column not found, creating empty Current Moneyline column")
         final_df['Current Moneyline'] = np.nan
-        final_df['Opening Moneyline'] = np.nan
 
-    # Add 'Opening Total' column from the Over Point (same as Under Point for totals)
-    if 'Over Point' in final_df.columns:
-        final_df['Opening Total'] = final_df['Over Point']
+    # Create Opening columns from DraftKings-specific values
+    # Opening Spread: Use DraftKings spread (wait for DK if not available)
+    if 'DK_Spread' in final_df.columns:
+        final_df['Opening Spread'] = final_df['DK_Spread']
+        logger.info(f"[cyan]DraftKings spread data available for {final_df['DK_Spread'].notna().sum()} games[/cyan]")
     else:
-        logger.warning("[yellow]⚠[/yellow] 'Over Point' column not found, creating empty 'Opening Total' column")
+        final_df['Opening Spread'] = np.nan
+        logger.warning("[yellow]⚠[/yellow] 'DK_Spread' column not found, Opening Spread will be empty")
+
+    # Opening Moneyline: Use DraftKings moneyline (wait for DK if not available)
+    if 'DK_Moneyline' in final_df.columns:
+        final_df['Opening Moneyline'] = final_df['DK_Moneyline'].round().astype('Int64')
+        logger.info(f"[cyan]DraftKings moneyline data available for {final_df['DK_Moneyline'].notna().sum()} games[/cyan]")
+    else:
+        final_df['Opening Moneyline'] = pd.NA
+        logger.warning("[yellow]⚠[/yellow] 'DK_Moneyline' column not found, Opening Moneyline will be empty")
+
+    # Opening Total: Use DraftKings total (wait for DK if not available)
+    if 'DK_Total' in final_df.columns:
+        final_df['Opening Total'] = final_df['DK_Total']
+        logger.info(f"[cyan]DraftKings total data available for {final_df['DK_Total'].notna().sum()} games[/cyan]")
+    else:
         final_df['Opening Total'] = np.nan
+        logger.warning("[yellow]⚠[/yellow] 'DK_Total' column not found, Opening Total will be empty")
+
+    # Create Opening Edge columns (only set when DraftKings opening data exists)
+    # These capture the edge at the time DraftKings first posted odds
+    has_dk_spread = final_df['Opening Spread'].notna()
+    has_dk_moneyline = final_df['Opening Moneyline'].notna()
+    has_dk_total = final_df['Opening Total'].notna()
+
+    final_df['Opening Spread Edge'] = np.where(has_dk_spread, final_df['Edge For Covering Spread'], np.nan)
+    final_df['Opening Moneyline Edge'] = np.where(has_dk_moneyline, final_df['Moneyline Edge'], np.nan)
+    final_df['Opening Over Edge'] = np.where(has_dk_total, final_df['Over Total Edge'], np.nan)
+    final_df['Opening Under Edge'] = np.where(has_dk_total, final_df['Under Total Edge'], np.nan)
 
     # Add 'Opening Odds Time' timestamp (when opening odds were first captured)
     # This will be preserved via preserve_opening_odds() for existing games
@@ -895,7 +972,7 @@ def process_final_dataframe(final_df):
     column_order = [
         'Game', 'Game Time', 'Opening Odds Time', 'Team',
         # Spread framework columns
-        'total_category', 'market_spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
+        'total_category', 'market_spread', 'Consensus Spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
         'Opening Spread', 'Edge For Covering Spread', 'Opening Spread Edge', 'Spread Std. Dev.', 'spread_barttorvik',
         'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
         # Moneyline columns
@@ -924,8 +1001,8 @@ def calculate_spread_consensus(row):
     Returns 0 otherwise or if any values are missing.
     """
     try:
-        # Get required values
-        market_spread = row.get('Opening Spread')
+        # Get required values (use consensus spread for market comparison)
+        market_spread = row.get('Consensus Spread')
 
         # Model spreads
         spread_kenpom = row.get('spread_kenpom')
@@ -1106,11 +1183,14 @@ def backup_daily_output(csv_path):
 
 def preserve_opening_odds(new_df, existing_csv_path='CBB_Output.csv'):
     """
-    Preserve existing opening odds and edge values from the previous output.
+    Preserve existing DraftKings opening odds and edge values from the previous output.
 
-    When a game already has Opening Spread/Moneyline/Total/Edge values from a previous run,
-    keep those values instead of overwriting with current lines. This ensures we capture
-    the TRUE opening lines and edges (first time we saw the game), not the current values.
+    Opening values are DraftKings-specific. When a game first appears:
+    - If DraftKings has odds: those become the opening values
+    - If DraftKings doesn't have odds yet: opening columns remain empty until DK data appears
+
+    Once opening values are set (when DraftKings data is first received), they are preserved
+    across all subsequent runs regardless of line movement.
 
     Args:
         new_df (pd.DataFrame): New dataframe with current odds
