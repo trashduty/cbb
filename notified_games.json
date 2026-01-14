@@ -2490,5 +2490,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0422580140516958,
     "notified_at": "2026-01-13T23:25:35.047976+00:00"
+  },
+  "Winthrop Eagles vs. High Point Panthers|High Point Panthers|moneyline": {
+    "game": "Winthrop Eagles vs. High Point Panthers",
+    "team": "High Point Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0436996050376331,
+    "notified_at": "2026-01-14T02:52:55.106732+00:00"
   }
 }
