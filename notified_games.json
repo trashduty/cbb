@@ -2497,5 +2497,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0436996050376331,
     "notified_at": "2026-01-14T02:52:55.106732+00:00"
+  },
+  "Boston Univ. Terriers vs. Lehigh Mountain Hawks|Boston Univ. Terriers|moneyline": {
+    "game": "Boston Univ. Terriers vs. Lehigh Mountain Hawks",
+    "team": "Boston Univ. Terriers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0418115142297312,
+    "notified_at": "2026-01-14T03:37:50.126951+00:00"
   }
 }
