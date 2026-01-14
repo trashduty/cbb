@@ -2525,5 +2525,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-14T14:44:20.532923+00:00"
+  },
+  "Appalachian St Mountaineers vs. James Madison Dukes|Appalachian St Mountaineers|moneyline": {
+    "game": "Appalachian St Mountaineers vs. James Madison Dukes",
+    "team": "Appalachian St Mountaineers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0421187728723688,
+    "notified_at": "2026-01-14T21:09:00.788690+00:00"
   }
 }
