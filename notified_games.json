@@ -2511,5 +2511,12 @@
     "edge_type": "under",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-14T04:36:00.026364+00:00"
+  },
+  "SMU Mustangs vs. Virginia Tech Hokies|under": {
+    "game": "SMU Mustangs vs. Virginia Tech Hokies",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-14T14:10:43.931477+00:00"
   }
 }
