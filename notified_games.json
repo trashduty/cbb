@@ -2532,5 +2532,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0421187728723688,
     "notified_at": "2026-01-14T21:09:00.788690+00:00"
+  },
+  "Towson Tigers vs. Charleston Cougars|under": {
+    "game": "Towson Tigers vs. Charleston Cougars",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188673826669464,
+    "notified_at": "2026-01-14T21:26:16.550721+00:00"
   }
 }
