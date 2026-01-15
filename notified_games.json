@@ -2609,5 +2609,19 @@
     "edge_type": "under",
     "edge_value": 0.0118564187013748,
     "notified_at": "2026-01-15T03:49:42.047805+00:00"
+  },
+  "Stetson Hatters vs. West Georgia Wolves|Stetson Hatters|moneyline": {
+    "game": "Stetson Hatters vs. West Georgia Wolves",
+    "team": "Stetson Hatters",
+    "edge_type": "moneyline",
+    "edge_value": 0.0713144112748884,
+    "notified_at": "2026-01-15T04:22:36.239781+00:00"
+  },
+  "South Alabama Jaguars vs. Arkansas St Red Wolves|under": {
+    "game": "South Alabama Jaguars vs. Arkansas St Red Wolves",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-15T04:22:36.612308+00:00"
   }
 }
