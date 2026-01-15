@@ -2623,5 +2623,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-15T04:22:36.612308+00:00"
+  },
+  "Albany Great Danes vs. Binghamton Bearcats|Albany Great Danes|moneyline": {
+    "game": "Albany Great Danes vs. Binghamton Bearcats",
+    "team": "Albany Great Danes",
+    "edge_type": "moneyline",
+    "edge_value": 0.066843182874962,
+    "notified_at": "2026-01-15T04:47:24.518700+00:00"
   }
 }
