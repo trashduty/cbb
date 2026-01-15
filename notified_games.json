@@ -2595,5 +2595,19 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-15T02:29:34.531093+00:00"
+  },
+  "UMass Lowell River Hawks vs. NJIT Highlanders|UMass Lowell River Hawks|moneyline": {
+    "game": "UMass Lowell River Hawks vs. NJIT Highlanders",
+    "team": "UMass Lowell River Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0420765003222873,
+    "notified_at": "2026-01-15T03:49:41.627716+00:00"
+  },
+  "Austin Peay Governors vs. Eastern Kentucky Colonels|under": {
+    "game": "Austin Peay Governors vs. Eastern Kentucky Colonels",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0118564187013748,
+    "notified_at": "2026-01-15T03:49:42.047805+00:00"
   }
 }
