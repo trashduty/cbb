@@ -2567,5 +2567,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-15T00:54:09.511826+00:00"
+  },
+  "Northeastern Huskies vs. Elon Phoenix|over": {
+    "game": "Northeastern Huskies vs. Elon Phoenix",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-15T01:36:03.894050+00:00"
   }
 }
