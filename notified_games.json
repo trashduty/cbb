@@ -2574,5 +2574,26 @@
     "edge_type": "over",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-15T01:36:03.894050+00:00"
+  },
+  "Albany Great Danes vs. Binghamton Bearcats|Albany Great Danes|spread": {
+    "game": "Albany Great Danes vs. Binghamton Bearcats",
+    "team": "Albany Great Danes",
+    "edge_type": "spread",
+    "edge_value": 0.0382396940814036,
+    "notified_at": "2026-01-15T02:29:33.928459+00:00"
+  },
+  "Vermont Catamounts vs. Maine Black Bears|over": {
+    "game": "Vermont Catamounts vs. Maine Black Bears",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0100927175120739,
+    "notified_at": "2026-01-15T02:29:34.189184+00:00"
+  },
+  "Stetson Hatters vs. West Georgia Wolves|Stetson Hatters|spread": {
+    "game": "Stetson Hatters vs. West Georgia Wolves",
+    "team": "Stetson Hatters",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-15T02:29:34.531093+00:00"
   }
 }
