@@ -2637,5 +2637,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0575187025788111,
     "notified_at": "2026-01-15T05:11:39.247466+00:00"
+  },
+  "Central Arkansas Bears vs. Jacksonville Dolphins|Central Arkansas Bears|spread": {
+    "game": "Central Arkansas Bears vs. Jacksonville Dolphins",
+    "team": "Central Arkansas Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-15T07:26:03.199283+00:00"
+  },
+  "Utah Tech Trailblazers vs. UT-Arlington Mavericks|UT-Arlington Mavericks|spread": {
+    "game": "Utah Tech Trailblazers vs. UT-Arlington Mavericks",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-15T07:26:03.501895+00:00"
   }
 }
