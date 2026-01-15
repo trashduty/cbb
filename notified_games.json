@@ -2651,5 +2651,12 @@
     "edge_type": "spread",
     "edge_value": 0.0144424253735896,
     "notified_at": "2026-01-15T07:26:03.501895+00:00"
+  },
+  "UC Davis Aggies vs. CSU Fullerton Titans|UC Davis Aggies|spread": {
+    "game": "UC Davis Aggies vs. CSU Fullerton Titans",
+    "team": "UC Davis Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-15T15:27:33.612171+00:00"
   }
 }
