@@ -2658,5 +2658,12 @@
     "edge_type": "spread",
     "edge_value": 0.0139702740544709,
     "notified_at": "2026-01-15T15:27:33.612171+00:00"
+  },
+  "Kansas Jayhawks vs. Baylor Bears|Kansas Jayhawks|spread": {
+    "game": "Kansas Jayhawks vs. Baylor Bears",
+    "team": "Kansas Jayhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0109622056747689,
+    "notified_at": "2026-01-15T19:29:15.234786+00:00"
   }
 }
