@@ -2686,5 +2686,33 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-16T23:08:20.058540+00:00"
+  },
+  "Delaware Blue Hens vs. New Mexico St Aggies|under": {
+    "game": "Delaware Blue Hens vs. New Mexico St Aggies",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-16T23:25:38.320866+00:00"
+  },
+  "Valparaiso Beacons vs. Northern Iowa Panthers|under": {
+    "game": "Valparaiso Beacons vs. Northern Iowa Panthers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0211458059980014,
+    "notified_at": "2026-01-16T23:25:38.636083+00:00"
+  },
+  "Utah Valley Wolverines vs. UT-Arlington Mavericks|under": {
+    "game": "Utah Valley Wolverines vs. UT-Arlington Mavericks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.010534961532767,
+    "notified_at": "2026-01-16T23:25:38.916056+00:00"
+  },
+  "Texas State Bobcats vs. Southern Miss Golden Eagles|under": {
+    "game": "Texas State Bobcats vs. Southern Miss Golden Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-16T23:25:39.229147+00:00"
   }
 }
