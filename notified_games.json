@@ -2784,5 +2784,12 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-17T06:09:44.059927+00:00"
+  },
+  "Weber State Wildcats vs. Idaho Vandals|Weber State Wildcats|moneyline": {
+    "game": "Weber State Wildcats vs. Idaho Vandals",
+    "team": "Weber State Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0451215997729208,
+    "notified_at": "2026-01-17T14:38:17.470786+00:00"
   }
 }
