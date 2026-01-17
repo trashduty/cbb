@@ -2714,5 +2714,12 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-16T23:25:39.229147+00:00"
+  },
+  "Mississippi St Bulldogs vs. Ole Miss Rebels|under": {
+    "game": "Mississippi St Bulldogs vs. Ole Miss Rebels",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-17T00:54:53.877845+00:00"
   }
 }
