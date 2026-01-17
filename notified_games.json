@@ -2791,5 +2791,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0451215997729208,
     "notified_at": "2026-01-17T14:38:17.470786+00:00"
+  },
+  "Memphis Tigers vs. UTSA Roadrunners|under": {
+    "game": "Memphis Tigers vs. UTSA Roadrunners",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-01-17T23:25:19.365320+00:00"
   }
 }
