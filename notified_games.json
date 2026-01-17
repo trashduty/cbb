@@ -2735,5 +2735,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-17T04:04:09.082609+00:00"
+  },
+  "Jackson St Tigers vs. Prairie View Panthers|Jackson St Tigers|moneyline": {
+    "game": "Jackson St Tigers vs. Prairie View Panthers",
+    "team": "Jackson St Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0450353534518556,
+    "notified_at": "2026-01-17T04:27:01.559389+00:00"
   }
 }
