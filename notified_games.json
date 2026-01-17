@@ -2777,5 +2777,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-17T05:09:48.149272+00:00"
+  },
+  "North Alabama Lions vs. Jacksonville Dolphins|under": {
+    "game": "North Alabama Lions vs. Jacksonville Dolphins",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-17T06:09:44.059927+00:00"
   }
 }
