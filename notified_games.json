@@ -2749,5 +2749,19 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-17T04:44:21.937352+00:00"
+  },
+  "Brown Bears vs. Columbia Lions|under": {
+    "game": "Brown Bears vs. Columbia Lions",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-17T04:56:28.922147+00:00"
+  },
+  "Sacramento St Hornets vs. N Colorado Bears|under": {
+    "game": "Sacramento St Hornets vs. N Colorado Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-01-17T04:56:29.316120+00:00"
   }
 }
