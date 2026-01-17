@@ -2742,5 +2742,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0450353534518556,
     "notified_at": "2026-01-17T04:27:01.559389+00:00"
+  },
+  "Furman Paladins vs. Wofford Terriers|under": {
+    "game": "Furman Paladins vs. Wofford Terriers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-17T04:44:21.937352+00:00"
   }
 }
