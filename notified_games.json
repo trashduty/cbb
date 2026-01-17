@@ -2763,5 +2763,19 @@
     "edge_type": "under",
     "edge_value": 0.0130148987755176,
     "notified_at": "2026-01-17T04:56:29.316120+00:00"
+  },
+  "Florida Gulf Coast Eagles vs. West Georgia Wolves|under": {
+    "game": "Florida Gulf Coast Eagles vs. West Georgia Wolves",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-01-17T05:09:47.848849+00:00"
+  },
+  "Troy Trojans vs. Arkansas St Red Wolves|under": {
+    "game": "Troy Trojans vs. Arkansas St Red Wolves",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-17T05:09:48.149272+00:00"
   }
 }
