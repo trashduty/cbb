@@ -2721,5 +2721,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-17T00:54:53.877845+00:00"
+  },
+  "Loyola Marymount Lions vs. Portland Pilots|under": {
+    "game": "Loyola Marymount Lions vs. Portland Pilots",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-01-17T02:25:43.754573+00:00"
   }
 }
