@@ -2798,5 +2798,19 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-01-17T23:25:19.365320+00:00"
+  },
+  "Marist Red Foxes vs. Merrimack Warriors|under": {
+    "game": "Marist Red Foxes vs. Merrimack Warriors",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0266417263740003,
+    "notified_at": "2026-01-18T20:25:59.989675+00:00"
+  },
+  "Brown Bears vs. Cornell Big Red|Brown Bears|moneyline": {
+    "game": "Brown Bears vs. Cornell Big Red",
+    "team": "Brown Bears",
+    "edge_type": "moneyline",
+    "edge_value": 0.0561988771648576,
+    "notified_at": "2026-01-18T20:26:00.209851+00:00"
   }
 }
