@@ -2833,5 +2833,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0489452271171223,
     "notified_at": "2026-01-18T21:25:01.536110+00:00"
+  },
+  "Mercyhurst Lakers vs. Central Connecticut St Blue Devils|under": {
+    "game": "Mercyhurst Lakers vs. Central Connecticut St Blue Devils",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-18T21:36:34.263269+00:00"
+  },
+  "Texas A&M-CC Islanders vs. McNeese Cowboys|under": {
+    "game": "Texas A&M-CC Islanders vs. McNeese Cowboys",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-18T21:36:35.028782+00:00"
   }
 }
