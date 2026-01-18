@@ -2826,5 +2826,12 @@
     "edge_type": "under",
     "edge_value": 0.0219699139296366,
     "notified_at": "2026-01-18T20:39:08.523145+00:00"
+  },
+  "NJIT Highlanders vs. Bryant Bulldogs|NJIT Highlanders|moneyline": {
+    "game": "NJIT Highlanders vs. Bryant Bulldogs",
+    "team": "NJIT Highlanders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0489452271171223,
+    "notified_at": "2026-01-18T21:25:01.536110+00:00"
   }
 }
