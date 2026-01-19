@@ -2847,5 +2847,12 @@
     "edge_type": "under",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-18T21:36:35.028782+00:00"
+  },
+  "Nicholls St Colonels vs. Stephen F. Austin Lumberjacks|Stephen F. Austin Lumberjacks|moneyline": {
+    "game": "Nicholls St Colonels vs. Stephen F. Austin Lumberjacks",
+    "team": "Stephen F. Austin Lumberjacks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0543507666418856,
+    "notified_at": "2026-01-19T14:13:17.677611+00:00"
   }
 }
