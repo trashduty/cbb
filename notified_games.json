@@ -2889,5 +2889,26 @@
     "edge_type": "under",
     "edge_value": 0.0119927540196292,
     "notified_at": "2026-01-20T22:43:00.330784+00:00"
+  },
+  "Kentucky Wildcats vs. Texas Longhorns|Texas Longhorns|spread": {
+    "game": "Kentucky Wildcats vs. Texas Longhorns",
+    "team": "Texas Longhorns",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-20T22:52:43.482186+00:00"
+  },
+  "North Carolina Tar Heels vs. Notre Dame Fighting Irish|Notre Dame Fighting Irish|spread": {
+    "game": "North Carolina Tar Heels vs. Notre Dame Fighting Irish",
+    "team": "Notre Dame Fighting Irish",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-20T22:52:43.808847+00:00"
+  },
+  "Gonzaga Bulldogs vs. Pepperdine Waves|Gonzaga Bulldogs|spread": {
+    "game": "Gonzaga Bulldogs vs. Pepperdine Waves",
+    "team": "Gonzaga Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-20T22:52:44.132624+00:00"
   }
 }
