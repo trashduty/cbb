@@ -2910,5 +2910,33 @@
     "edge_type": "spread",
     "edge_value": 0.0139702740544709,
     "notified_at": "2026-01-20T22:52:44.132624+00:00"
+  },
+  "Oakland Golden Grizzlies vs. IUPUI Jaguars|Oakland Golden Grizzlies|spread": {
+    "game": "Oakland Golden Grizzlies vs. IUPUI Jaguars",
+    "team": "Oakland Golden Grizzlies",
+    "edge_type": "spread",
+    "edge_value": 0.043048747662301,
+    "notified_at": "2026-01-20T23:26:03.415309+00:00"
+  },
+  "Detroit Mercy Titans vs. Fort Wayne Mastodons|Detroit Mercy Titans|spread": {
+    "game": "Detroit Mercy Titans vs. Fort Wayne Mastodons",
+    "team": "Detroit Mercy Titans",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-20T23:26:03.934226+00:00"
+  },
+  "UT-Arlington Mavericks vs. Tarleton State Texans|UT-Arlington Mavericks|spread": {
+    "game": "UT-Arlington Mavericks vs. Tarleton State Texans",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-20T23:26:04.191767+00:00"
+  },
+  "North Texas Mean Green vs. UTSA Roadrunners|under": {
+    "game": "North Texas Mean Green vs. UTSA Roadrunners",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-01-20T23:26:04.407423+00:00"
   }
 }
