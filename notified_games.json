@@ -2854,5 +2854,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0543507666418856,
     "notified_at": "2026-01-19T14:13:17.677611+00:00"
+  },
+  "Central Michigan Chippewas vs. Ball State Cardinals|under": {
+    "game": "Central Michigan Chippewas vs. Ball State Cardinals",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-20T02:31:19.344189+00:00"
   }
 }
