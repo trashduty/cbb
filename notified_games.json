@@ -2875,5 +2875,12 @@
     "edge_type": "spread",
     "edge_value": 0.0185874780059236,
     "notified_at": "2026-01-20T05:30:11.255522+00:00"
+  },
+  "La Salle Explorers vs. Dayton Flyers|La Salle Explorers|spread": {
+    "game": "La Salle Explorers vs. Dayton Flyers",
+    "team": "La Salle Explorers",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-20T21:38:55.102723+00:00"
   }
 }
