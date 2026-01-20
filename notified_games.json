@@ -2861,5 +2861,19 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-20T02:31:19.344189+00:00"
+  },
+  "Buffalo Bulls vs. Akron Zips|Buffalo Bulls|spread": {
+    "game": "Buffalo Bulls vs. Akron Zips",
+    "team": "Buffalo Bulls",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-20T05:30:11.013855+00:00"
+  },
+  "Western Michigan Broncos vs. Bowling Green Falcons|Western Michigan Broncos|spread": {
+    "game": "Western Michigan Broncos vs. Bowling Green Falcons",
+    "team": "Western Michigan Broncos",
+    "edge_type": "spread",
+    "edge_value": 0.0185874780059236,
+    "notified_at": "2026-01-20T05:30:11.255522+00:00"
   }
 }
