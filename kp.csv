@@ -2633,3 +2633,179 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-16,Ball St.,Ohio,home,33.0,70,74
 2026-01-16,Loyola Chicago,Dayton,away,4.0,62,81
 2026-01-16,Dayton,Loyola Chicago,home,96.0,81,62
+2026-01-20,Vanderbilt,Arkansas,away,53.0,88,87
+2026-01-20,Arkansas,Vanderbilt,home,47.0,87,88
+2026-01-20,Texas Tech,Baylor,away,52.0,81,80
+2026-01-20,Baylor,Texas Tech,home,48.0,80,81
+2026-01-20,Georgia,Missouri,away,55.0,85,84
+2026-01-20,Missouri,Georgia,home,45.0,84,85
+2026-01-20,Purdue,UCLA,away,69.0,77,71
+2026-01-20,UCLA,Purdue,home,31.0,71,77
+2026-01-20,SMU,Wake Forest,away,51.0,80,79
+2026-01-20,Wake Forest,SMU,home,49.0,79,80
+2026-01-20,N.C. State,Clemson,away,35.0,71,75
+2026-01-20,Clemson,N.C. State,home,65.0,75,71
+2026-01-20,Auburn,Mississippi,away,55.0,77,75
+2026-01-20,Mississippi,Auburn,home,45.0,75,77
+2026-01-20,Kansas,Colorado,away,71.0,81,75
+2026-01-20,Colorado,Kansas,home,29.0,75,81
+2026-01-20,Oklahoma,South Carolina,away,44.0,74,76
+2026-01-20,South Carolina,Oklahoma,home,56.0,76,74
+2026-01-20,Michigan St.,Oregon,away,80.0,74,65
+2026-01-20,Oregon,Michigan St.,home,20.0,65,74
+2026-01-20,Seton Hall,St. John's,away,21.0,68,77
+2026-01-20,St. John's,Seton Hall,home,79.0,77,68
+2026-01-20,Boise St.,Wyoming,away,44.0,72,74
+2026-01-20,Wyoming,Boise St.,home,56.0,74,72
+2026-01-20,LSU,Florida,away,15.0,74,85
+2026-01-20,Florida,LSU,home,85.0,85,74
+2026-01-20,Oklahoma St.,TCU,away,27.0,76,83
+2026-01-20,TCU,Oklahoma St.,home,73.0,83,76
+2026-01-20,Miami OH,Kent St.,away,59.0,88,85
+2026-01-20,Kent St.,Miami OH,home,41.0,85,88
+2026-01-20,UCF,Iowa St.,away,13.0,72,84
+2026-01-20,Iowa St.,UCF,home,87.0,84,72
+2026-01-20,Indiana,Michigan,away,8.0,73,88
+2026-01-20,Michigan,Indiana,home,92.0,88,73
+2026-01-20,Minnesota,Ohio St.,away,20.0,68,77
+2026-01-20,Ohio St.,Minnesota,home,80.0,77,68
+2026-01-20,Saint Louis,Duquesne,away,83.0,88,77
+2026-01-20,Duquesne,Saint Louis,home,17.0,77,88
+2026-01-20,Akron,Buffalo,away,74.0,90,83
+2026-01-20,Buffalo,Akron,home,26.0,83,90
+2026-01-20,DePaul,Butler,away,22.0,70,79
+2026-01-20,Butler,DePaul,home,78.0,79,70
+2026-01-20,Utah,Kansas St.,away,23.0,81,89
+2026-01-20,Kansas St.,Utah,home,77.0,89,81
+2026-01-20,Toledo,Massachusetts,away,45.0,81,82
+2026-01-20,Massachusetts,Toledo,home,55.0,82,81
+2026-01-20,Bowling Green,Western Michigan,away,66.0,80,76
+2026-01-20,Western Michigan,Bowling Green,home,34.0,76,80
+2026-01-20,Florida St.,Miami FL,away,11.0,76,90
+2026-01-20,Miami FL,Florida St.,home,89.0,90,76
+2026-01-20,Tennessee Martin,Southeast Missouri,away,53.0,72,71
+2026-01-20,Southeast Missouri,Tennessee Martin,home,47.0,71,72
+2026-01-20,Ball St.,Central Michigan,away,44.0,69,70
+2026-01-20,Central Michigan,Ball St.,home,56.0,70,69
+2026-01-20,UNLV,Utah St.,away,6.0,72,89
+2026-01-20,Utah St.,UNLV,home,94.0,89,72
+2026-01-20,Evansville,Illinois Chicago,away,20.0,65,75
+2026-01-20,Illinois Chicago,Evansville,home,80.0,75,65
+2026-01-20,Rutgers,Iowa,away,4.0,60,79
+2026-01-20,Iowa,Rutgers,home,96.0,79,60
+2026-01-20,Northern Illinois,Ohio,away,18.0,70,80
+2026-01-20,Ohio,Northern Illinois,home,82.0,80,70
+2026-01-20,San Jose St.,Nevada,away,9.0,65,80
+2026-01-20,Nevada,San Jose St.,home,91.0,80,65
+2026-01-20,Loyola Chicago,St. Bonaventure,away,12.0,70,83
+2026-01-20,St. Bonaventure,Loyola Chicago,home,88.0,83,70
+2026-01-20,Air Force,Colorado St.,away,4.0,59,78
+2026-01-20,Colorado St.,Air Force,home,96.0,78,59
+2026-01-21,Texas,Kentucky,away,29.0,76,82
+2026-01-21,Kentucky,Texas,home,71.0,82,76
+2026-01-21,San Diego St.,Grand Canyon,away,53.0,72,71
+2026-01-21,Grand Canyon,San Diego St.,home,47.0,71,72
+2026-01-21,Virginia Tech,Syracuse,away,44.0,74,76
+2026-01-21,Syracuse,Virginia Tech,home,56.0,76,74
+2026-01-21,West Virginia,Arizona St.,away,46.0,74,75
+2026-01-21,Arizona St.,West Virginia,home,54.0,75,74
+2026-01-21,Northwestern,USC,away,28.0,74,81
+2026-01-21,USC,Northwestern,home,72.0,81,74
+2026-01-21,Memphis,Tulsa,away,29.0,74,80
+2026-01-21,Tulsa,Memphis,home,71.0,80,74
+2026-01-21,Mississippi St.,Texas A&M,away,22.0,75,84
+2026-01-21,Texas A&M,Mississippi St.,home,78.0,84,75
+2026-01-21,Washington,Nebraska,away,15.0,69,80
+2026-01-21,Nebraska,Washington,home,85.0,80,69
+2026-01-21,Notre Dame,North Carolina,away,22.0,69,78
+2026-01-21,North Carolina,Notre Dame,home,78.0,78,69
+2026-01-21,Xavier,Creighton,away,24.0,73,81
+2026-01-21,Creighton,Xavier,home,76.0,81,73
+2026-01-21,Liberty,Western Kentucky,away,57.0,77,76
+2026-01-21,Western Kentucky,Liberty,home,43.0,76,77
+2026-01-21,Pittsburgh,Boston College,away,55.0,68,67
+2026-01-21,Boston College,Pittsburgh,home,45.0,67,68
+2026-01-21,Rhode Island,Richmond,away,40.0,71,74
+2026-01-21,Richmond,Rhode Island,home,60.0,74,71
+2026-01-21,Murray St.,Drake,away,65.0,82,78
+2026-01-21,Drake,Murray St.,home,35.0,78,82
+2026-01-21,Northern Iowa,Illinois St.,away,30.0,61,67
+2026-01-21,Illinois St.,Northern Iowa,home,70.0,67,61
+2026-01-21,Southern Illinois,Valparaiso,away,47.0,70,71
+2026-01-21,Valparaiso,Southern Illinois,home,53.0,71,70
+2026-01-21,Cincinnati,Arizona,away,6.0,65,82
+2026-01-21,Arizona,Cincinnati,home,94.0,82,65
+2026-01-21,Washington St.,San Diego,away,56.0,78,76
+2026-01-21,San Diego,Washington St.,home,44.0,76,78
+2026-01-21,Kennesaw St.,Sam Houston St.,away,27.0,80,87
+2026-01-21,Sam Houston St.,Kennesaw St.,home,73.0,87,80
+2026-01-21,Loyola Marymount,Seattle,away,33.0,65,69
+2026-01-21,Seattle,Loyola Marymount,home,67.0,69,65
+2026-01-21,Temple,Rice,away,59.0,75,72
+2026-01-21,Rice,Temple,home,41.0,72,75
+2026-01-21,Tarleton St.,UT Arlington,away,34.0,70,75
+2026-01-21,UT Arlington,Tarleton St.,home,66.0,75,70
+2026-01-21,Colgate,American,away,48.0,75,76
+2026-01-21,American,Colgate,home,52.0,76,75
+2026-01-21,Troy,Old Dominion,away,68.0,79,74
+2026-01-21,Old Dominion,Troy,home,32.0,74,79
+2026-01-21,Georgetown,Villanova,away,13.0,66,79
+2026-01-21,Villanova,Georgetown,home,87.0,79,66
+2026-01-21,Dayton,La Salle,away,77.0,73,65
+2026-01-21,La Salle,Dayton,home,23.0,65,73
+2026-01-21,Purdue Fort Wayne,Detroit Mercy,away,52.0,79,78
+2026-01-21,Detroit Mercy,Purdue Fort Wayne,home,48.0,78,79
+2026-01-21,East Tennessee St.,Chattanooga,away,68.0,77,71
+2026-01-21,Chattanooga,East Tennessee St.,home,32.0,71,77
+2026-01-21,Samford,Wofford,away,39.0,76,80
+2026-01-21,Wofford,Samford,home,61.0,80,76
+2026-01-21,Charleston Southern,Presbyterian,away,54.0,73,72
+2026-01-21,Presbyterian,Charleston Southern,home,46.0,72,73
+2026-01-21,UNC Asheville,USC Upstate,away,52.0,72,71
+2026-01-21,USC Upstate,UNC Asheville,home,48.0,71,72
+2026-01-21,Fordham,Davidson,away,27.0,63,69
+2026-01-21,Davidson,Fordham,home,73.0,69,63
+2026-01-21,Indiana St.,Bradley,away,23.0,72,80
+2026-01-21,Bradley,Indiana St.,home,77.0,80,72
+2026-01-21,UNC Greensboro,VMI,away,59.0,78,75
+2026-01-21,VMI,UNC Greensboro,home,41.0,75,78
+2026-01-21,South Dakota,Nebraska Omaha,away,32.0,79,84
+2026-01-21,Nebraska Omaha,South Dakota,home,68.0,84,79
+2026-01-21,Utah Tech,Cal Baptist,away,24.0,66,74
+2026-01-21,Cal Baptist,Utah Tech,home,76.0,74,66
+2026-01-21,Lafayette,Boston University,away,35.0,73,77
+2026-01-21,Boston University,Lafayette,home,65.0,77,73
+2026-01-21,Tulane,Florida Atlantic,away,16.0,71,82
+2026-01-21,Florida Atlantic,Tulane,home,84.0,82,71
+2026-01-21,Army,Bucknell,away,35.0,70,74
+2026-01-21,Bucknell,Army,home,65.0,74,70
+2026-01-21,Maryland,Illinois,away,4.0,65,85
+2026-01-21,Illinois,Maryland,home,96.0,85,65
+2026-01-21,Fresno St.,New Mexico,away,10.0,65,79
+2026-01-21,New Mexico,Fresno St.,home,90.0,79,65
+2026-01-21,Utah Valley,Southern Utah,away,86.0,83,71
+2026-01-21,Southern Utah,Utah Valley,home,14.0,71,83
+2026-01-21,Radford,Winthrop,away,15.0,77,89
+2026-01-21,Winthrop,Radford,home,85.0,89,77
+2026-01-21,Western Carolina,Mercer,away,15.0,76,87
+2026-01-21,Mercer,Western Carolina,home,85.0,87,76
+2026-01-21,Holy Cross,Navy,away,19.0,62,72
+2026-01-21,Navy,Holy Cross,home,81.0,72,62
+2026-01-21,Furman,The Citadel,away,84.0,77,66
+2026-01-21,The Citadel,Furman,home,16.0,66,77
+2026-01-21,Oregon St.,Saint Mary's,away,5.0,63,81
+2026-01-21,Saint Mary's,Oregon St.,home,95.0,81,63
+2026-01-21,North Alabama,Queens,away,13.0,75,87
+2026-01-21,Queens,North Alabama,home,87.0,87,75
+2026-01-21,East Carolina,Wichita St.,away,10.0,64,79
+2026-01-21,Wichita St.,East Carolina,home,90.0,79,64
+2026-01-21,Gardner Webb,Longwood,away,12.0,73,86
+2026-01-21,Longwood,Gardner Webb,home,88.0,86,73
+2026-01-21,Cleveland St.,Wright St.,away,7.0,71,87
+2026-01-21,Wright St.,Cleveland St.,home,93.0,87,71
+2026-01-21,IU Indy,Oakland,away,3.0,82,102
+2026-01-21,Oakland,IU Indy,home,97.0,102,82
+2026-01-21,Pepperdine,Gonzaga,away,0.29999999999999716,58,89
+2026-01-21,Gonzaga,Pepperdine,home,99.7,89,58
+2026-01-21,UTSA,North Texas,away,6.0,58,75
+2026-01-21,North Texas,UTSA,home,94.0,75,58
