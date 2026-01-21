@@ -3008,5 +3008,12 @@
     "edge_type": "spread",
     "edge_value": 0.0132895015587953,
     "notified_at": "2026-01-21T16:50:55.940571+00:00"
+  },
+  "William & Mary Tribe vs. UNC Wilmington Seahawks|William & Mary Tribe|moneyline": {
+    "game": "William & Mary Tribe vs. UNC Wilmington Seahawks",
+    "team": "William & Mary Tribe",
+    "edge_type": "moneyline",
+    "edge_value": 0.0439331010698873,
+    "notified_at": "2026-01-21T22:45:11.149035+00:00"
   }
 }
