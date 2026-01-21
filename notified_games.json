@@ -2966,5 +2966,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-21T02:48:52.918187+00:00"
+  },
+  "Mercer Bears vs. Western Carolina Catamounts|Mercer Bears|spread": {
+    "game": "Mercer Bears vs. Western Carolina Catamounts",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0131155217815734,
+    "notified_at": "2026-01-21T03:36:58.814463+00:00"
   }
 }
