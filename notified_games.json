@@ -2994,5 +2994,12 @@
     "edge_type": "spread",
     "edge_value": 0.0382396940814036,
     "notified_at": "2026-01-21T06:14:27.442720+00:00"
+  },
+  "Davidson Wildcats vs. Fordham Rams|Davidson Wildcats|spread": {
+    "game": "Davidson Wildcats vs. Fordham Rams",
+    "team": "Davidson Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0124173230244573,
+    "notified_at": "2026-01-21T06:32:23.687927+00:00"
   }
 }
