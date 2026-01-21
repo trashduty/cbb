@@ -3001,5 +3001,12 @@
     "edge_type": "spread",
     "edge_value": 0.0124173230244573,
     "notified_at": "2026-01-21T06:32:23.687927+00:00"
+  },
+  "Seattle Redhawks vs. Loyola Marymount Lions|Seattle Redhawks|spread": {
+    "game": "Seattle Redhawks vs. Loyola Marymount Lions",
+    "team": "Seattle Redhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0132895015587953,
+    "notified_at": "2026-01-21T16:50:55.940571+00:00"
   }
 }
