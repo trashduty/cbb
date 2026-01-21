@@ -3029,5 +3029,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-21T23:28:20.777595+00:00"
+  },
+  "Iona Gaels vs. Merrimack Warriors|Iona Gaels|moneyline": {
+    "game": "Iona Gaels vs. Merrimack Warriors",
+    "team": "Iona Gaels",
+    "edge_type": "moneyline",
+    "edge_value": 0.0594486265771044,
+    "notified_at": "2026-01-21T23:54:51.875232+00:00"
   }
 }
