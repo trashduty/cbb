@@ -2959,5 +2959,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-20T23:51:18.517836+00:00"
+  },
+  "Presbyterian Blue Hose vs. Charleston Southern Buccaneers|under": {
+    "game": "Presbyterian Blue Hose vs. Charleston Southern Buccaneers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-21T02:48:52.918187+00:00"
   }
 }
