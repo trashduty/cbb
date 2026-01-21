@@ -2980,5 +2980,19 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-01-21T05:43:16.197454+00:00"
+  },
+  "South Carolina Upstate Spartans vs. UNC Asheville Bulldogs|UNC Asheville Bulldogs|moneyline": {
+    "game": "South Carolina Upstate Spartans vs. UNC Asheville Bulldogs",
+    "team": "UNC Asheville Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0484864069444237,
+    "notified_at": "2026-01-21T06:14:27.128783+00:00"
+  },
+  "Bucknell Bison vs. Army Knights|Army Knights|spread": {
+    "game": "Bucknell Bison vs. Army Knights",
+    "team": "Army Knights",
+    "edge_type": "spread",
+    "edge_value": 0.0382396940814036,
+    "notified_at": "2026-01-21T06:14:27.442720+00:00"
   }
 }
