@@ -3113,5 +3113,12 @@
     "edge_type": "spread",
     "edge_value": 0.0131155217815734,
     "notified_at": "2026-01-22T07:51:35.790252+00:00"
+  },
+  "UC Riverside Highlanders vs. UC Irvine Anteaters|UC Riverside Highlanders|spread": {
+    "game": "UC Riverside Highlanders vs. UC Irvine Anteaters",
+    "team": "UC Riverside Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0156009054477324,
+    "notified_at": "2026-01-22T14:45:59.625827+00:00"
   }
 }
