@@ -3036,5 +3036,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0594486265771044,
     "notified_at": "2026-01-21T23:54:51.875232+00:00"
+  },
+  "Austin Peay Governors vs. Florida Gulf Coast Eagles|under": {
+    "game": "Austin Peay Governors vs. Florida Gulf Coast Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-22T02:53:07.335818+00:00"
   }
 }
