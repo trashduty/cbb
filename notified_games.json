@@ -3050,5 +3050,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0403999998945303,
     "notified_at": "2026-01-22T03:37:42.890178+00:00"
+  },
+  "UMass Lowell River Hawks vs. Vermont Catamounts|over": {
+    "game": "UMass Lowell River Hawks vs. Vermont Catamounts",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0184531552796564,
+    "notified_at": "2026-01-22T04:36:43.640375+00:00"
+  },
+  "New Hampshire Wildcats vs. Binghamton Bearcats|New Hampshire Wildcats|spread": {
+    "game": "New Hampshire Wildcats vs. Binghamton Bearcats",
+    "team": "New Hampshire Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0281625130495865,
+    "notified_at": "2026-01-22T04:36:43.860734+00:00"
+  },
+  "Youngstown St Penguins vs. Green Bay Phoenix|Green Bay Phoenix|spread": {
+    "game": "Youngstown St Penguins vs. Green Bay Phoenix",
+    "team": "Green Bay Phoenix",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-22T04:36:44.086314+00:00"
+  },
+  "North Florida Ospreys vs. Eastern Kentucky Colonels|North Florida Ospreys|spread": {
+    "game": "North Florida Ospreys vs. Eastern Kentucky Colonels",
+    "team": "North Florida Ospreys",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326285,
+    "notified_at": "2026-01-22T04:36:44.386277+00:00"
+  },
+  "New Mexico St Aggies vs. Missouri St Bears|New Mexico St Aggies|spread": {
+    "game": "New Mexico St Aggies vs. Missouri St Bears",
+    "team": "New Mexico St Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0266252922230992,
+    "notified_at": "2026-01-22T04:36:44.592670+00:00"
   }
 }
