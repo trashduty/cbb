@@ -3043,5 +3043,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-22T02:53:07.335818+00:00"
+  },
+  "Oral Roberts Golden Eagles vs. North Dakota Fighting Hawks|Oral Roberts Golden Eagles|moneyline": {
+    "game": "Oral Roberts Golden Eagles vs. North Dakota Fighting Hawks",
+    "team": "Oral Roberts Golden Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0403999998945303,
+    "notified_at": "2026-01-22T03:37:42.890178+00:00"
   }
 }
