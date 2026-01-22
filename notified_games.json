@@ -3085,5 +3085,12 @@
     "edge_type": "spread",
     "edge_value": 0.0266252922230992,
     "notified_at": "2026-01-22T04:36:44.592670+00:00"
+  },
+  "Elon Phoenix vs. Towson Tigers|Elon Phoenix|spread": {
+    "game": "Elon Phoenix vs. Towson Tigers",
+    "team": "Elon Phoenix",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-01-22T05:44:49.091288+00:00"
   }
 }
