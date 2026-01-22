@@ -3092,5 +3092,26 @@
     "edge_type": "spread",
     "edge_value": 0.0214780726531393,
     "notified_at": "2026-01-22T05:44:49.091288+00:00"
+  },
+  "Coastal Carolina Chanticleers vs. Texas State Bobcats|Coastal Carolina Chanticleers|spread": {
+    "game": "Coastal Carolina Chanticleers vs. Texas State Bobcats",
+    "team": "Coastal Carolina Chanticleers",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-01-22T07:51:35.145670+00:00"
+  },
+  "Siena Saints vs. Marist Red Foxes|under": {
+    "game": "Siena Saints vs. Marist Red Foxes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-22T07:51:35.500471+00:00"
+  },
+  "Oral Roberts Golden Eagles vs. North Dakota Fighting Hawks|Oral Roberts Golden Eagles|spread": {
+    "game": "Oral Roberts Golden Eagles vs. North Dakota Fighting Hawks",
+    "team": "Oral Roberts Golden Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0131155217815734,
+    "notified_at": "2026-01-22T07:51:35.790252+00:00"
   }
 }
