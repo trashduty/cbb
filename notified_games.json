@@ -3120,5 +3120,19 @@
     "edge_type": "spread",
     "edge_value": 0.0156009054477324,
     "notified_at": "2026-01-22T14:45:59.625827+00:00"
+  },
+  "Rutgers Scarlet Knights vs. Indiana Hoosiers|Indiana Hoosiers|spread": {
+    "game": "Rutgers Scarlet Knights vs. Indiana Hoosiers",
+    "team": "Indiana Hoosiers",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-22T20:56:23.090655+00:00"
+  },
+  "Buffalo Bulls vs. Massachusetts Minutemen|Buffalo Bulls|moneyline": {
+    "game": "Buffalo Bulls vs. Massachusetts Minutemen",
+    "team": "Buffalo Bulls",
+    "edge_type": "moneyline",
+    "edge_value": 0.0519897230155573,
+    "notified_at": "2026-01-22T20:56:23.316410+00:00"
   }
 }
