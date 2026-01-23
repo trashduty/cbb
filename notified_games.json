@@ -3274,5 +3274,33 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-23T23:25:49.784224+00:00"
+  },
+  "Eastern Washington Eagles vs. Sacramento St Hornets|Eastern Washington Eagles|spread": {
+    "game": "Eastern Washington Eagles vs. Sacramento St Hornets",
+    "team": "Eastern Washington Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-23T23:38:32.877339+00:00"
+  },
+  "Montana Grizzlies vs. Idaho State Bengals|Montana Grizzlies|spread": {
+    "game": "Montana Grizzlies vs. Idaho State Bengals",
+    "team": "Montana Grizzlies",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-23T23:38:33.815263+00:00"
+  },
+  "Western Michigan Broncos vs. Central Michigan Chippewas|Western Michigan Broncos|spread": {
+    "game": "Western Michigan Broncos vs. Central Michigan Chippewas",
+    "team": "Western Michigan Broncos",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-23T23:38:34.410971+00:00"
+  },
+  "Western Michigan Broncos vs. Central Michigan Chippewas|Western Michigan Broncos|moneyline": {
+    "game": "Western Michigan Broncos vs. Central Michigan Chippewas",
+    "team": "Western Michigan Broncos",
+    "edge_type": "moneyline",
+    "edge_value": 0.0490225606457188,
+    "notified_at": "2026-01-23T23:38:34.809292+00:00"
   }
 }
