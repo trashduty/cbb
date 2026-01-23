@@ -3183,5 +3183,26 @@
     "edge_type": "spread",
     "edge_value": 0.0342596602085113,
     "notified_at": "2026-01-23T04:58:15.184245+00:00"
+  },
+  "St. Francis (PA) Red Flash vs. Chicago St Cougars|St. Francis (PA) Red Flash|moneyline": {
+    "game": "St. Francis (PA) Red Flash vs. Chicago St Cougars",
+    "team": "St. Francis (PA) Red Flash",
+    "edge_type": "moneyline",
+    "edge_value": 0.0435867195023411,
+    "notified_at": "2026-01-23T06:11:24.543267+00:00"
+  },
+  "Alabama Crimson Tide vs. Tennessee Volunteers|Alabama Crimson Tide|spread": {
+    "game": "Alabama Crimson Tide vs. Tennessee Volunteers",
+    "team": "Alabama Crimson Tide",
+    "edge_type": "spread",
+    "edge_value": 0.0270920681615924,
+    "notified_at": "2026-01-23T06:11:24.942966+00:00"
+  },
+  "Virginia Cavaliers vs. North Carolina Tar Heels|Virginia Cavaliers|spread": {
+    "game": "Virginia Cavaliers vs. North Carolina Tar Heels",
+    "team": "Virginia Cavaliers",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-23T06:11:25.234524+00:00"
   }
 }
