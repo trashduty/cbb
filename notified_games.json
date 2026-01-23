@@ -3162,5 +3162,19 @@
     "edge_type": "over",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-23T04:08:59.953618+00:00"
+  },
+  "North Texas Mean Green vs. East Carolina Pirates|under": {
+    "game": "North Texas Mean Green vs. East Carolina Pirates",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0114949301215737,
+    "notified_at": "2026-01-23T04:31:41.042942+00:00"
+  },
+  "Stonehill Skyhawks vs. LIU Sharks|Stonehill Skyhawks|spread": {
+    "game": "Stonehill Skyhawks vs. LIU Sharks",
+    "team": "Stonehill Skyhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0173678180739622,
+    "notified_at": "2026-01-23T04:31:41.210366+00:00"
   }
 }
