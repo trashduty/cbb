@@ -3204,5 +3204,19 @@
     "edge_type": "spread",
     "edge_value": 0.0241897189022821,
     "notified_at": "2026-01-23T06:11:25.234524+00:00"
+  },
+  "Florida Gators vs. Auburn Tigers|Florida Gators|spread": {
+    "game": "Florida Gators vs. Auburn Tigers",
+    "team": "Florida Gators",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-23T19:29:03.361963+00:00"
+  },
+  "Baylor Bears vs. TCU Horned Frogs|TCU Horned Frogs|spread": {
+    "game": "Baylor Bears vs. TCU Horned Frogs",
+    "team": "TCU Horned Frogs",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-23T19:29:03.755749+00:00"
   }
 }
