@@ -3134,5 +3134,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0519897230155573,
     "notified_at": "2026-01-22T20:56:23.316410+00:00"
+  },
+  "Buffalo Bulls vs. Massachusetts Minutemen|Buffalo Bulls|spread": {
+    "game": "Buffalo Bulls vs. Massachusetts Minutemen",
+    "team": "Buffalo Bulls",
+    "edge_type": "spread",
+    "edge_value": 0.0446479804347867,
+    "notified_at": "2026-01-23T00:30:50.806034+00:00"
   }
 }
