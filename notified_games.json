@@ -3141,5 +3141,12 @@
     "edge_type": "spread",
     "edge_value": 0.0446479804347867,
     "notified_at": "2026-01-23T00:30:50.806034+00:00"
+  },
+  "Butler Bulldogs vs. Marquette Golden Eagles|Butler Bulldogs|spread": {
+    "game": "Butler Bulldogs vs. Marquette Golden Eagles",
+    "team": "Butler Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0185874780059236,
+    "notified_at": "2026-01-23T01:57:42.083253+00:00"
   }
 }
