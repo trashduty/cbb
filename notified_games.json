@@ -3176,5 +3176,12 @@
     "edge_type": "spread",
     "edge_value": 0.0173678180739622,
     "notified_at": "2026-01-23T04:31:41.210366+00:00"
+  },
+  "Jacksonville St Gamecocks vs. Middle Tennessee Blue Raiders|Middle Tennessee Blue Raiders|spread": {
+    "game": "Jacksonville St Gamecocks vs. Middle Tennessee Blue Raiders",
+    "team": "Middle Tennessee Blue Raiders",
+    "edge_type": "spread",
+    "edge_value": 0.0342596602085113,
+    "notified_at": "2026-01-23T04:58:15.184245+00:00"
   }
 }
