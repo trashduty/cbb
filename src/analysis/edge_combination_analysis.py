@@ -11,6 +11,11 @@ Edge-Based Model Combination Analysis
 
 Analyzes model combination accuracy at different edge thresholds (0%, 1%, 2%, 3%, 4%)
 for spreads, moneylines, and totals.
+
+Uses the same lookup table methodology as the production system:
+- Spreads: 0.6 × market + 0.4 × model → lookup cover_prob → edge
+- Totals: 0.6 × market + 0.4 × model → lookup over/under_prob → edge
+- Moneylines: model_prob - market_implied_prob = edge
 """
 
 import pandas as pd
@@ -21,12 +26,25 @@ from pathlib import Path
 # Constants
 IMPLIED_PROB_110 = 110 / 210  # ~0.5238 for -110 lines
 
+# Model name abbreviations
+MODEL_ABBREV = {
+    'kenpom': 'KP',
+    'barttorvik': 'BT',
+    'evanmiya': 'EM',
+    'hasla': 'HA'
+}
+
 
 def load_data():
     """Load graded results and lookup tables."""
     base_path = Path(__file__).parent.parent.parent
 
     graded = pd.read_csv(base_path / "graded_results.csv")
+
+    # Filter to one row per game (home team only) to avoid double-counting
+    # Each game has two rows in graded_results: one for each team
+    graded = graded[graded['team'] == graded['home_team']].copy()
+
     spreads_lookup = pd.read_csv(base_path / "spreads_lookup_combined.csv")
     totals_lookup = pd.read_csv(base_path / "totals_lookup_combined.csv")
 
@@ -137,7 +155,7 @@ def analyze_spreads(graded, spreads_lookup):
     results = []
 
     for combo in combos:
-        combo_name = '+'.join([m.upper()[:2] for m in combo])
+        combo_name = '+'.join([MODEL_ABBREV[m] for m in combo])
 
         # Filter to games with required data
         df = graded.copy()
@@ -234,7 +252,7 @@ def analyze_moneylines(graded):
     results = []
 
     for combo in combos:
-        combo_name = '+'.join([m.upper()[:2] for m in combo])
+        combo_name = '+'.join([MODEL_ABBREV[m] for m in combo])
 
         df = graded.copy()
 
@@ -330,7 +348,7 @@ def analyze_totals(graded, totals_lookup, bet_type='over'):
     prob_col = 'over_prob' if bet_type == 'over' else 'under_prob'
 
     for combo in combos:
-        combo_name = '+'.join([m.upper()[:2] for m in combo])
+        combo_name = '+'.join([MODEL_ABBREV[m] for m in combo])
 
         df = graded.copy()
 
