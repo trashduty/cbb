@@ -3218,5 +3218,61 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-23T19:29:03.755749+00:00"
+  },
+  "Wright St Raiders vs. Northern Kentucky Norse|under": {
+    "game": "Wright St Raiders vs. Northern Kentucky Norse",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-23T23:25:47.922779+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. Duquesne Dukes|Duquesne Dukes|spread": {
+    "game": "Loyola (Chi) Ramblers vs. Duquesne Dukes",
+    "team": "Duquesne Dukes",
+    "edge_type": "spread",
+    "edge_value": 0.0196973559193531,
+    "notified_at": "2026-01-23T23:25:48.113701+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. Duquesne Dukes|Duquesne Dukes|moneyline": {
+    "game": "Loyola (Chi) Ramblers vs. Duquesne Dukes",
+    "team": "Duquesne Dukes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0542556242318447,
+    "notified_at": "2026-01-23T23:25:48.381525+00:00"
+  },
+  "Ball State Cardinals vs. Northern Illinois Huskies|Northern Illinois Huskies|spread": {
+    "game": "Ball State Cardinals vs. Northern Illinois Huskies",
+    "team": "Northern Illinois Huskies",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-23T23:25:48.592083+00:00"
+  },
+  "Colorado Buffaloes vs. UCF Knights|UCF Knights|spread": {
+    "game": "Colorado Buffaloes vs. UCF Knights",
+    "team": "UCF Knights",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-23T23:25:48.794399+00:00"
+  },
+  "SMU Mustangs vs. Florida St Seminoles|SMU Mustangs|spread": {
+    "game": "SMU Mustangs vs. Florida St Seminoles",
+    "team": "SMU Mustangs",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-23T23:25:49.146938+00:00"
+  },
+  "Wofford Terriers vs. Mercer Bears|Mercer Bears|spread": {
+    "game": "Wofford Terriers vs. Mercer Bears",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0160342270972184,
+    "notified_at": "2026-01-23T23:25:49.394205+00:00"
+  },
+  "Princeton Tigers vs. Brown Bears|under": {
+    "game": "Princeton Tigers vs. Brown Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-23T23:25:49.784224+00:00"
   }
 }
