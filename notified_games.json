@@ -3155,5 +3155,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0434890739609321,
     "notified_at": "2026-01-23T02:49:38.437388+00:00"
+  },
+  "Le Moyne Dolphins vs. Wagner Seahawks|over": {
+    "game": "Le Moyne Dolphins vs. Wagner Seahawks",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-23T04:08:59.953618+00:00"
   }
 }
