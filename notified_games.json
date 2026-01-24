@@ -3463,5 +3463,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0935867195023411,
     "notified_at": "2026-01-24T05:25:26.020398+00:00"
+  },
+  "Fresno St Bulldogs vs. Grand Canyon Antelopes|under": {
+    "game": "Fresno St Bulldogs vs. Grand Canyon Antelopes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-24T05:50:23.832881+00:00"
   }
 }
