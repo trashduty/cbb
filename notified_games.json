@@ -3435,5 +3435,33 @@
     "edge_type": "over",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-24T05:10:34.817820+00:00"
+  },
+  "Loyola (MD) Greyhounds vs. Bucknell Bison|Loyola (MD) Greyhounds|moneyline": {
+    "game": "Loyola (MD) Greyhounds vs. Bucknell Bison",
+    "team": "Loyola (MD) Greyhounds",
+    "edge_type": "moneyline",
+    "edge_value": 0.0706354515050167,
+    "notified_at": "2026-01-24T05:25:24.727743+00:00"
+  },
+  "New Hampshire Wildcats vs. Albany Great Danes|New Hampshire Wildcats|moneyline": {
+    "game": "New Hampshire Wildcats vs. Albany Great Danes",
+    "team": "New Hampshire Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0856539985923166,
+    "notified_at": "2026-01-24T05:25:25.102501+00:00"
+  },
+  "Texas Southern Tigers vs. Alabama A&M Bulldogs|Texas Southern Tigers|moneyline": {
+    "game": "Texas Southern Tigers vs. Alabama A&M Bulldogs",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0404247600679615,
+    "notified_at": "2026-01-24T05:25:25.478555+00:00"
+  },
+  "Holy Cross Crusaders vs. American Eagles|American Eagles|moneyline": {
+    "game": "Holy Cross Crusaders vs. American Eagles",
+    "team": "American Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0935867195023411,
+    "notified_at": "2026-01-24T05:25:26.020398+00:00"
   }
 }
