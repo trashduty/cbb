@@ -3400,5 +3400,26 @@
     "edge_type": "spread",
     "edge_value": 0.0214780726531393,
     "notified_at": "2026-01-24T04:18:20.552717+00:00"
+  },
+  "Lamar Cardinals vs. Stephen F. Austin Lumberjacks|Stephen F. Austin Lumberjacks|spread": {
+    "game": "Lamar Cardinals vs. Stephen F. Austin Lumberjacks",
+    "team": "Stephen F. Austin Lumberjacks",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-24T04:44:07.426632+00:00"
+  },
+  "Incarnate Word Cardinals vs. Texas A&M-CC Islanders|Incarnate Word Cardinals|spread": {
+    "game": "Incarnate Word Cardinals vs. Texas A&M-CC Islanders",
+    "team": "Incarnate Word Cardinals",
+    "edge_type": "spread",
+    "edge_value": 0.0173678180739622,
+    "notified_at": "2026-01-24T04:44:07.611633+00:00"
+  },
+  "Hawai'i Rainbow Warriors vs. CSU Northridge Matadors|under": {
+    "game": "Hawai'i Rainbow Warriors vs. CSU Northridge Matadors",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-24T04:44:07.842248+00:00"
   }
 }
