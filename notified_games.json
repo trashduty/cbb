@@ -3491,5 +3491,12 @@
     "edge_type": "spread",
     "edge_value": 0.0139702740544709,
     "notified_at": "2026-01-24T07:24:43.281854+00:00"
+  },
+  "Utah Tech Trailblazers vs. Southern Utah Thunderbirds|Utah Tech Trailblazers|spread": {
+    "game": "Utah Tech Trailblazers vs. Southern Utah Thunderbirds",
+    "team": "Utah Tech Trailblazers",
+    "edge_type": "spread",
+    "edge_value": 0.0160342270972184,
+    "notified_at": "2026-01-24T14:08:06.176524+00:00"
   }
 }
