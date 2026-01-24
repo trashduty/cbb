@@ -3484,5 +3484,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0836043537342462,
     "notified_at": "2026-01-24T07:07:41.545684+00:00"
+  },
+  "San Diego Toreros vs. Santa Clara Broncos|San Diego Toreros|spread": {
+    "game": "San Diego Toreros vs. Santa Clara Broncos",
+    "team": "San Diego Toreros",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-24T07:24:43.281854+00:00"
   }
 }
