@@ -3428,5 +3428,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-24T04:57:55.439862+00:00"
+  },
+  "Lehigh Mountain Hawks vs. Lafayette Leopards|over": {
+    "game": "Lehigh Mountain Hawks vs. Lafayette Leopards",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-24T05:10:34.817820+00:00"
   }
 }
