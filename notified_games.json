@@ -3337,5 +3337,26 @@
     "edge_type": "over",
     "edge_value": 0.0188673826669464,
     "notified_at": "2026-01-24T00:29:40.259304+00:00"
+  },
+  "Marist Red Foxes vs. Quinnipiac Bobcats|under": {
+    "game": "Marist Red Foxes vs. Quinnipiac Bobcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-24T00:56:33.099253+00:00"
+  },
+  "SIU-Edwardsville Cougars vs. Tennessee Tech Golden Eagles|SIU-Edwardsville Cougars|spread": {
+    "game": "SIU-Edwardsville Cougars vs. Tennessee Tech Golden Eagles",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "spread",
+    "edge_value": 0.0124173230244573,
+    "notified_at": "2026-01-24T00:56:33.377204+00:00"
+  },
+  "Eastern Michigan Eagles vs. Kent State Golden Flashes|Eastern Michigan Eagles|moneyline": {
+    "game": "Eastern Michigan Eagles vs. Kent State Golden Flashes",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0428504622545956,
+    "notified_at": "2026-01-24T00:56:33.677392+00:00"
   }
 }
