@@ -3372,5 +3372,12 @@
     "edge_type": "spread",
     "edge_value": 0.0287226995548539,
     "notified_at": "2026-01-24T03:08:20.374727+00:00"
+  },
+  "North Carolina A&T Aggies vs. Towson Tigers|North Carolina A&T Aggies|spread": {
+    "game": "North Carolina A&T Aggies vs. Towson Tigers",
+    "team": "North Carolina A&T Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0287226995548539,
+    "notified_at": "2026-01-24T03:45:33.371058+00:00"
   }
 }
