@@ -3358,5 +3358,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0428504622545956,
     "notified_at": "2026-01-24T00:56:33.677392+00:00"
+  },
+  "Northern Iowa Panthers vs. Murray St Racers|Northern Iowa Panthers|spread": {
+    "game": "Northern Iowa Panthers vs. Murray St Racers",
+    "team": "Northern Iowa Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0266252922230992,
+    "notified_at": "2026-01-24T03:08:20.024635+00:00"
+  },
+  "Bradley Braves vs. UIC Flames|UIC Flames|spread": {
+    "game": "Bradley Braves vs. UIC Flames",
+    "team": "UIC Flames",
+    "edge_type": "spread",
+    "edge_value": 0.0287226995548539,
+    "notified_at": "2026-01-24T03:08:20.374727+00:00"
   }
 }
