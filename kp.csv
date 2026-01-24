@@ -3229,3 +3229,51 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-01-24,Norfolk St.,Coppin St.,home,92.0,81,65
 2026-01-24,Air Force,Boise St.,away,2.0,55,78
 2026-01-24,Boise St.,Air Force,home,98.0,78,55
+2026-01-25,USC,Wisconsin,away,30.0,78,84
+2026-01-25,Wisconsin,USC,home,70.0,84,78
+2026-01-25,Florida Atlantic,South Florida,away,33.0,80,85
+2026-01-25,South Florida,Florida Atlantic,home,67.0,85,80
+2026-01-25,Oregon,Washington,away,25.0,70,78
+2026-01-25,Washington,Oregon,home,75.0,78,70
+2026-01-25,Purdue Fort Wayne,IU Indy,away,65.0,87,83
+2026-01-25,IU Indy,Purdue Fort Wayne,home,35.0,83,87
+2026-01-25,Southern Illinois,Evansville,away,69.0,73,68
+2026-01-25,Evansville,Southern Illinois,home,31.0,68,73
+2026-01-25,Central Connecticut,Stonehill,away,58.0,70,67
+2026-01-25,Stonehill,Central Connecticut,home,42.0,67,70
+2026-01-25,Saint Francis,New Haven,away,34.0,65,70
+2026-01-25,New Haven,Saint Francis,home,66.0,70,65
+2026-01-25,Wagner,LIU,away,20.0,70,79
+2026-01-25,LIU,Wagner,home,80.0,79,70
+2026-01-25,Chicago St.,Mercyhurst,away,18.0,62,72
+2026-01-25,Mercyhurst,Chicago St.,home,82.0,72,62
+2026-01-26,Arizona,BYU,away,57.0,82,81
+2026-01-26,BYU,Arizona,home,43.0,81,82
+2026-01-26,Louisville,Duke,away,23.0,75,83
+2026-01-26,Duke,Louisville,home,77.0,83,75
+2026-01-26,New Orleans,Nicholls,away,42.0,81,83
+2026-01-26,Nicholls,New Orleans,home,58.0,83,81
+2026-01-26,UT Rio Grande Valley,Texas A&M Corpus Chris,away,37.0,65,69
+2026-01-26,Texas A&M Corpus Chris,UT Rio Grande Valley,home,63.0,69,65
+2026-01-26,Incarnate Word,Houston Christian,away,55.0,73,71
+2026-01-26,Houston Christian,Incarnate Word,home,45.0,71,73
+2026-01-26,Alabama St.,Texas Southern,away,53.0,79,78
+2026-01-26,Texas Southern,Alabama St.,home,47.0,78,79
+2026-01-26,Alabama A&M,Prairie View A&M,away,42.0,74,76
+2026-01-26,Prairie View A&M,Alabama A&M,home,58.0,76,74
+2026-01-26,Penn St.,Ohio St.,away,10.0,71,85
+2026-01-26,Ohio St.,Penn St.,home,90.0,85,71
+2026-01-26,Le Moyne,Fairleigh Dickinson,away,61.0,76,73
+2026-01-26,Fairleigh Dickinson,Le Moyne,home,39.0,73,76
+2026-01-26,Delaware St.,South Carolina St.,away,43.0,68,70
+2026-01-26,South Carolina St.,Delaware St.,home,57.0,70,68
+2026-01-26,Jackson St.,Florida A&M,away,34.0,74,78
+2026-01-26,Florida A&M,Jackson St.,home,66.0,78,74
+2026-01-26,Abilene Christian,Tarleton St.,away,25.0,71,78
+2026-01-26,Tarleton St.,Abilene Christian,home,75.0,78,71
+2026-01-26,East Texas A&M,Lamar,away,27.0,66,72
+2026-01-26,Lamar,East Texas A&M,home,73.0,72,66
+2026-01-26,Alcorn St.,Bethune Cookman,away,21.0,71,80
+2026-01-26,Bethune Cookman,Alcorn St.,home,79.0,80,71
+2026-01-26,Morgan St.,Norfolk St.,away,14.0,69,81
+2026-01-26,Norfolk St.,Morgan St.,home,86.0,81,69
