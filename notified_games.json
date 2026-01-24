@@ -3379,5 +3379,26 @@
     "edge_type": "spread",
     "edge_value": 0.0287226995548539,
     "notified_at": "2026-01-24T03:45:33.371058+00:00"
+  },
+  "Pennsylvania Quakers vs. Yale Bulldogs|over": {
+    "game": "Pennsylvania Quakers vs. Yale Bulldogs",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-24T04:18:19.942809+00:00"
+  },
+  "New Hampshire Wildcats vs. Albany Great Danes|New Hampshire Wildcats|spread": {
+    "game": "New Hampshire Wildcats vs. Albany Great Danes",
+    "team": "New Hampshire Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0124173230244573,
+    "notified_at": "2026-01-24T04:18:20.235201+00:00"
+  },
+  "Howard Bison vs. Morgan St Bears|Howard Bison|spread": {
+    "game": "Howard Bison vs. Morgan St Bears",
+    "team": "Howard Bison",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-01-24T04:18:20.552717+00:00"
   }
 }
