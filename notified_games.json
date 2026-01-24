@@ -3477,5 +3477,12 @@
     "edge_type": "spread",
     "edge_value": 0.0266252922230992,
     "notified_at": "2026-01-24T06:09:54.196652+00:00"
+  },
+  "UMBC Retrievers vs. UMass Lowell River Hawks|UMBC Retrievers|moneyline": {
+    "game": "UMBC Retrievers vs. UMass Lowell River Hawks",
+    "team": "UMBC Retrievers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0836043537342462,
+    "notified_at": "2026-01-24T07:07:41.545684+00:00"
   }
 }
