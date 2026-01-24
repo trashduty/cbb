@@ -3421,5 +3421,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-24T04:44:07.842248+00:00"
+  },
+  "South Dakota Coyotes vs. St. Thomas (MN) Tommies|South Dakota Coyotes|spread": {
+    "game": "South Dakota Coyotes vs. St. Thomas (MN) Tommies",
+    "team": "South Dakota Coyotes",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-24T04:57:55.439862+00:00"
   }
 }
