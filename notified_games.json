@@ -3512,5 +3512,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0563674420923598,
     "notified_at": "2026-01-25T20:26:27.938266+00:00"
+  },
+  "Ohio State Buckeyes vs. Penn State Nittany Lions|Ohio State Buckeyes|spread": {
+    "game": "Ohio State Buckeyes vs. Penn State Nittany Lions",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-25T21:07:38.977942+00:00"
   }
 }
