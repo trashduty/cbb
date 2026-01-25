@@ -3519,5 +3519,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-25T21:07:38.977942+00:00"
+  },
+  "Tarleton State Texans vs. Abilene Christian Wildcats|Tarleton State Texans|spread": {
+    "game": "Tarleton State Texans vs. Abilene Christian Wildcats",
+    "team": "Tarleton State Texans",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-25T22:39:57.025981+00:00"
   }
 }
