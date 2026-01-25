@@ -3498,5 +3498,19 @@
     "edge_type": "spread",
     "edge_value": 0.0160342270972184,
     "notified_at": "2026-01-24T14:08:06.176524+00:00"
+  },
+  "South Carolina St Bulldogs vs. Delaware St Hornets|South Carolina St Bulldogs|spread": {
+    "game": "South Carolina St Bulldogs vs. Delaware St Hornets",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0236888356841984,
+    "notified_at": "2026-01-25T20:26:27.616082+00:00"
+  },
+  "South Carolina St Bulldogs vs. Delaware St Hornets|South Carolina St Bulldogs|moneyline": {
+    "game": "South Carolina St Bulldogs vs. Delaware St Hornets",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0563674420923598,
+    "notified_at": "2026-01-25T20:26:27.938266+00:00"
   }
 }
