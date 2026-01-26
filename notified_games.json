@@ -3526,5 +3526,12 @@
     "edge_type": "spread",
     "edge_value": 0.0241897189022821,
     "notified_at": "2026-01-25T22:39:57.025981+00:00"
+  },
+  "LIU Sharks vs. Wagner Seahawks|over": {
+    "game": "LIU Sharks vs. Wagner Seahawks",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2026-01-26T01:12:05.848679+00:00"
   }
 }
