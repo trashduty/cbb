@@ -3533,5 +3533,12 @@
     "edge_type": "over",
     "edge_value": 0.0178699212250362,
     "notified_at": "2026-01-26T01:12:05.848679+00:00"
+  },
+  "Stonehill Skyhawks vs. Central Connecticut St Blue Devils|Stonehill Skyhawks|spread": {
+    "game": "Stonehill Skyhawks vs. Central Connecticut St Blue Devils",
+    "team": "Stonehill Skyhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0166304459350659,
+    "notified_at": "2026-01-26T03:45:25.185515+00:00"
   }
 }
