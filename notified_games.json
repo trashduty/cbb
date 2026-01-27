@@ -3568,5 +3568,12 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-01-27T02:54:08.709868+00:00"
+  },
+  "Florida St Seminoles vs. California Golden Bears|California Golden Bears|spread": {
+    "game": "Florida St Seminoles vs. California Golden Bears",
+    "team": "California Golden Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-27T22:52:24.970515+00:00"
   }
 }
