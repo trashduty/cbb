@@ -3575,5 +3575,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-27T22:52:24.970515+00:00"
+  },
+  "Southern Illinois Salukis vs. Northern Iowa Panthers|under": {
+    "game": "Southern Illinois Salukis vs. Northern Iowa Panthers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-27T23:08:57.072612+00:00"
   }
 }
