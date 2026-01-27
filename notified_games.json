@@ -3547,5 +3547,26 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-27T01:58:09.990986+00:00"
+  },
+  "Virginia Tech Hokies vs. Georgia Tech Yellow Jackets|under": {
+    "game": "Virginia Tech Hokies vs. Georgia Tech Yellow Jackets",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-01-27T02:54:07.767865+00:00"
+  },
+  "UIC Flames vs. Indiana St Sycamores|UIC Flames|spread": {
+    "game": "UIC Flames vs. Indiana St Sycamores",
+    "team": "UIC Flames",
+    "edge_type": "spread",
+    "edge_value": 0.0116588701655339,
+    "notified_at": "2026-01-27T02:54:08.137938+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. Saint Joseph's Hawks|Saint Joseph's Hawks|spread": {
+    "game": "Loyola (Chi) Ramblers vs. Saint Joseph's Hawks",
+    "team": "Saint Joseph's Hawks",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-01-27T02:54:08.709868+00:00"
   }
 }
