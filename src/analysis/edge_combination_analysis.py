@@ -7,15 +7,16 @@
 # ///
 
 """
-Edge-Based Model Combination Analysis
+Model Combination Analysis: Spread & Total Edges
 
 Analyzes model combination accuracy at different edge thresholds (0%, 1%, 2%, 3%, 4%)
 for spreads, moneylines, and totals.
 
-Uses the same lookup table methodology as the production system:
-- Spreads: 0.6 × market + 0.4 × model → lookup cover_prob → edge
-- Totals: 0.6 × market + 0.4 × model → lookup over/under_prob → edge
+Methodology:
+- Spreads/Totals: Model prediction → lookup probability → regress toward 50% → edge
 - Moneylines: model_prob - market_implied_prob = edge
+
+Probability regression: p_final = 0.4 × p_model + 0.6 × 0.50
 """
 
 import pandas as pd
@@ -171,28 +172,31 @@ def analyze_spreads(graded, spreads_lookup):
         if len(df) == 0:
             continue
 
-        # Calculate combo spread (average of selected models)
+        # Calculate combo spread (average of selected models) - RAW, no regression
         df['combo_spread'] = df[[spread_cols[m] for m in combo]].mean(axis=1)
 
-        # Calculate predicted outcome: 0.6 * market + 0.4 * combo
-        df['predicted_outcome'] = (0.6 * df['opening_spread'] + 0.4 * df['combo_spread']).apply(lambda x: round(x * 2) / 2)
+        # NEW: Round RAW combo_spread for lookup (no 0.6/0.4 regression before lookup)
+        df['combo_spread_rounded'] = (df['combo_spread'] * 2).round() / 2
 
         # Get total category
         df['total_category'] = df['opening_total'].apply(get_total_category)
 
-        # Look up cover probability
+        # Look up cover probability using RAW model spread
         df['cover_prob'] = df.apply(
             lambda row: lookup_spread_cover_prob(
                 spreads_lookup,
                 row['total_category'],
                 row['opening_spread'],
-                row['predicted_outcome']
+                row['combo_spread_rounded']  # RAW, not regressed
             ),
             axis=1
         )
 
-        # Calculate edge
-        df['edge'] = df['cover_prob'] - IMPLIED_PROB_110
+        # NEW: Regress probability toward 50% (40% model, 60% toward baseline)
+        df['p_final'] = 0.4 * df['cover_prob'] + 0.6 * 0.50
+
+        # Calculate edge from regressed probability
+        df['edge'] = df['p_final'] - IMPLIED_PROB_110
 
         # Filter to rows with valid edge
         df = df[df['edge'].notna()]
@@ -363,29 +367,32 @@ def analyze_totals(graded, totals_lookup, bet_type='over'):
         if len(df) == 0:
             continue
 
-        # Calculate combo total
+        # Calculate combo total (average of selected models) - RAW, no regression
         df['combo_total'] = df[[total_cols[m] for m in combo]].mean(axis=1)
 
-        # Calculate average total: 0.6 * market + 0.4 * combo
-        df['avg_total'] = (0.6 * df['opening_total'] + 0.4 * df['combo_total']).apply(lambda x: round(x * 2) / 2)
+        # NEW: Round RAW combo_total for lookup (no 0.6/0.4 regression before lookup)
+        df['combo_total_rounded'] = (df['combo_total'] * 2).round() / 2
 
         # Get spread category
         df['spread_category'] = df['opening_spread'].apply(get_spread_category)
 
-        # Look up probabilities
-        def get_prob(row):
+        # Look up probabilities using RAW model total
+        def get_prob_raw(row):
             over_p, under_p = lookup_totals_prob(
                 totals_lookup,
                 row['spread_category'],
                 row['opening_total'],
-                row['avg_total']
+                row['combo_total_rounded']  # RAW, not regressed
             )
             return over_p if bet_type == 'over' else under_p
 
-        df['lookup_prob'] = df.apply(get_prob, axis=1)
+        df['lookup_prob'] = df.apply(get_prob_raw, axis=1)
 
-        # Calculate edge
-        df['edge'] = df['lookup_prob'] - IMPLIED_PROB_110
+        # NEW: Regress probability toward 50% (40% model, 60% toward baseline)
+        df['p_final'] = 0.4 * df['lookup_prob'] + 0.6 * 0.50
+
+        # Calculate edge from regressed probability
+        df['edge'] = df['p_final'] - IMPLIED_PROB_110
 
         # Filter to rows with valid edge
         df = df[df['edge'].notna()]
@@ -502,11 +509,18 @@ def main():
     # Generate report
     base_path = Path(__file__).parent.parent.parent
 
-    report = ["# Edge-Based Model Combination Analysis\n"]
+    report = ["# Model Combination Analysis: Spread & Total Edges\n"]
     report.append("Analysis of model combination accuracy at different edge thresholds.\n")
-    report.append("- **Edge Calculation**: Uses lookup tables for spreads/totals, direct calculation for moneylines")
-    report.append("- **ROI**: Standard -110 juice for spreads/totals, actual odds for moneylines")
-    report.append("- **Models**: KP=Kenpom, BT=Barttorvik, EM=EvanMiya, HA=Hasla\n")
+    report.append("## Methodology\n")
+    report.append("For spreads and totals, edges are calculated using probability-space regression:\n")
+    report.append("1. Compute raw model prediction (average of selected models)")
+    report.append("2. Look up implied probability from historical data")
+    report.append("3. Regress toward market: `p_final = 0.4 × p_model + 0.6 × 0.50`")
+    report.append("4. Edge = p_final − 52.38% (break-even at -110)")
+    report.append("")
+    report.append("Moneylines use direct probability comparison (model vs market implied).")
+    report.append("")
+    report.append("**Model abbreviations**: KP=Kenpom, BT=Barttorvik, EM=EvanMiya, HA=Hasla\n")
 
     # Summary
     report.append(create_summary_table(spread_results, ml_results, over_results, under_results))
