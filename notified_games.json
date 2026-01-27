@@ -3582,5 +3582,19 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-27T23:08:57.072612+00:00"
+  },
+  "Missouri St Bears vs. Sam Houston St Bearkats|Sam Houston St Bearkats|spread": {
+    "game": "Missouri St Bears vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-27T23:26:04.475209+00:00"
+  },
+  "Missouri St Bears vs. Sam Houston St Bearkats|Sam Houston St Bearkats|moneyline": {
+    "game": "Missouri St Bears vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0567668508537013,
+    "notified_at": "2026-01-27T23:26:05.178104+00:00"
   }
 }
