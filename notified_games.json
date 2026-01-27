@@ -3540,5 +3540,12 @@
     "edge_type": "spread",
     "edge_value": 0.0166304459350659,
     "notified_at": "2026-01-26T03:45:25.185515+00:00"
+  },
+  "Pittsburgh Panthers vs. Wake Forest Demon Deacons|Wake Forest Demon Deacons|spread": {
+    "game": "Pittsburgh Panthers vs. Wake Forest Demon Deacons",
+    "team": "Wake Forest Demon Deacons",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-27T01:58:09.990986+00:00"
   }
 }
