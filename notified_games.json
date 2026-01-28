@@ -3666,5 +3666,12 @@
     "edge_type": "spread",
     "edge_value": 0.0241897189022821,
     "notified_at": "2026-01-28T06:30:07.489923+00:00"
+  },
+  "Memphis Tigers vs. Florida Atlantic Owls|under": {
+    "game": "Memphis Tigers vs. Florida Atlantic Owls",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-28T20:48:42.378237+00:00"
   }
 }
