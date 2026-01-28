@@ -3596,5 +3596,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0567668508537013,
     "notified_at": "2026-01-27T23:26:05.178104+00:00"
+  },
+  "Robert Morris Colonials vs. IUPUI Jaguars|over": {
+    "game": "Robert Morris Colonials vs. IUPUI Jaguars",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-28T01:11:53.662966+00:00"
   }
 }
