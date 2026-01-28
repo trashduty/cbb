@@ -3652,5 +3652,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0603014249177931,
     "notified_at": "2026-01-28T05:15:23.658723+00:00"
+  },
+  "Tulsa Golden Hurricane vs. North Texas Mean Green|Tulsa Golden Hurricane|spread": {
+    "game": "Tulsa Golden Hurricane vs. North Texas Mean Green",
+    "team": "Tulsa Golden Hurricane",
+    "edge_type": "spread",
+    "edge_value": 0.0250736860048502,
+    "notified_at": "2026-01-28T05:43:15.648894+00:00"
   }
 }
