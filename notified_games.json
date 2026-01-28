@@ -3659,5 +3659,12 @@
     "edge_type": "spread",
     "edge_value": 0.0250736860048502,
     "notified_at": "2026-01-28T05:43:15.648894+00:00"
+  },
+  "Eastern Kentucky Colonels vs. Austin Peay Governors|Austin Peay Governors|spread": {
+    "game": "Eastern Kentucky Colonels vs. Austin Peay Governors",
+    "team": "Austin Peay Governors",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-28T06:30:07.489923+00:00"
   }
 }
