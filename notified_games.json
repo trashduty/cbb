@@ -3631,5 +3631,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-28T04:09:22.099259+00:00"
+  },
+  "Duquesne Dukes vs. St. Bonaventure Bonnies|Duquesne Dukes|spread": {
+    "game": "Duquesne Dukes vs. St. Bonaventure Bonnies",
+    "team": "Duquesne Dukes",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326285,
+    "notified_at": "2026-01-28T04:33:43.752055+00:00"
   }
 }
