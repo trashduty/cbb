@@ -283,7 +283,10 @@ def analyze_totals_simple(graded, bet_type='over'):
         df['edge'] = df['edge_points'] / 100  # 1 point = 1%
 
         for threshold in thresholds:
-            filtered = df[df['edge'].abs() >= threshold].copy()
+            # Only include games where edge is positive (model predicts in the direction we want to bet)
+            # For over: positive edge means model predicts higher than market
+            # For under: positive edge means model predicts lower than market
+            filtered = df[df['edge'] >= threshold].copy()
 
             if len(filtered) == 0:
                 results.append({
@@ -297,11 +300,8 @@ def analyze_totals_simple(graded, bet_type='over'):
                 })
                 continue
 
-            # Positive edge = bet on over/under, negative edge = bet against
-            filtered['bet_won'] = filtered.apply(
-                lambda row: row[outcome_col] if row['edge'] > 0 else (1 - row[outcome_col]),
-                axis=1
-            )
+            # With only positive edges, we always bet in the direction indicated
+            filtered['bet_won'] = filtered[outcome_col]
 
             wins = int(filtered['bet_won'].sum())
             losses = len(filtered) - wins
