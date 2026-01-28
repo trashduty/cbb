@@ -3645,5 +3645,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0435232228703947,
     "notified_at": "2026-01-28T04:58:40.188268+00:00"
+  },
+  "Eastern Kentucky Colonels vs. Austin Peay Governors|Austin Peay Governors|moneyline": {
+    "game": "Eastern Kentucky Colonels vs. Austin Peay Governors",
+    "team": "Austin Peay Governors",
+    "edge_type": "moneyline",
+    "edge_value": 0.0603014249177931,
+    "notified_at": "2026-01-28T05:15:23.658723+00:00"
   }
 }
