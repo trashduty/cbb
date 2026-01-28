@@ -3603,5 +3603,19 @@
     "edge_type": "over",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-28T01:11:53.662966+00:00"
+  },
+  "New Mexico St Aggies vs. Delaware Blue Hens|New Mexico St Aggies|spread": {
+    "game": "New Mexico St Aggies vs. Delaware Blue Hens",
+    "team": "New Mexico St Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0124173230244573,
+    "notified_at": "2026-01-28T01:57:40.520491+00:00"
+  },
+  "Oregon Ducks vs. UCLA Bruins|Oregon Ducks|spread": {
+    "game": "Oregon Ducks vs. UCLA Bruins",
+    "team": "Oregon Ducks",
+    "edge_type": "spread",
+    "edge_value": 0.0156009054477324,
+    "notified_at": "2026-01-28T01:57:40.788702+00:00"
   }
 }
