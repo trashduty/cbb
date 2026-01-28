@@ -3673,5 +3673,12 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-28T20:48:42.378237+00:00"
+  },
+  "Furman Paladins vs. Samford Bulldogs|under": {
+    "game": "Furman Paladins vs. Samford Bulldogs",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-28T21:30:15.070950+00:00"
   }
 }
