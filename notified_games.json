@@ -3624,5 +3624,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0462985159739062,
     "notified_at": "2026-01-28T03:36:59.673021+00:00"
+  },
+  "Omaha Mavericks vs. South Dakota St Jackrabbits|Omaha Mavericks|spread": {
+    "game": "Omaha Mavericks vs. South Dakota St Jackrabbits",
+    "team": "Omaha Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-28T04:09:22.099259+00:00"
   }
 }
