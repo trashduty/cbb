@@ -3638,5 +3638,12 @@
     "edge_type": "spread",
     "edge_value": 0.0105114627326285,
     "notified_at": "2026-01-28T04:33:43.752055+00:00"
+  },
+  "Army Knights vs. Lehigh Mountain Hawks|Army Knights|moneyline": {
+    "game": "Army Knights vs. Lehigh Mountain Hawks",
+    "team": "Army Knights",
+    "edge_type": "moneyline",
+    "edge_value": 0.0435232228703947,
+    "notified_at": "2026-01-28T04:58:40.188268+00:00"
   }
 }
