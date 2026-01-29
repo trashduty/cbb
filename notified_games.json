@@ -3701,5 +3701,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0423973452648582,
     "notified_at": "2026-01-29T04:39:51.817147+00:00"
+  },
+  "UC Irvine Anteaters vs. Hawai'i Rainbow Warriors|under": {
+    "game": "UC Irvine Anteaters vs. Hawai'i Rainbow Warriors",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-29T06:29:36.314442+00:00"
   }
 }
