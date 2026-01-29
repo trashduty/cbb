@@ -3792,5 +3792,12 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-01-29T15:47:22.162063+00:00"
+  },
+  "Youngstown St Penguins vs. IUPUI Jaguars|over": {
+    "game": "Youngstown St Penguins vs. IUPUI Jaguars",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2026-01-29T19:43:08.772071+00:00"
   }
 }
