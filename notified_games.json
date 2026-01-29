@@ -3764,5 +3764,26 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-29T14:20:30.747593+00:00"
+  },
+  "South Dakota Coyotes vs. Oral Roberts Golden Eagles|South Dakota Coyotes|moneyline": {
+    "game": "South Dakota Coyotes vs. Oral Roberts Golden Eagles",
+    "team": "South Dakota Coyotes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0435930704256626,
+    "notified_at": "2026-01-29T14:48:20.681666+00:00"
+  },
+  "Western Illinois Leathernecks vs. SE Missouri St Redhawks|Western Illinois Leathernecks|spread": {
+    "game": "Western Illinois Leathernecks vs. SE Missouri St Redhawks",
+    "team": "Western Illinois Leathernecks",
+    "edge_type": "spread",
+    "edge_value": 0.0179346958150126,
+    "notified_at": "2026-01-29T14:48:20.957762+00:00"
+  },
+  "UC Riverside Highlanders vs. Long Beach St 49ers|UC Riverside Highlanders|spread": {
+    "game": "UC Riverside Highlanders vs. Long Beach St 49ers",
+    "team": "UC Riverside Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0155510951023906,
+    "notified_at": "2026-01-29T14:48:21.207352+00:00"
   }
 }
