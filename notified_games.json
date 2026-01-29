@@ -3708,5 +3708,54 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-01-29T06:29:36.314442+00:00"
+  },
+  "Mercer Bears vs. UNC Greensboro Spartans|Mercer Bears|spread": {
+    "game": "Mercer Bears vs. UNC Greensboro Spartans",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0208124814824915,
+    "notified_at": "2026-01-29T07:21:45.711209+00:00"
+  },
+  "Vermont Catamounts vs. UMBC Retrievers|UMBC Retrievers|spread": {
+    "game": "Vermont Catamounts vs. UMBC Retrievers",
+    "team": "UMBC Retrievers",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-01-29T07:21:46.043077+00:00"
+  },
+  "The Citadel Bulldogs vs. VMI Keydets|The Citadel Bulldogs|spread": {
+    "game": "The Citadel Bulldogs vs. VMI Keydets",
+    "team": "The Citadel Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-01-29T07:21:46.298848+00:00"
+  },
+  "Wagner Seahawks vs. Central Connecticut St Blue Devils|over": {
+    "game": "Wagner Seahawks vs. Central Connecticut St Blue Devils",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-29T07:21:46.514240+00:00"
+  },
+  "South Dakota Coyotes vs. Oral Roberts Golden Eagles|South Dakota Coyotes|spread": {
+    "game": "South Dakota Coyotes vs. Oral Roberts Golden Eagles",
+    "team": "South Dakota Coyotes",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-29T07:21:46.759780+00:00"
+  },
+  "UT-Arlington Mavericks vs. Southern Utah Thunderbirds|UT-Arlington Mavericks|spread": {
+    "game": "UT-Arlington Mavericks vs. Southern Utah Thunderbirds",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-29T07:21:47.030437+00:00"
+  },
+  "Tennessee St Tigers vs. Arkansas-Little Rock Trojans|Tennessee St Tigers|spread": {
+    "game": "Tennessee St Tigers vs. Arkansas-Little Rock Trojans",
+    "team": "Tennessee St Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0128117939803281,
+    "notified_at": "2026-01-29T07:21:47.350941+00:00"
   }
 }
