@@ -3680,5 +3680,12 @@
     "edge_type": "under",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-01-28T21:30:15.070950+00:00"
+  },
+  "CSU Bakersfield Roadrunners vs. Cal Poly Mustangs|CSU Bakersfield Roadrunners|moneyline": {
+    "game": "CSU Bakersfield Roadrunners vs. Cal Poly Mustangs",
+    "team": "CSU Bakersfield Roadrunners",
+    "edge_type": "moneyline",
+    "edge_value": 0.045697098861115,
+    "notified_at": "2026-01-29T03:05:06.124245+00:00"
   }
 }
