@@ -3757,5 +3757,12 @@
     "edge_type": "spread",
     "edge_value": 0.0128117939803281,
     "notified_at": "2026-01-29T07:21:47.350941+00:00"
+  },
+  "Southern Indiana Screaming Eagles vs. Lindenwood Lions|under": {
+    "game": "Southern Indiana Screaming Eagles vs. Lindenwood Lions",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-29T14:20:30.747593+00:00"
   }
 }
