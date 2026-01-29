@@ -3813,5 +3813,19 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-29T19:56:57.679885+00:00"
+  },
+  "Canisius Golden Griffins vs. Marist Red Foxes|Canisius Golden Griffins|spread": {
+    "game": "Canisius Golden Griffins vs. Marist Red Foxes",
+    "team": "Canisius Golden Griffins",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-01-29T20:13:33.044780+00:00"
+  },
+  "Detroit Mercy Titans vs. Northern Kentucky Norse|Detroit Mercy Titans|spread": {
+    "game": "Detroit Mercy Titans vs. Northern Kentucky Norse",
+    "team": "Detroit Mercy Titans",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326285,
+    "notified_at": "2026-01-29T20:13:33.276432+00:00"
   }
 }
