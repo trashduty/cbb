@@ -3785,5 +3785,12 @@
     "edge_type": "spread",
     "edge_value": 0.0155510951023906,
     "notified_at": "2026-01-29T14:48:21.207352+00:00"
+  },
+  "Portland St Vikings vs. Montana Grizzlies|Montana Grizzlies|spread": {
+    "game": "Portland St Vikings vs. Montana Grizzlies",
+    "team": "Montana Grizzlies",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-01-29T15:47:22.162063+00:00"
   }
 }
