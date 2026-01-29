@@ -3799,5 +3799,19 @@
     "edge_type": "over",
     "edge_value": 0.0178699212250362,
     "notified_at": "2026-01-29T19:43:08.772071+00:00"
+  },
+  "VCU Rams vs. Loyola (Chi) Ramblers|VCU Rams|spread": {
+    "game": "VCU Rams vs. Loyola (Chi) Ramblers",
+    "team": "VCU Rams",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-29T19:56:57.402698+00:00"
+  },
+  "Nevada Wolf Pack vs. UNLV Rebels|Nevada Wolf Pack|spread": {
+    "game": "Nevada Wolf Pack vs. UNLV Rebels",
+    "team": "Nevada Wolf Pack",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-29T19:56:57.679885+00:00"
   }
 }
