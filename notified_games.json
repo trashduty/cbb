@@ -3827,5 +3827,12 @@
     "edge_type": "spread",
     "edge_value": 0.0105114627326285,
     "notified_at": "2026-01-29T20:13:33.276432+00:00"
+  },
+  "Green Bay Phoenix vs. Cleveland St Vikings|Green Bay Phoenix|spread": {
+    "game": "Green Bay Phoenix vs. Cleveland St Vikings",
+    "team": "Green Bay Phoenix",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-29T20:31:36.980208+00:00"
   }
 }
