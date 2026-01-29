@@ -3694,5 +3694,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-29T03:58:05.516280+00:00"
+  },
+  "Drexel Dragons vs. Hampton Pirates|Drexel Dragons|moneyline": {
+    "game": "Drexel Dragons vs. Hampton Pirates",
+    "team": "Drexel Dragons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0423973452648582,
+    "notified_at": "2026-01-29T04:39:51.817147+00:00"
   }
 }
