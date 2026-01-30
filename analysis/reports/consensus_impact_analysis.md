@@ -94,9 +94,3 @@ Consensus = all 4 models agree on direction vs market line.
 - **Spread 3%+**: Consensus -18.2% (105g) vs Disagree -4.5% (24g) → **Disagree better**
 - **Over 3%+**: Consensus -4.0% (173g) vs Disagree -20.5% (12g) → **Consensus better**
 - **Under 3%+**: Consensus -10.4% (213g) vs Disagree -0.7% (25g) → **Disagree better**
-
-## Methodology Note
-
-Previous version had a bug: the consensus flag was calculated against `market_total`/`Consensus Spread`
-but edge was calculated against `opening_total`/`opening_spread`. These differ in ~89% of games for totals
-and ~66% for spreads. This version uses `market_total` and `closing_spread` consistently for both.
