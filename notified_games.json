@@ -3960,5 +3960,12 @@
     "edge_type": "spread",
     "edge_value": 0.0173678180739622,
     "notified_at": "2026-01-30T23:44:02.509024+00:00"
+  },
+  "Western Carolina Catamounts vs. Samford Bulldogs|Western Carolina Catamounts|spread": {
+    "game": "Western Carolina Catamounts vs. Samford Bulldogs",
+    "team": "Western Carolina Catamounts",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-30T23:55:58.454376+00:00"
   }
 }
