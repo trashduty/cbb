@@ -3834,5 +3834,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-29T20:31:36.980208+00:00"
+  },
+  "Iona Gaels vs. Fairfield Stags|Iona Gaels|spread": {
+    "game": "Iona Gaels vs. Fairfield Stags",
+    "team": "Iona Gaels",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-30T00:34:51.604983+00:00"
   }
 }
