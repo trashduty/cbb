@@ -3946,5 +3946,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0555333971629419,
     "notified_at": "2026-01-30T22:58:30.258129+00:00"
+  },
+  "Louisville Cardinals vs. SMU Mustangs|SMU Mustangs|spread": {
+    "game": "Louisville Cardinals vs. SMU Mustangs",
+    "team": "SMU Mustangs",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-30T23:29:58.310391+00:00"
   }
 }
