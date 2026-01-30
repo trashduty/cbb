@@ -3862,5 +3862,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-01-30T05:34:38.909197+00:00"
+  },
+  "Saint Louis Billikens vs. Dayton Flyers|Saint Louis Billikens|spread": {
+    "game": "Saint Louis Billikens vs. Dayton Flyers",
+    "team": "Saint Louis Billikens",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-01-30T14:17:46.140865+00:00"
   }
 }
