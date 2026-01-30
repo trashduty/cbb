@@ -56,8 +56,6 @@ spread_cols = ['spread_kenpom', 'spread_barttorvik']
 df['model_spread'] = df[spread_cols].mean(axis=1, skipna=False)
 df['Edge For Covering Spread'] = (df['Consensus Spread'] - df['model_spread']) / 100
 
-# Spread std dev for combo models only
-df['Spread Std. Dev.'] = df[spread_cols].std(axis=1, skipna=True).round(1)
 
 # --- Moneyline: mean(BT, EM), raw (no devigged blend) ---
 ml_cols = ['win_prob_barttorvik', 'win_prob_evanmiya']
@@ -65,8 +63,6 @@ df['Moneyline Win Probability'] = df[ml_cols].mean(axis=1, skipna=False)
 ml_implied = df['Current Moneyline'].apply(american_odds_to_implied_probability)
 df['Moneyline Edge'] = df['Moneyline Win Probability'] - ml_implied
 
-# Moneyline std dev for combo models only
-df['Moneyline Std. Dev.'] = df[ml_cols].std(axis=1, skipna=True).round(3)
 
 # --- Totals: mean(KP, BT, HA) ---
 total_cols = ['projected_total_kenpom', 'projected_total_barttorvik', 'projected_total_hasla']
@@ -74,8 +70,6 @@ df['model_total'] = df[total_cols].mean(axis=1, skipna=False)
 df['Over Total Edge'] = (df['model_total'] - df['market_total']) / 100
 df['Under Total Edge'] = (df['market_total'] - df['model_total']) / 100
 
-# Totals std dev for combo models only
-df['Totals Std. Dev.'] = df[total_cols].std(axis=1, skipna=True).round(1)
 
 # --- Clear lookup-table-specific columns ---
 for col in ['Predicted Outcome', 'Spread Cover Probability',
@@ -84,79 +78,13 @@ for col in ['Predicted Outcome', 'Spread Cover Probability',
         df[col] = np.nan
 
 
-# --- Consensus flags for combo models ---
-def calc_spread_consensus(row):
-    """KP+BT agree on direction vs market spread."""
-    try:
-        market = row.get('Consensus Spread')
-        kp = row.get('spread_kenpom')
-        bt = row.get('spread_barttorvik')
-        if pd.isna(market) or pd.isna(kp) or pd.isna(bt):
-            return 0
-        abs_m = abs(market)
-        abs_kp = abs(kp)
-        abs_bt = abs(bt)
-        if (abs_kp > abs_m and abs_bt > abs_m) or (abs_kp < abs_m and abs_bt < abs_m):
-            return 1
-        return 0
-    except Exception:
-        return 0
-
-
-def calc_ml_consensus(row):
-    """BT+EM agree on direction vs implied probability."""
-    try:
-        ml = row.get('Current Moneyline')
-        bt = row.get('win_prob_barttorvik')
-        em = row.get('win_prob_evanmiya')
-        if pd.isna(ml) or pd.isna(bt) or pd.isna(em):
-            return 0
-        implied = american_odds_to_implied_probability(ml)
-        if pd.isna(implied):
-            return 0
-        if (bt > implied and em > implied) or (bt < implied and em < implied):
-            return 1
-        return 0
-    except Exception:
-        return 0
-
-
-def calc_over_consensus(row):
-    """KP+BT+HA all above market total."""
-    try:
-        mt = row.get('market_total')
-        kp = row.get('projected_total_kenpom')
-        bt = row.get('projected_total_barttorvik')
-        ha = row.get('projected_total_hasla')
-        if pd.isna(mt) or pd.isna(kp) or pd.isna(bt) or pd.isna(ha):
-            return 0
-        if kp > mt and bt > mt and ha > mt:
-            return 1
-        return 0
-    except Exception:
-        return 0
-
-
-def calc_under_consensus(row):
-    """KP+BT+HA all below market total."""
-    try:
-        mt = row.get('market_total')
-        kp = row.get('projected_total_kenpom')
-        bt = row.get('projected_total_barttorvik')
-        ha = row.get('projected_total_hasla')
-        if pd.isna(mt) or pd.isna(kp) or pd.isna(bt) or pd.isna(ha):
-            return 0
-        if kp < mt and bt < mt and ha < mt:
-            return 1
-        return 0
-    except Exception:
-        return 0
-
-
-df['spread_consensus_flag'] = df.apply(calc_spread_consensus, axis=1)
-df['moneyline_consensus_flag'] = df.apply(calc_ml_consensus, axis=1)
-df['over_consensus_flag'] = df.apply(calc_over_consensus, axis=1)
-df['under_consensus_flag'] = df.apply(calc_under_consensus, axis=1)
+# --- Drop consensus flag and std dev columns ---
+drop_cols = ['spread_consensus_flag', 'moneyline_consensus_flag',
+             'over_consensus_flag', 'under_consensus_flag',
+             'Spread Std. Dev.', 'Moneyline Std. Dev.', 'Totals Std. Dev.']
+for col in drop_cols:
+    if col in df.columns:
+        df.drop(columns=[col], inplace=True)
 
 
 # --- Preserve opening edges from previous Combo_Output.csv ---
@@ -235,18 +163,16 @@ column_order = [
     'Game', 'Game Time', 'Opening Odds Time', 'Team',
     # Spread framework columns
     'total_category', 'market_spread', 'Consensus Spread', 'model_spread', 'Predicted Outcome', 'Spread Cover Probability',
-    'Opening Spread', 'Edge For Covering Spread', 'Opening Spread Edge', 'Spread Std. Dev.', 'spread_barttorvik',
+    'Opening Spread', 'Edge For Covering Spread', 'Opening Spread Edge', 'spread_barttorvik',
     'spread_kenpom', 'spread_evanmiya', 'spread_hasla',
     # Moneyline columns
-    'Moneyline Win Probability', 'Opening Moneyline', 'Current Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Opening Moneyline Edge', 'Moneyline Std. Dev.',
+    'Moneyline Win Probability', 'Opening Moneyline', 'Current Moneyline', 'Devigged Probability', 'Moneyline Edge', 'Opening Moneyline Edge',
     'win_prob_barttorvik', 'win_prob_kenpom', 'win_prob_evanmiya',
     # Totals framework columns
-    'spread_category', 'market_total', 'model_total', 'average_total', 'Opening Total', 'theoddsapi_total', 'Totals Std. Dev.',
+    'spread_category', 'market_total', 'model_total', 'average_total', 'Opening Total', 'theoddsapi_total',
     'projected_total_barttorvik', 'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla',
     'Over Cover Probability', 'Under Cover Probability',
     'Over Total Edge', 'Under Total Edge', 'Opening Over Edge', 'Opening Under Edge',
-    # Consensus flags
-    'spread_consensus_flag', 'moneyline_consensus_flag', 'over_consensus_flag', 'under_consensus_flag'
 ]
 
 available_columns = [col for col in column_order if col in df.columns]
