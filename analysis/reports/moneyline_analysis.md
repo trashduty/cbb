@@ -1,101 +1,117 @@
 # Moneyline Edge Analysis by Win Probability Range
 
+**Model Combination: KP+BT (KenPom + Barttorvik)**
+
 ## Key Question
 When we have a 2%+ moneyline edge, should we bet everything or only certain win probability ranges?
 
 ## TL;DR
 
-Betting all 2%+ edges blindly loses money (-4.8% ROI). Filtering by win probability range improves results dramatically:
-
 | Edge Threshold | All Bets (ROI) | Filtered 10-40% or 50-90% (ROI) |
 |----------------|----------------|----------------------------------|
-| 2%+ | -4.8% (126 games) | +2.4% (112 games) |
-| 3%+ | +8.5% (91 games) | +19.9% (78 games) |
-| 4%+ | +18.9% (67 games) | +30.6% (57 games) |
+| 2%+ | +18.5% (83 games) | +41.2% (66 games) |
+| 3%+ | +35.3% (62 games) | +60.6% (49 games) |
+| 4%+ | +26.9% (42 games) | +50.2% (32 games) |
 
 ---
 
 ## Performance by Win Probability Range
 
+### Edge >= 0%
+
+| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
+|-------|-------|------|------|----------------|----------|-----|---------|
+| Heavy Dogs (0-25%) | 49 | 8 | 16.3% | 14.2% | 2.1% | +3.7% | Marginal |
+| Moderate Dogs (25-40%) | 17 | 5 | 29.4% | 32.3% | 3.5% | +4.4% | Marginal |
+| Coin Flips (40-60%) | 37 | 12 | 32.4% | 50.0% | 4.5% | -33.0% | SKIP |
+| Moderate Favs (60-75%) | 23 | 14 | 60.9% | 66.5% | 9.8% | +32.0% | BET |
+| Heavy Favs (75-100%) | 12 | 11 | 91.7% | 81.7% | 4.7% | +18.0% | BET |
+| **ALL** | **138** | **50** | **36.2%** | **40.6%** | **4.4%** | **-0.1%** | |
+
+### Edge >= 1%
+
+| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
+|-------|-------|------|------|----------------|----------|-----|---------|
+| Heavy Dogs (0-25%) | 34 | 6 | 17.6% | 16.1% | 2.8% | +14.4% | BET |
+| Moderate Dogs (25-40%) | 14 | 5 | 35.7% | 32.9% | 4.2% | +26.8% | BET |
+| Coin Flips (40-60%) | 26 | 6 | 23.1% | 49.4% | 6.2% | -48.3% | SKIP |
+| Moderate Favs (60-75%) | 20 | 12 | 60.0% | 66.4% | 11.3% | +37.2% | BET |
+| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
+| **ALL** | **102** | **36** | **35.3%** | **42.0%** | **5.8%** | **+4.5%** | |
+
 ### Edge >= 2%
 
 | Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
 |-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 32 | 6 | 18.8% | 18.6% | 4.5% | +34.1% | High variance* |
-| Moderate Dogs (25-40%) | 21 | 3 | 14.3% | 32.0% | 8.3% | -54.0% | SKIP |
-| Coin Flips (40-60%) | 40 | 16 | 40.0% | 51.8% | 7.4% | -18.8% | SKIP |
-| Moderate Favs (60-75%) | 26 | 12 | 46.2% | 64.6% | 18.3% | +8.7% | Marginal |
-| Heavy Favs (75+%) | 7 | 5 | 71.4% | 80.4% | 6.4% | -6.0% | Small N |
+| Heavy Dogs (0-25%) | 19 | 5 | 26.3% | 17.7% | 3.7% | +77.8% | BET |
+| Moderate Dogs (25-40%) | 13 | 5 | 38.5% | 32.5% | 4.4% | +36.5% | BET |
+| Coin Flips (40-60%) | 26 | 6 | 23.1% | 49.4% | 6.2% | -48.3% | SKIP |
+| Moderate Favs (60-75%) | 17 | 10 | 58.8% | 66.1% | 13.0% | +43.2% | BET |
+| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
+| **ALL** | **83** | **33** | **39.8%** | **46.2%** | **6.8%** | **+18.5%** | |
 
 ### Edge >= 3%
 
 | Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
 |-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 22 | 6 | 27.3% | 18.9% | 5.4% | +95.0% | High variance* |
-| Moderate Dogs (25-40%) | 12 | 1 | 8.3% | 32.8% | 12.8% | -74.2% | SKIP |
-| Coin Flips (40-60%) | 31 | 12 | 38.7% | 50.8% | 8.8% | -18.3% | SKIP |
-| Moderate Favs (60-75%) | 20 | 8 | 40.0% | 64.4% | 23.0% | +10.2% | BET |
-| Heavy Favs (75+%) | 6 | 4 | 66.7% | 79.1% | 7.1% | -9.8% | Small N |
+| Heavy Dogs (0-25%) | 12 | 5 | 41.7% | 19.6% | 4.5% | +181.5% | BET |
+| Moderate Dogs (25-40%) | 8 | 4 | 50.0% | 32.2% | 5.5% | +81.2% | Small N |
+| Coin Flips (40-60%) | 22 | 4 | 18.2% | 48.7% | 6.9% | -56.1% | SKIP |
+| Moderate Favs (60-75%) | 12 | 5 | 41.7% | 64.6% | 17.3% | +40.7% | BET |
+| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
+| **ALL** | **62** | **25** | **40.3%** | **48.4%** | **8.3%** | **+35.3%** | |
 
 ### Edge >= 4%
 
 | Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
 |-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 15 | 5 | 33.3% | 19.3% | 6.4% | +151.9% | High variance* |
-| Moderate Dogs (25-40%) | 9 | 0 | 0.0% | 32.6% | 15.9% | -100.0% | Small N |
-| Coin Flips (40-60%) | 25 | 10 | 40.0% | 51.2% | 10.1% | -14.2% | SKIP |
-| Moderate Favs (60-75%) | 15 | 6 | 40.0% | 64.3% | 29.5% | +26.4% | BET |
-| Heavy Favs (75+%) | 3 | 1 | 33.3% | 78.1% | 10.4% | -50.8% | Small N |
+| Heavy Dogs (0-25%) | 6 | 3 | 50.0% | 19.7% | 5.5% | +221.7% | Small N |
+| Moderate Dogs (25-40%) | 4 | 1 | 25.0% | 31.9% | 7.4% | -11.3% | Small N |
+| Coin Flips (40-60%) | 17 | 3 | 17.6% | 49.0% | 8.0% | -55.8% | SKIP |
+| Moderate Favs (60-75%) | 8 | 4 | 50.0% | 64.4% | 24.2% | +90.4% | Small N |
+| Heavy Favs (75-100%) | 7 | 6 | 85.7% | 84.0% | 7.2% | +9.9% | Small N |
+| **ALL** | **42** | **17** | **40.5%** | **52.0%** | **10.5%** | **+26.9%** | |
 
 ---
 
-## *Why Heavy Dogs (0-25%) Show High ROI
+## Why Heavy Dogs (0-25%) Show High ROI
 
-The ROI looks impressive but is misleading due to extreme variance. Here's the math:
-
-- **32 games at 2%+ edge**: 6 wins, 26 losses (18.8% win rate)
-- **Win rate matches expectation** (18.6%) - the model is well-calibrated
-- **But the payouts are massive**: individual wins paid +8.80, +7.69, +7.00, +4.80, +4.50, +4.12 units
-- **Total return**: 6 big wins (+36.91 units) minus 26 losses (-26 units) = +10.91 units on 32 bets
-
-**The problem: remove just 2 of those 6 wins and ROI drops to -37%.** With an 18% hit rate, you can easily go 0-for-15 or worse on any given stretch. The positive ROI is real in expectation but requires a large bankroll and stomach for long losing streaks.
-
-### Heavy Dog Winners (2%+ Edge)
+- **19 games at 2%+ edge**: 5 wins, 14 losses (26.3% win rate)
+- **Win rate matches expectation** (17.7%) - model is well-calibrated
+- **But the payouts are massive** when they hit:
 
 | Date | Team | Model Prob | Market Prob | Edge | Odds | Payout |
 |------|------|-----------|-------------|------|------|--------|
-| 2025-12-28 | N Colorado Bears | 14.8% | 10.2% | 4.6% | +880 | +8.80 |
-| 2025-11-27 | TCU Horned Frogs | 18.0% | 12.5% | 5.5% | +700 | +7.00 |
-| 2026-01-11 | Texas Longhorns | 18.2% | 11.5% | 6.7% | +769 | +7.69 |
-| 2026-01-10 | Fordham Rams | 22.7% | 19.5% | 3.2% | +412 | +4.12 |
-| 2026-01-03 | Mississippi St Bulldogs | 22.8% | 17.2% | 5.6% | +480 | +4.80 |
-| 2025-11-24 | Seton Hall Pirates | 23.8% | 18.2% | 5.6% | +450 | +4.50 |
+| 2025-12-28 | N Colorado Bears | 14.0% | 10.2% | 3.8% | +880 | +8.80 |
+| 2025-11-27 | TCU Horned Frogs | 17.5% | 12.5% | 5.0% | +700 | +7.00 |
+| 2026-01-03 | Mississippi St Bulldogs | 22.0% | 17.2% | 4.8% | +480 | +4.80 |
+| 2025-11-24 | Seton Hall Pirates | 22.5% | 18.2% | 4.3% | +450 | +4.50 |
+| 2026-01-29 | Omaha Mavericks | 25.0% | 21.4% | 3.6% | +368 | +3.68 |
+
+**5 wins totaling +28.8 units offset 14 losses of -1 unit each = +14.8 units on 19 bets**
+
+**The problem: remove just 2 of those 5 wins and ROI drops dramatically.** With a ~18% hit rate, long losing streaks are expected.
 
 ---
 
 ## Consistently Bad: 40-60% Coin Flips
 
 At every edge threshold, the 40-60% win probability range loses money:
-- 2%+ edge: -18.8% ROI (40 games)
-- 3%+ edge: -18.3% ROI (31 games)
-- 4%+ edge: -14.2% ROI (25 games)
-
-These are games where the model and market roughly agree the game is close, but the model thinks one side is slightly better. The edge doesn't translate to profit - possibly because these games are genuinely unpredictable.
+- 2%+ edge: -48.3% ROI (26 games)
+- 3%+ edge: -56.1% ROI (22 games)
+- 4%+ edge: -55.8% ROI (17 games)
 
 ## Also Bad: 25-40% Moderate Underdogs
 
-This range is consistently the worst performer:
-- 2%+ edge: -54.0% ROI
-- 3%+ edge: -74.2% ROI
-- 4%+ edge: -100.0% ROI
-
-These teams lose too often and the payouts aren't large enough to compensate (unlike the heavy dogs where a single +700 win covers 7 losses).
+- 2%+ edge: +36.5% ROI (13 games)
+- 3%+ edge: +81.2% ROI (8 games)
+- 4%+ edge: -11.3% ROI (4 games)
 
 ---
 
 ## Recommended Guardrails
 
-**For moneyline betting with model edge:**
+**For moneyline betting with KP+BT edge:**
 
 1. **Minimum 2% edge** to consider any bet
 2. **AVOID 25-50% win probability range** - consistently loses regardless of edge size
@@ -111,7 +127,7 @@ These teams lose too often and the payouts aren't large enough to compensate (un
 
 ## Caveats
 
-- Sample sizes are small (67-126 games at 2%+ edge depending on threshold)
+- Sample sizes are small at higher edge thresholds
 - One season of data - patterns may not persist
 - Heavy dog ROI is driven by a handful of big wins
 - Results should be tracked prospectively to validate
