@@ -3953,5 +3953,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-30T23:29:58.310391+00:00"
+  },
+  "Western Illinois Leathernecks vs. Tenn-Martin Skyhawks|Western Illinois Leathernecks|spread": {
+    "game": "Western Illinois Leathernecks vs. Tenn-Martin Skyhawks",
+    "team": "Western Illinois Leathernecks",
+    "edge_type": "spread",
+    "edge_value": 0.0173678180739622,
+    "notified_at": "2026-01-30T23:44:02.509024+00:00"
   }
 }
