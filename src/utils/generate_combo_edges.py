@@ -71,11 +71,23 @@ df['Over Total Edge'] = (df['model_total'] - df['market_total']) / 100
 df['Under Total Edge'] = (df['market_total'] - df['model_total']) / 100
 
 
-# --- Clear lookup-table-specific columns ---
-for col in ['Predicted Outcome', 'Spread Cover Probability',
-            'Over Cover Probability', 'Under Cover Probability', 'average_total']:
-    if col in df.columns:
-        df[col] = np.nan
+# --- Fill derived columns (equivalent to lookup-table outputs) ---
+# Predicted Outcome: same blended formula as CBB_Output
+df['Predicted Outcome'] = ((0.6 * df['market_spread'] + 0.4 * df['model_spread']) * 2).round() / 2
+
+# Spread Cover Probability: back-calculate from edge + implied prob
+# Default spread implied prob is 52.38% (-110 odds)
+SPREAD_IMPLIED_DEFAULT = 0.5238095238095238
+df['Spread Cover Probability'] = df['Edge For Covering Spread'] + SPREAD_IMPLIED_DEFAULT
+
+# average_total: same blended formula as CBB_Output
+df['average_total'] = ((0.6 * df['market_total'] + 0.4 * df['model_total']) * 2).round() / 2
+
+# Over/Under Cover Probability: back-calculate from edge + implied prob
+over_implied = df['Over Price'].apply(american_odds_to_implied_probability) if 'Over Price' in df.columns else SPREAD_IMPLIED_DEFAULT
+under_implied = df['Under Price'].apply(american_odds_to_implied_probability) if 'Under Price' in df.columns else SPREAD_IMPLIED_DEFAULT
+df['Over Cover Probability'] = df['Over Total Edge'] + over_implied
+df['Under Cover Probability'] = df['Under Total Edge'] + under_implied
 
 
 # --- Drop consensus flag and std dev columns ---
