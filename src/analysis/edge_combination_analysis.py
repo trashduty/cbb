@@ -532,7 +532,7 @@ def main():
     report.append(format_results_table(under_results, "Under Results"))
 
     # Write report
-    output_path = base_path / "temp_edge_analysis.md"
+    output_path = base_path / "analysis" / "reports" / "edge_analysis_regressed.md"
     with open(output_path, 'w') as f:
         f.write('\n'.join(report))
 

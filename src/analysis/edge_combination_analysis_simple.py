@@ -405,7 +405,7 @@ def main():
     report.append(format_results_table(over_results, "Over Results"))
     report.append(format_results_table(under_results, "Under Results"))
 
-    output_path = base_path / "temp_edge_analysis_simple.md"
+    output_path = base_path / "analysis" / "reports" / "edge_analysis_simple.md"
     with open(output_path, 'w') as f:
         f.write('\n'.join(report))
 
