@@ -3869,5 +3869,12 @@
     "edge_type": "spread",
     "edge_value": 0.0139702740544709,
     "notified_at": "2026-01-30T14:17:46.140865+00:00"
+  },
+  "Missouri Tigers vs. Mississippi St Bulldogs|Mississippi St Bulldogs|spread": {
+    "game": "Missouri Tigers vs. Mississippi St Bulldogs",
+    "team": "Mississippi St Bulldogs",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-30T20:13:18.457918+00:00"
   }
 }
