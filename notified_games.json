@@ -3855,5 +3855,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-01-30T03:58:10.630863+00:00"
+  },
+  "Canisius Golden Griffins vs. Marist Red Foxes|under": {
+    "game": "Canisius Golden Griffins vs. Marist Red Foxes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-01-30T05:34:38.909197+00:00"
   }
 }
