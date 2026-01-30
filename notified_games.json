@@ -3841,5 +3841,12 @@
     "edge_type": "spread",
     "edge_value": 0.0139702740544709,
     "notified_at": "2026-01-30T00:34:51.604983+00:00"
+  },
+  "Grand Canyon Antelopes vs. Boise State Broncos|under": {
+    "game": "Grand Canyon Antelopes vs. Boise State Broncos",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-01-30T01:59:00.099090+00:00"
   }
 }
