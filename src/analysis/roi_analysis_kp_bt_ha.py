@@ -25,10 +25,14 @@ def calculate_median_and_consensus(df):
     """
     Calculate median prediction and consensus flag for each game.
     
-    Returns dataframe with added columns:
-    - median_total: median of KP, BT, HA projections
-    - bet_direction: 'Over' or 'Under' (or None if no bet)
-    - consensus: 'Yes' if all 3 models agree on direction, 'No' otherwise
+    Args:
+        df: DataFrame with model predictions and opening totals
+    
+    Returns:
+        DataFrame with added columns:
+        - median_total: median of KP, BT, HA projections
+        - bet_direction: 'Over' or 'Under' (None if median == opening_total, no bet)
+        - consensus: 'Yes' if all 3 models agree on direction, 'No' otherwise
     """
     # Model columns
     kp_col = 'projected_total_kenpom'
@@ -79,8 +83,8 @@ def calculate_roi_metrics(bets_df, edge_thresholds):
     results = []
     
     # -110 odds: risk 1.1 to win 1.0
-    WIN_PAYOUT = 0.909  # (1.0 / 1.1)
-    LOSS_AMOUNT = -1.1
+    WIN_PAYOUT = 1.0  # Net profit on a winning bet
+    LOSS_AMOUNT = -1.1  # Net loss on a losing bet
     
     for bet_type in ['Over', 'Under']:
         for consensus in ['Yes', 'No']:
@@ -95,8 +99,9 @@ def calculate_roi_metrics(bets_df, edge_thresholds):
                     continue
                 
                 # Filter by edge threshold
+                # Note: edges should be positive values representing favorable bets
                 edge_col = 'opening_over_edge' if bet_type == 'Over' else 'opening_under_edge'
-                subset = subset[subset[edge_col].abs() >= edge_threshold]
+                subset = subset[subset[edge_col] >= edge_threshold]
                 
                 if len(subset) == 0:
                     continue
@@ -133,9 +138,12 @@ def calculate_roi_metrics(bets_df, edge_thresholds):
 
 
 def main():
+    # Determine base path relative to script location
+    base_path = Path(__file__).parent.parent.parent
+    
     # Load data
     print("Loading graded_results.csv...")
-    df = pd.read_csv('graded_results.csv')
+    df = pd.read_csv(base_path / 'graded_results.csv')
     
     # Calculate actual total
     df['actual_total'] = df['home_score'] + df['away_score']
@@ -196,14 +204,13 @@ def main():
     print("=" * 100)
     print(results_df.to_string(index=False))
     
-    # Save CSV
-    output_dir = Path('.')
-    csv_file = output_dir / 'roi_analysis_kp_bt_ha.csv'
+    # Save CSV to root directory
+    csv_file = base_path / 'roi_analysis_kp_bt_ha.csv'
     results_df.to_csv(csv_file, index=False)
     print(f"\n✓ Results saved to: {csv_file}")
     
-    # Generate markdown report
-    md_file = output_dir / 'roi_analysis_report.md'
+    # Generate markdown report in root directory
+    md_file = base_path / 'roi_analysis_report.md'
     with open(md_file, 'w') as f:
         f.write("# ROI Analysis: KP+BT+HA Totals Betting Model Ensemble\n\n")
         f.write("## Executive Summary\n\n")
@@ -222,7 +229,7 @@ def main():
         f.write("### Betting Assumptions\n\n")
         f.write("- **Odds**: -110 (American odds)\n")
         f.write("- **Breakeven win rate**: 52.38%\n")
-        f.write("- **Win payout**: +0.909 units (risk 1.1 to win 1.0)\n")
+        f.write("- **Win payout**: +1.0 units (risk 1.1 to win 1.0)\n")
         f.write("- **Loss**: -1.1 units\n\n")
         
         f.write("## Complete Results\n\n")
