@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 30, 2026 at 05:04 PM ET
+**Last Updated:** January 30, 2026 at 05:24 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-01-30
 
-**Total Games Graded:** 1701 games (3402 team-rows)
+**Total Games Graded:** 1702 games (3404 team-rows)
 
 ---
 
@@ -37,10 +37,10 @@ The opening edge is calculated when a game first appears in our system, comparin
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
 | 0-1.9% | 135-179 | 43.0% | -56.28 |
-| 2-3.9% | 28-34 | 45.2% | -8.55 |
+| 2-3.9% | 28-35 | 44.4% | -9.55 |
 | 4-5.9% | 8-13 | 38.1% | -5.73 |
 | 6%+ | 2-5 | 28.6% | -3.18 |
-| **Total** | **173-231** | **42.8%** | **-73.74** |
+| **Total** | **173-232** | **42.7%** | **-74.74** |
 
 ### Moneyline Bets - Consensus Only
 
@@ -111,9 +111,9 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2105-863 | 70.9% | +1050.45 |
-| Bart Torvik | 1388-508 | 73.2% | +753.69 |
-| Evan Miya | 2406-994 | 70.8% | +1193.05 |
+| KenPom | 2107-863 | 70.9% | +1052.26 |
+| Bart Torvik | 1390-508 | 73.2% | +755.51 |
+| Evan Miya | 2408-994 | 70.8% | +1194.87 |
 
 ### Individual Model Performance - Over Bets
 
