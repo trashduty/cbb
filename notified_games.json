@@ -3876,5 +3876,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-30T20:13:18.457918+00:00"
+  },
+  "Seton Hall Pirates vs. Marquette Golden Eagles|under": {
+    "game": "Seton Hall Pirates vs. Marquette Golden Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-30T22:26:36.878642+00:00"
   }
 }
