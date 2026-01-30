@@ -3848,5 +3848,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-01-30T01:59:00.099090+00:00"
+  },
+  "UL Monroe Warhawks vs. Georgia Southern Eagles|UL Monroe Warhawks|spread": {
+    "game": "UL Monroe Warhawks vs. Georgia Southern Eagles",
+    "team": "UL Monroe Warhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-30T03:58:10.630863+00:00"
   }
 }
