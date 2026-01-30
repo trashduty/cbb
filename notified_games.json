@@ -3925,5 +3925,26 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-30T22:45:02.313361+00:00"
+  },
+  "Eastern Illinois Panthers vs. SE Missouri St Redhawks|Eastern Illinois Panthers|spread": {
+    "game": "Eastern Illinois Panthers vs. SE Missouri St Redhawks",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-30T22:58:29.571916+00:00"
+  },
+  "Portland St Vikings vs. Montana St Bobcats|under": {
+    "game": "Portland St Vikings vs. Montana St Bobcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-30T22:58:29.955571+00:00"
+  },
+  "Tarleton State Texans vs. Utah Tech Trailblazers|Tarleton State Texans|moneyline": {
+    "game": "Tarleton State Texans vs. Utah Tech Trailblazers",
+    "team": "Tarleton State Texans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0555333971629419,
+    "notified_at": "2026-01-30T22:58:30.258129+00:00"
   }
 }
