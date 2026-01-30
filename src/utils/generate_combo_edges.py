@@ -5,15 +5,15 @@
 # ]
 # ///
 """
-Generate Combo_Output.csv with simple (non-regressed) edge calculations.
+Generate Combo_Output.csv using specific model combos with lookup-table probabilities.
 
-Uses specific model combos instead of lookup tables:
-- Spread: KP+BT mean, edge = (market_spread - combo_spread) / 100
-- Moneyline: BT+EM mean (raw, no devigged blend), edge = combo_prob - ml_implied_prob
-- Over: KP+BT+HA mean, edge = (combo_total - market_total) / 100
-- Under: KP+BT+HA mean, edge = (market_total - combo_total) / 100
+Uses specific model combos as inputs to the same lookup tables as CBB_Output:
+- Spread: KP+BT mean → lookup table → cover_prob → edge
+- Moneyline: BT+EM mean (raw, no devigged blend) → edge
+- Over/Under: KP+BT+HA mean → lookup table → cover_prob → edge
 
 Reads CBB_Output.csv (already filtered) and writes Combo_Output.csv.
+All columns from CBB_Output.csv are preserved and filled.
 """
 
 import pandas as pd
@@ -26,6 +26,10 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(os.path.dirname(script_dir))
 input_file = os.path.join(project_root, 'CBB_Output.csv')
 output_file = os.path.join(project_root, 'Combo_Output.csv')
+spreads_lookup_path = os.path.join(project_root, 'spreads_lookup_combined.csv')
+totals_lookup_path = os.path.join(project_root, 'totals_lookup_combined.csv')
+
+SPREAD_IMPLIED_DEFAULT = 0.5238095238095238  # -110 odds
 
 print(f"Reading from: {input_file}")
 
@@ -51,43 +55,134 @@ def american_odds_to_implied_probability(odds):
         return np.nan
 
 
-# --- Spread: mean(KP, BT) ---
+def calculate_spread_implied_prob_safe(spread_price):
+    """Safely calculate spread implied probability with defaults."""
+    if pd.isna(spread_price) or spread_price is None:
+        return SPREAD_IMPLIED_DEFAULT
+    try:
+        spread_price = float(spread_price)
+    except (ValueError, TypeError):
+        return SPREAD_IMPLIED_DEFAULT
+    if abs(spread_price) > 200:
+        return SPREAD_IMPLIED_DEFAULT
+    if 0 < abs(spread_price) < 100:
+        return SPREAD_IMPLIED_DEFAULT
+    prob = american_odds_to_implied_probability(spread_price)
+    return prob if prob is not None else SPREAD_IMPLIED_DEFAULT
+
+
+# ============================================================
+# 1. SPREAD: model_spread = mean(KP, BT), then lookup table
+# ============================================================
 spread_cols = ['spread_kenpom', 'spread_barttorvik']
 df['model_spread'] = df[spread_cols].mean(axis=1, skipna=False)
-df['Edge For Covering Spread'] = (df['Consensus Spread'] - df['model_spread']) / 100
+
+# Predicted Outcome: 60% market + 40% model, rounded to 0.5
+df['Predicted Outcome'] = ((0.6 * df['market_spread'] + 0.4 * df['model_spread']) * 2).round() / 2
+
+# Spread lookup
+try:
+    spreads_lookup_df = pd.read_csv(spreads_lookup_path)
+    print(f"Loaded spreads lookup table")
+
+    df['market_spread_rounded'] = (df['market_spread'] * 2).round() / 2
+
+    # Calculate spread implied prob from Spread Price if available
+    if 'Spread Price' in df.columns:
+        df['spread_implied_prob'] = df['Spread Price'].apply(calculate_spread_implied_prob_safe)
+    else:
+        df['spread_implied_prob'] = SPREAD_IMPLIED_DEFAULT
+
+    # Merge with lookup
+    df = df.merge(
+        spreads_lookup_df,
+        left_on=['total_category', 'market_spread_rounded', 'Predicted Outcome'],
+        right_on=['total_category', 'market_spread', 'model_spread'],
+        how='left',
+        suffixes=('', '_lookup')
+    )
+
+    df['Spread Cover Probability'] = df['cover_prob']
+    df['Edge For Covering Spread'] = df['Spread Cover Probability'] - df['spread_implied_prob']
+
+    # Clean up lookup columns
+    df.drop(columns=['market_spread_rounded', 'market_spread_lookup', 'model_spread_lookup',
+                     'cover_prob', 'spread_implied_prob'],
+            inplace=True, errors='ignore')
+
+    print(f"  Spread cover prob filled: {df['Spread Cover Probability'].notna().sum()}/{len(df)}")
+except FileNotFoundError:
+    print("WARNING: spreads_lookup_combined.csv not found")
+    df['Spread Cover Probability'] = np.nan
+    df['Edge For Covering Spread'] = np.nan
 
 
-# --- Moneyline: mean(BT, EM), raw (no devigged blend) ---
+
+# ============================================================
+# 2. MONEYLINE: mean(BT, EM), raw (no devigged blend)
+# ============================================================
 ml_cols = ['win_prob_barttorvik', 'win_prob_evanmiya']
 df['Moneyline Win Probability'] = df[ml_cols].mean(axis=1, skipna=False)
 ml_implied = df['Current Moneyline'].apply(american_odds_to_implied_probability)
 df['Moneyline Edge'] = df['Moneyline Win Probability'] - ml_implied
 
 
-# --- Totals: mean(KP, BT, HA) ---
+
+# ============================================================
+# 3. TOTALS: model_total = mean(KP, BT, HA), then lookup table
+# ============================================================
 total_cols = ['projected_total_kenpom', 'projected_total_barttorvik', 'projected_total_hasla']
 df['model_total'] = df[total_cols].mean(axis=1, skipna=False)
-df['Over Total Edge'] = (df['model_total'] - df['market_total']) / 100
-df['Under Total Edge'] = (df['market_total'] - df['model_total']) / 100
 
+# average_total: 60% market + 40% model, rounded to 0.5
+df['average_total'] = ((0.6 * df['market_total'].fillna(0) +
+                         0.4 * df['model_total'].fillna(df['market_total'])) * 2).round() / 2
 
-# --- Fill derived columns (equivalent to lookup-table outputs) ---
-# Predicted Outcome: same blended formula as CBB_Output
-df['Predicted Outcome'] = ((0.6 * df['market_spread'] + 0.4 * df['model_spread']) * 2).round() / 2
+# Totals lookup
+try:
+    totals_lookup_df = pd.read_csv(totals_lookup_path)
+    print(f"Loaded totals lookup table")
 
-# Spread Cover Probability: back-calculate from edge + implied prob
-# Default spread implied prob is 52.38% (-110 odds)
-SPREAD_IMPLIED_DEFAULT = 0.5238095238095238
-df['Spread Cover Probability'] = df['Edge For Covering Spread'] + SPREAD_IMPLIED_DEFAULT
+    df = df.drop_duplicates(subset=['Game', 'Team'], keep='first')
+    df['market_total_rounded'] = (df['market_total'] * 2).round() / 2
 
-# average_total: same blended formula as CBB_Output
-df['average_total'] = ((0.6 * df['market_total'] + 0.4 * df['model_total']) * 2).round() / 2
+    df = df.merge(
+        totals_lookup_df,
+        left_on=['spread_category', 'market_total_rounded', 'average_total'],
+        right_on=['spread_category', 'market_total', 'model_total'],
+        how='left',
+        suffixes=('', '_lookup')
+    )
 
-# Over/Under Cover Probability: back-calculate from edge + implied prob
-over_implied = df['Over Price'].apply(american_odds_to_implied_probability) if 'Over Price' in df.columns else SPREAD_IMPLIED_DEFAULT
-under_implied = df['Under Price'].apply(american_odds_to_implied_probability) if 'Under Price' in df.columns else SPREAD_IMPLIED_DEFAULT
-df['Over Cover Probability'] = df['Over Total Edge'] + over_implied
-df['Under Cover Probability'] = df['Under Total Edge'] + under_implied
+    df['Over Cover Probability'] = df['over_prob']
+    df['Under Cover Probability'] = df['under_prob']
+
+    # Over/Under edges: cover_prob - implied_prob
+    # Use Over/Under Price if available, otherwise default to -110 (52.38%)
+    if 'Over Price' in df.columns:
+        df['over_implied_prob'] = df['Over Price'].apply(american_odds_to_implied_probability)
+    else:
+        df['over_implied_prob'] = SPREAD_IMPLIED_DEFAULT
+    if 'Under Price' in df.columns:
+        df['under_implied_prob'] = df['Under Price'].apply(american_odds_to_implied_probability)
+    else:
+        df['under_implied_prob'] = SPREAD_IMPLIED_DEFAULT
+    df['Over Total Edge'] = df['Over Cover Probability'] - df['over_implied_prob']
+    df['Under Total Edge'] = df['Under Cover Probability'] - df['under_implied_prob']
+
+    # Clean up lookup columns
+    df.drop(columns=['market_total_rounded', 'market_total_lookup', 'model_total_lookup',
+                     'over_prob', 'under_prob', 'over_implied_prob', 'under_implied_prob'],
+            inplace=True, errors='ignore')
+
+    print(f"  Over cover prob filled: {df['Over Cover Probability'].notna().sum()}/{len(df)}")
+except FileNotFoundError:
+    print("WARNING: totals_lookup_combined.csv not found")
+    df['Over Cover Probability'] = np.nan
+    df['Under Cover Probability'] = np.nan
+    df['Over Total Edge'] = np.nan
+    df['Under Total Edge'] = np.nan
+
 
 
 # --- Drop consensus flag and std dev columns ---
@@ -99,7 +194,9 @@ for col in drop_cols:
         df.drop(columns=[col], inplace=True)
 
 
-# --- Preserve opening edges from previous Combo_Output.csv ---
+# ============================================================
+# 5. PRESERVE OPENING EDGES from previous Combo_Output.csv
+# ============================================================
 def preserve_opening_edges(new_df):
     """
     Preserve opening odds/edges from previous Combo_Output.csv.
@@ -107,7 +204,6 @@ def preserve_opening_edges(new_df):
     """
     if not os.path.exists(output_file):
         print("No existing Combo_Output.csv found, all current edges become opening edges")
-        # Set opening edges to current edges for first run
         new_df['Opening Spread Edge'] = new_df['Edge For Covering Spread']
         new_df['Opening Moneyline Edge'] = new_df['Moneyline Edge']
         new_df['Opening Over Edge'] = new_df['Over Total Edge']
@@ -118,7 +214,6 @@ def preserve_opening_edges(new_df):
         existing_df = pd.read_csv(output_file)
         print(f"Loaded {len(existing_df)} rows from existing Combo_Output.csv")
 
-        # Build lookup from existing data
         existing_lookup = {}
         for _, row in existing_df.iterrows():
             key = (row.get('Game'), row.get('Team'))
@@ -139,7 +234,6 @@ def preserve_opening_edges(new_df):
             key = (row.get('Game'), row.get('Team'))
             if key in existing_lookup:
                 existing_vals = existing_lookup[key]
-                # Preserve existing opening values
                 for col in ['Opening Spread', 'Opening Moneyline', 'Opening Total',
                             'Opening Odds Time', 'Opening Spread Edge',
                             'Opening Moneyline Edge', 'Opening Over Edge',
@@ -148,7 +242,6 @@ def preserve_opening_edges(new_df):
                         new_df.at[idx, col] = existing_vals[col]
                 preserved_count += 1
             else:
-                # New game: set opening edges to current combo edges
                 new_df.at[idx, 'Opening Spread Edge'] = row.get('Edge For Covering Spread')
                 new_df.at[idx, 'Opening Moneyline Edge'] = row.get('Moneyline Edge')
                 new_df.at[idx, 'Opening Over Edge'] = row.get('Over Total Edge')
@@ -159,7 +252,6 @@ def preserve_opening_edges(new_df):
         print(f"Set opening edges for {new_count} new games")
     except Exception as e:
         print(f"Warning: Could not preserve opening edges: {e}")
-        # Fall back to current edges as opening
         new_df['Opening Spread Edge'] = new_df['Edge For Covering Spread']
         new_df['Opening Moneyline Edge'] = new_df['Moneyline Edge']
         new_df['Opening Over Edge'] = new_df['Over Total Edge']
@@ -170,7 +262,9 @@ def preserve_opening_edges(new_df):
 
 df = preserve_opening_edges(df)
 
-# --- Output with same column order as CBB_Output.csv ---
+# ============================================================
+# 6. OUTPUT — same column order as CBB_Output.csv
+# ============================================================
 column_order = [
     'Game', 'Game Time', 'Opening Odds Time', 'Team',
     # Spread framework columns
