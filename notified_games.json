@@ -3883,5 +3883,47 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-01-30T22:26:36.878642+00:00"
+  },
+  "Buffalo Bulls vs. Ohio Bobcats|Buffalo Bulls|spread": {
+    "game": "Buffalo Bulls vs. Ohio Bobcats",
+    "team": "Buffalo Bulls",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-01-30T22:45:00.338264+00:00"
+  },
+  "Mercer Bears vs. VMI Keydets|Mercer Bears|spread": {
+    "game": "Mercer Bears vs. VMI Keydets",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0358041207605864,
+    "notified_at": "2026-01-30T22:45:00.564893+00:00"
+  },
+  "Wisconsin Badgers vs. Ohio State Buckeyes|Ohio State Buckeyes|spread": {
+    "game": "Wisconsin Badgers vs. Ohio State Buckeyes",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-30T22:45:01.112261+00:00"
+  },
+  "Miami Hurricanes vs. California Golden Bears|California Golden Bears|spread": {
+    "game": "Miami Hurricanes vs. California Golden Bears",
+    "team": "California Golden Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0270920681615924,
+    "notified_at": "2026-01-30T22:45:01.753923+00:00"
+  },
+  "William & Mary Tribe vs. Campbell Fighting Camels|William & Mary Tribe|spread": {
+    "game": "William & Mary Tribe vs. Campbell Fighting Camels",
+    "team": "William & Mary Tribe",
+    "edge_type": "spread",
+    "edge_value": 0.0131155217815734,
+    "notified_at": "2026-01-30T22:45:02.094280+00:00"
+  },
+  "Toledo Rockets vs. Ball State Cardinals|Toledo Rockets|spread": {
+    "game": "Toledo Rockets vs. Ball State Cardinals",
+    "team": "Toledo Rockets",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-30T22:45:02.313361+00:00"
   }
 }
