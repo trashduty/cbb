@@ -4086,5 +4086,33 @@
     "edge_type": "spread",
     "edge_value": 0.0155510951023906,
     "notified_at": "2026-01-31T03:57:28.823688+00:00"
+  },
+  "Wagner Seahawks vs. Fairleigh Dickinson Knights|Wagner Seahawks|moneyline": {
+    "game": "Wagner Seahawks vs. Fairleigh Dickinson Knights",
+    "team": "Wagner Seahawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0419459365236073,
+    "notified_at": "2026-01-31T04:37:37.591941+00:00"
+  },
+  "Bucknell Bison vs. Boston Univ. Terriers|Bucknell Bison|spread": {
+    "game": "Bucknell Bison vs. Boston Univ. Terriers",
+    "team": "Bucknell Bison",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-01-31T04:37:37.833895+00:00"
+  },
+  "Lamar Cardinals vs. McNeese Cowboys|Lamar Cardinals|spread": {
+    "game": "Lamar Cardinals vs. McNeese Cowboys",
+    "team": "Lamar Cardinals",
+    "edge_type": "spread",
+    "edge_value": 0.0266252922230992,
+    "notified_at": "2026-01-31T04:37:38.063925+00:00"
+  },
+  "Sacramento St Hornets vs. Montana Grizzlies|Montana Grizzlies|spread": {
+    "game": "Sacramento St Hornets vs. Montana Grizzlies",
+    "team": "Montana Grizzlies",
+    "edge_type": "spread",
+    "edge_value": 0.0116588701655339,
+    "notified_at": "2026-01-31T04:37:38.336842+00:00"
   }
 }
