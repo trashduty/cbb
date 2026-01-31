@@ -4135,5 +4135,12 @@
     "edge_type": "spread",
     "edge_value": 0.0132895015587953,
     "notified_at": "2026-01-31T07:00:41.784942+00:00"
+  },
+  "Stetson Hatters vs. North Alabama Lions|Stetson Hatters|spread": {
+    "game": "Stetson Hatters vs. North Alabama Lions",
+    "team": "Stetson Hatters",
+    "edge_type": "spread",
+    "edge_value": 0.0144424253735896,
+    "notified_at": "2026-01-31T07:26:03.882659+00:00"
   }
 }
