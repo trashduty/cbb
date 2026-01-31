@@ -4016,5 +4016,40 @@
     "edge_type": "spread",
     "edge_value": 0.0160342270972184,
     "notified_at": "2026-01-31T01:58:52.104770+00:00"
+  },
+  "Le Moyne Dolphins vs. Stonehill Skyhawks|Le Moyne Dolphins|spread": {
+    "game": "Le Moyne Dolphins vs. Stonehill Skyhawks",
+    "team": "Le Moyne Dolphins",
+    "edge_type": "spread",
+    "edge_value": 0.0225602721532279,
+    "notified_at": "2026-01-31T03:02:06.029627+00:00"
+  },
+  "North Florida Ospreys vs. Lipscomb Bisons|North Florida Ospreys|spread": {
+    "game": "North Florida Ospreys vs. Lipscomb Bisons",
+    "team": "North Florida Ospreys",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-31T03:02:06.325394+00:00"
+  },
+  "Northeastern Huskies vs. Charleston Cougars|under": {
+    "game": "Northeastern Huskies vs. Charleston Cougars",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-01-31T03:02:06.634373+00:00"
+  },
+  "Vanderbilt Commodores vs. Ole Miss Rebels|Vanderbilt Commodores|spread": {
+    "game": "Vanderbilt Commodores vs. Ole Miss Rebels",
+    "team": "Vanderbilt Commodores",
+    "edge_type": "spread",
+    "edge_value": 0.0174794564149809,
+    "notified_at": "2026-01-31T03:02:06.865102+00:00"
+  },
+  "Loyola Marymount Lions vs. Santa Clara Broncos|under": {
+    "game": "Loyola Marymount Lions vs. Santa Clara Broncos",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0150273245156959,
+    "notified_at": "2026-01-31T03:02:07.231433+00:00"
   }
 }
