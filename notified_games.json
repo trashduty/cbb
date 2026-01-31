@@ -4142,5 +4142,12 @@
     "edge_type": "spread",
     "edge_value": 0.0144424253735896,
     "notified_at": "2026-01-31T07:26:03.882659+00:00"
+  },
+  "Kansas Jayhawks vs. BYU Cougars|under": {
+    "game": "Kansas Jayhawks vs. BYU Cougars",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-01-31T07:53:59.722052+00:00"
   }
 }
