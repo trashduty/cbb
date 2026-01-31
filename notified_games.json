@@ -3981,5 +3981,33 @@
     "edge_type": "spread",
     "edge_value": 0.047999242711806,
     "notified_at": "2026-01-31T00:33:40.457346+00:00"
+  },
+  "Western Illinois Leathernecks vs. Tenn-Martin Skyhawks|under": {
+    "game": "Western Illinois Leathernecks vs. Tenn-Martin Skyhawks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-01-31T01:12:14.094429+00:00"
+  },
+  "Central Michigan Chippewas vs. Bowling Green Falcons|Central Michigan Chippewas|spread": {
+    "game": "Central Michigan Chippewas vs. Bowling Green Falcons",
+    "team": "Central Michigan Chippewas",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-01-31T01:12:14.504541+00:00"
+  },
+  "Southern Indiana Screaming Eagles vs. SIU-Edwardsville Cougars|under": {
+    "game": "Southern Indiana Screaming Eagles vs. SIU-Edwardsville Cougars",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-01-31T01:12:14.981614+00:00"
+  },
+  "UTEP Miners vs. Delaware Blue Hens|Delaware Blue Hens|spread": {
+    "game": "UTEP Miners vs. Delaware Blue Hens",
+    "team": "Delaware Blue Hens",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-01-31T01:12:15.289643+00:00"
   }
 }
