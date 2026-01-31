@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** January 31, 2026 at 06:39 PM ET
+**Last Updated:** January 31, 2026 at 06:52 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-01-31
 
-**Total Games Graded:** 1808 games (3616 team-rows)
+**Total Games Graded:** 1813 games (3626 team-rows)
 
 ---
 
@@ -16,41 +16,41 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 198-185 | 51.7% | -5.02 |
+| 0-1.9% | 199-185 | 51.8% | -4.11 |
 | 2-3.9% | 55-69 | 44.4% | -19.00 |
 | 4-5.9% | 23-21 | 52.3% | -0.09 |
 | 6%+ | 5-9 | 35.7% | -4.46 |
-| **Total** | **281-284** | **49.7%** | **-28.57** |
+| **Total** | **282-284** | **49.8%** | **-27.66** |
 
 ### Spread Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 50-60 | 45.5% | -14.55 |
+| 0-1.9% | 51-60 | 45.9% | -13.64 |
 | 2-3.9% | 23-24 | 48.9% | -3.09 |
 | 4-5.9% | 7-9 | 43.8% | -2.64 |
 | 6%+ | 2-7 | 22.2% | -5.18 |
-| **Total** | **82-100** | **45.1%** | **-25.46** |
+| **Total** | **83-100** | **45.4%** | **-24.55** |
 
 ### Moneyline Bets - All
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 141-189 | 42.7% | -60.83 |
+| 0-1.9% | 142-189 | 42.9% | -59.92 |
 | 2-3.9% | 31-38 | 44.9% | -9.82 |
 | 4-5.9% | 8-13 | 38.1% | -5.73 |
 | 6%+ | 2-6 | 25.0% | -4.18 |
-| **Total** | **182-246** | **42.5%** | **-80.56** |
+| **Total** | **183-246** | **42.7%** | **-79.65** |
 
 ### Moneyline Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 59-78 | 43.1% | -24.37 |
+| 0-1.9% | 60-78 | 43.5% | -23.46 |
 | 2-3.9% | 9-12 | 42.9% | -3.82 |
 | 4-5.9% | 2-4 | 33.3% | -2.18 |
 | 6%+ | 0-1 | 0.0% | -1.00 |
-| **Total** | **70-95** | **42.4%** | **-31.37** |
+| **Total** | **71-95** | **42.8%** | **-30.46** |
 
 ### Over Bets - All
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1583-1541 | 50.7% | -102.05 |
-| Bart Torvik | 1021-987 | 50.8% | -58.91 |
-| Evan Miya | 1731-1797 | 49.1% | -223.52 |
-| Haslametrics | 1693-1751 | 49.2% | -212.06 |
+| KenPom | 1585-1543 | 50.7% | -102.23 |
+| Bart Torvik | 1023-989 | 50.8% | -59.09 |
+| Evan Miya | 1735-1797 | 49.1% | -219.88 |
+| Haslametrics | 1693-1755 | 49.1% | -216.06 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2245-931 | 70.7% | +1109.71 |
-| Bart Torvik | 1496-566 | 72.6% | +793.86 |
-| Evan Miya | 2540-1074 | 70.3% | +1234.86 |
+| KenPom | 2253-933 | 70.7% | +1114.98 |
+| Bart Torvik | 1504-568 | 72.6% | +799.14 |
+| Evan Miya | 2548-1076 | 70.3% | +1240.13 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1522-1562 | 49.4% | -178.50 |
-| Bart Torvik | 960-1008 | 48.8% | -135.36 |
-| Evan Miya | 1720-1764 | 49.4% | -200.52 |
-| Haslametrics | 1684-1722 | 49.4% | -191.24 |
+| KenPom | 1526-1562 | 49.4% | -174.87 |
+| Bart Torvik | 964-1008 | 48.9% | -131.72 |
+| Evan Miya | 1724-1764 | 49.4% | -196.88 |
+| Haslametrics | 1688-1722 | 49.5% | -187.61 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1562-1522 | 50.6% | -102.14 |
-| Bart Torvik | 1008-960 | 51.2% | -43.73 |
-| Evan Miya | 1764-1720 | 50.6% | -116.52 |
-| Haslametrics | 1722-1684 | 50.6% | -118.70 |
+| KenPom | 1562-1526 | 50.6% | -106.14 |
+| Bart Torvik | 1008-964 | 51.1% | -47.73 |
+| Evan Miya | 1764-1724 | 50.6% | -120.52 |
+| Haslametrics | 1722-1688 | 50.5% | -122.70 |
 
 ---
 
