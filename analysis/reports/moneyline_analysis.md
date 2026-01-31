@@ -7,11 +7,11 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 
 ## TL;DR
 
-| Edge Threshold | All Bets (ROI) | Filtered 10-40% or 50-90% (ROI) |
+| Edge Threshold | All Bets (ROI) | Filtered 10-40% or 60-90% (ROI) |
 |----------------|----------------|----------------------------------|
-| 2%+ | +18.5% (83 games) | +41.2% (66 games) |
-| 3%+ | +35.3% (62 games) | +60.6% (49 games) |
-| 4%+ | +26.9% (42 games) | +50.2% (32 games) |
+| 2%+ | +17.8% (85 games) | +57.3% (54 games) |
+| 3%+ | +33.2% (63 games) | +85.6% (40 games) |
+| 4%+ | +23.9% (43 games) | +83.1% (25 games) |
 
 ---
 
@@ -21,23 +21,25 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 
 | Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
 |-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 49 | 8 | 16.3% | 14.2% | 2.1% | +3.7% | Marginal |
+| Heavy Dogs (0-25%) | 51 | 8 | 15.7% | 14.3% | 2.0% | -0.4% | SKIP |
 | Moderate Dogs (25-40%) | 17 | 5 | 29.4% | 32.3% | 3.5% | +4.4% | Marginal |
-| Coin Flips (40-60%) | 37 | 12 | 32.4% | 50.0% | 4.5% | -33.0% | SKIP |
+| Slight Dogs (40-50%) | 18 | 3 | 16.7% | 44.9% | 4.3% | -58.4% | SKIP |
+| Slight Favs (50-60%) | 21 | 10 | 47.6% | 55.0% | 4.6% | -9.4% | SKIP |
 | Moderate Favs (60-75%) | 23 | 14 | 60.9% | 66.5% | 9.8% | +32.0% | BET |
 | Heavy Favs (75-100%) | 12 | 11 | 91.7% | 81.7% | 4.7% | +18.0% | BET |
-| **ALL** | **138** | **50** | **36.2%** | **40.6%** | **4.4%** | **-0.1%** | |
+| **ALL** | **142** | **51** | **35.9%** | **40.5%** | **4.4%** | **-1.7%** | |
 
 ### Edge >= 1%
 
 | Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
 |-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 34 | 6 | 17.6% | 16.1% | 2.8% | +14.4% | BET |
+| Heavy Dogs (0-25%) | 35 | 6 | 17.1% | 16.2% | 2.7% | +11.1% | BET |
 | Moderate Dogs (25-40%) | 14 | 5 | 35.7% | 32.9% | 4.2% | +26.8% | BET |
-| Coin Flips (40-60%) | 26 | 6 | 23.1% | 49.4% | 6.2% | -48.3% | SKIP |
+| Slight Dogs (40-50%) | 14 | 2 | 14.3% | 45.1% | 5.5% | -62.7% | SKIP |
+| Slight Favs (50-60%) | 14 | 5 | 35.7% | 54.8% | 6.7% | -28.9% | SKIP |
 | Moderate Favs (60-75%) | 20 | 12 | 60.0% | 66.4% | 11.3% | +37.2% | BET |
 | Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **102** | **36** | **35.3%** | **42.0%** | **5.8%** | **+4.5%** | |
+| **ALL** | **105** | **37** | **35.2%** | **42.1%** | **5.7%** | **+3.2%** | |
 
 ### Edge >= 2%
 
@@ -45,10 +47,11 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 |-------|-------|------|------|----------------|----------|-----|---------|
 | Heavy Dogs (0-25%) | 19 | 5 | 26.3% | 17.7% | 3.7% | +77.8% | BET |
 | Moderate Dogs (25-40%) | 13 | 5 | 38.5% | 32.5% | 4.4% | +36.5% | BET |
-| Coin Flips (40-60%) | 26 | 6 | 23.1% | 49.4% | 6.2% | -48.3% | SKIP |
+| Slight Dogs (40-50%) | 14 | 2 | 14.3% | 45.1% | 5.5% | -62.7% | SKIP |
+| Slight Favs (50-60%) | 14 | 5 | 35.7% | 54.8% | 6.7% | -28.9% | SKIP |
 | Moderate Favs (60-75%) | 17 | 10 | 58.8% | 66.1% | 13.0% | +43.2% | BET |
 | Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **83** | **33** | **39.8%** | **46.2%** | **6.8%** | **+18.5%** | |
+| **ALL** | **85** | **34** | **40.0%** | **46.4%** | **6.7%** | **+17.8%** | |
 
 ### Edge >= 3%
 
@@ -56,10 +59,11 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 |-------|-------|------|------|----------------|----------|-----|---------|
 | Heavy Dogs (0-25%) | 12 | 5 | 41.7% | 19.6% | 4.5% | +181.5% | BET |
 | Moderate Dogs (25-40%) | 8 | 4 | 50.0% | 32.2% | 5.5% | +81.2% | Small N |
-| Coin Flips (40-60%) | 22 | 4 | 18.2% | 48.7% | 6.9% | -56.1% | SKIP |
+| Slight Dogs (40-50%) | 13 | 2 | 15.4% | 44.8% | 5.7% | -59.8% | SKIP |
+| Slight Favs (50-60%) | 10 | 2 | 20.0% | 54.4% | 8.4% | -55.6% | SKIP |
 | Moderate Favs (60-75%) | 12 | 5 | 41.7% | 64.6% | 17.3% | +40.7% | BET |
 | Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **62** | **25** | **40.3%** | **48.4%** | **8.3%** | **+35.3%** | |
+| **ALL** | **63** | **25** | **39.7%** | **48.5%** | **8.2%** | **+33.2%** | |
 
 ### Edge >= 4%
 
@@ -67,10 +71,11 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 |-------|-------|------|------|----------------|----------|-----|---------|
 | Heavy Dogs (0-25%) | 6 | 3 | 50.0% | 19.7% | 5.5% | +221.7% | Small N |
 | Moderate Dogs (25-40%) | 4 | 1 | 25.0% | 31.9% | 7.4% | -11.3% | Small N |
-| Coin Flips (40-60%) | 17 | 3 | 17.6% | 49.0% | 8.0% | -55.8% | SKIP |
+| Slight Dogs (40-50%) | 10 | 2 | 20.0% | 45.0% | 6.5% | -47.8% | SKIP |
+| Slight Favs (50-60%) | 8 | 1 | 12.5% | 54.8% | 9.7% | -71.2% | Small N |
 | Moderate Favs (60-75%) | 8 | 4 | 50.0% | 64.4% | 24.2% | +90.4% | Small N |
 | Heavy Favs (75-100%) | 7 | 6 | 85.7% | 84.0% | 7.2% | +9.9% | Small N |
-| **ALL** | **42** | **17** | **40.5%** | **52.0%** | **10.5%** | **+26.9%** | |
+| **ALL** | **43** | **17** | **39.5%** | **52.0%** | **10.4%** | **+23.9%** | |
 
 ---
 
@@ -94,12 +99,19 @@ When we have a 2%+ moneyline edge, should we bet everything or only certain win 
 
 ---
 
-## Consistently Bad: 40-60% Coin Flips
+## Consistently Bad: 40-50% Slight Dogs
 
-At every edge threshold, the 40-60% win probability range loses money:
-- 2%+ edge: -48.3% ROI (26 games)
-- 3%+ edge: -56.1% ROI (22 games)
-- 4%+ edge: -55.8% ROI (17 games)
+At every edge threshold, the 40-50% win probability range loses badly:
+- 2%+ edge: -62.7% ROI (14 games)
+- 3%+ edge: -59.8% ROI (13 games)
+- 4%+ edge: -47.8% ROI (10 games)
+
+## Also Bad: 50-60% Slight Favs
+
+Despite being slight favorites, this range also loses at every threshold:
+- 2%+ edge: -28.9% ROI (14 games)
+- 3%+ edge: -55.6% ROI (10 games)
+- 4%+ edge: -71.2% ROI (8 games)
 
 ## Also Bad: 25-40% Moderate Underdogs
 
@@ -114,14 +126,14 @@ At every edge threshold, the 40-60% win probability range loses money:
 **For moneyline betting with KP+BT edge:**
 
 1. **Minimum 2% edge** to consider any bet
-2. **AVOID 25-50% win probability range** - consistently loses regardless of edge size
-3. **Moderate favorites (50-75%)** are the safest positive-ROI bucket
+2. **AVOID 25-60% win probability range** - consistently loses regardless of edge size
+3. **Moderate favorites (60-75%)** are the safest positive-ROI bucket
 4. **Heavy underdogs (10-25%)** are positive EV but extremely high variance - only bet with proper bankroll management (small unit sizes)
 5. **Heavy favorites (75%+)** - not enough data, and payouts are small
 
-**Conservative approach**: Bet 3%+ edges in the 50-75% range only
+**Conservative approach**: Bet 3%+ edges in the 60-75% range only
 
-**Aggressive approach**: Bet 2%+ edges in 10-25% OR 50-90% ranges, with smaller units on dogs
+**Aggressive approach**: Bet 2%+ edges in 10-25% OR 60-90% ranges, with smaller units on dogs
 
 ---
 
