@@ -4051,5 +4051,40 @@
     "edge_type": "under",
     "edge_value": 0.0150273245156959,
     "notified_at": "2026-01-31T03:02:07.231433+00:00"
+  },
+  "Wagner Seahawks vs. Fairleigh Dickinson Knights|Wagner Seahawks|spread": {
+    "game": "Wagner Seahawks vs. Fairleigh Dickinson Knights",
+    "team": "Wagner Seahawks",
+    "edge_type": "spread",
+    "edge_value": 0.0347027350916924,
+    "notified_at": "2026-01-31T03:57:27.697512+00:00"
+  },
+  "Howard Bison vs. Norfolk St Spartans|under": {
+    "game": "Howard Bison vs. Norfolk St Spartans",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0118564187013748,
+    "notified_at": "2026-01-31T03:57:27.951084+00:00"
+  },
+  "Delaware St Hornets vs. Maryland-Eastern Shore Hawks|under": {
+    "game": "Delaware St Hornets vs. Maryland-Eastern Shore Hawks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188673826669464,
+    "notified_at": "2026-01-31T03:57:28.249697+00:00"
+  },
+  "Incarnate Word Cardinals vs. UT Rio Grande Valley Vaqueros|UT Rio Grande Valley Vaqueros|spread": {
+    "game": "Incarnate Word Cardinals vs. UT Rio Grande Valley Vaqueros",
+    "team": "UT Rio Grande Valley Vaqueros",
+    "edge_type": "spread",
+    "edge_value": 0.0210230513267407,
+    "notified_at": "2026-01-31T03:57:28.492625+00:00"
+  },
+  "St. Bonaventure Bonnies vs. George Mason Patriots|George Mason Patriots|spread": {
+    "game": "St. Bonaventure Bonnies vs. George Mason Patriots",
+    "team": "George Mason Patriots",
+    "edge_type": "spread",
+    "edge_value": 0.0155510951023906,
+    "notified_at": "2026-01-31T03:57:28.823688+00:00"
   }
 }
