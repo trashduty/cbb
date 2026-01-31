@@ -4114,5 +4114,12 @@
     "edge_type": "spread",
     "edge_value": 0.0116588701655339,
     "notified_at": "2026-01-31T04:37:38.336842+00:00"
+  },
+  "Alcorn St Braves vs. Southern Jaguars|Alcorn St Braves|spread": {
+    "game": "Alcorn St Braves vs. Southern Jaguars",
+    "team": "Alcorn St Braves",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-01-31T05:29:19.697242+00:00"
   }
 }
