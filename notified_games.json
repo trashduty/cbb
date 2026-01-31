@@ -4009,5 +4009,12 @@
     "edge_type": "spread",
     "edge_value": 0.0108932112821685,
     "notified_at": "2026-01-31T01:12:15.289643+00:00"
+  },
+  "UC Riverside Highlanders vs. Cal Poly Mustangs|UC Riverside Highlanders|spread": {
+    "game": "UC Riverside Highlanders vs. Cal Poly Mustangs",
+    "team": "UC Riverside Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0160342270972184,
+    "notified_at": "2026-01-31T01:58:52.104770+00:00"
   }
 }
