@@ -55,25 +55,16 @@ def american_odds_to_implied_probability(odds):
         return np.nan
 
 
-def calculate_spread_implied_prob_safe(spread_price):
-    """Safely calculate spread implied probability with defaults."""
-    if pd.isna(spread_price) or spread_price is None:
-        return SPREAD_IMPLIED_DEFAULT
-    try:
-        spread_price = float(spread_price)
-    except (ValueError, TypeError):
-        return SPREAD_IMPLIED_DEFAULT
-    if abs(spread_price) > 200:
-        return SPREAD_IMPLIED_DEFAULT
-    if 0 < abs(spread_price) < 100:
-        return SPREAD_IMPLIED_DEFAULT
-    prob = american_odds_to_implied_probability(spread_price)
-    return prob if prob is not None else SPREAD_IMPLIED_DEFAULT
-
 
 # ============================================================
 # 1. SPREAD: model_spread = mean(KP, BT), then lookup table
 # ============================================================
+
+# Back-calculate spread implied prob from CBB_Output's existing data
+# (Spread Price column is not in CBB_Output.csv)
+df['spread_implied_prob'] = df['Spread Cover Probability'] - df['Edge For Covering Spread']
+df['spread_implied_prob'] = df['spread_implied_prob'].fillna(SPREAD_IMPLIED_DEFAULT)
+
 spread_cols = ['spread_kenpom', 'spread_barttorvik']
 df['model_spread'] = df[spread_cols].mean(axis=1, skipna=False)
 
@@ -86,12 +77,6 @@ try:
     print(f"Loaded spreads lookup table")
 
     df['market_spread_rounded'] = (df['market_spread'] * 2).round() / 2
-
-    # Calculate spread implied prob from Spread Price if available
-    if 'Spread Price' in df.columns:
-        df['spread_implied_prob'] = df['Spread Price'].apply(calculate_spread_implied_prob_safe)
-    else:
-        df['spread_implied_prob'] = SPREAD_IMPLIED_DEFAULT
 
     # Merge with lookup
     df = df.merge(
@@ -128,6 +113,13 @@ df['Moneyline Edge'] = df['Moneyline Win Probability'] - ml_implied
 
 
 
+# Save original CBB totals values to back-calculate implied probs later
+# (Over/Under Price columns are not in CBB_Output.csv)
+df['Over Cover Probability_orig'] = df['Over Cover Probability']
+df['Under Cover Probability_orig'] = df['Under Cover Probability']
+df['Over Total Edge_orig'] = df['Over Total Edge']
+df['Under Total Edge_orig'] = df['Under Total Edge']
+
 # ============================================================
 # 3. TOTALS: model_total = mean(KP, BT, HA), then lookup table
 # ============================================================
@@ -158,21 +150,22 @@ try:
     df['Under Cover Probability'] = df['under_prob']
 
     # Over/Under edges: cover_prob - implied_prob
-    # Use Over/Under Price if available, otherwise default to -110 (52.38%)
-    if 'Over Price' in df.columns:
-        df['over_implied_prob'] = df['Over Price'].apply(american_odds_to_implied_probability)
-    else:
-        df['over_implied_prob'] = SPREAD_IMPLIED_DEFAULT
-    if 'Under Price' in df.columns:
-        df['under_implied_prob'] = df['Under Price'].apply(american_odds_to_implied_probability)
-    else:
-        df['under_implied_prob'] = SPREAD_IMPLIED_DEFAULT
+    # Back-calculate the actual implied probs from CBB_Output's existing data
+    # (Over Price / Under Price are not in CBB_Output.csv, but implied_prob = cover_prob - edge)
+    df['over_implied_prob'] = df['Over Cover Probability_orig'] - df['Over Total Edge_orig']
+    df['under_implied_prob'] = df['Under Cover Probability_orig'] - df['Under Total Edge_orig']
+    # Fall back to -110 default if CBB values were missing
+    df['over_implied_prob'] = df['over_implied_prob'].fillna(SPREAD_IMPLIED_DEFAULT)
+    df['under_implied_prob'] = df['under_implied_prob'].fillna(SPREAD_IMPLIED_DEFAULT)
+
     df['Over Total Edge'] = df['Over Cover Probability'] - df['over_implied_prob']
     df['Under Total Edge'] = df['Under Cover Probability'] - df['under_implied_prob']
 
     # Clean up lookup columns
     df.drop(columns=['market_total_rounded', 'market_total_lookup', 'model_total_lookup',
-                     'over_prob', 'under_prob', 'over_implied_prob', 'under_implied_prob'],
+                     'over_prob', 'under_prob', 'over_implied_prob', 'under_implied_prob',
+                     'Over Cover Probability_orig', 'Under Cover Probability_orig',
+                     'Over Total Edge_orig', 'Under Total Edge_orig'],
             inplace=True, errors='ignore')
 
     print(f"  Over cover prob filled: {df['Over Cover Probability'].notna().sum()}/{len(df)}")
