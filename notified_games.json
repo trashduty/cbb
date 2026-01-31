@@ -4128,5 +4128,12 @@
     "edge_type": "spread",
     "edge_value": 0.0225076131404728,
     "notified_at": "2026-01-31T05:50:34.815421+00:00"
+  },
+  "Vermont Catamounts vs. NJIT Highlanders|NJIT Highlanders|spread": {
+    "game": "Vermont Catamounts vs. NJIT Highlanders",
+    "team": "NJIT Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0132895015587953,
+    "notified_at": "2026-01-31T07:00:41.784942+00:00"
   }
 }
