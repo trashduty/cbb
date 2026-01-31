@@ -3967,5 +3967,19 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-01-30T23:55:58.454376+00:00"
+  },
+  "Tarleton State Texans vs. Utah Tech Trailblazers|over": {
+    "game": "Tarleton State Texans vs. Utah Tech Trailblazers",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0160927467242296,
+    "notified_at": "2026-01-31T00:33:40.185556+00:00"
+  },
+  "Tarleton State Texans vs. Utah Tech Trailblazers|Tarleton State Texans|spread": {
+    "game": "Tarleton State Texans vs. Utah Tech Trailblazers",
+    "team": "Tarleton State Texans",
+    "edge_type": "spread",
+    "edge_value": 0.047999242711806,
+    "notified_at": "2026-01-31T00:33:40.457346+00:00"
   }
 }
