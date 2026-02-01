@@ -4163,5 +4163,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-01T04:20:26.021241+00:00"
+  },
+  "Charleston Southern Buccaneers vs. Gardner-Webb Bulldogs|Charleston Southern Buccaneers|spread": {
+    "game": "Charleston Southern Buccaneers vs. Gardner-Webb Bulldogs",
+    "team": "Charleston Southern Buccaneers",
+    "edge_type": "spread",
+    "edge_value": 0.0287684734810367,
+    "notified_at": "2026-02-01T19:31:01.239739+00:00"
   }
 }
