@@ -4156,5 +4156,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-02-01T03:23:48.183077+00:00"
+  },
+  "Niagara Purple Eagles vs. Marist Red Foxes|under": {
+    "game": "Niagara Purple Eagles vs. Marist Red Foxes",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-01T04:20:26.021241+00:00"
   }
 }
