@@ -4205,5 +4205,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0754178878595899,
     "notified_at": "2026-02-01T20:55:43.924117+00:00"
+  },
+  "Tennessee St Tigers vs. Tennessee Tech Golden Eagles|Tennessee St Tigers|spread": {
+    "game": "Tennessee St Tigers vs. Tennessee Tech Golden Eagles",
+    "team": "Tennessee St Tigers",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-02-01T21:26:05.129934+00:00"
   }
 }
