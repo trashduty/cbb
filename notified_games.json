@@ -4149,5 +4149,12 @@
     "edge_type": "under",
     "edge_value": 0.0130148987755176,
     "notified_at": "2026-01-31T07:53:59.722052+00:00"
+  },
+  "Nebraska Cornhuskers vs. Illinois Fighting Illini|under": {
+    "game": "Nebraska Cornhuskers vs. Illinois Fighting Illini",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-02-01T03:23:48.183077+00:00"
   }
 }
