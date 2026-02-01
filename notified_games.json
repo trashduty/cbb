@@ -4191,5 +4191,12 @@
     "edge_type": "spread",
     "edge_value": 0.0266252922230992,
     "notified_at": "2026-02-01T19:51:43.489350+00:00"
+  },
+  "Stephen F. Austin Lumberjacks vs. McNeese Cowboys|Stephen F. Austin Lumberjacks|spread": {
+    "game": "Stephen F. Austin Lumberjacks vs. McNeese Cowboys",
+    "team": "Stephen F. Austin Lumberjacks",
+    "edge_type": "spread",
+    "edge_value": 0.0322231940397691,
+    "notified_at": "2026-02-01T20:09:58.972115+00:00"
   }
 }
