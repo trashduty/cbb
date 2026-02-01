@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** February 01, 2026 at 02:51 PM ET
+**Last Updated:** February 01, 2026 at 03:05 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-02-01
 
-**Total Games Graded:** 1868 games (3736 team-rows)
+**Total Games Graded:** 1871 games (3742 team-rows)
 
 ---
 
@@ -16,11 +16,11 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 204-191 | 51.6% | -5.56 |
+| 0-1.9% | 205-191 | 51.8% | -4.66 |
 | 2-3.9% | 56-69 | 44.8% | -18.10 |
 | 4-5.9% | 23-22 | 51.1% | -1.09 |
 | 6%+ | 5-9 | 35.7% | -4.46 |
-| **Total** | **288-291** | **49.7%** | **-29.21** |
+| **Total** | **289-291** | **49.8%** | **-28.31** |
 
 ### Spread Bets - Consensus Only
 
@@ -36,11 +36,11 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 151-198 | 43.3% | -60.74 |
+| 0-1.9% | 151-199 | 43.1% | -61.74 |
 | 2-3.9% | 32-38 | 45.7% | -8.91 |
 | 4-5.9% | 10-13 | 43.5% | -3.91 |
 | 6%+ | 2-6 | 25.0% | -4.18 |
-| **Total** | **195-255** | **43.3%** | **-77.74** |
+| **Total** | **195-256** | **43.2%** | **-78.74** |
 
 ### Moneyline Bets - Consensus Only
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1630-1578 | 50.8% | -96.33 |
-| Bart Torvik | 1037-1007 | 50.7% | -64.37 |
-| Evan Miya | 1770-1846 | 48.9% | -237.07 |
-| Haslametrics | 1733-1799 | 49.1% | -223.70 |
+| KenPom | 1632-1578 | 50.8% | -94.51 |
+| Bart Torvik | 1041-1009 | 50.8% | -62.73 |
+| Evan Miya | 1770-1852 | 48.9% | -243.07 |
+| Haslametrics | 1737-1801 | 49.1% | -222.07 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2322-970 | 70.5% | +1140.70 |
-| Bart Torvik | 1542-586 | 72.5% | +815.68 |
-| Evan Miya | 2618-1116 | 70.1% | +1263.76 |
+| KenPom | 2324-970 | 70.6% | +1142.52 |
+| Bart Torvik | 1548-586 | 72.5% | +821.13 |
+| Evan Miya | 2624-1116 | 70.2% | +1269.22 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1558-1610 | 49.2% | -193.78 |
-| Bart Torvik | 978-1026 | 48.8% | -137.00 |
-| Evan Miya | 1756-1816 | 49.2% | -219.80 |
-| Haslametrics | 1720-1774 | 49.2% | -210.52 |
+| KenPom | 1558-1612 | 49.1% | -195.78 |
+| Bart Torvik | 980-1030 | 48.8% | -139.18 |
+| Evan Miya | 1758-1820 | 49.1% | -221.98 |
+| Haslametrics | 1722-1778 | 49.2% | -212.70 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1610-1558 | 50.8% | -94.51 |
-| Bart Torvik | 1026-978 | 51.2% | -45.37 |
-| Evan Miya | 1816-1756 | 50.8% | -105.26 |
-| Haslametrics | 1774-1720 | 50.8% | -107.43 |
+| KenPom | 1612-1558 | 50.9% | -92.69 |
+| Bart Torvik | 1030-980 | 51.2% | -43.73 |
+| Evan Miya | 1820-1758 | 50.9% | -103.62 |
+| Haslametrics | 1778-1722 | 50.8% | -105.80 |
 
 ---
 
