@@ -4170,5 +4170,26 @@
     "edge_type": "spread",
     "edge_value": 0.0287684734810367,
     "notified_at": "2026-02-01T19:31:01.239739+00:00"
+  },
+  "Holy Cross Crusaders vs. Boston Univ. Terriers|Holy Cross Crusaders|spread": {
+    "game": "Holy Cross Crusaders vs. Boston Univ. Terriers",
+    "team": "Holy Cross Crusaders",
+    "edge_type": "spread",
+    "edge_value": 0.0287226995548539,
+    "notified_at": "2026-02-01T19:51:42.725372+00:00"
+  },
+  "Northwestern St Demons vs. Nicholls St Colonels|Northwestern St Demons|spread": {
+    "game": "Northwestern St Demons vs. Nicholls St Colonels",
+    "team": "Northwestern St Demons",
+    "edge_type": "spread",
+    "edge_value": 0.0121951219512195,
+    "notified_at": "2026-02-01T19:51:43.038279+00:00"
+  },
+  "Alcorn St Braves vs. Grambling St Tigers|Alcorn St Braves|spread": {
+    "game": "Alcorn St Braves vs. Grambling St Tigers",
+    "team": "Alcorn St Braves",
+    "edge_type": "spread",
+    "edge_value": 0.0266252922230992,
+    "notified_at": "2026-02-01T19:51:43.489350+00:00"
   }
 }
