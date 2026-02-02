@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** February 01, 2026 at 09:38 PM ET
+**Last Updated:** February 01, 2026 at 10:40 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-02-02
 
-**Total Games Graded:** 1891 games (3782 team-rows)
+**Total Games Graded:** 1892 games (3784 team-rows)
 
 ---
 
@@ -104,8 +104,8 @@ Performance of each individual predictive model, calculated across all games reg
 |-------|--------|----------|----------------|
 | KenPom | 1634-1582 | 50.8% | -96.69 |
 | Bart Torvik | 1058-1027 | 50.7% | -65.28 |
-| Evan Miya | 1785-1877 | 48.7% | -254.43 |
-| Haslametrics | 1752-1826 | 49.0% | -233.43 |
+| Evan Miya | 1787-1877 | 48.8% | -252.62 |
+| Haslametrics | 1752-1828 | 48.9% | -235.43 |
 
 ### Individual Model Performance - Moneyline Bets
 
@@ -113,7 +113,7 @@ Performance of each individual predictive model, calculated across all games reg
 |-------|--------|----------|----------------|
 | KenPom | 2330-970 | 70.6% | +1147.97 |
 | Bart Torvik | 1569-601 | 72.3% | +825.22 |
-| Evan Miya | 2650-1130 | 70.1% | +1278.85 |
+| Evan Miya | 2652-1130 | 70.1% | +1280.67 |
 
 ### Individual Model Performance - Over Bets
 
@@ -121,8 +121,8 @@ Performance of each individual predictive model, calculated across all games reg
 |-------|--------|----------|----------------|
 | KenPom | 1564-1612 | 49.2% | -190.32 |
 | Bart Torvik | 1002-1044 | 49.0% | -133.18 |
-| Evan Miya | 1784-1834 | 49.3% | -212.34 |
-| Haslametrics | 1748-1792 | 49.4% | -203.07 |
+| Evan Miya | 1786-1834 | 49.3% | -210.53 |
+| Haslametrics | 1750-1792 | 49.4% | -201.25 |
 
 ### Individual Model Performance - Under Bets
 
@@ -130,8 +130,8 @@ Performance of each individual predictive model, calculated across all games reg
 |-------|--------|----------|----------------|
 | KenPom | 1612-1564 | 50.8% | -98.69 |
 | Bart Torvik | 1044-1002 | 51.0% | -53.00 |
-| Evan Miya | 1834-1784 | 50.7% | -116.89 |
-| Haslametrics | 1792-1748 | 50.6% | -119.07 |
+| Evan Miya | 1834-1786 | 50.7% | -118.89 |
+| Haslametrics | 1792-1750 | 50.6% | -121.07 |
 
 ---
 
