@@ -4212,5 +4212,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-02-01T21:26:05.129934+00:00"
+  },
+  "Tennessee Volunteers vs. Ole Miss Rebels|Tennessee Volunteers|spread": {
+    "game": "Tennessee Volunteers vs. Ole Miss Rebels",
+    "team": "Tennessee Volunteers",
+    "edge_type": "spread",
+    "edge_value": 0.0124173230244573,
+    "notified_at": "2026-02-02T18:49:08.857726+00:00"
   }
 }
