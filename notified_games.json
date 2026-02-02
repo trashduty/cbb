@@ -4219,5 +4219,26 @@
     "edge_type": "spread",
     "edge_value": 0.0124173230244573,
     "notified_at": "2026-02-02T18:49:08.857726+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. La Salle Explorers|La Salle Explorers|spread": {
+    "game": "Loyola (Chi) Ramblers vs. La Salle Explorers",
+    "team": "La Salle Explorers",
+    "edge_type": "spread",
+    "edge_value": 0.0225076131404728,
+    "notified_at": "2026-02-02T23:11:56.559975+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. La Salle Explorers|La Salle Explorers|moneyline": {
+    "game": "Loyola (Chi) Ramblers vs. La Salle Explorers",
+    "team": "La Salle Explorers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0413588768677621,
+    "notified_at": "2026-02-02T23:11:56.793211+00:00"
+  },
+  "Belmont Bruins vs. Drake Bulldogs|Belmont Bruins|spread": {
+    "game": "Belmont Bruins vs. Drake Bulldogs",
+    "team": "Belmont Bruins",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-02-02T23:11:57.199844+00:00"
   }
 }
