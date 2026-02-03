@@ -4261,5 +4261,12 @@
     "edge_type": "spread",
     "edge_value": 0.0382396940814036,
     "notified_at": "2026-02-03T03:09:27.646989+00:00"
+  },
+  "Tenn-Martin Skyhawks vs. Arkansas-Little Rock Trojans|Tenn-Martin Skyhawks|spread": {
+    "game": "Tenn-Martin Skyhawks vs. Arkansas-Little Rock Trojans",
+    "team": "Tenn-Martin Skyhawks",
+    "edge_type": "spread",
+    "edge_value": 0.0225076131404728,
+    "notified_at": "2026-02-03T04:54:13.558932+00:00"
   }
 }
