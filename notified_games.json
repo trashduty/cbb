@@ -4268,5 +4268,12 @@
     "edge_type": "spread",
     "edge_value": 0.0225076131404728,
     "notified_at": "2026-02-03T04:54:13.558932+00:00"
+  },
+  "San Francisco Dons vs. Loyola Marymount Lions|under": {
+    "game": "San Francisco Dons vs. Loyola Marymount Lions",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-03T21:46:20.740724+00:00"
   }
 }
