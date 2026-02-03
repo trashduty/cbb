@@ -4275,5 +4275,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-03T21:46:20.740724+00:00"
+  },
+  "Florida Atlantic Owls vs. Tulsa Golden Hurricane|under": {
+    "game": "Florida Atlantic Owls vs. Tulsa Golden Hurricane",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-02-03T22:13:12.148333+00:00"
   }
 }
