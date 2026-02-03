@@ -4254,5 +4254,12 @@
     "edge_type": "spread",
     "edge_value": 0.0163833176532579,
     "notified_at": "2026-02-03T00:37:30.826096+00:00"
+  },
+  "Bradley Braves vs. Valparaiso Beacons|Valparaiso Beacons|spread": {
+    "game": "Bradley Braves vs. Valparaiso Beacons",
+    "team": "Valparaiso Beacons",
+    "edge_type": "spread",
+    "edge_value": 0.0382396940814036,
+    "notified_at": "2026-02-03T03:09:27.646989+00:00"
   }
 }
