@@ -4240,5 +4240,19 @@
     "edge_type": "spread",
     "edge_value": 0.0241897189022821,
     "notified_at": "2026-02-02T23:11:57.199844+00:00"
+  },
+  "Eastern Michigan Eagles vs. Akron Zips|Eastern Michigan Eagles|spread": {
+    "game": "Eastern Michigan Eagles vs. Akron Zips",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0234430546115888,
+    "notified_at": "2026-02-03T00:37:30.546781+00:00"
+  },
+  "SMU Mustangs vs. NC State Wolfpack|SMU Mustangs|spread": {
+    "game": "SMU Mustangs vs. NC State Wolfpack",
+    "team": "SMU Mustangs",
+    "edge_type": "spread",
+    "edge_value": 0.0163833176532579,
+    "notified_at": "2026-02-03T00:37:30.826096+00:00"
   }
 }
