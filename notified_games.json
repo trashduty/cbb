@@ -4289,5 +4289,12 @@
     "edge_type": "under",
     "edge_value": 0.0103555120713323,
     "notified_at": "2026-02-03T22:30:47.045230+00:00"
+  },
+  "UNC Asheville Bulldogs vs. South Carolina Upstate Spartans|under": {
+    "game": "UNC Asheville Bulldogs vs. South Carolina Upstate Spartans",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-03T22:57:00.961753+00:00"
   }
 }
