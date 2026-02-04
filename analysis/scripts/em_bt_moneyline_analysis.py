@@ -373,7 +373,7 @@ def main():
             print(f"\nEdge >= {threshold*100:.0f}%:")
             print(f"  Games: {result['games']}")
             print(f"  Wins: {result['wins']} ({result['win_rate']:.1f}%)")
-            print(f"  Avg Edge: {result['avg_edge']*100:.2f}%")
+            print(f"  Avg Edge: {result['avg_edge']:.2f}%")
             print(f"  ROI: {result['roi']:+.1f}%")
     
     # Analyze by probability band for each threshold
