@@ -4324,5 +4324,19 @@
     "edge_type": "spread",
     "edge_value": 0.0124173230244573,
     "notified_at": "2026-02-04T23:28:33.428295+00:00"
+  },
+  "Quinnipiac Bobcats vs. Canisius Golden Griffins|under": {
+    "game": "Quinnipiac Bobcats vs. Canisius Golden Griffins",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0178699212250362,
+    "notified_at": "2026-02-04T23:44:55.187727+00:00"
+  },
+  "Cal Baptist Lancers vs. Tarleton State Texans|Tarleton State Texans|spread": {
+    "game": "Cal Baptist Lancers vs. Tarleton State Texans",
+    "team": "Tarleton State Texans",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-04T23:44:55.415941+00:00"
   }
 }
