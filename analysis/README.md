@@ -2,6 +2,18 @@
 
 This directory contains analysis scripts, generated reports, and detailed betting data for College Basketball (CBB) betting models.
 
+## 🔗 Quick Links to View Files on GitHub
+
+**New EM+BT Moneyline Analysis:**
+- [📊 View Report](https://github.com/trashduty/cbb/blob/copilot/create-moneyline-analysis-script/analysis/reports/em_bt_moneyline_analysis.md)
+- [🐍 View Script](https://github.com/trashduty/cbb/blob/copilot/create-moneyline-analysis-script/analysis/scripts/em_bt_moneyline_analysis.py)
+- [💾 View Data CSV](https://github.com/trashduty/cbb/blob/copilot/create-moneyline-analysis-script/analysis/data/em_bt_moneyline_results.csv)
+
+**Note:** These links point to the PR branch. After merging to main, replace `copilot/create-moneyline-analysis-script` with `main` in the URLs.
+
+**Browse All Analysis Reports:**
+- [View analysis/reports/ folder](https://github.com/trashduty/cbb/tree/copilot/create-moneyline-analysis-script/analysis/reports)
+
 ## Directory Structure
 
 ```
