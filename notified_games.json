@@ -4303,5 +4303,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0485136239044011,
     "notified_at": "2026-02-04T01:59:26.124142+00:00"
+  },
+  "Michigan Wolverines vs. Penn State Nittany Lions|Michigan Wolverines|spread": {
+    "game": "Michigan Wolverines vs. Penn State Nittany Lions",
+    "team": "Michigan Wolverines",
+    "edge_type": "spread",
+    "edge_value": 0.0241897189022821,
+    "notified_at": "2026-02-04T20:33:13.479343+00:00"
   }
 }
