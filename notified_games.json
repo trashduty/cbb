@@ -4296,5 +4296,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-03T22:57:00.961753+00:00"
+  },
+  "South Carolina St Bulldogs vs. Maryland-Eastern Shore Hawks|South Carolina St Bulldogs|moneyline": {
+    "game": "South Carolina St Bulldogs vs. Maryland-Eastern Shore Hawks",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0485136239044011,
+    "notified_at": "2026-02-04T01:59:26.124142+00:00"
   }
 }
