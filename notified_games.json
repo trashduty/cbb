@@ -4310,5 +4310,12 @@
     "edge_type": "spread",
     "edge_value": 0.0241897189022821,
     "notified_at": "2026-02-04T20:33:13.479343+00:00"
+  },
+  "Campbell Fighting Camels vs. Drexel Dragons|Drexel Dragons|spread": {
+    "game": "Campbell Fighting Camels vs. Drexel Dragons",
+    "team": "Drexel Dragons",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-04T20:58:17.339738+00:00"
   }
 }
