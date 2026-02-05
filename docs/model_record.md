@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** February 04, 2026 at 07:54 PM ET
+**Last Updated:** February 04, 2026 at 08:34 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-02-04
 
-**Total Games Graded:** 1940 games (3880 team-rows)
+**Total Games Graded:** 1945 games (3890 team-rows)
 
 ---
 
@@ -16,41 +16,41 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 216-197 | 52.3% | -0.66 |
+| 0-1.9% | 217-198 | 52.3% | -0.75 |
 | 2-3.9% | 56-74 | 43.1% | -23.10 |
 | 4-5.9% | 23-23 | 50.0% | -2.09 |
 | 6%+ | 5-9 | 35.7% | -4.46 |
-| **Total** | **300-303** | **49.8%** | **-30.31** |
+| **Total** | **301-304** | **49.8%** | **-30.40** |
 
 ### Spread Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 53-62 | 46.1% | -13.82 |
+| 0-1.9% | 54-63 | 46.2% | -13.91 |
 | 2-3.9% | 23-24 | 48.9% | -3.09 |
 | 4-5.9% | 7-9 | 43.8% | -2.64 |
 | 6%+ | 2-7 | 22.2% | -5.18 |
-| **Total** | **85-102** | **45.5%** | **-24.73** |
+| **Total** | **86-103** | **45.5%** | **-24.82** |
 
 ### Moneyline Bets - All
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 153-208 | 42.4% | -68.92 |
+| 0-1.9% | 154-209 | 42.4% | -69.01 |
 | 2-3.9% | 33-42 | 44.0% | -12.00 |
 | 4-5.9% | 10-15 | 40.0% | -5.91 |
 | 6%+ | 2-6 | 25.0% | -4.18 |
-| **Total** | **198-271** | **42.2%** | **-91.01** |
+| **Total** | **199-272** | **42.3%** | **-91.10** |
 
 ### Moneyline Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 62-81 | 43.4% | -24.64 |
+| 0-1.9% | 63-82 | 43.4% | -24.73 |
 | 2-3.9% | 10-13 | 43.5% | -3.91 |
 | 4-5.9% | 2-4 | 33.3% | -2.18 |
 | 6%+ | 0-1 | 0.0% | -1.00 |
-| **Total** | **74-99** | **42.8%** | **-31.73** |
+| **Total** | **75-100** | **42.9%** | **-31.82** |
 
 ### Over Bets - All
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1684-1626 | 50.9% | -95.24 |
-| Bart Torvik | 1063-1040 | 50.5% | -73.73 |
-| Evan Miya | 1825-1935 | 48.5% | -276.08 |
-| Haslametrics | 1808-1868 | 49.2% | -224.53 |
+| KenPom | 1688-1632 | 50.8% | -97.61 |
+| Bart Torvik | 1067-1046 | 50.5% | -76.10 |
+| Evan Miya | 1827-1943 | 48.5% | -282.26 |
+| Haslametrics | 1814-1872 | 49.2% | -223.07 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2403-991 | 70.8% | +1193.33 |
-| Bart Torvik | 1583-605 | 72.3% | +833.95 |
-| Evan Miya | 2726-1152 | 70.3% | +1325.93 |
+| KenPom | 2411-993 | 70.8% | +1198.60 |
+| Bart Torvik | 1591-607 | 72.4% | +839.22 |
+| Evan Miya | 2736-1152 | 70.4% | +1335.02 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1608-1660 | 49.2% | -198.33 |
-| Bart Torvik | 1012-1052 | 49.0% | -132.09 |
-| Evan Miya | 1830-1884 | 49.3% | -220.53 |
-| Haslametrics | 1794-1842 | 49.3% | -211.25 |
+| KenPom | 1614-1664 | 49.2% | -196.87 |
+| Bart Torvik | 1018-1056 | 49.1% | -130.64 |
+| Evan Miya | 1836-1888 | 49.3% | -219.08 |
+| Haslametrics | 1800-1846 | 49.4% | -209.80 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1660-1608 | 50.8% | -99.06 |
-| Bart Torvik | 1052-1012 | 51.0% | -55.73 |
-| Evan Miya | 1884-1830 | 50.7% | -117.44 |
-| Haslametrics | 1842-1794 | 50.7% | -119.62 |
+| KenPom | 1664-1614 | 50.8% | -101.42 |
+| Bart Torvik | 1056-1018 | 50.9% | -58.10 |
+| Evan Miya | 1888-1836 | 50.7% | -119.81 |
+| Haslametrics | 1846-1800 | 50.6% | -121.99 |
 
 ---
 
