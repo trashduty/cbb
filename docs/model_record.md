@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** February 05, 2026 at 01:06 AM ET
+**Last Updated:** February 05, 2026 at 01:36 AM ET
 
 **Season Record Period:** 2025-11-04 to 2026-02-05
 
-**Total Games Graded:** 1998 games (3996 team-rows)
+**Total Games Graded:** 2000 games (4000 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1740-1682 | 50.8% | -100.34 |
+| KenPom | 1740-1686 | 50.8% | -104.34 |
 | Bart Torvik | 1071-1056 | 50.4% | -82.46 |
-| Evan Miya | 1886-1990 | 48.7% | -275.63 |
-| Haslametrics | 1872-1918 | 49.4% | -216.35 |
+| Evan Miya | 1888-1992 | 48.7% | -275.81 |
+| Haslametrics | 1872-1922 | 49.3% | -220.35 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2477-1029 | 70.7% | +1222.59 |
+| KenPom | 2477-1033 | 70.6% | +1218.59 |
 | Bart Torvik | 1605-607 | 72.6% | +851.94 |
-| Evan Miya | 2800-1194 | 70.1% | +1351.20 |
+| Evan Miya | 2800-1198 | 70.0% | +1347.20 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1646-1730 | 48.8% | -233.79 |
+| KenPom | 1646-1734 | 48.7% | -237.79 |
 | Bart Torvik | 1022-1066 | 48.9% | -137.00 |
-| Evan Miya | 1872-1954 | 48.9% | -252.35 |
-| Haslametrics | 1834-1912 | 49.0% | -244.89 |
+| Evan Miya | 1872-1958 | 48.9% | -256.35 |
+| Haslametrics | 1834-1916 | 48.9% | -248.89 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1730-1646 | 51.2% | -73.43 |
+| KenPom | 1734-1646 | 51.3% | -69.79 |
 | Bart Torvik | 1066-1022 | 51.1% | -53.01 |
-| Evan Miya | 1954-1872 | 51.1% | -95.81 |
-| Haslametrics | 1912-1834 | 51.0% | -95.99 |
+| Evan Miya | 1958-1872 | 51.1% | -92.18 |
+| Haslametrics | 1916-1834 | 51.1% | -92.36 |
 
 ---
 
