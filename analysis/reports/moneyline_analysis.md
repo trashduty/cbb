@@ -1,145 +1,406 @@
-# Moneyline Edge Analysis by Win Probability Range
+# Moneyline Edge Analysis
 
-**Model Combination: KP+BT (KenPom + Barttorvik)**
+## Methodology
 
-## Key Question
-When we have a 2%+ moneyline edge, should we bet everything or only certain win probability ranges?
+### How Edges Are Calculated
 
-## TL;DR
+1. Compute median win probability across selected models (matches pipeline)
+2. Regress toward market: `final_prob = 0.5 × median(models) + 0.5 × market_implied`
+3. Edge = final_prob - market_implied
+4. Only bet when edge > 0 (positive edge only)
 
-| Edge Threshold | All Bets (ROI) | Filtered 10-40% or 60-90% (ROI) |
-|----------------|----------------|----------------------------------|
-| 2%+ | +17.8% (85 games) | +57.3% (54 games) |
-| 3%+ | +33.2% (63 games) | +85.6% (40 games) |
-| 4%+ | +23.9% (43 games) | +83.1% (25 games) |
+### ROI Calculation
+
+- Win: profit = ML/100 (plus-money) or 100/|ML| (minus-money)
+- Loss: profit = -$1
+- ROI = total_profit / num_bets × 100
 
 ---
 
-## Performance by Win Probability Range
+## Summary: All Combinations at Each Threshold
+
 
 ### Edge >= 0%
 
-| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
-|-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 51 | 8 | 15.7% | 14.3% | 2.0% | -0.4% | SKIP |
-| Moderate Dogs (25-40%) | 17 | 5 | 29.4% | 32.3% | 3.5% | +4.4% | Marginal |
-| Slight Dogs (40-50%) | 18 | 3 | 16.7% | 44.9% | 4.3% | -58.4% | SKIP |
-| Slight Favs (50-60%) | 21 | 10 | 47.6% | 55.0% | 4.6% | -9.4% | SKIP |
-| Moderate Favs (60-75%) | 23 | 14 | 60.9% | 66.5% | 9.8% | +32.0% | BET |
-| Heavy Favs (75-100%) | 12 | 11 | 91.7% | 81.7% | 4.7% | +18.0% | BET |
-| **ALL** | **142** | **51** | **35.9%** | **40.5%** | **4.4%** | **-1.7%** | |
+| Combination | Games | W-L | Accuracy | ROI | Avg Edge |
+|-------------|-------|-----|----------|-----|----------|
+| **Production** | 112 | 37-75 | 33.0% | +13.7% | 1.3% |
+| KP | 434 | 164-270 | 37.8% | -7.4% | 2.2% |
+| BT | 221 | 87-134 | 39.4% | -0.3% | 2.4% |
+| EM | 303 | 123-180 | 40.6% | +8.8% | 2.4% |
+| KP+BT | 165 | 65-100 | 39.4% | +3.4% | 2.2% |
+| KP+EM | 292 | 103-189 | 35.3% | -2.2% | 2.3% |
+| BT+EM | 145 | 61-84 | 42.1% | +19.4% | 2.1% |
+| KP+BT+EM | 145 | 55-90 | 37.9% | +7.7% | 1.9% |
 
 ### Edge >= 1%
 
-| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
-|-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 35 | 6 | 17.1% | 16.2% | 2.7% | +11.1% | BET |
-| Moderate Dogs (25-40%) | 14 | 5 | 35.7% | 32.9% | 4.2% | +26.8% | BET |
-| Slight Dogs (40-50%) | 14 | 2 | 14.3% | 45.1% | 5.5% | -62.7% | SKIP |
-| Slight Favs (50-60%) | 14 | 5 | 35.7% | 54.8% | 6.7% | -28.9% | SKIP |
-| Moderate Favs (60-75%) | 20 | 12 | 60.0% | 66.4% | 11.3% | +37.2% | BET |
-| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **105** | **37** | **35.2%** | **42.1%** | **5.7%** | **+3.2%** | |
+| Combination | Games | W-L | Accuracy | ROI | Avg Edge |
+|-------------|-------|-----|----------|-----|----------|
+| **Production** | 45 | 16-29 | 35.6% | +26.9% | 2.5% |
+| KP | 249 | 97-152 | 39.0% | -6.9% | 3.5% |
+| BT | 134 | 58-76 | 43.3% | +11.1% | 3.7% |
+| EM | 164 | 53-111 | 32.3% | +1.0% | 4.1% |
+| KP+BT | 101 | 45-56 | 44.6% | +24.4% | 3.3% |
+| KP+EM | 144 | 53-91 | 36.8% | +10.1% | 4.3% |
+| BT+EM | 77 | 28-49 | 36.4% | +31.6% | 3.5% |
+| KP+BT+EM | 69 | 26-43 | 37.7% | +19.7% | 3.4% |
 
 ### Edge >= 2%
 
-| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
-|-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 19 | 5 | 26.3% | 17.7% | 3.7% | +77.8% | BET |
-| Moderate Dogs (25-40%) | 13 | 5 | 38.5% | 32.5% | 4.4% | +36.5% | BET |
-| Slight Dogs (40-50%) | 14 | 2 | 14.3% | 45.1% | 5.5% | -62.7% | SKIP |
-| Slight Favs (50-60%) | 14 | 5 | 35.7% | 54.8% | 6.7% | -28.9% | SKIP |
-| Moderate Favs (60-75%) | 17 | 10 | 58.8% | 66.1% | 13.0% | +43.2% | BET |
-| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **85** | **34** | **40.0%** | **46.4%** | **6.7%** | **+17.8%** | |
+| Combination | Games | W-L | Accuracy | ROI | Avg Edge |
+|-------------|-------|-----|----------|-----|----------|
+| **Production** | 21 | 8-13 | 38.1% | +47.2% | 3.9% |
+| KP | 122 | 44-78 | 36.1% | -6.8% | 5.6% |
+| BT | 76 | 35-41 | 46.1% | +23.8% | 5.4% |
+| EM | 95 | 36-59 | 37.9% | +30.9% | 6.1% |
+| KP+BT | 51 | 22-29 | 43.1% | +28.3% | 5.0% |
+| KP+EM | 72 | 26-46 | 36.1% | +23.0% | 7.1% |
+| BT+EM | 48 | 17-31 | 35.4% | +39.9% | 4.8% |
+| KP+BT+EM | 32 | 13-19 | 40.6% | +74.9% | 5.7% |
 
 ### Edge >= 3%
 
-| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
-|-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 12 | 5 | 41.7% | 19.6% | 4.5% | +181.5% | BET |
-| Moderate Dogs (25-40%) | 8 | 4 | 50.0% | 32.2% | 5.5% | +81.2% | Small N |
-| Slight Dogs (40-50%) | 13 | 2 | 15.4% | 44.8% | 5.7% | -59.8% | SKIP |
-| Slight Favs (50-60%) | 10 | 2 | 20.0% | 54.4% | 8.4% | -55.6% | SKIP |
-| Moderate Favs (60-75%) | 12 | 5 | 41.7% | 64.6% | 17.3% | +40.7% | BET |
-| Heavy Favs (75-100%) | 8 | 7 | 87.5% | 83.0% | 6.8% | +13.5% | Small N |
-| **ALL** | **63** | **25** | **39.7%** | **48.5%** | **8.2%** | **+33.2%** | |
+| Combination | Games | W-L | Accuracy | ROI | Avg Edge |
+|-------------|-------|-----|----------|-----|----------|
+| **Production** | 13 | 3-10 | 23.1% | -9.4% | 4.8% |
+| KP | 64 | 19-45 | 29.7% | -17.3% | 8.3% |
+| BT | 53 | 24-29 | 45.3% | +11.8% | 6.7% |
+| EM | 59 | 22-37 | 37.3% | +47.3% | 8.3% |
+| KP+BT | 28 | 9-19 | 32.1% | -7.5% | 7.0% |
+| KP+EM | 48 | 15-33 | 31.2% | +18.9% | 9.3% |
+| BT+EM | 23 | 8-15 | 34.8% | +30.5% | 7.3% |
+| KP+BT+EM | 18 | 7-11 | 38.9% | +83.8% | 8.2% |
 
 ### Edge >= 4%
 
-| Range | Games | Wins | Win% | Expected Win% | Avg Edge | ROI | Verdict |
-|-------|-------|------|------|----------------|----------|-----|---------|
-| Heavy Dogs (0-25%) | 6 | 3 | 50.0% | 19.7% | 5.5% | +221.7% | Small N |
-| Moderate Dogs (25-40%) | 4 | 1 | 25.0% | 31.9% | 7.4% | -11.3% | Small N |
-| Slight Dogs (40-50%) | 10 | 2 | 20.0% | 45.0% | 6.5% | -47.8% | SKIP |
-| Slight Favs (50-60%) | 8 | 1 | 12.5% | 54.8% | 9.7% | -71.2% | Small N |
-| Moderate Favs (60-75%) | 8 | 4 | 50.0% | 64.4% | 24.2% | +90.4% | Small N |
-| Heavy Favs (75-100%) | 7 | 6 | 85.7% | 84.0% | 7.2% | +9.9% | Small N |
-| **ALL** | **43** | **17** | **39.5%** | **52.0%** | **10.4%** | **+23.9%** | |
+| Combination | Games | W-L | Accuracy | ROI | Avg Edge |
+|-------------|-------|-----|----------|-----|----------|
+| **Production** | 9 | 1-8 | 11.1% | -81.4% | 5.4% |
+| KP | 46 | 12-34 | 26.1% | -23.4% | 10.3% |
+| BT | 34 | 16-18 | 47.1% | +14.9% | 8.5% |
+| EM | 41 | 13-28 | 31.7% | +8.5% | 10.5% |
+| KP+BT | 18 | 4-14 | 22.2% | -14.2% | 9.0% |
+| KP+EM | 35 | 8-27 | 22.9% | -28.4% | 11.5% |
+| BT+EM | 13 | 4-9 | 30.8% | +18.9% | 10.3% |
+| KP+BT+EM | 14 | 5-9 | 35.7% | +37.7% | 9.6% |
 
 ---
 
-## Why Heavy Dogs (0-25%) Show High ROI
+## Production Benchmark: Performance by Win Probability Range
 
-- **19 games at 2%+ edge**: 5 wins, 14 losses (26.3% win rate)
-- **Win rate matches expectation** (17.7%) - model is well-calibrated
-- **But the payouts are massive** when they hit:
+Uses pipeline's pre-computed `opening_moneyline_edge` (includes devigged probability).
 
-| Date | Team | Model Prob | Market Prob | Edge | Odds | Payout |
-|------|------|-----------|-------------|------|------|--------|
-| 2025-12-28 | N Colorado Bears | 14.0% | 10.2% | 3.8% | +880 | +8.80 |
-| 2025-11-27 | TCU Horned Frogs | 17.5% | 12.5% | 5.0% | +700 | +7.00 |
-| 2026-01-03 | Mississippi St Bulldogs | 22.0% | 17.2% | 4.8% | +480 | +4.80 |
-| 2025-11-24 | Seton Hall Pirates | 22.5% | 18.2% | 4.3% | +450 | +4.50 |
-| 2026-01-29 | Omaha Mavericks | 25.0% | 21.4% | 3.6% | +368 | +3.68 |
 
-**5 wins totaling +28.8 units offset 14 losses of -1 unit each = +14.8 units on 19 bets**
+### Edge >= 0%
 
-**The problem: remove just 2 of those 5 wins and ROI drops dramatically.** With a ~18% hit rate, long losing streaks are expected.
+| Range | Games | W-L | Win% | Avg Win Prob | Avg Edge | ROI |
+|-------|-------|-----|------|--------------|----------|-----|
+| Heavy Dogs (0-25%) | 51 | 7-44 | 13.7% | 14.8% | 1.3% | +2.5% |
+| Moderate Dogs (25-40%) | 24 | 8-16 | 33.3% | 31.5% | 1.3% | +24.6% |
+| Slight Dogs (40-50%) | 11 | 4-7 | 36.4% | 44.8% | 1.8% | +14.0% |
+| Slight Favs (50-60%) | 15 | 8-7 | 53.3% | 53.6% | 1.1% | -3.8% |
+| Moderate Favs (60-75%) | 8 | 7-1 | 87.5% | 65.4% | 2.0% | +68.1% |
+| Heavy Favs (75-100%) | 3 | 3-0 | 100.0% | 80.7% | 0.9% | +58.7% |
+| **TOTAL** | **112** | **37-75** | **33.0%** | - | 1.3% | **+13.7%** |
+
+### Edge >= 1%
+
+| Range | Games | W-L | Win% | Avg Win Prob | Avg Edge | ROI |
+|-------|-------|-----|------|--------------|----------|-----|
+| Heavy Dogs (0-25%) | 21 | 4-17 | 19.0% | 17.8% | 2.3% | +52.3% |
+| Moderate Dogs (25-40%) | 9 | 2-7 | 22.2% | 31.2% | 2.4% | -30.6% |
+| Slight Dogs (40-50%) | 4 | 1-3 | 25.0% | 43.1% | 4.2% | -36.5% |
+| Slight Favs (50-60%) | 4 | 2-2 | 50.0% | 53.5% | 2.6% | -21.3% |
+| Moderate Favs (60-75%) | 6 | 6-0 | 100.0% | 66.4% | 2.5% | +92.6% |
+| Heavy Favs (75-100%) | 1 | 1-0 | 100.0% | 80.3% | 1.4% | +61.7% |
+| **TOTAL** | **45** | **16-29** | **35.6%** | - | 2.5% | **+26.9%** |
+
+### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Win Prob | Avg Edge | ROI |
+|-------|-------|-----|------|--------------|----------|-----|
+| Heavy Dogs (0-25%) | 9 | 2-7 | 22.2% | 19.6% | 3.7% | +97.8% |
+| Moderate Dogs (25-40%) | 5 | 2-3 | 40.0% | 31.3% | 3.3% | +25.0% |
+| Slight Dogs (40-50%) | 2 | 0-2 | 0.0% | 44.7% | 6.8% | -100.0% |
+| Slight Favs (50-60%) | 2 | 1-1 | 50.0% | 54.8% | 4.0% | -31.1% |
+| Moderate Favs (60-75%) | 3 | 3-0 | 100.0% | 68.5% | 3.8% | +82.7% |
+| Heavy Favs (75-100%) | 0 | 0-0 | 0.0% | 0.0% | 0.0% | +0.0% |
+| **TOTAL** | **21** | **8-13** | **38.1%** | - | 3.9% | **+47.2%** |
+
+### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Win Prob | Avg Edge | ROI |
+|-------|-------|-----|------|--------------|----------|-----|
+| Heavy Dogs (0-25%) | 6 | 1-5 | 16.7% | 20.9% | 4.3% | +33.3% |
+| Moderate Dogs (25-40%) | 2 | 0-2 | 0.0% | 32.5% | 4.1% | -100.0% |
+| Slight Dogs (40-50%) | 2 | 0-2 | 0.0% | 44.7% | 6.8% | -100.0% |
+| Slight Favs (50-60%) | 1 | 0-1 | 0.0% | 50.6% | 5.4% | -100.0% |
+| Moderate Favs (60-75%) | 2 | 2-0 | 100.0% | 67.1% | 4.6% | +88.8% |
+| Heavy Favs (75-100%) | 0 | 0-0 | 0.0% | 0.0% | 0.0% | +0.0% |
+| **TOTAL** | **13** | **3-10** | **23.1%** | - | 4.8% | **-9.4%** |
+
+### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Win Prob | Avg Edge | ROI |
+|-------|-------|-----|------|--------------|----------|-----|
+| Heavy Dogs (0-25%) | 4 | 0-4 | 0.0% | 22.6% | 4.9% | -100.0% |
+| Moderate Dogs (25-40%) | 1 | 0-1 | 0.0% | 36.9% | 4.6% | -100.0% |
+| Slight Dogs (40-50%) | 2 | 0-2 | 0.0% | 44.7% | 6.8% | -100.0% |
+| Slight Favs (50-60%) | 1 | 0-1 | 0.0% | 50.6% | 5.4% | -100.0% |
+| Moderate Favs (60-75%) | 1 | 1-0 | 100.0% | 71.9% | 5.4% | +67.6% |
+| Heavy Favs (75-100%) | 0 | 0-0 | 0.0% | 0.0% | 0.0% | +0.0% |
+| **TOTAL** | **9** | **1-8** | **11.1%** | - | 5.4% | **-81.4%** |
 
 ---
 
-## Consistently Bad: 40-50% Slight Dogs
+## Model Combinations: Performance by Win Probability Range
 
-At every edge threshold, the 40-50% win probability range loses badly:
-- 2%+ edge: -62.7% ROI (14 games)
-- 3%+ edge: -59.8% ROI (13 games)
-- 4%+ edge: -47.8% ROI (10 games)
 
-## Also Bad: 50-60% Slight Favs
+### KP
 
-Despite being slight favorites, this range also loses at every threshold:
-- 2%+ edge: -28.9% ROI (14 games)
-- 3%+ edge: -55.6% ROI (10 games)
-- 4%+ edge: -71.2% ROI (8 games)
 
-## Also Bad: 25-40% Moderate Underdogs
+#### Edge >= 2%
 
-- 2%+ edge: +36.5% ROI (13 games)
-- 3%+ edge: +81.2% ROI (8 games)
-- 4%+ edge: -11.3% ROI (4 games)
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 31 | 4-27 | 12.9% | 5.0% | -30.7% |
+| Moderate Dogs (25-40%) | 28 | 7-21 | 25.0% | 9.6% | +9.8% |
+| Slight Dogs (40-50%) | 14 | 6-8 | 42.9% | 5.5% | +4.6% |
+| Slight Favs (50-60%) | 27 | 15-12 | 55.6% | 3.6% | +7.4% |
+| Moderate Favs (60-75%) | 19 | 9-10 | 47.4% | 3.8% | -26.2% |
+| Heavy Favs (75-100%) | 3 | 3-0 | 100.0% | 2.7% | +26.2% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 14 | 1-13 | 7.1% | 8.0% | -58.6% |
+| Moderate Dogs (25-40%) | 18 | 4-14 | 22.2% | 13.5% | +10.3% |
+| Slight Dogs (40-50%) | 9 | 3-6 | 33.3% | 7.2% | -17.8% |
+| Slight Favs (50-60%) | 14 | 7-7 | 50.0% | 4.7% | -0.6% |
+| Moderate Favs (60-75%) | 8 | 3-5 | 37.5% | 5.6% | -42.1% |
+| Heavy Favs (75-100%) | 1 | 1-0 | 100.0% | 3.3% | +30.8% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 9 | 0-9 | 0.0% | 10.5% | -100.0% |
+| Moderate Dogs (25-40%) | 15 | 3-12 | 20.0% | 15.6% | +13.7% |
+| Slight Dogs (40-50%) | 8 | 3-5 | 37.5% | 7.7% | -7.5% |
+| Slight Favs (50-60%) | 7 | 3-4 | 42.9% | 5.9% | -12.0% |
+| Moderate Favs (60-75%) | 7 | 3-4 | 42.9% | 6.0% | -33.9% |
+
+### BT
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 9 | 2-7 | 22.2% | 3.2% | +97.8% |
+| Moderate Dogs (25-40%) | 18 | 7-11 | 38.9% | 7.4% | +81.4% |
+| Slight Dogs (40-50%) | 9 | 2-7 | 22.2% | 4.7% | -52.4% |
+| Slight Favs (50-60%) | 17 | 8-9 | 47.1% | 5.5% | -8.6% |
+| Moderate Favs (60-75%) | 18 | 11-7 | 61.1% | 4.9% | -2.5% |
+| Heavy Favs (75-100%) | 5 | 5-0 | 100.0% | 4.7% | +25.2% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 4 | 1-3 | 25.0% | 4.2% | +100.0% |
+| Moderate Dogs (25-40%) | 10 | 3-7 | 30.0% | 11.3% | +78.0% |
+| Slight Dogs (40-50%) | 7 | 0-7 | 0.0% | 5.3% | -100.0% |
+| Slight Favs (50-60%) | 14 | 7-7 | 50.0% | 6.2% | -2.0% |
+| Moderate Favs (60-75%) | 14 | 9-5 | 64.3% | 5.7% | +5.3% |
+| Heavy Favs (75-100%) | 4 | 4-0 | 100.0% | 5.4% | +24.8% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 1 | 0-1 | 0.0% | 5.8% | -100.0% |
+| Moderate Dogs (25-40%) | 8 | 3-5 | 37.5% | 13.2% | +122.5% |
+| Slight Dogs (40-50%) | 3 | 0-3 | 0.0% | 7.4% | -100.0% |
+| Slight Favs (50-60%) | 8 | 3-5 | 37.5% | 8.4% | -20.7% |
+| Moderate Favs (60-75%) | 10 | 6-4 | 60.0% | 6.6% | -0.5% |
+| Heavy Favs (75-100%) | 4 | 4-0 | 100.0% | 5.4% | +24.8% |
+
+### EM
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 25 | 8-17 | 32.0% | 5.5% | +135.6% |
+| Moderate Dogs (25-40%) | 26 | 3-23 | 11.5% | 10.0% | -35.6% |
+| Slight Dogs (40-50%) | 14 | 7-7 | 50.0% | 5.1% | +19.4% |
+| Slight Favs (50-60%) | 15 | 8-7 | 53.3% | 3.2% | +7.4% |
+| Moderate Favs (60-75%) | 13 | 9-4 | 69.2% | 3.9% | +11.4% |
+| Heavy Favs (75-100%) | 2 | 1-1 | 50.0% | 4.2% | -30.0% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 18 | 7-11 | 38.9% | 6.7% | +168.9% |
+| Moderate Dogs (25-40%) | 17 | 2-15 | 11.8% | 14.1% | -19.7% |
+| Slight Dogs (40-50%) | 8 | 3-5 | 37.5% | 7.1% | -7.9% |
+| Slight Favs (50-60%) | 7 | 4-3 | 57.1% | 4.0% | +17.0% |
+| Moderate Favs (60-75%) | 8 | 5-3 | 62.5% | 4.8% | -1.2% |
+| Heavy Favs (75-100%) | 1 | 1-0 | 100.0% | 5.9% | +40.0% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 12 | 2-10 | 16.7% | 8.4% | +18.3% |
+| Moderate Dogs (25-40%) | 13 | 2-11 | 15.4% | 17.4% | +5.0% |
+| Slight Dogs (40-50%) | 5 | 1-4 | 20.0% | 9.2% | -46.4% |
+| Slight Favs (50-60%) | 3 | 3-0 | 100.0% | 4.9% | +105.0% |
+| Moderate Favs (60-75%) | 7 | 4-3 | 57.1% | 5.0% | -8.2% |
+| Heavy Favs (75-100%) | 1 | 1-0 | 100.0% | 5.9% | +40.0% |
+
+### KP+BT
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 7 | 3-4 | 42.9% | 2.7% | +175.7% |
+| Moderate Dogs (25-40%) | 11 | 4-7 | 36.4% | 9.8% | +87.3% |
+| Slight Dogs (40-50%) | 13 | 3-10 | 23.1% | 4.1% | -42.2% |
+| Slight Favs (50-60%) | 10 | 4-6 | 40.0% | 3.5% | -26.1% |
+| Moderate Favs (60-75%) | 5 | 3-2 | 60.0% | 5.0% | -11.9% |
+| Heavy Favs (75-100%) | 5 | 5-0 | 100.0% | 2.9% | +24.4% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 1 | 0-1 | 0.0% | 4.3% | -100.0% |
+| Moderate Dogs (25-40%) | 9 | 2-7 | 22.2% | 11.4% | +51.7% |
+| Slight Dogs (40-50%) | 7 | 2-5 | 28.6% | 5.5% | -28.9% |
+| Slight Favs (50-60%) | 5 | 1-4 | 20.0% | 4.3% | -64.4% |
+| Moderate Favs (60-75%) | 4 | 2-2 | 50.0% | 5.5% | -26.2% |
+| Heavy Favs (75-100%) | 2 | 2-0 | 100.0% | 3.8% | +27.4% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 1 | 0-1 | 0.0% | 4.3% | -100.0% |
+| Moderate Dogs (25-40%) | 5 | 1-4 | 20.0% | 18.0% | +104.0% |
+| Slight Dogs (40-50%) | 5 | 1-4 | 20.0% | 6.4% | -54.0% |
+| Slight Favs (50-60%) | 3 | 0-3 | 0.0% | 4.7% | -100.0% |
+| Moderate Favs (60-75%) | 4 | 2-2 | 50.0% | 5.5% | -26.2% |
+
+### KP+EM
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 22 | 6-16 | 27.3% | 5.8% | +75.5% |
+| Moderate Dogs (25-40%) | 19 | 3-16 | 15.8% | 12.6% | -10.3% |
+| Slight Dogs (40-50%) | 10 | 2-8 | 20.0% | 6.3% | -47.8% |
+| Slight Favs (50-60%) | 14 | 11-3 | 78.6% | 3.3% | +54.7% |
+| Moderate Favs (60-75%) | 7 | 4-3 | 57.1% | 4.6% | -13.9% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 17 | 4-13 | 23.5% | 6.8% | +49.9% |
+| Moderate Dogs (25-40%) | 13 | 2-11 | 15.4% | 17.1% | +5.0% |
+| Slight Dogs (40-50%) | 7 | 2-5 | 28.6% | 7.9% | -25.4% |
+| Slight Favs (50-60%) | 6 | 4-2 | 66.7% | 4.7% | +34.8% |
+| Moderate Favs (60-75%) | 5 | 3-2 | 60.0% | 5.4% | -7.4% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 9 | 0-9 | 0.0% | 9.8% | -100.0% |
+| Moderate Dogs (25-40%) | 11 | 2-9 | 18.2% | 19.6% | +24.1% |
+| Slight Dogs (40-50%) | 6 | 1-5 | 16.7% | 8.6% | -55.3% |
+| Slight Favs (50-60%) | 4 | 2-2 | 50.0% | 5.4% | +2.5% |
+| Moderate Favs (60-75%) | 5 | 3-2 | 60.0% | 5.4% | -7.4% |
+
+### BT+EM
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 10 | 5-5 | 50.0% | 2.9% | +242.2% |
+| Moderate Dogs (25-40%) | 15 | 4-11 | 26.7% | 7.5% | +29.5% |
+| Slight Dogs (40-50%) | 7 | 1-6 | 14.3% | 5.3% | -67.1% |
+| Slight Favs (50-60%) | 10 | 2-8 | 20.0% | 2.7% | -64.3% |
+| Moderate Favs (60-75%) | 6 | 5-1 | 83.3% | 3.9% | +27.6% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 3 | 1-2 | 33.3% | 3.9% | +166.7% |
+| Moderate Dogs (25-40%) | 8 | 2-6 | 25.0% | 11.9% | +70.6% |
+| Slight Dogs (40-50%) | 5 | 1-4 | 20.0% | 6.4% | -54.0% |
+| Slight Favs (50-60%) | 2 | 0-2 | 0.0% | 3.7% | -100.0% |
+| Moderate Favs (60-75%) | 5 | 4-1 | 80.0% | 4.2% | +21.1% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 1 | 0-1 | 0.0% | 4.9% | -100.0% |
+| Moderate Dogs (25-40%) | 4 | 1-3 | 25.0% | 20.5% | +155.0% |
+| Slight Dogs (40-50%) | 5 | 1-4 | 20.0% | 6.4% | -54.0% |
+| Slight Favs (50-60%) | 1 | 0-1 | 0.0% | 4.1% | -100.0% |
+| Moderate Favs (60-75%) | 2 | 2-0 | 100.0% | 5.6% | +47.6% |
+
+### KP+BT+EM
+
+
+#### Edge >= 2%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 9 | 4-5 | 44.4% | 3.0% | +223.3% |
+| Moderate Dogs (25-40%) | 10 | 2-8 | 20.0% | 10.3% | +36.5% |
+| Slight Dogs (40-50%) | 5 | 2-3 | 40.0% | 4.9% | +4.4% |
+| Slight Favs (50-60%) | 3 | 2-1 | 66.7% | 2.2% | +19.6% |
+| Moderate Favs (60-75%) | 5 | 3-2 | 60.0% | 4.1% | -11.9% |
+
+#### Edge >= 3%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 3 | 2-1 | 66.7% | 4.1% | +360.0% |
+| Moderate Dogs (25-40%) | 8 | 2-6 | 25.0% | 12.3% | +70.6% |
+| Slight Dogs (40-50%) | 3 | 1-2 | 33.3% | 6.4% | -10.7% |
+| Moderate Favs (60-75%) | 4 | 2-2 | 50.0% | 4.6% | -26.2% |
+
+#### Edge >= 4%
+
+| Range | Games | W-L | Win% | Avg Edge | ROI |
+|-------|-------|-----|------|----------|-----|
+| Heavy Dogs (0-25%) | 1 | 0-1 | 0.0% | 5.2% | -100.0% |
+| Moderate Dogs (25-40%) | 6 | 2-4 | 33.3% | 15.4% | +127.5% |
+| Slight Dogs (40-50%) | 3 | 1-2 | 33.3% | 6.4% | -10.7% |
+| Moderate Favs (60-75%) | 4 | 2-2 | 50.0% | 4.6% | -26.2% |
 
 ---
 
-## Recommended Guardrails
+## Notes
 
-**For moneyline betting with KP+BT edge:**
-
-1. **Minimum 2% edge** to consider any bet
-2. **AVOID 25-60% win probability range** - consistently loses regardless of edge size
-3. **Moderate favorites (60-75%)** are the safest positive-ROI bucket
-4. **Heavy underdogs (10-25%)** are positive EV but extremely high variance - only bet with proper bankroll management (small unit sizes)
-5. **Heavy favorites (75%+)** - not enough data, and payouts are small
-
-**Conservative approach**: Bet 3%+ edges in the 60-75% range only
-
-**Aggressive approach**: Bet 2%+ edges in 10-25% OR 60-90% ranges, with smaller units on dogs
-
----
-
-## Caveats
-
-- Sample sizes are small at higher edge thresholds
-- One season of data - patterns may not persist
-- Heavy dog ROI is driven by a handful of big wins
-- Results should be tracked prospectively to validate
+- **Production benchmark** uses the pipeline's pre-computed `opening_moneyline_edge` column, which includes properly devigged market probability
+- **Per-combo analysis** uses `market_implied` (from raw moneyline odds) as a proxy since devigged probability isn't stored in graded_results.csv
+- The difference is small (vig is typically ~4-5% total, split between sides)
+- Sample sizes decrease significantly at higher edge thresholds - interpret with caution
