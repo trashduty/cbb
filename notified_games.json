@@ -4352,5 +4352,19 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-05T01:13:09.939856+00:00"
+  },
+  "Utah Tech Trailblazers vs. UT-Arlington Mavericks|under": {
+    "game": "Utah Tech Trailblazers vs. UT-Arlington Mavericks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103555120713323,
+    "notified_at": "2026-02-05T02:00:04.978660+00:00"
+  },
+  "UAB Blazers vs. Memphis Tigers|under": {
+    "game": "UAB Blazers vs. Memphis Tigers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.012263340814463,
+    "notified_at": "2026-02-05T02:00:05.646493+00:00"
   }
 }
