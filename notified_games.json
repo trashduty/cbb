@@ -4429,5 +4429,12 @@
     "edge_type": "spread",
     "edge_value": 0.0105114627326285,
     "notified_at": "2026-02-05T14:23:55.596847+00:00"
+  },
+  "Tennessee St Tigers vs. Eastern Illinois Panthers|Eastern Illinois Panthers|spread": {
+    "game": "Tennessee St Tigers vs. Eastern Illinois Panthers",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.01214209412589,
+    "notified_at": "2026-02-05T14:48:42.883894+00:00"
   }
 }
