@@ -4471,5 +4471,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-05T17:49:15.162987+00:00"
+  },
+  "Michigan St Spartans vs. Illinois Fighting Illini|under": {
+    "game": "Michigan St Spartans vs. Illinois Fighting Illini",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-02-05T18:25:47.002906+00:00"
   }
 }
