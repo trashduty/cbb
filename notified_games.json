@@ -4373,5 +4373,26 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-02-05T03:09:00.645482+00:00"
+  },
+  "Hampton Pirates vs. Elon Phoenix|over": {
+    "game": "Hampton Pirates vs. Elon Phoenix",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0134423846601043,
+    "notified_at": "2026-02-05T04:54:28.386350+00:00"
+  },
+  "Central Connecticut St Blue Devils vs. Chicago St Cougars|over": {
+    "game": "Central Connecticut St Blue Devils vs. Chicago St Cougars",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-02-05T04:54:28.757816+00:00"
+  },
+  "NJIT Highlanders vs. UMass Lowell River Hawks|NJIT Highlanders|spread": {
+    "game": "NJIT Highlanders vs. UMass Lowell River Hawks",
+    "team": "NJIT Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-02-05T04:54:29.047094+00:00"
   }
 }
