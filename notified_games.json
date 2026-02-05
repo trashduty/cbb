@@ -4450,5 +4450,26 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-05T15:48:25.746506+00:00"
+  },
+  "Davidson Wildcats vs. Loyola (Chi) Ramblers|Davidson Wildcats|spread": {
+    "game": "Davidson Wildcats vs. Loyola (Chi) Ramblers",
+    "team": "Davidson Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0258225113002769,
+    "notified_at": "2026-02-05T17:49:14.640008+00:00"
+  },
+  "Northern Iowa Panthers vs. Bradley Braves|Northern Iowa Panthers|spread": {
+    "game": "Northern Iowa Panthers vs. Bradley Braves",
+    "team": "Northern Iowa Panthers",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-02-05T17:49:14.906307+00:00"
+  },
+  "Northern Iowa Panthers vs. Bradley Braves|under": {
+    "game": "Northern Iowa Panthers vs. Bradley Braves",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-05T17:49:15.162987+00:00"
   }
 }
