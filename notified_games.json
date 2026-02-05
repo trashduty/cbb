@@ -4338,5 +4338,12 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-02-04T23:44:55.415941+00:00"
+  },
+  "Marist Red Foxes vs. Rider Broncs|under": {
+    "game": "Marist Red Foxes vs. Rider Broncs",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0108342739454865,
+    "notified_at": "2026-02-05T00:37:22.899001+00:00"
   }
 }
