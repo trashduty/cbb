@@ -4422,5 +4422,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-02-05T06:50:25.987989+00:00"
+  },
+  "UC Davis Aggies vs. UC Santa Barbara Gauchos|UC Davis Aggies|spread": {
+    "game": "UC Davis Aggies vs. UC Santa Barbara Gauchos",
+    "team": "UC Davis Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326285,
+    "notified_at": "2026-02-05T14:23:55.596847+00:00"
   }
 }
