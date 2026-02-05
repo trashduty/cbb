@@ -4436,5 +4436,19 @@
     "edge_type": "spread",
     "edge_value": 0.01214209412589,
     "notified_at": "2026-02-05T14:48:42.883894+00:00"
+  },
+  "Cal Baptist Lancers vs. Tarleton State Texans|over": {
+    "game": "Cal Baptist Lancers vs. Tarleton State Texans",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-02-05T15:48:25.495371+00:00"
+  },
+  "North Carolina Tar Heels vs. Duke Blue Devils|under": {
+    "game": "North Carolina Tar Heels vs. Duke Blue Devils",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-05T15:48:25.746506+00:00"
   }
 }
