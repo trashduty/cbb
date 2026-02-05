@@ -4394,5 +4394,19 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-02-05T04:54:29.047094+00:00"
+  },
+  "Central Connecticut St Blue Devils vs. Chicago St Cougars|Chicago St Cougars|spread": {
+    "game": "Central Connecticut St Blue Devils vs. Chicago St Cougars",
+    "team": "Chicago St Cougars",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-05T05:29:28.485304+00:00"
+  },
+  "Weber State Wildcats vs. N Colorado Bears|Weber State Wildcats|spread": {
+    "game": "Weber State Wildcats vs. N Colorado Bears",
+    "team": "Weber State Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0196973559193531,
+    "notified_at": "2026-02-05T05:29:28.760482+00:00"
   }
 }
