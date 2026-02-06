@@ -4499,5 +4499,12 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-02-06T18:22:53.613845+00:00"
+  },
+  "Colorado Buffaloes vs. Arizona St Sun Devils|Arizona St Sun Devils|spread": {
+    "game": "Colorado Buffaloes vs. Arizona St Sun Devils",
+    "team": "Arizona St Sun Devils",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-02-06T18:49:33.874926+00:00"
   }
 }
