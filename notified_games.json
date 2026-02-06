@@ -4492,5 +4492,12 @@
     "edge_type": "spread",
     "edge_value": 0.0156009054477324,
     "notified_at": "2026-02-06T07:23:39.086516+00:00"
+  },
+  "Rutgers Scarlet Knights vs. Nebraska Cornhuskers|Nebraska Cornhuskers|spread": {
+    "game": "Rutgers Scarlet Knights vs. Nebraska Cornhuskers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-06T18:22:53.613845+00:00"
   }
 }
