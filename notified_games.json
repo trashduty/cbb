@@ -4478,5 +4478,12 @@
     "edge_type": "under",
     "edge_value": 0.0134423846601043,
     "notified_at": "2026-02-05T18:25:47.002906+00:00"
+  },
+  "Valparaiso Beacons vs. Evansville Purple Aces|Valparaiso Beacons|spread": {
+    "game": "Valparaiso Beacons vs. Evansville Purple Aces",
+    "team": "Valparaiso Beacons",
+    "edge_type": "spread",
+    "edge_value": 0.0131716346132235,
+    "notified_at": "2026-02-06T05:52:48.000418+00:00"
   }
 }
