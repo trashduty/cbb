@@ -4485,5 +4485,12 @@
     "edge_type": "spread",
     "edge_value": 0.0131716346132235,
     "notified_at": "2026-02-06T05:52:48.000418+00:00"
+  },
+  "Illinois St Redbirds vs. Drake Bulldogs|Illinois St Redbirds|spread": {
+    "game": "Illinois St Redbirds vs. Drake Bulldogs",
+    "team": "Illinois St Redbirds",
+    "edge_type": "spread",
+    "edge_value": 0.0156009054477324,
+    "notified_at": "2026-02-06T07:23:39.086516+00:00"
   }
 }
