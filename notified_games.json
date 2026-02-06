@@ -4506,5 +4506,12 @@
     "edge_type": "spread",
     "edge_value": 0.0110837320477135,
     "notified_at": "2026-02-06T18:49:33.874926+00:00"
+  },
+  "New Mexico Lobos vs. Boise State Broncos|under": {
+    "game": "New Mexico Lobos vs. Boise State Broncos",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188920659809246,
+    "notified_at": "2026-02-06T23:28:25.224443+00:00"
   }
 }
