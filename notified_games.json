@@ -4709,5 +4709,12 @@
     "edge_type": "under",
     "edge_value": 0.0103630125380114,
     "notified_at": "2026-02-07T03:57:52.198825+00:00"
+  },
+  "Georgia St Panthers vs. Northern Illinois Huskies|under": {
+    "game": "Georgia St Panthers vs. Northern Illinois Huskies",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-07T04:38:13.644786+00:00"
   }
 }
