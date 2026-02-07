@@ -4730,5 +4730,12 @@
     "edge_type": "spread",
     "edge_value": 0.0198474412598779,
     "notified_at": "2026-02-07T05:59:59.726320+00:00"
+  },
+  "UC Santa Barbara Gauchos vs. UC Irvine Anteaters|UC Santa Barbara Gauchos|spread": {
+    "game": "UC Santa Barbara Gauchos vs. UC Irvine Anteaters",
+    "team": "UC Santa Barbara Gauchos",
+    "edge_type": "spread",
+    "edge_value": 0.0168516246190506,
+    "notified_at": "2026-02-07T15:56:07.901474+00:00"
   }
 }
