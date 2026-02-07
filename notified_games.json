@@ -4695,5 +4695,19 @@
     "edge_type": "over",
     "edge_value": 0.0130148987755176,
     "notified_at": "2026-02-07T03:04:06.612548+00:00"
+  },
+  "Holy Cross Crusaders vs. Lehigh Mountain Hawks|Holy Cross Crusaders|spread": {
+    "game": "Holy Cross Crusaders vs. Lehigh Mountain Hawks",
+    "team": "Holy Cross Crusaders",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-02-07T03:57:51.925080+00:00"
+  },
+  "Cal Baptist Lancers vs. Abilene Christian Wildcats|under": {
+    "game": "Cal Baptist Lancers vs. Abilene Christian Wildcats",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0103630125380114,
+    "notified_at": "2026-02-07T03:57:52.198825+00:00"
   }
 }
