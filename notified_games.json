@@ -4667,5 +4667,33 @@
     "edge_type": "spread",
     "edge_value": 0.0281625130495865,
     "notified_at": "2026-02-07T01:59:10.613780+00:00"
+  },
+  "Appalachian St Mountaineers vs. Eastern Michigan Eagles|Eastern Michigan Eagles|spread": {
+    "game": "Appalachian St Mountaineers vs. Eastern Michigan Eagles",
+    "team": "Eastern Michigan Eagles",
+    "edge_type": "spread",
+    "edge_value": 0.0108932112821685,
+    "notified_at": "2026-02-07T03:04:05.592219+00:00"
+  },
+  "Rider Broncs vs. Merrimack Warriors|under": {
+    "game": "Rider Broncs vs. Merrimack Warriors",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-07T03:04:06.025554+00:00"
+  },
+  "Portland Pilots vs. Seattle Redhawks|Portland Pilots|spread": {
+    "game": "Portland Pilots vs. Seattle Redhawks",
+    "team": "Portland Pilots",
+    "edge_type": "spread",
+    "edge_value": 0.0336731946043589,
+    "notified_at": "2026-02-07T03:04:06.355787+00:00"
+  },
+  "Colorado Buffaloes vs. Arizona St Sun Devils|over": {
+    "game": "Colorado Buffaloes vs. Arizona St Sun Devils",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0130148987755176,
+    "notified_at": "2026-02-07T03:04:06.612548+00:00"
   }
 }
