@@ -4716,5 +4716,19 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-07T04:38:13.644786+00:00"
+  },
+  "Saint Louis Billikens vs. La Salle Explorers|Saint Louis Billikens|spread": {
+    "game": "Saint Louis Billikens vs. La Salle Explorers",
+    "team": "Saint Louis Billikens",
+    "edge_type": "spread",
+    "edge_value": 0.0139702740544709,
+    "notified_at": "2026-02-07T05:59:59.496544+00:00"
+  },
+  "Vanderbilt Commodores vs. Oklahoma Sooners|Vanderbilt Commodores|spread": {
+    "game": "Vanderbilt Commodores vs. Oklahoma Sooners",
+    "team": "Vanderbilt Commodores",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-02-07T05:59:59.726320+00:00"
   }
 }
