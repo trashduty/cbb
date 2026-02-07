@@ -4513,5 +4513,12 @@
     "edge_type": "under",
     "edge_value": 0.0188920659809246,
     "notified_at": "2026-02-06T23:28:25.224443+00:00"
+  },
+  "Louisiana Tech Bulldogs vs. Sam Houston St Bearkats|Sam Houston St Bearkats|spread": {
+    "game": "Louisiana Tech Bulldogs vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-07T00:34:51.393642+00:00"
   }
 }
