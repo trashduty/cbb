@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** February 06, 2026 at 10:34 PM ET
+**Last Updated:** February 06, 2026 at 11:21 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-02-07
 
-**Total Games Graded:** 2060 games (4120 team-rows)
+**Total Games Graded:** 2061 games (4122 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1794-1744 | 50.7% | -113.25 |
+| KenPom | 1796-1744 | 50.7% | -111.44 |
 | Bart Torvik | 1083-1078 | 50.1% | -93.55 |
-| Evan Miya | 1926-2070 | 48.2% | -319.27 |
-| Haslametrics | 1931-1977 | 49.4% | -221.72 |
+| Evan Miya | 1926-2072 | 48.2% | -321.27 |
+| Haslametrics | 1931-1979 | 49.4% | -223.72 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2546-1080 | 70.2% | +1234.31 |
+| KenPom | 2548-1080 | 70.2% | +1236.13 |
 | Bart Torvik | 1632-616 | 72.6% | +867.49 |
-| Evan Miya | 2876-1242 | 69.8% | +1372.28 |
+| Evan Miya | 2878-1242 | 69.9% | +1374.10 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1712-1782 | 49.0% | -225.79 |
+| KenPom | 1712-1784 | 49.0% | -227.79 |
 | Bart Torvik | 1040-1084 | 49.0% | -138.64 |
-| Evan Miya | 1940-2008 | 49.1% | -244.54 |
-| Haslametrics | 1900-1966 | 49.1% | -238.90 |
+| Evan Miya | 1940-2010 | 49.1% | -246.54 |
+| Haslametrics | 1900-1968 | 49.1% | -240.90 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 1782-1712 | 51.0% | -92.16 |
+| KenPom | 1784-1712 | 51.0% | -90.34 |
 | Bart Torvik | 1084-1040 | 51.0% | -54.64 |
-| Evan Miya | 2008-1940 | 50.9% | -114.73 |
-| Haslametrics | 1966-1900 | 50.9% | -112.91 |
+| Evan Miya | 2010-1940 | 50.9% | -112.91 |
+| Haslametrics | 1968-1900 | 50.9% | -111.09 |
 
 ---
 
