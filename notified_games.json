@@ -4520,5 +4520,152 @@
     "edge_type": "spread",
     "edge_value": 0.0119011295695456,
     "notified_at": "2026-02-07T00:34:51.393642+00:00"
+  },
+  "Central Connecticut St Blue Devils vs. Wagner Seahawks|over": {
+    "game": "Central Connecticut St Blue Devils vs. Wagner Seahawks",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0150273245156961,
+    "notified_at": "2026-02-07T01:59:02.277824+00:00"
+  },
+  "Appalachian St Mountaineers vs. Eastern Michigan Eagles|under": {
+    "game": "Appalachian St Mountaineers vs. Eastern Michigan Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-07T01:59:02.520488+00:00"
+  },
+  "UTSA Roadrunners vs. North Texas Mean Green|under": {
+    "game": "UTSA Roadrunners vs. North Texas Mean Green",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2026-02-07T01:59:03.180830+00:00"
+  },
+  "North Carolina A&T Aggies vs. Campbell Fighting Camels|North Carolina A&T Aggies|spread": {
+    "game": "North Carolina A&T Aggies vs. Campbell Fighting Camels",
+    "team": "North Carolina A&T Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-02-07T01:59:03.616456+00:00"
+  },
+  "IUPUI Jaguars vs. Cleveland St Vikings|over": {
+    "game": "IUPUI Jaguars vs. Cleveland St Vikings",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0273597203482124,
+    "notified_at": "2026-02-07T01:59:03.911877+00:00"
+  },
+  "NJIT Highlanders vs. Binghamton Bearcats|NJIT Highlanders|spread": {
+    "game": "NJIT Highlanders vs. Binghamton Bearcats",
+    "team": "NJIT Highlanders",
+    "edge_type": "spread",
+    "edge_value": 0.0266252922230992,
+    "notified_at": "2026-02-07T01:59:04.295232+00:00"
+  },
+  "Arkansas-Little Rock Trojans vs. SIU-Edwardsville Cougars|SIU-Edwardsville Cougars|spread": {
+    "game": "Arkansas-Little Rock Trojans vs. SIU-Edwardsville Cougars",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "spread",
+    "edge_value": 0.0154719658609231,
+    "notified_at": "2026-02-07T01:59:04.733203+00:00"
+  },
+  "Hofstra Pride vs. Towson Tigers|Hofstra Pride|spread": {
+    "game": "Hofstra Pride vs. Towson Tigers",
+    "team": "Hofstra Pride",
+    "edge_type": "spread",
+    "edge_value": 0.0156009054477324,
+    "notified_at": "2026-02-07T01:59:04.990634+00:00"
+  },
+  "Utah Valley Wolverines vs. UT-Arlington Mavericks|UT-Arlington Mavericks|spread": {
+    "game": "Utah Valley Wolverines vs. UT-Arlington Mavericks",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "spread",
+    "edge_value": 0.0119011295695456,
+    "notified_at": "2026-02-07T01:59:05.198183+00:00"
+  },
+  "Norfolk St Spartans vs. North Carolina Central Eagles|under": {
+    "game": "Norfolk St Spartans vs. North Carolina Central Eagles",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0130222591402543,
+    "notified_at": "2026-02-07T01:59:05.614436+00:00"
+  },
+  "UNLV Rebels vs. Grand Canyon Antelopes|Grand Canyon Antelopes|spread": {
+    "game": "UNLV Rebels vs. Grand Canyon Antelopes",
+    "team": "Grand Canyon Antelopes",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-02-07T01:59:05.891489+00:00"
+  },
+  "Bethune-Cookman Wildcats vs. Prairie View Panthers|Bethune-Cookman Wildcats|spread": {
+    "game": "Bethune-Cookman Wildcats vs. Prairie View Panthers",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "spread",
+    "edge_value": 0.0160342270972184,
+    "notified_at": "2026-02-07T01:59:06.132720+00:00"
+  },
+  "Samford Bulldogs vs. Mercer Bears|Mercer Bears|spread": {
+    "game": "Samford Bulldogs vs. Mercer Bears",
+    "team": "Mercer Bears",
+    "edge_type": "spread",
+    "edge_value": 0.0198474412598779,
+    "notified_at": "2026-02-07T01:59:06.423798+00:00"
+  },
+  "Stephen F. Austin Lumberjacks vs. Lamar Cardinals|Stephen F. Austin Lumberjacks|spread": {
+    "game": "Stephen F. Austin Lumberjacks vs. Lamar Cardinals",
+    "team": "Stephen F. Austin Lumberjacks",
+    "edge_type": "spread",
+    "edge_value": 0.0214780726531393,
+    "notified_at": "2026-02-07T01:59:06.627015+00:00"
+  },
+  "Arkansas-Pine Bluff Golden Lions vs. Alcorn St Braves|over": {
+    "game": "Arkansas-Pine Bluff Golden Lions vs. Alcorn St Braves",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0227622641792982,
+    "notified_at": "2026-02-07T01:59:06.874493+00:00"
+  },
+  "Old Dominion Monarchs vs. Ohio Bobcats|Old Dominion Monarchs|spread": {
+    "game": "Old Dominion Monarchs vs. Ohio Bobcats",
+    "team": "Old Dominion Monarchs",
+    "edge_type": "spread",
+    "edge_value": 0.0131155217815734,
+    "notified_at": "2026-02-07T01:59:07.069180+00:00"
+  },
+  "Old Dominion Monarchs vs. Ohio Bobcats|Old Dominion Monarchs|moneyline": {
+    "game": "Old Dominion Monarchs vs. Ohio Bobcats",
+    "team": "Old Dominion Monarchs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0403623119937467,
+    "notified_at": "2026-02-07T01:59:07.464373+00:00"
+  },
+  "CSU Fullerton Titans vs. CSU Bakersfield Roadrunners|over": {
+    "game": "CSU Fullerton Titans vs. CSU Bakersfield Roadrunners",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-07T01:59:07.701079+00:00"
+  },
+  "Iona Gaels vs. Mt. St. Mary's Mountaineers|Iona Gaels|spread": {
+    "game": "Iona Gaels vs. Mt. St. Mary's Mountaineers",
+    "team": "Iona Gaels",
+    "edge_type": "spread",
+    "edge_value": 0.0382396940814036,
+    "notified_at": "2026-02-07T01:59:07.909516+00:00"
+  },
+  "Southern Utah Thunderbirds vs. Tarleton State Texans|over": {
+    "game": "Southern Utah Thunderbirds vs. Tarleton State Texans",
+    "team": "N/A",
+    "edge_type": "over",
+    "edge_value": 0.0188673826669464,
+    "notified_at": "2026-02-07T01:59:09.810058+00:00"
+  },
+  "UTEP Miners vs. New Mexico St Aggies|New Mexico St Aggies|spread": {
+    "game": "UTEP Miners vs. New Mexico St Aggies",
+    "team": "New Mexico St Aggies",
+    "edge_type": "spread",
+    "edge_value": 0.0281625130495865,
+    "notified_at": "2026-02-07T01:59:10.613780+00:00"
   }
 }
