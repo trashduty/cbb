@@ -1,18 +1,19 @@
 # /// script
 # dependencies = [
 #   "pandas",
-#   "numpy"
+#   "numpy",
+#   "pytz"
 # ]
 # ///
 """
 Generate Combo_Output.csv using specific model combos with lookup-table probabilities.
 
 Uses specific model combos as inputs to the same lookup tables as CBB_Output:
-- Spread: KP+BT mean → lookup table → cover_prob → edge
-- Moneyline: BT+EM mean (raw, no devigged blend) → edge
-- Over/Under: KP+BT+HA mean → lookup table → cover_prob → edge
+- Spread: KP+BT mean → 60/40 market-regressed → lookup table → cover_prob → edge
+- Moneyline: KP+EM mean (raw, no devigged blend) → edge
+- Over/Under: KP+BT+EM+HA mean (non-regressed) → lookup table → cover_prob → edge
 
-Reads CBB_Output.csv (already filtered) and writes Combo_Output.csv.
+Reads CBB_Output.csv and writes Combo_Output.csv (filtered to remove started games).
 All columns from CBB_Output.csv are preserved and filled.
 """
 
@@ -20,6 +21,8 @@ import pandas as pd
 import numpy as np
 import os
 import sys
+from datetime import datetime, timedelta
+import pytz
 
 # Define file paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -104,9 +107,9 @@ except FileNotFoundError:
 
 
 # ============================================================
-# 2. MONEYLINE: mean(BT, EM), raw (no devigged blend)
+# 2. MONEYLINE: mean(KP, EM), raw (no devigged blend)
 # ============================================================
-ml_cols = ['win_prob_barttorvik', 'win_prob_evanmiya']
+ml_cols = ['win_prob_kenpom', 'win_prob_evanmiya']
 df['Moneyline Win Probability'] = df[ml_cols].mean(axis=1, skipna=False)
 ml_implied = df['Current Moneyline'].apply(american_odds_to_implied_probability)
 df['Moneyline Edge'] = df['Moneyline Win Probability'] - ml_implied
@@ -121,14 +124,13 @@ df['Over Total Edge_orig'] = df['Over Total Edge']
 df['Under Total Edge_orig'] = df['Under Total Edge']
 
 # ============================================================
-# 3. TOTALS: model_total = mean(KP, BT, HA), then lookup table
+# 3. TOTALS: model_total = mean(KP, BT, EM, HA), non-regressed lookup
 # ============================================================
-total_cols = ['projected_total_kenpom', 'projected_total_barttorvik', 'projected_total_hasla']
+total_cols = ['projected_total_kenpom', 'projected_total_barttorvik', 'projected_total_evanmiya', 'projected_total_hasla']
 df['model_total'] = df[total_cols].mean(axis=1, skipna=False)
 
-# average_total: 60% market + 40% model, rounded to 0.5
-df['average_total'] = ((0.6 * df['market_total'].fillna(0) +
-                         0.4 * df['model_total'].fillna(df['market_total'])) * 2).round() / 2
+# average_total: non-regressed (raw model total), rounded to 0.5
+df['average_total'] = (df['model_total'] * 2).round() / 2
 
 # Totals lookup
 try:
@@ -276,6 +278,33 @@ column_order = [
 
 available_columns = [col for col in column_order if col in df.columns]
 df = df[available_columns]
+
+# ============================================================
+# 7. FILTER STARTED GAMES
+# ============================================================
+et = pytz.timezone('US/Eastern')
+now_et = datetime.now(et)
+buffer_minutes = 15
+cutoff_time = now_et - timedelta(minutes=buffer_minutes)
+
+def parse_game_time(time_str):
+    """Parse game time from format 'Nov 03 07:00PM ET' to datetime object."""
+    if pd.isna(time_str) or time_str == '':
+        return None
+    try:
+        time_str_clean = time_str.replace(' ET', '').strip()
+        dt = datetime.strptime(f"{now_et.year} {time_str_clean}", "%Y %b %d %I:%M%p")
+        return et.localize(dt)
+    except Exception:
+        return None
+
+df['parsed_time'] = df['Game Time'].apply(parse_game_time)
+df['keep'] = df['parsed_time'].apply(lambda t: True if pd.isna(t) else t >= cutoff_time)
+
+games_removed = (~df['keep']).sum()
+if games_removed > 0:
+    print(f"\nFiltered {games_removed} rows for started games")
+df = df[df['keep']].drop(columns=['parsed_time', 'keep'])
 
 df.to_csv(output_file, index=False)
 print(f"\nWrote {len(df)} rows to {output_file}")
