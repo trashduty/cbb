@@ -4737,5 +4737,12 @@
     "edge_type": "spread",
     "edge_value": 0.0168516246190506,
     "notified_at": "2026-02-07T15:56:07.901474+00:00"
+  },
+  "Tulane Green Wave vs. Wichita St Shockers|under": {
+    "game": "Tulane Green Wave vs. Wichita St Shockers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.011130608835512,
+    "notified_at": "2026-02-08T07:48:55.458488+00:00"
   }
 }
