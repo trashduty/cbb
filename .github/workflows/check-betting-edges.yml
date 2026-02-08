@@ -3,8 +3,8 @@ name: Check Betting Edges
 on:
   schedule:
     # Run every 15 minutes during typical betting hours (9 AM - 2 AM ET = 14:00 - 07:00 UTC)
-    - cron: '*/15 14-23 * * *'  # 9 AM - 6:45 PM ET
-    - cron: '*/15 0-7 * * *'     # 7 PM - 2:45 AM ET
+    - cron: '*/95 14-23 * * *'  # 9 AM - 6:45 PM ET
+    - cron: '*/95 0-7 * * *'     # 7 PM - 2:45 AM ET
   push:
     paths:
       - 'CBB_Output.csv'
