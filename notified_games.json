@@ -4807,5 +4807,19 @@
     "edge_type": "under",
     "edge_value": 0.014955862930274,
     "notified_at": "2026-02-08T22:06:51.408996+00:00"
+  },
+  "Indiana St Sycamores vs. Southern Illinois Salukis|Southern Illinois Salukis|moneyline": {
+    "game": "Indiana St Sycamores vs. Southern Illinois Salukis",
+    "team": "Southern Illinois Salukis",
+    "edge_type": "moneyline",
+    "edge_value": 0.031353411483619,
+    "notified_at": "2026-02-08T22:56:32.332141+00:00"
+  },
+  "Charleston Cougars vs. UNC Wilmington Seahawks|UNC Wilmington Seahawks|moneyline": {
+    "game": "Charleston Cougars vs. UNC Wilmington Seahawks",
+    "team": "UNC Wilmington Seahawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0339553715940099,
+    "notified_at": "2026-02-08T22:56:32.642703+00:00"
   }
 }
