@@ -4758,5 +4758,54 @@
     "edge_type": "moneyline",
     "edge_value": 0.0447462001573032,
     "notified_at": "2026-02-08T21:30:02.773948+00:00"
+  },
+  "St. John's Red Storm vs. Xavier Musketeers|St. John's Red Storm|spread": {
+    "game": "St. John's Red Storm vs. Xavier Musketeers",
+    "team": "St. John's Red Storm",
+    "edge_type": "spread",
+    "edge_value": 0.0105114627326284,
+    "notified_at": "2026-02-08T22:06:49.590473+00:00"
+  },
+  "St. John's Red Storm vs. Xavier Musketeers|under": {
+    "game": "St. John's Red Storm vs. Xavier Musketeers",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0137517570229503,
+    "notified_at": "2026-02-08T22:06:49.847456+00:00"
+  },
+  "North Alabama Lions vs. Central Arkansas Bears|under": {
+    "game": "North Alabama Lions vs. Central Arkansas Bears",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0325741314759279,
+    "notified_at": "2026-02-08T22:06:50.104965+00:00"
+  },
+  "Howard Bison vs. Yale Bulldogs|Howard Bison|spread": {
+    "game": "Howard Bison vs. Yale Bulldogs",
+    "team": "Howard Bison",
+    "edge_type": "spread",
+    "edge_value": 0.0110837320477135,
+    "notified_at": "2026-02-08T22:06:50.471258+00:00"
+  },
+  "Drake Bulldogs vs. Valparaiso Beacons|under": {
+    "game": "Drake Bulldogs vs. Valparaiso Beacons",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0319384749269671,
+    "notified_at": "2026-02-08T22:06:50.790185+00:00"
+  },
+  "New Orleans Privateers vs. Texas A&M-CC Islanders|under": {
+    "game": "New Orleans Privateers vs. Texas A&M-CC Islanders",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0184265370915097,
+    "notified_at": "2026-02-08T22:06:51.087058+00:00"
+  },
+  "North Carolina Central Eagles vs. Delaware St Hornets|under": {
+    "game": "North Carolina Central Eagles vs. Delaware St Hornets",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.014955862930274,
+    "notified_at": "2026-02-08T22:06:51.408996+00:00"
   }
 }
