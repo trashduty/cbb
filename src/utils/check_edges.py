@@ -29,9 +29,6 @@ notified_file = os.path.join(project_root, 'notified_games.json')
 MONEYLINE_THRESHOLD = 0.03  # 3%
 TOTAL_THRESHOLD = 0.06  # 6%
 
-# Minimum win probability for moneyline alerts
-MIN_MONEYLINE_WIN_PROBABILITY = 0.45  # 45%
-
 # Maximum edge thresholds to filter out likely data errors
 MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
 MAX_TOTAL_THRESHOLD = 0.05  # 5%
