@@ -1,0 +1,53 @@
+name: Check Betting Edges
+
+on:
+  schedule:
+    # Run every 15 minutes during typical betting hours (9 AM - 2 AM ET = 14:00 - 07:00 UTC)
+    - cron: '*/15 14-23 * * *'  # 9 AM - 6:45 PM ET
+    - cron: '*/15 0-7 * * *'     # 7 PM - 2:45 AM ET
+  push:
+    paths:
+      - 'CBB_Output.csv'
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  check-edges:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pandas requests
+
+      - name: Check for betting edges
+        run: python src/utils/check_edges.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Commit and push notified games
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add notified_games.json
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No new notifications to record"
+          else
+            git commit -m "Update notified games - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            # Pull with rebase to handle any commits made during this run
+            git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
+            git push origin HEAD:${GITHUB_REF}
+          fi
