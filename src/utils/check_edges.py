@@ -26,15 +26,13 @@ csv_file = os.path.join(project_root, 'Combo_Output.csv')
 notified_file = os.path.join(project_root, 'notified_games.json')
 
 # Edge thresholds
-SPREAD_THRESHOLD = 0.01  # 1%
-MONEYLINE_THRESHOLD = 0.04  # 4%
-TOTAL_THRESHOLD = 0.01  # 1%
+MONEYLINE_THRESHOLD = 0.03  # 3%
+TOTAL_THRESHOLD = 0.06  # 6%
 
 # Minimum win probability for moneyline alerts
 MIN_MONEYLINE_WIN_PROBABILITY = 0.45  # 45%
 
 # Maximum edge thresholds to filter out likely data errors
-MAX_SPREAD_THRESHOLD = 0.05  # 5%
 MAX_MONEYLINE_THRESHOLD = 0.10  # 10%
 MAX_TOTAL_THRESHOLD = 0.05  # 5%
 
@@ -124,12 +122,6 @@ def is_game_far_enough(game_time_str):
     
     return True
 
-def count_non_null_spread_sources(row):
-    """Count how many spread projection sources have values."""
-    spread_columns = ['spread_barttorvik', 'spread_kenpom', 'spread_evanmiya', 'spread_hasla']
-    count = sum(1 for col in spread_columns if pd.notna(row.  get(col)))
-    return count
-
 def count_non_null_total_sources(row):
     """Count how many total projection sources have values."""
     total_columns = ['projected_total_barttorvik', 'projected_total_kenpom', 
@@ -166,47 +158,6 @@ def send_discord_notification(embed_data):
     except Exception as e:
         print(f"Error sending Discord notification: {e}")
         return False
-
-def create_spread_embed(row):
-    """Create Discord embed for spread edge alert."""
-    edge_value = row['Edge For Covering Spread']
-    opening_time = format_opening_time(row.get('Opening Odds Time'))
-    
-    embed = {
-        "title": f"🎯 Spread Edge Alert:  {row['Team']}",
-        "description": f"**{row['Game']}**\n📅 Game Time: {row['Game Time']}\n⏰ Opening Odds Time: {opening_time}",
-        "color": 0x00FF00,  # Green
-        "fields": [
-            {
-                "name": "Edge For Covering Spread",
-                "value": format_percentage(edge_value),
-                "inline":  True
-            },
-            {
-                "name":   "Predicted Outcome",
-                "value": format_decimal(row['Predicted Outcome'], 1),
-                "inline": True
-            },
-            {
-                "name":  "Spread Cover Probability",
-                "value":  format_percentage(row['Spread Cover Probability']),
-                "inline":   True
-            },
-            {
-                "name": "Opening Spread",
-                "value":   format_decimal(row['Opening Spread'], 1),
-                "inline": True
-            },
-            {
-                "name": "Current Spread",
-                "value": format_decimal(row['market_spread'], 1),
-                "inline": True
-            }
-        ],
-        "timestamp":   datetime.now(timezone.utc).isoformat()
-    }
-    
-    return embed
 
 def create_moneyline_embed(row):
     """Create Discord embed for moneyline edge alert."""
@@ -355,56 +306,31 @@ def check_edges():
         if not is_game_far_enough(row['Game Time']):
             continue
         
-        # Check Spread Edge
-        if pd.notna(row. get('Edge For Covering Spread')) and row['Edge For Covering Spread'] >= SPREAD_THRESHOLD: 
-            # Check if edge exceeds maximum threshold (likely data error)
-            if row['Edge For Covering Spread'] > MAX_SPREAD_THRESHOLD:
-                print(f"  ⚠️ Skipping spread edge for {row['Team']} - edge too high ({format_percentage(row['Edge For Covering Spread'])}) - likely data error")
-            # Check for line movement limit
-            elif pd.notna(row. get('market_spread')) and pd.notna(row.get('Opening Spread')) and abs(row['market_spread'] - row['Opening Spread']) > MAX_LINE_MOVEMENT:
-                print(f"  ⏭️ Skipping spread edge for {row['Team']} - line moved > {MAX_LINE_MOVEMENT} points ({row['Opening Spread']} -> {row['market_spread']})")
-            else:
-                # Check if at least 4 out of 4 spread sources have values
-                spread_source_count = count_non_null_spread_sources(row)
-                if spread_source_count >= 4:
-                    game_id = create_game_id(row, 'spread')
-                    if game_id not in notified_games:
-                        print(f"\n🎯 Spread edge found:   {row['Team']} ({format_percentage(row['Edge For Covering Spread'])}) - {spread_source_count}/4 sources")
-                        embed = create_spread_embed(row)
-                        if send_discord_notification(embed):
-                            new_notified[game_id] = {
-                                "game": row['Game'],
-                                "team": row['Team'],
-                                "edge_type": "spread",
-                                "edge_value": row['Edge For Covering Spread'],
-                                "notified_at": datetime.now(timezone.utc).isoformat()
-                            }
-                            notifications_sent += 1
-                else:
-                    print(f"  ⏭️ Skipping spread edge for {row['Team']} - only {spread_source_count}/4 sources")
-        
         # Check Moneyline Edge
         if pd.notna(row. get('Moneyline Edge')) and row['Moneyline Edge'] >= MONEYLINE_THRESHOLD:
             # Check if edge exceeds maximum threshold (likely data error)
             if row['Moneyline Edge'] > MAX_MONEYLINE_THRESHOLD: 
                 print(f"  ⚠️ Skipping moneyline edge for {row['Team']} - edge too high ({format_percentage(row['Moneyline Edge'])}) - likely data error")
-            # Check if win probability meets minimum threshold
-            elif pd.notna(row.get('Moneyline Win Probability')) and row['Moneyline Win Probability'] < MIN_MONEYLINE_WIN_PROBABILITY:
-                print(f"  ⏭️ Skipping moneyline edge for {row['Team']} - win probability too low ({format_percentage(row['Moneyline Win Probability'])}, threshold: {format_percentage(MIN_MONEYLINE_WIN_PROBABILITY)})")
-            else:
-                game_id = create_game_id(row, 'moneyline')
-                if game_id not in notified_games:
-                    print(f"\n💰 Moneyline edge found:  {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
-                    embed = create_moneyline_embed(row)
-                    if send_discord_notification(embed):
-                        new_notified[game_id] = {
-                            "game": row['Game'],
-                            "team": row['Team'],
-                            "edge_type": "moneyline",
-                            "edge_value": row['Moneyline Edge'],
-                            "notified_at": datetime.now(timezone.utc).isoformat()
-                        }
-                        notifications_sent += 1
+            # Check if win probability meets the required conditions
+            elif pd.notna(row.get('Moneyline Win Probability')):
+                win_prob = row['Moneyline Win Probability']
+                # Check if win probability is in [0.40, 0.60] OR >= 0.75
+                if (0.40 <= win_prob <= 0.60) or (win_prob >= 0.75):
+                    game_id = create_game_id(row, 'moneyline')
+                    if game_id not in notified_games:
+                        print(f"\n💰 Moneyline edge found:  {row['Team']} ({format_percentage(row['Moneyline Edge'])})")
+                        embed = create_moneyline_embed(row)
+                        if send_discord_notification(embed):
+                            new_notified[game_id] = {
+                                "game": row['Game'],
+                                "team": row['Team'],
+                                "edge_type": "moneyline",
+                                "edge_value": row['Moneyline Edge'],
+                                "notified_at": datetime.now(timezone.utc).isoformat()
+                            }
+                            notifications_sent += 1
+                else:
+                    print(f"  ⏭️ Skipping moneyline edge for {row['Team']} - win probability ({format_percentage(win_prob)}) not in range [40-60%] or >= 75%")
         
         # Check Over Total Edge
         if pd.notna(row.get('Over Total Edge')) and row['Over Total Edge'] >= TOTAL_THRESHOLD:
