@@ -4751,5 +4751,12 @@
     "edge_type": "under",
     "edge_value": 0.0188673826669464,
     "notified_at": "2026-02-08T20:09:51.731779+00:00"
+  },
+  "Grambling St Tigers vs. Alabama A&M Bulldogs|Grambling St Tigers|moneyline": {
+    "game": "Grambling St Tigers vs. Alabama A&M Bulldogs",
+    "team": "Grambling St Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0447462001573032,
+    "notified_at": "2026-02-08T21:30:02.773948+00:00"
   }
 }
