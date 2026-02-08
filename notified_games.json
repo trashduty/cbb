@@ -4744,5 +4744,12 @@
     "edge_type": "under",
     "edge_value": 0.011130608835512,
     "notified_at": "2026-02-08T07:48:55.458488+00:00"
+  },
+  "Charleston Cougars vs. UNC Wilmington Seahawks|under": {
+    "game": "Charleston Cougars vs. UNC Wilmington Seahawks",
+    "team": "N/A",
+    "edge_type": "under",
+    "edge_value": 0.0188673826669464,
+    "notified_at": "2026-02-08T20:09:51.731779+00:00"
   }
 }
