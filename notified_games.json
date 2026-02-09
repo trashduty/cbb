@@ -4828,5 +4828,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0312936500376879,
     "notified_at": "2026-02-09T03:38:54.580917+00:00"
+  },
+  "Miami Hurricanes vs. North Carolina Tar Heels|Miami Hurricanes|moneyline": {
+    "game": "Miami Hurricanes vs. North Carolina Tar Heels",
+    "team": "Miami Hurricanes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0335430942189589,
+    "notified_at": "2026-02-09T20:05:10.197292+00:00"
   }
 }
