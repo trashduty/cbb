@@ -4821,5 +4821,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0339553715940099,
     "notified_at": "2026-02-08T22:56:32.642703+00:00"
+  },
+  "Bucknell Bison vs. Navy Midshipmen|Navy Midshipmen|moneyline": {
+    "game": "Bucknell Bison vs. Navy Midshipmen",
+    "team": "Navy Midshipmen",
+    "edge_type": "moneyline",
+    "edge_value": 0.0312936500376879,
+    "notified_at": "2026-02-09T03:38:54.580917+00:00"
   }
 }
