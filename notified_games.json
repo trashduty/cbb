@@ -4835,5 +4835,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0335430942189589,
     "notified_at": "2026-02-09T20:05:10.197292+00:00"
+  },
+  "Richmond Spiders vs. George Mason Patriots|Richmond Spiders|moneyline": {
+    "game": "Richmond Spiders vs. George Mason Patriots",
+    "team": "Richmond Spiders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0586039675720284,
+    "notified_at": "2026-02-09T20:29:05.095545+00:00"
+  },
+  "Auburn Tigers vs. Vanderbilt Commodores|Vanderbilt Commodores|moneyline": {
+    "game": "Auburn Tigers vs. Vanderbilt Commodores",
+    "team": "Vanderbilt Commodores",
+    "edge_type": "moneyline",
+    "edge_value": 0.0502156200023161,
+    "notified_at": "2026-02-09T20:29:05.599707+00:00"
+  },
+  "Arizona St Sun Devils vs. Oklahoma St Cowboys|Oklahoma St Cowboys|moneyline": {
+    "game": "Arizona St Sun Devils vs. Oklahoma St Cowboys",
+    "team": "Oklahoma St Cowboys",
+    "edge_type": "moneyline",
+    "edge_value": 0.0431957024379164,
+    "notified_at": "2026-02-09T20:29:05.831973+00:00"
   }
 }
