@@ -4877,5 +4877,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0339887779634597,
     "notified_at": "2026-02-10T21:02:56.614114+00:00"
+  },
+  "Queens University Royals vs. Austin Peay Governors|Austin Peay Governors|moneyline": {
+    "game": "Queens University Royals vs. Austin Peay Governors",
+    "team": "Austin Peay Governors",
+    "edge_type": "moneyline",
+    "edge_value": 0.0525581202153484,
+    "notified_at": "2026-02-10T22:28:51.675755+00:00"
+  },
+  "Stetson Hatters vs. Jacksonville Dolphins|Stetson Hatters|moneyline": {
+    "game": "Stetson Hatters vs. Jacksonville Dolphins",
+    "team": "Stetson Hatters",
+    "edge_type": "moneyline",
+    "edge_value": 0.0638608739030382,
+    "notified_at": "2026-02-10T22:28:51.961854+00:00"
   }
 }
