@@ -1,0 +1,81 @@
+name: Barttorvik Daily Scrape
+
+on:
+  schedule:
+    # 10 AM ET (15:00 UTC) and 4 PM ET (21:00 UTC)
+    - cron: '0 15 * * *'
+    - cron: '0 21 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install UV
+        run: pip install uv
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Scrape Barttorvik (with retries)
+        run: |
+          MAX_ATTEMPTS=3
+          ATTEMPT=1
+          SUCCESS=false
+
+          while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
+            echo "=== Attempt $ATTEMPT of $MAX_ATTEMPTS ==="
+
+            # Run the scraper (allow non-zero exit to be caught)
+            if uv run src/scrapers/barttorvik.py; then
+              # Check if file exists and has data rows (more than just a header)
+              if [ -f data/bt_mapped.csv ] && [ "$(wc -l < data/bt_mapped.csv)" -gt 1 ]; then
+                echo "Success: data/bt_mapped.csv has $(wc -l < data/bt_mapped.csv) lines"
+                SUCCESS=true
+                break
+              else
+                echo "Scraper exited 0 but bt_mapped.csv is missing or empty"
+              fi
+            else
+              echo "Scraper exited with non-zero status"
+            fi
+
+            if [ $ATTEMPT -lt $MAX_ATTEMPTS ]; then
+              echo "Waiting 30 seconds before retry..."
+              sleep 30
+            fi
+            ATTEMPT=$((ATTEMPT + 1))
+          done
+
+          if [ "$SUCCESS" = false ]; then
+            echo "All $MAX_ATTEMPTS attempts failed"
+            exit 1
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/bt_mapped.csv
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Barttorvik data - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
+            git push origin HEAD:${GITHUB_REF}
+          fi

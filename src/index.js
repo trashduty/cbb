@@ -363,10 +363,9 @@ async function runScrapers() {
     const teamMapperScript = path.join(__dirname, 'transformers', 'map_team_names.py');
     await runUVScript(teamMapperScript, 'TeamNameMapper');
     
-    // Run the Barttorvik UV script
-    const bartttorvikScript = path.join(__dirname, 'scrapers', 'barttorvik.py');
-    await runUVScript(bartttorvikScript, 'Barttorvik');
-    
+    // Barttorvik runs on its own daily workflow (barttorvik-scrape.yml)
+    // The main pipeline reads the committed data/bt_mapped.csv from the last successful scrape
+
     // Run the Hasla UV script
     const haslaScript = path.join(__dirname, 'scrapers', 'hasla.py');
     await runUVScript(haslaScript, 'Hasla');
