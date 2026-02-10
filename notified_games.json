@@ -4891,5 +4891,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0638608739030382,
     "notified_at": "2026-02-10T22:28:51.961854+00:00"
+  },
+  "Samford Bulldogs vs. Wofford Terriers|Wofford Terriers|moneyline": {
+    "game": "Samford Bulldogs vs. Wofford Terriers",
+    "team": "Wofford Terriers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0530985092614738,
+    "notified_at": "2026-02-10T22:53:13.557568+00:00"
+  },
+  "Wichita St Shockers vs. South Florida Bulls|Wichita St Shockers|moneyline": {
+    "game": "Wichita St Shockers vs. South Florida Bulls",
+    "team": "Wichita St Shockers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0323457476670052,
+    "notified_at": "2026-02-10T22:53:13.865775+00:00"
   }
 }
