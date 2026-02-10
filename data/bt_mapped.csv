@@ -239,10 +239,10 @@ Northern Illinois Huskies,Bowling Green Falcons,Northern Illinois Huskies,202602
 Northern Illinois Huskies,Bowling Green Falcons,Bowling Green Falcons,20260211,-5.0,0.7,139.0
 Bowling Green Falcons,Northern Illinois Huskies,Bowling Green Falcons,20260211,-5.0,0.7,139.0
 Bowling Green Falcons,Northern Illinois Huskies,Northern Illinois Huskies,20260211,5.0,0.30000000000000004,139.0
-North Dakota Fighting Hawks,South Dakota Coyotes,North Dakota Fighting Hawks,20260211,-4.2,0.65,160.0
-North Dakota Fighting Hawks,South Dakota Coyotes,South Dakota Coyotes,20260211,4.2,0.35,160.0
-South Dakota Coyotes,North Dakota Fighting Hawks,South Dakota Coyotes,20260211,4.2,0.35,160.0
-South Dakota Coyotes,North Dakota Fighting Hawks,North Dakota Fighting Hawks,20260211,-4.2,0.65,160.0
+South Dakota Coyotes,North Dakota Fighting Hawks,South Dakota Coyotes,20260211,-4.1,0.64,160.0
+South Dakota Coyotes,North Dakota Fighting Hawks,North Dakota Fighting Hawks,20260211,4.1,0.36,160.0
+North Dakota Fighting Hawks,South Dakota Coyotes,North Dakota Fighting Hawks,20260211,4.1,0.36,160.0
+North Dakota Fighting Hawks,South Dakota Coyotes,South Dakota Coyotes,20260211,-4.1,0.64,160.0
 Army Knights,Boston Univ. Terriers,Army Knights,20260211,0.4,0.49,145.0
 Army Knights,Boston Univ. Terriers,Boston Univ. Terriers,20260211,-0.4,0.51,145.0
 Boston Univ. Terriers,Army Knights,Boston Univ. Terriers,20260211,-0.4,0.51,145.0
@@ -807,10 +807,6 @@ North Carolina Tar Heels,Pittsburgh Panthers,North Carolina Tar Heels,20260214,-
 North Carolina Tar Heels,Pittsburgh Panthers,Pittsburgh Panthers,20260214,15.1,0.08999999999999997,145.0
 Pittsburgh Panthers,North Carolina Tar Heels,Pittsburgh Panthers,20260214,15.1,0.08999999999999997,145.0
 Pittsburgh Panthers,North Carolina Tar Heels,North Carolina Tar Heels,20260214,-15.1,0.91,145.0
-Campbell Fighting Camels,Charleston Cougars,Campbell Fighting Camels,20260214,-3.9,0.64,158.0
-Campbell Fighting Camels,Charleston Cougars,Charleston Cougars,20260214,3.9,0.36,158.0
-Charleston Cougars,Campbell Fighting Camels,Charleston Cougars,20260214,3.9,0.36,158.0
-Charleston Cougars,Campbell Fighting Camels,Campbell Fighting Camels,20260214,-3.9,0.64,158.0
 Notre Dame Fighting Irish,Georgia Tech Yellow Jackets,Notre Dame Fighting Irish,20260214,-8.0,0.78,148.0
 Notre Dame Fighting Irish,Georgia Tech Yellow Jackets,Georgia Tech Yellow Jackets,20260214,8.0,0.21999999999999997,148.0
 Georgia Tech Yellow Jackets,Notre Dame Fighting Irish,Georgia Tech Yellow Jackets,20260214,8.0,0.21999999999999997,148.0
@@ -871,10 +867,6 @@ Lindenwood Lions,SE Missouri St Redhawks,Lindenwood Lions,20260214,-4.4,0.66,156
 Lindenwood Lions,SE Missouri St Redhawks,SE Missouri St Redhawks,20260214,4.4,0.33999999999999997,156.0
 SE Missouri St Redhawks,Lindenwood Lions,SE Missouri St Redhawks,20260214,4.4,0.33999999999999997,156.0
 SE Missouri St Redhawks,Lindenwood Lions,Lindenwood Lions,20260214,-4.4,0.66,156.0
-Omaha Mavericks,Denver Pioneers,Omaha Mavericks,20260214,-3.4,0.62,162.0
-Omaha Mavericks,Denver Pioneers,Denver Pioneers,20260214,3.4,0.38,162.0
-Denver Pioneers,Omaha Mavericks,Denver Pioneers,20260214,3.4,0.38,162.0
-Denver Pioneers,Omaha Mavericks,Omaha Mavericks,20260214,-3.4,0.62,162.0
 William & Mary Tribe,Elon Phoenix,William & Mary Tribe,20260214,-8.8,0.77,169.0
 William & Mary Tribe,Elon Phoenix,Elon Phoenix,20260214,8.8,0.22999999999999998,169.0
 Elon Phoenix,William & Mary Tribe,Elon Phoenix,20260214,8.8,0.22999999999999998,169.0
@@ -1187,6 +1179,10 @@ Cincinnati Bearcats,Utah Utes,Cincinnati Bearcats,20260215,-10.1,0.84,142.0
 Cincinnati Bearcats,Utah Utes,Utah Utes,20260215,10.1,0.16000000000000003,142.0
 Utah Utes,Cincinnati Bearcats,Utah Utes,20260215,10.1,0.16000000000000003,142.0
 Utah Utes,Cincinnati Bearcats,Cincinnati Bearcats,20260215,-10.1,0.84,142.0
+Campbell Fighting Camels,Charleston Cougars,Campbell Fighting Camels,20260215,-3.9,0.64,158.0
+Campbell Fighting Camels,Charleston Cougars,Charleston Cougars,20260215,3.9,0.36,158.0
+Charleston Cougars,Campbell Fighting Camels,Charleston Cougars,20260215,3.9,0.36,158.0
+Charleston Cougars,Campbell Fighting Camels,Campbell Fighting Camels,20260215,-3.9,0.64,158.0
 Milwaukee Panthers,Green Bay Phoenix,Milwaukee Panthers,20260215,0.6,0.48,145.0
 Milwaukee Panthers,Green Bay Phoenix,Green Bay Phoenix,20260215,-0.6,0.52,145.0
 Green Bay Phoenix,Milwaukee Panthers,Green Bay Phoenix,20260215,-0.6,0.52,145.0
@@ -1195,6 +1191,10 @@ Temple Owls,North Texas Mean Green,Temple Owls,20260215,-4.5,0.69,128.0
 Temple Owls,North Texas Mean Green,North Texas Mean Green,20260215,4.5,0.31000000000000005,128.0
 North Texas Mean Green,Temple Owls,North Texas Mean Green,20260215,4.5,0.31000000000000005,128.0
 North Texas Mean Green,Temple Owls,Temple Owls,20260215,-4.5,0.69,128.0
+Omaha Mavericks,Denver Pioneers,Omaha Mavericks,20260215,-3.4,0.62,162.0
+Omaha Mavericks,Denver Pioneers,Denver Pioneers,20260215,3.4,0.38,162.0
+Denver Pioneers,Omaha Mavericks,Denver Pioneers,20260215,3.4,0.38,162.0
+Denver Pioneers,Omaha Mavericks,Omaha Mavericks,20260215,-3.4,0.62,162.0
 UAB Blazers,Tulane Green Wave,UAB Blazers,20260215,-7.1,0.75,149.0
 UAB Blazers,Tulane Green Wave,Tulane Green Wave,20260215,7.1,0.25,149.0
 Tulane Green Wave,UAB Blazers,Tulane Green Wave,20260215,7.1,0.25,149.0
