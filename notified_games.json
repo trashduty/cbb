@@ -4870,5 +4870,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0684393910341816,
     "notified_at": "2026-02-10T20:30:27.365516+00:00"
+  },
+  "Army Knights vs. Boston Univ. Terriers|Army Knights|moneyline": {
+    "game": "Army Knights vs. Boston Univ. Terriers",
+    "team": "Army Knights",
+    "edge_type": "moneyline",
+    "edge_value": 0.0339887779634597,
+    "notified_at": "2026-02-10T21:02:56.614114+00:00"
   }
 }
