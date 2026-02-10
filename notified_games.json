@@ -4863,5 +4863,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0337595469683082,
     "notified_at": "2026-02-10T05:19:47.022452+00:00"
+  },
+  "Boston College Eagles vs. Stanford Cardinal|Boston College Eagles|moneyline": {
+    "game": "Boston College Eagles vs. Stanford Cardinal",
+    "team": "Boston College Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0684393910341816,
+    "notified_at": "2026-02-10T20:30:27.365516+00:00"
   }
 }
