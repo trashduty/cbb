@@ -4856,5 +4856,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0431957024379164,
     "notified_at": "2026-02-09T20:29:05.831973+00:00"
+  },
+  "Villanova Wildcats vs. Marquette Golden Eagles|Villanova Wildcats|moneyline": {
+    "game": "Villanova Wildcats vs. Marquette Golden Eagles",
+    "team": "Villanova Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0337595469683082,
+    "notified_at": "2026-02-10T05:19:47.022452+00:00"
   }
 }
