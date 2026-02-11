@@ -4905,5 +4905,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0323457476670052,
     "notified_at": "2026-02-10T22:53:13.865775+00:00"
+  },
+  "San Diego Toreros vs. Portland Pilots|San Diego Toreros|moneyline": {
+    "game": "San Diego Toreros vs. Portland Pilots",
+    "team": "San Diego Toreros",
+    "edge_type": "moneyline",
+    "edge_value": 0.0433255713336219,
+    "notified_at": "2026-02-11T04:36:01.016202+00:00"
   }
 }
