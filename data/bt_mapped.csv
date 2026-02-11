@@ -815,10 +815,6 @@ UNC Greensboro Spartans,Wofford Terriers,UNC Greensboro Spartans,20260214,2.4,0.
 UNC Greensboro Spartans,Wofford Terriers,Wofford Terriers,20260214,-2.4,0.59,156.0
 Wofford Terriers,UNC Greensboro Spartans,Wofford Terriers,20260214,-2.4,0.59,156.0
 Wofford Terriers,UNC Greensboro Spartans,UNC Greensboro Spartans,20260214,2.4,0.41000000000000003,156.0
-Monmouth Hawks,Towson Tigers,Monmouth Hawks,20260214,-3.0,0.64,125.0
-Monmouth Hawks,Towson Tigers,Towson Tigers,20260214,3.0,0.36,125.0
-Towson Tigers,Monmouth Hawks,Towson Tigers,20260214,3.0,0.36,125.0
-Towson Tigers,Monmouth Hawks,Monmouth Hawks,20260214,-3.0,0.64,125.0
 Rhode Island Rams,Fordham Rams,Rhode Island Rams,20260214,-5.3,0.73,125.0
 Rhode Island Rams,Fordham Rams,Fordham Rams,20260214,5.3,0.27,125.0
 Fordham Rams,Rhode Island Rams,Fordham Rams,20260214,5.3,0.27,125.0
@@ -1011,14 +1007,14 @@ Texas State Bobcats,UL Monroe Warhawks,Texas State Bobcats,20260214,-13.7,0.89,1
 Texas State Bobcats,UL Monroe Warhawks,UL Monroe Warhawks,20260214,13.7,0.10999999999999999,148.0
 UL Monroe Warhawks,Texas State Bobcats,UL Monroe Warhawks,20260214,13.7,0.10999999999999999,148.0
 UL Monroe Warhawks,Texas State Bobcats,Texas State Bobcats,20260214,-13.7,0.89,148.0
+Gardner-Webb Bulldogs,High Point Panthers,Gardner-Webb Bulldogs,20260214,22.5,0.040000000000000036,162.0
+Gardner-Webb Bulldogs,High Point Panthers,High Point Panthers,20260214,-22.5,0.96,162.0
+High Point Panthers,Gardner-Webb Bulldogs,High Point Panthers,20260214,-22.5,0.96,162.0
+High Point Panthers,Gardner-Webb Bulldogs,Gardner-Webb Bulldogs,20260214,22.5,0.040000000000000036,162.0
 Le Moyne Dolphins,Chicago St Cougars,Le Moyne Dolphins,20260214,-10.5,0.84,147.0
 Le Moyne Dolphins,Chicago St Cougars,Chicago St Cougars,20260214,10.5,0.16000000000000003,147.0
 Chicago St Cougars,Le Moyne Dolphins,Chicago St Cougars,20260214,10.5,0.16000000000000003,147.0
 Chicago St Cougars,Le Moyne Dolphins,Le Moyne Dolphins,20260214,-10.5,0.84,147.0
-High Point Panthers,Gardner-Webb Bulldogs,High Point Panthers,20260214,-34.4,0.99,163.0
-High Point Panthers,Gardner-Webb Bulldogs,Gardner-Webb Bulldogs,20260214,34.4,0.010000000000000009,163.0
-Gardner-Webb Bulldogs,High Point Panthers,Gardner-Webb Bulldogs,20260214,34.4,0.010000000000000009,163.0
-Gardner-Webb Bulldogs,High Point Panthers,High Point Panthers,20260214,-34.4,0.99,163.0
 Howard Bison,Maryland-Eastern Shore Hawks,Howard Bison,20260214,-12.3,0.9,127.0
 Howard Bison,Maryland-Eastern Shore Hawks,Maryland-Eastern Shore Hawks,20260214,12.3,0.09999999999999998,127.0
 Maryland-Eastern Shore Hawks,Howard Bison,Maryland-Eastern Shore Hawks,20260214,12.3,0.09999999999999998,127.0
@@ -1115,6 +1111,10 @@ Valparaiso Beacons,Indiana St Sycamores,Valparaiso Beacons,20260215,-6.1,0.73,14
 Valparaiso Beacons,Indiana St Sycamores,Indiana St Sycamores,20260215,6.1,0.27,140.0
 Indiana St Sycamores,Valparaiso Beacons,Indiana St Sycamores,20260215,6.1,0.27,140.0
 Indiana St Sycamores,Valparaiso Beacons,Valparaiso Beacons,20260215,-6.1,0.73,140.0
+Monmouth Hawks,Towson Tigers,Monmouth Hawks,20260215,-3.0,0.64,125.0
+Monmouth Hawks,Towson Tigers,Towson Tigers,20260215,3.0,0.36,125.0
+Towson Tigers,Monmouth Hawks,Towson Tigers,20260215,3.0,0.36,125.0
+Towson Tigers,Monmouth Hawks,Monmouth Hawks,20260215,-3.0,0.64,125.0
 Marist Red Foxes,Siena Saints,Marist Red Foxes,20260215,-5.1,0.71,127.0
 Marist Red Foxes,Siena Saints,Siena Saints,20260215,5.1,0.29000000000000004,127.0
 Siena Saints,Marist Red Foxes,Siena Saints,20260215,5.1,0.29000000000000004,127.0
