@@ -4933,5 +4933,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0329375785236801,
     "notified_at": "2026-02-11T21:46:06.873239+00:00"
+  },
+  "SIU-Edwardsville Cougars vs. SE Missouri St Redhawks|SIU-Edwardsville Cougars|moneyline": {
+    "game": "SIU-Edwardsville Cougars vs. SE Missouri St Redhawks",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "moneyline",
+    "edge_value": 0.0732160323139444,
+    "notified_at": "2026-02-11T22:12:38.294579+00:00"
   }
 }
