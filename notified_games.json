@@ -4926,5 +4926,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0323049172414593,
     "notified_at": "2026-02-11T21:17:42.937218+00:00"
+  },
+  "Green Bay Phoenix vs. Fort Wayne Mastodons|Green Bay Phoenix|moneyline": {
+    "game": "Green Bay Phoenix vs. Fort Wayne Mastodons",
+    "team": "Green Bay Phoenix",
+    "edge_type": "moneyline",
+    "edge_value": 0.0329375785236801,
+    "notified_at": "2026-02-11T21:46:06.873239+00:00"
   }
 }
