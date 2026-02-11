@@ -4912,5 +4912,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0433255713336219,
     "notified_at": "2026-02-11T04:36:01.016202+00:00"
+  },
+  "Charleston Cougars vs. Hofstra Pride|Hofstra Pride|moneyline": {
+    "game": "Charleston Cougars vs. Hofstra Pride",
+    "team": "Hofstra Pride",
+    "edge_type": "moneyline",
+    "edge_value": 0.0314402223345378,
+    "notified_at": "2026-02-11T21:17:42.502975+00:00"
+  },
+  "Lindenwood Lions vs. Tenn-Martin Skyhawks|Lindenwood Lions|moneyline": {
+    "game": "Lindenwood Lions vs. Tenn-Martin Skyhawks",
+    "team": "Lindenwood Lions",
+    "edge_type": "moneyline",
+    "edge_value": 0.0323049172414593,
+    "notified_at": "2026-02-11T21:17:42.937218+00:00"
   }
 }
