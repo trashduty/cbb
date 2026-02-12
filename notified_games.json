@@ -4940,5 +4940,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0732160323139444,
     "notified_at": "2026-02-11T22:12:38.294579+00:00"
+  },
+  "Longwood Lancers vs. UNC Asheville Bulldogs|UNC Asheville Bulldogs|moneyline": {
+    "game": "Longwood Lancers vs. UNC Asheville Bulldogs",
+    "team": "UNC Asheville Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0341160922290672,
+    "notified_at": "2026-02-12T03:38:52.885998+00:00"
+  },
+  "New Haven Chargers vs. Central Connecticut St Blue Devils|Central Connecticut St Blue Devils|moneyline": {
+    "game": "New Haven Chargers vs. Central Connecticut St Blue Devils",
+    "team": "Central Connecticut St Blue Devils",
+    "edge_type": "moneyline",
+    "edge_value": 0.042289746901292,
+    "notified_at": "2026-02-12T03:38:53.144551+00:00"
   }
 }
