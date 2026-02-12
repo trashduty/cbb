@@ -4954,5 +4954,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.042289746901292,
     "notified_at": "2026-02-12T03:38:53.144551+00:00"
+  },
+  "New Hampshire Wildcats vs. NJIT Highlanders|NJIT Highlanders|moneyline": {
+    "game": "New Hampshire Wildcats vs. NJIT Highlanders",
+    "team": "NJIT Highlanders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0360387149664103,
+    "notified_at": "2026-02-12T05:16:29.077903+00:00"
   }
 }
