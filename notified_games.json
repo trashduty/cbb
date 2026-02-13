@@ -4975,5 +4975,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0392025350429193,
     "notified_at": "2026-02-13T05:07:42.524261+00:00"
+  },
+  "North Carolina Tar Heels vs. Pittsburgh Panthers|North Carolina Tar Heels|moneyline": {
+    "game": "North Carolina Tar Heels vs. Pittsburgh Panthers",
+    "team": "North Carolina Tar Heels",
+    "edge_type": "moneyline",
+    "edge_value": 0.0605642916896085,
+    "notified_at": "2026-02-13T16:20:48.039224+00:00"
+  },
+  "Baylor Bears vs. Louisville Cardinals|Louisville Cardinals|moneyline": {
+    "game": "Baylor Bears vs. Louisville Cardinals",
+    "team": "Louisville Cardinals",
+    "edge_type": "moneyline",
+    "edge_value": 0.0496670211854284,
+    "notified_at": "2026-02-13T16:20:48.297132+00:00"
   }
 }
