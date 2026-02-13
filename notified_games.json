@@ -4989,5 +4989,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0496670211854284,
     "notified_at": "2026-02-13T16:20:48.297132+00:00"
+  },
+  "St. Bonaventure Bonnies vs. Duquesne Dukes|Duquesne Dukes|moneyline": {
+    "game": "St. Bonaventure Bonnies vs. Duquesne Dukes",
+    "team": "Duquesne Dukes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0584538563116378,
+    "notified_at": "2026-02-13T22:58:09.465866+00:00"
   }
 }
