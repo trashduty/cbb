@@ -4961,5 +4961,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0360387149664103,
     "notified_at": "2026-02-12T05:16:29.077903+00:00"
+  },
+  "Wisconsin Badgers vs. Michigan St Spartans|Michigan St Spartans|moneyline": {
+    "game": "Wisconsin Badgers vs. Michigan St Spartans",
+    "team": "Michigan St Spartans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0409786801660249,
+    "notified_at": "2026-02-13T03:38:15.109129+00:00"
   }
 }
