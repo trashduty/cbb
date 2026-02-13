@@ -4968,5 +4968,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0409786801660249,
     "notified_at": "2026-02-13T03:38:15.109129+00:00"
+  },
+  "Princeton Tigers vs. Cornell Big Red|Princeton Tigers|moneyline": {
+    "game": "Princeton Tigers vs. Cornell Big Red",
+    "team": "Princeton Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0392025350429193,
+    "notified_at": "2026-02-13T05:07:42.524261+00:00"
   }
 }
