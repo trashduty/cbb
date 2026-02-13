@@ -4996,5 +4996,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0584538563116378,
     "notified_at": "2026-02-13T22:58:09.465866+00:00"
+  },
+  "East Tennessee St Buccaneers vs. Samford Bulldogs|East Tennessee St Buccaneers|moneyline": {
+    "game": "East Tennessee St Buccaneers vs. Samford Bulldogs",
+    "team": "East Tennessee St Buccaneers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0456767601683748,
+    "notified_at": "2026-02-13T23:43:30.227118+00:00"
   }
 }
