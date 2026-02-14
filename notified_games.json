@@ -5045,5 +5045,47 @@
     "edge_type": "moneyline",
     "edge_value": 0.0525778987392222,
     "notified_at": "2026-02-14T04:21:52.018902+00:00"
+  },
+  "Jackson St Tigers vs. Florida A&M Rattlers|Jackson St Tigers|moneyline": {
+    "game": "Jackson St Tigers vs. Florida A&M Rattlers",
+    "team": "Jackson St Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0977395081858615,
+    "notified_at": "2026-02-14T04:57:35.273219+00:00"
+  },
+  "South Carolina St Bulldogs vs. Morgan St Bears|South Carolina St Bulldogs|moneyline": {
+    "game": "South Carolina St Bulldogs vs. Morgan St Bears",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0661330485741091,
+    "notified_at": "2026-02-14T04:57:35.591529+00:00"
+  },
+  "Northwestern St Demons vs. SE Louisiana Lions|Northwestern St Demons|moneyline": {
+    "game": "Northwestern St Demons vs. SE Louisiana Lions",
+    "team": "Northwestern St Demons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0504030532404152,
+    "notified_at": "2026-02-14T04:57:35.950204+00:00"
+  },
+  "SIU-Edwardsville Cougars vs. Tenn-Martin Skyhawks|SIU-Edwardsville Cougars|moneyline": {
+    "game": "SIU-Edwardsville Cougars vs. Tenn-Martin Skyhawks",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "moneyline",
+    "edge_value": 0.060307710724109,
+    "notified_at": "2026-02-14T04:57:36.201828+00:00"
+  },
+  "Texas Southern Tigers vs. Grambling St Tigers|Texas Southern Tigers|moneyline": {
+    "game": "Texas Southern Tigers vs. Grambling St Tigers",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0531270722566544,
+    "notified_at": "2026-02-14T04:57:36.535521+00:00"
+  },
+  "UT Rio Grande Valley Vaqueros vs. Stephen F. Austin Lumberjacks|Stephen F. Austin Lumberjacks|moneyline": {
+    "game": "UT Rio Grande Valley Vaqueros vs. Stephen F. Austin Lumberjacks",
+    "team": "Stephen F. Austin Lumberjacks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0331166936599822,
+    "notified_at": "2026-02-14T04:57:36.790856+00:00"
   }
 }
