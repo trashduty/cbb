@@ -5094,5 +5094,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0671448790849703,
     "notified_at": "2026-02-14T21:27:03.266217+00:00"
+  },
+  "UIC Flames vs. Illinois St Redbirds|UIC Flames|moneyline": {
+    "game": "UIC Flames vs. Illinois St Redbirds",
+    "team": "UIC Flames",
+    "edge_type": "moneyline",
+    "edge_value": 0.0544463629076419,
+    "notified_at": "2026-02-14T21:41:54.513902+00:00"
   }
 }
