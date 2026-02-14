@@ -5031,5 +5031,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0300452888200416,
     "notified_at": "2026-02-14T01:31:54.711086+00:00"
+  },
+  "Utah Tech Trailblazers vs. Cal Baptist Lancers|Utah Tech Trailblazers|moneyline": {
+    "game": "Utah Tech Trailblazers vs. Cal Baptist Lancers",
+    "team": "Utah Tech Trailblazers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0396694695656017,
+    "notified_at": "2026-02-14T03:34:17.127274+00:00"
   }
 }
