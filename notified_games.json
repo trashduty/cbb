@@ -5024,5 +5024,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0319532802237008,
     "notified_at": "2026-02-14T00:50:14.119569+00:00"
+  },
+  "Montana Grizzlies vs. Montana St Bobcats|Montana Grizzlies|moneyline": {
+    "game": "Montana Grizzlies vs. Montana St Bobcats",
+    "team": "Montana Grizzlies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0300452888200416,
+    "notified_at": "2026-02-14T01:31:54.711086+00:00"
   }
 }
