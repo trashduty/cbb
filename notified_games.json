@@ -5038,5 +5038,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0396694695656017,
     "notified_at": "2026-02-14T03:34:17.127274+00:00"
+  },
+  "Le Moyne Dolphins vs. Chicago St Cougars|Le Moyne Dolphins|moneyline": {
+    "game": "Le Moyne Dolphins vs. Chicago St Cougars",
+    "team": "Le Moyne Dolphins",
+    "edge_type": "moneyline",
+    "edge_value": 0.0525778987392222,
+    "notified_at": "2026-02-14T04:21:52.018902+00:00"
   }
 }
