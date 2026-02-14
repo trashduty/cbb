@@ -5087,5 +5087,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0331166936599822,
     "notified_at": "2026-02-14T04:57:36.790856+00:00"
+  },
+  "Florida Atlantic Owls vs. South Florida Bulls|Florida Atlantic Owls|moneyline": {
+    "game": "Florida Atlantic Owls vs. South Florida Bulls",
+    "team": "Florida Atlantic Owls",
+    "edge_type": "moneyline",
+    "edge_value": 0.0671448790849703,
+    "notified_at": "2026-02-14T21:27:03.266217+00:00"
   }
 }
