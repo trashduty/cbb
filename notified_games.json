@@ -5003,5 +5003,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0456767601683748,
     "notified_at": "2026-02-13T23:43:30.227118+00:00"
+  },
+  "UT-Arlington Mavericks vs. Southern Utah Thunderbirds|UT-Arlington Mavericks|moneyline": {
+    "game": "UT-Arlington Mavericks vs. Southern Utah Thunderbirds",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0571423463204732,
+    "notified_at": "2026-02-14T00:50:13.618955+00:00"
+  },
+  "Abilene Christian Wildcats vs. Tarleton State Texans|Tarleton State Texans|moneyline": {
+    "game": "Abilene Christian Wildcats vs. Tarleton State Texans",
+    "team": "Tarleton State Texans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0311872466805412,
+    "notified_at": "2026-02-14T00:50:13.842909+00:00"
+  },
+  "N Colorado Bears vs. Portland St Vikings|Portland St Vikings|moneyline": {
+    "game": "N Colorado Bears vs. Portland St Vikings",
+    "team": "Portland St Vikings",
+    "edge_type": "moneyline",
+    "edge_value": 0.0319532802237008,
+    "notified_at": "2026-02-14T00:50:14.119569+00:00"
   }
 }
