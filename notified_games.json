@@ -5108,5 +5108,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0521703154784845,
     "notified_at": "2026-02-14T21:53:52.475933+00:00"
+  },
+  "Canisius Golden Griffins vs. Manhattan Jaspers|Canisius Golden Griffins|moneyline": {
+    "game": "Canisius Golden Griffins vs. Manhattan Jaspers",
+    "team": "Canisius Golden Griffins",
+    "edge_type": "moneyline",
+    "edge_value": 0.0393242885701753,
+    "notified_at": "2026-02-15T01:32:09.747340+00:00"
   }
 }
