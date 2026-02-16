@@ -5129,5 +5129,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0538871984832366,
     "notified_at": "2026-02-16T02:36:42.568407+00:00"
+  },
+  "Old Dominion Monarchs vs. Louisiana Ragin' Cajuns|Old Dominion Monarchs|moneyline": {
+    "game": "Old Dominion Monarchs vs. Louisiana Ragin' Cajuns",
+    "team": "Old Dominion Monarchs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0367077816767826,
+    "notified_at": "2026-02-16T03:38:19.934731+00:00"
+  },
+  "Texas Southern Tigers vs. Southern Jaguars|Texas Southern Tigers|moneyline": {
+    "game": "Texas Southern Tigers vs. Southern Jaguars",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.094641766387943,
+    "notified_at": "2026-02-16T03:38:20.213903+00:00"
   }
 }
