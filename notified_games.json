@@ -5122,5 +5122,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0301117638204436,
     "notified_at": "2026-02-15T22:57:24.456916+00:00"
+  },
+  "Alcorn St Braves vs. Florida A&M Rattlers|Alcorn St Braves|moneyline": {
+    "game": "Alcorn St Braves vs. Florida A&M Rattlers",
+    "team": "Alcorn St Braves",
+    "edge_type": "moneyline",
+    "edge_value": 0.0538871984832366,
+    "notified_at": "2026-02-16T02:36:42.568407+00:00"
   }
 }
