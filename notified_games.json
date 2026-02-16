@@ -5150,5 +5150,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0325445273863827,
     "notified_at": "2026-02-16T19:43:52.954484+00:00"
+  },
+  "Iowa Hawkeyes vs. Nebraska Cornhuskers|Nebraska Cornhuskers|moneyline": {
+    "game": "Iowa Hawkeyes vs. Nebraska Cornhuskers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0393601139732615,
+    "notified_at": "2026-02-16T22:27:38.743028+00:00"
   }
 }
