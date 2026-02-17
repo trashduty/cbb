@@ -5171,5 +5171,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0411454558483881,
     "notified_at": "2026-02-17T01:32:24.815890+00:00"
+  },
+  "Oregon Ducks vs. Minnesota Golden Gophers|Minnesota Golden Gophers|moneyline": {
+    "game": "Oregon Ducks vs. Minnesota Golden Gophers",
+    "team": "Minnesota Golden Gophers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0326999900274692,
+    "notified_at": "2026-02-17T14:24:56.019990+00:00"
   }
 }
