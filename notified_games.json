@@ -5164,5 +5164,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0440303186839057,
     "notified_at": "2026-02-16T23:29:45.590727+00:00"
+  },
+  "Ohio State Buckeyes vs. Wisconsin Badgers|Ohio State Buckeyes|moneyline": {
+    "game": "Ohio State Buckeyes vs. Wisconsin Badgers",
+    "team": "Ohio State Buckeyes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0411454558483881,
+    "notified_at": "2026-02-17T01:32:24.815890+00:00"
   }
 }
