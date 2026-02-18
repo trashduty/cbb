@@ -5178,5 +5178,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0326999900274692,
     "notified_at": "2026-02-17T14:24:56.019990+00:00"
+  },
+  "Holy Cross Crusaders vs. Lafayette Leopards|Holy Cross Crusaders|moneyline": {
+    "game": "Holy Cross Crusaders vs. Lafayette Leopards",
+    "team": "Holy Cross Crusaders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0312972717871965,
+    "notified_at": "2026-02-18T05:08:31.537661+00:00"
+  },
+  "Coastal Carolina Chanticleers vs. James Madison Dukes|Coastal Carolina Chanticleers|moneyline": {
+    "game": "Coastal Carolina Chanticleers vs. James Madison Dukes",
+    "team": "Coastal Carolina Chanticleers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0522464933987059,
+    "notified_at": "2026-02-18T05:08:31.789179+00:00"
+  },
+  "Fordham Rams vs. Loyola (Chi) Ramblers|Fordham Rams|moneyline": {
+    "game": "Fordham Rams vs. Loyola (Chi) Ramblers",
+    "team": "Fordham Rams",
+    "edge_type": "moneyline",
+    "edge_value": 0.0327837093439264,
+    "notified_at": "2026-02-18T05:08:32.021988+00:00"
+  },
+  "Valparaiso Beacons vs. Bradley Braves|Valparaiso Beacons|moneyline": {
+    "game": "Valparaiso Beacons vs. Bradley Braves",
+    "team": "Valparaiso Beacons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0701597666068125,
+    "notified_at": "2026-02-18T05:08:32.308885+00:00"
+  },
+  "South Carolina St Bulldogs vs. North Carolina Central Eagles|South Carolina St Bulldogs|moneyline": {
+    "game": "South Carolina St Bulldogs vs. North Carolina Central Eagles",
+    "team": "South Carolina St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0849728049194014,
+    "notified_at": "2026-02-18T05:08:32.512027+00:00"
   }
 }
