@@ -5227,5 +5227,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0356074550073525,
     "notified_at": "2026-02-18T19:49:08.833275+00:00"
+  },
+  "Sacramento St Hornets vs. Eastern Washington Eagles|Sacramento St Hornets|moneyline": {
+    "game": "Sacramento St Hornets vs. Eastern Washington Eagles",
+    "team": "Sacramento St Hornets",
+    "edge_type": "moneyline",
+    "edge_value": 0.044231047816748,
+    "notified_at": "2026-02-18T20:17:45.436963+00:00"
   }
 }
