@@ -5213,5 +5213,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0849728049194014,
     "notified_at": "2026-02-18T05:08:32.512027+00:00"
+  },
+  "Mississippi St Bulldogs vs. Auburn Tigers|Mississippi St Bulldogs|moneyline": {
+    "game": "Mississippi St Bulldogs vs. Auburn Tigers",
+    "team": "Mississippi St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0333290824827609,
+    "notified_at": "2026-02-18T07:35:05.742133+00:00"
   }
 }
