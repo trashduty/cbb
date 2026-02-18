@@ -5220,5 +5220,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0333290824827609,
     "notified_at": "2026-02-18T07:35:05.742133+00:00"
+  },
+  "Georgia St Panthers vs. Georgia Southern Eagles|Georgia St Panthers|moneyline": {
+    "game": "Georgia St Panthers vs. Georgia Southern Eagles",
+    "team": "Georgia St Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0356074550073525,
+    "notified_at": "2026-02-18T19:49:08.833275+00:00"
   }
 }
