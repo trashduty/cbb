@@ -5262,5 +5262,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0385420490562397,
     "notified_at": "2026-02-19T03:37:12.020567+00:00"
+  },
+  "Weber State Wildcats vs. Montana St Bobcats|Montana St Bobcats|moneyline": {
+    "game": "Weber State Wildcats vs. Montana St Bobcats",
+    "team": "Montana St Bobcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0324240023676333,
+    "notified_at": "2026-02-19T15:21:27.466089+00:00"
   }
 }
