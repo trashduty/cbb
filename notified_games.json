@@ -5255,5 +5255,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0424447919374946,
     "notified_at": "2026-02-19T01:32:14.966895+00:00"
+  },
+  "Central Connecticut St Blue Devils vs. Le Moyne Dolphins|Le Moyne Dolphins|moneyline": {
+    "game": "Central Connecticut St Blue Devils vs. Le Moyne Dolphins",
+    "team": "Le Moyne Dolphins",
+    "edge_type": "moneyline",
+    "edge_value": 0.0385420490562397,
+    "notified_at": "2026-02-19T03:37:12.020567+00:00"
   }
 }
