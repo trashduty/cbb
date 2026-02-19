@@ -5234,5 +5234,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.044231047816748,
     "notified_at": "2026-02-18T20:17:45.436963+00:00"
+  },
+  "Bethune-Cookman Wildcats vs. Alabama St Hornets|Bethune-Cookman Wildcats|moneyline": {
+    "game": "Bethune-Cookman Wildcats vs. Alabama St Hornets",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0553873456658312,
+    "notified_at": "2026-02-19T01:32:14.291801+00:00"
+  },
+  "Eastern Illinois Panthers vs. Morehead St Eagles|Eastern Illinois Panthers|moneyline": {
+    "game": "Eastern Illinois Panthers vs. Morehead St Eagles",
+    "team": "Eastern Illinois Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0449971604765905,
+    "notified_at": "2026-02-19T01:32:14.674206+00:00"
+  },
+  "Idaho State Bengals vs. Montana Grizzlies|Montana Grizzlies|moneyline": {
+    "game": "Idaho State Bengals vs. Montana Grizzlies",
+    "team": "Montana Grizzlies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0424447919374946,
+    "notified_at": "2026-02-19T01:32:14.966895+00:00"
   }
 }
