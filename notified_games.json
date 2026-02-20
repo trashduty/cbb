@@ -5290,5 +5290,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0307304735658043,
     "notified_at": "2026-02-20T23:29:07.138086+00:00"
+  },
+  "Fordham Rams vs. Davidson Wildcats|Davidson Wildcats|moneyline": {
+    "game": "Fordham Rams vs. Davidson Wildcats",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0704804025626998,
+    "notified_at": "2026-02-20T23:45:28.452988+00:00"
   }
 }
