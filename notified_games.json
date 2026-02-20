@@ -5269,5 +5269,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0324240023676333,
     "notified_at": "2026-02-19T15:21:27.466089+00:00"
+  },
+  "Iona Gaels vs. Saint Peter's Peacocks|Iona Gaels|moneyline": {
+    "game": "Iona Gaels vs. Saint Peter's Peacocks",
+    "team": "Iona Gaels",
+    "edge_type": "moneyline",
+    "edge_value": 0.0477644137428985,
+    "notified_at": "2026-02-20T07:58:04.793741+00:00"
   }
 }
