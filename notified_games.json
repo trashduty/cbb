@@ -5283,5 +5283,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0960940159636395,
     "notified_at": "2026-02-20T22:45:49.243910+00:00"
+  },
+  "Saint Joseph's Hawks vs. Loyola (Chi) Ramblers|Saint Joseph's Hawks|moneyline": {
+    "game": "Saint Joseph's Hawks vs. Loyola (Chi) Ramblers",
+    "team": "Saint Joseph's Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0307304735658043,
+    "notified_at": "2026-02-20T23:29:07.138086+00:00"
   }
 }
