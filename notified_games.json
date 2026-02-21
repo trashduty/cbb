@@ -5409,5 +5409,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0678816730244718,
     "notified_at": "2026-02-21T14:44:07.050907+00:00"
+  },
+  "Drexel Dragons vs. Towson Tigers|Drexel Dragons|moneyline": {
+    "game": "Drexel Dragons vs. Towson Tigers",
+    "team": "Drexel Dragons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0432918506888234,
+    "notified_at": "2026-02-21T22:42:55.875928+00:00"
   }
 }
