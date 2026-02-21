@@ -5402,5 +5402,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0337618944073003,
     "notified_at": "2026-02-21T06:25:48.413670+00:00"
+  },
+  "Long Beach St 49ers vs. CSU Northridge Matadors|Long Beach St 49ers|moneyline": {
+    "game": "Long Beach St 49ers vs. CSU Northridge Matadors",
+    "team": "Long Beach St 49ers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0678816730244718,
+    "notified_at": "2026-02-21T14:44:07.050907+00:00"
   }
 }
