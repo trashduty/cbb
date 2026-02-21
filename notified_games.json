@@ -5367,5 +5367,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0304214894722306,
     "notified_at": "2026-02-21T03:31:48.970991+00:00"
+  },
+  "South Carolina Gamecocks vs. Mississippi St Bulldogs|Mississippi St Bulldogs|moneyline": {
+    "game": "South Carolina Gamecocks vs. Mississippi St Bulldogs",
+    "team": "Mississippi St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0343646334599437,
+    "notified_at": "2026-02-21T04:18:09.363802+00:00"
+  },
+  "Pittsburgh Panthers vs. Notre Dame Fighting Irish|Notre Dame Fighting Irish|moneyline": {
+    "game": "Pittsburgh Panthers vs. Notre Dame Fighting Irish",
+    "team": "Notre Dame Fighting Irish",
+    "edge_type": "moneyline",
+    "edge_value": 0.0310380340707024,
+    "notified_at": "2026-02-21T04:18:09.713634+00:00"
   }
 }
