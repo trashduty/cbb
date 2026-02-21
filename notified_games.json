@@ -5332,5 +5332,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0509629396367818,
     "notified_at": "2026-02-21T00:48:29.011304+00:00"
+  },
+  "UMass Lowell River Hawks vs. Binghamton Bearcats|UMass Lowell River Hawks|moneyline": {
+    "game": "UMass Lowell River Hawks vs. Binghamton Bearcats",
+    "team": "UMass Lowell River Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0329133064482585,
+    "notified_at": "2026-02-21T03:31:47.510901+00:00"
+  },
+  "Alcorn St Braves vs. Jackson St Tigers|Alcorn St Braves|moneyline": {
+    "game": "Alcorn St Braves vs. Jackson St Tigers",
+    "team": "Alcorn St Braves",
+    "edge_type": "moneyline",
+    "edge_value": 0.0434347174128075,
+    "notified_at": "2026-02-21T03:31:47.773625+00:00"
+  },
+  "USC Trojans vs. Oregon Ducks|USC Trojans|moneyline": {
+    "game": "USC Trojans vs. Oregon Ducks",
+    "team": "USC Trojans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0449497182456315,
+    "notified_at": "2026-02-21T03:31:48.384383+00:00"
+  },
+  "South Carolina Upstate Spartans vs. Presbyterian Blue Hose|South Carolina Upstate Spartans|moneyline": {
+    "game": "South Carolina Upstate Spartans vs. Presbyterian Blue Hose",
+    "team": "South Carolina Upstate Spartans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0389015197764744,
+    "notified_at": "2026-02-21T03:31:48.693087+00:00"
+  },
+  "Bethune-Cookman Wildcats vs. Alabama A&M Bulldogs|Bethune-Cookman Wildcats|moneyline": {
+    "game": "Bethune-Cookman Wildcats vs. Alabama A&M Bulldogs",
+    "team": "Bethune-Cookman Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0304214894722306,
+    "notified_at": "2026-02-21T03:31:48.970991+00:00"
   }
 }
