@@ -5381,5 +5381,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0310380340707024,
     "notified_at": "2026-02-21T04:18:09.713634+00:00"
+  },
+  "Bradley Braves vs. Illinois St Redbirds|Illinois St Redbirds|moneyline": {
+    "game": "Bradley Braves vs. Illinois St Redbirds",
+    "team": "Illinois St Redbirds",
+    "edge_type": "moneyline",
+    "edge_value": 0.0349181441019093,
+    "notified_at": "2026-02-21T05:17:16.741388+00:00"
+  },
+  "Oklahoma Sooners vs. Texas A&M Aggies|Oklahoma Sooners|moneyline": {
+    "game": "Oklahoma Sooners vs. Texas A&M Aggies",
+    "team": "Oklahoma Sooners",
+    "edge_type": "moneyline",
+    "edge_value": 0.0338148040095035,
+    "notified_at": "2026-02-21T05:17:17.028677+00:00"
   }
 }
