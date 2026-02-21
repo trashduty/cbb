@@ -5297,5 +5297,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0704804025626998,
     "notified_at": "2026-02-20T23:45:28.452988+00:00"
+  },
+  "South Dakota St Jackrabbits vs. North Dakota Fighting Hawks|South Dakota St Jackrabbits|moneyline": {
+    "game": "South Dakota St Jackrabbits vs. North Dakota Fighting Hawks",
+    "team": "South Dakota St Jackrabbits",
+    "edge_type": "moneyline",
+    "edge_value": 0.0521839450411322,
+    "notified_at": "2026-02-21T00:10:31.187148+00:00"
+  },
+  "South Alabama Jaguars vs. Troy Trojans|South Alabama Jaguars|moneyline": {
+    "game": "South Alabama Jaguars vs. Troy Trojans",
+    "team": "South Alabama Jaguars",
+    "edge_type": "moneyline",
+    "edge_value": 0.0777483235953674,
+    "notified_at": "2026-02-21T00:10:31.783139+00:00"
+  },
+  "Liberty Flames vs. Western Kentucky Hilltoppers|Liberty Flames|moneyline": {
+    "game": "Liberty Flames vs. Western Kentucky Hilltoppers",
+    "team": "Liberty Flames",
+    "edge_type": "moneyline",
+    "edge_value": 0.0378210240059043,
+    "notified_at": "2026-02-21T00:10:32.027465+00:00"
   }
 }
