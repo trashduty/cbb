@@ -5395,5 +5395,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0338148040095035,
     "notified_at": "2026-02-21T05:17:17.028677+00:00"
+  },
+  "Miss Valley St Delta Devils vs. Texas Southern Tigers|Texas Southern Tigers|moneyline": {
+    "game": "Miss Valley St Delta Devils vs. Texas Southern Tigers",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0337618944073003,
+    "notified_at": "2026-02-21T06:25:48.413670+00:00"
   }
 }
