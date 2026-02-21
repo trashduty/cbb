@@ -5318,5 +5318,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0378210240059043,
     "notified_at": "2026-02-21T00:10:32.027465+00:00"
+  },
+  "Oral Roberts Golden Eagles vs. South Dakota Coyotes|South Dakota Coyotes|moneyline": {
+    "game": "Oral Roberts Golden Eagles vs. South Dakota Coyotes",
+    "team": "South Dakota Coyotes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0492995861460614,
+    "notified_at": "2026-02-21T00:48:28.498805+00:00"
+  },
+  "Grand Canyon Antelopes vs. Wyoming Cowboys|Grand Canyon Antelopes|moneyline": {
+    "game": "Grand Canyon Antelopes vs. Wyoming Cowboys",
+    "team": "Grand Canyon Antelopes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0509629396367818,
+    "notified_at": "2026-02-21T00:48:29.011304+00:00"
   }
 }
