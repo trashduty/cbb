@@ -5444,5 +5444,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0503574663504428,
     "notified_at": "2026-02-22T06:29:30.385863+00:00"
+  },
+  "North Carolina Tar Heels vs. Louisville Cardinals|Louisville Cardinals|moneyline": {
+    "game": "North Carolina Tar Heels vs. Louisville Cardinals",
+    "team": "Louisville Cardinals",
+    "edge_type": "moneyline",
+    "edge_value": 0.0519811424810411,
+    "notified_at": "2026-02-22T17:10:49.203272+00:00"
   }
 }
