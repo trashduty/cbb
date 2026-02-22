@@ -5416,5 +5416,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0432918506888234,
     "notified_at": "2026-02-21T22:42:55.875928+00:00"
+  },
+  "Cleveland St Vikings vs. Fort Wayne Mastodons|Cleveland St Vikings|moneyline": {
+    "game": "Cleveland St Vikings vs. Fort Wayne Mastodons",
+    "team": "Cleveland St Vikings",
+    "edge_type": "moneyline",
+    "edge_value": 0.0337796752953128,
+    "notified_at": "2026-02-22T00:52:13.092420+00:00"
+  },
+  "Oakland Golden Grizzlies vs. Milwaukee Panthers|Oakland Golden Grizzlies|moneyline": {
+    "game": "Oakland Golden Grizzlies vs. Milwaukee Panthers",
+    "team": "Oakland Golden Grizzlies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0426453414132014,
+    "notified_at": "2026-02-22T00:52:13.465129+00:00"
   }
 }
