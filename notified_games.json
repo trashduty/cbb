@@ -5430,5 +5430,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0426453414132014,
     "notified_at": "2026-02-22T00:52:13.465129+00:00"
+  },
+  "Marist Red Foxes vs. Sacred Heart Pioneers|Marist Red Foxes|moneyline": {
+    "game": "Marist Red Foxes vs. Sacred Heart Pioneers",
+    "team": "Marist Red Foxes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0471265676390957,
+    "notified_at": "2026-02-22T03:37:13.230095+00:00"
   }
 }
