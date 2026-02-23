@@ -5451,5 +5451,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0519811424810411,
     "notified_at": "2026-02-22T17:10:49.203272+00:00"
+  },
+  "Texas Tech Red Raiders vs. Cincinnati Bearcats|Texas Tech Red Raiders|moneyline": {
+    "game": "Texas Tech Red Raiders vs. Cincinnati Bearcats",
+    "team": "Texas Tech Red Raiders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0402632387836529,
+    "notified_at": "2026-02-23T22:48:14.690310+00:00"
+  },
+  "Oklahoma Sooners vs. Auburn Tigers|Oklahoma Sooners|moneyline": {
+    "game": "Oklahoma Sooners vs. Auburn Tigers",
+    "team": "Oklahoma Sooners",
+    "edge_type": "moneyline",
+    "edge_value": 0.0316942767834841,
+    "notified_at": "2026-02-23T22:48:15.366936+00:00"
+  },
+  "UCLA Bruins vs. USC Trojans|UCLA Bruins|moneyline": {
+    "game": "UCLA Bruins vs. USC Trojans",
+    "team": "UCLA Bruins",
+    "edge_type": "moneyline",
+    "edge_value": 0.032590093281186,
+    "notified_at": "2026-02-23T22:48:15.759039+00:00"
   }
 }
