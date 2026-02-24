@@ -5486,5 +5486,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0332761018308609,
     "notified_at": "2026-02-24T06:05:19.918720+00:00"
+  },
+  "San Diego St Aztecs vs. Utah State Aggies|Utah State Aggies|moneyline": {
+    "game": "San Diego St Aztecs vs. Utah State Aggies",
+    "team": "Utah State Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0405825883630761,
+    "notified_at": "2026-02-24T18:27:39.953322+00:00"
   }
 }
