@@ -5493,5 +5493,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0405825883630761,
     "notified_at": "2026-02-24T18:27:39.953322+00:00"
+  },
+  "Saint Joseph's Hawks vs. George Mason Patriots|Saint Joseph's Hawks|moneyline": {
+    "game": "Saint Joseph's Hawks vs. George Mason Patriots",
+    "team": "Saint Joseph's Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0309356092384269,
+    "notified_at": "2026-02-24T21:46:42.589210+00:00"
   }
 }
