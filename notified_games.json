@@ -5472,5 +5472,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.032590093281186,
     "notified_at": "2026-02-23T22:48:15.759039+00:00"
+  },
+  "Baylor Bears vs. Arizona Wildcats|Arizona Wildcats|moneyline": {
+    "game": "Baylor Bears vs. Arizona Wildcats",
+    "team": "Arizona Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0358506075625857,
+    "notified_at": "2026-02-24T06:05:19.740820+00:00"
+  },
+  "Nevada Wolf Pack vs. New Mexico Lobos|Nevada Wolf Pack|moneyline": {
+    "game": "Nevada Wolf Pack vs. New Mexico Lobos",
+    "team": "Nevada Wolf Pack",
+    "edge_type": "moneyline",
+    "edge_value": 0.0332761018308609,
+    "notified_at": "2026-02-24T06:05:19.918720+00:00"
   }
 }
