@@ -51,18 +51,10 @@ UCLA Bruins,USC Trojans,UCLA Bruins,20260224,-6.9,0.75,149.0
 UCLA Bruins,USC Trojans,USC Trojans,20260224,6.9,0.25,149.0
 USC Trojans,UCLA Bruins,USC Trojans,20260224,6.9,0.25,149.0
 USC Trojans,UCLA Bruins,UCLA Bruins,20260224,-6.9,0.75,149.0
-Providence Friars,Xavier Musketeers,Providence Friars,20260224,-7.1,0.72,177.0
-Providence Friars,Xavier Musketeers,Xavier Musketeers,20260224,7.1,0.28,177.0
-Xavier Musketeers,Providence Friars,Xavier Musketeers,20260224,7.1,0.28,177.0
-Xavier Musketeers,Providence Friars,Providence Friars,20260224,-7.1,0.72,177.0
 Michigan Wolverines,Minnesota Golden Gophers,Michigan Wolverines,20260224,-19.3,0.96,145.0
 Michigan Wolverines,Minnesota Golden Gophers,Minnesota Golden Gophers,20260224,19.3,0.040000000000000036,145.0
 Minnesota Golden Gophers,Michigan Wolverines,Minnesota Golden Gophers,20260224,19.3,0.040000000000000036,145.0
 Minnesota Golden Gophers,Michigan Wolverines,Michigan Wolverines,20260224,-19.3,0.96,145.0
-Boston College Eagles,Wake Forest Demon Deacons,Boston College Eagles,20260224,2.4,0.4,140.0
-Boston College Eagles,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20260224,-2.4,0.6,140.0
-Wake Forest Demon Deacons,Boston College Eagles,Wake Forest Demon Deacons,20260224,-2.4,0.6,140.0
-Wake Forest Demon Deacons,Boston College Eagles,Boston College Eagles,20260224,2.4,0.4,140.0
 Utah Utes,Iowa State Cyclones,Utah Utes,20260224,11.2,0.15000000000000002,149.0
 Utah Utes,Iowa State Cyclones,Iowa State Cyclones,20260224,-11.2,0.85,149.0
 Iowa State Cyclones,Utah Utes,Iowa State Cyclones,20260224,-11.2,0.85,149.0
@@ -191,10 +183,18 @@ Oregon Ducks,Wisconsin Badgers,Oregon Ducks,20260225,5.6,0.30000000000000004,152
 Oregon Ducks,Wisconsin Badgers,Wisconsin Badgers,20260225,-5.6,0.7,152.0
 Wisconsin Badgers,Oregon Ducks,Wisconsin Badgers,20260225,-5.6,0.7,152.0
 Wisconsin Badgers,Oregon Ducks,Oregon Ducks,20260225,5.6,0.30000000000000004,152.0
+Providence Friars,Xavier Musketeers,Providence Friars,20260225,-7.1,0.72,177.0
+Providence Friars,Xavier Musketeers,Xavier Musketeers,20260225,7.1,0.28,177.0
+Xavier Musketeers,Providence Friars,Xavier Musketeers,20260225,7.1,0.28,177.0
+Xavier Musketeers,Providence Friars,Providence Friars,20260225,-7.1,0.72,177.0
 Alabama Crimson Tide,Mississippi St Bulldogs,Alabama Crimson Tide,20260225,-16.4,0.9,174.0
 Alabama Crimson Tide,Mississippi St Bulldogs,Mississippi St Bulldogs,20260225,16.4,0.09999999999999998,174.0
 Mississippi St Bulldogs,Alabama Crimson Tide,Mississippi St Bulldogs,20260225,16.4,0.09999999999999998,174.0
 Mississippi St Bulldogs,Alabama Crimson Tide,Alabama Crimson Tide,20260225,-16.4,0.9,174.0
+Boston College Eagles,Wake Forest Demon Deacons,Boston College Eagles,20260225,2.4,0.4,140.0
+Boston College Eagles,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20260225,-2.4,0.6,140.0
+Wake Forest Demon Deacons,Boston College Eagles,Wake Forest Demon Deacons,20260225,-2.4,0.6,140.0
+Wake Forest Demon Deacons,Boston College Eagles,Boston College Eagles,20260225,2.4,0.4,140.0
 Colorado Buffaloes,Kansas St Wildcats,Colorado Buffaloes,20260225,-5.8,0.69,165.0
 Colorado Buffaloes,Kansas St Wildcats,Kansas St Wildcats,20260225,5.8,0.31000000000000005,165.0
 Kansas St Wildcats,Colorado Buffaloes,Kansas St Wildcats,20260225,5.8,0.31000000000000005,165.0
