@@ -5500,5 +5500,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0309356092384269,
     "notified_at": "2026-02-24T21:46:42.589210+00:00"
+  },
+  "Loyola Marymount Lions vs. Washington St Cougars|Loyola Marymount Lions|moneyline": {
+    "game": "Loyola Marymount Lions vs. Washington St Cougars",
+    "team": "Loyola Marymount Lions",
+    "edge_type": "moneyline",
+    "edge_value": 0.0308696571344972,
+    "notified_at": "2026-02-25T01:32:16.865379+00:00"
   }
 }
