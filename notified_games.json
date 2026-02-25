@@ -5514,5 +5514,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0363722644031617,
     "notified_at": "2026-02-25T04:28:42.188865+00:00"
+  },
+  "UC Davis Aggies vs. Hawai'i Rainbow Warriors|UC Davis Aggies|moneyline": {
+    "game": "UC Davis Aggies vs. Hawai'i Rainbow Warriors",
+    "team": "UC Davis Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0339042593471126,
+    "notified_at": "2026-02-25T21:16:27.481464+00:00"
   }
 }
