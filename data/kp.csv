@@ -5969,20 +5969,20 @@ Oklahoma,Auburn,Auburn,20260224,-1,0.53,161
 Oklahoma,Auburn,Oklahoma,20260224,1,0.47,161
 Missouri,Tennessee,Tennessee,20260224,-5,0.66,145
 Missouri,Tennessee,Missouri,20260224,5,0.34,145
-Virginia,N.C. State,N.C. State,20260224,5,0.3,151
-Virginia,N.C. State,Virginia,20260224,-5,0.7,151
+N.C. State,Virginia,Virginia,20260224,-5,0.7,151
+N.C. State,Virginia,N.C. State,20260224,5,0.3,151
 Florida St.,Miami FL,Miami FL,20260224,-3,0.6,159
 Florida St.,Miami FL,Florida St.,20260224,3,0.4,159
 Nevada,New Mexico,New Mexico,20260224,1,0.48,151
 Nevada,New Mexico,Nevada,20260224,-1,0.52,151
-Dayton,Saint Louis,Saint Louis,20260224,-6,0.71,154
-Dayton,Saint Louis,Dayton,20260224,6,0.29,154
+Saint Louis,Dayton,Dayton,20260224,6,0.29,154
+Saint Louis,Dayton,Saint Louis,20260224,-6,0.71,154
 South Carolina,Kentucky,Kentucky,20260224,-6,0.69,148
 South Carolina,Kentucky,South Carolina,20260224,6,0.31,148
 Baylor,Arizona,Arizona,20260224,-12,0.85,158
 Baylor,Arizona,Baylor,20260224,12,0.15,158
-Oklahoma St.,West Virginia,West Virginia,20260224,3,0.39,143
-Oklahoma St.,West Virginia,Oklahoma St.,20260224,-3,0.61,143
+West Virginia,Oklahoma St.,Oklahoma St.,20260224,-3,0.61,143
+West Virginia,Oklahoma St.,West Virginia,20260224,3,0.39,143
 UCLA,USC,USC,20260224,7,0.27,151
 UCLA,USC,UCLA,20260224,-7,0.73,151
 TCU,Arizona St.,Arizona St.,20260224,6,0.3,148
@@ -5991,8 +5991,8 @@ Indiana,Northwestern,Northwestern,20260224,8,0.24,148
 Indiana,Northwestern,Indiana,20260224,-8,0.76,148
 BYU,UCF,UCF,20260224,11,0.16,167
 BYU,UCF,BYU,20260224,-11,0.84,167
-Texas Tech,Cincinnati,Cincinnati,20260224,11,0.16,141
-Texas Tech,Cincinnati,Texas Tech,20260224,-11,0.84,141
+Cincinnati,Texas Tech,Texas Tech,20260224,-11,0.84,141
+Cincinnati,Texas Tech,Cincinnati,20260224,11,0.16,141
 Rutgers,Washington,Washington,20260224,-5,0.69,143
 Rutgers,Washington,Rutgers,20260224,5,0.31,143
 Georgetown,Marquette,Marquette,20260224,5,0.33,149
@@ -6015,38 +6015,38 @@ Michigan,Minnesota,Minnesota,20260224,22,0.03,144
 Michigan,Minnesota,Michigan,20260224,-22,0.97,144
 Georgia St.,Coastal Carolina,Coastal Carolina,20260224,-1,0.53,135
 Georgia St.,Coastal Carolina,Georgia St.,20260224,1,0.47,135
-Marshall,Old Dominion,Old Dominion,20260224,6,0.27,158
-Marshall,Old Dominion,Marshall,20260224,-6,0.73,158
+Old Dominion,Marshall,Marshall,20260224,-6,0.73,158
+Old Dominion,Marshall,Old Dominion,20260224,6,0.27,158
 Arkansas St.,Southern Miss,Southern Miss,20260224,8,0.24,156
 Arkansas St.,Southern Miss,Arkansas St.,20260224,-8,0.76,156
-Akron,Buffalo,Buffalo,20260224,12,0.14,164
-Akron,Buffalo,Akron,20260224,-12,0.86,164
-Ball St.,Massachusetts,Massachusetts,20260224,-6,0.71,140
-Ball St.,Massachusetts,Ball St.,20260224,6,0.29,140
+Buffalo,Akron,Akron,20260224,-12,0.86,164
+Buffalo,Akron,Buffalo,20260224,12,0.14,164
+Massachusetts,Ball St.,Ball St.,20260224,6,0.29,140
+Massachusetts,Ball St.,Massachusetts,20260224,-6,0.71,140
 Air Force,San Jose St.,San Jose St.,20260224,-7,0.72,139
 Air Force,San Jose St.,Air Force,20260224,7,0.28,139
 New Haven,Saint Francis,Saint Francis,20260224,7,0.28,139
 New Haven,Saint Francis,New Haven,20260224,-7,0.72,139
-Kent St.,Central Michigan,Central Michigan,20260224,10,0.17,156
-Kent St.,Central Michigan,Kent St.,20260224,-10,0.83,156
-Morehead St.,Southern Indiana,Southern Indiana,20260224,8,0.23,142
-Morehead St.,Southern Indiana,Morehead St.,20260224,-8,0.77,142
+Central Michigan,Kent St.,Kent St.,20260224,-10,0.83,156
+Central Michigan,Kent St.,Central Michigan,20260224,10,0.17,156
+Southern Indiana,Morehead St.,Morehead St.,20260224,-8,0.77,142
+Southern Indiana,Morehead St.,Southern Indiana,20260224,8,0.23,142
 Bowling Green,Western Michigan,Western Michigan,20260224,11,0.16,149
 Bowling Green,Western Michigan,Bowling Green,20260224,-11,0.84,149
-Troy,Louisiana,Louisiana,20260224,10,0.17,132
-Troy,Louisiana,Troy,20260224,-10,0.83,132
-Toledo,Northern Illinois,Northern Illinois,20260224,12,0.13,150
-Toledo,Northern Illinois,Toledo,20260224,-12,0.87,150
+Louisiana,Troy,Troy,20260224,-10,0.83,132
+Louisiana,Troy,Louisiana,20260224,10,0.17,132
+Northern Illinois,Toledo,Toledo,20260224,-12,0.87,150
+Northern Illinois,Toledo,Northern Illinois,20260224,12,0.13,150
 Texas,Florida,Florida,20260225,-5,0.68,161
 Texas,Florida,Texas,20260225,5,0.32,161
-San Diego St.,Utah St.,Utah St.,20260225,-1,0.54,147
-San Diego St.,Utah St.,San Diego St.,20260225,1,0.46,147
-Connecticut,St. John's,St. John's,20260225,6,0.3,146
-Connecticut,St. John's,Connecticut,20260225,-6,0.7,146
-Saint Mary's,Santa Clara,Santa Clara,20260225,3,0.37,153
-Saint Mary's,Santa Clara,Saint Mary's,20260225,-3,0.63,153
-California,SMU,SMU,20260225,-2,0.59,160
-California,SMU,California,20260225,2,0.41,160
+San Diego St.,Utah St.,Utah St.,20260225,-1,0.53,147
+San Diego St.,Utah St.,San Diego St.,20260225,1,0.47,147
+Connecticut,St. John's,St. John's,20260225,6,0.31,146
+Connecticut,St. John's,Connecticut,20260225,-6,0.69,146
+Saint Mary's,Santa Clara,Santa Clara,20260225,4,0.37,152
+Saint Mary's,Santa Clara,Saint Mary's,20260225,-4,0.63,152
+California,SMU,SMU,20260225,-3,0.59,159
+California,SMU,California,20260225,3,0.41,159
 Iowa,Ohio St.,Ohio St.,20260225,4,0.34,144
 Iowa,Ohio St.,Iowa,20260225,-4,0.66,144
 Arkansas,Texas A&M,Texas A&M,20260225,8,0.23,170
@@ -6055,16 +6055,16 @@ Vanderbilt,Georgia,Georgia,20260225,8,0.22,168
 Vanderbilt,Georgia,Vanderbilt,20260225,-8,0.78,168
 Mississippi,LSU,LSU,20260225,-1,0.5,149
 Mississippi,LSU,Mississippi,20260225,1,0.5,149
-Oregon,Wisconsin,Wisconsin,20260225,-8,0.74,152
-Oregon,Wisconsin,Oregon,20260225,8,0.26,152
+Oregon,Wisconsin,Wisconsin,20260225,-7,0.75,151
+Oregon,Wisconsin,Oregon,20260225,7,0.25,151
 Providence,Xavier,Xavier,20260225,6,0.28,172
 Providence,Xavier,Providence,20260225,-6,0.72,172
-Boston College,Wake Forest,Wake Forest,20260225,-3,0.63,141
-Boston College,Wake Forest,Boston College,20260225,3,0.37,141
+Boston College,Wake Forest,Wake Forest,20260225,-4,0.63,140
+Boston College,Wake Forest,Boston College,20260225,4,0.37,140
 Duquesne,Davidson,Davidson,20260225,2,0.42,144
 Duquesne,Davidson,Duquesne,20260225,-2,0.58,144
-Colorado,Kansas St.,Kansas St.,20260225,7,0.25,165
-Colorado,Kansas St.,Colorado,20260225,-7,0.75,165
+Colorado,Kansas St.,Kansas St.,20260225,8,0.25,164
+Colorado,Kansas St.,Colorado,20260225,-8,0.75,164
 Creighton,DePaul,DePaul,20260225,6,0.29,142
 Creighton,DePaul,Creighton,20260225,-6,0.71,142
 Saint Joseph's,George Mason,George Mason,20260225,-1,0.51,137
@@ -6081,26 +6081,26 @@ Stanford,Pittsburgh,Pittsburgh,20260225,7,0.27,141
 Stanford,Pittsburgh,Stanford,20260225,-7,0.73,141
 Austin Peay,Central Arkansas,Central Arkansas,20260225,3,0.37,147
 Austin Peay,Central Arkansas,Austin Peay,20260225,-3,0.63,147
-Charlotte,North Texas,North Texas,20260225,1,0.45,133
-Charlotte,North Texas,Charlotte,20260225,-1,0.55,133
-Grand Canyon,UNLV,UNLV,20260225,9,0.2,151
-Grand Canyon,UNLV,Grand Canyon,20260225,-9,0.8,151
+Charlotte,North Texas,North Texas,20260225,2,0.45,132
+Charlotte,North Texas,Charlotte,20260225,-2,0.55,132
+Grand Canyon,UNLV,UNLV,20260225,10,0.2,150
+Grand Canyon,UNLV,Grand Canyon,20260225,-10,0.8,150
 Alabama,Mississippi St.,Mississippi St.,20260225,16,0.08,172
 Alabama,Mississippi St.,Alabama,20260225,-16,0.92,172
-Western Carolina,Mercer,Mercer,20260225,-2,0.55,162
-Western Carolina,Mercer,Western Carolina,20260225,2,0.45,162
-Eastern Kentucky,Queens,Queens,20260225,-2,0.55,170
-Eastern Kentucky,Queens,Eastern Kentucky,20260225,2,0.45,170
+Western Carolina,Mercer,Mercer,20260225,-1,0.55,161
+Western Carolina,Mercer,Western Carolina,20260225,1,0.45,161
+Eastern Kentucky,Queens,Queens,20260225,-1,0.55,169
+Eastern Kentucky,Queens,Eastern Kentucky,20260225,1,0.45,169
 Purdue Fort Wayne,Wright St.,Wright St.,20260225,-4,0.62,150
 Purdue Fort Wayne,Wright St.,Purdue Fort Wayne,20260225,4,0.38,150
 Milwaukee,Youngstown St.,Youngstown St.,20260225,-2,0.55,148
 Milwaukee,Youngstown St.,Milwaukee,20260225,2,0.45,148
 South Dakota,Nebraska Omaha,Nebraska Omaha,20260225,1,0.49,157
 South Dakota,Nebraska Omaha,South Dakota,20260225,-1,0.51,157
-Valparaiso,Drake,Drake,20260225,6,0.29,144
-Valparaiso,Drake,Valparaiso,20260225,-6,0.71,144
-Oregon St.,San Diego,San Diego,20260225,6,0.3,148
-Oregon St.,San Diego,Oregon St.,20260225,-6,0.7,148
+Valparaiso,Drake,Drake,20260225,6,0.28,144
+Valparaiso,Drake,Valparaiso,20260225,-6,0.72,144
+Oregon St.,San Diego,San Diego,20260225,5,0.3,147
+Oregon St.,San Diego,Oregon St.,20260225,-5,0.7,147
 Cleveland St.,Northern Kentucky,Northern Kentucky,20260225,-6,0.7,166
 Cleveland St.,Northern Kentucky,Cleveland St.,20260225,6,0.3,166
 Rice,South Florida,South Florida,20260225,-11,0.85,157
@@ -6115,16 +6115,16 @@ James Madison,Georgia Southern,Georgia Southern,20260225,6,0.29,156
 James Madison,Georgia Southern,James Madison,20260225,-6,0.71,156
 Army,Bucknell,Bucknell,20260225,2,0.44,142
 Army,Bucknell,Army,20260225,-2,0.56,142
-Robert Morris,Detroit Mercy,Detroit Mercy,20260225,7,0.25,151
-Robert Morris,Detroit Mercy,Robert Morris,20260225,-7,0.75,151
+Robert Morris,Detroit Mercy,Detroit Mercy,20260225,8,0.25,150
+Robert Morris,Detroit Mercy,Robert Morris,20260225,-8,0.75,150
 IU Indy,Oakland,Oakland,20260225,-8,0.76,176
 IU Indy,Oakland,IU Indy,20260225,8,0.24,176
 UTSA,East Carolina,East Carolina,20260225,-4,0.66,146
 UTSA,East Carolina,UTSA,20260225,4,0.34,146
-West Georgia,Lipscomb,Lipscomb,20260225,-7,0.74,153
-West Georgia,Lipscomb,West Georgia,20260225,7,0.26,153
 Southern Illinois,Indiana St.,Indiana St.,20260225,9,0.2,141
 Southern Illinois,Indiana St.,Southern Illinois,20260225,-9,0.8,141
+West Georgia,Lipscomb,Lipscomb,20260225,-7,0.74,153
+West Georgia,Lipscomb,West Georgia,20260225,7,0.26,153
 East Tennessee St.,Wofford,Wofford,20260225,9,0.2,151
 East Tennessee St.,Wofford,East Tennessee St.,20260225,-9,0.8,151
 American,Lehigh,Lehigh,20260225,6,0.27,142
@@ -6157,30 +6157,30 @@ UC Davis,Hawaii,Hawaii,20260226,-1,0.55,145
 UC Davis,Hawaii,UC Davis,20260226,1,0.45,145
 Kennesaw St.,Liberty,Liberty,20260226,-2,0.57,158
 Kennesaw St.,Liberty,Kennesaw St.,20260226,2,0.43,158
-St. Bonaventure,Rhode Island,Rhode Island,20260226,1,0.45,145
-St. Bonaventure,Rhode Island,St. Bonaventure,20260226,-1,0.55,145
-Eastern Washington,Northern Colorado,Northern Colorado,20260226,1,0.47,159
-Eastern Washington,Northern Colorado,Eastern Washington,20260226,-1,0.53,159
+St. Bonaventure,Rhode Island,Rhode Island,20260226,2,0.45,144
+St. Bonaventure,Rhode Island,St. Bonaventure,20260226,-2,0.55,144
+Eastern Washington,Northern Colorado,Northern Colorado,20260226,1,0.47,157
+Eastern Washington,Northern Colorado,Eastern Washington,20260226,-1,0.53,157
 Montana St.,Portland St.,Portland St.,20260226,3,0.39,135
 Montana St.,Portland St.,Montana St.,20260226,-3,0.61,135
 Western Kentucky,New Mexico St.,New Mexico St.,20260226,4,0.35,150
 Western Kentucky,New Mexico St.,Western Kentucky,20260226,-4,0.65,150
-Florida Atlantic,Temple,Temple,20260226,6,0.29,150
-Florida Atlantic,Temple,Florida Atlantic,20260226,-6,0.71,150
+Florida Atlantic,Temple,Temple,20260226,6,0.28,150
+Florida Atlantic,Temple,Florida Atlantic,20260226,-6,0.72,150
 Drexel,Campbell,Campbell,20260226,1,0.45,145
 Drexel,Campbell,Drexel,20260226,-1,0.55,145
 Cal Baptist,UT Arlington,UT Arlington,20260226,5,0.31,127
 Cal Baptist,UT Arlington,Cal Baptist,20260226,-5,0.69,127
 Hampton,Charleston,Charleston,20260226,-2,0.6,136
 Hampton,Charleston,Hampton,20260226,2,0.4,136
-Charleston Southern,Winthrop,Winthrop,20260226,-5,0.7,161
-Charleston Southern,Winthrop,Charleston Southern,20260226,5,0.3,161
+Charleston Southern,Winthrop,Winthrop,20260226,-6,0.7,160
+Charleston Southern,Winthrop,Charleston Southern,20260226,6,0.3,160
 Towson,Elon,Elon,20260226,5,0.34,143
 Towson,Elon,Towson,20260226,-5,0.66,143
 Monmouth,Stony Brook,Stony Brook,20260226,3,0.38,139
 Monmouth,Stony Brook,Monmouth,20260226,-3,0.62,139
-Cal Poly,Long Beach St.,Long Beach St.,20260226,5,0.34,161
-Cal Poly,Long Beach St.,Cal Poly,20260226,-5,0.66,161
+Cal Poly,Long Beach St.,Long Beach St.,20260226,4,0.34,160
+Cal Poly,Long Beach St.,Cal Poly,20260226,-4,0.66,160
 Southeast Missouri,Tennessee St.,Tennessee St.,20260226,4,0.37,154
 Southeast Missouri,Tennessee St.,Southeast Missouri,20260226,-4,0.63,154
 Louisiana Tech,Missouri St.,Missouri St.,20260226,2,0.43,130
@@ -6189,14 +6189,14 @@ Grambling St.,Bethune Cookman,Bethune Cookman,20260226,-1,0.52,139
 Grambling St.,Bethune Cookman,Grambling St.,20260226,1,0.48,139
 Sam Houston St.,FIU,FIU,20260226,9,0.21,161
 Sam Houston St.,FIU,Sam Houston St.,20260226,-9,0.79,161
-Little Rock,Morehead St.,Morehead St.,20260226,1,0.47,147
-Little Rock,Morehead St.,Little Rock,20260226,-1,0.53,147
+Little Rock,Morehead St.,Morehead St.,20260226,1,0.46,145
+Little Rock,Morehead St.,Little Rock,20260226,-1,0.54,145
 Central Connecticut,Mercyhurst,Mercyhurst,20260226,1,0.47,137
 Central Connecticut,Mercyhurst,Central Connecticut,20260226,-1,0.53,137
-Utah Tech,Abilene Christian,Abilene Christian,20260226,6,0.29,140
-Utah Tech,Abilene Christian,Utah Tech,20260226,-6,0.71,140
-Chattanooga,UNC Greensboro,UNC Greensboro,20260226,3,0.37,155
-Chattanooga,UNC Greensboro,Chattanooga,20260226,-3,0.63,155
+Utah Tech,Abilene Christian,Abilene Christian,20260226,6,0.29,138
+Utah Tech,Abilene Christian,Utah Tech,20260226,-6,0.71,138
+Chattanooga,UNC Greensboro,UNC Greensboro,20260226,4,0.37,154
+Chattanooga,UNC Greensboro,Chattanooga,20260226,-4,0.63,154
 North Florida,Florida Gulf Coast,Florida Gulf Coast,20260226,-4,0.67,166
 North Florida,Florida Gulf Coast,North Florida,20260226,4,0.33,166
 Radford,USC Upstate,USC Upstate,20260226,5,0.32,151
@@ -6205,57 +6205,57 @@ Oral Roberts,Denver,Denver,20260226,-6,0.69,158
 Oral Roberts,Denver,Oral Roberts,20260226,6,0.31,158
 Binghamton,New Hampshire,New Hampshire,20260226,-2,0.57,140
 Binghamton,New Hampshire,Binghamton,20260226,2,0.43,140
-Montana,Sacramento St.,Sacramento St.,20260226,7,0.24,161
-Montana,Sacramento St.,Montana,20260226,-7,0.76,161
-Wagner,New Haven,New Haven,20260226,2,0.41,132
-Wagner,New Haven,Wagner,20260226,-2,0.59,132
-Prairie View A&M,Jackson St.,Jackson St.,20260226,4,0.33,162
-Prairie View A&M,Jackson St.,Prairie View A&M,20260226,-4,0.67,162
+Montana,Sacramento St.,Sacramento St.,20260226,8,0.24,160
+Montana,Sacramento St.,Montana,20260226,-8,0.76,160
+Prairie View A&M,Jackson St.,Jackson St.,20260226,5,0.33,161
+Prairie View A&M,Jackson St.,Prairie View A&M,20260226,-5,0.67,161
+Wagner,New Haven,New Haven,20260226,3,0.39,131
+Wagner,New Haven,Wagner,20260226,-3,0.61,131
 Jacksonville St.,Delaware,Delaware,20260226,6,0.29,134
 Jacksonville St.,Delaware,Jacksonville St.,20260226,-6,0.71,134
 Jacksonville,Stetson,Stetson,20260226,4,0.35,138
 Jacksonville,Stetson,Jacksonville,20260226,-4,0.65,138
+Stonehill,Saint Francis,Saint Francis,20260226,3,0.37,137
+Stonehill,Saint Francis,Stonehill,20260226,-3,0.63,137
 Presbyterian,High Point,High Point,20260226,-10,0.82,150
 Presbyterian,High Point,Presbyterian,20260226,10,0.18,150
-Stonehill,Saint Francis,Saint Francis,20260226,5,0.35,137
-Stonehill,Saint Francis,Stonehill,20260226,-5,0.65,137
 Le Moyne,Fairleigh Dickinson,Fairleigh Dickinson,20260226,6,0.3,144
 Le Moyne,Fairleigh Dickinson,Le Moyne,20260226,-6,0.7,144
-Middle Tennessee,UTEP,UTEP,20260226,8,0.22,136
-Middle Tennessee,UTEP,Middle Tennessee,20260226,-8,0.78,136
 Texas Southern,Alcorn St.,Alcorn St.,20260226,7,0.27,149
 Texas Southern,Alcorn St.,Texas Southern,20260226,-7,0.73,149
-UC Santa Barbara,UC Riverside,UC Riverside,20260226,11,0.18,147
-UC Santa Barbara,UC Riverside,UC Santa Barbara,20260226,-11,0.82,147
+UC Santa Barbara,UC Riverside,UC Riverside,20260226,10,0.18,146
+UC Santa Barbara,UC Riverside,UC Santa Barbara,20260226,-10,0.82,146
+Middle Tennessee,UTEP,UTEP,20260226,8,0.22,136
+Middle Tennessee,UTEP,Middle Tennessee,20260226,-8,0.78,136
 Vermont,UMass Lowell,UMass Lowell,20260226,8,0.24,150
 Vermont,UMass Lowell,Vermont,20260226,-8,0.76,150
-Albany,Maine,Maine,20260226,5,0.3,131
-Albany,Maine,Albany,20260226,-5,0.7,131
+Albany,Maine,Maine,20260226,6,0.3,130
+Albany,Maine,Albany,20260226,-6,0.7,130
 Lindenwood,Eastern Illinois,Eastern Illinois,20260226,8,0.25,140
 Lindenwood,Eastern Illinois,Lindenwood,20260226,-8,0.75,140
 Tennessee Martin,Tennessee Tech,Tennessee Tech,20260226,9,0.22,135
 Tennessee Martin,Tennessee Tech,Tennessee Martin,20260226,-9,0.78,135
 Southern,Florida A&M,Florida A&M,20260226,9,0.22,147
 Southern,Florida A&M,Southern,20260226,-9,0.78,147
-Utah Valley,Tarleton St.,Tarleton St.,20260226,13,0.11,147
-Utah Valley,Tarleton St.,Utah Valley,20260226,-13,0.89,147
+Utah Valley,Tarleton St.,Tarleton St.,20260226,14,0.11,146
+Utah Valley,Tarleton St.,Utah Valley,20260226,-14,0.89,146
 Idaho,Northern Arizona,Northern Arizona,20260226,10,0.18,146
 Idaho,Northern Arizona,Idaho,20260226,-10,0.82,146
 Kansas City,South Dakota St.,South Dakota St.,20260226,-10,0.82,146
 Kansas City,South Dakota St.,Kansas City,20260226,10,0.18,146
-William & Mary,Northeastern,Northeastern,20260226,14,0.11,166
-William & Mary,Northeastern,William & Mary,20260226,-14,0.89,166
+William & Mary,Northeastern,Northeastern,20260226,13,0.11,165
+William & Mary,Northeastern,William & Mary,20260226,-13,0.89,165
 UNC Wilmington,North Carolina A&T,North Carolina A&T,20260226,13,0.12,145
 UNC Wilmington,North Carolina A&T,UNC Wilmington,20260226,-13,0.88,145
-LIU,Chicago St.,Chicago St.,20260226,13,0.13,143
-LIU,Chicago St.,LIU,20260226,-13,0.87,143
-Gardner Webb,UNC Asheville,UNC Asheville,20260226,-13,0.88,145
-Gardner Webb,UNC Asheville,Gardner Webb,20260226,13,0.12,145
-UMBC,Bryant,Bryant,20260226,14,0.12,138
-UMBC,Bryant,UMBC,20260226,-14,0.88,138
+LIU,Chicago St.,Chicago St.,20260226,12,0.13,142
+LIU,Chicago St.,LIU,20260226,-12,0.87,142
+Gardner Webb,UNC Asheville,UNC Asheville,20260226,-12,0.88,144
+Gardner Webb,UNC Asheville,Gardner Webb,20260226,12,0.12,144
+UMBC,Bryant,Bryant,20260226,13,0.12,137
+UMBC,Bryant,UMBC,20260226,-13,0.88,137
 UC San Diego,Cal St. Bakersfield,Cal St. Bakersfield,20260226,16,0.07,148
 UC San Diego,Cal St. Bakersfield,UC San Diego,20260226,-16,0.93,148
-SIUE,Western Illinois,Western Illinois,20260226,15,0.09,129
-SIUE,Western Illinois,SIUE,20260226,-15,0.91,129
+SIUE,Western Illinois,Western Illinois,20260226,15,0.08,129
+SIUE,Western Illinois,SIUE,20260226,-15,0.92,129
 Samford,VMI,VMI,20260226,18,0.05,152
 Samford,VMI,Samford,20260226,-18,0.95,152
