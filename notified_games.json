@@ -5556,5 +5556,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0349262293980928,
     "notified_at": "2026-02-26T14:52:29.472928+00:00"
+  },
+  "Eastern Washington Eagles vs. N Colorado Bears|Eastern Washington Eagles|moneyline": {
+    "game": "Eastern Washington Eagles vs. N Colorado Bears",
+    "team": "Eastern Washington Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.030920546421743,
+    "notified_at": "2026-02-26T15:50:08.202439+00:00"
   }
 }
