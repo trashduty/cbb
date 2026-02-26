@@ -5542,5 +5542,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0404743141567336,
     "notified_at": "2026-02-26T04:26:07.377605+00:00"
+  },
+  "UMBC Retrievers vs. Bryant Bulldogs|UMBC Retrievers|moneyline": {
+    "game": "UMBC Retrievers vs. Bryant Bulldogs",
+    "team": "UMBC Retrievers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0339351680055826,
+    "notified_at": "2026-02-26T05:04:24.599147+00:00"
   }
 }
