@@ -5528,5 +5528,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0418230276202795,
     "notified_at": "2026-02-25T22:12:41.286501+00:00"
+  },
+  "Drexel Dragons vs. Campbell Fighting Camels|Drexel Dragons|moneyline": {
+    "game": "Drexel Dragons vs. Campbell Fighting Camels",
+    "team": "Drexel Dragons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0544395946188894,
+    "notified_at": "2026-02-26T02:36:20.804654+00:00"
   }
 }
