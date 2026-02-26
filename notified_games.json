@@ -5535,5 +5535,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0544395946188894,
     "notified_at": "2026-02-26T02:36:20.804654+00:00"
+  },
+  "Memphis Tigers vs. Wichita St Shockers|Memphis Tigers|moneyline": {
+    "game": "Memphis Tigers vs. Wichita St Shockers",
+    "team": "Memphis Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0404743141567336,
+    "notified_at": "2026-02-26T04:26:07.377605+00:00"
   }
 }
