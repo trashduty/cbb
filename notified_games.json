@@ -5549,5 +5549,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0339351680055826,
     "notified_at": "2026-02-26T05:04:24.599147+00:00"
+  },
+  "Sam Houston St Bearkats vs. Florida Int'l Golden Panthers|Sam Houston St Bearkats|moneyline": {
+    "game": "Sam Houston St Bearkats vs. Florida Int'l Golden Panthers",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0349262293980928,
+    "notified_at": "2026-02-26T14:52:29.472928+00:00"
   }
 }
