@@ -5591,5 +5591,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0554046922986314,
     "notified_at": "2026-02-27T14:20:11.252112+00:00"
+  },
+  "Kansas St Wildcats vs. TCU Horned Frogs|Kansas St Wildcats|moneyline": {
+    "game": "Kansas St Wildcats vs. TCU Horned Frogs",
+    "team": "Kansas St Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.043741140175255,
+    "notified_at": "2026-02-27T19:17:52.641950+00:00"
   }
 }
