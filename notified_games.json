@@ -5605,5 +5605,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.031421698096716,
     "notified_at": "2026-02-27T23:11:36.023603+00:00"
+  },
+  "Holy Cross Crusaders vs. Loyola (MD) Greyhounds|Holy Cross Crusaders|moneyline": {
+    "game": "Holy Cross Crusaders vs. Loyola (MD) Greyhounds",
+    "team": "Holy Cross Crusaders",
+    "edge_type": "moneyline",
+    "edge_value": 0.0313884534463378,
+    "notified_at": "2026-02-27T23:28:05.002121+00:00"
   }
 }
