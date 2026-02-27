@@ -5598,5 +5598,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.043741140175255,
     "notified_at": "2026-02-27T19:17:52.641950+00:00"
+  },
+  "Minnesota Golden Gophers vs. UCLA Bruins|UCLA Bruins|moneyline": {
+    "game": "Minnesota Golden Gophers vs. UCLA Bruins",
+    "team": "UCLA Bruins",
+    "edge_type": "moneyline",
+    "edge_value": 0.031421698096716,
+    "notified_at": "2026-02-27T23:11:36.023603+00:00"
   }
 }
