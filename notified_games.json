@@ -5570,5 +5570,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0442846584442749,
     "notified_at": "2026-02-27T04:23:53.179830+00:00"
+  },
+  "Iowa State Cyclones vs. Texas Tech Red Raiders|Iowa State Cyclones|moneyline": {
+    "game": "Iowa State Cyclones vs. Texas Tech Red Raiders",
+    "team": "Iowa State Cyclones",
+    "edge_type": "moneyline",
+    "edge_value": 0.0504481531003169,
+    "notified_at": "2026-02-27T14:20:10.609454+00:00"
+  },
+  "Arizona Wildcats vs. Kansas Jayhawks|Arizona Wildcats|moneyline": {
+    "game": "Arizona Wildcats vs. Kansas Jayhawks",
+    "team": "Arizona Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0515568787889602,
+    "notified_at": "2026-02-27T14:20:11.035555+00:00"
+  },
+  "Duke Blue Devils vs. Virginia Cavaliers|Duke Blue Devils|moneyline": {
+    "game": "Duke Blue Devils vs. Virginia Cavaliers",
+    "team": "Duke Blue Devils",
+    "edge_type": "moneyline",
+    "edge_value": 0.0554046922986314,
+    "notified_at": "2026-02-27T14:20:11.252112+00:00"
   }
 }
