@@ -5563,5 +5563,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.030920546421743,
     "notified_at": "2026-02-26T15:50:08.202439+00:00"
+  },
+  "Marshall Thundering Herd vs. Georgia Southern Eagles|Marshall Thundering Herd|moneyline": {
+    "game": "Marshall Thundering Herd vs. Georgia Southern Eagles",
+    "team": "Marshall Thundering Herd",
+    "edge_type": "moneyline",
+    "edge_value": 0.0442846584442749,
+    "notified_at": "2026-02-27T04:23:53.179830+00:00"
   }
 }
