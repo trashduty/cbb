@@ -5654,5 +5654,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.077748163941724,
     "notified_at": "2026-02-28T01:15:50.035345+00:00"
+  },
+  "IUPUI Jaguars vs. Fort Wayne Mastodons|Fort Wayne Mastodons|moneyline": {
+    "game": "IUPUI Jaguars vs. Fort Wayne Mastodons",
+    "team": "Fort Wayne Mastodons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0408066452793175,
+    "notified_at": "2026-02-28T03:02:24.825743+00:00"
+  },
+  "Stanford Cardinal vs. SMU Mustangs|SMU Mustangs|moneyline": {
+    "game": "Stanford Cardinal vs. SMU Mustangs",
+    "team": "SMU Mustangs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0489851743497802,
+    "notified_at": "2026-02-28T03:02:25.140510+00:00"
+  },
+  "UNLV Rebels vs. Nevada Wolf Pack|Nevada Wolf Pack|moneyline": {
+    "game": "UNLV Rebels vs. Nevada Wolf Pack",
+    "team": "Nevada Wolf Pack",
+    "edge_type": "moneyline",
+    "edge_value": 0.0373504844782314,
+    "notified_at": "2026-02-28T03:02:25.443332+00:00"
   }
 }
