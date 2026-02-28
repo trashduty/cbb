@@ -5682,5 +5682,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0465900903884395,
     "notified_at": "2026-02-28T03:52:40.818447+00:00"
+  },
+  "Winthrop Eagles vs. Presbyterian Blue Hose|Winthrop Eagles|moneyline": {
+    "game": "Winthrop Eagles vs. Presbyterian Blue Hose",
+    "team": "Winthrop Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0331799716580341,
+    "notified_at": "2026-02-28T04:24:31.143182+00:00"
+  },
+  "Texas A&M Aggies vs. Texas Longhorns|Texas Longhorns|moneyline": {
+    "game": "Texas A&M Aggies vs. Texas Longhorns",
+    "team": "Texas Longhorns",
+    "edge_type": "moneyline",
+    "edge_value": 0.0309612403253027,
+    "notified_at": "2026-02-28T04:24:31.441870+00:00"
+  },
+  "Navy Midshipmen vs. Colgate Raiders|Navy Midshipmen|moneyline": {
+    "game": "Navy Midshipmen vs. Colgate Raiders",
+    "team": "Navy Midshipmen",
+    "edge_type": "moneyline",
+    "edge_value": 0.0447385329859747,
+    "notified_at": "2026-02-28T04:24:31.738028+00:00"
+  },
+  "Delaware St Hornets vs. North Carolina Central Eagles|Delaware St Hornets|moneyline": {
+    "game": "Delaware St Hornets vs. North Carolina Central Eagles",
+    "team": "Delaware St Hornets",
+    "edge_type": "moneyline",
+    "edge_value": 0.0346231290602968,
+    "notified_at": "2026-02-28T04:24:32.043216+00:00"
+  },
+  "Texas Southern Tigers vs. Jackson St Tigers|Texas Southern Tigers|moneyline": {
+    "game": "Texas Southern Tigers vs. Jackson St Tigers",
+    "team": "Texas Southern Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0816030647252541,
+    "notified_at": "2026-02-28T04:24:32.309410+00:00"
   }
 }
