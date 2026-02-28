@@ -5717,5 +5717,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0816030647252541,
     "notified_at": "2026-02-28T04:24:32.309410+00:00"
+  },
+  "South Dakota Coyotes vs. South Dakota St Jackrabbits|South Dakota Coyotes|moneyline": {
+    "game": "South Dakota Coyotes vs. South Dakota St Jackrabbits",
+    "team": "South Dakota Coyotes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0316967910619899,
+    "notified_at": "2026-02-28T04:46:44.122738+00:00"
   }
 }
