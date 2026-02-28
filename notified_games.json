@@ -5640,5 +5640,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.062538795432972,
     "notified_at": "2026-02-28T00:45:14.482340+00:00"
+  },
+  "Loyola Marymount Lions vs. Seattle Redhawks|Loyola Marymount Lions|moneyline": {
+    "game": "Loyola Marymount Lions vs. Seattle Redhawks",
+    "team": "Loyola Marymount Lions",
+    "edge_type": "moneyline",
+    "edge_value": 0.0533887591539771,
+    "notified_at": "2026-02-28T01:15:49.535959+00:00"
+  },
+  "CSU Bakersfield Roadrunners vs. Long Beach St 49ers|CSU Bakersfield Roadrunners|moneyline": {
+    "game": "CSU Bakersfield Roadrunners vs. Long Beach St 49ers",
+    "team": "CSU Bakersfield Roadrunners",
+    "edge_type": "moneyline",
+    "edge_value": 0.077748163941724,
+    "notified_at": "2026-02-28T01:15:50.035345+00:00"
   }
 }
