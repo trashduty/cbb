@@ -5731,5 +5731,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0437083665438778,
     "notified_at": "2026-02-28T14:25:47.227377+00:00"
+  },
+  "Canisius Golden Griffins vs. Quinnipiac Bobcats|Quinnipiac Bobcats|moneyline": {
+    "game": "Canisius Golden Griffins vs. Quinnipiac Bobcats",
+    "team": "Quinnipiac Bobcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0480676168357226,
+    "notified_at": "2026-02-28T23:25:56.266457+00:00"
   }
 }
