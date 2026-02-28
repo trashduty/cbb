@@ -5675,5 +5675,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0373504844782314,
     "notified_at": "2026-02-28T03:02:25.443332+00:00"
+  },
+  "LIU Sharks vs. Fairleigh Dickinson Knights|LIU Sharks|moneyline": {
+    "game": "LIU Sharks vs. Fairleigh Dickinson Knights",
+    "team": "LIU Sharks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0465900903884395,
+    "notified_at": "2026-02-28T03:52:40.818447+00:00"
   }
 }
