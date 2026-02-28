@@ -5612,5 +5612,33 @@
     "edge_type": "moneyline",
     "edge_value": 0.0313884534463378,
     "notified_at": "2026-02-27T23:28:05.002121+00:00"
+  },
+  "Northern Illinois Huskies vs. Ball State Cardinals|Northern Illinois Huskies|moneyline": {
+    "game": "Northern Illinois Huskies vs. Ball State Cardinals",
+    "team": "Northern Illinois Huskies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0407047879045281,
+    "notified_at": "2026-02-28T00:45:13.703646+00:00"
+  },
+  "SIU-Edwardsville Cougars vs. Eastern Illinois Panthers|SIU-Edwardsville Cougars|moneyline": {
+    "game": "SIU-Edwardsville Cougars vs. Eastern Illinois Panthers",
+    "team": "SIU-Edwardsville Cougars",
+    "edge_type": "moneyline",
+    "edge_value": 0.0415047806642067,
+    "notified_at": "2026-02-28T00:45:13.948012+00:00"
+  },
+  "Sam Houston St Bearkats vs. Missouri St Bears|Sam Houston St Bearkats|moneyline": {
+    "game": "Sam Houston St Bearkats vs. Missouri St Bears",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0530394882964392,
+    "notified_at": "2026-02-28T00:45:14.184079+00:00"
+  },
+  "UMKC Kangaroos vs. Oral Roberts Golden Eagles|UMKC Kangaroos|moneyline": {
+    "game": "UMKC Kangaroos vs. Oral Roberts Golden Eagles",
+    "team": "UMKC Kangaroos",
+    "edge_type": "moneyline",
+    "edge_value": 0.062538795432972,
+    "notified_at": "2026-02-28T00:45:14.482340+00:00"
   }
 }
