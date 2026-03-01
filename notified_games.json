@@ -5738,5 +5738,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0480676168357226,
     "notified_at": "2026-02-28T23:25:56.266457+00:00"
+  },
+  "Sacramento St Hornets vs. Idaho State Bengals|Sacramento St Hornets|moneyline": {
+    "game": "Sacramento St Hornets vs. Idaho State Bengals",
+    "team": "Sacramento St Hornets",
+    "edge_type": "moneyline",
+    "edge_value": 0.0337800936730009,
+    "notified_at": "2026-03-01T21:25:55.553383+00:00"
   }
 }
