@@ -5752,5 +5752,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.032432808416037,
     "notified_at": "2026-03-02T06:03:05.017322+00:00"
+  },
+  "Georgia Bulldogs vs. Alabama Crimson Tide|Alabama Crimson Tide|moneyline": {
+    "game": "Georgia Bulldogs vs. Alabama Crimson Tide",
+    "team": "Alabama Crimson Tide",
+    "edge_type": "moneyline",
+    "edge_value": 0.0426027088221175,
+    "notified_at": "2026-03-02T20:33:24.542547+00:00"
   }
 }
