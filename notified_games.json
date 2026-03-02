@@ -5745,5 +5745,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0337800936730009,
     "notified_at": "2026-03-01T21:25:55.553383+00:00"
+  },
+  "Arizona Wildcats vs. Iowa State Cyclones|Arizona Wildcats|moneyline": {
+    "game": "Arizona Wildcats vs. Iowa State Cyclones",
+    "team": "Arizona Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.032432808416037,
+    "notified_at": "2026-03-02T06:03:05.017322+00:00"
   }
 }
