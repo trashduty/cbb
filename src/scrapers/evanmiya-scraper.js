@@ -184,9 +184,25 @@ async function downloadEvanMiyaData() {
     // Navigate to game predictions page
     await page.goto('https://evanmiya.com/?game_predictions', { timeout: config.timeout });
     console.log('Navigated to game predictions');
-    
+
+    // Dismiss any SweetAlert promo/announcement modal that may be blocking the download button
+    try {
+      const sweetOverlay = page.locator('.sweet-overlay');
+      await sweetOverlay.waitFor({ state: 'visible', timeout: 10000 });
+      console.log('Promo dialog detected, dismissing...');
+      try {
+        await page.locator('.sweet-alert .confirm').click({ timeout: 5000 });
+      } catch {
+        await page.locator('.sweet-alert button').first().click({ timeout: 5000 });
+      }
+      await sweetOverlay.waitFor({ state: 'hidden', timeout: 10000 });
+      console.log('Dismissed promo dialog');
+    } catch (e) {
+      console.log('No promo dialog found, continuing');
+    }
+
     // Setup download handler and click download button
-    const downloadPromise = page.waitForEvent('download');
+    const downloadPromise = page.waitForEvent('download', { timeout: 60000 });
     await page.getByRole('button', { name: 'download icon Download' }).click();
     console.log('Clicked download button');
     
