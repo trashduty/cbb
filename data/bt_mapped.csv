@@ -823,10 +823,10 @@ UTEP Miners,Jacksonville St Gamecocks,UTEP Miners,20260307,1.0,0.459999999999999
 UTEP Miners,Jacksonville St Gamecocks,Jacksonville St Gamecocks,20260307,-1.0,0.54,131.0
 Jacksonville St Gamecocks,UTEP Miners,Jacksonville St Gamecocks,20260307,-1.0,0.54,131.0
 Jacksonville St Gamecocks,UTEP Miners,UTEP Miners,20260307,1.0,0.45999999999999996,131.0
-Idaho Vandals,Sacramento St Hornets,Idaho Vandals,20260307,-6.1,0.71,160.0
-Idaho Vandals,Sacramento St Hornets,Sacramento St Hornets,20260307,6.1,0.29000000000000004,160.0
 Sacramento St Hornets,Idaho Vandals,Sacramento St Hornets,20260307,6.1,0.29000000000000004,160.0
 Sacramento St Hornets,Idaho Vandals,Idaho Vandals,20260307,-6.1,0.71,160.0
+Idaho Vandals,Sacramento St Hornets,Idaho Vandals,20260307,-6.1,0.71,160.0
+Idaho Vandals,Sacramento St Hornets,Sacramento St Hornets,20260307,6.1,0.29000000000000004,160.0
 Clemson Tigers,Georgia Tech Yellow Jackets,Clemson Tigers,20260307,-19.0,0.94,141.0
 Clemson Tigers,Georgia Tech Yellow Jackets,Georgia Tech Yellow Jackets,20260307,19.0,0.06000000000000005,141.0
 Georgia Tech Yellow Jackets,Clemson Tigers,Georgia Tech Yellow Jackets,20260307,19.0,0.06000000000000005,141.0
@@ -851,10 +851,10 @@ Hawai'i Rainbow Warriors,Long Beach St 49ers,Hawai'i Rainbow Warriors,20260307,-
 Hawai'i Rainbow Warriors,Long Beach St 49ers,Long Beach St 49ers,20260307,13.9,0.12,146.0
 Long Beach St 49ers,Hawai'i Rainbow Warriors,Long Beach St 49ers,20260307,13.9,0.12,146.0
 Long Beach St 49ers,Hawai'i Rainbow Warriors,Hawai'i Rainbow Warriors,20260307,-13.9,0.88,146.0
-Idaho State Bengals,Northern Arizona Lumberjacks,Idaho State Bengals,20260307,-2.8,0.61,143.0
-Idaho State Bengals,Northern Arizona Lumberjacks,Northern Arizona Lumberjacks,20260307,2.8,0.39,143.0
 Northern Arizona Lumberjacks,Idaho State Bengals,Northern Arizona Lumberjacks,20260307,2.8,0.39,143.0
 Northern Arizona Lumberjacks,Idaho State Bengals,Idaho State Bengals,20260307,-2.8,0.61,143.0
+Idaho State Bengals,Northern Arizona Lumberjacks,Idaho State Bengals,20260307,-2.8,0.61,143.0
+Idaho State Bengals,Northern Arizona Lumberjacks,Northern Arizona Lumberjacks,20260307,2.8,0.39,143.0
 Yale Bulldogs,Princeton Tigers,Yale Bulldogs,20260307,-14.5,0.89,141.0
 Yale Bulldogs,Princeton Tigers,Princeton Tigers,20260307,14.5,0.10999999999999999,141.0
 Princeton Tigers,Yale Bulldogs,Princeton Tigers,20260307,14.5,0.10999999999999999,141.0
@@ -895,10 +895,10 @@ South Florida Bulls,Charlotte 49ers,South Florida Bulls,20260308,-15.5,0.89,154.
 South Florida Bulls,Charlotte 49ers,Charlotte 49ers,20260308,15.5,0.10999999999999999,154.0
 Charlotte 49ers,South Florida Bulls,Charlotte 49ers,20260308,15.5,0.10999999999999999,154.0
 Charlotte 49ers,South Florida Bulls,South Florida Bulls,20260308,-15.5,0.89,154.0
-Nicholls St Colonels,Northwestern St Demons,Nicholls St Colonels,20260308,-3.0,0.62,141.0
-Nicholls St Colonels,Northwestern St Demons,Northwestern St Demons,20260308,3.0,0.38,141.0
 Northwestern St Demons,Nicholls St Colonels,Northwestern St Demons,20260308,3.0,0.38,141.0
 Northwestern St Demons,Nicholls St Colonels,Nicholls St Colonels,20260308,-3.0,0.62,141.0
+Nicholls St Colonels,Northwestern St Demons,Nicholls St Colonels,20260308,-3.0,0.62,141.0
+Nicholls St Colonels,Northwestern St Demons,Northwestern St Demons,20260308,3.0,0.38,141.0
 UAB Blazers,East Carolina Pirates,UAB Blazers,20260308,-11.9,0.85,146.0
 UAB Blazers,East Carolina Pirates,East Carolina Pirates,20260308,11.9,0.15000000000000002,146.0
 East Carolina Pirates,UAB Blazers,East Carolina Pirates,20260308,11.9,0.15000000000000002,146.0
@@ -911,11 +911,11 @@ Rice Owls,UTSA Roadrunners,Rice Owls,20260308,-13.6,0.88,149.0
 Rice Owls,UTSA Roadrunners,UTSA Roadrunners,20260308,13.6,0.12,149.0
 UTSA Roadrunners,Rice Owls,UTSA Roadrunners,20260308,13.6,0.12,149.0
 UTSA Roadrunners,Rice Owls,Rice Owls,20260308,-13.6,0.88,149.0
-Montana Grizzlies,N Colorado Bears,Montana Grizzlies,20260309,2.4,0.41000000000000003,152.0
-Montana Grizzlies,N Colorado Bears,N Colorado Bears,20260309,-2.4,0.59,152.0
 N Colorado Bears,Montana Grizzlies,N Colorado Bears,20260309,-2.4,0.59,152.0
 N Colorado Bears,Montana Grizzlies,Montana Grizzlies,20260309,2.4,0.41000000000000003,152.0
-Eastern Washington Eagles,Weber State Wildcats,Eastern Washington Eagles,20260309,-2.7,0.6,160.0
-Eastern Washington Eagles,Weber State Wildcats,Weber State Wildcats,20260309,2.7,0.4,160.0
+Montana Grizzlies,N Colorado Bears,Montana Grizzlies,20260309,2.4,0.41000000000000003,152.0
+Montana Grizzlies,N Colorado Bears,N Colorado Bears,20260309,-2.4,0.59,152.0
 Weber State Wildcats,Eastern Washington Eagles,Weber State Wildcats,20260309,2.7,0.4,160.0
 Weber State Wildcats,Eastern Washington Eagles,Eastern Washington Eagles,20260309,-2.7,0.6,160.0
+Eastern Washington Eagles,Weber State Wildcats,Eastern Washington Eagles,20260309,-2.7,0.6,160.0
+Eastern Washington Eagles,Weber State Wildcats,Weber State Wildcats,20260309,2.7,0.4,160.0
