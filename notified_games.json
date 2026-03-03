@@ -5794,5 +5794,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0322997107480765,
     "notified_at": "2026-03-03T03:36:27.053408+00:00"
+  },
+  "New Mexico Lobos vs. Colorado St Rams|New Mexico Lobos|moneyline": {
+    "game": "New Mexico Lobos vs. Colorado St Rams",
+    "team": "New Mexico Lobos",
+    "edge_type": "moneyline",
+    "edge_value": 0.0355261594291901,
+    "notified_at": "2026-03-03T23:55:52.967671+00:00"
+  },
+  "Bellarmine Knights vs. Jacksonville Dolphins|Jacksonville Dolphins|moneyline": {
+    "game": "Bellarmine Knights vs. Jacksonville Dolphins",
+    "team": "Jacksonville Dolphins",
+    "edge_type": "moneyline",
+    "edge_value": 0.054901557353899,
+    "notified_at": "2026-03-03T23:55:53.268862+00:00"
   }
 }
