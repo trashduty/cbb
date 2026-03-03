@@ -5787,5 +5787,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0301404928814722,
     "notified_at": "2026-03-03T02:36:48.667854+00:00"
+  },
+  "UCLA Bruins vs. Nebraska Cornhuskers|Nebraska Cornhuskers|moneyline": {
+    "game": "UCLA Bruins vs. Nebraska Cornhuskers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0322997107480765,
+    "notified_at": "2026-03-03T03:36:27.053408+00:00"
   }
 }
