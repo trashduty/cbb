@@ -5766,5 +5766,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0399358330965844,
     "notified_at": "2026-03-03T01:32:10.688738+00:00"
+  },
+  "Hofstra Pride vs. Drexel Dragons|Hofstra Pride|moneyline": {
+    "game": "Hofstra Pride vs. Drexel Dragons",
+    "team": "Hofstra Pride",
+    "edge_type": "moneyline",
+    "edge_value": 0.0320341735228228,
+    "notified_at": "2026-03-03T02:36:48.122648+00:00"
+  },
+  "Alcorn St Braves vs. Miss Valley St Delta Devils|Alcorn St Braves|moneyline": {
+    "game": "Alcorn St Braves vs. Miss Valley St Delta Devils",
+    "team": "Alcorn St Braves",
+    "edge_type": "moneyline",
+    "edge_value": 0.0465819265103808,
+    "notified_at": "2026-03-03T02:36:48.384058+00:00"
+  },
+  "Fresno St Bulldogs vs. San Jos\u00e9 St Spartans|Fresno St Bulldogs|moneyline": {
+    "game": "Fresno St Bulldogs vs. San Jos\u00e9 St Spartans",
+    "team": "Fresno St Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0301404928814722,
+    "notified_at": "2026-03-03T02:36:48.667854+00:00"
   }
 }
