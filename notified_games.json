@@ -5759,5 +5759,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0426027088221175,
     "notified_at": "2026-03-02T20:33:24.542547+00:00"
+  },
+  "Vermont Catamounts vs. Albany Great Danes|Vermont Catamounts|moneyline": {
+    "game": "Vermont Catamounts vs. Albany Great Danes",
+    "team": "Vermont Catamounts",
+    "edge_type": "moneyline",
+    "edge_value": 0.0399358330965844,
+    "notified_at": "2026-03-03T01:32:10.688738+00:00"
   }
 }
