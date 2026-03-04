@@ -5829,5 +5829,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0914082858517684,
     "notified_at": "2026-03-04T05:44:30.942151+00:00"
+  },
+  "Rhode Island Rams vs. Duquesne Dukes|Rhode Island Rams|moneyline": {
+    "game": "Rhode Island Rams vs. Duquesne Dukes",
+    "team": "Rhode Island Rams",
+    "edge_type": "moneyline",
+    "edge_value": 0.033205027656107,
+    "notified_at": "2026-03-04T07:30:47.171474+00:00"
   }
 }
