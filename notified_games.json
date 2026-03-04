@@ -5808,5 +5808,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.054901557353899,
     "notified_at": "2026-03-03T23:55:53.268862+00:00"
+  },
+  "GW Revolutionaries vs. St. Bonaventure Bonnies|GW Revolutionaries|moneyline": {
+    "game": "GW Revolutionaries vs. St. Bonaventure Bonnies",
+    "team": "GW Revolutionaries",
+    "edge_type": "moneyline",
+    "edge_value": 0.0427463850865612,
+    "notified_at": "2026-03-04T01:31:52.217320+00:00"
   }
 }
