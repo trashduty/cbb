@@ -185,7 +185,15 @@ async function downloadEvanMiyaData() {
     await page.goto('https://evanmiya.com/?game_predictions', { timeout: config.timeout });
     console.log('Navigated to game predictions');
 
-    // Dismiss any SweetAlert promo/announcement modal that may be blocking the download button
+    // Wait for loading spinner to disappear (page loads data before showing promo)
+    try {
+      await page.waitForSelector('.load-container', { state: 'hidden', timeout: 60000 });
+      console.log('Page data loaded');
+    } catch (e) {
+      console.log('Load container wait timed out, proceeding anyway');
+    }
+
+    // Dismiss any SweetAlert promo/announcement modal that appears after loading
     try {
       const sweetOverlay = page.locator('.sweet-overlay');
       await sweetOverlay.waitFor({ state: 'visible', timeout: 10000 });
