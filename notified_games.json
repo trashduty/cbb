@@ -5836,5 +5836,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.033205027656107,
     "notified_at": "2026-03-04T07:30:47.171474+00:00"
+  },
+  "Notre Dame Fighting Irish vs. Stanford Cardinal|Notre Dame Fighting Irish|moneyline": {
+    "game": "Notre Dame Fighting Irish vs. Stanford Cardinal",
+    "team": "Notre Dame Fighting Irish",
+    "edge_type": "moneyline",
+    "edge_value": 0.0332490595390071,
+    "notified_at": "2026-03-04T15:19:06.928943+00:00"
   }
 }
