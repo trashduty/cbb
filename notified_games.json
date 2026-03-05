@@ -5857,5 +5857,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0315962763382595,
     "notified_at": "2026-03-05T02:36:14.209605+00:00"
+  },
+  "Maryland-Eastern Shore Hawks vs. Delaware St Hornets|Maryland-Eastern Shore Hawks|moneyline": {
+    "game": "Maryland-Eastern Shore Hawks vs. Delaware St Hornets",
+    "team": "Maryland-Eastern Shore Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0511957919128787,
+    "notified_at": "2026-03-05T04:23:08.135088+00:00"
   }
 }
