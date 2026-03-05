@@ -5892,5 +5892,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0963751068848958,
     "notified_at": "2026-03-05T04:59:57.200758+00:00"
+  },
+  "UNC Greensboro Spartans vs. VMI Keydets|UNC Greensboro Spartans|moneyline": {
+    "game": "UNC Greensboro Spartans vs. VMI Keydets",
+    "team": "UNC Greensboro Spartans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0608606398045903,
+    "notified_at": "2026-03-05T23:38:33.521915+00:00"
   }
 }
