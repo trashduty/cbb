@@ -5850,5 +5850,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0554370039979578,
     "notified_at": "2026-03-05T01:32:04.400280+00:00"
+  },
+  "Delaware Blue Hens vs. Sam Houston St Bearkats|Sam Houston St Bearkats|moneyline": {
+    "game": "Delaware Blue Hens vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0315962763382595,
+    "notified_at": "2026-03-05T02:36:14.209605+00:00"
   }
 }
