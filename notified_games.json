@@ -5843,5 +5843,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0332490595390071,
     "notified_at": "2026-03-04T15:19:06.928943+00:00"
+  },
+  "Portland Pilots vs. Pepperdine Waves|Pepperdine Waves|moneyline": {
+    "game": "Portland Pilots vs. Pepperdine Waves",
+    "team": "Pepperdine Waves",
+    "edge_type": "moneyline",
+    "edge_value": 0.0554370039979578,
+    "notified_at": "2026-03-05T01:32:04.400280+00:00"
   }
 }
