@@ -5864,5 +5864,33 @@
     "edge_type": "moneyline",
     "edge_value": 0.0511957919128787,
     "notified_at": "2026-03-05T04:23:08.135088+00:00"
+  },
+  "Jackson St Tigers vs. Miss Valley St Delta Devils|Jackson St Tigers|moneyline": {
+    "game": "Jackson St Tigers vs. Miss Valley St Delta Devils",
+    "team": "Jackson St Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0467609134516907,
+    "notified_at": "2026-03-05T04:59:56.453123+00:00"
+  },
+  "Morgan St Bears vs. Coppin St Eagles|Morgan St Bears|moneyline": {
+    "game": "Morgan St Bears vs. Coppin St Eagles",
+    "team": "Morgan St Bears",
+    "edge_type": "moneyline",
+    "edge_value": 0.0983256714854441,
+    "notified_at": "2026-03-05T04:59:56.679049+00:00"
+  },
+  "Alabama A&M Bulldogs vs. Southern Jaguars|Alabama A&M Bulldogs|moneyline": {
+    "game": "Alabama A&M Bulldogs vs. Southern Jaguars",
+    "team": "Alabama A&M Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0501371397293005,
+    "notified_at": "2026-03-05T04:59:56.985613+00:00"
+  },
+  "Alcorn St Braves vs. Arkansas-Pine Bluff Golden Lions|Alcorn St Braves|moneyline": {
+    "game": "Alcorn St Braves vs. Arkansas-Pine Bluff Golden Lions",
+    "team": "Alcorn St Braves",
+    "edge_type": "moneyline",
+    "edge_value": 0.0963751068848958,
+    "notified_at": "2026-03-05T04:59:57.200758+00:00"
   }
 }
