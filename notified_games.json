@@ -5955,5 +5955,33 @@
     "edge_type": "moneyline",
     "edge_value": 0.039515552288283,
     "notified_at": "2026-03-06T20:15:20.888928+00:00"
+  },
+  "Saint Joseph's Hawks vs. La Salle Explorers|Saint Joseph's Hawks|moneyline": {
+    "game": "Saint Joseph's Hawks vs. La Salle Explorers",
+    "team": "Saint Joseph's Hawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0340626782963275,
+    "notified_at": "2026-03-06T23:11:34.918112+00:00"
+  },
+  "Missouri St Bears vs. Middle Tennessee Blue Raiders|Missouri St Bears|moneyline": {
+    "game": "Missouri St Bears vs. Middle Tennessee Blue Raiders",
+    "team": "Missouri St Bears",
+    "edge_type": "moneyline",
+    "edge_value": 0.0319128426255007,
+    "notified_at": "2026-03-06T23:11:35.149376+00:00"
+  },
+  "Wichita St Shockers vs. Florida Atlantic Owls|Wichita St Shockers|moneyline": {
+    "game": "Wichita St Shockers vs. Florida Atlantic Owls",
+    "team": "Wichita St Shockers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0395222864357153,
+    "notified_at": "2026-03-06T23:11:35.329732+00:00"
+  },
+  "St. Bonaventure Bonnies vs. Davidson Wildcats|Davidson Wildcats|moneyline": {
+    "game": "St. Bonaventure Bonnies vs. Davidson Wildcats",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0575781201192317,
+    "notified_at": "2026-03-06T23:11:35.552440+00:00"
   }
 }
