@@ -5983,5 +5983,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0575781201192317,
     "notified_at": "2026-03-06T23:11:35.552440+00:00"
+  },
+  "Liberty Flames vs. Sam Houston St Bearkats|Sam Houston St Bearkats|moneyline": {
+    "game": "Liberty Flames vs. Sam Houston St Bearkats",
+    "team": "Sam Houston St Bearkats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0342353494306206,
+    "notified_at": "2026-03-06T23:28:10.355779+00:00"
+  },
+  "Quinnipiac Bobcats vs. Marist Red Foxes|Marist Red Foxes|moneyline": {
+    "game": "Quinnipiac Bobcats vs. Marist Red Foxes",
+    "team": "Marist Red Foxes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0506197100192497,
+    "notified_at": "2026-03-06T23:28:10.684497+00:00"
   }
 }
