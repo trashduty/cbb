@@ -5997,5 +5997,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0506197100192497,
     "notified_at": "2026-03-06T23:28:10.684497+00:00"
+  },
+  "Abilene Christian Wildcats vs. UT-Arlington Mavericks|UT-Arlington Mavericks|moneyline": {
+    "game": "Abilene Christian Wildcats vs. UT-Arlington Mavericks",
+    "team": "UT-Arlington Mavericks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0364049397992776,
+    "notified_at": "2026-03-06T23:55:59.826597+00:00"
   }
 }
