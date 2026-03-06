@@ -5913,5 +5913,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0314508759911172,
     "notified_at": "2026-03-06T04:20:42.476477+00:00"
+  },
+  "Alabama Crimson Tide vs. Auburn Tigers|Alabama Crimson Tide|moneyline": {
+    "game": "Alabama Crimson Tide vs. Auburn Tigers",
+    "team": "Alabama Crimson Tide",
+    "edge_type": "moneyline",
+    "edge_value": 0.0433604557155699,
+    "notified_at": "2026-03-06T19:18:21.489995+00:00"
   }
 }
