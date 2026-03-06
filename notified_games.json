@@ -5920,5 +5920,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0433604557155699,
     "notified_at": "2026-03-06T19:18:21.489995+00:00"
+  },
+  "Florida St Seminoles vs. SMU Mustangs|SMU Mustangs|moneyline": {
+    "game": "Florida St Seminoles vs. SMU Mustangs",
+    "team": "SMU Mustangs",
+    "edge_type": "moneyline",
+    "edge_value": 0.042382830603958,
+    "notified_at": "2026-03-06T20:15:19.443366+00:00"
+  },
+  "NC State Wolfpack vs. Stanford Cardinal|NC State Wolfpack|moneyline": {
+    "game": "NC State Wolfpack vs. Stanford Cardinal",
+    "team": "NC State Wolfpack",
+    "edge_type": "moneyline",
+    "edge_value": 0.070704022112422,
+    "notified_at": "2026-03-06T20:15:19.722997+00:00"
+  },
+  "Utah State Aggies vs. New Mexico Lobos|Utah State Aggies|moneyline": {
+    "game": "Utah State Aggies vs. New Mexico Lobos",
+    "team": "Utah State Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0324859390569209,
+    "notified_at": "2026-03-06T20:15:20.043784+00:00"
+  },
+  "Purdue Boilermakers vs. Wisconsin Badgers|Purdue Boilermakers|moneyline": {
+    "game": "Purdue Boilermakers vs. Wisconsin Badgers",
+    "team": "Purdue Boilermakers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0626208505883727,
+    "notified_at": "2026-03-06T20:15:20.644241+00:00"
+  },
+  "Oregon Ducks vs. Washington Huskies|Washington Huskies|moneyline": {
+    "game": "Oregon Ducks vs. Washington Huskies",
+    "team": "Washington Huskies",
+    "edge_type": "moneyline",
+    "edge_value": 0.039515552288283,
+    "notified_at": "2026-03-06T20:15:20.888928+00:00"
   }
 }
