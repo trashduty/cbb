@@ -5899,5 +5899,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0608606398045903,
     "notified_at": "2026-03-05T23:38:33.521915+00:00"
+  },
+  "Queens University Royals vs. West Georgia Wolves|Queens University Royals|moneyline": {
+    "game": "Queens University Royals vs. West Georgia Wolves",
+    "team": "Queens University Royals",
+    "edge_type": "moneyline",
+    "edge_value": 0.0363027499529432,
+    "notified_at": "2026-03-06T03:33:42.589240+00:00"
   }
 }
