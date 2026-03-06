@@ -5906,5 +5906,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0363027499529432,
     "notified_at": "2026-03-06T03:33:42.589240+00:00"
+  },
+  "San Diego St Aztecs vs. UNLV Rebels|San Diego St Aztecs|moneyline": {
+    "game": "San Diego St Aztecs vs. UNLV Rebels",
+    "team": "San Diego St Aztecs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0314508759911172,
+    "notified_at": "2026-03-06T04:20:42.476477+00:00"
   }
 }
