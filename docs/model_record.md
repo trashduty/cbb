@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** March 06, 2026 at 07:49 PM ET
+**Last Updated:** March 06, 2026 at 08:33 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-03-06
 
-**Total Games Graded:** 3443 games (6886 team-rows)
+**Total Games Graded:** 3447 games (6894 team-rows)
 
 ---
 
@@ -16,41 +16,41 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 352-339 | 50.9% | -19.03 |
+| 0-1.9% | 354-341 | 50.9% | -19.21 |
 | 2-3.9% | 85-129 | 39.7% | -51.74 |
 | 4-5.9% | 28-31 | 47.5% | -5.55 |
 | 6%+ | 5-10 | 33.3% | -5.46 |
-| **Total** | **470-509** | **48.0%** | **-81.78** |
+| **Total** | **472-511** | **48.0%** | **-81.96** |
 
 ### Spread Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 98-111 | 46.9% | -21.92 |
+| 0-1.9% | 98-112 | 46.7% | -22.92 |
 | 2-3.9% | 30-43 | 41.1% | -15.73 |
 | 4-5.9% | 8-11 | 42.1% | -3.73 |
 | 6%+ | 2-7 | 22.2% | -5.18 |
-| **Total** | **138-172** | **44.5%** | **-46.56** |
+| **Total** | **138-173** | **44.4%** | **-47.56** |
 
 ### Moneyline Bets - All
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 269-372 | 42.0% | -127.48 |
+| 0-1.9% | 269-373 | 41.9% | -128.48 |
 | 2-3.9% | 64-81 | 44.1% | -22.82 |
 | 4-5.9% | 18-26 | 40.9% | -9.64 |
 | 6%+ | 4-7 | 36.4% | -3.36 |
-| **Total** | **355-486** | **42.2%** | **-163.30** |
+| **Total** | **355-487** | **42.2%** | **-164.30** |
 
 ### Moneyline Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 118-170 | 41.0% | -62.74 |
+| 0-1.9% | 118-171 | 40.8% | -63.74 |
 | 2-3.9% | 24-26 | 48.0% | -4.18 |
 | 4-5.9% | 6-7 | 46.2% | -1.55 |
 | 6%+ | 1-1 | 50.0% | -0.09 |
-| **Total** | **149-204** | **42.2%** | **-68.56** |
+| **Total** | **149-205** | **42.1%** | **-69.56** |
 
 ### Over Bets - All
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3023-2911 | 50.9% | -163.09 |
-| Bart Torvik | 1847-2023 | 47.7% | -344.08 |
-| Evan Miya | 3097-3519 | 46.8% | -703.83 |
-| Haslametrics | 3187-3309 | 49.1% | -412.02 |
+| KenPom | 3025-2913 | 50.9% | -163.28 |
+| Bart Torvik | 1851-2023 | 47.8% | -340.44 |
+| Evan Miya | 3099-3521 | 46.8% | -704.01 |
+| Haslametrics | 3189-3311 | 49.1% | -412.20 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 4147-2021 | 67.2% | +1748.62 |
-| Bart Torvik | 2778-1310 | 68.0% | +1215.20 |
-| Evan Miya | 4602-2282 | 66.9% | +1901.22 |
+| KenPom | 4153-2021 | 67.3% | +1754.08 |
+| Bart Torvik | 2786-1310 | 68.0% | +1222.47 |
+| Evan Miya | 4610-2282 | 66.9% | +1908.49 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2918-3002 | 49.3% | -349.54 |
-| Bart Torvik | 1902-1948 | 49.4% | -219.08 |
-| Evan Miya | 3248-3350 | 49.2% | -397.57 |
-| Haslametrics | 3188-3294 | 49.2% | -396.11 |
+| KenPom | 2920-3004 | 49.3% | -349.72 |
+| Bart Torvik | 1904-1950 | 49.4% | -219.26 |
+| Evan Miya | 3250-3352 | 49.2% | -397.75 |
+| Haslametrics | 3190-3296 | 49.2% | -396.29 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3002-2918 | 50.7% | -189.18 |
-| Bart Torvik | 1948-1902 | 50.6% | -131.27 |
-| Evan Miya | 3350-3248 | 50.8% | -202.85 |
-| Haslametrics | 3294-3188 | 50.8% | -193.75 |
+| KenPom | 3004-2920 | 50.7% | -189.36 |
+| Bart Torvik | 1950-1904 | 50.6% | -131.45 |
+| Evan Miya | 3352-3250 | 50.8% | -203.03 |
+| Haslametrics | 3296-3190 | 50.8% | -193.94 |
 
 ---
 
