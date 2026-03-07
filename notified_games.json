@@ -6032,5 +6032,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0982834161283612,
     "notified_at": "2026-03-07T14:26:03.614094+00:00"
+  },
+  "Tulane Green Wave vs. Memphis Tigers|Memphis Tigers|moneyline": {
+    "game": "Tulane Green Wave vs. Memphis Tigers",
+    "team": "Memphis Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0382816161533222,
+    "notified_at": "2026-03-07T20:26:21.424647+00:00"
   }
 }
