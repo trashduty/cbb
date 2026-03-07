@@ -185,29 +185,36 @@ async function downloadEvanMiyaData() {
     await page.goto('https://evanmiya.com/?game_predictions', { timeout: config.timeout });
     console.log('Navigated to game predictions');
 
-    // Wait for loading spinner to disappear (page loads data before showing promo)
-    try {
-      await page.waitForSelector('.load-container', { state: 'hidden', timeout: 60000 });
-      console.log('Page data loaded');
-    } catch (e) {
-      console.log('Load container wait timed out, proceeding anyway');
-    }
-
-    // Dismiss any SweetAlert promo/announcement modal that appears after loading
-    try {
-      const sweetOverlay = page.locator('.sweet-overlay');
-      await sweetOverlay.waitFor({ state: 'visible', timeout: 10000 });
-      console.log('Promo dialog detected, dismissing...');
-      try {
-        await page.locator('.sweet-alert .confirm').click({ timeout: 5000 });
-      } catch {
-        await page.locator('.sweet-alert button').first().click({ timeout: 5000 });
+    // Poll until all Shiny loading spinners are gone and any promo dialog is dismissed.
+    // The page goes through multiple loading phases (load1, load8, etc.) so we loop
+    // rather than waiting for a single element once.
+    const deadline = Date.now() + 120000;
+    let pageReady = false;
+    while (Date.now() < deadline) {
+      // Dismiss promo dialog immediately whenever it appears
+      if (await page.locator('.sweet-overlay').isVisible()) {
+        console.log('Promo dialog detected, dismissing...');
+        try {
+          await page.locator('.sweet-alert .confirm').click({ timeout: 5000 });
+        } catch {
+          await page.locator('.sweet-alert button').first().click({ timeout: 5000 });
+        }
+        await page.locator('.sweet-overlay').waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+        console.log('Dismissed promo dialog');
+        continue;
       }
-      await sweetOverlay.waitFor({ state: 'hidden', timeout: 10000 });
-      console.log('Dismissed promo dialog');
-    } catch (e) {
-      console.log('No promo dialog found, continuing');
+
+      // Check if any loading spinner is still visible
+      const isLoading = await page.evaluate(() =>
+        [...document.querySelectorAll('.load-container')].some(el => el.offsetParent !== null)
+      );
+      if (!isLoading) {
+        pageReady = true;
+        break;
+      }
+      await sleep(500);
     }
+    console.log(pageReady ? 'Page ready for download' : 'Warning: page load timeout, attempting download anyway');
 
     // Setup download handler and click download button
     const downloadPromise = page.waitForEvent('download', { timeout: 60000 });
