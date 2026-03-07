@@ -6011,5 +6011,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.036102298280793,
     "notified_at": "2026-03-07T00:47:58.146113+00:00"
+  },
+  "LIU Sharks vs. Wagner Seahawks|LIU Sharks|moneyline": {
+    "game": "LIU Sharks vs. Wagner Seahawks",
+    "team": "LIU Sharks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0393806193343111,
+    "notified_at": "2026-03-07T04:08:27.009700+00:00"
   }
 }
