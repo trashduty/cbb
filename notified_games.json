@@ -6004,5 +6004,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0364049397992776,
     "notified_at": "2026-03-06T23:55:59.826597+00:00"
+  },
+  "Loyola (Chi) Ramblers vs. GW Revolutionaries|GW Revolutionaries|moneyline": {
+    "game": "Loyola (Chi) Ramblers vs. GW Revolutionaries",
+    "team": "GW Revolutionaries",
+    "edge_type": "moneyline",
+    "edge_value": 0.036102298280793,
+    "notified_at": "2026-03-07T00:47:58.146113+00:00"
   }
 }
