@@ -185,41 +185,43 @@ async function downloadEvanMiyaData() {
     await page.goto('https://evanmiya.com/?game_predictions', { timeout: config.timeout });
     console.log('Navigated to game predictions');
 
-    // Poll until all Shiny loading spinners are gone and any promo dialog is dismissed.
-    // The page goes through multiple loading phases (load1, load8, etc.) so we loop
-    // rather than waiting for a single element once.
-    const deadline = Date.now() + 120000;
-    let pageReady = false;
-    while (Date.now() < deadline) {
-      // Dismiss promo dialog immediately whenever it appears
+    // Set up download listener before the click loop
+    const downloadPromise = page.waitForEvent('download', { timeout: 90000 });
+
+    // Retry clicking the download button while handling overlays as they appear.
+    // The Shiny app has multiple loading phases (load1, load8, etc.) and a promo dialog
+    // that can appear at any time — including after we think the page is ready.
+    // Rather than predicting the perfect moment to click, we retry the click and
+    // dismiss the promo whenever it blocks us.
+    const clickDeadline = Date.now() + 90000;
+    let clicked = false;
+    while (!clicked && Date.now() < clickDeadline) {
+      // Dismiss promo dialog if it's blocking
       if (await page.locator('.sweet-overlay').isVisible()) {
         console.log('Promo dialog detected, dismissing...');
         try {
           await page.locator('.sweet-alert .confirm').click({ timeout: 5000 });
         } catch {
-          await page.locator('.sweet-alert button').first().click({ timeout: 5000 });
+          await page.locator('.sweet-alert button').first().click({ timeout: 5000 }).catch(() => {});
         }
         await page.locator('.sweet-overlay').waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
         console.log('Dismissed promo dialog');
         continue;
       }
 
-      // Check if any loading spinner is still visible
-      const isLoading = await page.evaluate(() =>
-        [...document.querySelectorAll('.load-container')].some(el => el.offsetParent !== null)
-      );
-      if (!isLoading) {
-        pageReady = true;
-        break;
+      // Attempt the click with a short timeout; retry if blocked by a loading spinner
+      try {
+        await page.getByRole('button', { name: 'download icon Download' }).click({ timeout: 3000 });
+        clicked = true;
+        console.log('Clicked download button');
+      } catch {
+        await sleep(500);
       }
-      await sleep(500);
     }
-    console.log(pageReady ? 'Page ready for download' : 'Warning: page load timeout, attempting download anyway');
 
-    // Setup download handler and click download button
-    const downloadPromise = page.waitForEvent('download', { timeout: 60000 });
-    await page.getByRole('button', { name: 'download icon Download' }).click();
-    console.log('Clicked download button');
+    if (!clicked) {
+      throw new Error('Could not click download button: overlays blocked for entire timeout');
+    }
     
     const download = await downloadPromise;
     
