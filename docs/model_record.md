@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** March 07, 2026 at 12:07 AM ET
+**Last Updated:** March 07, 2026 at 12:28 AM ET
 
 **Season Record Period:** 2025-11-04 to 2026-03-07
 
-**Total Games Graded:** 3472 games (6944 team-rows)
+**Total Games Graded:** 3473 games (6946 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3045-2939 | 50.9% | -171.09 |
-| Bart Torvik | 1869-2045 | 47.8% | -346.08 |
-| Evan Miya | 3120-3548 | 46.8% | -711.92 |
-| Haslametrics | 3212-3336 | 49.1% | -416.29 |
+| KenPom | 3047-2939 | 50.9% | -169.28 |
+| Bart Torvik | 1871-2045 | 47.8% | -344.26 |
+| Evan Miya | 3122-3548 | 46.8% | -710.10 |
+| Haslametrics | 3212-3338 | 49.0% | -418.29 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 4177-2045 | 67.1% | +1751.89 |
-| Bart Torvik | 2804-1334 | 67.8% | +1214.84 |
-| Evan Miya | 4636-2306 | 66.8% | +1908.12 |
+| KenPom | 4179-2045 | 67.1% | +1753.71 |
+| Bart Torvik | 2806-1334 | 67.8% | +1216.65 |
+| Evan Miya | 4638-2306 | 66.8% | +1909.94 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 2942-3026 | 49.3% | -351.72 |
-| Bart Torvik | 1926-1966 | 49.5% | -215.27 |
-| Evan Miya | 3274-3374 | 49.2% | -397.93 |
-| Haslametrics | 3214-3318 | 49.2% | -396.47 |
+| KenPom | 2944-3026 | 49.3% | -349.90 |
+| Bart Torvik | 1928-1966 | 49.5% | -213.45 |
+| Evan Miya | 3276-3374 | 49.3% | -396.12 |
+| Haslametrics | 3216-3318 | 49.2% | -394.66 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3026-2942 | 50.7% | -191.37 |
-| Bart Torvik | 1966-1926 | 50.5% | -138.91 |
-| Evan Miya | 3374-3274 | 50.8% | -207.03 |
-| Haslametrics | 3318-3214 | 50.8% | -197.94 |
+| KenPom | 3026-2944 | 50.7% | -193.37 |
+| Bart Torvik | 1966-1928 | 50.5% | -140.91 |
+| Evan Miya | 3374-3276 | 50.7% | -209.03 |
+| Haslametrics | 3318-3216 | 50.8% | -199.94 |
 
 ---
 
