@@ -6039,5 +6039,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0382816161533222,
     "notified_at": "2026-03-07T20:26:21.424647+00:00"
+  },
+  "Navy Midshipmen vs. Boston Univ. Terriers|Navy Midshipmen|moneyline": {
+    "game": "Navy Midshipmen vs. Boston Univ. Terriers",
+    "team": "Navy Midshipmen",
+    "edge_type": "moneyline",
+    "edge_value": 0.0489987284452404,
+    "notified_at": "2026-03-07T22:41:44.664345+00:00"
   }
 }
