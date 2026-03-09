@@ -6053,5 +6053,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0338244823071972,
     "notified_at": "2026-03-08T14:09:30.980508+00:00"
+  },
+  "Cincinnati Bearcats vs. Utah Utes|Cincinnati Bearcats|moneyline": {
+    "game": "Cincinnati Bearcats vs. Utah Utes",
+    "team": "Cincinnati Bearcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0446686296679837,
+    "notified_at": "2026-03-09T14:26:01.184317+00:00"
   }
 }
