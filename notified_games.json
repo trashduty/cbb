@@ -6060,5 +6060,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0446686296679837,
     "notified_at": "2026-03-09T14:26:01.184317+00:00"
+  },
+  "Northwestern Wildcats vs. Penn State Nittany Lions|Northwestern Wildcats|moneyline": {
+    "game": "Northwestern Wildcats vs. Penn State Nittany Lions",
+    "team": "Northwestern Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0667969885585972,
+    "notified_at": "2026-03-09T14:50:24.995107+00:00"
   }
 }
