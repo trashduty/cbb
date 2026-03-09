@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** March 09, 2026 at 01:07 AM ET
+**Last Updated:** March 09, 2026 at 01:39 AM ET
 
 **Season Record Period:** 2025-11-04 to 2026-03-09
 
-**Total Games Graded:** 3602 games (7204 team-rows)
+**Total Games Graded:** 3603 games (7206 team-rows)
 
 ---
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3141-3079 | 50.5% | -223.83 |
+| KenPom | 3141-3081 | 50.5% | -225.83 |
 | Bart Torvik | 1936-2162 | 47.2% | -402.18 |
-| Evan Miya | 3237-3681 | 46.8% | -738.57 |
-| Haslametrics | 3308-3490 | 48.7% | -483.03 |
+| Evan Miya | 3237-3683 | 46.8% | -740.57 |
+| Haslametrics | 3310-3490 | 48.7% | -481.21 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 4340-2128 | 67.1% | +1817.06 |
+| KenPom | 4342-2128 | 67.1% | +1818.88 |
 | Bart Torvik | 2931-1401 | 67.7% | +1263.28 |
-| Evan Miya | 4804-2398 | 66.7% | +1968.84 |
+| Evan Miya | 4806-2398 | 66.7% | +1970.65 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3084-3122 | 49.7% | -318.64 |
+| KenPom | 3084-3124 | 49.7% | -320.64 |
 | Bart Torvik | 2036-2042 | 49.9% | -191.28 |
-| Evan Miya | 3424-3476 | 49.6% | -363.58 |
-| Haslametrics | 3364-3420 | 49.6% | -362.12 |
+| Evan Miya | 3424-3478 | 49.6% | -365.58 |
+| Haslametrics | 3364-3422 | 49.6% | -364.12 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3122-3084 | 50.3% | -246.10 |
+| KenPom | 3124-3084 | 50.3% | -244.28 |
 | Bart Torvik | 2042-2036 | 50.1% | -179.82 |
-| Evan Miya | 3476-3424 | 50.4% | -264.32 |
-| Haslametrics | 3420-3364 | 50.4% | -255.22 |
+| Evan Miya | 3478-3424 | 50.4% | -262.50 |
+| Haslametrics | 3422-3364 | 50.4% | -253.40 |
 
 ---
 
