@@ -6088,5 +6088,40 @@
     "edge_type": "moneyline",
     "edge_value": 0.0428966739627721,
     "notified_at": "2026-03-09T15:52:25.770660+00:00"
+  },
+  "Florida Int'l Golden Panthers vs. Missouri St Bears|Florida Int'l Golden Panthers|moneyline": {
+    "game": "Florida Int'l Golden Panthers vs. Missouri St Bears",
+    "team": "Florida Int'l Golden Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0379071677900374,
+    "notified_at": "2026-03-09T16:15:26.142877+00:00"
+  },
+  "Auburn Tigers vs. Mississippi St Bulldogs|Auburn Tigers|moneyline": {
+    "game": "Auburn Tigers vs. Mississippi St Bulldogs",
+    "team": "Auburn Tigers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0320686443234462,
+    "notified_at": "2026-03-09T16:15:26.524331+00:00"
+  },
+  "Butler Bulldogs vs. Providence Friars|Providence Friars|moneyline": {
+    "game": "Butler Bulldogs vs. Providence Friars",
+    "team": "Providence Friars",
+    "edge_type": "moneyline",
+    "edge_value": 0.0316519178219878,
+    "notified_at": "2026-03-09T16:15:26.808625+00:00"
+  },
+  "Oklahoma Sooners vs. South Carolina Gamecocks|Oklahoma Sooners|moneyline": {
+    "game": "Oklahoma Sooners vs. South Carolina Gamecocks",
+    "team": "Oklahoma Sooners",
+    "edge_type": "moneyline",
+    "edge_value": 0.0488649875313694,
+    "notified_at": "2026-03-09T16:15:27.144962+00:00"
+  },
+  "Kentucky Wildcats vs. LSU Tigers|Kentucky Wildcats|moneyline": {
+    "game": "Kentucky Wildcats vs. LSU Tigers",
+    "team": "Kentucky Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0405706105328532,
+    "notified_at": "2026-03-09T16:15:27.698404+00:00"
   }
 }
