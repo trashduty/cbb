@@ -6067,5 +6067,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0667969885585972,
     "notified_at": "2026-03-09T14:50:24.995107+00:00"
+  },
+  "Butler Bulldogs vs. Providence Friars|Butler Bulldogs|moneyline": {
+    "game": "Butler Bulldogs vs. Providence Friars",
+    "team": "Butler Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0384426798529609,
+    "notified_at": "2026-03-09T15:52:23.621666+00:00"
+  },
+  "Texas Longhorns vs. Ole Miss Rebels|Texas Longhorns|moneyline": {
+    "game": "Texas Longhorns vs. Ole Miss Rebels",
+    "team": "Texas Longhorns",
+    "edge_type": "moneyline",
+    "edge_value": 0.0642421622725162,
+    "notified_at": "2026-03-09T15:52:25.297775+00:00"
+  },
+  "DePaul Blue Demons vs. Georgetown Hoyas|DePaul Blue Demons|moneyline": {
+    "game": "DePaul Blue Demons vs. Georgetown Hoyas",
+    "team": "DePaul Blue Demons",
+    "edge_type": "moneyline",
+    "edge_value": 0.0428966739627721,
+    "notified_at": "2026-03-09T15:52:25.770660+00:00"
   }
 }
