@@ -6123,5 +6123,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0405706105328532,
     "notified_at": "2026-03-09T16:15:27.698404+00:00"
+  },
+  "Gonzaga Bulldogs vs. Santa Clara Broncos|Gonzaga Bulldogs|moneyline": {
+    "game": "Gonzaga Bulldogs vs. Santa Clara Broncos",
+    "team": "Gonzaga Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0863730234295172,
+    "notified_at": "2026-03-10T14:23:20.145223+00:00"
+  },
+  "Merrimack Warriors vs. Siena Saints|Siena Saints|moneyline": {
+    "game": "Merrimack Warriors vs. Siena Saints",
+    "team": "Siena Saints",
+    "edge_type": "moneyline",
+    "edge_value": 0.0392051620181415,
+    "notified_at": "2026-03-10T14:23:20.555477+00:00"
+  },
+  "Eastern Washington Eagles vs. Idaho Vandals|Eastern Washington Eagles|moneyline": {
+    "game": "Eastern Washington Eagles vs. Idaho Vandals",
+    "team": "Eastern Washington Eagles",
+    "edge_type": "moneyline",
+    "edge_value": 0.0533389785251957,
+    "notified_at": "2026-03-10T14:23:21.021008+00:00"
   }
 }
