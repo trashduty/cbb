@@ -6158,5 +6158,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0551039197293803,
     "notified_at": "2026-03-10T17:48:41.571899+00:00"
+  },
+  "Miami (OH) RedHawks vs. Massachusetts Minutemen|Miami (OH) RedHawks|moneyline": {
+    "game": "Miami (OH) RedHawks vs. Massachusetts Minutemen",
+    "team": "Miami (OH) RedHawks",
+    "edge_type": "moneyline",
+    "edge_value": 0.0560414094462166,
+    "notified_at": "2026-03-10T18:23:05.305300+00:00"
   }
 }
