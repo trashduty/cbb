@@ -6151,5 +6151,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0343160553309583,
     "notified_at": "2026-03-10T17:21:59.645891+00:00"
+  },
+  "UC Davis Aggies vs. UC Santa Barbara Gauchos|UC Davis Aggies|moneyline": {
+    "game": "UC Davis Aggies vs. UC Santa Barbara Gauchos",
+    "team": "UC Davis Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0551039197293803,
+    "notified_at": "2026-03-10T17:48:41.571899+00:00"
   }
 }
