@@ -7263,24 +7263,24 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-08,Rice,UTSA,home,85.0,80,69
 2026-03-09,Santa Clara,Saint Mary's,away,40.0,75,78
 2026-03-09,Saint Mary's,Santa Clara,home,60.0,78,75
-2026-03-09,Northern Kentucky,Wright St.,away,46.0,77,78
-2026-03-09,Wright St.,Northern Kentucky,home,54.0,78,77
+2026-03-09,Wright St.,Northern Kentucky,away,54.0,78,77
+2026-03-09,Northern Kentucky,Wright St.,home,46.0,77,78
 2026-03-09,Towson,Hofstra,away,31.0,63,69
 2026-03-09,Hofstra,Towson,home,69.0,69,63
 2026-03-09,Weber St.,Eastern Washington,away,43.0,79,81
 2026-03-09,Eastern Washington,Weber St.,home,57.0,81,79
-2026-03-09,Northern Colorado,Montana,away,61.0,78,75
-2026-03-09,Montana,Northern Colorado,home,39.0,75,78
-2026-03-09,Campbell,Monmouth,away,51.0,77,76
-2026-03-09,Monmouth,Campbell,home,49.0,76,77
-2026-03-09,New Orleans,Texas A&M Corpus Chris,away,50.0,73,74
-2026-03-09,Texas A&M Corpus Chris,New Orleans,home,50.0,74,73
+2026-03-09,Montana,Northern Colorado,away,39.0,75,78
+2026-03-09,Northern Colorado,Montana,home,61.0,78,75
+2026-03-09,Monmouth,Campbell,away,49.0,76,77
+2026-03-09,Campbell,Monmouth,home,51.0,77,76
+2026-03-09,Texas A&M Corpus Chris,New Orleans,away,50.0,74,73
+2026-03-09,New Orleans,Texas A&M Corpus Chris,home,50.0,73,74
 2026-03-09,Furman,East Tennessee St.,away,40.0,70,72
 2026-03-09,East Tennessee St.,Furman,home,60.0,72,70
 2026-03-09,Detroit Mercy,Robert Morris,away,34.0,72,77
 2026-03-09,Robert Morris,Detroit Mercy,home,66.0,77,72
-2026-03-09,Georgia Southern,Troy,away,34.0,75,80
-2026-03-09,Troy,Georgia Southern,home,66.0,80,75
+2026-03-09,Troy,Georgia Southern,away,66.0,80,75
+2026-03-09,Georgia Southern,Troy,home,34.0,75,80
 2026-03-09,Nicholls,UT Rio Grande Valley,away,28.0,70,76
 2026-03-09,UT Rio Grande Valley,Nicholls,home,72.0,76,70
 2026-03-09,Alcorn St.,Alabama St.,away,31.0,70,75
@@ -7307,12 +7307,18 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-10,Northwestern,Penn St.,home,73.0,79,72
 2026-03-10,Utah,Cincinnati,away,19.0,66,76
 2026-03-10,Cincinnati,Utah,home,81.0,76,66
+2026-03-10,Montana,Portland St.,away,42.0,70,72
+2026-03-10,Portland St.,Montana,home,58.0,72,70
+2026-03-10,Texas A&M Corpus Chris,Stephen F. Austin,away,28.0,65,72
+2026-03-10,Stephen F. Austin,Texas A&M Corpus Chris,home,72.0,72,65
 2026-03-10,Missouri St.,FIU,away,45.0,76,77
 2026-03-10,FIU,Missouri St.,home,55.0,77,76
-2026-03-10,New Mexico St.,Jacksonville St.,away,53.0,72,71
-2026-03-10,Jacksonville St.,New Mexico St.,home,47.0,71,72
+2026-03-10,New Mexico St.,Jacksonville St.,away,54.0,72,71
+2026-03-10,Jacksonville St.,New Mexico St.,home,46.0,71,72
 2026-03-10,Siena,Merrimack,away,44.0,65,67
 2026-03-10,Merrimack,Siena,home,56.0,67,65
+2026-03-10,Alcorn St.,Prairie View A&M,away,32.0,72,78
+2026-03-10,Prairie View A&M,Alcorn St.,home,68.0,78,72
 2026-03-10,Mercyhurst,LIU,away,27.0,65,72
 2026-03-10,LIU,Mercyhurst,home,73.0,72,65
 2026-03-10,UMass Lowell,UMBC,away,20.0,70,79
@@ -7349,14 +7355,14 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-11,Florida Atlantic,Temple,home,57.0,76,74
 2026-03-11,Tulane,Memphis,away,33.0,71,76
 2026-03-11,Memphis,Tulane,home,67.0,76,71
-2026-03-11,Cal Poly,UC San Diego,away,27.0,76,83
-2026-03-11,UC San Diego,Cal Poly,home,73.0,83,76
 2026-03-11,St. Bonaventure,La Salle,away,64.0,76,72
 2026-03-11,La Salle,St. Bonaventure,home,36.0,72,76
-2026-03-11,Tarleton St.,Abilene Christian,away,57.0,70,69
-2026-03-11,Abilene Christian,Tarleton St.,home,43.0,69,70
-2026-03-11,Boston University,Lehigh,away,52.0,74,73
-2026-03-11,Lehigh,Boston University,home,48.0,73,74
+2026-03-11,Cal Poly,UC San Diego,away,27.0,76,83
+2026-03-11,UC San Diego,Cal Poly,home,73.0,83,76
+2026-03-11,Tarleton St.,Abilene Christian,away,57.0,71,69
+2026-03-11,Abilene Christian,Tarleton St.,home,43.0,69,71
+2026-03-11,Boston University,Lehigh,away,51.0,74,73
+2026-03-11,Lehigh,Boston University,home,49.0,73,74
 2026-03-11,Delaware St.,Morgan St.,away,35.0,69,73
 2026-03-11,Morgan St.,Delaware St.,home,65.0,73,69
 2026-03-11,Loyola Chicago,Richmond,away,21.0,69,78
