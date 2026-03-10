@@ -6144,5 +6144,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0533389785251957,
     "notified_at": "2026-03-10T14:23:21.021008+00:00"
+  },
+  "UNLV Rebels vs. Wyoming Cowboys|Wyoming Cowboys|moneyline": {
+    "game": "UNLV Rebels vs. Wyoming Cowboys",
+    "team": "Wyoming Cowboys",
+    "edge_type": "moneyline",
+    "edge_value": 0.0343160553309583,
+    "notified_at": "2026-03-10T17:21:59.645891+00:00"
   }
 }
