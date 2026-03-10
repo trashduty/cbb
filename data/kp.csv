@@ -7263,24 +7263,24 @@ Rice,UTSA,UTSA,20260308,11,0.15,149
 Rice,UTSA,Rice,20260308,-11,0.85,149
 Saint Mary's,Santa Clara,Santa Clara,20260309,3,0.4,153
 Saint Mary's,Santa Clara,Saint Mary's,20260309,-3,0.6,153
-Wright St.,Northern Kentucky,Northern Kentucky,20260309,1,0.46,155
-Wright St.,Northern Kentucky,Wright St.,20260309,-1,0.54,155
+Northern Kentucky,Wright St.,Wright St.,20260309,-1,0.54,155
+Northern Kentucky,Wright St.,Northern Kentucky,20260309,1,0.46,155
 Hofstra,Towson,Towson,20260309,6,0.31,132
 Hofstra,Towson,Hofstra,20260309,-6,0.69,132
 Eastern Washington,Weber St.,Weber St.,20260309,2,0.43,160
 Eastern Washington,Weber St.,Eastern Washington,20260309,-2,0.57,160
-Montana,Northern Colorado,Northern Colorado,20260309,-3,0.61,153
-Montana,Northern Colorado,Montana,20260309,3,0.39,153
-Monmouth,Campbell,Campbell,20260309,-1,0.51,153
-Monmouth,Campbell,Monmouth,20260309,1,0.49,153
-Texas A&M Corpus Chris,New Orleans,New Orleans,20260309,1,0.5,147
-Texas A&M Corpus Chris,New Orleans,Texas A&M Corpus Chris,20260309,-1,0.5,147
+Northern Colorado,Montana,Montana,20260309,3,0.39,153
+Northern Colorado,Montana,Northern Colorado,20260309,-3,0.61,153
+Campbell,Monmouth,Monmouth,20260309,1,0.49,153
+Campbell,Monmouth,Campbell,20260309,-1,0.51,153
+New Orleans,Texas A&M Corpus Chris,Texas A&M Corpus Chris,20260309,-1,0.5,147
+New Orleans,Texas A&M Corpus Chris,New Orleans,20260309,1,0.5,147
 East Tennessee St.,Furman,Furman,20260309,2,0.4,142
 East Tennessee St.,Furman,East Tennessee St.,20260309,-2,0.6,142
 Robert Morris,Detroit Mercy,Detroit Mercy,20260309,5,0.34,149
 Robert Morris,Detroit Mercy,Robert Morris,20260309,-5,0.66,149
-Troy,Georgia Southern,Georgia Southern,20260309,5,0.34,155
-Troy,Georgia Southern,Troy,20260309,-5,0.66,155
+Georgia Southern,Troy,Troy,20260309,-5,0.66,155
+Georgia Southern,Troy,Georgia Southern,20260309,5,0.34,155
 UT Rio Grande Valley,Nicholls,Nicholls,20260309,6,0.28,146
 UT Rio Grande Valley,Nicholls,UT Rio Grande Valley,20260309,-6,0.72,146
 Alabama St.,Alcorn St.,Alcorn St.,20260309,5,0.31,145
@@ -7307,12 +7307,18 @@ Northwestern,Penn St.,Penn St.,20260310,7,0.27,151
 Northwestern,Penn St.,Northwestern,20260310,-7,0.73,151
 Cincinnati,Utah,Utah,20260310,10,0.19,142
 Cincinnati,Utah,Cincinnati,20260310,-10,0.81,142
+Portland St.,Montana,Montana,20260310,2,0.42,142
+Portland St.,Montana,Portland St.,20260310,-2,0.58,142
+Stephen F. Austin,Texas A&M Corpus Chris,Texas A&M Corpus Chris,20260310,7,0.28,137
+Stephen F. Austin,Texas A&M Corpus Chris,Stephen F. Austin,20260310,-7,0.72,137
 FIU,Missouri St.,Missouri St.,20260310,1,0.45,153
 FIU,Missouri St.,FIU,20260310,-1,0.55,153
-Jacksonville St.,New Mexico St.,New Mexico St.,20260310,-1,0.53,143
-Jacksonville St.,New Mexico St.,Jacksonville St.,20260310,1,0.47,143
+Jacksonville St.,New Mexico St.,New Mexico St.,20260310,-1,0.54,143
+Jacksonville St.,New Mexico St.,Jacksonville St.,20260310,1,0.46,143
 Merrimack,Siena,Siena,20260310,2,0.44,132
 Merrimack,Siena,Merrimack,20260310,-2,0.56,132
+Prairie View A&M,Alcorn St.,Alcorn St.,20260310,6,0.32,150
+Prairie View A&M,Alcorn St.,Prairie View A&M,20260310,-6,0.68,150
 LIU,Mercyhurst,Mercyhurst,20260310,7,0.27,137
 LIU,Mercyhurst,LIU,20260310,-7,0.73,137
 UMBC,UMass Lowell,UMass Lowell,20260310,9,0.2,149
@@ -7349,14 +7355,14 @@ Florida Atlantic,Temple,Temple,20260311,2,0.43,150
 Florida Atlantic,Temple,Florida Atlantic,20260311,-2,0.57,150
 Memphis,Tulane,Tulane,20260311,5,0.33,147
 Memphis,Tulane,Memphis,20260311,-5,0.67,147
-UC San Diego,Cal Poly,Cal Poly,20260311,7,0.27,159
-UC San Diego,Cal Poly,UC San Diego,20260311,-7,0.73,159
 La Salle,St. Bonaventure,St. Bonaventure,20260311,-4,0.64,148
 La Salle,St. Bonaventure,La Salle,20260311,4,0.36,148
-Abilene Christian,Tarleton St.,Tarleton St.,20260311,-1,0.57,139
-Abilene Christian,Tarleton St.,Abilene Christian,20260311,1,0.43,139
-Lehigh,Boston University,Boston University,20260311,-1,0.52,147
-Lehigh,Boston University,Lehigh,20260311,1,0.48,147
+UC San Diego,Cal Poly,Cal Poly,20260311,7,0.27,159
+UC San Diego,Cal Poly,UC San Diego,20260311,-7,0.73,159
+Abilene Christian,Tarleton St.,Tarleton St.,20260311,-2,0.57,140
+Abilene Christian,Tarleton St.,Abilene Christian,20260311,2,0.43,140
+Lehigh,Boston University,Boston University,20260311,-1,0.51,147
+Lehigh,Boston University,Lehigh,20260311,1,0.49,147
 Morgan St.,Delaware St.,Delaware St.,20260311,4,0.35,142
 Morgan St.,Delaware St.,Morgan St.,20260311,-4,0.65,142
 Richmond,Loyola Chicago,Loyola Chicago,20260311,9,0.21,147
