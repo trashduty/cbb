@@ -6165,5 +6165,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0560414094462166,
     "notified_at": "2026-03-10T18:23:05.305300+00:00"
+  },
+  "NC State Wolfpack vs. Pittsburgh Panthers|NC State Wolfpack|moneyline": {
+    "game": "NC State Wolfpack vs. Pittsburgh Panthers",
+    "team": "NC State Wolfpack",
+    "edge_type": "moneyline",
+    "edge_value": 0.0658781141602902,
+    "notified_at": "2026-03-10T22:27:15.191150+00:00"
+  },
+  "Duquesne Dukes vs. Rhode Island Rams|Duquesne Dukes|moneyline": {
+    "game": "Duquesne Dukes vs. Rhode Island Rams",
+    "team": "Duquesne Dukes",
+    "edge_type": "moneyline",
+    "edge_value": 0.0334136711123315,
+    "notified_at": "2026-03-10T22:27:15.458269+00:00"
   }
 }
