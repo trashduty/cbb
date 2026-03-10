@@ -1,72 +1,20 @@
 Home Team,Away Team,Team,Game Date,spread_barttorvik,win_prob_barttorvik,projected_total_barttorvik
-Santa Clara Broncos,Saint Mary's Gaels,Santa Clara Broncos,20260309,1.4,0.44999999999999996,152.0
-Santa Clara Broncos,Saint Mary's Gaels,Saint Mary's Gaels,20260309,-1.4,0.55,152.0
-Saint Mary's Gaels,Santa Clara Broncos,Saint Mary's Gaels,20260309,-1.4,0.55,152.0
-Saint Mary's Gaels,Santa Clara Broncos,Santa Clara Broncos,20260309,1.4,0.44999999999999996,152.0
-Monmouth Hawks,Campbell Fighting Camels,Monmouth Hawks,20260309,-0.2,0.51,153.0
-Monmouth Hawks,Campbell Fighting Camels,Campbell Fighting Camels,20260309,0.2,0.49,153.0
-Campbell Fighting Camels,Monmouth Hawks,Campbell Fighting Camels,20260309,0.2,0.49,153.0
-Campbell Fighting Camels,Monmouth Hawks,Monmouth Hawks,20260309,-0.2,0.51,153.0
-Texas A&M-CC Islanders,New Orleans Privateers,Texas A&M-CC Islanders,20260309,0.3,0.49,147.0
-Texas A&M-CC Islanders,New Orleans Privateers,New Orleans Privateers,20260309,-0.3,0.51,147.0
-New Orleans Privateers,Texas A&M-CC Islanders,New Orleans Privateers,20260309,-0.3,0.51,147.0
-New Orleans Privateers,Texas A&M-CC Islanders,Texas A&M-CC Islanders,20260309,0.3,0.49,147.0
-N Colorado Bears,Montana Grizzlies,N Colorado Bears,20260309,-2.5,0.59,152.0
-N Colorado Bears,Montana Grizzlies,Montana Grizzlies,20260309,2.5,0.41000000000000003,152.0
-Montana Grizzlies,N Colorado Bears,Montana Grizzlies,20260309,2.5,0.41000000000000003,152.0
-Montana Grizzlies,N Colorado Bears,N Colorado Bears,20260309,-2.5,0.59,152.0
-Wright St Raiders,Northern Kentucky Norse,Wright St Raiders,20260309,-3.1,0.61,154.0
-Wright St Raiders,Northern Kentucky Norse,Northern Kentucky Norse,20260309,3.1,0.39,154.0
-Northern Kentucky Norse,Wright St Raiders,Northern Kentucky Norse,20260309,3.1,0.39,154.0
-Northern Kentucky Norse,Wright St Raiders,Wright St Raiders,20260309,-3.1,0.61,154.0
-Weber State Wildcats,Eastern Washington Eagles,Weber State Wildcats,20260309,2.9,0.4,161.0
-Weber State Wildcats,Eastern Washington Eagles,Eastern Washington Eagles,20260309,-2.9,0.6,161.0
-Eastern Washington Eagles,Weber State Wildcats,Eastern Washington Eagles,20260309,-2.9,0.6,161.0
-Eastern Washington Eagles,Weber State Wildcats,Weber State Wildcats,20260309,2.9,0.4,161.0
-Furman Paladins,East Tennessee St Buccaneers,Furman Paladins,20260309,1.1,0.44999999999999996,139.0
-Furman Paladins,East Tennessee St Buccaneers,East Tennessee St Buccaneers,20260309,-1.1,0.55,139.0
-East Tennessee St Buccaneers,Furman Paladins,East Tennessee St Buccaneers,20260309,-1.1,0.55,139.0
-East Tennessee St Buccaneers,Furman Paladins,Furman Paladins,20260309,1.1,0.44999999999999996,139.0
-Robert Morris Colonials,Detroit Mercy Titans,Robert Morris Colonials,20260309,-2.3,0.59,148.0
-Robert Morris Colonials,Detroit Mercy Titans,Detroit Mercy Titans,20260309,2.3,0.41000000000000003,148.0
-Detroit Mercy Titans,Robert Morris Colonials,Detroit Mercy Titans,20260309,2.3,0.41000000000000003,148.0
-Detroit Mercy Titans,Robert Morris Colonials,Robert Morris Colonials,20260309,-2.3,0.59,148.0
-Oregon St Beavers,Gonzaga Bulldogs,Oregon St Beavers,20260309,17.7,0.06000000000000005,146.0
-Oregon St Beavers,Gonzaga Bulldogs,Gonzaga Bulldogs,20260309,-17.7,0.94,146.0
-Gonzaga Bulldogs,Oregon St Beavers,Gonzaga Bulldogs,20260309,-17.7,0.94,146.0
-Gonzaga Bulldogs,Oregon St Beavers,Oregon St Beavers,20260309,17.7,0.06000000000000005,146.0
-Troy Trojans,Georgia Southern Eagles,Troy Trojans,20260309,-4.5,0.66,156.0
-Troy Trojans,Georgia Southern Eagles,Georgia Southern Eagles,20260309,4.5,0.33999999999999997,156.0
-Georgia Southern Eagles,Troy Trojans,Georgia Southern Eagles,20260309,4.5,0.33999999999999997,156.0
-Georgia Southern Eagles,Troy Trojans,Troy Trojans,20260309,-4.5,0.66,156.0
-Towson Tigers,Hofstra Pride,Towson Tigers,20260309,5.5,0.27,128.0
-Towson Tigers,Hofstra Pride,Hofstra Pride,20260309,-5.5,0.73,128.0
-Hofstra Pride,Towson Tigers,Hofstra Pride,20260309,-5.5,0.73,128.0
-Hofstra Pride,Towson Tigers,Towson Tigers,20260309,5.5,0.27,128.0
-UT Rio Grande Valley Vaqueros,Nicholls St Colonels,UT Rio Grande Valley Vaqueros,20260309,-7.2,0.76,147.0
-UT Rio Grande Valley Vaqueros,Nicholls St Colonels,Nicholls St Colonels,20260309,7.2,0.24,147.0
-Nicholls St Colonels,UT Rio Grande Valley Vaqueros,Nicholls St Colonels,20260309,7.2,0.24,147.0
-Nicholls St Colonels,UT Rio Grande Valley Vaqueros,UT Rio Grande Valley Vaqueros,20260309,-7.2,0.76,147.0
-Alcorn St Braves,Alabama St Hornets,Alcorn St Braves,20260309,5.4,0.30000000000000004,145.0
-Alcorn St Braves,Alabama St Hornets,Alabama St Hornets,20260309,-5.4,0.7,145.0
-Alabama St Hornets,Alcorn St Braves,Alabama St Hornets,20260309,-5.4,0.7,145.0
-Alabama St Hornets,Alcorn St Braves,Alcorn St Braves,20260309,5.4,0.30000000000000004,145.0
-Miss Valley St Delta Devils,Grambling St Tigers,Miss Valley St Delta Devils,20260309,11.2,0.13,133.0
-Miss Valley St Delta Devils,Grambling St Tigers,Grambling St Tigers,20260309,-11.2,0.87,133.0
-Grambling St Tigers,Miss Valley St Delta Devils,Grambling St Tigers,20260309,-11.2,0.87,133.0
-Grambling St Tigers,Miss Valley St Delta Devils,Miss Valley St Delta Devils,20260309,11.2,0.13,133.0
-Baylor Bears,Arizona St Sun Devils,Baylor Bears,20260310,-1.8,0.57,160.0
-Baylor Bears,Arizona St Sun Devils,Arizona St Sun Devils,20260310,1.8,0.43000000000000005,160.0
-Arizona St Sun Devils,Baylor Bears,Arizona St Sun Devils,20260310,1.8,0.43000000000000005,160.0
-Arizona St Sun Devils,Baylor Bears,Baylor Bears,20260310,-1.8,0.57,160.0
-Oklahoma St Cowboys,Colorado Buffaloes,Oklahoma St Cowboys,20260310,0.8,0.47,169.0
-Oklahoma St Cowboys,Colorado Buffaloes,Colorado Buffaloes,20260310,-0.8,0.53,169.0
-Colorado Buffaloes,Oklahoma St Cowboys,Colorado Buffaloes,20260310,-0.8,0.53,169.0
-Colorado Buffaloes,Oklahoma St Cowboys,Oklahoma St Cowboys,20260310,0.8,0.47,169.0
-Wake Forest Demon Deacons,Virginia Tech Hokies,Wake Forest Demon Deacons,20260310,1.8,0.43000000000000005,154.0
-Wake Forest Demon Deacons,Virginia Tech Hokies,Virginia Tech Hokies,20260310,-1.8,0.57,154.0
-Virginia Tech Hokies,Wake Forest Demon Deacons,Virginia Tech Hokies,20260310,-1.8,0.57,154.0
-Virginia Tech Hokies,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20260310,1.8,0.43000000000000005,154.0
+Santa Clara Broncos,Gonzaga Bulldogs,Santa Clara Broncos,20260310,4.6,0.33999999999999997,159.0
+Santa Clara Broncos,Gonzaga Bulldogs,Gonzaga Bulldogs,20260310,-4.6,0.66,159.0
+Gonzaga Bulldogs,Santa Clara Broncos,Gonzaga Bulldogs,20260310,-4.6,0.66,159.0
+Gonzaga Bulldogs,Santa Clara Broncos,Santa Clara Broncos,20260310,4.6,0.33999999999999997,159.0
+Baylor Bears,Arizona St Sun Devils,Baylor Bears,20260310,-1.9,0.57,160.0
+Baylor Bears,Arizona St Sun Devils,Arizona St Sun Devils,20260310,1.9,0.43000000000000005,160.0
+Arizona St Sun Devils,Baylor Bears,Arizona St Sun Devils,20260310,1.9,0.43000000000000005,160.0
+Arizona St Sun Devils,Baylor Bears,Baylor Bears,20260310,-1.9,0.57,160.0
+Oklahoma St Cowboys,Colorado Buffaloes,Oklahoma St Cowboys,20260310,0.7,0.48,169.0
+Oklahoma St Cowboys,Colorado Buffaloes,Colorado Buffaloes,20260310,-0.7,0.52,169.0
+Colorado Buffaloes,Oklahoma St Cowboys,Colorado Buffaloes,20260310,-0.7,0.52,169.0
+Colorado Buffaloes,Oklahoma St Cowboys,Oklahoma St Cowboys,20260310,0.7,0.48,169.0
+Wake Forest Demon Deacons,Virginia Tech Hokies,Wake Forest Demon Deacons,20260310,1.9,0.43000000000000005,154.0
+Wake Forest Demon Deacons,Virginia Tech Hokies,Virginia Tech Hokies,20260310,-1.9,0.57,154.0
+Virginia Tech Hokies,Wake Forest Demon Deacons,Virginia Tech Hokies,20260310,-1.9,0.57,154.0
+Virginia Tech Hokies,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20260310,1.9,0.43000000000000005,154.0
 Syracuse Orange,SMU Mustangs,Syracuse Orange,20260310,4.3,0.35,160.0
 Syracuse Orange,SMU Mustangs,SMU Mustangs,20260310,-4.3,0.65,160.0
 SMU Mustangs,Syracuse Orange,SMU Mustangs,20260310,-4.3,0.65,160.0
@@ -75,6 +23,18 @@ Kansas St Wildcats,BYU Cougars,Kansas St Wildcats,20260310,9.1,0.229999999999999
 Kansas St Wildcats,BYU Cougars,BYU Cougars,20260310,-9.1,0.77,173.0
 BYU Cougars,Kansas St Wildcats,BYU Cougars,20260310,-9.1,0.77,173.0
 BYU Cougars,Kansas St Wildcats,Kansas St Wildcats,20260310,9.1,0.22999999999999998,173.0
+Idaho Vandals,Eastern Washington Eagles,Idaho Vandals,20260310,-0.2,0.51,153.0
+Idaho Vandals,Eastern Washington Eagles,Eastern Washington Eagles,20260310,0.2,0.49,153.0
+Eastern Washington Eagles,Idaho Vandals,Eastern Washington Eagles,20260310,0.2,0.49,153.0
+Eastern Washington Eagles,Idaho Vandals,Idaho Vandals,20260310,-0.2,0.51,153.0
+Portland St Vikings,Montana Grizzlies,Portland St Vikings,20260310,-0.8,0.53,143.0
+Portland St Vikings,Montana Grizzlies,Montana Grizzlies,20260310,0.8,0.47,143.0
+Montana Grizzlies,Portland St Vikings,Montana Grizzlies,20260310,0.8,0.47,143.0
+Montana Grizzlies,Portland St Vikings,Portland St Vikings,20260310,-0.8,0.53,143.0
+UT Rio Grande Valley Vaqueros,McNeese Cowboys,UT Rio Grande Valley Vaqueros,20260310,3.5,0.36,143.0
+UT Rio Grande Valley Vaqueros,McNeese Cowboys,McNeese Cowboys,20260310,-3.5,0.64,143.0
+McNeese Cowboys,UT Rio Grande Valley Vaqueros,McNeese Cowboys,20260310,-3.5,0.64,143.0
+McNeese Cowboys,UT Rio Grande Valley Vaqueros,UT Rio Grande Valley Vaqueros,20260310,3.5,0.36,143.0
 Stanford Cardinal,Pittsburgh Panthers,Stanford Cardinal,20260310,-4.3,0.67,140.0
 Stanford Cardinal,Pittsburgh Panthers,Pittsburgh Panthers,20260310,4.3,0.32999999999999996,140.0
 Pittsburgh Panthers,Stanford Cardinal,Pittsburgh Panthers,20260310,4.3,0.32999999999999996,140.0
@@ -91,34 +51,50 @@ New Mexico St Aggies,Jacksonville St Gamecocks,New Mexico St Aggies,20260310,0.1
 New Mexico St Aggies,Jacksonville St Gamecocks,Jacksonville St Gamecocks,20260310,-0.1,0.5,141.0
 Jacksonville St Gamecocks,New Mexico St Aggies,Jacksonville St Gamecocks,20260310,-0.1,0.5,141.0
 Jacksonville St Gamecocks,New Mexico St Aggies,New Mexico St Aggies,20260310,0.1,0.5,141.0
-Utah Utes,Cincinnati Bearcats,Utah Utes,20260310,9.8,0.17000000000000004,142.0
-Utah Utes,Cincinnati Bearcats,Cincinnati Bearcats,20260310,-9.8,0.83,142.0
 Cincinnati Bearcats,Utah Utes,Cincinnati Bearcats,20260310,-9.8,0.83,142.0
 Cincinnati Bearcats,Utah Utes,Utah Utes,20260310,9.8,0.17000000000000004,142.0
+Utah Utes,Cincinnati Bearcats,Utah Utes,20260310,9.8,0.17000000000000004,142.0
+Utah Utes,Cincinnati Bearcats,Cincinnati Bearcats,20260310,-9.8,0.83,142.0
+Wright St Raiders,Detroit Mercy Titans,Wright St Raiders,20260310,-4.0,0.64,156.0
+Wright St Raiders,Detroit Mercy Titans,Detroit Mercy Titans,20260310,4.0,0.36,156.0
+Detroit Mercy Titans,Wright St Raiders,Detroit Mercy Titans,20260310,4.0,0.36,156.0
+Detroit Mercy Titans,Wright St Raiders,Wright St Raiders,20260310,-4.0,0.64,156.0
 Penn State Nittany Lions,Northwestern Wildcats,Penn State Nittany Lions,20260310,6.9,0.26,149.0
 Penn State Nittany Lions,Northwestern Wildcats,Northwestern Wildcats,20260310,-6.9,0.74,149.0
 Northwestern Wildcats,Penn State Nittany Lions,Northwestern Wildcats,20260310,-6.9,0.74,149.0
 Northwestern Wildcats,Penn State Nittany Lions,Penn State Nittany Lions,20260310,6.9,0.26,149.0
-Siena Saints,Merrimack Warriors,Siena Saints,20260310,1.9,0.42000000000000004,130.0
-Siena Saints,Merrimack Warriors,Merrimack Warriors,20260310,-1.9,0.58,130.0
-Merrimack Warriors,Siena Saints,Merrimack Warriors,20260310,-1.9,0.58,130.0
-Merrimack Warriors,Siena Saints,Siena Saints,20260310,1.9,0.42000000000000004,130.0
-LIU Sharks,Mercyhurst Lakers,LIU Sharks,20260310,-5.9,0.73,134.0
-LIU Sharks,Mercyhurst Lakers,Mercyhurst Lakers,20260310,5.9,0.27,134.0
-Mercyhurst Lakers,LIU Sharks,Mercyhurst Lakers,20260310,5.9,0.27,134.0
-Mercyhurst Lakers,LIU Sharks,LIU Sharks,20260310,-5.9,0.73,134.0
-Prairie View Panthers,Alcorn St Braves,Prairie View Panthers,20260310,-5.0,0.68,153.0
-Prairie View Panthers,Alcorn St Braves,Alcorn St Braves,20260310,5.0,0.31999999999999995,153.0
-Alcorn St Braves,Prairie View Panthers,Alcorn St Braves,20260310,5.0,0.31999999999999995,153.0
-Alcorn St Braves,Prairie View Panthers,Prairie View Panthers,20260310,-5.0,0.68,153.0
+Siena Saints,Merrimack Warriors,Siena Saints,20260310,1.8,0.42000000000000004,130.0
+Siena Saints,Merrimack Warriors,Merrimack Warriors,20260310,-1.8,0.58,130.0
+Merrimack Warriors,Siena Saints,Merrimack Warriors,20260310,-1.8,0.58,130.0
+Merrimack Warriors,Siena Saints,Siena Saints,20260310,1.8,0.42000000000000004,130.0
+Monmouth Hawks,Hofstra Pride,Monmouth Hawks,20260310,5.6,0.28,137.0
+Monmouth Hawks,Hofstra Pride,Hofstra Pride,20260310,-5.6,0.72,137.0
+Hofstra Pride,Monmouth Hawks,Hofstra Pride,20260310,-5.6,0.72,137.0
+Hofstra Pride,Monmouth Hawks,Monmouth Hawks,20260310,5.6,0.28,137.0
+Texas A&M-CC Islanders,Stephen F. Austin Lumberjacks,Texas A&M-CC Islanders,20260310,7.2,0.22999999999999998,135.0
+Texas A&M-CC Islanders,Stephen F. Austin Lumberjacks,Stephen F. Austin Lumberjacks,20260310,-7.2,0.77,135.0
+Stephen F. Austin Lumberjacks,Texas A&M-CC Islanders,Stephen F. Austin Lumberjacks,20260310,-7.2,0.77,135.0
+Stephen F. Austin Lumberjacks,Texas A&M-CC Islanders,Texas A&M-CC Islanders,20260310,7.2,0.22999999999999998,135.0
+LIU Sharks,Mercyhurst Lakers,LIU Sharks,20260310,-5.9,0.73,135.0
+LIU Sharks,Mercyhurst Lakers,Mercyhurst Lakers,20260310,5.9,0.27,135.0
+Mercyhurst Lakers,LIU Sharks,Mercyhurst Lakers,20260310,5.9,0.27,135.0
+Mercyhurst Lakers,LIU Sharks,LIU Sharks,20260310,-5.9,0.73,135.0
+Jackson St Tigers,Grambling St Tigers,Jackson St Tigers,20260310,4.1,0.33999999999999997,144.0
+Jackson St Tigers,Grambling St Tigers,Grambling St Tigers,20260310,-4.1,0.66,144.0
+Grambling St Tigers,Jackson St Tigers,Grambling St Tigers,20260310,-4.1,0.66,144.0
+Grambling St Tigers,Jackson St Tigers,Jackson St Tigers,20260310,4.1,0.33999999999999997,144.0
+Prairie View Panthers,Alcorn St Braves,Prairie View Panthers,20260310,-4.6,0.67,153.0
+Prairie View Panthers,Alcorn St Braves,Alcorn St Braves,20260310,4.6,0.32999999999999996,153.0
+Alcorn St Braves,Prairie View Panthers,Alcorn St Braves,20260310,4.6,0.32999999999999996,153.0
+Alcorn St Braves,Prairie View Panthers,Prairie View Panthers,20260310,-4.6,0.67,153.0
 UMBC Retrievers,UMass Lowell River Hawks,UMBC Retrievers,20260310,-12.1,0.86,148.0
 UMBC Retrievers,UMass Lowell River Hawks,UMass Lowell River Hawks,20260310,12.1,0.14,148.0
 UMass Lowell River Hawks,UMBC Retrievers,UMass Lowell River Hawks,20260310,12.1,0.14,148.0
 UMass Lowell River Hawks,UMBC Retrievers,UMBC Retrievers,20260310,-12.1,0.86,148.0
-Vermont Catamounts,NJIT Highlanders,Vermont Catamounts,20260310,-8.2,0.79,138.0
-Vermont Catamounts,NJIT Highlanders,NJIT Highlanders,20260310,8.2,0.20999999999999996,138.0
-NJIT Highlanders,Vermont Catamounts,NJIT Highlanders,20260310,8.2,0.20999999999999996,138.0
-NJIT Highlanders,Vermont Catamounts,Vermont Catamounts,20260310,-8.2,0.79,138.0
+Vermont Catamounts,NJIT Highlanders,Vermont Catamounts,20260310,-8.2,0.79,139.0
+Vermont Catamounts,NJIT Highlanders,NJIT Highlanders,20260310,8.2,0.20999999999999996,139.0
+NJIT Highlanders,Vermont Catamounts,NJIT Highlanders,20260310,8.2,0.20999999999999996,139.0
+NJIT Highlanders,Vermont Catamounts,Vermont Catamounts,20260310,-8.2,0.79,139.0
 Providence Friars,Butler Bulldogs,Providence Friars,20260311,0.1,0.5,173.0
 Providence Friars,Butler Bulldogs,Butler Bulldogs,20260311,-0.1,0.5,173.0
 Butler Bulldogs,Providence Friars,Butler Bulldogs,20260311,-0.1,0.5,173.0
@@ -139,10 +115,10 @@ LSU Tigers,Kentucky Wildcats,LSU Tigers,20260311,5.6,0.30000000000000004,153.0
 LSU Tigers,Kentucky Wildcats,Kentucky Wildcats,20260311,-5.6,0.7,153.0
 Kentucky Wildcats,LSU Tigers,Kentucky Wildcats,20260311,-5.6,0.7,153.0
 Kentucky Wildcats,LSU Tigers,LSU Tigers,20260311,5.6,0.30000000000000004,153.0
-Wyoming Cowboys,UNLV Rebels,Wyoming Cowboys,20260311,-1.3,0.55,159.0
-Wyoming Cowboys,UNLV Rebels,UNLV Rebels,20260311,1.3,0.44999999999999996,159.0
-UNLV Rebels,Wyoming Cowboys,UNLV Rebels,20260311,1.3,0.44999999999999996,159.0
-UNLV Rebels,Wyoming Cowboys,Wyoming Cowboys,20260311,-1.3,0.55,159.0
+Wyoming Cowboys,UNLV Rebels,Wyoming Cowboys,20260311,-1.4,0.55,159.0
+Wyoming Cowboys,UNLV Rebels,UNLV Rebels,20260311,1.4,0.44999999999999996,159.0
+UNLV Rebels,Wyoming Cowboys,UNLV Rebels,20260311,1.4,0.44999999999999996,159.0
+UNLV Rebels,Wyoming Cowboys,Wyoming Cowboys,20260311,-1.4,0.55,159.0
 Georgetown Hoyas,DePaul Blue Demons,Georgetown Hoyas,20260311,-1.7,0.57,137.0
 Georgetown Hoyas,DePaul Blue Demons,DePaul Blue Demons,20260311,1.7,0.43000000000000005,137.0
 DePaul Blue Demons,Georgetown Hoyas,DePaul Blue Demons,20260311,1.7,0.43000000000000005,137.0
@@ -151,38 +127,38 @@ Texas Longhorns,Ole Miss Rebels,Texas Longhorns,20260311,-5.4,0.69,151.0
 Texas Longhorns,Ole Miss Rebels,Ole Miss Rebels,20260311,5.4,0.31000000000000005,151.0
 Ole Miss Rebels,Texas Longhorns,Ole Miss Rebels,20260311,5.4,0.31000000000000005,151.0
 Ole Miss Rebels,Texas Longhorns,Texas Longhorns,20260311,-5.4,0.69,151.0
-Mississippi St Bulldogs,Auburn Tigers,Mississippi St Bulldogs,20260311,7.1,0.27,162.0
-Mississippi St Bulldogs,Auburn Tigers,Auburn Tigers,20260311,-7.1,0.73,162.0
-Auburn Tigers,Mississippi St Bulldogs,Auburn Tigers,20260311,-7.1,0.73,162.0
-Auburn Tigers,Mississippi St Bulldogs,Mississippi St Bulldogs,20260311,7.1,0.27,162.0
-Temple Owls,Florida Atlantic Owls,Temple Owls,20260311,1.7,0.43000000000000005,149.0
-Temple Owls,Florida Atlantic Owls,Florida Atlantic Owls,20260311,-1.7,0.57,149.0
-Florida Atlantic Owls,Temple Owls,Florida Atlantic Owls,20260311,-1.7,0.57,149.0
-Florida Atlantic Owls,Temple Owls,Temple Owls,20260311,1.7,0.43000000000000005,149.0
+Mississippi St Bulldogs,Auburn Tigers,Mississippi St Bulldogs,20260311,7.1,0.27,163.0
+Mississippi St Bulldogs,Auburn Tigers,Auburn Tigers,20260311,-7.1,0.73,163.0
+Auburn Tigers,Mississippi St Bulldogs,Auburn Tigers,20260311,-7.1,0.73,163.0
+Auburn Tigers,Mississippi St Bulldogs,Mississippi St Bulldogs,20260311,7.1,0.27,163.0
+Temple Owls,Florida Atlantic Owls,Temple Owls,20260311,1.7,0.43999999999999995,149.0
+Temple Owls,Florida Atlantic Owls,Florida Atlantic Owls,20260311,-1.7,0.56,149.0
+Florida Atlantic Owls,Temple Owls,Florida Atlantic Owls,20260311,-1.7,0.56,149.0
+Florida Atlantic Owls,Temple Owls,Temple Owls,20260311,1.7,0.43999999999999995,149.0
 South Carolina Gamecocks,Oklahoma Sooners,South Carolina Gamecocks,20260311,6.4,0.27,149.0
 South Carolina Gamecocks,Oklahoma Sooners,Oklahoma Sooners,20260311,-6.4,0.73,149.0
 Oklahoma Sooners,South Carolina Gamecocks,Oklahoma Sooners,20260311,-6.4,0.73,149.0
 Oklahoma Sooners,South Carolina Gamecocks,South Carolina Gamecocks,20260311,6.4,0.27,149.0
-Fresno St Bulldogs,Colorado St Rams,Fresno St Bulldogs,20260311,3.7,0.35,142.0
-Fresno St Bulldogs,Colorado St Rams,Colorado St Rams,20260311,-3.7,0.65,142.0
-Colorado St Rams,Fresno St Bulldogs,Colorado St Rams,20260311,-3.7,0.65,142.0
-Colorado St Rams,Fresno St Bulldogs,Fresno St Bulldogs,20260311,3.7,0.35,142.0
+Fresno St Bulldogs,Colorado St Rams,Fresno St Bulldogs,20260311,3.8,0.35,142.0
+Fresno St Bulldogs,Colorado St Rams,Colorado St Rams,20260311,-3.8,0.65,142.0
+Colorado St Rams,Fresno St Bulldogs,Colorado St Rams,20260311,-3.8,0.65,142.0
+Colorado St Rams,Fresno St Bulldogs,Fresno St Bulldogs,20260311,3.8,0.35,142.0
 UC Santa Barbara Gauchos,UC Davis Aggies,UC Santa Barbara Gauchos,20260311,-2.4,0.59,145.0
 UC Santa Barbara Gauchos,UC Davis Aggies,UC Davis Aggies,20260311,2.4,0.41000000000000003,145.0
 UC Davis Aggies,UC Santa Barbara Gauchos,UC Davis Aggies,20260311,2.4,0.41000000000000003,145.0
 UC Davis Aggies,UC Santa Barbara Gauchos,UC Santa Barbara Gauchos,20260311,-2.4,0.59,145.0
-Rutgers Scarlet Knights,Minnesota Golden Gophers,Rutgers Scarlet Knights,20260311,6.0,0.26,134.0
-Rutgers Scarlet Knights,Minnesota Golden Gophers,Minnesota Golden Gophers,20260311,-6.0,0.74,134.0
-Minnesota Golden Gophers,Rutgers Scarlet Knights,Minnesota Golden Gophers,20260311,-6.0,0.74,134.0
-Minnesota Golden Gophers,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20260311,6.0,0.26,134.0
+Rutgers Scarlet Knights,Minnesota Golden Gophers,Rutgers Scarlet Knights,20260311,6.0,0.26,135.0
+Rutgers Scarlet Knights,Minnesota Golden Gophers,Minnesota Golden Gophers,20260311,-6.0,0.74,135.0
+Minnesota Golden Gophers,Rutgers Scarlet Knights,Minnesota Golden Gophers,20260311,-6.0,0.74,135.0
+Minnesota Golden Gophers,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20260311,6.0,0.26,135.0
 St. Bonaventure Bonnies,La Salle Explorers,St. Bonaventure Bonnies,20260311,-1.6,0.56,146.0
 St. Bonaventure Bonnies,La Salle Explorers,La Salle Explorers,20260311,1.6,0.43999999999999995,146.0
 La Salle Explorers,St. Bonaventure Bonnies,La Salle Explorers,20260311,1.6,0.43999999999999995,146.0
 La Salle Explorers,St. Bonaventure Bonnies,St. Bonaventure Bonnies,20260311,-1.6,0.56,146.0
-Tulane Green Wave,Memphis Tigers,Tulane Green Wave,20260311,4.5,0.32999999999999996,147.0
-Tulane Green Wave,Memphis Tigers,Memphis Tigers,20260311,-4.5,0.67,147.0
-Memphis Tigers,Tulane Green Wave,Memphis Tigers,20260311,-4.5,0.67,147.0
-Memphis Tigers,Tulane Green Wave,Tulane Green Wave,20260311,4.5,0.32999999999999996,147.0
+Tulane Green Wave,Memphis Tigers,Tulane Green Wave,20260311,4.5,0.32999999999999996,148.0
+Tulane Green Wave,Memphis Tigers,Memphis Tigers,20260311,-4.5,0.67,148.0
+Memphis Tigers,Tulane Green Wave,Memphis Tigers,20260311,-4.5,0.67,148.0
+Memphis Tigers,Tulane Green Wave,Tulane Green Wave,20260311,4.5,0.32999999999999996,148.0
 UC San Diego Tritons,Cal Poly Mustangs,UC San Diego Tritons,20260311,-6.5,0.72,160.0
 UC San Diego Tritons,Cal Poly Mustangs,Cal Poly Mustangs,20260311,6.5,0.28,160.0
 Cal Poly Mustangs,UC San Diego Tritons,Cal Poly Mustangs,20260311,6.5,0.28,160.0
@@ -211,10 +187,10 @@ Morgan St Bears,Delaware St Hornets,Morgan St Bears,20260311,-4.3,0.67,141.0
 Morgan St Bears,Delaware St Hornets,Delaware St Hornets,20260311,4.3,0.32999999999999996,141.0
 Delaware St Hornets,Morgan St Bears,Delaware St Hornets,20260311,4.3,0.32999999999999996,141.0
 Delaware St Hornets,Morgan St Bears,Morgan St Bears,20260311,-4.3,0.67,141.0
-Seton Hall Pirates,Creighton Bluejays,Seton Hall Pirates,20260312,-2.0,0.59,136.0
-Seton Hall Pirates,Creighton Bluejays,Creighton Bluejays,20260312,2.0,0.41000000000000003,136.0
-Creighton Bluejays,Seton Hall Pirates,Creighton Bluejays,20260312,2.0,0.41000000000000003,136.0
-Creighton Bluejays,Seton Hall Pirates,Seton Hall Pirates,20260312,-2.0,0.59,136.0
+Seton Hall Pirates,Creighton Bluejays,Seton Hall Pirates,20260312,-2.1,0.59,136.0
+Seton Hall Pirates,Creighton Bluejays,Creighton Bluejays,20260312,2.1,0.41000000000000003,136.0
+Creighton Bluejays,Seton Hall Pirates,Creighton Bluejays,20260312,2.1,0.41000000000000003,136.0
+Creighton Bluejays,Seton Hall Pirates,Seton Hall Pirates,20260312,-2.1,0.59,136.0
 Western Kentucky Hilltoppers,Kennesaw St Owls,Western Kentucky Hilltoppers,20260312,-0.0,0.5,163.0
 Western Kentucky Hilltoppers,Kennesaw St Owls,Kennesaw St Owls,20260312,,0.5,163.0
 Kennesaw St Owls,Western Kentucky Hilltoppers,Kennesaw St Owls,20260312,,0.5,163.0
@@ -239,10 +215,10 @@ GW Revolutionaries,Fordham Rams,GW Revolutionaries,20260312,-6.7,0.75,143.0
 GW Revolutionaries,Fordham Rams,Fordham Rams,20260312,6.7,0.25,143.0
 Fordham Rams,GW Revolutionaries,Fordham Rams,20260312,6.7,0.25,143.0
 Fordham Rams,GW Revolutionaries,GW Revolutionaries,20260312,-6.7,0.75,143.0
-Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,20260312,-2.7,0.62,129.0
-Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,20260312,2.7,0.38,129.0
-Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,20260312,2.7,0.38,129.0
-Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,Middle Tennessee Blue Raiders,20260312,-2.7,0.62,129.0
+Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,20260312,-2.6,0.61,129.0
+Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,20260312,2.6,0.39,129.0
+Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,Louisiana Tech Bulldogs,20260312,2.6,0.39,129.0
+Louisiana Tech Bulldogs,Middle Tennessee Blue Raiders,Middle Tennessee Blue Raiders,20260312,-2.6,0.61,129.0
 Southern Jaguars,Arkansas-Pine Bluff Golden Lions,Southern Jaguars,20260312,-2.9,0.6,159.0
 Southern Jaguars,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff Golden Lions,20260312,2.9,0.4,159.0
 Arkansas-Pine Bluff Golden Lions,Southern Jaguars,Arkansas-Pine Bluff Golden Lions,20260312,2.9,0.4,159.0
@@ -251,10 +227,10 @@ Buffalo Bulls,Akron Zips,Buffalo Bulls,20260312,12.4,0.15000000000000002,164.0
 Buffalo Bulls,Akron Zips,Akron Zips,20260312,-12.4,0.85,164.0
 Akron Zips,Buffalo Bulls,Akron Zips,20260312,-12.4,0.85,164.0
 Akron Zips,Buffalo Bulls,Buffalo Bulls,20260312,12.4,0.15000000000000002,164.0
-UT-Arlington Mavericks,Southern Utah Thunderbirds,UT-Arlington Mavericks,20260312,-4.1,0.66,142.0
-UT-Arlington Mavericks,Southern Utah Thunderbirds,Southern Utah Thunderbirds,20260312,4.1,0.33999999999999997,142.0
-Southern Utah Thunderbirds,UT-Arlington Mavericks,Southern Utah Thunderbirds,20260312,4.1,0.33999999999999997,142.0
-Southern Utah Thunderbirds,UT-Arlington Mavericks,UT-Arlington Mavericks,20260312,-4.1,0.66,142.0
+UT-Arlington Mavericks,Southern Utah Thunderbirds,UT-Arlington Mavericks,20260312,-4.2,0.66,142.0
+UT-Arlington Mavericks,Southern Utah Thunderbirds,Southern Utah Thunderbirds,20260312,4.2,0.33999999999999997,142.0
+Southern Utah Thunderbirds,UT-Arlington Mavericks,Southern Utah Thunderbirds,20260312,4.2,0.33999999999999997,142.0
+Southern Utah Thunderbirds,UT-Arlington Mavericks,UT-Arlington Mavericks,20260312,-4.2,0.66,142.0
 Texas Southern Tigers,Alabama A&M Bulldogs,Texas Southern Tigers,20260312,0.5,0.48,147.0
 Texas Southern Tigers,Alabama A&M Bulldogs,Alabama A&M Bulldogs,20260312,-0.5,0.52,147.0
 Alabama A&M Bulldogs,Texas Southern Tigers,Alabama A&M Bulldogs,20260312,-0.5,0.52,147.0
