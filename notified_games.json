@@ -6186,5 +6186,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0722143301363445,
     "notified_at": "2026-03-11T14:23:40.057286+00:00"
+  },
+  "Norfolk St Spartans vs. South Carolina St Bulldogs|Norfolk St Spartans|moneyline": {
+    "game": "Norfolk St Spartans vs. South Carolina St Bulldogs",
+    "team": "Norfolk St Spartans",
+    "edge_type": "moneyline",
+    "edge_value": 0.0547014821130826,
+    "notified_at": "2026-03-11T19:22:11.142616+00:00"
   }
 }
