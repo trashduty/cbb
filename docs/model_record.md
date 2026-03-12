@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** March 12, 2026 at 06:06 PM ET
+**Last Updated:** March 12, 2026 at 06:24 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-03-12
 
-**Total Games Graded:** 3718 games (7436 team-rows)
+**Total Games Graded:** 3719 games (7438 team-rows)
 
 ---
 
@@ -17,40 +17,40 @@ The opening edge is calculated when a game first appears in our system, comparin
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
 | 0-1.9% | 373-373 | 50.0% | -33.94 |
-| 2-3.9% | 87-133 | 39.5% | -53.92 |
+| 2-3.9% | 88-133 | 39.8% | -53.01 |
 | 4-5.9% | 29-32 | 47.5% | -5.64 |
 | 6%+ | 6-10 | 37.5% | -4.55 |
-| **Total** | **495-548** | **47.5%** | **-98.05** |
+| **Total** | **496-548** | **47.5%** | **-97.14** |
 
 ### Spread Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
 | 0-1.9% | 107-129 | 45.3% | -31.74 |
-| 2-3.9% | 31-45 | 40.8% | -16.82 |
+| 2-3.9% | 32-45 | 41.6% | -15.91 |
 | 4-5.9% | 8-12 | 40.0% | -4.73 |
 | 6%+ | 2-7 | 22.2% | -5.18 |
-| **Total** | **148-193** | **43.4%** | **-58.47** |
+| **Total** | **149-193** | **43.6%** | **-57.56** |
 
 ### Moneyline Bets - All
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
 | 0-1.9% | 294-408 | 41.9% | -140.75 |
-| 2-3.9% | 67-90 | 42.7% | -29.10 |
+| 2-3.9% | 67-91 | 42.4% | -30.10 |
 | 4-5.9% | 18-30 | 37.5% | -13.64 |
 | 6%+ | 5-9 | 35.7% | -4.46 |
-| **Total** | **384-537** | **41.7%** | **-187.95** |
+| **Total** | **384-538** | **41.6%** | **-188.95** |
 
 ### Moneyline Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
 | 0-1.9% | 133-192 | 40.9% | -71.10 |
-| 2-3.9% | 24-29 | 45.3% | -7.18 |
+| 2-3.9% | 24-30 | 44.4% | -8.18 |
 | 4-5.9% | 6-9 | 40.0% | -3.55 |
 | 6%+ | 1-2 | 33.3% | -1.09 |
-| **Total** | **164-232** | **41.4%** | **-82.92** |
+| **Total** | **164-233** | **41.3%** | **-83.92** |
 
 ### Over Bets - All
 
@@ -102,36 +102,36 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3244-3176 | 50.5% | -227.20 |
-| Bart Torvik | 2019-2244 | 47.4% | -408.73 |
-| Evan Miya | 3328-3806 | 46.6% | -780.85 |
-| Haslametrics | 3420-3594 | 48.8% | -485.22 |
+| KenPom | 3246-3176 | 50.5% | -225.39 |
+| Bart Torvik | 2021-2244 | 47.4% | -406.91 |
+| Evan Miya | 3330-3806 | 46.7% | -779.03 |
+| Haslametrics | 3422-3594 | 48.8% | -483.40 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 4456-2226 | 66.7% | +1824.50 |
-| Bart Torvik | 3029-1483 | 67.1% | +1270.36 |
-| Evan Miya | 4936-2498 | 66.4% | +1988.82 |
+| KenPom | 4458-2226 | 66.7% | +1826.32 |
+| Bart Torvik | 3031-1483 | 67.1% | +1272.18 |
+| Evan Miya | 4938-2498 | 66.4% | +1990.64 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3156-3250 | 49.3% | -381.20 |
-| Bart Torvik | 2096-2148 | 49.4% | -242.74 |
-| Evan Miya | 3500-3616 | 49.2% | -434.50 |
-| Haslametrics | 3440-3560 | 49.1% | -433.04 |
+| KenPom | 3156-3252 | 49.3% | -383.20 |
+| Bart Torvik | 2096-2150 | 49.4% | -244.74 |
+| Evan Miya | 3500-3618 | 49.2% | -436.50 |
+| Haslametrics | 3440-3562 | 49.1% | -435.04 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3250-3156 | 50.7% | -201.75 |
-| Bart Torvik | 2148-2096 | 50.6% | -143.47 |
-| Evan Miya | 3616-3500 | 50.8% | -213.06 |
-| Haslametrics | 3560-3440 | 50.9% | -203.96 |
+| KenPom | 3252-3156 | 50.7% | -199.93 |
+| Bart Torvik | 2150-2096 | 50.6% | -141.65 |
+| Evan Miya | 3618-3500 | 50.8% | -211.24 |
+| Haslametrics | 3562-3440 | 50.9% | -202.14 |
 
 ---
 
