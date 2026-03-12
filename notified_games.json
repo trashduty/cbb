@@ -6249,5 +6249,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0308016455654747,
     "notified_at": "2026-03-12T14:49:17.646889+00:00"
+  },
+  "Illinois Fighting Illini vs. Wisconsin Badgers|Illinois Fighting Illini|moneyline": {
+    "game": "Illinois Fighting Illini vs. Wisconsin Badgers",
+    "team": "Illinois Fighting Illini",
+    "edge_type": "moneyline",
+    "edge_value": 0.0501287705411326,
+    "notified_at": "2026-03-12T22:12:21.045940+00:00"
+  },
+  "St. John's Red Storm vs. Seton Hall Pirates|St. John's Red Storm|moneyline": {
+    "game": "St. John's Red Storm vs. Seton Hall Pirates",
+    "team": "St. John's Red Storm",
+    "edge_type": "moneyline",
+    "edge_value": 0.0481428522083214,
+    "notified_at": "2026-03-12T22:12:21.302324+00:00"
+  },
+  "Saint Louis Billikens vs. GW Revolutionaries|Saint Louis Billikens|moneyline": {
+    "game": "Saint Louis Billikens vs. GW Revolutionaries",
+    "team": "Saint Louis Billikens",
+    "edge_type": "moneyline",
+    "edge_value": 0.0512826979569769,
+    "notified_at": "2026-03-12T22:12:21.610439+00:00"
   }
 }
