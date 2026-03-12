@@ -6193,5 +6193,33 @@
     "edge_type": "moneyline",
     "edge_value": 0.0547014821130826,
     "notified_at": "2026-03-11T19:22:11.142616+00:00"
+  },
+  "Utah State Aggies vs. UNLV Rebels|Utah State Aggies|moneyline": {
+    "game": "Utah State Aggies vs. UNLV Rebels",
+    "team": "Utah State Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0733099553995587,
+    "notified_at": "2026-03-12T03:15:48.091115+00:00"
+  },
+  "Georgia Bulldogs vs. Ole Miss Rebels|Georgia Bulldogs|moneyline": {
+    "game": "Georgia Bulldogs vs. Ole Miss Rebels",
+    "team": "Georgia Bulldogs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0791577348574633,
+    "notified_at": "2026-03-12T03:15:48.335094+00:00"
+  },
+  "Charlotte 49ers vs. Tulane Green Wave|Charlotte 49ers|moneyline": {
+    "game": "Charlotte 49ers vs. Tulane Green Wave",
+    "team": "Charlotte 49ers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0464505972065608,
+    "notified_at": "2026-03-12T03:15:48.570822+00:00"
+  },
+  "UConn Huskies vs. Xavier Musketeers|UConn Huskies|moneyline": {
+    "game": "UConn Huskies vs. Xavier Musketeers",
+    "team": "UConn Huskies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0329384719521282,
+    "notified_at": "2026-03-12T03:15:48.898269+00:00"
   }
 }
