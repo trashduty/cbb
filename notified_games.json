@@ -6242,5 +6242,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0683492070276703,
     "notified_at": "2026-03-12T14:24:17.683121+00:00"
+  },
+  "CSU Fullerton Titans vs. UC Davis Aggies|UC Davis Aggies|moneyline": {
+    "game": "CSU Fullerton Titans vs. UC Davis Aggies",
+    "team": "UC Davis Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0308016455654747,
+    "notified_at": "2026-03-12T14:49:17.646889+00:00"
   }
 }
