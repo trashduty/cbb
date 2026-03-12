@@ -6221,5 +6221,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0329384719521282,
     "notified_at": "2026-03-12T03:15:48.898269+00:00"
+  },
+  "Davidson Wildcats vs. Loyola (Chi) Ramblers|Davidson Wildcats|moneyline": {
+    "game": "Davidson Wildcats vs. Loyola (Chi) Ramblers",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0933335482750207,
+    "notified_at": "2026-03-12T14:24:17.173804+00:00"
+  },
+  "San Diego St Aztecs vs. Colorado St Rams|San Diego St Aztecs|moneyline": {
+    "game": "San Diego St Aztecs vs. Colorado St Rams",
+    "team": "San Diego St Aztecs",
+    "edge_type": "moneyline",
+    "edge_value": 0.0541811344004105,
+    "notified_at": "2026-03-12T14:24:17.431669+00:00"
+  },
+  "Villanova Wildcats vs. Georgetown Hoyas|Villanova Wildcats|moneyline": {
+    "game": "Villanova Wildcats vs. Georgetown Hoyas",
+    "team": "Villanova Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0683492070276703,
+    "notified_at": "2026-03-12T14:24:17.683121+00:00"
   }
 }
