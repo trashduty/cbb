@@ -7495,6 +7495,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-13,Illinois,Wisconsin,home,73.0,84,77
 2026-03-13,Oklahoma,Arkansas,away,32.0,82,87
 2026-03-13,Arkansas,Oklahoma,home,68.0,87,82
+2026-03-13,New Mexico,San Diego St.,away,48.0,75,76
+2026-03-13,San Diego St.,New Mexico,home,52.0,76,75
 2026-03-13,Kentucky,Florida,away,18.0,73,83
 2026-03-13,Florida,Kentucky,home,82.0,83,73
 2026-03-13,Nevada,Utah St.,away,31.0,73,78
@@ -7515,6 +7517,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-13,Saint Joseph's,Davidson,home,46.0,66,67
 2026-03-13,St. Bonaventure,Dayton,away,30.0,71,77
 2026-03-13,Dayton,St. Bonaventure,home,70.0,77,71
+2026-03-13,Cal St. Fullerton,Hawaii,away,39.0,76,79
+2026-03-13,Hawaii,Cal St. Fullerton,home,61.0,79,76
 2026-03-13,Kennesaw St.,Sam Houston St.,away,33.0,80,85
 2026-03-13,Sam Houston St.,Kennesaw St.,home,67.0,85,80
 2026-03-13,Duquesne,VCU,away,19.0,73,83
@@ -7531,6 +7535,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-13,Toledo,Massachusetts,home,62.0,82,79
 2026-03-13,Charlotte,UAB,away,37.0,72,75
 2026-03-13,UAB,Charlotte,home,63.0,75,72
+2026-03-13,Utah Tech,Cal Baptist,away,34.0,68,72
+2026-03-13,Cal Baptist,Utah Tech,home,66.0,72,68
 2026-03-13,Missouri St.,Louisiana Tech,away,49.0,67,68
 2026-03-13,Louisiana Tech,Missouri St.,home,51.0,68,67
 2026-03-13,Prairie View A&M,Alabama A&M,away,49.0,75,76
@@ -7547,3 +7553,9 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-14,Harvard,Penn,home,52.0,69,68
 2026-03-14,Vermont,UMBC,away,36.0,69,73
 2026-03-14,UMBC,Vermont,home,64.0,73,69
+2026-03-15,Yale,Cornell,away,66.0,88,84
+2026-03-15,Cornell,Yale,home,34.0,84,88
+2026-03-15,Penn,Harvard,away,48.0,68,69
+2026-03-15,Harvard,Penn,home,52.0,69,68
+2026-03-15,Vermont,UMBC,away,36.0,69,73
+2026-03-15,UMBC,Vermont,home,64.0,73,69
