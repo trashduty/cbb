@@ -43,10 +43,10 @@ Kentucky Wildcats,Florida Gators,Kentucky Wildcats,20260313,11.1,0.1600000000000
 Kentucky Wildcats,Florida Gators,Florida Gators,20260313,-11.1,0.84,157.0
 Florida Gators,Kentucky Wildcats,Florida Gators,20260313,-11.1,0.84,157.0
 Florida Gators,Kentucky Wildcats,Kentucky Wildcats,20260313,11.1,0.16000000000000003,157.0
-Duke Blue Devils,Clemson Tigers,Duke Blue Devils,20260313,-10.4,0.86,132.0
-Duke Blue Devils,Clemson Tigers,Clemson Tigers,20260313,10.4,0.14,132.0
-Clemson Tigers,Duke Blue Devils,Clemson Tigers,20260313,10.4,0.14,132.0
-Clemson Tigers,Duke Blue Devils,Duke Blue Devils,20260313,-10.4,0.86,132.0
+Duke Blue Devils,Clemson Tigers,Duke Blue Devils,20260313,-10.5,0.86,132.0
+Duke Blue Devils,Clemson Tigers,Clemson Tigers,20260313,10.5,0.14,132.0
+Clemson Tigers,Duke Blue Devils,Clemson Tigers,20260313,10.5,0.14,132.0
+Clemson Tigers,Duke Blue Devils,Duke Blue Devils,20260313,-10.5,0.86,132.0
 Saint Louis Billikens,GW Revolutionaries,Saint Louis Billikens,20260313,-5.8,0.69,166.0
 Saint Louis Billikens,GW Revolutionaries,GW Revolutionaries,20260313,5.8,0.31000000000000005,166.0
 GW Revolutionaries,Saint Louis Billikens,GW Revolutionaries,20260313,5.8,0.31000000000000005,166.0
@@ -111,10 +111,10 @@ Tulsa Golden Hurricane,North Texas Mean Green,Tulsa Golden Hurricane,20260313,-7
 Tulsa Golden Hurricane,North Texas Mean Green,North Texas Mean Green,20260313,7.6,0.22999999999999998,142.0
 North Texas Mean Green,Tulsa Golden Hurricane,North Texas Mean Green,20260313,7.6,0.22999999999999998,142.0
 North Texas Mean Green,Tulsa Golden Hurricane,Tulsa Golden Hurricane,20260313,-7.6,0.77,142.0
-Utah Tech Trailblazers,Cal Baptist Lancers,Utah Tech Trailblazers,20260313,5.4,0.29000000000000004,139.0
-Utah Tech Trailblazers,Cal Baptist Lancers,Cal Baptist Lancers,20260313,-5.4,0.71,139.0
-Cal Baptist Lancers,Utah Tech Trailblazers,Cal Baptist Lancers,20260313,-5.4,0.71,139.0
-Cal Baptist Lancers,Utah Tech Trailblazers,Utah Tech Trailblazers,20260313,5.4,0.29000000000000004,139.0
+Utah Tech Trailblazers,Cal Baptist Lancers,Utah Tech Trailblazers,20260313,5.4,0.29000000000000004,138.0
+Utah Tech Trailblazers,Cal Baptist Lancers,Cal Baptist Lancers,20260313,-5.4,0.71,138.0
+Cal Baptist Lancers,Utah Tech Trailblazers,Cal Baptist Lancers,20260313,-5.4,0.71,138.0
+Cal Baptist Lancers,Utah Tech Trailblazers,Utah Tech Trailblazers,20260313,5.4,0.29000000000000004,138.0
 Utah Valley Wolverines,UT-Arlington Mavericks,Utah Valley Wolverines,20260313,-6.4,0.75,135.0
 Utah Valley Wolverines,UT-Arlington Mavericks,UT-Arlington Mavericks,20260313,6.4,0.25,135.0
 UT-Arlington Mavericks,Utah Valley Wolverines,UT-Arlington Mavericks,20260313,6.4,0.25,135.0
@@ -123,10 +123,10 @@ Prairie View Panthers,Alabama A&M Bulldogs,Prairie View Panthers,20260313,0.7,0.
 Prairie View Panthers,Alabama A&M Bulldogs,Alabama A&M Bulldogs,20260313,-0.7,0.53,151.0
 Alabama A&M Bulldogs,Prairie View Panthers,Alabama A&M Bulldogs,20260313,-0.7,0.53,151.0
 Alabama A&M Bulldogs,Prairie View Panthers,Prairie View Panthers,20260313,0.7,0.47,151.0
-Southern Jaguars,Florida A&M Rattlers,Southern Jaguars,20260313,-2.9,0.61,149.0
-Southern Jaguars,Florida A&M Rattlers,Florida A&M Rattlers,20260313,2.9,0.39,149.0
-Florida A&M Rattlers,Southern Jaguars,Florida A&M Rattlers,20260313,2.9,0.39,149.0
-Florida A&M Rattlers,Southern Jaguars,Southern Jaguars,20260313,-2.9,0.61,149.0
+Southern Jaguars,Florida A&M Rattlers,Southern Jaguars,20260313,-3.0,0.61,149.0
+Southern Jaguars,Florida A&M Rattlers,Florida A&M Rattlers,20260313,3.0,0.39,149.0
+Florida A&M Rattlers,Southern Jaguars,Florida A&M Rattlers,20260313,3.0,0.39,149.0
+Florida A&M Rattlers,Southern Jaguars,Southern Jaguars,20260313,-3.0,0.61,149.0
 South Carolina St Bulldogs,Howard Bison,South Carolina St Bulldogs,20260313,13.2,0.10999999999999999,145.0
 South Carolina St Bulldogs,Howard Bison,Howard Bison,20260313,-13.2,0.89,145.0
 Howard Bison,South Carolina St Bulldogs,Howard Bison,20260313,-13.2,0.89,145.0
@@ -135,6 +135,10 @@ North Carolina Central Eagles,Delaware St Hornets,North Carolina Central Eagles,
 North Carolina Central Eagles,Delaware St Hornets,Delaware St Hornets,20260313,3.1,0.37,133.0
 Delaware St Hornets,North Carolina Central Eagles,Delaware St Hornets,20260313,3.1,0.37,133.0
 Delaware St Hornets,North Carolina Central Eagles,North Carolina Central Eagles,20260313,-3.1,0.63,133.0
+Saint Louis Billikens,Dayton Flyers,Saint Louis Billikens,20260314,-4.7,0.67,152.0
+Saint Louis Billikens,Dayton Flyers,Dayton Flyers,20260314,4.7,0.32999999999999996,152.0
+Dayton Flyers,Saint Louis Billikens,Dayton Flyers,20260314,4.7,0.32999999999999996,152.0
+Dayton Flyers,Saint Louis Billikens,Saint Louis Billikens,20260314,-4.7,0.67,152.0
 Pennsylvania Quakers,Harvard Crimson,Pennsylvania Quakers,20260314,-0.2,0.51,135.0
 Pennsylvania Quakers,Harvard Crimson,Harvard Crimson,20260314,0.2,0.49,135.0
 Harvard Crimson,Pennsylvania Quakers,Harvard Crimson,20260314,0.2,0.49,135.0
@@ -143,6 +147,10 @@ Yale Bulldogs,Cornell Big Red,Yale Bulldogs,20260314,-5.7,0.68,172.0
 Yale Bulldogs,Cornell Big Red,Cornell Big Red,20260314,5.7,0.31999999999999995,172.0
 Cornell Big Red,Yale Bulldogs,Cornell Big Red,20260314,5.7,0.31999999999999995,172.0
 Cornell Big Red,Yale Bulldogs,Yale Bulldogs,20260314,-5.7,0.68,172.0
+South Florida Bulls,Charlotte 49ers,South Florida Bulls,20260314,-10.3,0.82,154.0
+South Florida Bulls,Charlotte 49ers,Charlotte 49ers,20260314,10.3,0.18000000000000005,154.0
+Charlotte 49ers,South Florida Bulls,Charlotte 49ers,20260314,10.3,0.18000000000000005,154.0
+Charlotte 49ers,South Florida Bulls,South Florida Bulls,20260314,-10.3,0.82,154.0
 UMBC Retrievers,Vermont Catamounts,UMBC Retrievers,20260314,-7.2,0.77,137.0
 UMBC Retrievers,Vermont Catamounts,Vermont Catamounts,20260314,7.2,0.22999999999999998,137.0
 Vermont Catamounts,UMBC Retrievers,Vermont Catamounts,20260314,7.2,0.22999999999999998,137.0
