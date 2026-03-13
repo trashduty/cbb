@@ -366,9 +366,8 @@ async function runScrapers() {
     // Barttorvik runs on its own daily workflow (barttorvik-scrape.yml)
     // The main pipeline reads the committed data/bt_mapped.csv from the last successful scrape
 
-    // Run the Hasla UV script
-    const haslaScript = path.join(__dirname, 'scrapers', 'hasla.py');
-    await runUVScript(haslaScript, 'Hasla');
+    // Hasla runs on its own daily workflow (hasla-scrape.yml)
+    // The main pipeline reads the committed data/hasla_mapped.csv from the last successful scrape
     
     // Join the datasets
     await joinDatasets();
