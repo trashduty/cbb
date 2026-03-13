@@ -6270,5 +6270,26 @@
     "edge_type": "moneyline",
     "edge_value": 0.0512826979569769,
     "notified_at": "2026-03-12T22:12:21.610439+00:00"
+  },
+  "Nebraska Cornhuskers vs. Purdue Boilermakers|Nebraska Cornhuskers|moneyline": {
+    "game": "Nebraska Cornhuskers vs. Purdue Boilermakers",
+    "team": "Nebraska Cornhuskers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0965422634978832,
+    "notified_at": "2026-03-13T03:34:13.277451+00:00"
+  },
+  "Akron Zips vs. Kent State Golden Flashes|Akron Zips|moneyline": {
+    "game": "Akron Zips vs. Kent State Golden Flashes",
+    "team": "Akron Zips",
+    "edge_type": "moneyline",
+    "edge_value": 0.0672086556650934,
+    "notified_at": "2026-03-13T03:34:13.596735+00:00"
+  },
+  "Utah State Aggies vs. Nevada Wolf Pack|Utah State Aggies|moneyline": {
+    "game": "Utah State Aggies vs. Nevada Wolf Pack",
+    "team": "Utah State Aggies",
+    "edge_type": "moneyline",
+    "edge_value": 0.0688986476134373,
+    "notified_at": "2026-03-13T03:34:13.932495+00:00"
   }
 }
