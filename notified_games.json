@@ -6291,5 +6291,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0688986476134373,
     "notified_at": "2026-03-13T03:34:13.932495+00:00"
+  },
+  "Alabama Crimson Tide vs. Ole Miss Rebels|Alabama Crimson Tide|moneyline": {
+    "game": "Alabama Crimson Tide vs. Ole Miss Rebels",
+    "team": "Alabama Crimson Tide",
+    "edge_type": "moneyline",
+    "edge_value": 0.0338363832368348,
+    "notified_at": "2026-03-13T05:28:45.933603+00:00"
   }
 }
