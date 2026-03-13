@@ -6298,5 +6298,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0338363832368348,
     "notified_at": "2026-03-13T05:28:45.933603+00:00"
+  },
+  "Saint Joseph's Hawks vs. Davidson Wildcats|Davidson Wildcats|moneyline": {
+    "game": "Saint Joseph's Hawks vs. Davidson Wildcats",
+    "team": "Davidson Wildcats",
+    "edge_type": "moneyline",
+    "edge_value": 0.0456065060044277,
+    "notified_at": "2026-03-13T14:22:04.812226+00:00"
+  },
+  "San Diego St Aztecs vs. New Mexico Lobos|New Mexico Lobos|moneyline": {
+    "game": "San Diego St Aztecs vs. New Mexico Lobos",
+    "team": "New Mexico Lobos",
+    "edge_type": "moneyline",
+    "edge_value": 0.0643417499932476,
+    "notified_at": "2026-03-13T14:22:05.109527+00:00"
   }
 }
