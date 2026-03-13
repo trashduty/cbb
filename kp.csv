@@ -7391,31 +7391,159 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-11,Boise St.,San Jose St.,home,88.0,80,67
 2026-03-11,Air Force,Nevada,away,4.0,60,80
 2026-03-11,Nevada,Air Force,home,96.0,80,60
-2026-03-12,Creighton,Seton Hall,away,41.0,67,70
-2026-03-12,Seton Hall,Creighton,home,59.0,70,67
-2026-03-12,Rhode Island,Duquesne,away,50.0,71,72
-2026-03-12,Duquesne,Rhode Island,home,50.0,72,71
-2026-03-12,Bowling Green,Toledo,away,47.0,76,77
-2026-03-12,Toledo,Bowling Green,home,53.0,77,76
+2026-03-12,Iowa St.,Texas Tech,away,62.0,75,72
+2026-03-12,Texas Tech,Iowa St.,home,38.0,72,75
+2026-03-12,Miami FL,Louisville,away,38.0,77,81
+2026-03-12,Louisville,Miami FL,home,62.0,81,77
+2026-03-12,Ohio St.,Iowa,away,48.0,72,73
+2026-03-12,Iowa,Ohio St.,home,52.0,73,72
+2026-03-12,Virginia,N.C. State,away,63.0,79,75
+2026-03-12,N.C. State,Virginia,home,37.0,75,79
+2026-03-12,Houston,BYU,away,71.0,78,72
+2026-03-12,BYU,Houston,home,29.0,72,78
+2026-03-12,Clemson,North Carolina,away,46.0,70,71
+2026-03-12,North Carolina,Clemson,home,54.0,71,70
+2026-03-12,Oklahoma,Texas A&M,away,43.0,80,82
+2026-03-12,Texas A&M,Oklahoma,home,57.0,82,80
+2026-03-12,Tennessee,Auburn,away,66.0,77,73
+2026-03-12,Auburn,Tennessee,home,34.0,73,77
+2026-03-12,Kentucky,Missouri,away,64.0,78,74
+2026-03-12,Missouri,Kentucky,home,36.0,74,78
+2026-03-12,Kansas,TCU,away,68.0,73,68
+2026-03-12,TCU,Kansas,home,32.0,68,73
+2026-03-12,Wisconsin,Washington,away,68.0,81,76
+2026-03-12,Washington,Wisconsin,home,32.0,76,81
+2026-03-12,Seton Hall,Creighton,away,59.0,70,67
+2026-03-12,Creighton,Seton Hall,home,41.0,67,70
+2026-03-12,Nevada,Grand Canyon,away,45.0,69,70
+2026-03-12,Grand Canyon,Nevada,home,55.0,70,69
+2026-03-12,Mississippi,Georgia,away,27.0,76,83
+2026-03-12,Georgia,Mississippi,home,73.0,83,76
+2026-03-12,San Diego St.,Colorado St.,away,66.0,75,70
+2026-03-12,Colorado St.,San Diego St.,home,34.0,70,75
+2026-03-12,Purdue,Northwestern,away,82.0,79,69
+2026-03-12,Northwestern,Purdue,home,18.0,69,79
+2026-03-12,Georgetown,Villanova,away,26.0,68,75
+2026-03-12,Villanova,Georgetown,home,74.0,75,68
+2026-03-12,Utah St.,UNLV,away,75.0,85,77
+2026-03-12,UNLV,Utah St.,home,25.0,77,85
+2026-03-12,St. John's,Providence,away,83.0,88,77
+2026-03-12,Providence,St. John's,home,17.0,77,88
+2026-03-12,Arizona,UCF,away,92.0,88,72
+2026-03-12,UCF,Arizona,home,8.0,72,88
+2026-03-12,St. Bonaventure,George Mason,away,35.0,71,75
+2026-03-12,George Mason,St. Bonaventure,home,65.0,75,71
+2026-03-12,Duquesne,Rhode Island,away,50.0,72,71
+2026-03-12,Rhode Island,Duquesne,home,50.0,71,72
+2026-03-12,Toledo,Bowling Green,away,53.0,77,76
+2026-03-12,Bowling Green,Toledo,home,47.0,76,77
+2026-03-12,North Texas,Florida Atlantic,away,46.0,68,69
+2026-03-12,Florida Atlantic,North Texas,home,54.0,69,68
+2026-03-12,UC Davis,Cal St. Fullerton,away,53.0,80,79
+2026-03-12,Cal St. Fullerton,UC Davis,home,47.0,79,80
+2026-03-12,Connecticut,Xavier,away,90.0,83,69
+2026-03-12,Xavier,Connecticut,home,10.0,69,83
 2026-03-12,Kennesaw St.,Western Kentucky,away,46.0,79,80
 2026-03-12,Western Kentucky,Kennesaw St.,home,54.0,80,79
+2026-03-12,CSUN,UC San Diego,away,35.0,74,78
+2026-03-12,UC San Diego,CSUN,home,65.0,78,74
 2026-03-12,George Washington,Fordham,away,71.0,75,69
 2026-03-12,Fordham,George Washington,home,29.0,69,75
-2026-03-12,Middle Tennessee,Louisiana Tech,away,58.0,67,65
-2026-03-12,Louisiana Tech,Middle Tennessee,home,42.0,65,67
-2026-03-12,Ohio,Kent St.,away,34.0,78,83
-2026-03-12,Kent St.,Ohio,home,66.0,83,78
+2026-03-12,Duke,Florida St.,away,96.0,85,66
+2026-03-12,Florida St.,Duke,home,4.0,66,85
+2026-03-12,UCLA,Rutgers,away,84.0,78,67
+2026-03-12,Rutgers,UCLA,home,16.0,67,78
+2026-03-12,Charlotte,Tulane,away,51.0,74,73
+2026-03-12,Tulane,Charlotte,home,49.0,73,74
+2026-03-12,Louisiana Tech,Middle Tennessee,away,42.0,65,67
+2026-03-12,Middle Tennessee,Louisiana Tech,home,58.0,67,65
+2026-03-12,Kent St.,Ohio,away,66.0,83,78
+2026-03-12,Ohio,Kent St.,home,34.0,78,83
 2026-03-12,Massachusetts,Miami OH,away,22.0,77,86
 2026-03-12,Miami OH,Massachusetts,home,78.0,86,77
-2026-03-12,Southern Utah,UT Arlington,away,31.0,68,73
-2026-03-12,UT Arlington,Southern Utah,home,69.0,73,68
-2026-03-12,Alabama A&M,Texas Southern,away,52.0,75,74
-2026-03-12,Texas Southern,Alabama A&M,home,48.0,74,75
-2026-03-12,Arkansas Pine Bluff,Southern,away,40.0,77,80
-2026-03-12,Southern,Arkansas Pine Bluff,home,60.0,80,77
-2026-03-12,Buffalo,Akron,away,15.0,77,89
-2026-03-12,Akron,Buffalo,home,85.0,89,77
-2026-03-12,Maryland Eastern Shore,North Carolina Central,away,54.0,67,66
-2026-03-12,North Carolina Central,Maryland Eastern Shore,home,46.0,66,67
+2026-03-12,Abilene Christian,Utah Tech,away,39.0,69,73
+2026-03-12,Utah Tech,Abilene Christian,home,61.0,73,69
+2026-03-12,UT Arlington,Southern Utah,away,69.0,73,68
+2026-03-12,Southern Utah,UT Arlington,home,31.0,68,73
+2026-03-12,Southern,Arkansas Pine Bluff,away,60.0,80,77
+2026-03-12,Arkansas Pine Bluff,Southern,home,40.0,77,80
+2026-03-12,Alabama A&M,Texas Southern,away,51.0,75,74
+2026-03-12,Texas Southern,Alabama A&M,home,49.0,74,75
+2026-03-12,Akron,Buffalo,away,85.0,88,77
+2026-03-12,Buffalo,Akron,home,15.0,77,88
+2026-03-12,North Carolina Central,Maryland Eastern Shore,away,46.0,66,67
+2026-03-12,Maryland Eastern Shore,North Carolina Central,home,54.0,67,66
+2026-03-12,San Jose St.,New Mexico,away,10.0,71,85
+2026-03-12,New Mexico,San Jose St.,home,90.0,85,71
 2026-03-12,South Carolina St.,Norfolk St.,away,28.0,70,77
 2026-03-12,Norfolk St.,South Carolina St.,home,72.0,77,70
+2026-03-12,Davidson,Loyola Chicago,away,82.0,73,62
+2026-03-12,Loyola Chicago,Davidson,home,18.0,62,73
+2026-03-13,Purdue,Nebraska,away,56.0,74,72
+2026-03-13,Nebraska,Purdue,home,44.0,72,74
+2026-03-13,Tennessee,Vanderbilt,away,50.0,75,76
+2026-03-13,Vanderbilt,Tennessee,home,50.0,76,75
+2026-03-13,Iowa St.,Arizona,away,37.0,71,75
+2026-03-13,Arizona,Iowa St.,home,63.0,75,71
+2026-03-13,Miami FL,Virginia,away,42.0,72,74
+2026-03-13,Virginia,Miami FL,home,58.0,74,72
+2026-03-13,Kansas,Houston,away,34.0,66,70
+2026-03-13,Houston,Kansas,home,66.0,70,66
+2026-03-13,UCLA,Michigan St.,away,33.0,69,73
+2026-03-13,Michigan St.,UCLA,home,67.0,73,69
+2026-03-13,Wisconsin,Illinois,away,27.0,77,84
+2026-03-13,Illinois,Wisconsin,home,73.0,84,77
+2026-03-13,Oklahoma,Arkansas,away,32.0,82,87
+2026-03-13,Arkansas,Oklahoma,home,68.0,87,82
+2026-03-13,Kentucky,Florida,away,18.0,73,83
+2026-03-13,Florida,Kentucky,home,82.0,83,73
+2026-03-13,Nevada,Utah St.,away,31.0,73,78
+2026-03-13,Utah St.,Nevada,home,69.0,78,73
+2026-03-13,Seton Hall,St. John's,away,25.0,64,71
+2026-03-13,St. John's,Seton Hall,home,75.0,71,64
+2026-03-13,Ohio St.,Michigan,away,13.0,73,85
+2026-03-13,Michigan,Ohio St.,home,87.0,85,73
+2026-03-13,George Washington,Saint Louis,away,28.0,79,85
+2026-03-13,Saint Louis,George Washington,home,72.0,85,79
+2026-03-13,Mississippi,Alabama,away,17.0,77,87
+2026-03-13,Alabama,Mississippi,home,83.0,87,77
+2026-03-13,Clemson,Duke,away,13.0,61,73
+2026-03-13,Duke,Clemson,home,87.0,73,61
+2026-03-13,Georgetown,Connecticut,away,15.0,65,76
+2026-03-13,Connecticut,Georgetown,home,85.0,76,65
+2026-03-13,Davidson,Saint Joseph's,away,54.0,67,66
+2026-03-13,Saint Joseph's,Davidson,home,46.0,66,67
+2026-03-13,St. Bonaventure,Dayton,away,30.0,71,77
+2026-03-13,Dayton,St. Bonaventure,home,70.0,77,71
+2026-03-13,Kennesaw St.,Sam Houston St.,away,33.0,80,85
+2026-03-13,Sam Houston St.,Kennesaw St.,home,67.0,85,80
+2026-03-13,Duquesne,VCU,away,19.0,73,83
+2026-03-13,VCU,Duquesne,home,81.0,83,73
+2026-03-13,North Texas,Tulsa,away,24.0,68,75
+2026-03-13,Tulsa,North Texas,home,76.0,75,68
+2026-03-13,CSUN,UC Irvine,away,34.0,72,76
+2026-03-13,UC Irvine,CSUN,home,66.0,76,72
+2026-03-13,Kent St.,Akron,away,22.0,80,88
+2026-03-13,Akron,Kent St.,home,78.0,88,80
+2026-03-13,UT Arlington,Utah Valley,away,31.0,65,70
+2026-03-13,Utah Valley,UT Arlington,home,69.0,70,65
+2026-03-13,Massachusetts,Toledo,away,38.0,79,82
+2026-03-13,Toledo,Massachusetts,home,62.0,82,79
+2026-03-13,Charlotte,UAB,away,37.0,72,75
+2026-03-13,UAB,Charlotte,home,63.0,75,72
+2026-03-13,Missouri St.,Louisiana Tech,away,49.0,67,68
+2026-03-13,Louisiana Tech,Missouri St.,home,51.0,68,67
+2026-03-13,Prairie View A&M,Alabama A&M,away,49.0,75,76
+2026-03-13,Alabama A&M,Prairie View A&M,home,51.0,76,75
+2026-03-13,Southern,Florida A&M,away,59.0,75,73
+2026-03-13,Florida A&M,Southern,home,41.0,73,75
+2026-03-13,Delaware St.,North Carolina Central,away,37.0,65,69
+2026-03-13,North Carolina Central,Delaware St.,home,63.0,69,65
+2026-03-13,South Carolina St.,Howard,away,10.0,65,79
+2026-03-13,Howard,South Carolina St.,home,90.0,79,65
+2026-03-14,Yale,Cornell,away,66.0,88,84
+2026-03-14,Cornell,Yale,home,34.0,84,88
+2026-03-14,Penn,Harvard,away,48.0,68,69
+2026-03-14,Harvard,Penn,home,52.0,69,68
+2026-03-14,Vermont,UMBC,away,36.0,69,73
+2026-03-14,UMBC,Vermont,home,64.0,73,69
