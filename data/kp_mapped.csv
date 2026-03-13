@@ -7495,6 +7495,8 @@ Illinois Fighting Illini,Wisconsin Badgers,Wisconsin Badgers,20260313,7,0.27,161
 Illinois Fighting Illini,Wisconsin Badgers,Illinois Fighting Illini,20260313,-7,0.73,161
 Arkansas Razorbacks,Oklahoma Sooners,Oklahoma Sooners,20260313,5,0.32,169
 Arkansas Razorbacks,Oklahoma Sooners,Arkansas Razorbacks,20260313,-5,0.68,169
+San Diego St Aztecs,New Mexico Lobos,New Mexico Lobos,20260313,1,0.48,151
+San Diego St Aztecs,New Mexico Lobos,San Diego St Aztecs,20260313,-1,0.52,151
 Florida Gators,Kentucky Wildcats,Kentucky Wildcats,20260313,10,0.18,156
 Florida Gators,Kentucky Wildcats,Florida Gators,20260313,-10,0.82,156
 Utah State Aggies,Nevada Wolf Pack,Nevada Wolf Pack,20260313,5,0.31,151
@@ -7515,6 +7517,8 @@ Saint Joseph's Hawks,Davidson Wildcats,Davidson Wildcats,20260313,-1,0.54,133
 Saint Joseph's Hawks,Davidson Wildcats,Saint Joseph's Hawks,20260313,1,0.46,133
 Dayton Flyers,St. Bonaventure Bonnies,St. Bonaventure Bonnies,20260313,6,0.3,148
 Dayton Flyers,St. Bonaventure Bonnies,Dayton Flyers,20260313,-6,0.7,148
+Hawai'i Rainbow Warriors,CSU Fullerton Titans,CSU Fullerton Titans,20260313,3,0.39,155
+Hawai'i Rainbow Warriors,CSU Fullerton Titans,Hawai'i Rainbow Warriors,20260313,-3,0.61,155
 Sam Houston St Bearkats,Kennesaw St Owls,Kennesaw St Owls,20260313,5,0.33,165
 Sam Houston St Bearkats,Kennesaw St Owls,Sam Houston St Bearkats,20260313,-5,0.67,165
 VCU Rams,Duquesne Dukes,Duquesne Dukes,20260313,10,0.19,156
@@ -7531,6 +7535,8 @@ Toledo Rockets,Massachusetts Minutemen,Massachusetts Minutemen,20260313,3,0.38,1
 Toledo Rockets,Massachusetts Minutemen,Toledo Rockets,20260313,-3,0.62,161
 UAB Blazers,Charlotte 49ers,Charlotte 49ers,20260313,3,0.37,147
 UAB Blazers,Charlotte 49ers,UAB Blazers,20260313,-3,0.63,147
+Cal Baptist Lancers,Utah Tech Trailblazers,Utah Tech Trailblazers,20260313,4,0.34,140
+Cal Baptist Lancers,Utah Tech Trailblazers,Cal Baptist Lancers,20260313,-4,0.66,140
 Louisiana Tech Bulldogs,Missouri St Bears,Missouri St Bears,20260313,1,0.49,135
 Louisiana Tech Bulldogs,Missouri St Bears,Louisiana Tech Bulldogs,20260313,-1,0.51,135
 Alabama A&M Bulldogs,Prairie View Panthers,Prairie View Panthers,20260313,1,0.49,151
@@ -7547,3 +7553,9 @@ Harvard Crimson,Pennsylvania Quakers,Pennsylvania Quakers,20260314,1,0.48,137
 Harvard Crimson,Pennsylvania Quakers,Harvard Crimson,20260314,-1,0.52,137
 UMBC Retrievers,Vermont Catamounts,Vermont Catamounts,20260314,4,0.36,142
 UMBC Retrievers,Vermont Catamounts,UMBC Retrievers,20260314,-4,0.64,142
+Cornell Big Red,Yale Bulldogs,Yale Bulldogs,20260315,-4,0.66,172
+Cornell Big Red,Yale Bulldogs,Cornell Big Red,20260315,4,0.34,172
+Harvard Crimson,Pennsylvania Quakers,Pennsylvania Quakers,20260315,1,0.48,137
+Harvard Crimson,Pennsylvania Quakers,Harvard Crimson,20260315,-1,0.52,137
+UMBC Retrievers,Vermont Catamounts,Vermont Catamounts,20260315,4,0.36,142
+UMBC Retrievers,Vermont Catamounts,UMBC Retrievers,20260315,-4,0.64,142
