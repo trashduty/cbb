@@ -39,14 +39,14 @@ Utah Valley Wolverines,Cal Baptist Lancers,Utah Valley Wolverines,20260314,-1.0,
 Utah Valley Wolverines,Cal Baptist Lancers,Cal Baptist Lancers,20260314,1.0,0.45999999999999996,139.0
 Cal Baptist Lancers,Utah Valley Wolverines,Cal Baptist Lancers,20260314,1.0,0.45999999999999996,139.0
 Cal Baptist Lancers,Utah Valley Wolverines,Utah Valley Wolverines,20260314,-1.0,0.54,139.0
-Ole Miss Rebels,Arkansas Razorbacks,Ole Miss Rebels,20260314,9.2,0.20999999999999996,157.0
-Ole Miss Rebels,Arkansas Razorbacks,Arkansas Razorbacks,20260314,-9.2,0.79,157.0
-Arkansas Razorbacks,Ole Miss Rebels,Arkansas Razorbacks,20260314,-9.2,0.79,157.0
-Arkansas Razorbacks,Ole Miss Rebels,Ole Miss Rebels,20260314,9.2,0.20999999999999996,157.0
-VCU Rams,Saint Joseph's Hawks,VCU Rams,20260314,-4.0,0.65,148.0
-VCU Rams,Saint Joseph's Hawks,Saint Joseph's Hawks,20260314,4.0,0.35,148.0
-Saint Joseph's Hawks,VCU Rams,Saint Joseph's Hawks,20260314,4.0,0.35,148.0
-Saint Joseph's Hawks,VCU Rams,VCU Rams,20260314,-4.0,0.65,148.0
+Ole Miss Rebels,Arkansas Razorbacks,Ole Miss Rebels,20260314,9.1,0.20999999999999996,157.0
+Ole Miss Rebels,Arkansas Razorbacks,Arkansas Razorbacks,20260314,-9.1,0.79,157.0
+Arkansas Razorbacks,Ole Miss Rebels,Arkansas Razorbacks,20260314,-9.1,0.79,157.0
+Arkansas Razorbacks,Ole Miss Rebels,Ole Miss Rebels,20260314,9.1,0.20999999999999996,157.0
+VCU Rams,Saint Joseph's Hawks,VCU Rams,20260314,-4.1,0.65,148.0
+VCU Rams,Saint Joseph's Hawks,Saint Joseph's Hawks,20260314,4.1,0.35,148.0
+Saint Joseph's Hawks,VCU Rams,Saint Joseph's Hawks,20260314,4.1,0.35,148.0
+Saint Joseph's Hawks,VCU Rams,VCU Rams,20260314,-4.1,0.65,148.0
 UC Irvine Anteaters,Hawai'i Rainbow Warriors,UC Irvine Anteaters,20260314,-1.1,0.54,137.0
 UC Irvine Anteaters,Hawai'i Rainbow Warriors,Hawai'i Rainbow Warriors,20260314,1.1,0.45999999999999996,137.0
 Hawai'i Rainbow Warriors,UC Irvine Anteaters,Hawai'i Rainbow Warriors,20260314,1.1,0.45999999999999996,137.0
@@ -59,22 +59,22 @@ Toledo Rockets,Akron Zips,Toledo Rockets,20260314,6.9,0.28,163.0
 Toledo Rockets,Akron Zips,Akron Zips,20260314,-6.9,0.72,163.0
 Akron Zips,Toledo Rockets,Akron Zips,20260314,-6.9,0.72,163.0
 Akron Zips,Toledo Rockets,Toledo Rockets,20260314,6.9,0.28,163.0
+Louisiana Tech Bulldogs,Kennesaw St Owls,Louisiana Tech Bulldogs,20260314,1.8,0.43000000000000005,143.0
+Louisiana Tech Bulldogs,Kennesaw St Owls,Kennesaw St Owls,20260314,-1.8,0.57,143.0
+Kennesaw St Owls,Louisiana Tech Bulldogs,Kennesaw St Owls,20260314,-1.8,0.57,143.0
+Kennesaw St Owls,Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,20260314,1.8,0.43000000000000005,143.0
 Yale Bulldogs,Cornell Big Red,Yale Bulldogs,20260314,-5.7,0.68,172.0
 Yale Bulldogs,Cornell Big Red,Cornell Big Red,20260314,5.7,0.31999999999999995,172.0
 Cornell Big Red,Yale Bulldogs,Cornell Big Red,20260314,5.7,0.31999999999999995,172.0
 Cornell Big Red,Yale Bulldogs,Yale Bulldogs,20260314,-5.7,0.68,172.0
-Louisiana Tech Bulldogs,Kennesaw St Owls,Louisiana Tech Bulldogs,20260314,1.8,0.43000000000000005,144.0
-Louisiana Tech Bulldogs,Kennesaw St Owls,Kennesaw St Owls,20260314,-1.8,0.57,144.0
-Kennesaw St Owls,Louisiana Tech Bulldogs,Kennesaw St Owls,20260314,-1.8,0.57,144.0
-Kennesaw St Owls,Louisiana Tech Bulldogs,Louisiana Tech Bulldogs,20260314,1.8,0.43000000000000005,144.0
 South Florida Bulls,Charlotte 49ers,South Florida Bulls,20260314,-10.4,0.83,154.0
 South Florida Bulls,Charlotte 49ers,Charlotte 49ers,20260314,10.4,0.17000000000000004,154.0
 Charlotte 49ers,South Florida Bulls,Charlotte 49ers,20260314,10.4,0.17000000000000004,154.0
 Charlotte 49ers,South Florida Bulls,South Florida Bulls,20260314,-10.4,0.83,154.0
-Southern Jaguars,Prairie View Panthers,Southern Jaguars,20260314,-3.4,0.62,159.0
-Southern Jaguars,Prairie View Panthers,Prairie View Panthers,20260314,3.4,0.38,159.0
-Prairie View Panthers,Southern Jaguars,Prairie View Panthers,20260314,3.4,0.38,159.0
-Prairie View Panthers,Southern Jaguars,Southern Jaguars,20260314,-3.4,0.62,159.0
+Southern Jaguars,Prairie View Panthers,Southern Jaguars,20260314,-3.4,0.62,158.0
+Southern Jaguars,Prairie View Panthers,Prairie View Panthers,20260314,3.4,0.38,158.0
+Prairie View Panthers,Southern Jaguars,Prairie View Panthers,20260314,3.4,0.38,158.0
+Prairie View Panthers,Southern Jaguars,Southern Jaguars,20260314,-3.4,0.62,158.0
 UMBC Retrievers,Vermont Catamounts,UMBC Retrievers,20260314,-7.1,0.77,137.0
 UMBC Retrievers,Vermont Catamounts,Vermont Catamounts,20260314,7.1,0.22999999999999998,137.0
 Vermont Catamounts,UMBC Retrievers,Vermont Catamounts,20260314,7.1,0.22999999999999998,137.0
@@ -83,3 +83,7 @@ North Carolina Central Eagles,Howard Bison,North Carolina Central Eagles,2026031
 North Carolina Central Eagles,Howard Bison,Howard Bison,20260314,-13.3,0.89,145.0
 Howard Bison,North Carolina Central Eagles,Howard Bison,20260314,-13.3,0.89,145.0
 Howard Bison,North Carolina Central Eagles,North Carolina Central Eagles,20260314,13.3,0.10999999999999999,145.0
+Yale Bulldogs,Pennsylvania Quakers,Yale Bulldogs,20260315,-5.1,0.69,151.0
+Yale Bulldogs,Pennsylvania Quakers,Pennsylvania Quakers,20260315,5.1,0.31000000000000005,151.0
+Pennsylvania Quakers,Yale Bulldogs,Pennsylvania Quakers,20260315,5.1,0.31000000000000005,151.0
+Pennsylvania Quakers,Yale Bulldogs,Yale Bulldogs,20260315,-5.1,0.69,151.0
