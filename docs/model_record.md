@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** March 13, 2026 at 07:53 PM ET
+**Last Updated:** March 13, 2026 at 08:13 PM ET
 
 **Season Record Period:** 2025-11-04 to 2026-03-13
 
-**Total Games Graded:** 3771 games (7542 team-rows)
+**Total Games Graded:** 3772 games (7544 team-rows)
 
 ---
 
@@ -111,9 +111,9 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 4517-2267 | 66.6% | +1838.95 |
-| Bart Torvik | 3073-1515 | 67.0% | +1278.36 |
-| Evan Miya | 5000-2540 | 66.3% | +2005.00 |
+| KenPom | 4519-2267 | 66.6% | +1840.77 |
+| Bart Torvik | 3075-1515 | 67.0% | +1280.18 |
+| Evan Miya | 5002-2540 | 66.3% | +2006.82 |
 
 ### Individual Model Performance - Over Bets
 
