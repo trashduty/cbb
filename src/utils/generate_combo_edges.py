@@ -43,6 +43,11 @@ if not os.path.exists(input_file):
 df = pd.read_csv(input_file)
 print(f"Loaded {len(df)} rows from CBB_Output.csv")
 
+if len(df) == 0:
+    print("No rows to process, writing empty Combo_Output.csv")
+    df.to_csv(output_file, index=False)
+    sys.exit(0)
+
 
 def american_odds_to_implied_probability(odds):
     """Convert American odds to implied probability."""
