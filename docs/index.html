@@ -94,14 +94,13 @@
             { csv: 'Predicted Outcome',          display: 'Predicted Outcome',          type: 'decimal' },
             { csv: 'Spread Cover Probability',   display: 'Spread Cover Probability',   type: 'probability' },
             { csv: 'Edge For Covering Spread',   display: 'Edge For Covering Spread',   type: 'spread_edge' },
+            { csv: 'Current Moneyline',          display: 'Market Moneyline',           type: 'decimal' },
             { csv: 'Opening Moneyline',          display: 'Opening Moneyline',          type: 'decimal' },
-            { csv: 'Current Moneyline',          display: 'Current Moneyline',          type: 'decimal' },
             { csv: 'Moneyline Win Probability',  display: 'Moneyline Win Probability',  type: 'probability' },
             { csv: 'Moneyline Edge',             display: 'Moneyline Edge',             type: 'ml_edge' },
             { csv: 'market_total',               display: 'Market Total',               type: 'decimal' },
-            { csv: 'model_total',                display: 'Model Total',                type: 'decimal' },
             { csv: 'Opening Total',              display: 'Opening Total',              type: 'decimal' },
-            { csv: 'theoddsapi_total',           display: 'Market Total',               type: 'decimal' },
+            { csv: 'model_total',                display: 'Model Total',                type: 'decimal' },
             { csv: 'Over Cover Probability',     display: 'Over Cover Probability',     type: 'probability' },
             { csv: 'Under Cover Probability',    display: 'Under Cover Probability',    type: 'probability' },
             { csv: 'Over Total Edge',            display: 'Over Total Edge',            type: 'total_edge' },
@@ -112,12 +111,27 @@
             const pct = value * 100;
             const diff = pct - threshold;
             if (diff >= 0) {
-                // Green: same as before
                 const lightness = Math.max(95 - diff * 8, 30);
                 return `hsl(120, 70%, ${lightness}%)`;
             } else {
-                // Red: increased lightness floor from 30 to 65 for better readability
-                const lightness = Math.max(95 - Math.abs(diff) * 8, 65);
+                const lightness = Math.max(95 - Math.abs(diff) * 8, 75);
+                return `hsl(0, 80%, ${lightness}%)`;
+            }
+        }
+
+        function getMLGradientColor(value) {
+            const pct = value * 100;
+            if (pct >= 10) {
+                // Green Gradient for 10% or better
+                const lightness = Math.max(95 - (pct - 10) * 8, 30);
+                return `hsl(120, 70%, ${lightness}%)`;
+            } else if (pct >= 0) {
+                // Pink for 0% to 10%
+                const lightness = Math.max(95 - (10 - pct) * 2, 80);
+                return `hsl(340, 100%, ${lightness}%)`;
+            } else {
+                // Red for negative numbers
+                const lightness = Math.max(95 - Math.abs(pct) * 8, 70);
                 return `hsl(0, 80%, ${lightness}%)`;
             }
         }
@@ -135,11 +149,11 @@
 
         function updateTable() {
             fetch(CSV_URL + '?t=' + Date.now())
-                .then(function(response) {
+                .then(response => {
                     if (!response.ok) throw new Error('HTTP ' + response.status);
                     return response.text();
                 })
-                .then(function(csvText) {
+                .then(csvText => {
                     Papa.parse(csvText, {
                         header: true,
                         dynamicTyping: true,
@@ -147,12 +161,11 @@
                         complete: function(results) {
                             rawData = results.data;
                             renderTable();
-                            document.getElementById('status').textContent =
-                                'Last updated: ' + new Date().toLocaleTimeString();
+                            document.getElementById('status').textContent = 'Last updated: ' + new Date().toLocaleTimeString();
                         }
                     });
                 })
-                .catch(function(err) {
+                .catch(err => {
                     document.getElementById('status').textContent = 'Error loading data: ' + err.message;
                 });
         }
@@ -172,28 +185,24 @@
         }
 
         function renderTable() {
-            var head = document.getElementById('tableHead');
-            var body = document.getElementById('tableBody');
-            var searchTerm = document.getElementById('teamSearch').value.toLowerCase();
+            const head = document.getElementById('tableHead');
+            const body = document.getElementById('tableBody');
+            const searchTerm = document.getElementById('teamSearch').value.toLowerCase();
             
             head.innerHTML = '';
             body.innerHTML = '';
             
             if (!rawData || rawData.length === 0) return;
 
-            var activeCols = columnMapping.filter(function(col) {
-                return Object.prototype.hasOwnProperty.call(rawData[0], col.csv);
-            });
+            const activeCols = columnMapping.filter(col => Object.prototype.hasOwnProperty.call(rawData[0], col.csv));
 
-            // Headers
-            activeCols.forEach(function(col) {
-                var th = document.createElement('th');
+            activeCols.forEach(col => {
+                const th = document.createElement('th');
                 th.textContent = col.display;
-                th.onclick = function() { onSort(col.csv); };
+                th.onclick = () => onSort(col.csv);
                 head.appendChild(th);
             });
 
-            // Filter & Sort
             let processedData = rawData.filter(row => {
                 const team = (row['Team'] || '').toString().toLowerCase();
                 return team.includes(searchTerm);
@@ -206,24 +215,23 @@
                     if (valA === valB) return 0;
                     if (valA === null) return 1;
                     if (valB === null) return -1;
-                    
                     let comparison = valA < valB ? -1 : 1;
                     return sortConfig.direction === 'asc' ? comparison : -comparison;
                 });
             }
 
-            // Rows
-            processedData.forEach(function(row) {
-                var tr = document.createElement('tr');
-                activeCols.forEach(function(col) {
-                    var td = document.createElement('td');
-                    var val = row[col.csv];
+            processedData.forEach(row => {
+                const tr = document.createElement('tr');
+                activeCols.forEach(col => {
+                    const td = document.createElement('td');
+                    const val = row[col.csv];
                     td.textContent = formatValue(val, col.type);
+                    
                     if (typeof val === 'number') {
                         if (col.type === 'spread_edge' || col.type === 'total_edge') {
                             td.style.backgroundColor = getGradientColor(val, 3);
                         } else if (col.type === 'ml_edge') {
-                            td.style.backgroundColor = getGradientColor(val, 10);
+                            td.style.backgroundColor = getMLGradientColor(val);
                         }
                     }
                     tr.appendChild(td);
