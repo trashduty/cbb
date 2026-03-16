@@ -6312,5 +6312,19 @@
     "edge_type": "moneyline",
     "edge_value": 0.0643417499932476,
     "notified_at": "2026-03-13T14:22:05.109527+00:00"
+  },
+  "Howard Bison vs. UMBC Retrievers|Howard Bison|moneyline": {
+    "game": "Howard Bison vs. UMBC Retrievers",
+    "team": "Howard Bison",
+    "edge_type": "moneyline",
+    "edge_value": 0.0428636936073725,
+    "notified_at": "2026-03-16T02:41:42.742024+00:00"
+  },
+  "Lehigh Mountain Hawks vs. Prairie View Panthers|Prairie View Panthers|moneyline": {
+    "game": "Lehigh Mountain Hawks vs. Prairie View Panthers",
+    "team": "Prairie View Panthers",
+    "edge_type": "moneyline",
+    "edge_value": 0.0424879518463544,
+    "notified_at": "2026-03-16T02:41:43.114744+00:00"
   }
 }
