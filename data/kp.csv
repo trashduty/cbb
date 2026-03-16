@@ -7589,16 +7589,6 @@ Southern,Prairie View A&M,Prairie View A&M,20260314,1,0.45,157
 Southern,Prairie View A&M,Southern,20260314,-1,0.55,157
 North Carolina Central,Howard,Howard,20260314,-12,0.87,144
 North Carolina Central,Howard,North Carolina Central,20260314,12,0.13,144
-Arkansas,Vanderbilt,Vanderbilt,20260315,-2,0.57,170
-Arkansas,Vanderbilt,Arkansas,20260315,2,0.43,170
-Michigan,Purdue,Purdue,20260315,6,0.31,156
-Michigan,Purdue,Michigan,20260315,-6,0.69,156
-VCU,Dayton,Dayton,20260315,4,0.36,146
-VCU,Dayton,VCU,20260315,-4,0.64,146
-South Florida,Wichita St.,Wichita St.,20260315,4,0.36,152
-South Florida,Wichita St.,South Florida,20260315,-4,0.64,152
-Yale,Penn,Penn,20260315,7,0.26,149
-Yale,Penn,Yale,20260315,-7,0.74,149
 Arkansas,Vanderbilt,Vanderbilt,20260316,-2,0.57,170
 Arkansas,Vanderbilt,Arkansas,20260316,2,0.43,170
 Michigan,Purdue,Purdue,20260316,6,0.31,156
@@ -7609,3 +7599,105 @@ South Florida,Wichita St.,Wichita St.,20260316,4,0.36,152
 South Florida,Wichita St.,South Florida,20260316,-4,0.64,152
 Yale,Penn,Penn,20260316,7,0.26,149
 Yale,Penn,Yale,20260316,-7,0.74,149
+Vanderbilt,Arkansas,Arkansas,20260315,2,0.43,170
+Vanderbilt,Arkansas,Vanderbilt,20260315,-2,0.57,170
+Michigan,Purdue,Purdue,20260315,6,0.31,156
+Michigan,Purdue,Michigan,20260315,-6,0.69,156
+Dayton,VCU,VCU,20260315,-4,0.64,146
+Dayton,VCU,Dayton,20260315,4,0.36,146
+Wichita St.,South Florida,South Florida,20260315,-4,0.64,152
+Wichita St.,South Florida,Wichita St.,20260315,4,0.36,152
+Yale,Penn,Penn,20260315,7,0.26,149
+Yale,Penn,Yale,20260315,-7,0.74,149
+N.C. State,Texas,Texas,20260317,-1,0.51,165
+N.C. State,Texas,N.C. State,20260317,1,0.49,165
+Howard,UMBC,UMBC,20260317,1,0.46,141
+Howard,UMBC,Howard,20260317,-1,0.54,141
+SMU,Miami OH,Miami OH,20260318,-7,0.74,165
+SMU,Miami OH,SMU,20260318,7,0.26,165
+Lehigh,Prairie View A&M,Prairie View A&M,20260318,-1,0.51,149
+Lehigh,Prairie View A&M,Lehigh,20260318,1,0.49,149
+Georgia,Saint Louis,Saint Louis,20260319,2,0.44,170
+Georgia,Saint Louis,Georgia,20260319,-2,0.56,170
+Saint Mary's,Texas A&M,Texas A&M,20260319,3,0.39,149
+Saint Mary's,Texas A&M,Saint Mary's,20260319,-3,0.61,149
+North Carolina,VCU,VCU,20260319,3,0.41,155
+North Carolina,VCU,North Carolina,20260319,-3,0.59,155
+Ohio St.,TCU,TCU,20260319,3,0.39,147
+Ohio St.,TCU,Ohio St.,20260319,-3,0.61,147
+Louisville,South Florida,South Florida,20260319,6,0.27,162
+Louisville,South Florida,Louisville,20260319,-6,0.73,162
+Vanderbilt,McNeese,McNeese,20260319,10,0.18,152
+Vanderbilt,McNeese,Vanderbilt,20260319,-10,0.82,152
+Wisconsin,High Point,High Point,20260319,10,0.17,166
+Wisconsin,High Point,Wisconsin,20260319,-10,0.83,166
+Arkansas,Hawaii,Hawaii,20260319,15,0.09,159
+Arkansas,Hawaii,Arkansas,20260319,-15,0.91,159
+Michigan St.,North Dakota St.,North Dakota St.,20260319,15,0.08,143
+Michigan St.,North Dakota St.,Michigan St.,20260319,-15,0.92,143
+Nebraska,Troy,Troy,20260319,16,0.08,138
+Nebraska,Troy,Nebraska,20260319,-16,0.92,138
+Illinois,Penn,Penn,20260319,21,0.03,151
+Illinois,Penn,Illinois,20260319,-21,0.97,151
+Gonzaga,Kennesaw St.,Kennesaw St.,20260319,20,0.04,156
+Gonzaga,Kennesaw St.,Gonzaga,20260319,-20,0.96,156
+Houston,Idaho,Idaho,20260319,20,0.03,138
+Houston,Idaho,Houston,20260319,-20,0.97,138
+Duke,Siena,Siena,20260319,26,0.01,136
+Duke,Siena,Duke,20260319,-26,0.99,136
+Kentucky,Santa Clara,Santa Clara,20260320,2,0.45,160
+Kentucky,Santa Clara,Kentucky,20260320,-2,0.55,160
+Villanova,Utah St.,Utah St.,20260320,-1,0.52,149
+Villanova,Utah St.,Villanova,20260320,1,0.48,149
+Clemson,Iowa,Iowa,20260320,-2,0.57,132
+Clemson,Iowa,Clemson,20260320,2,0.43,132
+Miami FL,Missouri,Missouri,20260320,3,0.37,151
+Miami FL,Missouri,Miami FL,20260320,-3,0.63,151
+UCLA,UCF,UCF,20260320,4,0.34,156
+UCLA,UCF,UCLA,20260320,-4,0.66,156
+Texas Tech,Akron,Akron,20260320,9,0.22,159
+Texas Tech,Akron,Texas Tech,20260320,-9,0.78,159
+St. John's,Northern Iowa,Northern Iowa,20260320,9,0.2,133
+St. John's,Northern Iowa,St. John's,20260320,-9,0.8,133
+Alabama,Hofstra,Hofstra,20260320,11,0.15,163
+Alabama,Hofstra,Alabama,20260320,-11,0.85,163
+Kansas,Cal Baptist,Cal Baptist,20260320,13,0.13,135
+Kansas,Cal Baptist,Kansas,20260320,-13,0.87,135
+Virginia,Wright St.,Wright St.,20260320,16,0.07,146
+Virginia,Wright St.,Virginia,20260320,-16,0.93,146
+Iowa St.,Tennessee St.,Tennessee St.,20260320,21,0.03,141
+Iowa St.,Tennessee St.,Iowa St.,20260320,-21,0.97,141
+Purdue,Queens,Queens,20260320,22,0.02,164
+Purdue,Queens,Purdue,20260320,-22,0.98,164
+Connecticut,Furman,Furman,20260320,19,0.04,137
+Connecticut,Furman,Connecticut,20260320,-19,0.96,137
+Arizona,LIU,LIU,20260320,29,0.0040000000000000565,149
+Arizona,LIU,Arizona,20260320,-29,0.996,149
+Kentucky,Santa Clara,Santa Clara,20260321,2,0.45,160
+Kentucky,Santa Clara,Kentucky,20260321,-2,0.55,160
+Villanova,Utah St.,Utah St.,20260321,-1,0.52,149
+Villanova,Utah St.,Villanova,20260321,1,0.48,149
+Clemson,Iowa,Iowa,20260321,-2,0.57,132
+Clemson,Iowa,Clemson,20260321,2,0.43,132
+Miami FL,Missouri,Missouri,20260321,3,0.37,151
+Miami FL,Missouri,Miami FL,20260321,-3,0.63,151
+UCLA,UCF,UCF,20260321,4,0.34,156
+UCLA,UCF,UCLA,20260321,-4,0.66,156
+Texas Tech,Akron,Akron,20260321,9,0.22,159
+Texas Tech,Akron,Texas Tech,20260321,-9,0.78,159
+St. John's,Northern Iowa,Northern Iowa,20260321,9,0.2,133
+St. John's,Northern Iowa,St. John's,20260321,-9,0.8,133
+Alabama,Hofstra,Hofstra,20260321,11,0.15,163
+Alabama,Hofstra,Alabama,20260321,-11,0.85,163
+Kansas,Cal Baptist,Cal Baptist,20260321,13,0.13,135
+Kansas,Cal Baptist,Kansas,20260321,-13,0.87,135
+Virginia,Wright St.,Wright St.,20260321,16,0.07,146
+Virginia,Wright St.,Virginia,20260321,-16,0.93,146
+Iowa St.,Tennessee St.,Tennessee St.,20260321,21,0.03,141
+Iowa St.,Tennessee St.,Iowa St.,20260321,-21,0.97,141
+Purdue,Queens,Queens,20260321,22,0.02,164
+Purdue,Queens,Purdue,20260321,-22,0.98,164
+Connecticut,Furman,Furman,20260321,19,0.04,137
+Connecticut,Furman,Connecticut,20260321,-19,0.96,137
+Arizona,LIU,LIU,20260321,29,0.0040000000000000565,149
+Arizona,LIU,Arizona,20260321,-29,0.996,149
