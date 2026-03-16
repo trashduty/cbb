@@ -379,7 +379,19 @@ async function runScrapers() {
     } catch (err) {
       console.warn('OddsAPI script failed (non-fatal), continuing...');
     }
-    
+
+    // Run MM OddsAPI script if MM_output.csv exists (non-fatal)
+    try {
+      const mmOddsAPIScript = path.join(__dirname, 'scrapers', 'mm_oddsAPI.py');
+      if (fs.existsSync(path.join(__dirname, '..', 'MM_output.csv'))) {
+        await runUVScript(mmOddsAPIScript, 'MM_OddsAPI');
+      } else {
+        console.log('MM_output.csv not found, skipping MM OddsAPI step');
+      }
+    } catch (err) {
+      console.warn('MM OddsAPI script failed (non-fatal), continuing...');
+    }
+
     console.log("=== All scrapers and transformers completed successfully ===");
     console.log("Files created/updated:");
     console.log(`- ${path.join(dataDir, 'em.csv')}`);
