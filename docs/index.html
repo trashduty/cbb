@@ -12,6 +12,19 @@
             margin: 20px;
             background-color: #f4f7f6;
         }
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        #teamSearch {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 0.9rem;
+        }
         .table-container {
             overflow-x: auto;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -34,6 +47,13 @@
             color: white;
             position: sticky;
             top: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:after {
+            content: ' \21D5';
+            font-size: 0.7rem;
+            opacity: 0.5;
         }
         tr:hover td {
             background-color: rgba(0,0,0,0.04) !important;
@@ -48,6 +68,9 @@
 </head>
 <body>
     <div class="last-updated" id="status">Loading data...</div>
+    <div class="controls">
+        <input type="text" id="teamSearch" placeholder="Search by team name..." oninput="onFilterChange()">
+    </div>
     <div class="table-container">
         <table id="oddsTable">
             <thead><tr id="tableHead"></tr></thead>
@@ -58,6 +81,9 @@
     <script>
         const CSV_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_Output_Final.csv';
         const REFRESH_INTERVAL = 60000;
+
+        let rawData = [];
+        let sortConfig = { key: null, direction: 'asc' };
 
         const columnMapping = [
             { csv: 'Game',                       display: 'Game',                       type: 'text' },
@@ -86,10 +112,12 @@
             const pct = value * 100;
             const diff = pct - threshold;
             if (diff >= 0) {
+                // Green: same as before
                 const lightness = Math.max(95 - diff * 8, 30);
                 return `hsl(120, 70%, ${lightness}%)`;
             } else {
-                const lightness = Math.max(95 - Math.abs(diff) * 8, 30);
+                // Red: increased lightness floor from 30 to 65 for better readability
+                const lightness = Math.max(95 - Math.abs(diff) * 8, 65);
                 return `hsl(0, 80%, ${lightness}%)`;
             }
         }
@@ -117,7 +145,8 @@
                         dynamicTyping: true,
                         skipEmptyLines: true,
                         complete: function(results) {
-                            renderTable(results.data);
+                            rawData = results.data;
+                            renderTable();
                             document.getElementById('status').textContent =
                                 'Last updated: ' + new Date().toLocaleTimeString();
                         }
@@ -128,21 +157,63 @@
                 });
         }
 
-        function renderTable(data) {
+        function onSort(key) {
+            if (sortConfig.key === key) {
+                sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortConfig.key = key;
+                sortConfig.direction = 'asc';
+            }
+            renderTable();
+        }
+
+        function onFilterChange() {
+            renderTable();
+        }
+
+        function renderTable() {
             var head = document.getElementById('tableHead');
             var body = document.getElementById('tableBody');
+            var searchTerm = document.getElementById('teamSearch').value.toLowerCase();
+            
             head.innerHTML = '';
             body.innerHTML = '';
-            if (!data || data.length === 0) return;
+            
+            if (!rawData || rawData.length === 0) return;
+
             var activeCols = columnMapping.filter(function(col) {
-                return Object.prototype.hasOwnProperty.call(data[0], col.csv);
+                return Object.prototype.hasOwnProperty.call(rawData[0], col.csv);
             });
+
+            // Headers
             activeCols.forEach(function(col) {
                 var th = document.createElement('th');
                 th.textContent = col.display;
+                th.onclick = function() { onSort(col.csv); };
                 head.appendChild(th);
             });
-            data.forEach(function(row) {
+
+            // Filter & Sort
+            let processedData = rawData.filter(row => {
+                const team = (row['Team'] || '').toString().toLowerCase();
+                return team.includes(searchTerm);
+            });
+
+            if (sortConfig.key) {
+                processedData.sort((a, b) => {
+                    let valA = a[sortConfig.key];
+                    let valB = b[sortConfig.key];
+                    if (valA === valB) return 0;
+                    if (valA === null) return 1;
+                    if (valB === null) return -1;
+                    
+                    let comparison = valA < valB ? -1 : 1;
+                    return sortConfig.direction === 'asc' ? comparison : -comparison;
+                });
+            }
+
+            // Rows
+            processedData.forEach(function(row) {
                 var tr = document.createElement('tr');
                 activeCols.forEach(function(col) {
                     var td = document.createElement('td');
