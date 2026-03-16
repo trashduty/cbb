@@ -56,7 +56,7 @@
     </div>
 
     <script>
-        const CSV_URL = '../MM_Output_Final.csv';
+        const CSV_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_Output_Final.csv';
         const REFRESH_INTERVAL = 60000;
 
         const columnMapping = [
@@ -82,18 +82,13 @@
             { csv: 'Under Total Edge',           display: 'Under Total Edge',           type: 'total_edge' }
         ];
 
-        // Returns a green/red background color.
-        // threshold is in percentage points (e.g., 3 means 3%).
-        // value is a float (e.g., 0.045 for 4.5%).
         function getGradientColor(value, threshold) {
             const pct = value * 100;
             const diff = pct - threshold;
             if (diff >= 0) {
-                // Green: lightness decreases (darker) as edge increases above threshold
                 const lightness = Math.max(95 - diff * 8, 30);
                 return `hsl(120, 70%, ${lightness}%)`;
             } else {
-                // Pink/red: lightness decreases (darker) as edge drops below threshold
                 const lightness = Math.max(95 - Math.abs(diff) * 8, 30);
                 return `hsl(0, 80%, ${lightness}%)`;
             }
@@ -138,30 +133,21 @@
             var body = document.getElementById('tableBody');
             head.innerHTML = '';
             body.innerHTML = '';
-
             if (!data || data.length === 0) return;
-
-            // Only include columns present in the CSV
             var activeCols = columnMapping.filter(function(col) {
                 return Object.prototype.hasOwnProperty.call(data[0], col.csv);
             });
-
-            // Build header row
             activeCols.forEach(function(col) {
                 var th = document.createElement('th');
                 th.textContent = col.display;
                 head.appendChild(th);
             });
-
-            // Build data rows
             data.forEach(function(row) {
                 var tr = document.createElement('tr');
                 activeCols.forEach(function(col) {
                     var td = document.createElement('td');
                     var val = row[col.csv];
-
                     td.textContent = formatValue(val, col.type);
-
                     if (typeof val === 'number') {
                         if (col.type === 'spread_edge' || col.type === 'total_edge') {
                             td.style.backgroundColor = getGradientColor(val, 3);
@@ -169,7 +155,6 @@
                             td.style.backgroundColor = getGradientColor(val, 10);
                         }
                     }
-
                     tr.appendChild(td);
                 });
                 body.appendChild(tr);
