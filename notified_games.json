@@ -6326,5 +6326,12 @@
     "edge_type": "moneyline",
     "edge_value": 0.0424879518463544,
     "notified_at": "2026-03-16T02:41:43.114744+00:00"
+  },
+  "Georgia Bulldogs vs. Saint Louis Billikens|Saint Louis Billikens|moneyline": {
+    "game": "Georgia Bulldogs vs. Saint Louis Billikens",
+    "team": "Saint Louis Billikens",
+    "edge_type": "moneyline",
+    "edge_value": 0.0325390607873783,
+    "notified_at": "2026-03-16T15:10:40.535770+00:00"
   }
 }
