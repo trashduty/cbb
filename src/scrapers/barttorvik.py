@@ -56,12 +56,9 @@ def scrape_barttorvik_day(driver, date_str):
     try:
         driver.get(url)
 
-        # Wait for actual game content or a reasonable timeout
-        wait = WebDriverWait(driver, 15)
-        try:
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'a[href*="trank.php"], a[href*="team.php"]')))
-        except Exception:
-            pass  # No games on this date, or page timed out — proceed with whatever loaded
+        # Wait for page to load - look for team links
+        wait = WebDriverWait(driver, 10)
+        time.sleep(2)  # Give page time to fully render
 
         # Get page source and parse with BeautifulSoup
         soup = BeautifulSoup(driver.page_source, 'lxml')
