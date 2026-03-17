@@ -30,44 +30,52 @@
       flex-wrap: wrap;
     }
 
-    .control-block {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    button {
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    button:hover { background: #f4f4f4; }
+
+    .team-summary {
+      font-size: 0.9rem;
+      color: #333;
+      padding-top: 8px;
     }
 
-    .control-title {
-      font-size: 0.85rem;
-      color: #333;
-      font-weight: 600;
+    .team-picker {
+      width: 360px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .team-picker[hidden] { display: none; }
+
+    .team-picker-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      background: #fafafa;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     #teamFilter {
       padding: 8px 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      width: 280px;
+      width: 220px;
       font-size: 0.9rem;
       background: #fff;
-    }
-
-    .team-picker {
-      width: 320px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-
-    .team-picker-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 10px 8px 10px;
-      border-bottom: 1px solid #eee;
-      background: #fafafa;
-      gap: 10px;
     }
 
     .team-picker-actions {
@@ -75,16 +83,6 @@
       gap: 8px;
       flex-wrap: wrap;
     }
-
-    button {
-      border: 1px solid #ccc;
-      background: #fff;
-      border-radius: 6px;
-      padding: 6px 10px;
-      cursor: pointer;
-      font-size: 0.85rem;
-    }
-    button:hover { background: #f4f4f4; }
 
     .team-list {
       max-height: 220px;
@@ -155,22 +153,28 @@
   <div class="last-updated" id="status">Loading data...</div>
 
   <div class="controls">
-    <div class="control-block team-picker">
-      <div class="team-picker-header">
-        <div style="display:flex; flex-direction:column; gap:6px;">
-          <div class="control-title">Filter teams (multi-select)</div>
-          <input id="teamFilter" type="text" placeholder="Type to find teams..." oninput="onTeamFilterInput()" />
-        </div>
-
-        <div class="team-picker-actions">
-          <button type="button" onclick="selectVisibleTeams()">Select visible</button>
-          <button type="button" onclick="clearTeamSelection()">Clear</button>
-        </div>
-      </div>
-
-      <div class="team-list" id="teamList"></div>
-      <div class="team-count" id="teamCount">Teams: 0 • Selected: 0</div>
+    <div>
+      <button type="button" id="toggleTeamPickerBtn" onclick="toggleTeamPicker()">
+        Select teams…
+      </button>
     </div>
+    <div class="team-summary" id="teamSummary">All teams</div>
+  </div>
+
+  <!-- Collapsed by default -->
+  <div class="team-picker" id="teamPicker" hidden>
+    <div class="team-picker-header">
+      <input id="teamFilter" type="text" placeholder="Type to find teams..." oninput="onTeamFilterInput()" />
+
+      <div class="team-picker-actions">
+        <button type="button" onclick="selectVisibleTeams()">Select visible</button>
+        <button type="button" onclick="clearTeamSelection()">Clear</button>
+        <button type="button" onclick="toggleTeamPicker(false)">Close</button>
+      </div>
+    </div>
+
+    <div class="team-list" id="teamList"></div>
+    <div class="team-count" id="teamCount">Teams: 0 • Selected: 0</div>
   </div>
 
   <div class="table-container">
@@ -189,11 +193,6 @@
     let selectedTeams = new Set(); // team names as strings
     let sortConfig = { key: null, direction: 'asc' };
 
-    // Final column rules:
-    // - Only one Market Total => keep market_total, drop theoddsapi_total
-    // - Move Market Moneyline (Current Moneyline) LEFT of Opening Moneyline
-    // - Rename Current Moneyline => Market Moneyline
-    // - Move Opening Total LEFT of Model Total
     const columnMapping = [
       { csv: 'Game',                      display: 'Game',                    type: 'text' },
       { csv: 'Game Time',                 display: 'Game Time',               type: 'text' },
@@ -219,7 +218,20 @@
       { csv: 'Under Total Edge',          display: 'Under Total Edge',        type: 'total_edge' }
     ];
 
-    // Spread/Total: threshold 3% (0.03). Positive => green. Below => red but keep light enough for black text.
+    function toggleTeamPicker(forceOpen) {
+      const picker = document.getElementById('teamPicker');
+      const isHidden = picker.hasAttribute('hidden');
+
+      const open = (typeof forceOpen === 'boolean') ? forceOpen : isHidden;
+      if (open) {
+        picker.removeAttribute('hidden');
+        // Focus filter for convenience
+        setTimeout(() => document.getElementById('teamFilter')?.focus(), 0);
+      } else {
+        picker.setAttribute('hidden', '');
+      }
+    }
+
     function getEdgeGradientColor(value, thresholdPctPoints) {
       const pct = value * 100;
       const diff = pct - thresholdPctPoints;
@@ -229,15 +241,10 @@
         return `hsl(120, 70%, ${lightness}%)`;
       }
 
-      // red/pink side: keep floor fairly light for readability
       const lightness = Math.max(95 - Math.abs(diff) * 8, 75);
       return `hsl(0, 80%, ${lightness}%)`;
     }
 
-    // Moneyline edge special rule:
-    // - >= 10% => green gradient (darker as increases)
-    // - 0%.. <10% => pink (darker as approaches 0)
-    // - <0% => red (darker as more negative), but keep readable
     function getMLGradientColor(value) {
       const pct = value * 100;
 
@@ -247,13 +254,10 @@
       }
 
       if (pct >= 0) {
-        // Pink band
-        // pct=10 => very light; pct=0 => darker pink (but still readable)
         const lightness = Math.max(92 - (10 - pct) * 1.2, 78);
         return `hsl(340, 100%, ${lightness}%)`;
       }
 
-      // Negative => red band
       const lightness = Math.max(92 - Math.abs(pct) * 5, 75);
       return `hsl(0, 85%, ${lightness}%)`;
     }
@@ -263,9 +267,7 @@
       if (type === 'probability' || type === 'spread_edge' || type === 'ml_edge' || type === 'total_edge') {
         return (Number(value) * 100).toFixed(2) + '%';
       }
-      if (type === 'decimal') {
-        return Number(value).toFixed(2);
-      }
+      if (type === 'decimal') return Number(value).toFixed(2);
       return value;
     }
 
@@ -285,6 +287,7 @@
               hydrateTeams();
               renderTeamPicker();
               renderTable();
+              updateTeamSummary();
 
               document.getElementById('status').textContent =
                 'Last updated: ' + new Date().toLocaleTimeString();
@@ -304,8 +307,7 @@
       });
 
       allTeams = Array.from(set).sort((a, b) => a.localeCompare(b));
-      // Keep selectedTeams as-is (user choices persist across refresh)
-      // but if a selected team no longer exists, remove it.
+
       const existing = new Set(allTeams);
       selectedTeams.forEach(t => { if (!existing.has(t)) selectedTeams.delete(t); });
     }
@@ -319,12 +321,15 @@
       else selectedTeams.delete(team);
 
       updateTeamCount();
+      updateTeamSummary();
       renderTable();
     }
 
     function clearTeamSelection() {
       selectedTeams.clear();
+      document.getElementById('teamFilter').value = '';
       renderTeamPicker();
+      updateTeamSummary();
       renderTable();
     }
 
@@ -333,12 +338,22 @@
       const visible = allTeams.filter(t => t.toLowerCase().includes(filterText));
       visible.forEach(t => selectedTeams.add(t));
       renderTeamPicker();
+      updateTeamSummary();
       renderTable();
     }
 
     function updateTeamCount() {
-      const selectedCount = selectedTeams.size;
-      document.getElementById('teamCount').textContent = `Teams: ${allTeams.length} • Selected: ${selectedCount}`;
+      document.getElementById('teamCount').textContent =
+        `Teams: ${allTeams.length} • Selected: ${selectedTeams.size}`;
+    }
+
+    function updateTeamSummary() {
+      const el = document.getElementById('teamSummary');
+      if (selectedTeams.size === 0) {
+        el.textContent = 'All teams';
+        return;
+      }
+      el.textContent = `${selectedTeams.size} team${selectedTeams.size === 1 ? '' : 's'} selected`;
     }
 
     function renderTeamPicker() {
@@ -346,7 +361,6 @@
       const filterText = document.getElementById('teamFilter').value.toLowerCase().trim();
 
       container.innerHTML = '';
-
       const filteredTeams = allTeams.filter(t => t.toLowerCase().includes(filterText));
 
       filteredTeams.forEach(team => {
@@ -396,7 +410,6 @@
         Object.prototype.hasOwnProperty.call(rawData[0], col.csv)
       );
 
-      // headers
       activeCols.forEach(col => {
         const th = document.createElement('th');
         th.textContent = col.display;
@@ -404,13 +417,11 @@
         head.appendChild(th);
       });
 
-      // filter rows by selected teams (if none selected, show all)
       let processedData = rawData;
       if (selectedTeams.size > 0) {
         processedData = rawData.filter(row => selectedTeams.has((row['Team'] || '').toString().trim()));
       }
 
-      // sort
       if (sortConfig.key) {
         processedData = processedData.slice().sort((a, b) => {
           const valA = a[sortConfig.key];
@@ -420,7 +431,6 @@
           if (valA === null || valA === undefined) return 1;
           if (valB === null || valB === undefined) return -1;
 
-          // Compare numbers numerically, strings lexicographically
           let comparison;
           if (typeof valA === 'number' && typeof valB === 'number') {
             comparison = valA < valB ? -1 : 1;
@@ -432,7 +442,6 @@
         });
       }
 
-      // rows
       processedData.forEach(row => {
         const tr = document.createElement('tr');
 
