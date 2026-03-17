@@ -241,7 +241,8 @@ def process_mm_dataframe(df):
          (df['market_spread'] >= -10.0) & (df['market_spread'] <= -2.5)],
         [1, 2],
         default=3
-    ).astype('Int64')
+    )
+    df['spread_category'] = df['spread_category'].astype('Int64')
 
     # average_total: 50% model / 50% market, rounded to 0.5
     df['average_total'] = (
