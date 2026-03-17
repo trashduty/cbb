@@ -178,7 +178,7 @@ def process_mm_dataframe(df):
 
     Key differences from oddsAPI.py:
       - Spread blend: 50% model / 50% market  (vs 60/40)
-      - Total blend:  40% model / 60% market  (same)
+      - Total blend:  50% model / 50% market
       - Moneyline: raw ML_prob vs market implied (no blend with devigged prob)
       - No per-model columns, no consensus flags, no std-dev columns
     """
@@ -234,17 +234,19 @@ def process_mm_dataframe(df):
     df['market_total'] = pd.to_numeric(df.get('Projected Total'), errors='coerce')
     df['model_total'] = pd.to_numeric(df['Raw_Total'], errors='coerce')
 
-    # spread_category for totals lookup (based on abs market spread)
-    df['spread_category'] = pd.cut(
-        df['market_spread'].abs(),
-        bins=[0, 2.5, 10.0, float('inf')],
-        labels=[1, 2, 3]
+    # spread_category for totals lookup (based on signed home MOV spread)
+    # Category 1: < -10.0, 2: -10.0 to -2.5, 3: > -2.5 (matches SAS boundary logic exactly)
+    df['spread_category'] = np.select(
+        [df['market_spread'] < -10.0,
+         (df['market_spread'] >= -10.0) & (df['market_spread'] <= -2.5)],
+        [1, 2],
+        default=3
     ).astype('Int64')
 
-    # average_total: 40% model / 60% market, rounded to 0.5
+    # average_total: 50% model / 50% market, rounded to 0.5
     df['average_total'] = (
-        (0.4 * df['model_total'].fillna(0) +
-         0.6 * df['market_total'].fillna(df['model_total'])) * 2
+        (0.5 * df['model_total'].fillna(0) +
+         0.5 * df['market_total'].fillna(df['model_total'])) * 2
     ).round() / 2
 
     try:
