@@ -32,6 +32,9 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Xvfb
+        run: sudo apt-get install -y xvfb
+
       - name: Scrape Barttorvik (with retries)
         run: |
           MAX_ATTEMPTS=3
@@ -41,8 +44,8 @@ jobs:
           while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
             echo "=== Attempt $ATTEMPT of $MAX_ATTEMPTS ==="
 
-            # Run the scraper (allow non-zero exit to be caught)
-            if uv run src/scrapers/barttorvik.py; then
+            # Run the scraper with virtual display to avoid headless bot detection
+            if xvfb-run uv run src/scrapers/barttorvik.py; then
               # Check if file exists and has data rows (more than just a header)
               if [ -f data/bt_mapped.csv ] && [ "$(wc -l < data/bt_mapped.csv)" -gt 1 ]; then
                 echo "Success: data/bt_mapped.csv has $(wc -l < data/bt_mapped.csv) lines"
