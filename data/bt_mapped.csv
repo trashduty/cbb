@@ -35,18 +35,18 @@ Yale Bulldogs,UNC Wilmington Seahawks,Yale Bulldogs,20260317,-6.4,0.74,146.0
 Yale Bulldogs,UNC Wilmington Seahawks,UNC Wilmington Seahawks,20260317,6.4,0.26,146.0
 UNC Wilmington Seahawks,Yale Bulldogs,UNC Wilmington Seahawks,20260317,6.4,0.26,146.0
 UNC Wilmington Seahawks,Yale Bulldogs,Yale Bulldogs,20260317,-6.4,0.74,146.0
-Auburn Tigers,South Alabama Jaguars,Auburn Tigers,20260317,-19.0,0.94,151.0
-Auburn Tigers,South Alabama Jaguars,South Alabama Jaguars,20260317,19.0,0.06000000000000005,151.0
-South Alabama Jaguars,Auburn Tigers,South Alabama Jaguars,20260317,19.0,0.06000000000000005,151.0
-South Alabama Jaguars,Auburn Tigers,Auburn Tigers,20260317,-19.0,0.94,151.0
+Auburn Tigers,South Alabama Jaguars,Auburn Tigers,20260317,-19.0,0.93,152.0
+Auburn Tigers,South Alabama Jaguars,South Alabama Jaguars,20260317,19.0,0.06999999999999995,152.0
+South Alabama Jaguars,Auburn Tigers,South Alabama Jaguars,20260317,19.0,0.06999999999999995,152.0
+South Alabama Jaguars,Auburn Tigers,Auburn Tigers,20260317,-19.0,0.93,152.0
 Utah Valley Wolverines,GW Revolutionaries,Utah Valley Wolverines,20260318,-3.1,0.61,161.0
 Utah Valley Wolverines,GW Revolutionaries,GW Revolutionaries,20260318,3.1,0.39,161.0
 GW Revolutionaries,Utah Valley Wolverines,GW Revolutionaries,20260318,3.1,0.39,161.0
 GW Revolutionaries,Utah Valley Wolverines,Utah Valley Wolverines,20260318,-3.1,0.61,161.0
-SMU Mustangs,Miami (OH) RedHawks,SMU Mustangs,20260318,-6.5,0.71,167.0
-SMU Mustangs,Miami (OH) RedHawks,Miami (OH) RedHawks,20260318,6.5,0.29000000000000004,167.0
-Miami (OH) RedHawks,SMU Mustangs,Miami (OH) RedHawks,20260318,6.5,0.29000000000000004,167.0
-Miami (OH) RedHawks,SMU Mustangs,SMU Mustangs,20260318,-6.5,0.71,167.0
+SMU Mustangs,Miami (OH) RedHawks,SMU Mustangs,20260318,-6.4,0.71,166.0
+SMU Mustangs,Miami (OH) RedHawks,Miami (OH) RedHawks,20260318,6.4,0.29000000000000004,166.0
+Miami (OH) RedHawks,SMU Mustangs,Miami (OH) RedHawks,20260318,6.4,0.29000000000000004,166.0
+Miami (OH) RedHawks,SMU Mustangs,SMU Mustangs,20260318,-6.4,0.71,166.0
 Bradley Braves,Dayton Flyers,Bradley Braves,20260318,1.2,0.44999999999999996,145.0
 Bradley Braves,Dayton Flyers,Dayton Flyers,20260318,-1.2,0.55,145.0
 Dayton Flyers,Bradley Braves,Dayton Flyers,20260318,-1.2,0.55,145.0
@@ -79,10 +79,10 @@ Wake Forest Demon Deacons,Navy Midshipmen,Wake Forest Demon Deacons,20260318,-11
 Wake Forest Demon Deacons,Navy Midshipmen,Navy Midshipmen,20260318,11.5,0.15000000000000002,148.0
 Navy Midshipmen,Wake Forest Demon Deacons,Navy Midshipmen,20260318,11.5,0.15000000000000002,148.0
 Navy Midshipmen,Wake Forest Demon Deacons,Wake Forest Demon Deacons,20260318,-11.5,0.85,148.0
-Saint Louis Billikens,Georgia Bulldogs,Saint Louis Billikens,20260319,1.3,0.45999999999999996,176.0
-Saint Louis Billikens,Georgia Bulldogs,Georgia Bulldogs,20260319,-1.3,0.54,176.0
-Georgia Bulldogs,Saint Louis Billikens,Georgia Bulldogs,20260319,-1.3,0.54,176.0
-Georgia Bulldogs,Saint Louis Billikens,Saint Louis Billikens,20260319,1.3,0.45999999999999996,176.0
+Saint Louis Billikens,Georgia Bulldogs,Saint Louis Billikens,20260319,1.4,0.45999999999999996,176.0
+Saint Louis Billikens,Georgia Bulldogs,Georgia Bulldogs,20260319,-1.4,0.54,176.0
+Georgia Bulldogs,Saint Louis Billikens,Georgia Bulldogs,20260319,-1.4,0.54,176.0
+Georgia Bulldogs,Saint Louis Billikens,Saint Louis Billikens,20260319,1.4,0.45999999999999996,176.0
 Texas A&M Aggies,Saint Mary's Gaels,Texas A&M Aggies,20260319,2.6,0.4,150.0
 Texas A&M Aggies,Saint Mary's Gaels,Saint Mary's Gaels,20260319,-2.6,0.6,150.0
 Saint Mary's Gaels,Texas A&M Aggies,Saint Mary's Gaels,20260319,-2.6,0.6,150.0
@@ -127,10 +127,10 @@ Idaho Vandals,Houston Cougars,Idaho Vandals,20260319,18.9,0.040000000000000036,1
 Idaho Vandals,Houston Cougars,Houston Cougars,20260319,-18.9,0.96,135.0
 Houston Cougars,Idaho Vandals,Houston Cougars,20260319,-18.9,0.96,135.0
 Houston Cougars,Idaho Vandals,Idaho Vandals,20260319,18.9,0.040000000000000036,135.0
-Siena Saints,Duke Blue Devils,Siena Saints,20260319,24.4,0.020000000000000018,137.0
-Siena Saints,Duke Blue Devils,Duke Blue Devils,20260319,-24.4,0.98,137.0
-Duke Blue Devils,Siena Saints,Duke Blue Devils,20260319,-24.4,0.98,137.0
-Duke Blue Devils,Siena Saints,Siena Saints,20260319,24.4,0.020000000000000018,137.0
+Siena Saints,Duke Blue Devils,Siena Saints,20260319,24.5,0.020000000000000018,137.0
+Siena Saints,Duke Blue Devils,Duke Blue Devils,20260319,-24.5,0.98,137.0
+Duke Blue Devils,Siena Saints,Duke Blue Devils,20260319,-24.5,0.98,137.0
+Duke Blue Devils,Siena Saints,Siena Saints,20260319,24.5,0.020000000000000018,137.0
 Troy Trojans,Nebraska Cornhuskers,Troy Trojans,20260319,14.4,0.07999999999999996,137.0
 Troy Trojans,Nebraska Cornhuskers,Nebraska Cornhuskers,20260319,-14.4,0.92,137.0
 Nebraska Cornhuskers,Troy Trojans,Nebraska Cornhuskers,20260319,-14.4,0.92,137.0
@@ -175,10 +175,10 @@ Wright St Raiders,Virginia Cavaliers,Wright St Raiders,20260320,15.3,0.079999999
 Wright St Raiders,Virginia Cavaliers,Virginia Cavaliers,20260320,-15.3,0.92,144.0
 Virginia Cavaliers,Wright St Raiders,Virginia Cavaliers,20260320,-15.3,0.92,144.0
 Virginia Cavaliers,Wright St Raiders,Wright St Raiders,20260320,15.3,0.07999999999999996,144.0
-LIU Sharks,Arizona Wildcats,LIU Sharks,20260320,28.8,0.010000000000000009,151.0
-LIU Sharks,Arizona Wildcats,Arizona Wildcats,20260320,-28.8,0.99,151.0
-Arizona Wildcats,LIU Sharks,Arizona Wildcats,20260320,-28.8,0.99,151.0
-Arizona Wildcats,LIU Sharks,LIU Sharks,20260320,28.8,0.010000000000000009,151.0
+LIU Sharks,Arizona Wildcats,LIU Sharks,20260320,28.9,0.010000000000000009,151.0
+LIU Sharks,Arizona Wildcats,Arizona Wildcats,20260320,-28.9,0.99,151.0
+Arizona Wildcats,LIU Sharks,Arizona Wildcats,20260320,-28.9,0.99,151.0
+Arizona Wildcats,LIU Sharks,LIU Sharks,20260320,28.9,0.010000000000000009,151.0
 Queens University Royals,Purdue Boilermakers,Queens University Royals,20260320,25.1,0.030000000000000027,165.0
 Queens University Royals,Purdue Boilermakers,Purdue Boilermakers,20260320,-25.1,0.97,165.0
 Purdue Boilermakers,Queens University Royals,Purdue Boilermakers,20260320,-25.1,0.97,165.0
