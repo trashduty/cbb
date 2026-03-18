@@ -341,6 +341,39 @@
       return validGamePairs.has(parts[0].trim() + GAME_SEPARATOR + parts[1].trim());
     }
 
+    function parseGameTimeET(timeStr) {
+      // Parse "Mar 20 06:50PM ET" as Eastern Time and return a UTC Date object.
+      if (!timeStr) return null;
+      var match = String(timeStr).trim().match(/^(\w{3})\s+(\d{1,2})\s+(\d{1,2}):(\d{2})(AM|PM)\s+ET$/i);
+      if (!match) return null;
+      var MONTHS = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
+      var mon = MONTHS[(match[1] || '').toLowerCase()];
+      if (!mon) return null;
+      var year = new Date().getFullYear();
+      var day  = parseInt(match[2], 10);
+      var hour = parseInt(match[3], 10);
+      var min  = parseInt(match[4], 10);
+      var ampm = (match[5] || '').toUpperCase();
+      if (ampm === 'PM' && hour !== 12) hour += 12;
+      if (ampm === 'AM' && hour === 12) hour = 0;
+      // Determine ET offset: EDT = UTC-4, EST = UTC-5
+      // DST starts 2nd Sunday of March at 2 AM, ends 1st Sunday of November at 2 AM
+      var marchFirst = new Date(year, 2, 1);
+      var dstStartDay = 1 + (7 - marchFirst.getDay()) % 7 + 7;
+      var novFirst = new Date(year, 10, 1);
+      var dstEndDay = 1 + (7 - novFirst.getDay()) % 7;
+      var isDST = false;
+      if (mon > 3 && mon < 11) {
+        isDST = true;
+      } else if (mon === 3) {
+        isDST = (day > dstStartDay) || (day === dstStartDay && hour >= 2);
+      } else if (mon === 11) {
+        isDST = (day < dstEndDay) || (day === dstEndDay && hour < 2);
+      }
+      var utcOffset = isDST ? 4 : 5;
+      return new Date(Date.UTC(year, mon - 1, day, hour + utcOffset, min));
+    }
+
     function updateTableFromCSV() {
       fetch(CSV_URL + '?t=' + Date.now())
         .then((response) => {
@@ -491,6 +524,14 @@
       if (selectedTeams.size > 0) {
         processedData = rawData.filter(row => selectedTeams.has((row['Team'] || '').toString().trim()));
       }
+
+      // Filter out games that started more than 5 minutes ago (times in CSV are Eastern Time)
+      const now = Date.now();
+      processedData = processedData.filter(row => {
+        const gameTime = parseGameTimeET(row['Game Time']);
+        if (!gameTime) return true; // keep row if time can't be parsed
+        return now < gameTime.getTime() + 5 * 60 * 1000;
+      });
 
       if (sortConfig.key) {
         processedData = processedData.slice().sort((a, b) => {
