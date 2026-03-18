@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Non-MM Model Outputs</title>
+  <title>Non-Tournament Model Outputs</title>
 
   <!-- Papa Parse for CSV parsing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
@@ -150,7 +150,7 @@
 </head>
 
 <body>
-  <h2 style="margin-bottom:6px;">Non-MM Model Outputs</h2>
+  <h2 style="margin-bottom:6px;">Non-Tournament Model Outputs</h2>
   <div style="margin-bottom:10px;font-size:0.85rem;">
     <a href="index.html">← Back to All MM Games</a>
   </div>
@@ -194,7 +194,7 @@
   <script>
     const CSV_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/Combo_Output.csv';
     const MM_TEAMS_URL = 'https://raw.githubusercontent.com/trashduty/kp_test/main/MM%20Vids/kenpom_mm.csv';
-    const CROSSWALK_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/CBBAPI_crosswalk.csv';
+    const CROSSWALK_URL = 'https://raw.githubusercontent.com/trashduty/kp_test/main/2026%20Crosswalk.csv';
     const GAME_SEPARATOR = ' vs. ';
     const REFRESH_INTERVAL = 60000;
 
@@ -285,18 +285,18 @@
     function loadValidGames() {
       return Promise.all([
         fetch(MM_TEAMS_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch kenpom_mm.csv: HTTP ' + r.status); return r.text(); }),
-        fetch(CROSSWALK_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch CBBAPI_crosswalk.csv: HTTP ' + r.status); return r.text(); })
+        fetch(CROSSWALK_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch 2026 Crosswalk.csv: HTTP ' + r.status); return r.text(); })
       ]).then(function(texts) {
         var mmText = texts[0], xwalkText = texts[1];
 
-        // Build crosswalk: KenPom name (CBBdata) → API team name
+        // Build crosswalk: KenPom name → API team name
         var kenpomToApi = {};
         Papa.parse(xwalkText, {
           header: true,
           skipEmptyLines: true,
           complete: function(results) {
             results.data.forEach(function(row) {
-              var kenpom = (row['CBBdata'] || '').trim();
+              var kenpom = (row['kenpom'] || '').trim();
               var api = (row['API'] || '').trim();
               if (kenpom && api) {
                 kenpomToApi[kenpom] = api;
