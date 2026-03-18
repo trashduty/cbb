@@ -7639,8 +7639,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-18,California,Illinois Chicago,home,73.0,75,68
 2026-03-18,Saint Joseph's,Colorado St.,away,26.0,67,74
 2026-03-18,Colorado St.,Saint Joseph's,home,74.0,74,67
-2026-03-18,Murray St.,Nevada,away,21.0,76,85
-2026-03-18,Nevada,Murray St.,home,79.0,85,76
+2026-03-18,Murray St.,Nevada,away,20.0,76,85
+2026-03-18,Nevada,Murray St.,home,80.0,85,76
 2026-03-18,Sam Houston St.,New Mexico,away,15.0,74,85
 2026-03-18,New Mexico,Sam Houston St.,home,85.0,85,74
 2026-03-18,Kent St.,Illinois St.,away,25.0,72,79
@@ -7649,6 +7649,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-18,Lehigh,Prairie View A&M,home,51.0,75,74
 2026-03-18,Navy,Wake Forest,away,17.0,67,77
 2026-03-18,Wake Forest,Navy,home,83.0,77,67
+2026-03-19,Texas,BYU,away,40.0,81,84
+2026-03-19,BYU,Texas,home,60.0,84,81
 2026-03-19,Saint Louis,Georgia,away,44.0,84,86
 2026-03-19,Georgia,Saint Louis,home,56.0,86,84
 2026-03-19,Texas A&M,Saint Mary's,away,39.0,73,76
@@ -7709,9 +7711,25 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-20,Arizona,LIU,home,99.6,89,60
 2026-03-21,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-21,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-21,UNLV,Tulsa,away,23.0,78,86
+2026-03-21,Tulsa,UNLV,home,77.0,86,78
+2026-03-21,Seattle,Auburn,away,12.0,65,78
+2026-03-21,Auburn,Seattle,home,88.0,78,65
 2026-03-22,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-22,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-22,UNLV,Tulsa,away,23.0,78,86
+2026-03-22,Tulsa,UNLV,home,77.0,86,78
+2026-03-22,Seattle,Auburn,away,12.0,65,78
+2026-03-22,Auburn,Seattle,home,88.0,78,65
 2026-03-23,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-23,Oklahoma St.,Wichita St.,home,70.0,82,76
-2026-03-23,Seattle,Auburn,away,11.0,65,78
-2026-03-23,Auburn,Seattle,home,89.0,78,65
+2026-03-23,UNLV,Tulsa,away,23.0,78,86
+2026-03-23,Tulsa,UNLV,home,77.0,86,78
+2026-03-23,Seattle,Auburn,away,12.0,65,78
+2026-03-23,Auburn,Seattle,home,88.0,78,65
+2026-03-24,Wichita St.,Oklahoma St.,away,30.0,76,82
+2026-03-24,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-24,UNLV,Tulsa,away,23.0,78,86
+2026-03-24,Tulsa,UNLV,home,77.0,86,78
+2026-03-24,Seattle,Auburn,away,12.0,65,78
+2026-03-24,Auburn,Seattle,home,88.0,78,65
