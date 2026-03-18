@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CBB Model Outputs</title>
+  <title>CBB Model Outputs (Non-MM)</title>
 
   <!-- Papa Parse for CSV parsing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
@@ -152,8 +152,8 @@
 <body>
   <div class="last-updated" id="status">Loading data...</div>
   <div style="margin-bottom:10px;font-size:0.85rem;">
-    Showing: <strong>All games</strong> &nbsp;|&nbsp;
-    <a href="non_mm_index.html">Non-March Madness games only →</a>
+    Showing: <strong>Non-March Madness games only</strong> &nbsp;|&nbsp;
+    <a href="index.html">← All games</a>
   </div>
 
   <div class="controls">
@@ -192,6 +192,8 @@
     const CSV_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_Output_Final.csv';
     const MM_VALIDATION_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_output.csv';
     const CROSSWALK_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/CBBAPI_crosswalk.csv';
+    const KENPOM_MM_URL = 'https://raw.githubusercontent.com/trashduty/kp_test/main/MM%20Vids/kenpom_mm.csv';
+    const NON_MM_CROSSWALK_URL = 'https://raw.githubusercontent.com/trashduty/kp_test/main/2026%20Crosswalk.csv';
     const GAME_SEPARATOR = ' vs. ';
     const REFRESH_INTERVAL = 60000;
 
@@ -200,6 +202,7 @@
     let selectedTeams = new Set(); // team names as strings
     let sortConfig = { key: null, direction: 'asc' };
     let validGamePairs = null; // Set of "teamA|teamB" strings; null = not yet loaded
+    let mmTeamsSet = null; // Set of API team names in the MM tournament; null = not yet loaded
 
     const columnMapping = [
       { csv: 'Game',                      display: 'Game',                    type: 'text' },
@@ -279,6 +282,48 @@
       return value;
     }
 
+    function loadMMTeams() {
+      return Promise.all([
+        fetch(KENPOM_MM_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch kenpom_mm.csv: HTTP ' + r.status); return r.text(); }),
+        fetch(NON_MM_CROSSWALK_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch 2026 Crosswalk.csv: HTTP ' + r.status); return r.text(); })
+      ]).then(function(texts) {
+        var kpText = texts[0], xwalkText = texts[1];
+
+        // Build crosswalk: kenpom name → API name
+        var kenpomToApi = {};
+        Papa.parse(xwalkText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            results.data.forEach(function(row) {
+              var kp = (row['kenpom'] || '').trim();
+              var api = (row['API'] || '').trim();
+              if (kp && api) kenpomToApi[kp] = api;
+            });
+          }
+        });
+
+        // Extract MM teams and convert to API names
+        mmTeamsSet = new Set();
+        Papa.parse(kpText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            results.data.forEach(function(row) {
+              var kpName = (row['Team'] || '').trim();
+              if (kpName) {
+                var apiName = kenpomToApi[kpName];
+                if (apiName) mmTeamsSet.add(apiName);
+              }
+            });
+          }
+        });
+      }).catch(function(err) {
+        console.warn('Failed to load March Madness teams; displaying all games without MM filtering:', err.message);
+        mmTeamsSet = null;
+      });
+    }
+
     function loadValidGames() {
       return Promise.all([
         fetch(MM_VALIDATION_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch MM_output.csv: HTTP ' + r.status); return r.text(); }),
@@ -342,7 +387,13 @@
       if (!game) return false;
       var parts = game.split(GAME_SEPARATOR);
       if (parts.length !== 2) return false;
-      return validGamePairs.has(parts[0].trim() + GAME_SEPARATOR + parts[1].trim());
+      var teamA = parts[0].trim();
+      var teamB = parts[1].trim();
+
+      // Exclude games involving MM tournament teams
+      if (mmTeamsSet !== null && (mmTeamsSet.has(teamA) || mmTeamsSet.has(teamB))) return false;
+
+      return validGamePairs.has(teamA + GAME_SEPARATOR + teamB);
     }
 
     function parseGameTimeET(timeStr) {
@@ -581,7 +632,9 @@
       });
     }
 
-    loadValidGames().then(function() {
+    loadMMTeams().then(function() {
+      return loadValidGames();
+    }).then(function() {
       updateTableFromCSV();
       setInterval(updateTableFromCSV, REFRESH_INTERVAL);
     });
