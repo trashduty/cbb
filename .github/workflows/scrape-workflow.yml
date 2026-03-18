@@ -70,6 +70,7 @@ jobs:
           cp CBB_Output.csv docs/CBB_Output.csv
           cp Combo_Output.csv docs/Combo_Output.csv
           [ -f MM_Output_Final.csv ] && cp MM_Output_Final.csv docs/MM_Output_Final.csv || true
+          [ -f MM_Output_Final_Close.csv ] && cp MM_Output_Final_Close.csv docs/MM_Output_Final_Close.csv || true
 
       - name: Commit and push changes
         run: |
@@ -78,6 +79,7 @@ jobs:
           git add CBB_Output.csv Combo_Output.csv historical_data/ data/kp.csv data/kp_mapped.csv data/bt_mapped.csv graded_results.csv model_record.csv docs/
           [ -f MM_output.csv ] && git add MM_output.csv || true
           [ -f MM_Output_Final.csv ] && git add MM_Output_Final.csv || true
+          [ -f MM_Output_Final_Close.csv ] && git add MM_Output_Final_Close.csv || true
           [ -f game_snapshots.csv ] && git add game_snapshots.csv || true
           # Check if there are changes to commit
           if git diff --staged --quiet; then

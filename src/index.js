@@ -392,6 +392,18 @@ async function runScrapers() {
       console.warn('MM OddsAPI script failed (non-fatal), continuing...');
     }
 
+    // Run MM Close OddsAPI script (70% market / 30% model) if MM_output.csv exists (non-fatal)
+    try {
+      const mmCloseScript = path.join(__dirname, 'scrapers', 'mm_oddsAPI_close.py');
+      if (fs.existsSync(path.join(__dirname, '..', 'MM_output.csv'))) {
+        await runUVScript(mmCloseScript, 'MM_Close_OddsAPI');
+      } else {
+        console.log('MM_output.csv not found, skipping MM Close OddsAPI step');
+      }
+    } catch (err) {
+      console.warn('MM Close OddsAPI script failed (non-fatal), continuing...');
+    }
+
     console.log("=== All scrapers and transformers completed successfully ===");
     console.log("Files created/updated:");
     console.log(`- ${path.join(dataDir, 'em.csv')}`);
