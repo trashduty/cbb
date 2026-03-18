@@ -186,12 +186,16 @@
 
   <script>
     const CSV_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_Output_Final.csv';
+    const MM_VALIDATION_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/MM_output.csv';
+    const CROSSWALK_URL = 'https://raw.githubusercontent.com/trashduty/cbb/main/CBBAPI_crosswalk.csv';
+    const GAME_SEPARATOR = ' vs. ';
     const REFRESH_INTERVAL = 60000;
 
     let rawData = [];
     let allTeams = [];
     let selectedTeams = new Set(); // team names as strings
     let sortConfig = { key: null, direction: 'asc' };
+    let validGamePairs = null; // Set of "teamA|teamB" strings; null = not yet loaded
 
     const columnMapping = [
       { csv: 'Game',                      display: 'Game',                    type: 'text' },
@@ -271,6 +275,72 @@
       return value;
     }
 
+    function loadValidGames() {
+      return Promise.all([
+        fetch(MM_VALIDATION_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch MM_output.csv: HTTP ' + r.status); return r.text(); }),
+        fetch(CROSSWALK_URL + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('Failed to fetch CBBAPI_crosswalk.csv: HTTP ' + r.status); return r.text(); })
+      ]).then(function(texts) {
+        var mmText = texts[0], xwalkText = texts[1];
+
+        // Build crosswalk: TEAMID → API team name
+        var idToName = {};
+        Papa.parse(xwalkText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            results.data.forEach(function(row) {
+              var id = row['TEAMID'];
+              var name = (row['API'] || '').trim();
+              if (id && name) {
+                var normalized = normalizeTeamId(id);
+                if (normalized !== null) idToName[normalized] = name;
+              }
+            });
+          }
+        });
+
+        // Build set of valid "teamA|teamB" game pairs from MM_output.csv
+        validGamePairs = new Set();
+        Papa.parse(mmText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            results.data.forEach(function(row) {
+              var teamId = normalizeTeamId(row['Team']);
+              var oppId  = normalizeTeamId(row['Opp']);
+              var teamName = teamId !== null ? idToName[teamId] : undefined;
+              var oppName  = oppId  !== null ? idToName[oppId]  : undefined;
+              if (teamName && oppName) {
+                validGamePairs.add(teamName + GAME_SEPARATOR + oppName);
+                validGamePairs.add(oppName  + GAME_SEPARATOR + teamName);
+              }
+            });
+          }
+        });
+      }).catch(function(err) {
+        console.warn('Could not load valid games list; displaying all rows:', err.message);
+        validGamePairs = null;
+      });
+    }
+
+    function normalizeTeamId(value) {
+      try {
+        var n = Math.round(parseFloat(value));
+        return isNaN(n) ? null : String(n);
+      } catch(e) {
+        return null;
+      }
+    }
+
+    function isValidRow(row) {
+      if (validGamePairs === null) return true; // fall back: no filtering
+      var game = (row['Game'] || '').trim();
+      if (!game) return false;
+      var parts = game.split(GAME_SEPARATOR);
+      if (parts.length !== 2) return false;
+      return validGamePairs.has(parts[0].trim() + GAME_SEPARATOR + parts[1].trim());
+    }
+
     function updateTableFromCSV() {
       fetch(CSV_URL + '?t=' + Date.now())
         .then((response) => {
@@ -283,7 +353,7 @@
             dynamicTyping: true,
             skipEmptyLines: true,
             complete: function (results) {
-              rawData = results.data || [];
+              rawData = (results.data || []).filter(isValidRow);
               hydrateTeams();
               renderTeamPicker();
               renderTable();
@@ -466,8 +536,10 @@
       });
     }
 
-    updateTableFromCSV();
-    setInterval(updateTableFromCSV, REFRESH_INTERVAL);
+    loadValidGames().then(function() {
+      updateTableFromCSV();
+      setInterval(updateTableFromCSV, REFRESH_INTERVAL);
+    });
   </script>
 </body>
 </html>
