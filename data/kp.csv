@@ -7639,8 +7639,8 @@ California,Illinois Chicago,Illinois Chicago,20260318,7,0.27,143
 California,Illinois Chicago,California,20260318,-7,0.73,143
 Colorado St.,Saint Joseph's,Saint Joseph's,20260318,7,0.26,141
 Colorado St.,Saint Joseph's,Colorado St.,20260318,-7,0.74,141
-Nevada,Murray St.,Murray St.,20260318,9,0.21,161
-Nevada,Murray St.,Nevada,20260318,-9,0.79,161
+Nevada,Murray St.,Murray St.,20260318,9,0.2,161
+Nevada,Murray St.,Nevada,20260318,-9,0.8,161
 New Mexico,Sam Houston St.,Sam Houston St.,20260318,11,0.15,159
 New Mexico,Sam Houston St.,New Mexico,20260318,-11,0.85,159
 Illinois St.,Kent St.,Kent St.,20260318,7,0.25,151
@@ -7649,6 +7649,8 @@ Lehigh,Prairie View A&M,Prairie View A&M,20260318,1,0.49,149
 Lehigh,Prairie View A&M,Lehigh,20260318,-1,0.51,149
 Wake Forest,Navy,Navy,20260318,10,0.17,144
 Wake Forest,Navy,Wake Forest,20260318,-10,0.83,144
+BYU,Texas,Texas,20260319,3,0.4,165
+BYU,Texas,BYU,20260319,-3,0.6,165
 Georgia,Saint Louis,Saint Louis,20260319,2,0.44,170
 Georgia,Saint Louis,Georgia,20260319,-2,0.56,170
 Saint Mary's,Texas A&M,Texas A&M,20260319,3,0.39,149
@@ -7709,9 +7711,25 @@ Arizona,LIU,LIU,20260320,29,0.0040000000000000565,149
 Arizona,LIU,Arizona,20260320,-29,0.996,149
 Oklahoma St.,Wichita St.,Wichita St.,20260321,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260321,-6,0.7,158
+Tulsa,UNLV,UNLV,20260321,8,0.23,164
+Tulsa,UNLV,Tulsa,20260321,-8,0.77,164
+Auburn,Seattle,Seattle,20260321,13,0.12,143
+Auburn,Seattle,Auburn,20260321,-13,0.88,143
 Oklahoma St.,Wichita St.,Wichita St.,20260322,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260322,-6,0.7,158
+Tulsa,UNLV,UNLV,20260322,8,0.23,164
+Tulsa,UNLV,Tulsa,20260322,-8,0.77,164
+Auburn,Seattle,Seattle,20260322,13,0.12,143
+Auburn,Seattle,Auburn,20260322,-13,0.88,143
 Oklahoma St.,Wichita St.,Wichita St.,20260323,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260323,-6,0.7,158
-Auburn,Seattle,Seattle,20260323,13,0.11,143
-Auburn,Seattle,Auburn,20260323,-13,0.89,143
+Tulsa,UNLV,UNLV,20260323,8,0.23,164
+Tulsa,UNLV,Tulsa,20260323,-8,0.77,164
+Auburn,Seattle,Seattle,20260323,13,0.12,143
+Auburn,Seattle,Auburn,20260323,-13,0.88,143
+Oklahoma St.,Wichita St.,Wichita St.,20260324,6,0.3,158
+Oklahoma St.,Wichita St.,Oklahoma St.,20260324,-6,0.7,158
+Tulsa,UNLV,UNLV,20260324,8,0.23,164
+Tulsa,UNLV,Tulsa,20260324,-8,0.77,164
+Auburn,Seattle,Seattle,20260324,13,0.12,143
+Auburn,Seattle,Auburn,20260324,-13,0.88,143
