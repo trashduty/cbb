@@ -7649,14 +7649,14 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-18,Lehigh,Prairie View A&M,home,51.0,75,74
 2026-03-18,Navy,Wake Forest,away,17.0,67,77
 2026-03-18,Wake Forest,Navy,home,83.0,77,67
+2026-03-19,Saint Louis,Georgia,away,45.0,85,86
+2026-03-19,Georgia,Saint Louis,home,55.0,86,85
 2026-03-19,Texas,BYU,away,40.0,81,84
 2026-03-19,BYU,Texas,home,60.0,84,81
-2026-03-19,Saint Louis,Georgia,away,44.0,84,86
-2026-03-19,Georgia,Saint Louis,home,56.0,86,84
-2026-03-19,Texas A&M,Saint Mary's,away,39.0,73,76
-2026-03-19,Saint Mary's,Texas A&M,home,61.0,76,73
-2026-03-19,VCU,North Carolina,away,41.0,77,79
-2026-03-19,North Carolina,VCU,home,59.0,79,77
+2026-03-19,Texas A&M,Saint Mary's,away,39.0,73,77
+2026-03-19,Saint Mary's,Texas A&M,home,61.0,77,73
+2026-03-19,VCU,North Carolina,away,42.0,77,79
+2026-03-19,North Carolina,VCU,home,58.0,79,77
 2026-03-19,TCU,Ohio St.,away,39.0,72,75
 2026-03-19,Ohio St.,TCU,home,61.0,75,72
 2026-03-19,South Florida,Louisville,away,28.0,78,84
@@ -7671,10 +7671,10 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-19,Michigan St.,North Dakota St.,home,92.0,79,64
 2026-03-19,Troy,Nebraska,away,8.0,61,77
 2026-03-19,Nebraska,Troy,home,92.0,77,61
-2026-03-19,Kennesaw St.,Gonzaga,away,4.0,68,88
-2026-03-19,Gonzaga,Kennesaw St.,home,96.0,88,68
 2026-03-19,Penn,Illinois,away,3.0,65,86
 2026-03-19,Illinois,Penn,home,97.0,86,65
+2026-03-19,Kennesaw St.,Gonzaga,away,4.0,68,88
+2026-03-19,Gonzaga,Kennesaw St.,home,96.0,88,68
 2026-03-19,Idaho,Houston,away,3.0,59,79
 2026-03-19,Houston,Idaho,home,97.0,79,59
 2026-03-19,Siena,Duke,away,1.0,55,81
@@ -7687,8 +7687,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-20,Villanova,Utah St.,home,48.0,74,75
 2026-03-20,Iowa,Clemson,away,57.0,67,65
 2026-03-20,Clemson,Iowa,home,43.0,65,67
-2026-03-20,Missouri,Miami FL,away,37.0,74,77
-2026-03-20,Miami FL,Missouri,home,63.0,77,74
+2026-03-20,Missouri,Miami FL,away,38.0,74,77
+2026-03-20,Miami FL,Missouri,home,62.0,77,74
 2026-03-20,UCF,UCLA,away,34.0,76,80
 2026-03-20,UCLA,UCF,home,66.0,80,76
 2026-03-20,Akron,Texas Tech,away,22.0,75,84
@@ -7697,6 +7697,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-20,St. John's,Northern Iowa,home,80.0,71,62
 2026-03-20,Hofstra,Alabama,away,15.0,76,87
 2026-03-20,Alabama,Hofstra,home,85.0,87,76
+2026-03-20,Miami OH,Tennessee,away,15.0,70,81
+2026-03-20,Tennessee,Miami OH,home,85.0,81,70
 2026-03-20,Cal Baptist,Kansas,away,13.0,61,74
 2026-03-20,Kansas,Cal Baptist,home,87.0,74,61
 2026-03-20,Wright St.,Virginia,away,7.0,65,81
@@ -7709,27 +7711,63 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-20,Iowa St.,Tennessee St.,home,98.0,87,63
 2026-03-20,LIU,Arizona,away,0.4000000000000057,60,89
 2026-03-20,Arizona,LIU,home,99.6,89,60
-2026-03-21,Wichita St.,Oklahoma St.,away,30.0,76,82
-2026-03-21,Oklahoma St.,Wichita St.,home,70.0,82,76
-2026-03-21,UNLV,Tulsa,away,23.0,78,86
-2026-03-21,Tulsa,UNLV,home,77.0,86,78
-2026-03-21,Seattle,Auburn,away,12.0,65,78
-2026-03-21,Auburn,Seattle,home,88.0,78,65
+2026-03-20,Prairie View A&M,Florida,away,0.20000000000000284,61,93
+2026-03-20,Florida,Prairie View A&M,home,99.8,93,61
+2026-03-21,Liberty,Nevada,away,22.0,70,78
+2026-03-21,Nevada,Liberty,home,78.0,78,70
+2026-03-22,Dayton,UNC Wilmington,away,54.0,69,68
+2026-03-22,UNC Wilmington,Dayton,home,46.0,68,69
 2026-03-22,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-22,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-22,George Washington,New Mexico,away,22.0,76,85
+2026-03-22,New Mexico,George Washington,home,78.0,85,76
 2026-03-22,UNLV,Tulsa,away,23.0,78,86
 2026-03-22,Tulsa,UNLV,home,77.0,86,78
+2026-03-22,Illinois St.,Wake Forest,away,26.0,70,77
+2026-03-22,Wake Forest,Illinois St.,home,74.0,77,70
+2026-03-22,Saint Joseph's,California,away,24.0,68,75
+2026-03-22,California,Saint Joseph's,home,76.0,75,68
 2026-03-22,Seattle,Auburn,away,12.0,65,78
 2026-03-22,Auburn,Seattle,home,88.0,78,65
+2026-03-23,Dayton,UNC Wilmington,away,54.0,69,68
+2026-03-23,UNC Wilmington,Dayton,home,46.0,68,69
 2026-03-23,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-23,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-23,George Washington,New Mexico,away,22.0,76,85
+2026-03-23,New Mexico,George Washington,home,78.0,85,76
 2026-03-23,UNLV,Tulsa,away,23.0,78,86
 2026-03-23,Tulsa,UNLV,home,77.0,86,78
+2026-03-23,Illinois St.,Wake Forest,away,26.0,70,77
+2026-03-23,Wake Forest,Illinois St.,home,74.0,77,70
+2026-03-23,Saint Joseph's,California,away,24.0,68,75
+2026-03-23,California,Saint Joseph's,home,76.0,75,68
 2026-03-23,Seattle,Auburn,away,12.0,65,78
 2026-03-23,Auburn,Seattle,home,88.0,78,65
+2026-03-24,Dayton,UNC Wilmington,away,54.0,69,68
+2026-03-24,UNC Wilmington,Dayton,home,46.0,68,69
 2026-03-24,Wichita St.,Oklahoma St.,away,30.0,76,82
 2026-03-24,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-24,George Washington,New Mexico,away,22.0,76,85
+2026-03-24,New Mexico,George Washington,home,78.0,85,76
 2026-03-24,UNLV,Tulsa,away,23.0,78,86
 2026-03-24,Tulsa,UNLV,home,77.0,86,78
+2026-03-24,Illinois St.,Wake Forest,away,26.0,70,77
+2026-03-24,Wake Forest,Illinois St.,home,74.0,77,70
+2026-03-24,Saint Joseph's,California,away,24.0,68,75
+2026-03-24,California,Saint Joseph's,home,76.0,75,68
 2026-03-24,Seattle,Auburn,away,12.0,65,78
 2026-03-24,Auburn,Seattle,home,88.0,78,65
+2026-03-25,Dayton,UNC Wilmington,away,54.0,69,68
+2026-03-25,UNC Wilmington,Dayton,home,46.0,68,69
+2026-03-25,Wichita St.,Oklahoma St.,away,30.0,76,82
+2026-03-25,Oklahoma St.,Wichita St.,home,70.0,82,76
+2026-03-25,George Washington,New Mexico,away,22.0,76,85
+2026-03-25,New Mexico,George Washington,home,78.0,85,76
+2026-03-25,UNLV,Tulsa,away,23.0,78,86
+2026-03-25,Tulsa,UNLV,home,77.0,86,78
+2026-03-25,Illinois St.,Wake Forest,away,26.0,70,77
+2026-03-25,Wake Forest,Illinois St.,home,74.0,77,70
+2026-03-25,Saint Joseph's,California,away,24.0,68,75
+2026-03-25,California,Saint Joseph's,home,76.0,75,68
+2026-03-25,Seattle,Auburn,away,12.0,65,78
+2026-03-25,Auburn,Seattle,home,88.0,78,65
