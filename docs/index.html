@@ -540,8 +540,22 @@
 
       if (sortConfig.key) {
         processedData = processedData.slice().sort((a, b) => {
-          const valA = a[sortConfig.key];
-          const valB = b[sortConfig.key];
+          const key = sortConfig.key;
+
+          if (key === 'Game Time') {
+            const da = parseGameTimeET(a['Game Time']);
+            const db = parseGameTimeET(b['Game Time']);
+
+            if (!da && !db) return 0;
+            if (!da) return 1;
+            if (!db) return -1;
+
+            const diff = da.getTime() - db.getTime();
+            return sortConfig.direction === 'asc' ? diff : -diff;
+          }
+
+          const valA = a[key];
+          const valB = b[key];
 
           if (valA === valB) return 0;
           if (valA === null || valA === undefined) return 1;
