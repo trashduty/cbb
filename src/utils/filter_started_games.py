@@ -242,4 +242,24 @@ if games_removed > 0:
 else:
     print(f"\n✓ No games to filter (all games are upcoming)")
 
+def filter_mm_file(filepath):
+    """Apply the same started-game filter to an MM output file (no snapshot capture)."""
+    if not os.path.exists(filepath):
+        return
+    mm_df = pd.read_csv(filepath)
+    mm_df['parsed_time'] = mm_df['Game Time'].apply(parse_game_time)
+    mm_df['keep'] = mm_df['parsed_time'].apply(
+        lambda t: True if pd.isna(t) else t >= cutoff_time
+    )
+    removed = (~mm_df['keep']).sum()
+    mm_df = mm_df[mm_df['keep']].drop(columns=['parsed_time', 'keep'])
+    mm_df.to_csv(filepath, index=False)
+    filename = os.path.basename(filepath)
+    print(f"\n{filename}: removed {removed} started-game rows, {len(mm_df)} remaining")
+
+mm_final_path = os.path.join(project_root, 'MM_Output_Final.csv')
+mm_close_path = os.path.join(project_root, 'MM_Output_Final_Close.csv')
+filter_mm_file(mm_final_path)
+filter_mm_file(mm_close_path)
+
 sys.exit(0)
