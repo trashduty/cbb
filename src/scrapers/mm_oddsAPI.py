@@ -234,15 +234,13 @@ def process_mm_dataframe(df):
     df['market_total'] = pd.to_numeric(df.get('Projected Total'), errors='coerce')
     df['model_total'] = pd.to_numeric(df['Raw_Total'], errors='coerce')
 
-    # spread_category for totals lookup (based on signed home MOV spread)
-    # Category 1: < -10.0, 2: -10.0 to -2.5, 3: > -2.5 (matches SAS boundary logic exactly)
-    df['spread_category'] = np.select(
-        [df['market_spread'] < -10.0,
-         (df['market_spread'] >= -10.0) & (df['market_spread'] <= -2.5)],
-        [1, 2],
-        default=3
-    )
-    df['spread_category'] = df['spread_category'].astype('Int64')
+    # spread_category for totals lookup (based on absolute spread, matching oddsAPI.py)
+    # Category 1: 0-2.5, 2: 2.5-10, 3: >10 — use abs so both teams in same game get same category
+    df['spread_category'] = pd.cut(
+        df['market_spread'].abs(),
+        bins=[0, 2.5, 10.0, float('inf')],
+        labels=[1, 2, 3]
+    ).astype('Int64')
 
     # average_total: 50% model / 50% market, rounded to 0.5
     df['average_total'] = (
