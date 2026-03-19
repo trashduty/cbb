@@ -529,12 +529,12 @@
         processedData = rawData.filter(row => selectedTeams.has((row['Team'] || '').toString().trim()));
       }
 
-      // Filter out games that started more than 5 minutes ago (times in CSV are Eastern Time)
+      // Show games starting 1 hour before tip-off and keep them for 3 hours after (times in CSV are Eastern Time)
       const now = Date.now();
       processedData = processedData.filter(row => {
         const gameTime = parseGameTimeET(row['Game Time']);
         if (!gameTime) return true; // keep row if time can't be parsed
-        return now < gameTime.getTime() + 5 * 60 * 1000;
+        return now >= gameTime.getTime() - 60 * 60 * 1000 && now < gameTime.getTime() + 180 * 60 * 1000;
       });
 
       if (sortConfig.key) {
