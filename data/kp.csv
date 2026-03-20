@@ -7659,34 +7659,34 @@ North Carolina,VCU,VCU,20260319,2,0.42,156
 North Carolina,VCU,North Carolina,20260319,-2,0.58,156
 Ohio St.,TCU,TCU,20260319,3,0.39,147
 Ohio St.,TCU,Ohio St.,20260319,-3,0.61,147
-Louisville,South Florida,South Florida,20260319,6,0.28,162
-Louisville,South Florida,Louisville,20260319,-6,0.72,162
-Vanderbilt,McNeese,McNeese,20260319,10,0.18,152
-Vanderbilt,McNeese,Vanderbilt,20260319,-10,0.82,152
+South Florida,Louisville,Louisville,20260319,-6,0.72,162
+South Florida,Louisville,South Florida,20260319,6,0.28,162
+McNeese,Vanderbilt,Vanderbilt,20260319,-10,0.82,152
+McNeese,Vanderbilt,McNeese,20260319,10,0.18,152
 Wisconsin,High Point,High Point,20260319,10,0.17,166
 Wisconsin,High Point,Wisconsin,20260319,-10,0.83,166
-Arkansas,Hawaii,Hawaii,20260319,15,0.09,159
-Arkansas,Hawaii,Arkansas,20260319,-15,0.91,159
-Michigan St.,North Dakota St.,North Dakota St.,20260319,15,0.08,143
-Michigan St.,North Dakota St.,Michigan St.,20260319,-15,0.92,143
-Nebraska,Troy,Troy,20260319,16,0.08,138
-Nebraska,Troy,Nebraska,20260319,-16,0.92,138
-Illinois,Penn,Penn,20260319,21,0.03,151
-Illinois,Penn,Illinois,20260319,-21,0.97,151
-Gonzaga,Kennesaw St.,Kennesaw St.,20260319,20,0.04,156
-Gonzaga,Kennesaw St.,Gonzaga,20260319,-20,0.96,156
-Houston,Idaho,Idaho,20260319,20,0.03,138
-Houston,Idaho,Houston,20260319,-20,0.97,138
-Duke,Siena,Siena,20260319,26,0.01,136
-Duke,Siena,Duke,20260319,-26,0.99,136
-Michigan,Howard,Howard,20260319,29,0.0040000000000000565,149
-Michigan,Howard,Michigan,20260319,-29,0.996,149
-Kentucky,Santa Clara,Santa Clara,20260320,2,0.45,160
-Kentucky,Santa Clara,Kentucky,20260320,-2,0.55,160
+Hawaii,Arkansas,Arkansas,20260319,-15,0.91,159
+Hawaii,Arkansas,Hawaii,20260319,15,0.09,159
+North Dakota St.,Michigan St.,Michigan St.,20260319,-15,0.92,143
+North Dakota St.,Michigan St.,North Dakota St.,20260319,15,0.08,143
+Troy,Nebraska,Nebraska,20260319,-16,0.92,138
+Troy,Nebraska,Troy,20260319,16,0.08,138
+Penn,Illinois,Illinois,20260319,-21,0.97,151
+Penn,Illinois,Penn,20260319,21,0.03,151
+Kennesaw St.,Gonzaga,Gonzaga,20260319,-20,0.96,156
+Kennesaw St.,Gonzaga,Kennesaw St.,20260319,20,0.04,156
+Idaho,Houston,Houston,20260319,-20,0.97,138
+Idaho,Houston,Idaho,20260319,20,0.03,138
+Siena,Duke,Duke,20260319,-26,0.99,136
+Siena,Duke,Siena,20260319,26,0.01,136
+Howard,Michigan,Michigan,20260319,-29,0.996,149
+Howard,Michigan,Howard,20260319,29,0.0040000000000000565,149
+Kentucky,Santa Clara,Santa Clara,20260320,2,0.44,160
+Kentucky,Santa Clara,Kentucky,20260320,-2,0.56,160
 Villanova,Utah St.,Utah St.,20260320,-1,0.52,149
 Villanova,Utah St.,Villanova,20260320,1,0.48,149
-Clemson,Iowa,Iowa,20260320,-2,0.57,132
-Clemson,Iowa,Clemson,20260320,2,0.43,132
+Clemson,Iowa,Iowa,20260320,-2,0.58,132
+Clemson,Iowa,Clemson,20260320,2,0.42,132
 Miami FL,Missouri,Missouri,20260320,3,0.38,151
 Miami FL,Missouri,Miami FL,20260320,-3,0.62,151
 UCLA,UCF,UCF,20260320,4,0.34,156
@@ -7713,61 +7713,71 @@ Arizona,LIU,LIU,20260320,29,0.0040000000000000565,149
 Arizona,LIU,Arizona,20260320,-29,0.996,149
 Florida,Prairie View A&M,Prairie View A&M,20260320,32,0.0020000000000000282,154
 Florida,Prairie View A&M,Florida,20260320,-32,0.998,154
+Nebraska,Vanderbilt,Vanderbilt,20260321,-1,0.52,149
+Nebraska,Vanderbilt,Nebraska,20260321,1,0.48,149
+Michigan St.,Louisville,Louisville,20260321,2,0.41,152
+Michigan St.,Louisville,Michigan St.,20260321,-2,0.59,152
+Gonzaga,Texas,Texas,20260321,5,0.32,153
+Gonzaga,Texas,Gonzaga,20260321,-5,0.68,153
+Houston,Texas A&M,Texas A&M,20260321,10,0.2,144
+Houston,Texas A&M,Houston,20260321,-10,0.8,144
+Illinois,VCU,VCU,20260321,9,0.19,157
+Illinois,VCU,Illinois,20260321,-9,0.81,157
+Michigan,Saint Louis,Saint Louis,20260321,13,0.13,161
+Michigan,Saint Louis,Michigan,20260321,-13,0.87,161
+UNC Wilmington,Dayton,Dayton,20260321,-1,0.54,137
+UNC Wilmington,Dayton,UNC Wilmington,20260321,1,0.46,137
+Duke,TCU,TCU,20260321,13,0.12,139
+Duke,TCU,Duke,20260321,-13,0.88,139
+Arkansas,High Point,High Point,20260321,12,0.13,172
+Arkansas,High Point,Arkansas,20260321,-12,0.87,172
 Nevada,Liberty,Liberty,20260321,8,0.22,148
 Nevada,Liberty,Nevada,20260321,-8,0.78,148
-UNC Wilmington,Dayton,Dayton,20260322,-1,0.54,137
-UNC Wilmington,Dayton,UNC Wilmington,20260322,1,0.46,137
 Oklahoma St.,Wichita St.,Wichita St.,20260322,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260322,-6,0.7,158
-New Mexico,George Washington,George Washington,20260322,9,0.22,161
-New Mexico,George Washington,New Mexico,20260322,-9,0.78,161
+New Mexico,George Washington,George Washington,20260322,9,0.23,161
+New Mexico,George Washington,New Mexico,20260322,-9,0.77,161
 Tulsa,UNLV,UNLV,20260322,8,0.23,164
 Tulsa,UNLV,Tulsa,20260322,-8,0.77,164
 Wake Forest,Illinois St.,Illinois St.,20260322,7,0.26,147
 Wake Forest,Illinois St.,Wake Forest,20260322,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260322,7,0.24,143
-California,Saint Joseph's,California,20260322,-7,0.76,143
+California,Saint Joseph's,Saint Joseph's,20260322,7,0.25,143
+California,Saint Joseph's,California,20260322,-7,0.75,143
 Auburn,Seattle,Seattle,20260322,13,0.12,143
 Auburn,Seattle,Auburn,20260322,-13,0.88,143
-UNC Wilmington,Dayton,Dayton,20260323,-1,0.54,137
-UNC Wilmington,Dayton,UNC Wilmington,20260323,1,0.46,137
 Oklahoma St.,Wichita St.,Wichita St.,20260323,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260323,-6,0.7,158
-New Mexico,George Washington,George Washington,20260323,9,0.22,161
-New Mexico,George Washington,New Mexico,20260323,-9,0.78,161
+New Mexico,George Washington,George Washington,20260323,9,0.23,161
+New Mexico,George Washington,New Mexico,20260323,-9,0.77,161
 Tulsa,UNLV,UNLV,20260323,8,0.23,164
 Tulsa,UNLV,Tulsa,20260323,-8,0.77,164
 Wake Forest,Illinois St.,Illinois St.,20260323,7,0.26,147
 Wake Forest,Illinois St.,Wake Forest,20260323,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260323,7,0.24,143
-California,Saint Joseph's,California,20260323,-7,0.76,143
+California,Saint Joseph's,Saint Joseph's,20260323,7,0.25,143
+California,Saint Joseph's,California,20260323,-7,0.75,143
 Auburn,Seattle,Seattle,20260323,13,0.12,143
 Auburn,Seattle,Auburn,20260323,-13,0.88,143
-UNC Wilmington,Dayton,Dayton,20260324,-1,0.54,137
-UNC Wilmington,Dayton,UNC Wilmington,20260324,1,0.46,137
 Oklahoma St.,Wichita St.,Wichita St.,20260324,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260324,-6,0.7,158
-New Mexico,George Washington,George Washington,20260324,9,0.22,161
-New Mexico,George Washington,New Mexico,20260324,-9,0.78,161
+New Mexico,George Washington,George Washington,20260324,9,0.23,161
+New Mexico,George Washington,New Mexico,20260324,-9,0.77,161
 Tulsa,UNLV,UNLV,20260324,8,0.23,164
 Tulsa,UNLV,Tulsa,20260324,-8,0.77,164
 Wake Forest,Illinois St.,Illinois St.,20260324,7,0.26,147
 Wake Forest,Illinois St.,Wake Forest,20260324,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260324,7,0.24,143
-California,Saint Joseph's,California,20260324,-7,0.76,143
+California,Saint Joseph's,Saint Joseph's,20260324,7,0.25,143
+California,Saint Joseph's,California,20260324,-7,0.75,143
 Auburn,Seattle,Seattle,20260324,13,0.12,143
 Auburn,Seattle,Auburn,20260324,-13,0.88,143
-UNC Wilmington,Dayton,Dayton,20260325,-1,0.54,137
-UNC Wilmington,Dayton,UNC Wilmington,20260325,1,0.46,137
 Oklahoma St.,Wichita St.,Wichita St.,20260325,6,0.3,158
 Oklahoma St.,Wichita St.,Oklahoma St.,20260325,-6,0.7,158
-New Mexico,George Washington,George Washington,20260325,9,0.22,161
-New Mexico,George Washington,New Mexico,20260325,-9,0.78,161
+New Mexico,George Washington,George Washington,20260325,9,0.23,161
+New Mexico,George Washington,New Mexico,20260325,-9,0.77,161
 Tulsa,UNLV,UNLV,20260325,8,0.23,164
 Tulsa,UNLV,Tulsa,20260325,-8,0.77,164
 Wake Forest,Illinois St.,Illinois St.,20260325,7,0.26,147
 Wake Forest,Illinois St.,Wake Forest,20260325,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260325,7,0.24,143
-California,Saint Joseph's,California,20260325,-7,0.76,143
+California,Saint Joseph's,Saint Joseph's,20260325,7,0.25,143
+California,Saint Joseph's,California,20260325,-7,0.75,143
 Auburn,Seattle,Seattle,20260325,13,0.12,143
 Auburn,Seattle,Auburn,20260325,-13,0.88,143
