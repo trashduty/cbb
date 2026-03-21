@@ -1,8 +1,8 @@
 Home Team,Away Team,Team,Game Date,spread_barttorvik,win_prob_barttorvik,projected_total_barttorvik
-Michigan St Spartans,Louisville Cardinals,Michigan St Spartans,20260321,-1.2,0.54,151.0
-Michigan St Spartans,Louisville Cardinals,Louisville Cardinals,20260321,1.2,0.45999999999999996,151.0
-Louisville Cardinals,Michigan St Spartans,Louisville Cardinals,20260321,1.2,0.45999999999999996,151.0
-Louisville Cardinals,Michigan St Spartans,Michigan St Spartans,20260321,-1.2,0.54,151.0
+Michigan St Spartans,Louisville Cardinals,Michigan St Spartans,20260321,-1.2,0.55,151.0
+Michigan St Spartans,Louisville Cardinals,Louisville Cardinals,20260321,1.2,0.44999999999999996,151.0
+Louisville Cardinals,Michigan St Spartans,Louisville Cardinals,20260321,1.2,0.44999999999999996,151.0
+Louisville Cardinals,Michigan St Spartans,Michigan St Spartans,20260321,-1.2,0.55,151.0
 Vanderbilt Commodores,Nebraska Cornhuskers,Vanderbilt Commodores,20260321,-1.3,0.55,147.0
 Vanderbilt Commodores,Nebraska Cornhuskers,Nebraska Cornhuskers,20260321,1.3,0.44999999999999996,147.0
 Nebraska Cornhuskers,Vanderbilt Commodores,Nebraska Cornhuskers,20260321,1.3,0.44999999999999996,147.0
@@ -19,10 +19,10 @@ Texas A&M Aggies,Houston Cougars,Texas A&M Aggies,20260321,9.6,0.180000000000000
 Texas A&M Aggies,Houston Cougars,Houston Cougars,20260321,-9.6,0.82,144.0
 Houston Cougars,Texas A&M Aggies,Houston Cougars,20260321,-9.6,0.82,144.0
 Houston Cougars,Texas A&M Aggies,Texas A&M Aggies,20260321,9.6,0.18000000000000005,144.0
-VCU Rams,Illinois Fighting Illini,VCU Rams,20260321,10.9,0.17000000000000004,157.0
-VCU Rams,Illinois Fighting Illini,Illinois Fighting Illini,20260321,-10.9,0.83,157.0
-Illinois Fighting Illini,VCU Rams,Illinois Fighting Illini,20260321,-10.9,0.83,157.0
-Illinois Fighting Illini,VCU Rams,VCU Rams,20260321,10.9,0.17000000000000004,157.0
+VCU Rams,Illinois Fighting Illini,VCU Rams,20260321,11.0,0.17000000000000004,157.0
+VCU Rams,Illinois Fighting Illini,Illinois Fighting Illini,20260321,-11.0,0.83,157.0
+Illinois Fighting Illini,VCU Rams,Illinois Fighting Illini,20260321,-11.0,0.83,157.0
+Illinois Fighting Illini,VCU Rams,VCU Rams,20260321,11.0,0.17000000000000004,157.0
 TCU Horned Frogs,Duke Blue Devils,TCU Horned Frogs,20260321,12.7,0.10999999999999999,140.0
 TCU Horned Frogs,Duke Blue Devils,Duke Blue Devils,20260321,-12.7,0.89,140.0
 Duke Blue Devils,TCU Horned Frogs,Duke Blue Devils,20260321,-12.7,0.89,140.0
@@ -43,18 +43,18 @@ Texas Tech Red Raiders,Alabama Crimson Tide,Texas Tech Red Raiders,20260322,-1.3
 Texas Tech Red Raiders,Alabama Crimson Tide,Alabama Crimson Tide,20260322,1.3,0.45999999999999996,171.0
 Alabama Crimson Tide,Texas Tech Red Raiders,Alabama Crimson Tide,20260322,1.3,0.45999999999999996,171.0
 Alabama Crimson Tide,Texas Tech Red Raiders,Texas Tech Red Raiders,20260322,-1.3,0.54,171.0
-St. John's Red Storm,Kansas Jayhawks,St. John's Red Storm,20260322,-1.8,0.57,143.0
-St. John's Red Storm,Kansas Jayhawks,Kansas Jayhawks,20260322,1.8,0.43000000000000005,143.0
-Kansas Jayhawks,St. John's Red Storm,Kansas Jayhawks,20260322,1.8,0.43000000000000005,143.0
-Kansas Jayhawks,St. John's Red Storm,St. John's Red Storm,20260322,-1.8,0.57,143.0
+St. John's Red Storm,Kansas Jayhawks,St. John's Red Storm,20260322,-1.8,0.57,144.0
+St. John's Red Storm,Kansas Jayhawks,Kansas Jayhawks,20260322,1.8,0.43000000000000005,144.0
+Kansas Jayhawks,St. John's Red Storm,Kansas Jayhawks,20260322,1.8,0.43000000000000005,144.0
+Kansas Jayhawks,St. John's Red Storm,St. John's Red Storm,20260322,-1.8,0.57,144.0
 Virginia Cavaliers,Tennessee Volunteers,Virginia Cavaliers,20260322,0.9,0.45999999999999996,137.0
 Virginia Cavaliers,Tennessee Volunteers,Tennessee Volunteers,20260322,-0.9,0.54,137.0
 Tennessee Volunteers,Virginia Cavaliers,Tennessee Volunteers,20260322,-0.9,0.54,137.0
 Tennessee Volunteers,Virginia Cavaliers,Virginia Cavaliers,20260322,0.9,0.45999999999999996,137.0
-UCLA Bruins,UConn Huskies,UCLA Bruins,20260322,3.7,0.35,139.0
-UCLA Bruins,UConn Huskies,UConn Huskies,20260322,-3.7,0.65,139.0
-UConn Huskies,UCLA Bruins,UConn Huskies,20260322,-3.7,0.65,139.0
-UConn Huskies,UCLA Bruins,UCLA Bruins,20260322,3.7,0.35,139.0
+UCLA Bruins,UConn Huskies,UCLA Bruins,20260322,3.6,0.35,139.0
+UCLA Bruins,UConn Huskies,UConn Huskies,20260322,-3.6,0.65,139.0
+UConn Huskies,UCLA Bruins,UConn Huskies,20260322,-3.6,0.65,139.0
+UConn Huskies,UCLA Bruins,UCLA Bruins,20260322,3.6,0.35,139.0
 Utah State Aggies,Arizona Wildcats,Utah State Aggies,20260322,11.0,0.16000000000000003,157.0
 Utah State Aggies,Arizona Wildcats,Arizona Wildcats,20260322,-11.0,0.84,157.0
 Arizona Wildcats,Utah State Aggies,Arizona Wildcats,20260322,-11.0,0.84,157.0
@@ -67,10 +67,10 @@ Kentucky Wildcats,Iowa State Cyclones,Kentucky Wildcats,20260322,8.0,0.219999999
 Kentucky Wildcats,Iowa State Cyclones,Iowa State Cyclones,20260322,-8.0,0.78,148.0
 Iowa State Cyclones,Kentucky Wildcats,Iowa State Cyclones,20260322,-8.0,0.78,148.0
 Iowa State Cyclones,Kentucky Wildcats,Kentucky Wildcats,20260322,8.0,0.21999999999999997,148.0
-Purdue Boilermakers,Miami Hurricanes,Purdue Boilermakers,20260322,-8.0,0.77,154.0
-Purdue Boilermakers,Miami Hurricanes,Miami Hurricanes,20260322,8.0,0.22999999999999998,154.0
-Miami Hurricanes,Purdue Boilermakers,Miami Hurricanes,20260322,8.0,0.22999999999999998,154.0
-Miami Hurricanes,Purdue Boilermakers,Purdue Boilermakers,20260322,-8.0,0.77,154.0
+Purdue Boilermakers,Miami Hurricanes,Purdue Boilermakers,20260322,-8.1,0.77,154.0
+Purdue Boilermakers,Miami Hurricanes,Miami Hurricanes,20260322,8.1,0.22999999999999998,154.0
+Miami Hurricanes,Purdue Boilermakers,Miami Hurricanes,20260322,8.1,0.22999999999999998,154.0
+Miami Hurricanes,Purdue Boilermakers,Purdue Boilermakers,20260322,-8.1,0.77,154.0
 New Mexico Lobos,GW Revolutionaries,New Mexico Lobos,20260322,-7.1,0.73,167.0
 New Mexico Lobos,GW Revolutionaries,GW Revolutionaries,20260322,7.1,0.27,167.0
 GW Revolutionaries,New Mexico Lobos,GW Revolutionaries,20260322,7.1,0.27,167.0
@@ -79,10 +79,10 @@ Oklahoma St Cowboys,Wichita St Shockers,Oklahoma St Cowboys,20260322,-5.0,0.67,1
 Oklahoma St Cowboys,Wichita St Shockers,Wichita St Shockers,20260322,5.0,0.32999999999999996,161.0
 Wichita St Shockers,Oklahoma St Cowboys,Wichita St Shockers,20260322,5.0,0.32999999999999996,161.0
 Wichita St Shockers,Oklahoma St Cowboys,Oklahoma St Cowboys,20260322,-5.0,0.67,161.0
-California Golden Bears,Saint Joseph's Hawks,California Golden Bears,20260322,-5.8,0.72,146.0
-California Golden Bears,Saint Joseph's Hawks,Saint Joseph's Hawks,20260322,5.8,0.28,146.0
-Saint Joseph's Hawks,California Golden Bears,Saint Joseph's Hawks,20260322,5.8,0.28,146.0
-Saint Joseph's Hawks,California Golden Bears,California Golden Bears,20260322,-5.8,0.72,146.0
+California Golden Bears,Saint Joseph's Hawks,California Golden Bears,20260322,-5.9,0.72,146.0
+California Golden Bears,Saint Joseph's Hawks,Saint Joseph's Hawks,20260322,5.9,0.28,146.0
+Saint Joseph's Hawks,California Golden Bears,Saint Joseph's Hawks,20260322,5.9,0.28,146.0
+Saint Joseph's Hawks,California Golden Bears,California Golden Bears,20260322,-5.9,0.72,146.0
 Tulsa Golden Hurricane,UNLV Rebels,Tulsa Golden Hurricane,20260322,-8.1,0.75,170.0
 Tulsa Golden Hurricane,UNLV Rebels,UNLV Rebels,20260322,8.1,0.25,170.0
 UNLV Rebels,Tulsa Golden Hurricane,UNLV Rebels,20260322,8.1,0.25,170.0
