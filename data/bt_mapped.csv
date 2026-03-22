@@ -11,10 +11,10 @@ Virginia Cavaliers,Tennessee Volunteers,Virginia Cavaliers,20260322,0.8,0.47,137
 Virginia Cavaliers,Tennessee Volunteers,Tennessee Volunteers,20260322,-0.8,0.53,137.0
 Tennessee Volunteers,Virginia Cavaliers,Tennessee Volunteers,20260322,-0.8,0.53,137.0
 Tennessee Volunteers,Virginia Cavaliers,Virginia Cavaliers,20260322,0.8,0.47,137.0
-UCLA Bruins,UConn Huskies,UCLA Bruins,20260322,3.5,0.36,139.0
-UCLA Bruins,UConn Huskies,UConn Huskies,20260322,-3.5,0.64,139.0
-UConn Huskies,UCLA Bruins,UConn Huskies,20260322,-3.5,0.64,139.0
-UConn Huskies,UCLA Bruins,UCLA Bruins,20260322,3.5,0.36,139.0
+UCLA Bruins,UConn Huskies,UCLA Bruins,20260322,3.6,0.36,139.0
+UCLA Bruins,UConn Huskies,UConn Huskies,20260322,-3.6,0.64,139.0
+UConn Huskies,UCLA Bruins,UConn Huskies,20260322,-3.6,0.64,139.0
+UConn Huskies,UCLA Bruins,UCLA Bruins,20260322,3.6,0.36,139.0
 Iowa Hawkeyes,Florida Gators,Iowa Hawkeyes,20260322,8.1,0.21999999999999997,144.0
 Iowa Hawkeyes,Florida Gators,Florida Gators,20260322,-8.1,0.78,144.0
 Florida Gators,Iowa Hawkeyes,Florida Gators,20260322,-8.1,0.78,144.0
@@ -59,3 +59,7 @@ Illinois Fighting Illini,Houston Cougars,Illinois Fighting Illini,20260326,1.3,0
 Illinois Fighting Illini,Houston Cougars,Houston Cougars,20260326,-1.3,0.55,139.0
 Houston Cougars,Illinois Fighting Illini,Houston Cougars,20260326,-1.3,0.55,139.0
 Houston Cougars,Illinois Fighting Illini,Illinois Fighting Illini,20260326,1.3,0.44999999999999996,139.0
+Texas Longhorns,Purdue Boilermakers,Texas Longhorns,20260326,9.4,0.19999999999999996,155.0
+Texas Longhorns,Purdue Boilermakers,Purdue Boilermakers,20260326,-9.4,0.8,155.0
+Purdue Boilermakers,Texas Longhorns,Purdue Boilermakers,20260326,-9.4,0.8,155.0
+Purdue Boilermakers,Texas Longhorns,Texas Longhorns,20260326,9.4,0.19999999999999996,155.0
