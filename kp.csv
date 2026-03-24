@@ -7725,30 +7725,6 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-23,California,Saint Joseph's,home,75.0,75,68
 2026-03-23,Seattle,Auburn,away,12.0,65,78
 2026-03-23,Auburn,Seattle,home,88.0,78,65
-2026-03-24,Wichita St.,Oklahoma St.,away,30.0,76,82
-2026-03-24,Oklahoma St.,Wichita St.,home,70.0,82,76
-2026-03-24,George Washington,New Mexico,away,23.0,76,85
-2026-03-24,New Mexico,George Washington,home,77.0,85,76
-2026-03-24,UNLV,Tulsa,away,23.0,78,86
-2026-03-24,Tulsa,UNLV,home,77.0,86,78
-2026-03-24,Illinois St.,Wake Forest,away,26.0,70,77
-2026-03-24,Wake Forest,Illinois St.,home,74.0,77,70
-2026-03-24,Saint Joseph's,California,away,25.0,68,75
-2026-03-24,California,Saint Joseph's,home,75.0,75,68
-2026-03-24,Seattle,Auburn,away,12.0,65,78
-2026-03-24,Auburn,Seattle,home,88.0,78,65
-2026-03-25,Wichita St.,Oklahoma St.,away,30.0,76,82
-2026-03-25,Oklahoma St.,Wichita St.,home,70.0,82,76
-2026-03-25,George Washington,New Mexico,away,23.0,76,85
-2026-03-25,New Mexico,George Washington,home,77.0,85,76
-2026-03-25,UNLV,Tulsa,away,23.0,78,86
-2026-03-25,Tulsa,UNLV,home,77.0,86,78
-2026-03-25,Illinois St.,Wake Forest,away,26.0,70,77
-2026-03-25,Wake Forest,Illinois St.,home,74.0,77,70
-2026-03-25,Saint Joseph's,California,away,25.0,68,75
-2026-03-25,California,Saint Joseph's,home,75.0,75,68
-2026-03-25,Seattle,Auburn,away,12.0,65,78
-2026-03-25,Auburn,Seattle,home,88.0,78,65
 2026-03-21,Vanderbilt,Nebraska,away,52.0,75,74
 2026-03-21,Nebraska,Vanderbilt,home,48.0,74,75
 2026-03-21,Louisville,Michigan St.,away,41.0,75,77
@@ -7797,3 +7773,27 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-03-22,California,Saint Joseph's,home,75.0,75,68
 2026-03-22,Seattle,Auburn,away,12.0,65,78
 2026-03-22,Auburn,Seattle,home,88.0,78,65
+2026-03-24,Wichita St.,Tulsa,away,33.0,73,78
+2026-03-24,Tulsa,Wichita St.,home,67.0,78,73
+2026-03-24,Saint Joseph's,New Mexico,away,14.0,68,80
+2026-03-24,New Mexico,Saint Joseph's,home,86.0,80,68
+2026-03-25,Nevada,Auburn,away,23.0,73,81
+2026-03-25,Auburn,Nevada,home,77.0,81,73
+2026-03-25,Illinois St.,Dayton,away,26.0,65,72
+2026-03-25,Dayton,Illinois St.,home,74.0,72,65
+2026-03-26,Illinois,Houston,away,47.0,71,72
+2026-03-26,Houston,Illinois,home,53.0,72,71
+2026-03-26,Iowa,Nebraska,away,42.0,66,69
+2026-03-26,Nebraska,Iowa,home,58.0,69,66
+2026-03-26,Arkansas,Arizona,away,21.0,79,87
+2026-03-26,Arizona,Arkansas,home,79.0,87,79
+2026-03-26,Texas,Purdue,away,25.0,74,82
+2026-03-26,Purdue,Texas,home,75.0,82,74
+2026-03-27,Michigan St.,Connecticut,away,51.0,70,69
+2026-03-27,Connecticut,Michigan St.,home,49.0,69,70
+2026-03-27,Tennessee,Iowa St.,away,36.0,67,71
+2026-03-27,Iowa St.,Tennessee,home,64.0,71,67
+2026-03-27,Alabama,Michigan,away,24.0,83,90
+2026-03-27,Michigan,Alabama,home,76.0,90,83
+2026-03-27,St. John's,Duke,away,25.0,68,75
+2026-03-27,Duke,St. John's,home,75.0,75,68
