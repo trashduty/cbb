@@ -3,10 +3,10 @@ Tulsa Golden Hurricane,Wichita St Shockers,Tulsa Golden Hurricane,20260324,-5.0,
 Tulsa Golden Hurricane,Wichita St Shockers,Wichita St Shockers,20260324,5.0,0.31999999999999995,153.0
 Wichita St Shockers,Tulsa Golden Hurricane,Wichita St Shockers,20260324,5.0,0.31999999999999995,153.0
 Wichita St Shockers,Tulsa Golden Hurricane,Tulsa Golden Hurricane,20260324,-5.0,0.68,153.0
-New Mexico Lobos,Saint Joseph's Hawks,New Mexico Lobos,20260324,-8.9,0.8,153.0
-New Mexico Lobos,Saint Joseph's Hawks,Saint Joseph's Hawks,20260324,8.9,0.19999999999999996,153.0
-Saint Joseph's Hawks,New Mexico Lobos,Saint Joseph's Hawks,20260324,8.9,0.19999999999999996,153.0
-Saint Joseph's Hawks,New Mexico Lobos,New Mexico Lobos,20260324,-8.9,0.8,153.0
+New Mexico Lobos,Saint Joseph's Hawks,New Mexico Lobos,20260324,-8.8,0.8,153.0
+New Mexico Lobos,Saint Joseph's Hawks,Saint Joseph's Hawks,20260324,8.8,0.19999999999999996,153.0
+Saint Joseph's Hawks,New Mexico Lobos,Saint Joseph's Hawks,20260324,8.8,0.19999999999999996,153.0
+Saint Joseph's Hawks,New Mexico Lobos,New Mexico Lobos,20260324,-8.8,0.8,153.0
 Auburn Tigers,Nevada Wolf Pack,Auburn Tigers,20260325,-8.2,0.77,156.0
 Auburn Tigers,Nevada Wolf Pack,Nevada Wolf Pack,20260325,8.2,0.22999999999999998,156.0
 Nevada Wolf Pack,Auburn Tigers,Nevada Wolf Pack,20260325,8.2,0.22999999999999998,156.0
@@ -55,3 +55,11 @@ Oklahoma Sooners,Colorado Buffaloes,Oklahoma Sooners,20260401,-5.7,0.69,164.0
 Oklahoma Sooners,Colorado Buffaloes,Colorado Buffaloes,20260401,5.7,0.31000000000000005,164.0
 Colorado Buffaloes,Oklahoma Sooners,Colorado Buffaloes,20260401,5.7,0.31000000000000005,164.0
 Colorado Buffaloes,Oklahoma Sooners,Oklahoma Sooners,20260401,-5.7,0.69,164.0
+West Virginia Mountaineers,Stanford Cardinal,West Virginia Mountaineers,20260402,0.2,0.49,133.0
+West Virginia Mountaineers,Stanford Cardinal,Stanford Cardinal,20260402,-0.2,0.51,133.0
+Stanford Cardinal,West Virginia Mountaineers,Stanford Cardinal,20260402,-0.2,0.51,133.0
+Stanford Cardinal,West Virginia Mountaineers,West Virginia Mountaineers,20260402,0.2,0.49,133.0
+Rutgers Scarlet Knights,Creighton Bluejays,Rutgers Scarlet Knights,20260402,3.0,0.38,150.0
+Rutgers Scarlet Knights,Creighton Bluejays,Creighton Bluejays,20260402,-3.0,0.62,150.0
+Creighton Bluejays,Rutgers Scarlet Knights,Creighton Bluejays,20260402,-3.0,0.62,150.0
+Creighton Bluejays,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20260402,3.0,0.38,150.0
