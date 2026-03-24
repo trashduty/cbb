@@ -7725,30 +7725,6 @@ California,Saint Joseph's,Saint Joseph's,20260323,7,0.25,143
 California,Saint Joseph's,California,20260323,-7,0.75,143
 Auburn,Seattle,Seattle,20260323,13,0.12,143
 Auburn,Seattle,Auburn,20260323,-13,0.88,143
-Oklahoma St.,Wichita St.,Wichita St.,20260324,6,0.3,158
-Oklahoma St.,Wichita St.,Oklahoma St.,20260324,-6,0.7,158
-New Mexico,George Washington,George Washington,20260324,9,0.23,161
-New Mexico,George Washington,New Mexico,20260324,-9,0.77,161
-Tulsa,UNLV,UNLV,20260324,8,0.23,164
-Tulsa,UNLV,Tulsa,20260324,-8,0.77,164
-Wake Forest,Illinois St.,Illinois St.,20260324,7,0.26,147
-Wake Forest,Illinois St.,Wake Forest,20260324,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260324,7,0.25,143
-California,Saint Joseph's,California,20260324,-7,0.75,143
-Auburn,Seattle,Seattle,20260324,13,0.12,143
-Auburn,Seattle,Auburn,20260324,-13,0.88,143
-Oklahoma St.,Wichita St.,Wichita St.,20260325,6,0.3,158
-Oklahoma St.,Wichita St.,Oklahoma St.,20260325,-6,0.7,158
-New Mexico,George Washington,George Washington,20260325,9,0.23,161
-New Mexico,George Washington,New Mexico,20260325,-9,0.77,161
-Tulsa,UNLV,UNLV,20260325,8,0.23,164
-Tulsa,UNLV,Tulsa,20260325,-8,0.77,164
-Wake Forest,Illinois St.,Illinois St.,20260325,7,0.26,147
-Wake Forest,Illinois St.,Wake Forest,20260325,-7,0.74,147
-California,Saint Joseph's,Saint Joseph's,20260325,7,0.25,143
-California,Saint Joseph's,California,20260325,-7,0.75,143
-Auburn,Seattle,Seattle,20260325,13,0.12,143
-Auburn,Seattle,Auburn,20260325,-13,0.88,143
 Nebraska,Vanderbilt,Vanderbilt,20260321,-1,0.52,149
 Nebraska,Vanderbilt,Nebraska,20260321,1,0.48,149
 Michigan St.,Louisville,Louisville,20260321,2,0.41,152
@@ -7797,3 +7773,27 @@ California,Saint Joseph's,Saint Joseph's,20260322,7,0.25,143
 California,Saint Joseph's,California,20260322,-7,0.75,143
 Auburn,Seattle,Seattle,20260322,13,0.12,143
 Auburn,Seattle,Auburn,20260322,-13,0.88,143
+Tulsa,Wichita St.,Wichita St.,20260324,5,0.33,151
+Tulsa,Wichita St.,Tulsa,20260324,-5,0.67,151
+New Mexico,Saint Joseph's,Saint Joseph's,20260324,12,0.14,148
+New Mexico,Saint Joseph's,New Mexico,20260324,-12,0.86,148
+Auburn,Nevada,Nevada,20260325,8,0.23,154
+Auburn,Nevada,Auburn,20260325,-8,0.77,154
+Dayton,Illinois St.,Illinois St.,20260325,7,0.26,137
+Dayton,Illinois St.,Dayton,20260325,-7,0.74,137
+Houston,Illinois,Illinois,20260326,1,0.47,143
+Houston,Illinois,Houston,20260326,-1,0.53,143
+Nebraska,Iowa,Iowa,20260326,3,0.42,135
+Nebraska,Iowa,Nebraska,20260326,-3,0.58,135
+Arizona,Arkansas,Arkansas,20260326,8,0.21,166
+Arizona,Arkansas,Arizona,20260326,-8,0.79,166
+Purdue,Texas,Texas,20260326,8,0.25,156
+Purdue,Texas,Purdue,20260326,-8,0.75,156
+Connecticut,Michigan St.,Michigan St.,20260327,-1,0.51,139
+Connecticut,Michigan St.,Connecticut,20260327,1,0.49,139
+Iowa St.,Tennessee,Tennessee,20260327,4,0.36,138
+Iowa St.,Tennessee,Iowa St.,20260327,-4,0.64,138
+Michigan,Alabama,Alabama,20260327,7,0.24,173
+Michigan,Alabama,Michigan,20260327,-7,0.76,173
+Duke,St. John's,St. John's,20260327,7,0.25,143
+Duke,St. John's,Duke,20260327,-7,0.75,143
