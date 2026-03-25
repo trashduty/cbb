@@ -1,12 +1,4 @@
 Home Team,Away Team,Team,Game Date,spread_barttorvik,win_prob_barttorvik,projected_total_barttorvik
-Tulsa Golden Hurricane,Wichita St Shockers,Tulsa Golden Hurricane,20260324,-5.0,0.68,153.0
-Tulsa Golden Hurricane,Wichita St Shockers,Wichita St Shockers,20260324,5.0,0.31999999999999995,153.0
-Wichita St Shockers,Tulsa Golden Hurricane,Wichita St Shockers,20260324,5.0,0.31999999999999995,153.0
-Wichita St Shockers,Tulsa Golden Hurricane,Tulsa Golden Hurricane,20260324,-5.0,0.68,153.0
-New Mexico Lobos,Saint Joseph's Hawks,New Mexico Lobos,20260324,-8.8,0.8,153.0
-New Mexico Lobos,Saint Joseph's Hawks,Saint Joseph's Hawks,20260324,8.8,0.19999999999999996,153.0
-Saint Joseph's Hawks,New Mexico Lobos,Saint Joseph's Hawks,20260324,8.8,0.19999999999999996,153.0
-Saint Joseph's Hawks,New Mexico Lobos,New Mexico Lobos,20260324,-8.8,0.8,153.0
 Auburn Tigers,Nevada Wolf Pack,Auburn Tigers,20260325,-8.2,0.77,156.0
 Auburn Tigers,Nevada Wolf Pack,Nevada Wolf Pack,20260325,8.2,0.22999999999999998,156.0
 Nevada Wolf Pack,Auburn Tigers,Nevada Wolf Pack,20260325,8.2,0.22999999999999998,156.0
@@ -43,10 +35,10 @@ Tennessee Volunteers,Iowa State Cyclones,Tennessee Volunteers,20260327,2.9,0.38,
 Tennessee Volunteers,Iowa State Cyclones,Iowa State Cyclones,20260327,-2.9,0.62,138.0
 Iowa State Cyclones,Tennessee Volunteers,Iowa State Cyclones,20260327,-2.9,0.62,138.0
 Iowa State Cyclones,Tennessee Volunteers,Tennessee Volunteers,20260327,2.9,0.38,138.0
-St. John's Red Storm,Duke Blue Devils,St. John's Red Storm,20260327,5.3,0.30000000000000004,143.0
-St. John's Red Storm,Duke Blue Devils,Duke Blue Devils,20260327,-5.3,0.7,143.0
-Duke Blue Devils,St. John's Red Storm,Duke Blue Devils,20260327,-5.3,0.7,143.0
-Duke Blue Devils,St. John's Red Storm,St. John's Red Storm,20260327,5.3,0.30000000000000004,143.0
+St. John's Red Storm,Duke Blue Devils,St. John's Red Storm,20260327,5.2,0.30000000000000004,143.0
+St. John's Red Storm,Duke Blue Devils,Duke Blue Devils,20260327,-5.2,0.7,143.0
+Duke Blue Devils,St. John's Red Storm,Duke Blue Devils,20260327,-5.2,0.7,143.0
+Duke Blue Devils,St. John's Red Storm,St. John's Red Storm,20260327,5.2,0.30000000000000004,143.0
 Minnesota Golden Gophers,Baylor Bears,Minnesota Golden Gophers,20260401,1.4,0.43999999999999995,149.0
 Minnesota Golden Gophers,Baylor Bears,Baylor Bears,20260401,-1.4,0.56,149.0
 Baylor Bears,Minnesota Golden Gophers,Baylor Bears,20260401,-1.4,0.56,149.0
@@ -55,6 +47,10 @@ Oklahoma Sooners,Colorado Buffaloes,Oklahoma Sooners,20260401,-5.7,0.69,164.0
 Oklahoma Sooners,Colorado Buffaloes,Colorado Buffaloes,20260401,5.7,0.31000000000000005,164.0
 Colorado Buffaloes,Oklahoma Sooners,Colorado Buffaloes,20260401,5.7,0.31000000000000005,164.0
 Colorado Buffaloes,Oklahoma Sooners,Oklahoma Sooners,20260401,-5.7,0.69,164.0
+Tulsa Golden Hurricane,New Mexico Lobos,Tulsa Golden Hurricane,20260402,2.2,0.42000000000000004,165.0
+Tulsa Golden Hurricane,New Mexico Lobos,New Mexico Lobos,20260402,-2.2,0.58,165.0
+New Mexico Lobos,Tulsa Golden Hurricane,New Mexico Lobos,20260402,-2.2,0.58,165.0
+New Mexico Lobos,Tulsa Golden Hurricane,Tulsa Golden Hurricane,20260402,2.2,0.42000000000000004,165.0
 West Virginia Mountaineers,Stanford Cardinal,West Virginia Mountaineers,20260402,0.2,0.49,133.0
 West Virginia Mountaineers,Stanford Cardinal,Stanford Cardinal,20260402,-0.2,0.51,133.0
 Stanford Cardinal,West Virginia Mountaineers,Stanford Cardinal,20260402,-0.2,0.51,133.0
