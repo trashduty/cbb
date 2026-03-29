@@ -1,12 +1,4 @@
 Home Team,Away Team,Team,Game Date,spread_barttorvik,win_prob_barttorvik,projected_total_barttorvik
-Purdue Boilermakers,Arizona Wildcats,Purdue Boilermakers,20260328,3.9,0.36,154.0
-Purdue Boilermakers,Arizona Wildcats,Arizona Wildcats,20260328,-3.9,0.64,154.0
-Arizona Wildcats,Purdue Boilermakers,Arizona Wildcats,20260328,-3.9,0.64,154.0
-Arizona Wildcats,Purdue Boilermakers,Purdue Boilermakers,20260328,3.9,0.36,154.0
-Iowa Hawkeyes,Illinois Fighting Illini,Iowa Hawkeyes,20260328,6.7,0.25,143.0
-Iowa Hawkeyes,Illinois Fighting Illini,Illinois Fighting Illini,20260328,-6.7,0.75,143.0
-Illinois Fighting Illini,Iowa Hawkeyes,Illinois Fighting Illini,20260328,-6.7,0.75,143.0
-Illinois Fighting Illini,Iowa Hawkeyes,Iowa Hawkeyes,20260328,6.7,0.25,143.0
 Tennessee Volunteers,Michigan Wolverines,Tennessee Volunteers,20260329,5.6,0.30000000000000004,148.0
 Tennessee Volunteers,Michigan Wolverines,Michigan Wolverines,20260329,-5.6,0.7,148.0
 Michigan Wolverines,Tennessee Volunteers,Michigan Wolverines,20260329,-5.6,0.7,148.0
@@ -15,10 +7,10 @@ Duke Blue Devils,UConn Huskies,Duke Blue Devils,20260329,-4.2,0.67,136.0
 Duke Blue Devils,UConn Huskies,UConn Huskies,20260329,4.2,0.32999999999999996,136.0
 UConn Huskies,Duke Blue Devils,UConn Huskies,20260329,4.2,0.32999999999999996,136.0
 UConn Huskies,Duke Blue Devils,Duke Blue Devils,20260329,-4.2,0.67,136.0
-Minnesota Golden Gophers,Baylor Bears,Minnesota Golden Gophers,20260401,1.4,0.44999999999999996,149.0
-Minnesota Golden Gophers,Baylor Bears,Baylor Bears,20260401,-1.4,0.55,149.0
-Baylor Bears,Minnesota Golden Gophers,Baylor Bears,20260401,-1.4,0.55,149.0
-Baylor Bears,Minnesota Golden Gophers,Minnesota Golden Gophers,20260401,1.4,0.44999999999999996,149.0
+Minnesota Golden Gophers,Baylor Bears,Minnesota Golden Gophers,20260401,1.4,0.43999999999999995,149.0
+Minnesota Golden Gophers,Baylor Bears,Baylor Bears,20260401,-1.4,0.56,149.0
+Baylor Bears,Minnesota Golden Gophers,Baylor Bears,20260401,-1.4,0.56,149.0
+Baylor Bears,Minnesota Golden Gophers,Minnesota Golden Gophers,20260401,1.4,0.43999999999999995,149.0
 Oklahoma Sooners,Colorado Buffaloes,Oklahoma Sooners,20260401,-5.9,0.7,164.0
 Oklahoma Sooners,Colorado Buffaloes,Colorado Buffaloes,20260401,5.9,0.30000000000000004,164.0
 Colorado Buffaloes,Oklahoma Sooners,Colorado Buffaloes,20260401,5.9,0.30000000000000004,164.0
@@ -35,7 +27,7 @@ Illinois St Redbirds,Auburn Tigers,Illinois St Redbirds,20260402,6.2,0.28,154.0
 Illinois St Redbirds,Auburn Tigers,Auburn Tigers,20260402,-6.2,0.72,154.0
 Auburn Tigers,Illinois St Redbirds,Auburn Tigers,20260402,-6.2,0.72,154.0
 Auburn Tigers,Illinois St Redbirds,Illinois St Redbirds,20260402,6.2,0.28,154.0
-Rutgers Scarlet Knights,Creighton Bluejays,Rutgers Scarlet Knights,20260402,3.1,0.38,150.0
-Rutgers Scarlet Knights,Creighton Bluejays,Creighton Bluejays,20260402,-3.1,0.62,150.0
-Creighton Bluejays,Rutgers Scarlet Knights,Creighton Bluejays,20260402,-3.1,0.62,150.0
-Creighton Bluejays,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20260402,3.1,0.38,150.0
+Rutgers Scarlet Knights,Creighton Bluejays,Rutgers Scarlet Knights,20260402,3.2,0.38,150.0
+Rutgers Scarlet Knights,Creighton Bluejays,Creighton Bluejays,20260402,-3.2,0.62,150.0
+Creighton Bluejays,Rutgers Scarlet Knights,Creighton Bluejays,20260402,-3.2,0.62,150.0
+Creighton Bluejays,Rutgers Scarlet Knights,Rutgers Scarlet Knights,20260402,3.2,0.38,150.0
