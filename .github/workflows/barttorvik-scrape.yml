@@ -1,11 +1,7 @@
 name: Barttorvik Daily Scrape
 
 on:
-  schedule:
-    # 10 AM ET (15:00 UTC) and 4 PM ET (21:00 UTC)
-    - cron: '0 15 * * *'
-    - cron: '0 21 * * *'
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # Season over - manual trigger only
 
 permissions:
   contents: write

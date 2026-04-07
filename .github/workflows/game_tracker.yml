@@ -1,11 +1,7 @@
 name: College Basketball Game Tracker
 
 on:
-  schedule:
-    # Run twice daily: 8 AM and 8 PM UTC
-    - cron: '0 8 * * *'   # 8 AM UTC
-    - cron: '0 20 * * *'  # 8 PM UTC
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # Season over - manual trigger only
 
 permissions:
   contents: write

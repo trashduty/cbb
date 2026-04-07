@@ -1,10 +1,7 @@
 name: Basketball Data Scraper
 
 on:
-  schedule:
-    # Run every 15 minutes to capture rapid odds movements (injuries, sharp action)
-    - cron: '*/15 * * * *'
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # Season over - manual trigger only
 
 permissions:
   contents: write

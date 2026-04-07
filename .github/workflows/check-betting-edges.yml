@@ -1,10 +1,7 @@
 name: Check Betting Edges
 
 on:
-  push:
-    paths:
-      - 'CBB_Output.csv'
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # Season over - manual trigger only
 
 permissions:
   contents: write
