@@ -208,46 +208,69 @@ await page.goto('https://evanmiya.com/game-predictions', {
 
 console.log('Navigated to game predictions');
 
-    // Set up download listener before the click loop
-    const downloadPromise = page.waitForEvent('download', { timeout: 90000 });
+    // Find the current download/export control instead of the old Shiny label.
+    const exportControl = page
+      .getByRole('button', { name: /download|export/i })
+      .or(page.getByRole('link', { name: /download|export/i }))
+      .and(page.locator(':visible'));
 
-    // Retry clicking the download button while handling overlays as they appear.
-    // The Shiny app has multiple loading phases (load1, load8, etc.) and a promo dialog
-    // that can appear at any time — including after we think the page is ready.
-    // Rather than predicting the perfect moment to click, we retry the click and
-    // dismiss the promo whenever it blocks us.
-    const clickDeadline = Date.now() + 90000;
-    let clicked = false;
-    while (!clicked && Date.now() < clickDeadline) {
-      // Dismiss promo dialog if it's blocking
-      if (await page.locator('.sweet-overlay').isVisible()) {
-        console.log('Promo dialog detected, dismissing...');
-        try {
-          await page.locator('.sweet-alert .confirm').click({ timeout: 5000 });
-        } catch {
-          await page.locator('.sweet-alert button').first().click({ timeout: 5000 }).catch(() => {});
-        }
-        await page.locator('.sweet-overlay').waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
-        console.log('Dismissed promo dialog');
-        continue;
-      }
+    try {
+      await exportControl.first().waitFor({
+        state: 'visible',
+        timeout: 30000,
+      });
+    } catch {
+      const controls = await page
+        .locator('button:visible, a:visible')
+        .evaluateAll(elements =>
+          elements.map(element => ({
+            role: element.tagName.toLowerCase(),
+            label: (
+              element.getAttribute('aria-label') ||
+              element.textContent ||
+              ''
+            ).trim().replace(/\s+/g, ' ').slice(0, 120),
+          }))
+        );
 
-      // Attempt the click with a short timeout; retry if blocked by a loading spinner
-      try {
-        await page.getByRole('button', { name: 'download icon Download' }).click({ timeout: 3000 });
-        clicked = true;
-        console.log('Clicked download button');
-      } catch {
-        await sleep(500);
-      }
+      console.log('Visible page controls:', JSON.stringify(controls, null, 2));
+      throw new Error(
+        'No visible download/export control was found. ' +
+        'Check the error screenshot for the current page or an access message.'
+      );
     }
 
-    if (!clicked) {
-      throw new Error('Could not click download button: overlays blocked for entire timeout');
+    const controlCount = await exportControl.count();
+    if (controlCount !== 1) {
+      throw new Error(
+        `Found ${controlCount} download/export controls. ` +
+        'A more specific selector is required; check the error screenshot.'
+      );
     }
-    
-    const download = await downloadPromise;
-    
+
+    console.log('Found download/export control');
+
+    // Handle rejection immediately, including when the click itself fails.
+    const downloadResultPromise = page
+      .waitForEvent('download', { timeout: 60000 })
+      .then(
+        download => ({ download }),
+        error => ({ error })
+      );
+
+    await exportControl.click({ timeout: 15000 });
+    console.log('Clicked download/export control');
+
+    const downloadResult = await downloadResultPromise;
+    if (downloadResult.error) {
+      throw new Error(
+        'The download/export control was clicked, but no browser download ' +
+        'started within 60 seconds. It may open an export menu instead.'
+      );
+    }
+
+    const download = downloadResult.download;
+
     // Save the file to the specified output path
     await download.saveAs(config.outputFile);
     console.log(`File downloaded successfully to: ${config.outputFile}`);
@@ -331,4 +354,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { runWithRetry }; 
+module.exports = { runWithRetry };
