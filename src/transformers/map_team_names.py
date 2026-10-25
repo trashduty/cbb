@@ -1,7 +1,6 @@
 # /// script
 # dependencies = [
-#   "pandas",
-#   "logging"
+#   "pandas"
 # ]
 # ///
 import logging
