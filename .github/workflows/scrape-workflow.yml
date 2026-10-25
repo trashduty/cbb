@@ -48,6 +48,15 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           KENPOM_API_KEY: ${{ secrets.KENPOM_API_KEY }}
 
+      - name: Upload scraper error screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-error-screenshots
+          path: data/error_*.png
+          if-no-files-found: ignore
+          retention-days: 3
+
       - name: Grade completed games (before filtering)
         run: uv run src/scrapers/grade_bets.py
         env:
