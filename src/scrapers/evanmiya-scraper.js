@@ -150,40 +150,63 @@ async function downloadEvanMiyaData() {
       console.log('No cookie banner found or already accepted');
     }
     
-    // Login to the site
-    await page.getByRole('button', { name: 'Login' }).click();
-    console.log('Clicked login button');
-    
-    // Get credentials from environment variables
-    const email = process.env.EMAIL;
-    const password = process.env.PASSWORD;
-    
-    if (!email || !password) {
-      throw new Error('EMAIL or PASSWORD environment variables not configured');
-    }
-    
-    // Fill login form
-    await page.getByRole('textbox', { name: 'Your email' }).fill(email);
-    await page.getByRole('textbox', { name: 'Your password' }).fill(password);
-    await page.getByRole('button', { name: 'Log in' }).click();
-    
-    // Wait for login to complete
-    await page.waitForLoadState('networkidle', { timeout: config.timeout });
-    console.log('Login completed');
-    
-    // Navigate to Game > Upcoming
-    await page.getByRole('link', { name: 'chart-line icon Game' }).click();
-    console.log('Navigated to Game section');
-    
-    await page.getByRole('link', { name: 'angles-right icon Upcoming' }).click();
-    console.log('Navigated to Upcoming games');
-    
-    // Wait for page to load
-    await page.waitForLoadState('networkidle', { timeout: config.timeout });
-    
-    // Navigate to game predictions page
-    await page.goto('https://evanmiya.com/?game_predictions', { timeout: config.timeout });
-    console.log('Navigated to game predictions');
+// Get credentials from GitHub Actions environment variables
+const email = process.env.EMAIL;
+const password = process.env.PASSWORD;
+
+if (!email || !password) {
+  throw new Error('EMAIL or PASSWORD environment variables not configured');
+}
+
+// Open the current login dialog
+await page.getByRole('button', {
+  name: 'Log In',
+  exact: true,
+}).click({ timeout: config.timeout });
+
+console.log('Opened login dialog');
+
+// Scope the form controls to the login dialog
+const loginDialog = page.getByRole('dialog', {
+  name: 'Login',
+  exact: true,
+});
+
+await loginDialog.waitFor({
+  state: 'visible',
+  timeout: config.timeout,
+});
+
+await loginDialog.getByRole('textbox', {
+  name: 'Your email',
+  exact: true,
+}).fill(email);
+
+await loginDialog.getByRole('textbox', {
+  name: 'Your password',
+  exact: true,
+}).fill(password);
+
+await loginDialog.getByRole('button', {
+  name: 'Log in',
+  exact: true,
+}).click();
+
+// Wait for the login dialog to close
+await loginDialog.waitFor({
+  state: 'hidden',
+  timeout: config.timeout,
+});
+
+console.log('Login dialog closed');
+
+// Navigate directly to the current predictions page
+await page.goto('https://evanmiya.com/game-predictions', {
+  waitUntil: 'domcontentloaded',
+  timeout: config.timeout,
+});
+
+console.log('Navigated to game predictions');
 
     // Set up download listener before the click loop
     const downloadPromise = page.waitForEvent('download', { timeout: 90000 });
