@@ -46,74 +46,84 @@ async function sleep(ms) {
  * @returns {Promise<void>}
  */
 async function processSpreadDirections(filePath) {
-  return new Promise((resolve, reject) => {
-    if (!fs.existsSync(filePath)) {
-      return reject(new Error(`File not found: ${filePath}`));
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`File not found: ${filePath}`);
+  }
+
+  // The new site exports display labels; the transformer uses legacy keys.
+  const aliases = {
+    home: 'home',
+    away: 'away',
+    line: 'line',
+    ou: 'ou',
+    homewinprob: 'home_win_prob',
+    awaywinprob: 'away_win_prob',
+    date: 'Date',
+  };
+  const required = ['home', 'away', 'line', 'ou', 'home_win_prob', 'away_win_prob', 'Date'];
+  const results = [];
+  let headers;
+
+  const parser = fs.createReadStream(filePath).pipe(csv({
+    mapHeaders: ({ header }) => {
+      const key = header.replace(/^\uFEFF/, '').trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+      return aliases[key] || header;
+    },
+  }));
+
+  for await (const row of parser) {
+    if (!headers) {
+      headers = Object.keys(row);
+      const missing = required.filter(key => !headers.includes(key));
+      if (missing.length) {
+        throw new Error(`EvanMiya CSV is missing required columns: ${missing.join(', ')}`);
+      }
+      console.log('Normalized EvanMiya columns:', headers.join(', '));
     }
 
-    const results = [];
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on('data', (data) => results.push(data))
-      .on('end', () => {
-        if (results.length === 0) {
-          console.log('No data found in CSV file');
-          return resolve();
-        }
-        
-        // Log all column names first to help identify which ones need correction
-        const allColumns = Object.keys(results[0]);
-        console.log('All columns in CSV:', allColumns.join(', '));
-        
-        // Specifically target the line column as requested (EvanMiya's predicted spread)
-        const columnsToInvert = ['line'];
-        
-        // Check if the column exists in the data
-        if (!allColumns.includes('line')) {
-          console.log('Warning: line column not found in the CSV. Available columns:');
-          console.log(allColumns.join(', '));
-          
-          // Log potential spread-related columns for reference
-          const potentialSpreadColumns = allColumns.filter(col => 
-            col.toLowerCase().includes('spread') || 
-            col.toLowerCase().includes('line') || 
-            col.toLowerCase().includes('handicap')
-          );
-          
-          if (potentialSpreadColumns.length > 0) {
-            console.log('Potential spread-related columns found:');
-            potentialSpreadColumns.forEach(col => console.log(`- ${col}`));
-          }
-          
-          return resolve();
-        }
-        
-        console.log(`Will invert the line column values`);
-        
-        // Fix spread directions by inverting the values for the line column
-        let updatedCount = 0;
-        results.forEach(row => {
-          if (row.line && !isNaN(parseFloat(row.line))) {
-            // Invert the spread value to fix direction
-            row.line = (-1 * parseFloat(row.line)).toString();
-            updatedCount++;
-          }
-        });
+    if (!row.home?.trim() || !row.away?.trim() || !row.Date?.trim()) {
+      throw new Error(`EvanMiya CSV row ${results.length + 1} has a missing team or date`);
+    }
 
-        // Write back to CSV
-        const headers = Object.keys(results[0]);
-        const csvContent = [
-          headers.join(','),
-          ...results.map(row => headers.map(header => row[header]).join(','))
-        ].join('\n');
+    for (const key of ['line', 'ou', 'home_win_prob', 'away_win_prob']) {
+      const text = String(row[key]).trim();
+      const value = Number(text.replace(/%$/, ''));
+      if (!text || !Number.isFinite(value)) {
+        throw new Error(`Invalid ${key} in EvanMiya CSV row ${results.length + 1}`);
+      }
+      if (key.endsWith('_win_prob')) {
+        const probability = text.endsWith('%') || value > 1 ? value / 100 : value;
+        if (probability < 0 || probability > 1) {
+          throw new Error(`Invalid ${key} probability in EvanMiya CSV row ${results.length + 1}`);
+        }
+        row[key] = String(probability);
+      } else {
+        row[key] = String(value);
+      }
+    }
 
-        fs.writeFileSync(filePath, csvContent);
-        console.log(`Fixed spread directions in ${filePath} for line column. Updated ${updatedCount} values.`);
-        
-        resolve();
-      })
-      .on('error', reject);
-  });
+    // Keep the existing scraper/transformer sign contract: the transformer
+    // negates this value again to recover the exported home-team spread.
+    row.line = String(-Number(row.line));
+    results.push(row);
+  }
+
+  if (!results.length) {
+    throw new Error('EvanMiya CSV contains no games');
+  }
+
+  // Preserve commas, quotes and newlines in team/venue names.
+  const escapeCell = value => {
+    const text = String(value ?? '');
+    return /[",\r\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
+  };
+  const csvContent = [
+    headers.map(escapeCell).join(','),
+    ...results.map(row => headers.map(header => escapeCell(row[header])).join(',')),
+  ].join('\n');
+
+  fs.writeFileSync(filePath, csvContent);
+  console.log(`Normalized EvanMiya CSV and fixed spread directions for ${results.length} games.`);
 }
 
 /**
