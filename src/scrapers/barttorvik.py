@@ -85,7 +85,7 @@ def scrape_barttorvik_day(driver, date_str):
     Returns:
         DataFrame of games for that date
     """
-    url = f"https://www.barttorvik.com/schedule.php?date={date_str}&conlimit="
+    url = f"https://barttorvik.com/schedule.php?date={date_str}&conlimit="
 
     try:
         driver.get(url)
