@@ -165,8 +165,10 @@ async function joinDatasets() {
         ...item,
         'Home Team': item['Away Team'],
         'Away Team': item['Home Team'],
-        'spread_kenpom': item['spread_kenpom'] ? -item['spread_kenpom'] : null,
-        'win_prob_kenpom': item['win_prob_kenpom'] ? 1 - item['win_prob_kenpom'] : null
+        // These predictions belong to item.Team. Relabeling the matchup
+        // does not change that team's spread or win probability.
+        'spread_kenpom': item['spread_kenpom'],
+        'win_prob_kenpom': item['win_prob_kenpom']
       };
       kpSwappedLookup.set(swappedKey, swappedItem);
     });
@@ -213,6 +215,8 @@ async function joinDatasets() {
     
     // First perform left join between EvanMiya and KenPom (iterate over EvanMiya to keep all EM games)
     const leftJoinResult = [];
+    let kenpomMatches = 0;
+    const unmatchedKenpomGames = new Set();
 
     // Get all possible KP columns by looking at first record (or any record)
     const kpColumns = kpData.length > 0 ?
@@ -221,10 +225,8 @@ async function joinDatasets() {
 
     for (const emItem of emData) {
       const compositeKey = `${emItem['Team']}_${emItem['Home Team']}_${emItem['Away Team']}`;
-      const swappedKey = `${emItem['Team']}_${emItem['Away Team']}_${emItem['Home Team']}`;
-
-      // Try both orderings
-      const kpItem = kpLookup.get(compositeKey) || kpSwappedLookup.get(swappedKey);
+      // Both lookups are indexed in the ordering we want to match.
+      const kpItem = kpLookup.get(compositeKey) || kpSwappedLookup.get(compositeKey);
 
       // Start with EM data
       const combinedItem = { ...emItem };
@@ -236,15 +238,27 @@ async function joinDatasets() {
 
       // Add KP data if it exists
       if (kpItem) {
+        kenpomMatches++;
         kpColumns.forEach(col => {
           combinedItem[col] = kpItem[col];
         });
+      } else {
+        unmatchedKenpomGames.add(
+          [emItem['Home Team'], emItem['Away Team']].sort().join(' vs. ')
+        );
       }
 
       leftJoinResult.push(combinedItem);
     }
 
     console.log(`Left join produced ${leftJoinResult.length} records`);
+    console.log(`KenPom matched ${kenpomMatches} / ${emData.length} EvanMiya rows`);
+    if (unmatchedKenpomGames.size) {
+      console.warn(
+        `KenPom source is missing ${unmatchedKenpomGames.size} matchups. Examples:`,
+        [...unmatchedKenpomGames].slice(0, 10)
+      );
+    }
     
     // Now perform left join with Barttorvik data
     const afterBtResult = [];
