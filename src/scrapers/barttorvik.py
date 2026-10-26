@@ -18,6 +18,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
 from rich.console import Console
 from rich.table import Table
@@ -40,6 +41,39 @@ if not os.path.exists(data_dir):
     print(f"Created data directory: {data_dir}")
 
 
+
+def schedule_page_state(driver):
+    """Wait for schedule content; distinguish access errors from an empty slate."""
+    soup = BeautifulSoup(driver.page_source, 'lxml')
+    text = soup.get_text(' ', strip=True).lower()
+    blocked_messages = (
+        '403 forbidden', "you don't have permission to access this resource",
+        'access denied', 'verify you are human', 'checking your browser',
+        'just a moment', 'too many requests',
+    )
+    if (any(message in text for message in blocked_messages)
+            or text.strip() == 'forbidden'
+            or driver.title.strip().lower() in ('forbidden', '403 forbidden', 'access denied')):
+        return 'blocked'
+    team_links = soup.find_all('a', href=lambda href: href and 'team.php' in href)
+    if team_links:
+        return 'schedule'
+    if any(message in text for message in (
+        'no games scheduled', 'no games found', 'no games today', 'no games on',
+    )):
+        return 'empty'
+    return False
+
+
+def page_summary(driver):
+    """Log public page context without cookies or browser storage."""
+    soup = BeautifulSoup(driver.page_source, 'lxml')
+    for element in soup(['script', 'style']):
+        element.decompose()
+    text = ' '.join(soup.get_text(' ', strip=True).split())[:400]
+    return f"title={driver.title!r}; url={driver.current_url}; page={text!r}"
+
+
 def scrape_barttorvik_day(driver, date_str):
     """
     Scrape Barttorvik data for a specific date using Selenium
@@ -56,9 +90,22 @@ def scrape_barttorvik_day(driver, date_str):
     try:
         driver.get(url)
 
-        # Wait for page to load - look for team links
-        wait = WebDriverWait(driver, 10)
-        time.sleep(2)  # Give page time to fully render
+        # Wait for actual page content instead of an unconditional two-second pause.
+        try:
+            state = WebDriverWait(driver, 20).until(schedule_page_state)
+        except TimeoutException as error:
+            raise RuntimeError(
+                f"Schedule did not load for {date_str}: {page_summary(driver)}"
+            ) from error
+
+        if state == 'blocked':
+            raise RuntimeError(
+                f"Barttorvik returned an access/verification page for {date_str}: "
+                f"{page_summary(driver)}"
+            )
+        if state == 'empty':
+            print(f"  Explicit no-games message for {date_str}")
+            return pd.DataFrame()
 
         # Get page source and parse with BeautifulSoup
         soup = BeautifulSoup(driver.page_source, 'lxml')
@@ -93,11 +140,18 @@ def scrape_barttorvik_day(driver, date_str):
                 'Game Date': date_str
             })
 
+        if not games:
+            team_count = len(soup.find_all('a', href=lambda href: href and 'team.php' in href))
+            line_count = len(soup.find_all('a', href=lambda href: href and 'trank.php' in href))
+            raise RuntimeError(
+                f"Page has team links but no recognizable prediction rows for {date_str}; "
+                f"team links={team_count}, T-Rank links={line_count}. {page_summary(driver)}"
+            )
         return pd.DataFrame(games)
 
     except Exception as e:
-        print(f"  ⚠️ Error scraping date {date_str}: {str(e)}")
-        return pd.DataFrame()
+        print(f"  Error scraping date {date_str}: {str(e)}")
+        raise
 
 
 def parse_trank_line(line_text):
@@ -326,6 +380,13 @@ def get_barttorvik_df(days_ahead=10):
         else:
             mapped_df = transformed_df
 
+        # An empty scrape must never overwrite the last successful dataset.
+        if mapped_df.empty:
+            raise RuntimeError(
+                "No mapped Barttorvik predictions were produced. "
+                "Keeping the existing data/bt_mapped.csv unchanged."
+            )
+
         # Save to file
         output_path = os.path.join(data_dir, 'bt_mapped.csv')
         mapped_df.to_csv(output_path, index=False)
@@ -340,5 +401,9 @@ def get_barttorvik_df(days_ahead=10):
 
 
 if __name__ == "__main__":
-    df = get_barttorvik_df(days_ahead=10)
+    try:
+        df = get_barttorvik_df(days_ahead=10)
+    except Exception as error:
+        console.print(f"[red]Barttorvik scrape failed:[/red] {error}")
+        sys.exit(1)
     console.print(f"\n[green]✓[/green] Barttorvik scraper completed successfully")
