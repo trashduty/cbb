@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBB Model Outputs | BTB Analytics</title>
+<style>body{margin:0;padding:16px;background:#f4f7f5}main{max-width:1600px;margin:auto}@media(max-width:650px){body{padding:8px}}</style>
+</head>
+<body><main>
+<section id="btb-cbb" aria-label="College basketball model outputs"
+  data-csv-url="./Combo_Output.csv">
+  <style>
+    #btb-cbb{--ink:#182c29;--muted:#60716b;--green:#16734b;--line:#dce5df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);width:100%;box-sizing:border-box;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:16px 0}
+    #btb-cbb *{box-sizing:border-box}#btb-cbb [hidden]{display:none!important}
+    #btb-cbb .cbb-top{padding:24px 24px 18px;background:#102e25;color:#fff;display:flex;gap:18px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    #btb-cbb .cbb-eyebrow{font-size:11px;letter-spacing:.14em;font-weight:700;color:#94d1ac;margin:0 0 7px}#btb-cbb h2{margin:0;color:#fff;font-size:25px;line-height:1.2;letter-spacing:-.03em;font-weight:700}#btb-cbb .cbb-sub{margin:8px 0 0;color:#d0e0d7;font-size:13px;line-height:1.5}
+    #btb-cbb .cbb-live{font-size:12px;color:#c5e1ce;white-space:nowrap}#btb-cbb .cbb-live:before{content:"";display:inline-block;background:#8fd4a6;width:7px;height:7px;border-radius:50%;margin-right:7px}
+    #btb-cbb .cbb-tabs{display:flex;gap:6px;padding:16px 20px 0;flex-wrap:wrap}#btb-cbb button,#btb-cbb select,#btb-cbb input{font:inherit}#btb-cbb button,#btb-cbb summary,#btb-cbb select{cursor:pointer}
+    #btb-cbb button{border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);padding:9px 12px;font-size:13px;line-height:1.3;text-transform:none;letter-spacing:normal;box-shadow:none;min-height:36px}
+    #btb-cbb button:hover{background:#edf5ef}#btb-cbb button:focus-visible,#btb-cbb summary:focus-visible,#btb-cbb input:focus-visible,#btb-cbb select:focus-visible,#btb-cbb .cbb-scroll:focus-visible{outline:3px solid #68aa84;outline-offset:2px}
+    #btb-cbb .cbb-tabs button{font-weight:650;background:#f3f6f3;border-color:transparent}#btb-cbb .cbb-tabs button[aria-pressed=true]{background:#16734b;color:#fff}
+    #btb-cbb .cbb-toolbar{padding:14px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line)}#btb-cbb .cbb-search{flex:1;min-width:190px}
+    #btb-cbb input[type=search],#btb-cbb select{width:100%;padding:10px 11px;border:1px solid #bacbc0;border-radius:7px;color:var(--ink);background:#fff;min-height:39px;font-size:13px}#btb-cbb select{width:auto;max-width:100%;color:#14231c}
+    #btb-cbb .cbb-check{display:flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap}#btb-cbb input[type=checkbox]{accent-color:#16734b;width:16px;height:16px;margin:0;flex-shrink:0}
+    #btb-cbb details{position:relative}#btb-cbb summary{list-style:none;border:1px solid #bacbc0;border-radius:7px;padding:10px 12px;min-height:39px;font-size:13px;background:#fff}#btb-cbb summary::-webkit-details-marker{display:none}#btb-cbb summary:after{content:" ▾";padding-left:9px}
+    #btb-cbb .cbb-picker{position:absolute;top:45px;left:0;width:310px;max-width:calc(100vw - 50px);background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px #0c291a25;border-radius:9px;padding:12px;z-index:10}#btb-cbb .cbb-picker-actions{display:flex;gap:6px;margin:9px 0}#btb-cbb .cbb-teams{max-height:240px;overflow:auto}#btb-cbb .cbb-team{display:flex;align-items:center;gap:8px;padding:8px 3px;font-size:13px;cursor:pointer}#btb-cbb .cbb-team:hover{background:#edf5ef}
+    #btb-cbb .cbb-meta{padding:12px 20px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted);background:#f7faf7}#btb-cbb .cbb-status[data-error=true]{color:#a23a32}#btb-cbb .cbb-scroll{overflow-x:auto;max-width:100%;overscroll-behavior-x:contain}
+    #btb-cbb table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px;margin:0;background:#fff;line-height:1.4}#btb-cbb th,#btb-cbb td{padding:12px 14px;white-space:nowrap;border:0;border-bottom:1px solid #e5ece6;text-align:right;vertical-align:middle}#btb-cbb th{background:#edf3ee;color:#334b3c;font-size:11px;letter-spacing:.02em;font-weight:650}#btb-cbb th button{font-size:11px;white-space:normal;background:transparent!important;border:0;padding:0;min-height:25px;color:inherit;font-weight:650;display:inline-flex;align-items:center;gap:7px;text-align:inherit}#btb-cbb th.cbb-left,#btb-cbb td.cbb-left{text-align:left}#btb-cbb .cbb-arrow{opacity:.6;font-size:12px}
+    #btb-cbb tbody tr:nth-child(even){background:#fafcf9}#btb-cbb tbody tr:hover{background:#edf4ef}#btb-cbb .cbb-team-name{font-weight:650}#btb-cbb .cbb-game{font-size:12px;color:#5d6f64;max-width:330px;overflow:hidden;text-overflow:ellipsis}#btb-cbb .cbb-number{font-variant-numeric:tabular-nums}#btb-cbb .cbb-edge{font-weight:700;border-radius:5px;padding:6px 8px;display:inline-block;min-width:70px;text-align:right}#btb-cbb .cbb-missing{color:#89968c}
+    #btb-cbb .cbb-empty{padding:35px 20px;text-align:center;color:var(--muted);white-space:normal}#btb-cbb .cbb-footer{padding:13px 20px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);line-height:1.7}#btb-cbb .cbb-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a9dfbc;margin-right:5px}#btb-cbb .cbb-note{display:block;color:#76837b}
+    @media(max-width:650px){#btb-cbb .cbb-top{padding:20px 16px}#btb-cbb h2{font-size:22px}#btb-cbb .cbb-live{display:none}#btb-cbb .cbb-toolbar,#btb-cbb .cbb-meta,#btb-cbb .cbb-footer{padding-left:14px;padding-right:14px}#btb-cbb .cbb-tabs{padding-left:14px}#btb-cbb .cbb-search{flex-basis:100%}#btb-cbb th,#btb-cbb td{padding:10px 12px}#btb-cbb .cbb-game{max-width:220px}}
+  </style>
+  <header class="cbb-top"><div><p class="cbb-eyebrow">BTB ANALYTICS · COLLEGE BASKETBALL</p><h2>Find your edge.</h2><p class="cbb-sub">Compare the market with our model. See the probabilities. Make your call.</p></div><span class="cbb-live">Checks for updates every minute</span></header>
+  <nav class="cbb-tabs" aria-label="Choose market"><button type="button" data-market="spread" aria-pressed="true">Spreads</button><button type="button" data-market="total" aria-pressed="false">Totals</button><button type="button" data-market="ml" aria-pressed="false">Moneyline</button><button type="button" data-market="all" aria-pressed="false">All markets</button></nav>
+  <div class="cbb-toolbar">
+    <label class="cbb-search"><span hidden>Search teams or matchups</span><input type="search" data-control="search" placeholder="Search teams or matchups…" aria-label="Search teams or matchups"></label>
+    <details data-control="picker"><summary><span data-label="selection">All teams</span></summary><div class="cbb-picker"><input type="search" data-control="team-search" placeholder="Find a team…" aria-label="Find a team"><div class="cbb-picker-actions"><button type="button" data-action="select-visible">Select visible</button><button type="button" data-action="clear-teams">Clear</button><button type="button" data-action="close-picker">Close</button></div><div class="cbb-teams" data-label="teams"></div></div></details>
+    <select data-control="date" aria-label="Filter by game date"><option value="">All dates (ET)</option></select>
+    <label class="cbb-check"><input type="checkbox" data-control="upcoming" checked> Upcoming only</label>
+    <button type="button" data-action="refresh">Refresh</button>
+  </div>
+  <div class="cbb-meta"><span data-label="count">Loading games…</span><span class="cbb-status" data-label="status" role="status" aria-live="polite">Connecting to model output…</span></div>
+  <div class="cbb-scroll" tabindex="0" role="region" aria-label="Model outputs; scroll horizontally for more columns"><table><caption hidden>BTB college basketball model outputs. All game times are Eastern.</caption><thead></thead><tbody><tr><td class="cbb-empty">Loading model outputs…</td></tr></tbody></table></div>
+  <footer class="cbb-footer"><span class="cbb-dot"></span>Green: spread/total edge ≥3%; moneyline edge ≥10%. Edge values are shown as calculated.<span class="cbb-note">All game times ET. Upcoming only hides games at tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
+  <script>
+  (() => {
+    'use strict';
+    const root = document.getElementById('btb-cbb');
+    if (!root || root.dataset.initialized) return;
+    root.dataset.initialized = 'true';
+    const CSV_URL = root.dataset.csvUrl;
+    const REFRESH_MS = 60000;
+    const EDGE_THRESHOLD = 0.03, ML_EDGE_THRESHOLD = 0.10;
+    const $ = selector => root.querySelector(selector);
+    const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]')};
+    const state = {rows:[],fields:[],teams:[],selected:new Set(),market:'spread',sort:{key:'Game Time',direction:'asc'},loaded:false,busy:false,lastSuccess:null};
+    const common = [
+      {key:'Game Time',label:'Game time · ET',type:'time'},
+      {key:'Game',label:'Matchup',type:'text'},
+      {key:'Team',label:'Team',type:'text'}
+    ];
+    const markets = {
+      spread:[{key:'market_spread',label:'Market spread',type:'spread'},{key:'Opening Spread',label:'Opening spread',type:'spread'},{key:'Predicted Outcome',label:'Predicted outcome',type:'spread'},{key:'Spread Cover Probability',label:'Cover probability',type:'probability'},{key:'Edge For Covering Spread',label:'Spread edge',type:'edge'}],
+      total:[{key:'market_total',label:'Market total',type:'number'},{key:'Opening Total',label:'Opening total',type:'number'},{key:'average_total',label:'Model total',type:'number'},{key:'Over Cover Probability',label:'Over probability',type:'probability'},{key:'Under Cover Probability',label:'Under probability',type:'probability'},{key:'Over Total Edge',label:'Over edge',type:'edge'},{key:'Under Total Edge',label:'Under edge',type:'edge'}],
+      ml:[{key:'Current Moneyline',label:'Market moneyline',type:'odds'},{key:'Opening Moneyline',label:'Opening moneyline',type:'odds'},{key:'Moneyline Win Probability',label:'Win probability',type:'probability'},{key:'Moneyline Edge',label:'Moneyline edge',type:'ml_edge'}]
+    };
+    const allColumns = [...common,...markets.spread,...markets.ml,...markets.total];
+    const eastParts = timestamp => Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(timestamp)).filter(x=>x.type!=='literal').map(x=>[x.type,Number(x.value)]));
+    const pad = n => String(n).padStart(2,'0');
+    const dateKey = timestamp => {const p=eastParts(timestamp);return `${p.year}-${pad(p.month)}-${pad(p.day)}`;};
+    const numeric = value => value===null||value===undefined||String(value).trim()===''||!Number.isFinite(Number(value)) ? null : Number(value);
+
+    // Dependency-free CSV reader: handles quoted commas, escaped quotes, CRLF and BOM.
+    function parseCSV(text) {
+      text = text.replace(/^\uFEFF/,'');
+      const records=[];let row=[],cell='',quoted=false;
+      for(let i=0;i<text.length;i++){
+        const c=text[i];
+        if(c==='"'){
+          if(quoted&&text[i+1]==='"'){cell+='"';i++;}else{quoted=!quoted;}
+        }else if(c===','&&!quoted){row.push(cell);cell='';}
+        else if((c==='\r'||c==='\n')&&!quoted){row.push(cell);if(row.some(v=>v.trim()!==''))records.push(row);row=[];cell='';if(c==='\r'&&text[i+1]==='\n')i++;}
+        else cell+=c;
+      }
+      if(quoted)throw new Error('The CSV contains an unfinished quoted value.');
+      row.push(cell);if(row.some(v=>v.trim()!==''))records.push(row);
+      if(!records.length)throw new Error('The CSV is empty.');
+      const fields=records.shift().map(x=>x.trim());
+      if(!fields.includes('Game')||!fields.includes('Team'))throw new Error('Expected Game and Team columns were not found.');
+      const rows=records.map((values,index)=>{
+        if(values.length!==fields.length)throw new Error(`CSV row ${index+2} has an unexpected number of values.`);
+        return Object.fromEntries(fields.map((key,i)=>[key,values[i].trim()]));
+      });
+      return {fields,rows};
+    }
+
+    function kickoff(value,now=Date.now()) {
+      if(!value)return null;
+      const text=String(value).trim();
+      if(/^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:?\d{2})$/i.test(text)){const parsed=Date.parse(text);return Number.isFinite(parsed)?parsed:null;}
+      const m=text.match(/^(?:([0-9]{4})\s+)?([A-Za-z]{3})\s+(\d{1,2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)\s*(?:ET|EST|EDT)?$/i);
+      if(!m)return null;
+      const month=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].indexOf(m[2].toLowerCase())+1;
+      if(!month||+m[3]<1||+m[3]>31||+m[4]<1||+m[4]>12||+m[5]>59)return null;
+      const current=eastParts(now);let year=m[1]?+m[1]:current.year;
+      if(!m[1]){if(month-current.month>6)year--;else if(current.month-month>6)year++;}
+      const hour=(+m[4]%12)+(m[6].toUpperCase()==='PM'?12:0);
+      const wall=Date.UTC(year,month-1,+m[3],hour,+m[5]);let stamp=wall;
+      // Resolve the Eastern offset for the actual game date, including DST.
+      for(let i=0;i<3;i++){const p=eastParts(stamp);const observed=Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute);stamp+=wall-observed;}
+      const p=eastParts(stamp);
+      return p.year===year&&p.month===month&&p.day===+m[3]&&p.hour===hour&&p.minute===+m[5]?stamp:null;
+    }
+    function format(value,type){
+      if(type==='text'||type==='time')return value||'—';
+      const n=numeric(value);if(n===null)return '—';
+      if(['probability','edge','ml_edge'].includes(type))return (n*100).toFixed(2)+'%';
+      if(type==='odds')return (n>0?'+':'')+Math.round(n);
+      const text=n.toFixed(2).replace(/\.?0+$/,'');
+      return (type==='spread'&&n>0?'+':'')+text;
+    }
+    function edgeStyle(value,type){
+      const threshold=type==='ml_edge'?ML_EDGE_THRESHOLD:EDGE_THRESHOLD;
+      const diff=(value-threshold)*100;
+      return value>=threshold?{background:`hsl(135 48% ${Math.max(88-diff*3,34)}%)`,color:diff>10?'#fff':'#15442b'}:{background:`hsl(4 68% ${Math.max(96-Math.abs(diff)*1.5,83)}%)`,color:'#803b35'};
+    }
+    function visibleTeams(){const q=controls.teamSearch.value.toLowerCase().trim();return state.teams.filter(t=>t.toLowerCase().includes(q));}
+    function renderPicker(){
+      const list=$('[data-label=teams]');list.replaceChildren();
+      for(const team of visibleTeams()){
+        const label=document.createElement('label');label.className='cbb-team';
+        const cb=document.createElement('input');cb.type='checkbox';cb.checked=state.selected.has(team);
+        cb.addEventListener('change',()=>{if(cb.checked)state.selected.add(team);else state.selected.delete(team);updateSelection();renderTable();});
+        label.append(cb,document.createTextNode(team));list.append(label);
+      }
+      if(!list.children.length)list.textContent='No matching teams.';
+      updateSelection();
+    }
+    function updateSelection(){$('[data-label=selection]').textContent=state.selected.size?`${state.selected.size} team${state.selected.size===1?'':'s'} selected`:'All teams';}
+    function prepareFilters(){
+      state.teams=[...new Set(state.rows.map(r=>r.Team).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+      state.selected=new Set([...state.selected].filter(t=>state.teams.includes(t)));
+      const selectedDate=controls.date.value;
+      controls.date.replaceChildren(new Option('All dates (ET)',''));
+      const dates=[...new Set(state.rows.filter(r=>r._kickoff!==null).map(r=>dateKey(r._kickoff)))].sort();
+      for(const date of dates){const [year,month,day]=date.split('-');controls.date.add(new Option(`${month}/${day}/${year} ET`,date));}
+      if(dates.includes(selectedDate))controls.date.value=selectedDate;
+      renderPicker();
+    }
+    function processedRows(now=Date.now()){
+      const q=controls.search.value.trim().toLowerCase();
+      let rows=state.rows.filter(r=>(!controls.upcoming.checked||r._kickoff===null||r._kickoff>now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
+      const config=allColumns.find(c=>c.key===state.sort.key);
+      rows=rows.slice().sort((a,b)=>{
+        const value=r=>state.sort.key==='Game Time'?r._kickoff:config?.type==='text'?r[state.sort.key]:numeric(r[state.sort.key]);
+        const x=value(a),y=value(b);if(x===null||x===undefined||x==='')return y===null||y===undefined||y===''?0:1;if(y===null||y===undefined||y==='')return -1;
+        const result=typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y));
+        return state.sort.direction==='asc'?result:-result;
+      });return rows;
+    }
+    function renderTable(){
+      const columns=(state.market==='all'?allColumns:[...common,...markets[state.market]]).filter(c=>!state.loaded||state.fields.includes(c.key));
+      const head=document.createElement('tr');
+      for(const col of columns){
+        const th=document.createElement('th');th.scope='col';if(col.type==='text'||col.type==='time')th.className='cbb-left';
+        const active=state.sort.key===col.key;th.setAttribute('aria-sort',active?(state.sort.direction==='asc'?'ascending':'descending'):'none');
+        const button=document.createElement('button');button.type='button';button.append(document.createTextNode(col.label));
+        const arrow=document.createElement('span');arrow.className='cbb-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent=active?(state.sort.direction==='asc'?'↑':'↓'):'↕';button.append(arrow);
+        button.addEventListener('click',()=>{state.sort={key:col.key,direction:active&&state.sort.direction==='asc'?'desc':'asc'};renderTable();});th.append(button);head.append(th);
+      }
+      $('thead').replaceChildren(head);const body=document.createDocumentFragment();const rows=processedRows();
+      for(const row of rows){const tr=document.createElement('tr');
+        for(const col of columns){const td=document.createElement('td');td.className=(col.type==='text'||col.type==='time')?'cbb-left':'cbb-number';
+          const text=format(row[col.key],col.type);td.textContent=text;
+          if(col.key==='Team')td.classList.add('cbb-team-name');if(col.key==='Game'){td.classList.add('cbb-game');td.title=text;}
+          if(text==='—')td.classList.add('cbb-missing');
+          if(['edge','ml_edge'].includes(col.type)&&numeric(row[col.key])!==null){td.textContent='';const badge=document.createElement('span');badge.className='cbb-edge';badge.textContent=text;Object.assign(badge.style,edgeStyle(numeric(row[col.key]),col.type));td.append(badge);}
+          tr.append(td);
+        }body.append(tr);
+      }
+      if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=Math.max(columns.length,1);td.className='cbb-empty';td.textContent=state.loaded?'No games match these filters. Clear your selection or turn off Upcoming only.':'Waiting for model outputs…';tr.append(td);body.append(tr);}
+      $('tbody').replaceChildren(body);
+      const games=new Set(rows.map(r=>`${r.Game}|${r['Game Time']}`)).size;
+      $('[data-label=count]').textContent=`${games} game${games===1?'':'s'} · ${rows.length} team row${rows.length===1?'':'s'}`;
+    }
+    let controller;
+    async function refresh(){
+      if(state.busy||!root.isConnected)return;
+      state.busy=true;const button=$('[data-action=refresh]');button.disabled=true;button.textContent='Refreshing…';
+      controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);
+      try{
+        const url=new URL(CSV_URL, document.baseURI);url.searchParams.set('_btb',Date.now());
+        const response=await fetch(url,{cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error(`HTTP ${response.status}`);
+        const parsed=parseCSV(await response.text());const now=Date.now();
+        state.rows=[...new Map(parsed.rows.filter(r=>r.Game&&r.Team).map(r=>[JSON.stringify([r.Game,r.Team,r['Game Time']]),{...r,_kickoff:kickoff(r['Game Time'],now)}])).values()];
+        state.fields=parsed.fields;state.loaded=true;state.lastSuccess=new Date();prepareFilters();renderTable();
+        const status=$('[data-label=status]');status.dataset.error='false';status.textContent='Checked '+state.lastSuccess.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})+' · Refreshes every minute';
+      }catch(error){
+        const status=$('[data-label=status]');status.dataset.error='true';status.textContent=state.loaded?'Refresh failed; showing data from '+state.lastSuccess.toLocaleTimeString()+'.':'Could not load model output: '+(error.name==='AbortError'?'request timed out':error.message)+'. Try Refresh.';
+        if(!state.loaded){$('tbody').replaceChildren();const tr=document.createElement('tr'),td=document.createElement('td');td.className='cbb-empty';td.textContent='Model output is currently unavailable. Please try again shortly.';tr.append(td);$('tbody').append(tr);$('[data-label=count]').textContent='Data unavailable';}
+      }finally{clearTimeout(timeout);state.busy=false;button.disabled=false;button.textContent='Refresh';}
+    }
+    root.querySelectorAll('[data-market]').forEach(button=>button.addEventListener('click',()=>{state.market=button.dataset.market;state.sort={key:'Game Time',direction:'asc'};root.querySelectorAll('[data-market]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderTable();}));
+    controls.search.addEventListener('input',renderTable);controls.teamSearch.addEventListener('input',renderPicker);controls.date.addEventListener('change',renderTable);controls.upcoming.addEventListener('change',renderTable);
+    $('[data-action=select-visible]').addEventListener('click',()=>{visibleTeams().forEach(t=>state.selected.add(t));renderPicker();renderTable();});
+    $('[data-action=clear-teams]').addEventListener('click',()=>{state.selected.clear();controls.teamSearch.value='';renderPicker();renderTable();});
+    $('[data-action=close-picker]').addEventListener('click',()=>{controls.picker.open=false;});
+    controls.picker.addEventListener('keydown',event=>{if(event.key==='Escape'){controls.picker.open=false;controls.picker.querySelector('summary').focus();}});
+    $('[data-action=refresh]').addEventListener('click',refresh);
+    refresh();const interval=setInterval(()=>{if(!root.isConnected){clearInterval(interval);controller?.abort();return;}renderTable();refresh();},REFRESH_MS);
+    window.addEventListener('pagehide',()=>{clearInterval(interval);controller?.abort();},{once:true});
+  })();
+  </script>
+</section>
+
+</main></body>
+</html>
