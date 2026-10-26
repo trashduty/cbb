@@ -9,9 +9,9 @@
 Generate Combo_Output.csv using specific model combos with lookup-table probabilities.
 
 Uses specific model combos as inputs to the same lookup tables as CBB_Output:
-- Spread: KP+BT mean → 60/40 market-regressed → lookup table → cover_prob → edge
+- Spread: KP required + optional BT mean → 60/40 market-regressed → lookup table → cover_prob → edge
 - Moneyline: KP+EM mean (raw, no devigged blend) → edge
-- Over/Under: KP+BT+EM+HA mean (non-regressed) → lookup table → cover_prob → edge
+- Over/Under: KP+EM+HA required + optional BT mean (non-regressed) → lookup table → cover_prob → edge
 
 Reads CBB_Output.csv and writes Combo_Output.csv (filtered to remove started games).
 All columns from CBB_Output.csv are preserved and filled.
@@ -64,8 +64,16 @@ def american_odds_to_implied_probability(odds):
 
 
 
+def mean_with_optional_barttorvik(frame, required_columns, barttorvik_column):
+    """Include BT when available, but require every other selected model."""
+    # Reindex also handles CSVs where the BT column is absent entirely.
+    values = frame.reindex(columns=required_columns + [barttorvik_column])
+    required_present = values[required_columns].notna().all(axis=1)
+    return values.mean(axis=1, skipna=True).where(required_present)
+
+
 # ============================================================
-# 1. SPREAD: model_spread = mean(KP, BT), then lookup table
+# 1. SPREAD: KP required, BT optional, then lookup table
 # ============================================================
 
 # Back-calculate spread implied prob from CBB_Output's existing data
@@ -73,8 +81,9 @@ def american_odds_to_implied_probability(odds):
 df['spread_implied_prob'] = df['Spread Cover Probability'] - df['Edge For Covering Spread']
 df['spread_implied_prob'] = df['spread_implied_prob'].fillna(SPREAD_IMPLIED_DEFAULT)
 
-spread_cols = ['spread_kenpom', 'spread_barttorvik']
-df['model_spread'] = df[spread_cols].mean(axis=1, skipna=False)
+df['model_spread'] = mean_with_optional_barttorvik(
+    df, ['spread_kenpom'], 'spread_barttorvik'
+)
 
 # Predicted Outcome: 60% market + 40% model, rounded to 0.5
 df['Predicted Outcome'] = ((0.6 * df['market_spread'] + 0.4 * df['model_spread']) * 2).round() / 2
@@ -129,10 +138,13 @@ df['Over Total Edge_orig'] = df['Over Total Edge']
 df['Under Total Edge_orig'] = df['Under Total Edge']
 
 # ============================================================
-# 3. TOTALS: model_total = mean(KP, BT, EM, HA), non-regressed lookup
+# 3. TOTALS: KP+EM+HA required, BT optional, non-regressed lookup
 # ============================================================
-total_cols = ['projected_total_kenpom', 'projected_total_barttorvik', 'projected_total_evanmiya', 'projected_total_hasla']
-df['model_total'] = df[total_cols].mean(axis=1, skipna=False)
+df['model_total'] = mean_with_optional_barttorvik(
+    df,
+    ['projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla'],
+    'projected_total_barttorvik',
+)
 
 # average_total: non-regressed (raw model total), rounded to 0.5
 df['average_total'] = (df['model_total'] * 2).round() / 2
