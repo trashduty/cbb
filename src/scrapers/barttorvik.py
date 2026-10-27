@@ -318,7 +318,7 @@ def map_team_names(df, name_map):
     return df
 
 
-def get_barttorvik_df(days_ahead=10):
+def get_barttorvik_df(days_ahead=10, start_date=None):
     """
     Main function to scrape Barttorvik data using Selenium
 
@@ -341,7 +341,7 @@ def get_barttorvik_df(days_ahead=10):
 
     try:
         all_games = []
-        current_date = datetime.now()
+        current_date = datetime.strptime(start_date, '%Y-%m-%d') if start_date else datetime.now()
 
         console.print(f"[cyan]Scraping {days_ahead} days of Barttorvik data[/cyan]")
 
@@ -401,8 +401,17 @@ def get_barttorvik_df(days_ahead=10):
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Download Barttorvik schedule predictions")
+    parser.add_argument("--start-date", help="First game date, YYYY-MM-DD; defaults to today")
+    parser.add_argument("--days", type=int, default=10, help="Number of dates to fetch")
+    args = parser.parse_args()
+    if args.days < 1:
+        parser.error("--days must be positive")
     try:
-        df = get_barttorvik_df(days_ahead=10)
+        if args.start_date:
+            datetime.strptime(args.start_date, "%Y-%m-%d")
+        df = get_barttorvik_df(days_ahead=args.days, start_date=args.start_date)
     except Exception as error:
         console.print(f"[red]Barttorvik scrape failed:[/red] {error}")
         sys.exit(1)
