@@ -314,6 +314,14 @@ table{min-width:100%}th button{border:0;background:none!important;padding:0;colo
       total:[{key:'market_total',label:'Market total',type:'number'},{key:'average_total',label:'Model total',type:'number'},{key:'Over Cover Probability',label:'Over probability',type:'probability'},{key:'Under Cover Probability',label:'Under probability',type:'probability'},{key:'Over Total Edge',label:'Over edge',type:'edge'},{key:'Under Total Edge',label:'Under edge',type:'edge'},{key:'Total Consensus',label:'Total consensus',type:'text'}],
       ml:[{key:'Current Moneyline',label:'Market moneyline',type:'odds'},{key:'Moneyline Win Probability',label:'Win probability',type:'probability'},{key:'Moneyline Edge',label:'Moneyline edge',type:'ml_edge'},{key:'Moneyline Consensus',label:'Moneyline consensus',type:'text'}]
     };
+    // Put market edges directly after the team/matchup columns in each market tab.
+    for(const market of Object.keys(markets)){
+      const columns=markets[market];
+      markets[market]=[
+        ...columns.filter(column=>column.type==='edge'||column.type==='ml_edge'),
+        ...columns.filter(column=>column.type!=='edge'&&column.type!=='ml_edge')
+      ];
+    }
     const allColumns = [...common,...markets.spread,...markets.ml,...markets.total];
     const eastParts = timestamp => Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(timestamp)).filter(x=>x.type!=='literal').map(x=>[x.type,Number(x.value)]));
     const pad = n => String(n).padStart(2,'0');
