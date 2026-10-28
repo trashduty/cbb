@@ -9,9 +9,10 @@
 Generate Combo_Output.csv using specific model combos with lookup-table probabilities.
 
 Uses specific model combos as inputs to the same lookup tables as CBB_Output:
-- Spread: KP required + optional BT mean → 60/40 market-regressed → lookup table → cover_prob → edge
-- Moneyline: KP+EM mean (raw, no devigged blend) → edge
-- Over/Under: KP+EM+HA required + optional BT mean (non-regressed) → lookup table → cover_prob → edge
+- Spread: 35% KP + 45% EM + 20% BT → rounded lookup → cover_prob → edge
+- Moneyline: 35% KP + 45% EM + 20% BT win probability → edge
+- Over/Under: 35% KP + 45% EM + 20% BT total → rounded lookup → cover_prob → edge
+Missing BT uses 50% KP + 50% EM for that metric. Hasla is not weighted.
 
 Reads CBB_Output.csv and writes Combo_Output.csv (filtered to remove started games).
 All columns from CBB_Output.csv are preserved and filled.
@@ -64,16 +65,19 @@ def american_odds_to_implied_probability(odds):
 
 
 
-def mean_with_optional_barttorvik(frame, required_columns, barttorvik_column):
-    """Include BT when available, but require every other selected model."""
-    # Reindex also handles CSVs where the BT column is absent entirely.
-    values = frame.reindex(columns=required_columns + [barttorvik_column])
-    required_present = values[required_columns].notna().all(axis=1)
-    return values.mean(axis=1, skipna=True).where(required_present)
+def weighted_prediction(frame, kenpom_column, evanmiya_column, barttorvik_column):
+    """Require KP and EM; use 35/45/20 with BT or 50/50 without it."""
+    values = frame.reindex(columns=[kenpom_column, evanmiya_column, barttorvik_column])
+    values = values.apply(pd.to_numeric, errors='coerce').replace([np.inf, -np.inf], np.nan)
+    kp, em, bt = (values[column] for column in values.columns)
+    prediction = (0.35 * kp + 0.45 * em + 0.20 * bt).where(
+        bt.notna(), 0.50 * kp + 0.50 * em
+    )
+    return prediction.where(kp.notna() & em.notna())
 
 
 # ============================================================
-# 1. SPREAD: KP required, BT optional, then lookup table
+# 1. SPREAD: weighted KP/EM/BT, then lookup table
 # ============================================================
 
 # Back-calculate spread implied prob from CBB_Output's existing data
@@ -81,12 +85,12 @@ def mean_with_optional_barttorvik(frame, required_columns, barttorvik_column):
 df['spread_implied_prob'] = df['Spread Cover Probability'] - df['Edge For Covering Spread']
 df['spread_implied_prob'] = df['spread_implied_prob'].fillna(SPREAD_IMPLIED_DEFAULT)
 
-df['model_spread'] = mean_with_optional_barttorvik(
-    df, ['spread_kenpom'], 'spread_barttorvik'
+df['model_spread'] = weighted_prediction(
+    df, 'spread_kenpom', 'spread_evanmiya', 'spread_barttorvik'
 )
 
-# Predicted Outcome: 60% market + 40% model, rounded to 0.5
-df['Predicted Outcome'] = ((0.6 * df['market_spread'] + 0.4 * df['model_spread']) * 2).round() / 2
+# Display and lookup use the weighted model prediction, rounded to 0.5.
+df['Predicted Outcome'] = (df['model_spread'] * 2).round() / 2
 
 # Spread lookup
 try:
@@ -121,10 +125,11 @@ except FileNotFoundError:
 
 
 # ============================================================
-# 2. MONEYLINE: mean(KP, EM), raw (no devigged blend)
+# 2. MONEYLINE: weighted KP/EM/BT, raw (no devigged blend)
 # ============================================================
-ml_cols = ['win_prob_kenpom', 'win_prob_evanmiya']
-df['Moneyline Win Probability'] = df[ml_cols].mean(axis=1, skipna=False)
+df['Moneyline Win Probability'] = weighted_prediction(
+    df, 'win_prob_kenpom', 'win_prob_evanmiya', 'win_prob_barttorvik'
+)
 ml_implied = df['Current Moneyline'].apply(american_odds_to_implied_probability)
 df['Moneyline Edge'] = df['Moneyline Win Probability'] - ml_implied
 
@@ -138,12 +143,10 @@ df['Over Total Edge_orig'] = df['Over Total Edge']
 df['Under Total Edge_orig'] = df['Under Total Edge']
 
 # ============================================================
-# 3. TOTALS: KP+EM+HA required, BT optional, non-regressed lookup
+# 3. TOTALS: weighted KP/EM/BT, non-regressed lookup
 # ============================================================
-df['model_total'] = mean_with_optional_barttorvik(
-    df,
-    ['projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_hasla'],
-    'projected_total_barttorvik',
+df['model_total'] = weighted_prediction(
+    df, 'projected_total_kenpom', 'projected_total_evanmiya', 'projected_total_barttorvik'
 )
 
 # average_total: non-regressed (raw model total), rounded to 0.5
