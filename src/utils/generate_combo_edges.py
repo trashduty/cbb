@@ -296,6 +296,8 @@ column_order = [
     'Over Total Edge', 'Under Total Edge', 'Opening Over Edge', 'Opening Under Edge',
 ]
 
+column_order += ['Best Spread Book', 'Best Spread Line', 'Best Spread Price', 'Best Moneyline Book', 'Best Moneyline Price', 'Best Over Book', 'Best Over Line', 'Best Over Price', 'Best Under Book', 'Best Under Line', 'Best Under Price']
+
 available_columns = [col for col in column_order if col in df.columns]
 df = df[available_columns]
 
