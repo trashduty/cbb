@@ -1,7 +1,9 @@
 name: Basketball Data Scraper
 
 on:
-  workflow_dispatch:  # Season over - manual trigger only
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
