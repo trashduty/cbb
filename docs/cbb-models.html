@@ -305,32 +305,33 @@ td.cbb-team-name{text-align:left}
     const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]')};
     const state = {rows:[],fields:[],teams:[],selected:new Set(),market:'spread',sort:{key:'Game Time',direction:'asc'},loaded:false,busy:false,lastSuccess:null};
     const common = [
-      {key:'Game Time',label:'Game time · ET',type:'time'},
+      {key:'Game Time',label:'Game Time · ET',type:'time'},
       {key:'Game',label:'Matchup',type:'text'},
       {key:'Team',label:'Team',type:'text'}
     ];
     const markets = {
-      spread:[{key:'market_spread',label:'Market spread',type:'spread'},{key:'Best Spread Quote',label:'Best book · spread',type:'text'},{key:'Best Spread Edge',label:'Best spread edge',type:'edge'},{key:'Predicted Outcome',label:'Predicted outcome',type:'spread'},{key:'Spread Cover Probability',label:'Cover probability',type:'probability'},{key:'Edge For Covering Spread',label:'Spread edge',type:'edge'},{key:'Spread Consensus',label:'Spread consensus',type:'text'}],
-      total:[{key:'market_total',label:'Market total',type:'number'},{key:'Best Over Quote',label:'Best book · Over',type:'text'},{key:'Best Over Edge',label:'Best Over edge',type:'edge'},{key:'Best Under Quote',label:'Best book · Under',type:'text'},{key:'Best Under Edge',label:'Best Under edge',type:'edge'},{key:'average_total',label:'Model total',type:'number'},{key:'Over Cover Probability',label:'Over probability',type:'probability'},{key:'Under Cover Probability',label:'Under probability',type:'probability'},{key:'Over Total Edge',label:'Over edge',type:'edge'},{key:'Under Total Edge',label:'Under edge',type:'edge'},{key:'Total Consensus',label:'Total consensus',type:'text'}],
-      ml:[{key:'Current Moneyline',label:'Market moneyline',type:'odds'},{key:'Best Moneyline Quote',label:'Best book · moneyline',type:'text'},{key:'Best Moneyline Edge',label:'Best moneyline edge',type:'ml_edge'},{key:'Moneyline Win Probability',label:'Win probability',type:'probability'},{key:'Moneyline Edge',label:'Moneyline edge',type:'ml_edge'},{key:'Moneyline Consensus',label:'Moneyline consensus',type:'text'}]
+      spread:[{key:'market_spread',label:'Market Spread',type:'spread'},{key:'Best Spread Quote',label:'Best Book · Spread',type:'text'},{key:'Best Spread Edge',label:'Best Spread Edge',type:'edge'},{key:'Predicted Outcome',label:'Predicted Outcome',type:'spread'},{key:'Spread Cover Probability',label:'Cover Probability',type:'probability'},{key:'Edge For Covering Spread',label:'Spread Edge',type:'edge'},{key:'Spread Consensus',label:'Spread Consensus',type:'text'}],
+      total:[{key:'market_total',label:'Market Total',type:'number'},{key:'Best Over Quote',label:'Best Book · Over',type:'text'},{key:'Best Over Edge',label:'Best Over Edge',type:'edge'},{key:'Best Under Quote',label:'Best Book · Under',type:'text'},{key:'Best Under Edge',label:'Best Under Edge',type:'edge'},{key:'average_total',label:'Model Total',type:'number'},{key:'Over Cover Probability',label:'Over Probability',type:'probability'},{key:'Under Cover Probability',label:'Under Probability',type:'probability'},{key:'Over Total Edge',label:'Over Edge',type:'edge'},{key:'Under Total Edge',label:'Under Edge',type:'edge'},{key:'Total Consensus',label:'Total Consensus',type:'text'}],
+      ml:[{key:'Current Moneyline',label:'Market Moneyline',type:'odds'},{key:'Best Moneyline Quote',label:'Best Book · Moneyline',type:'text'},{key:'Best Moneyline Edge',label:'Best Moneyline Edge',type:'ml_edge'},{key:'Moneyline Win Probability',label:'Win Probability',type:'probability'},{key:'Moneyline Edge',label:'Moneyline Edge',type:'ml_edge'},{key:'Moneyline Consensus',label:'Moneyline Consensus',type:'text'}]
     };
     // Put market edges directly after the team/matchup columns in each market tab.
     for(const market of Object.keys(markets)){
       const columns=markets[market];
+      const isMarketEdge=column=>(column.type==='edge'||column.type==='ml_edge')&&!column.key.startsWith('Best ');
       markets[market]=[
-        ...columns.filter(column=>column.type==='edge'||column.type==='ml_edge'),
-        ...columns.filter(column=>column.type!=='edge'&&column.type!=='ml_edge')
+        ...columns.filter(isMarketEdge),
+        ...columns.filter(column=>!isMarketEdge(column))
       ];
     }
     // Opening values appear only in the combined view.
     const openingColumns = {
-      market_spread:{key:'Opening Spread',label:'Opening spread',type:'spread'},
-      'Current Moneyline':{key:'Opening Moneyline',label:'Opening moneyline',type:'odds'},
-      market_total:{key:'Opening Total',label:'Opening total',type:'number'}
+      market_spread:{key:'Opening Spread',label:'Opening Spread',type:'spread'},
+      'Current Moneyline':{key:'Opening Moneyline',label:'Opening Moneyline',type:'odds'},
+      market_total:{key:'Opening Total',label:'Opening Total',type:'number'}
     };
     const allColumns = [
       ...common,
-      {key:'Opening Odds Time',label:'Opening odds time · UTC',type:'text'},
+      {key:'Opening Odds Time',label:'Opening Odds Time · UTC',type:'text'},
       ...[...markets.spread,...markets.ml,...markets.total].flatMap(column=>
         openingColumns[column.key]?[column,openingColumns[column.key]]:[column])
     ];
