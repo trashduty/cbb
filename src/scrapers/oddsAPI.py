@@ -1020,6 +1020,8 @@ def process_final_dataframe(final_df):
         'spread_consensus_flag', 'moneyline_consensus_flag', 'over_consensus_flag', 'under_consensus_flag'
     ]
     
+    column_order += ['Spread Price', 'Over Price', 'Under Price']
+
     # Only keep columns that exist in the dataframe
     available_columns = [col for col in column_order if col in final_df.columns]
     
