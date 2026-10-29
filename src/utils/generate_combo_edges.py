@@ -76,6 +76,103 @@ def weighted_prediction(frame, kenpom_column, evanmiya_column, barttorvik_column
     return prediction.where(kp.notna() & em.notna())
 
 
+BEST_BOOK_COLUMNS = [
+    f'Best {market} {field}'
+    for market in ('Spread', 'Moneyline', 'Over', 'Under')
+    for field in (('Book', 'Price', 'Probability', 'Edge') if market == 'Moneyline'
+                  else ('Book', 'Line', 'Price', 'Probability', 'Edge'))
+]
+
+
+def add_best_book_edges(frame, quotes, spread_lookup, total_lookup):
+    """CFB-style selection: highest model probability minus quote implied probability.
+
+    Quote lines, prices, and books always stay together. Missing lookup matches
+    are excluded, never replaced by consensus probabilities or assumed prices.
+    """
+    frame = frame.copy()
+    for column in BEST_BOOK_COLUMNS:
+        frame[column] = None if column.endswith(' Book') else np.nan
+
+    def number(value):
+        try:
+            result = float(value)
+            return result if np.isfinite(result) else None
+        except (ValueError, TypeError):
+            return None
+
+    def half(value):
+        value = number(value)
+        return round(value * 2) / 2 if value is not None else None
+
+    def lookup_map(table, keys, probability):
+        result = {}
+        if table is None or not set(keys + [probability]).issubset(table.columns):
+            return result
+        for record in table.to_dict('records'):
+            key = tuple(number(record[k]) for k in keys)
+            value = number(record[probability])
+            if None not in key and value is not None and 0 <= value <= 1:
+                result[key] = value
+        return result
+
+    spread_probs = lookup_map(spread_lookup, ['total_category', 'market_spread', 'model_spread'], 'cover_prob')
+    over_probs = lookup_map(total_lookup, ['spread_category', 'market_total', 'model_total'], 'over_prob')
+    under_probs = lookup_map(total_lookup, ['spread_category', 'market_total', 'model_total'], 'under_prob')
+    required = {'Home Team', 'Away Team', 'Game Time', 'Team', 'Market', 'Bookmaker', 'Line', 'Price'}
+    if quotes is None or quotes.empty or not required.issubset(quotes.columns):
+        return frame, pd.DataFrame()
+
+    grouped = {}
+    for quote in quotes.to_dict('records'):
+        teams = tuple(sorted([str(quote['Home Team']), str(quote['Away Team'])]))
+        grouped.setdefault((teams, str(quote['Game Time'])), []).append(quote)
+
+    audit = []
+    for index, row in frame.iterrows():
+        teams = str(row.get('Game', '')).split(' vs. ')
+        if len(teams) != 2:
+            continue
+        candidates = {market: [] for market in ('Spread', 'Moneyline', 'Over', 'Under')}
+        for quote in grouped.get((tuple(sorted(teams)), str(row.get('Game Time'))), []):
+            market = quote['Market']
+            if market in ('Spread', 'Moneyline') and quote['Team'] != row.get('Team'):
+                continue
+            price = number(quote['Price'])
+            if price is None or abs(price) < 100 or not quote['Bookmaker']:
+                continue
+            implied = american_odds_to_implied_probability(price)
+            line = number(quote['Line'])
+            if market == 'Spread' and line is not None:
+                probability = spread_probs.get((number(row.get('total_category')), half(line), half(row.get('Predicted Outcome'))))
+            elif market == 'Moneyline':
+                probability = number(row.get('Moneyline Win Probability'))
+            elif market in ('Over', 'Under') and line is not None:
+                probabilities = over_probs if market == 'Over' else under_probs
+                probability = probabilities.get((number(row.get('spread_category')), half(line), half(row.get('average_total'))))
+            else:
+                continue
+            if probability is None or not 0 <= probability <= 1:
+                continue
+            edge = probability - implied
+            candidate = {'Book': str(quote['Bookmaker']), 'Line': line, 'Price': price,
+                         'Probability': probability, 'Edge': edge}
+            candidates[market].append(candidate)
+            audit.append({'Game': row.get('Game'), 'Game Time': row.get('Game Time'),
+                          'Team': row.get('Team'), 'Market': market, **candidate})
+        for market, options in candidates.items():
+            if not options:
+                continue
+            # CFB breaks equal-edge ties alphabetically by sportsbook.
+            best = min(options, key=lambda option: (-option['Edge'], option['Book'],
+                       option['Line'] if option['Line'] is not None else 0, option['Price']))
+            for field, value in best.items():
+                column = f'Best {market} {field}'
+                if column in BEST_BOOK_COLUMNS:
+                    frame.at[index, column] = value
+    return frame, pd.DataFrame(audit)
+
+
 # ============================================================
 # 1. SPREAD: weighted KP/EM/BT, then lookup table
 # ============================================================
@@ -200,6 +297,15 @@ except FileNotFoundError:
 
 
 
+# Rank each actual quote by its model-based edge, as in the CFB pipeline.
+quote_path = os.path.join(project_root, 'data', 'sportsbook_quotes.csv')
+quotes = pd.read_csv(quote_path, keep_default_na=False) if os.path.exists(quote_path) else None
+df, best_book_audit = add_best_book_edges(
+    df, quotes, globals().get('spreads_lookup_df'), globals().get('totals_lookup_df')
+)
+os.makedirs(os.path.join(project_root, 'data'), exist_ok=True)
+best_book_audit.to_csv(os.path.join(project_root, 'data', 'combo_sportsbook_odds_audit.csv'), index=False)
+
 # --- Drop consensus flag and std dev columns ---
 drop_cols = ['spread_consensus_flag', 'moneyline_consensus_flag',
              'over_consensus_flag', 'under_consensus_flag',
@@ -296,6 +402,8 @@ column_order = [
     'Over Total Edge', 'Under Total Edge', 'Opening Over Edge', 'Opening Under Edge',
 ]
 
+column_order += BEST_BOOK_COLUMNS
+
 available_columns = [col for col in column_order if col in df.columns]
 df = df[available_columns]
 
@@ -329,3 +437,4 @@ df = df[df['keep']].drop(columns=['parsed_time', 'keep'])
 df.to_csv(output_file, index=False)
 print(f"\nWrote {len(df)} rows to {output_file}")
 print("Done.")
+
