@@ -415,7 +415,21 @@ td.cbb-team-name{text-align:left}
         logos=next;logosLoaded=true;
       }catch(error){console.warn('Team logos could not be loaded:',error.message);}
     }
-    function teamLabel(team){
+
+    let injuryNames=new Map(), injuryNamesLoaded=false;
+    const injurySlug=name=>String(name).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/['’.]/g,'').replace(/&/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    async function loadInjuryNames(signal){
+      if(injuryNamesLoaded)return;
+      try{
+        const response=await fetch(new URL('./CBBAPI_crosswalk.csv',document.baseURI),{cache:'no-cache',signal});
+        if(!response.ok)throw new Error('Team crosswalk unavailable');
+        const parsed=parseCSV(await response.text(),['API']);
+        injuryNames=new Map(parsed.rows.filter(row=>row.API).map(row=>[logoKey(row.API),row.API]));
+        injuryNamesLoaded=true;
+      }catch(error){console.warn('Injury links could not be loaded:',error.message);}
+    }
+
+    function teamLabel(team, linkInjuries=false){
       const label=document.createElement('span');label.className='cbb-team-label';
       let url=logos.get(logoKey(team));
       // Some logo names omit the mascot; use only an unambiguous longest school prefix.
@@ -424,7 +438,12 @@ td.cbb-team-name{text-align:left}
         if(matches.length&&(!matches[1]||matches[0][0].length>matches[1][0].length))url=matches[0][1];
       }
       if(url){const img=document.createElement('img');img.className='team-logo';img.src=url;img.alt='';img.loading='lazy';img.addEventListener('error',()=>img.remove(),{once:true});label.append(img);}
-      label.append(document.createTextNode(team));return label;
+      const apiName=injuryNames.get(logoKey(team));
+      if(linkInjuries&&apiName){
+        const link=document.createElement('a');link.href='https://www.covers.com/sport/basketball/ncaab/teams/main/'+injurySlug(apiName)+'/injuries';
+        link.target='_blank';link.rel='noopener noreferrer';link.textContent=team;link.title=team+' injury report (opens in a new tab)';label.append(link);
+      }else label.append(document.createTextNode(team));
+      return label;
     }
     function matchupLabel(game){
       const label=document.createElement('span');label.className='cbb-matchup-label';
@@ -493,7 +512,7 @@ td.cbb-team-name{text-align:left}
         const tr=document.createElement('tr');if(grouped)tr.className='team-subrow';
         for(const col of columns){const td=document.createElement('td');td.className=(col.type==='text'||col.type==='time')?'cbb-left':'cbb-number';
           const text=format(row[col.key],col.type);td.textContent=text;
-          if(col.key==='Team'){td.classList.add('cbb-team-name');td.replaceChildren(teamLabel(row.Team));}if(col.key==='Game'){td.classList.add('cbb-game');td.title=text;td.replaceChildren(matchupLabel(row.Game));}
+          if(col.key==='Team'){td.classList.add('cbb-team-name');td.replaceChildren(teamLabel(row.Team,true));}if(col.key==='Game'){td.classList.add('cbb-game');td.title=text;td.replaceChildren(matchupLabel(row.Game));}
           if(text==='—')td.classList.add('cbb-missing');
           if(['edge','ml_edge'].includes(col.type)&&numeric(row[col.key])!==null){td.textContent='';const badge=document.createElement('span');badge.className='cbb-edge';badge.textContent=text;Object.assign(td.style,edgeStyle(numeric(row[col.key]),col.type));td.append(badge);}
           tr.append(td);
@@ -513,7 +532,7 @@ td.cbb-team-name{text-align:left}
         const url=new URL(CSV_URL, document.baseURI);url.searchParams.set('_btb',Date.now());
         const response=await fetch(url,{cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error(`HTTP ${response.status}`);
         const parsed=parseCSV(await response.text());const now=Date.now();
-        await loadLogos(controller.signal);
+        await Promise.all([loadLogos(controller.signal),loadInjuryNames(controller.signal)]);
         for(const row of parsed.rows){row['Spread Consensus']=consensus(row,'spread');row['Moneyline Consensus']=consensus(row,'ml');row['Total Consensus']=consensus(row,'total');}
         parsed.fields.push('Spread Consensus','Moneyline Consensus','Total Consensus');
         state.rows=[...new Map(parsed.rows.filter(r=>r.Game&&r.Team).map(r=>[JSON.stringify([r.Game,r.Team,r['Game Time']]),{...r,_kickoff:kickoff(r['Game Time'],now)}])).values()];
