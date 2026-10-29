@@ -465,10 +465,10 @@ td.cbb-team-name{text-align:left}
     function bestBookText(row,market){
       const book=row['Best '+market+' Book'],price=numeric(row['Best '+market+' Price']);
       if(!book||price===null)return '';
-      if(market==='Moneyline')return book+' · '+format(price,'odds');
+      if(market==='Moneyline')return book+' '+format(price,'odds');
       const line=numeric(row['Best '+market+' Line']);
       if(line===null)return '';
-      return book+' · '+(market==='Spread'?format(line,'spread'):market+' '+format(line,'number'))+' ('+format(price,'odds')+')';
+      return book+' '+(market==='Spread'?format(line,'spread'):market+' '+format(line,'number'))+' ('+format(price,'odds')+')';
     }
 
     function edgeStyle(value,type){
