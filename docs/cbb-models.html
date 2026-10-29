@@ -516,7 +516,7 @@ td.cbb-team-name{text-align:left}
     }
     function renderTable(){
       const grouped=state.market==='spread'||state.market==='ml'||state.market==='all';
-      const columns=(state.market==='all'?allColumns.filter(c=>c.key!=='Game'&&c.key!=='Game Time'):state.market==='total'?[...common.filter(c=>c.key!=='Team'),...markets.total]:[common.find(c=>c.key==='Team'),...markets[state.market]]).filter(c=>!state.loaded||state.fields.includes(c.key));
+      const columns=(state.market==='all'?allColumns.filter(c=>c.key!=='Game'&&c.key!=='Game Time'):state.market==='total'?[...common.filter(c=>c.key!=='Team'),...markets.total]:[common.find(c=>c.key==='Team'),...markets[state.market]]).filter(c=>!state.loaded||state.fields.includes(c.key)).sort((a,b)=>Number(a.key.startsWith('Best '))-Number(b.key.startsWith('Best ')));
       const head=document.createElement('tr');
       for(const col of columns){
         const th=document.createElement('th');th.scope='col';if(col.type==='text'||col.type==='time')th.className='cbb-left';
