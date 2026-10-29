@@ -404,6 +404,8 @@ column_order = [
 
 column_order += BEST_BOOK_COLUMNS
 
+column_order += ['Spread Price', 'Over Price', 'Under Price']
+
 available_columns = [col for col in column_order if col in df.columns]
 df = df[available_columns]
 
