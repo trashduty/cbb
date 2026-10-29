@@ -37,8 +37,8 @@ logging.basicConfig(
 logger = logging.getLogger("rich")
 console = Console()
 
-# Bookmakers to fetch from The Odds API (5 major US books)
-ALLOWED_BOOKMAKERS = ["draftkings", "fanduel", "betmgm", "caesars", "espnbet"]
+# Use the same sportsbook keys as the CFB best-book pipeline.
+ALLOWED_BOOKMAKERS = ["betmgm", "betrivers", "draftkings", "fanduel", "espnbet", "fanatics", "williamhill_us"]
 BOOKMAKERS_PARAM = ",".join(ALLOWED_BOOKMAKERS)
 
 # Determine the project root directory
@@ -505,6 +505,37 @@ def get_totals_odds(data):
 
     return pd.DataFrame(totals_records)
 
+def save_sportsbook_quotes(data):
+    """Save unaggregated quotes from the same API response as consensus odds."""
+    columns = ['Game Time', 'Home Team', 'Away Team', 'Team', 'Market', 'Bookmaker', 'Line', 'Price']
+    records = []
+    for game in data:
+        home, away = game.get('home_team'), game.get('away_team')
+        timestamp = pd.to_datetime(game.get('commence_time'), utc=True, errors='coerce')
+        if not home or not away or pd.isna(timestamp):
+            continue
+        game_time = timestamp.tz_convert('America/New_York').strftime('%b %d %I:%M%p ET')
+        for book in game.get('bookmakers', []):
+            title = book.get('title') or book.get('key')
+            if not title:
+                continue
+            for market in book.get('markets', []):
+                for outcome in market.get('outcomes', []):
+                    name = outcome.get('name')
+                    market_name = {'spreads': 'Spread', 'h2h': 'Moneyline'}.get(market.get('key'))
+                    if market.get('key') == 'totals' and name in ('Over', 'Under'):
+                        market_name = name
+                    elif name not in (home, away):
+                        continue
+                    if not market_name:
+                        continue
+                    records.append({'Game Time': game_time, 'Home Team': home, 'Away Team': away,
+                                    'Team': name if market_name in ('Spread', 'Moneyline') else '',
+                                    'Market': market_name, 'Bookmaker': title,
+                                    'Line': outcome.get('point'), 'Price': outcome.get('price')})
+    pd.DataFrame(records, columns=columns).to_csv(os.path.join(data_dir, 'sportsbook_quotes.csv'), index=False)
+
+
 def get_combined_odds():
     """
     Fetches odds data from API and returns a combined DataFrame with all odds info
@@ -512,6 +543,8 @@ def get_combined_odds():
     data = get_odds_data()
     if not data:
         return pd.DataFrame()
+
+    save_sportsbook_quotes(data)
 
     # Remove the time-based filtering completely
     # Keep all games, regardless of their start time
