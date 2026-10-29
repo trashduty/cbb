@@ -505,61 +505,6 @@ def get_totals_odds(data):
 
     return pd.DataFrame(totals_records)
 
-
-def get_best_book_odds(data):
-    """Keep real book/line/price quotes; prefer the best line, then the best payout."""
-    records = []
-    def valid_number(value):
-        try:
-            return value is not None and np.isfinite(float(value))
-        except (ValueError, TypeError):
-            return False
-
-    def best_quote(quotes, direction=0):
-        if not quotes:
-            return (None, None, None)
-        # Larger spread is better; lower Over/higher Under is better.
-        return min(quotes, key=lambda q: (
-            -direction * q[1] if direction else 0,
-            american_odds_to_implied_probability(q[2]),
-            q[0]
-        ))
-
-    for game in data:
-        home, away, time = game.get('home_team'), game.get('away_team'), game.get('commence_time')
-        if not all([home, away, time]):
-            continue
-        spreads, moneylines = {home: [], away: []}, {home: [], away: []}
-        totals = {'Over': [], 'Under': []}
-        for book in game.get('bookmakers', []):
-            title = book.get('title') or book.get('key')
-            if not title:
-                continue
-            for market in book.get('markets', []):
-                for outcome in market.get('outcomes', []):
-                    name, price, point = outcome.get('name'), outcome.get('price'), outcome.get('point')
-                    if not valid_number(price) or abs(float(price)) < 100:
-                        continue
-                    price = float(price)
-                    if market.get('key') == 'h2h' and name in moneylines:
-                        moneylines[name].append((title, 0, price))
-                    elif market.get('key') == 'spreads' and name in spreads and valid_number(point):
-                        spreads[name].append((title, float(point), price))
-                    elif market.get('key') == 'totals' and name in totals and valid_number(point):
-                        totals[name].append((title, float(point), price))
-        over, under = best_quote(totals['Over'], -1), best_quote(totals['Under'], 1)
-        for team in (home, away):
-            spread, ml = best_quote(spreads[team], 1), best_quote(moneylines[team])
-            records.append({
-                'Game Time': time, 'Home Team': home, 'Away Team': away, 'Team': team,
-                'Best Spread Book': spread[0], 'Best Spread Line': spread[1], 'Best Spread Price': spread[2],
-                'Best Moneyline Book': ml[0], 'Best Moneyline Price': ml[2],
-                'Best Over Book': over[0], 'Best Over Line': over[1], 'Best Over Price': over[2],
-                'Best Under Book': under[0], 'Best Under Line': under[1], 'Best Under Price': under[2]
-            })
-    return pd.DataFrame(records)
-
-
 def get_combined_odds():
     """
     Fetches odds data from API and returns a combined DataFrame with all odds info
@@ -603,10 +548,6 @@ def get_combined_odds():
         how='outer'
     )
     logger.info(f"\n[cyan]Sample Game Times after second merge:[/cyan]\n{combined_df['Game Time'].head()}")
-
-    best_books = get_best_book_odds(filtered_data)
-    if not best_books.empty:
-        combined_df = combined_df.merge(best_books, on=['Game Time', 'Home Team', 'Away Team', 'Team'], how='left')
 
     # Create game identifier
     combined_df.insert(0, 'Game',
@@ -1046,8 +987,6 @@ def process_final_dataframe(final_df):
         'spread_consensus_flag', 'moneyline_consensus_flag', 'over_consensus_flag', 'under_consensus_flag'
     ]
     
-    column_order += ['Best Spread Book', 'Best Spread Line', 'Best Spread Price', 'Best Moneyline Book', 'Best Moneyline Price', 'Best Over Book', 'Best Over Line', 'Best Over Price', 'Best Under Book', 'Best Under Line', 'Best Under Price']
-
     # Only keep columns that exist in the dataframe
     available_columns = [col for col in column_order if col in final_df.columns]
     
