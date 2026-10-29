@@ -76,6 +76,7 @@ jobs:
           cp CBB_Output.csv docs/CBB_Output.csv
           cp Combo_Output.csv docs/Combo_Output.csv
           cp data/logos.csv docs/logos.csv
+          cp CBBAPI_crosswalk.csv docs/CBBAPI_crosswalk.csv
           [ -f MM_Output_Final.csv ] && cp MM_Output_Final.csv docs/MM_Output_Final.csv || true
           [ -f MM_Output_Final_Close.csv ] && cp MM_Output_Final_Close.csv docs/MM_Output_Final_Close.csv || true
 
