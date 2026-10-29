@@ -292,7 +292,7 @@ td.cbb-team-name{text-align:left}
   </div>
   <div class="cbb-meta"><span data-label="count">Loading games…</span><span class="cbb-status" data-label="status" role="status" aria-live="polite">Connecting to model output…</span></div>
   <div class="cbb-scroll" tabindex="0" role="region" aria-label="Model outputs; scroll horizontally for more columns"><table><caption hidden>BTB college basketball model outputs. All game times are Eastern.</caption><thead></thead><tbody><tr><td class="cbb-empty">Loading model outputs…</td></tr></tbody></table></div>
-  <footer class="cbb-footer"><span class="cbb-dot"></span>Green: spread/total edge ≥3%; moneyline edge ≥10%. Edge values are shown as calculated.<span class="cbb-note">Consensus: Yes requires all three models to favor the same bet. Total consensus requires all three above the market (Over) or all three below it (Under). Ties or missing models show No. All game times ET. Upcoming only hides games at tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
+  <footer class="cbb-footer"><span class="cbb-dot"></span>Green: positive edge; red: negative edge; gray: zero edge. Edge values are shown as calculated.<span class="cbb-note">Consensus: Yes requires all three models to favor the same bet. Total consensus requires all three above the market (Over) or all three below it (Under). Ties or missing models show No. All game times ET. Upcoming only hides games at tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
   <script>
   (() => {
     'use strict';
@@ -301,7 +301,6 @@ td.cbb-team-name{text-align:left}
     root.dataset.initialized = 'true';
     const CSV_URL = root.dataset.csvUrl;
     const REFRESH_MS = 60000;
-    const EDGE_THRESHOLD = 0.03, ML_EDGE_THRESHOLD = 0.10;
     const $ = selector => root.querySelector(selector);
     const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]')};
     const state = {rows:[],fields:[],teams:[],selected:new Set(),market:'spread',sort:{key:'Game Time',direction:'asc'},loaded:false,busy:false,lastSuccess:null};
@@ -453,9 +452,12 @@ td.cbb-team-name{text-align:left}
     }
 
     function edgeStyle(value,type){
-      const threshold=type==='ml_edge'?ML_EDGE_THRESHOLD:EDGE_THRESHOLD;
-      const diff=(value-threshold)*100;
-      return value>=threshold?{background:`hsl(120 70% ${Math.max(95-diff*8,30)}%)`,color:diff>10?'#fff':'#15442b'}:{background:`hsl(0 80% ${Math.max(95-Math.abs(diff)*8,75)}%)`,color:'#803b35'};
+      if(value===0)return {background:'#f2f2f2',color:'#555'};
+      const points=Math.abs(value)*100;
+      const lightness=value>0?Math.max(95-points*8,30):Math.max(95-points*8,75);
+      return value>0
+        ?{background:`hsl(120 70% ${lightness}%)`,color:lightness<50?'#fff':'#15442b'}
+        :{background:`hsl(0 80% ${lightness}%)`,color:'#803b35'};
     }
     function visibleTeams(){const q=controls.teamSearch.value.toLowerCase().trim();return state.teams.filter(t=>t.toLowerCase().includes(q));}
     function renderPicker(){
