@@ -322,7 +322,18 @@ td.cbb-team-name{text-align:left}
         ...columns.filter(column=>column.type!=='edge'&&column.type!=='ml_edge')
       ];
     }
-    const allColumns = [...common,...markets.spread,...markets.ml,...markets.total];
+    // Opening values appear only in the combined view.
+    const openingColumns = {
+      market_spread:{key:'Opening Spread',label:'Opening spread',type:'spread'},
+      'Current Moneyline':{key:'Opening Moneyline',label:'Opening moneyline',type:'odds'},
+      market_total:{key:'Opening Total',label:'Opening total',type:'number'}
+    };
+    const allColumns = [
+      ...common,
+      {key:'Opening Odds Time',label:'Opening odds time · UTC',type:'text'},
+      ...[...markets.spread,...markets.ml,...markets.total].flatMap(column=>
+        openingColumns[column.key]?[column,openingColumns[column.key]]:[column])
+    ];
     const eastParts = timestamp => Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(timestamp)).filter(x=>x.type!=='literal').map(x=>[x.type,Number(x.value)]));
     const pad = n => String(n).padStart(2,'0');
     const dateKey = timestamp => {const p=eastParts(timestamp);return `${p.year}-${pad(p.month)}-${pad(p.day)}`;};
