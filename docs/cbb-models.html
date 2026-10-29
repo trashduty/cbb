@@ -473,6 +473,15 @@ td.cbb-team-name{text-align:left}
       return book+' '+(market==='Spread'?format(line,'spread'):market+' '+format(line,'number'))+' ('+format(price,'odds')+')';
     }
 
+
+    function marketLineText(row,col){
+      const line=format(row[col.key],col.type);
+      if(line==='—')return line;
+      if(col.key==='market_spread')return line+' ('+format(row['Spread Price'],'odds')+')';
+      if(col.key==='market_total')return line+' (Over '+format(row['Over Price'],'odds')+' / Under '+format(row['Under Price'],'odds')+')';
+      return line;
+    }
+
     function edgeStyle(value,type){
       if(value===0)return {background:'#f2f2f2',color:'#555'};
       const points=Math.abs(value)*100;
@@ -535,7 +544,7 @@ td.cbb-team-name{text-align:left}
         if(grouped&&k!==previousGroup){const header=document.createElement('tr');header.className='game-group-header';const cell=document.createElement('td');cell.colSpan=columns.length;const title=document.createElement('span');title.className='game-group-title';title.append(matchupLabel(row.Game));const meta=document.createElement('span');meta.className='game-meta';meta.textContent=row['Game Time']||'';cell.append(title,meta);header.append(cell);body.append(header);previousGroup=k;}
         const tr=document.createElement('tr');if(grouped)tr.className='team-subrow';
         for(const col of columns){const td=document.createElement('td');td.className=(col.type==='text'||col.type==='time')?'cbb-left':'cbb-number';
-          const text=format(row[col.key],col.type);td.textContent=text;
+          const text=marketLineText(row,col);td.textContent=text;
           if(col.key==='Team'){td.classList.add('cbb-team-name');td.replaceChildren(teamLabel(row.Team,true));}if(col.key==='Game'){td.classList.add('cbb-game');td.title=text;td.replaceChildren(matchupLabel(row.Game));}
           if(text==='—')td.classList.add('cbb-missing');
           if(['edge','ml_edge'].includes(col.type)&&numeric(row[col.key])!==null){td.textContent='';const badge=document.createElement('span');badge.className='cbb-edge';badge.textContent=text;Object.assign(td.style,edgeStyle(numeric(row[col.key]),col.type));td.append(badge);}
