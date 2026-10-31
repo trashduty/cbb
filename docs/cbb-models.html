@@ -513,9 +513,14 @@ td.cbb-team-name{text-align:left}
       if(dates.includes(selectedDate))controls.date.value=selectedDate;
       renderPicker();
     }
+    function hasModelOutput(row,market='all'){
+      const columns={spread:'model_spread',total:'model_total',ml:'Moneyline Win Probability'};
+      if(market==='all')return Object.values(columns).some(column=>numeric(row[column])!==null);
+      return numeric(row[columns[market]])!==null;
+    }
     function processedRows(now=Date.now()){
       const q=controls.search.value.trim().toLowerCase();
-      let rows=state.rows.filter(r=>(!controls.upcoming.checked||r._kickoff===null||r._kickoff>now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
+      let rows=state.rows.filter(r=>hasModelOutput(r,state.market)&&(!controls.upcoming.checked||r._kickoff===null||r._kickoff>now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
       const config=allColumns.find(c=>c.key===state.sort.key);
       rows=rows.slice().sort((a,b)=>{
         const value=r=>state.sort.key==='Game Time'?r._kickoff:config?.type==='text'?r[state.sort.key]:numeric(r[state.sort.key]);
@@ -570,7 +575,7 @@ td.cbb-team-name{text-align:left}
         parsed.fields.push('Spread Consensus','Moneyline Consensus','Total Consensus');
         for(const row of parsed.rows)for(const market of ['Spread','Moneyline','Over','Under'])row['Best '+market+' Quote']=bestBookText(row,market);
         parsed.fields.push('Best Spread Quote','Best Moneyline Quote','Best Over Quote','Best Under Quote');
-        state.rows=[...new Map(parsed.rows.filter(r=>r.Game&&r.Team).map(r=>[JSON.stringify([r.Game,r.Team,r['Game Time']]),{...r,_kickoff:kickoff(r['Game Time'],now)}])).values()];
+        state.rows=[...new Map(parsed.rows.filter(r=>r.Game&&r.Team&&hasModelOutput(r)).map(r=>[JSON.stringify([r.Game,r.Team,r['Game Time']]),{...r,_kickoff:kickoff(r['Game Time'],now)}])).values()];
         state.fields=parsed.fields;state.loaded=true;state.lastSuccess=new Date();prepareFilters();renderTable();
         const status=$('[data-label=status]');status.dataset.error='false';status.textContent='Checked '+state.lastSuccess.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})+' · Refreshes every minute';
       }catch(error){
