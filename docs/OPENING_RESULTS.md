@@ -4,15 +4,15 @@ Public page: `docs/cbb-results.html` (GitHub Pages `/cbb/cbb-results.html`). The
 
 ## Snapshot policy
 
-This is a forward-only record of the weighted Combo model, not the legacy CBB/Hasla grader and not Best Book performance.
+This is a forward-only record of first-evaluable Best Book quotes evaluated by the weighted Combo model, separate from the legacy CBB/Hasla grader.
 
-After each successful Combo generation, `uv run src/utils/track_opening_results.py --capture` freezes each selection's first pregame **DraftKings** quote observed by this tracker. It records event ID, scheduled tipoff, capture timestamp, teams, side, line, price, contemporaneous model prediction, lookup probability, implied probability, edge, and eligibility. It captures Spread and Moneyline for each team and Over/Under once per game.
+After each successful Combo generation, `uv run src/utils/track_opening_results.py --capture` freezes each selection's first **evaluable pregame Best Book** quote: the highest calculated edge across all available tracked sportsbooks, with ties resolved alphabetically by book, matching the live board's ranking. It records event ID, scheduled tipoff, capture timestamp, teams, side, line, price, contemporaneous model prediction, lookup probability, implied probability, edge, and eligibility. It captures Spread and Moneyline for each team and Over/Under once per game.
 
 The snapshot is keyed by API event ID + market + selection. Reruns and later quotes cannot overwrite the opening line, model, or edge. A newly encountered event is not assumed to have the sportsbook's historical opening price: the public page explicitly calls it the first captured price after tracking began. Capture requires a fresh API snapshot (at most 90 minutes old) and a game that has not tipped off. Bookmaker timestamps may be older than fetch time; these are observed quotes, not a guaranteed first publication time.
 
-All quote snapshots are retained, including negative/zero edges and missing model probabilities. The ledger includes only selections whose unrounded edge was strictly positive **at first capture**. Missing model/lookup probabilities are never reconstructed from later predictions. This avoids retrospective selection bias. Prior records are not backfilled from current models or from legacy `Opening ... Edge` fields.
+For new captures, quotes without model/lookup probabilities cannot be ranked and are skipped until an evaluable pregame capture exists. That capture is timestamped when it happens, never backdated. One highest-edge quote per selection is frozen, including negative/zero edges. The ledger includes only selections whose unrounded edge was strictly positive **at first evaluable capture**. Missing probabilities in an already frozen record are never filled from later predictions. This avoids retrospective selection bias. Existing DraftKings-only snapshots are preserved, including their exclusions; they are not converted to Best Book retroactively. The snapshot note and book identify provenance. Prior records are not backfilled from current models or from legacy `Opening ... Edge` fields.
 
-Spread and total probabilities use the CBB lookup tables at the captured book line, using that capture's rounded weighted Combo prediction and category. Moneyline uses the weighted Combo win probability. Edge = model probability − implied probability of the captured odds. The current market and Best Book columns are separate analyses.
+Spread and total probabilities use the CBB lookup tables at the captured book line, using that capture's rounded weighted Combo prediction and category. Moneyline uses the weighted Combo win probability. Edge = model probability − implied probability of the captured odds. The live market and Best Book columns continue to update; this ledger retains only its first evaluable Best Book capture.
 
 ## Files
 
@@ -23,6 +23,8 @@ Spread and total probabilities use the CBB lookup tables at the captured book li
 - `docs/cbb_opening_results.json`: page payload with details, market summaries, and tier summaries.
 
 Do not delete the authoritative snapshot CSV; the tracker would regard selections as new. Ledger/JSON can be regenerated from snapshots and score cache. Opening fields are immutable; grading fields can update when the score provider corrects a final.
+
+The model board does not link to this validation page. The direct GitHub Pages URL is still public; removing navigation is not access control.
 
 ## Automated grading
 
