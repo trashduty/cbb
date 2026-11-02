@@ -17,7 +17,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-02T15:51:25Z"
+    "last_update": "2026-11-02T16:06:36Z"
   },
   "d961840cf470389306fa79cf82f5d46c": {
     "id": "d961840cf470389306fa79cf82f5d46c",
@@ -37,6 +37,66 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-02T15:51:25Z"
+    "last_update": "2026-11-02T16:06:36Z"
+  },
+  "7dc58df9af17b42764b2571a22a8f309": {
+    "id": "7dc58df9af17b42764b2571a22a8f309",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T08:05:40Z",
+    "completed": true,
+    "home_team": "Northern Illinois Huskies",
+    "away_team": "Grambling St Tigers",
+    "scores": [
+      {
+        "name": "Grambling St Tigers",
+        "score": "89"
+      },
+      {
+        "name": "Northern Illinois Huskies",
+        "score": "87"
+      }
+    ],
+    "last_update": "2026-11-02T16:24:58Z"
+  },
+  "cbbce01a444134baf2a8fa533eca853e": {
+    "id": "cbbce01a444134baf2a8fa533eca853e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T11:00:00Z",
+    "completed": true,
+    "home_team": "Merrimack Warriors",
+    "away_team": "Appalachian St Mountaineers",
+    "scores": [
+      {
+        "name": "Appalachian St Mountaineers",
+        "score": "63"
+      },
+      {
+        "name": "Merrimack Warriors",
+        "score": "49"
+      }
+    ],
+    "last_update": "2026-11-02T16:24:58Z"
+  },
+  "38f469202f748211c7d5bf585a0f4458": {
+    "id": "38f469202f748211c7d5bf585a0f4458",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T14:08:48Z",
+    "completed": true,
+    "home_team": "Queens University Royals",
+    "away_team": "Winthrop Eagles",
+    "scores": [
+      {
+        "name": "Queens University Royals",
+        "score": "103"
+      },
+      {
+        "name": "Winthrop Eagles",
+        "score": "98"
+      }
+    ],
+    "last_update": "2026-11-02T16:24:58Z"
   }
 }
