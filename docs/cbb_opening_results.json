@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02T23:04:43.199517+00:00",
-  "score_status": "Scores not requested in this run",
+  "updated_at": "2026-11-02T23:22:09.516177+00:00",
+  "score_status": "Score update successful",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -12,11 +12,11 @@
       "bet_type": "Spread",
       "edge_tier": "All",
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
-      "pending": 84,
-      "win_rate": 0.3333333333333333,
-      "profit_units": -1.1071428571428572
+      "pending": 83,
+      "win_rate": 0.25,
+      "profit_units": -2.107142857142857
     },
     {
       "bet_type": "Spread",
@@ -42,11 +42,11 @@
       "bet_type": "Spread",
       "edge_tier": "3\u20135.9%",
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "pending": 22,
-      "win_rate": null,
-      "profit_units": 0
+      "pending": 21,
+      "win_rate": 0.0,
+      "profit_units": -1.0
     },
     {
       "bet_type": "Spread",
@@ -62,11 +62,11 @@
       "bet_type": "Total",
       "edge_tier": "All",
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "pending": 72,
-      "win_rate": 1.0,
-      "profit_units": 1.8783068783068781
+      "pending": 71,
+      "win_rate": 0.6666666666666666,
+      "profit_units": 0.8783068783068781
     },
     {
       "bet_type": "Total",
@@ -82,11 +82,11 @@
       "bet_type": "Total",
       "edge_tier": "1\u20132.9%",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "pending": 33,
-      "win_rate": 1.0,
-      "profit_units": 0.9523809523809523
+      "pending": 32,
+      "win_rate": 0.5,
+      "profit_units": -0.04761904761904767
     },
     {
       "bet_type": "Total",
@@ -112,11 +112,11 @@
       "bet_type": "Moneyline",
       "edge_tier": "All",
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
-      "pending": 52,
-      "win_rate": 0.5,
-      "profit_units": 1.9928571428571429
+      "pending": 51,
+      "win_rate": 0.4,
+      "profit_units": 0.9928571428571429
     },
     {
       "bet_type": "Moneyline",
@@ -132,11 +132,11 @@
       "bet_type": "Moneyline",
       "edge_tier": "1\u20132.9%",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "pending": 9,
-      "win_rate": 1.0,
-      "profit_units": 0.8928571428571429
+      "pending": 8,
+      "win_rate": 0.5,
+      "profit_units": -0.1071428571428571
     },
     {
       "bet_type": "Moneyline",
@@ -506,11 +506,11 @@
       "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 82.0,
+      "away_score": 54.0,
+      "graded_at": "2026-11-02T23:22:09.516177+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "a477f229528edf369a334766",
@@ -533,11 +533,11 @@
       "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 82.0,
+      "away_score": 54.0,
+      "graded_at": "2026-11-02T23:22:09.516177+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "4b21c08cb556a4bcc95e998a",
@@ -560,11 +560,11 @@
       "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 82.0,
+      "away_score": 54.0,
+      "graded_at": "2026-11-02T23:22:09.516177+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "a8cf46edeb86095f60e35ed2",
