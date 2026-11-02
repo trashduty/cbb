@@ -1,1 +1,42 @@
-{}
+{
+  "5bee3fb00be225402b2d2d7842398207": {
+    "id": "5bee3fb00be225402b2d2d7842398207",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-01T14:30:00Z",
+    "completed": true,
+    "home_team": "Notre Dame Fighting Irish",
+    "away_team": "Villanova Wildcats",
+    "scores": [
+      {
+        "name": "Villanova Wildcats",
+        "score": "72"
+      },
+      {
+        "name": "Notre Dame Fighting Irish",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-02T07:24:35Z"
+  },
+  "d961840cf470389306fa79cf82f5d46c": {
+    "id": "d961840cf470389306fa79cf82f5d46c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T05:03:40Z",
+    "completed": true,
+    "home_team": "Liberty Flames",
+    "away_team": "High Point Panthers",
+    "scores": [
+      {
+        "name": "High Point Panthers",
+        "score": "72"
+      },
+      {
+        "name": "Liberty Flames",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-02T07:24:35Z"
+  }
+}
