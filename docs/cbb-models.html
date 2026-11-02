@@ -280,7 +280,9 @@ main{max-width:none;margin:0}#btb-cbb{font-family:inherit;color:#333;margin:0;bo
 table{min-width:100%}th button{border:0;background:none!important;padding:0;color:white;font-size:inherit;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}th:after{content:none}.cbb-arrow{font-size:.7rem;opacity:.5}td.cbb-number{text-align:center;font-variant-numeric:tabular-nums}.cbb-edge{display:block;padding:0;font-weight:400}.cbb-missing{color:#888}.cbb-footer{font-size:.75rem;color:#666;padding:12px 0;line-height:1.6}.cbb-note{display:block}.cbb-empty{text-align:center;padding:30px;white-space:normal}button:focus-visible,summary:focus-visible{outline:2px solid #2c3e50;outline-offset:2px}@media(max-width:650px){body{margin:12px}.cbb-toolbar{gap:8px}.cbb-search{flex-basis:100%}.game-meta{display:block;margin:4px 0 0}}
 .cbb-team-label{display:inline-flex;align-items:center;gap:8px;vertical-align:middle}.cbb-matchup-label{display:inline-flex;align-items:center;gap:8px}.team-logo{flex-shrink:0}.game-group-title{vertical-align:middle}
 td.cbb-team-name{text-align:left}
+#btb-cbb .cbb-instructions-link{margin:0 0 12px;font-size:.9rem}#btb-cbb .cbb-instructions-link a,#btb-cbb .cbb-instructions a{color:#2c3e50;text-decoration:underline}#btb-cbb .cbb-instructions{margin:24px 0 0;padding:24px;background:#fff;border:1px solid #d8e2ee;border-radius:8px;max-width:1000px;line-height:1.65;scroll-margin-top:16px;font-size:.95rem}#btb-cbb .cbb-instructions h3{margin:0 0 14px;color:#2c3e50;font-size:1.35rem}#btb-cbb .cbb-instructions h4{margin:24px 0 8px;color:#2c3e50;font-size:1.05rem}#btb-cbb .cbb-instructions p{margin:0 0 14px}#btb-cbb .cbb-instructions ul{padding-left:22px;margin:0 0 14px}#btb-cbb .cbb-instructions li{margin:0 0 10px}@media(max-width:650px){#btb-cbb .cbb-instructions{padding:16px;font-size:.9rem}}
 </style>
+  <p class="cbb-instructions-link"><a href="#cbb-instructions">Instructions: How To Use This Table ↓</a></p>
   <header class="cbb-top"><div><p class="cbb-eyebrow">BTB ANALYTICS · COLLEGE BASKETBALL</p><h2>CBB Model Outputs</h2><p class="cbb-sub">Compare the market with our model. See the probabilities. Make your call.</p></div><span class="cbb-live">Checks for updates every minute</span></header>
   <nav class="cbb-tabs" aria-label="Choose market"><button type="button" data-market="spread" aria-pressed="true">Spreads</button><button type="button" data-market="total" aria-pressed="false">Totals</button><button type="button" data-market="ml" aria-pressed="false">Moneyline</button><button type="button" data-market="all" aria-pressed="false">All markets</button></nav>
   <div class="cbb-toolbar">
@@ -293,6 +295,47 @@ td.cbb-team-name{text-align:left}
   <div class="cbb-meta"><span data-label="count">Loading games…</span><span class="cbb-status" data-label="status" role="status" aria-live="polite">Connecting to model output…</span></div>
   <div class="cbb-scroll" tabindex="0" role="region" aria-label="Model outputs; scroll horizontally for more columns"><table><caption hidden>BTB college basketball model outputs. All game times are Eastern.</caption><thead></thead><tbody><tr><td class="cbb-empty">Loading model outputs…</td></tr></tbody></table></div>
   <footer class="cbb-footer"><span class="cbb-dot"></span>Best book: highest calculated edge at that book’s quoted line and price. Market edges use consensus odds. Green: positive edge; red: negative edge; gray: zero edge. Edge values are shown as calculated.<span class="cbb-note">Consensus: Yes requires all three models to favor the same bet. Total consensus requires all three above the market (Over) or all three below it (Under). Ties or missing models show No. All game times ET. Upcoming only hides games at tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
+
+  <section id="cbb-instructions" class="cbb-instructions" aria-labelledby="cbb-instructions-title" tabindex="-1">
+    <h3 id="cbb-instructions-title">How To Use The CBB Board</h3>
+    <p><strong>Every Division I game, priced daily: sides, totals, and moneylines.</strong> We take the output of several public rating systems, run it through the same value framework we use to price football, and compare the result with opening and current market lines. The rating sites give you a number. We turn that number into a reference price: an estimated probability and the fair odds it implies. One screen, every game, every market, as model data and sportsbook odds become available.</p>
+
+    <h4>What This Is—and What It Is Not</h4>
+    <p>This is not a picks service. We publish the board, not plays, and we will not tell you what to bet. The board compares our model estimates with posted lines and prices. Where they disagree, it shows the gap and how wide it is. <strong>A gap is a disagreement, not a guarantee.</strong> The market is good at pricing this sport; our number does not replace it. Read the gaps, put them into your own process, and make your own decision.</p>
+
+    <h4>Start With The Market And The Model</h4>
+    <ul>
+      <li><strong>Spreads:</strong> Market Spread is the current market benchmark, with its odds in parentheses. Predicted Outcome is the model’s projected spread for that team. A negative number means the team is favored; a positive number means it is the underdog. Cover Probability estimates the chance of covering the listed market spread.</li>
+      <li><strong>Totals:</strong> Market Total is the market benchmark for combined points, with separate Over and Under prices. Model Total is the projected combined score. Over and Under Probability refer to the listed market total.</li>
+      <li><strong>Moneyline:</strong> Market Moneyline is the market odds for that team to win outright. Win Probability is the model’s estimated chance of winning.</li>
+    </ul>
+    <p>Market values summarize the available sportsbook quotes. They are reference benchmarks and may not be available as an exact line-and-price combination at a single book.</p>
+
+    <h4>What An Edge Means</h4>
+    <p>In general, an edge is the model’s estimated probability minus the break-even probability implied by the sportsbook’s odds. For example, if a bet is estimated to win 55% of the time and its price implies a break-even rate of about 52.4%, the displayed edge is about 2.6 percentage points.</p>
+    <p>Green means a positive estimated edge, red means a negative edge, and gray means zero. Darker green indicates a larger positive edge. The number depends on <strong>both the line and the price</strong>: the same team at -3 (-110) and -3 (-125) represents two different bets. An edge is an estimate, not a promised return or an instruction to bet.</p>
+
+    <h4>What Consensus Means</h4>
+    <p>The Consensus columns describe agreement among the three rating systems used for these indicators. They are separate from the market consensus used to build the market benchmark.</p>
+    <ul>
+      <li><strong>Spread Consensus—Yes:</strong> All three systems favor that row’s team against the current market spread.</li>
+      <li><strong>Moneyline Consensus—Yes:</strong> All three systems estimate a win probability above the break-even probability implied by that team’s market moneyline.</li>
+      <li><strong>Total Consensus—Yes:</strong> All three systems project above the market total (agreement on Over), or all three project below it (agreement on Under). Compare Model Total with Market Total to see the direction of the blended projection.</li>
+    </ul>
+    <p><strong>No</strong> means the required agreement is absent; it can also mean a projection equals the market line or one of the systems is missing. It does not automatically mean the opposite bet is supported. Consensus reflects agreement, not certainty, and the systems are not independent guarantees.</p>
+
+    <h4>How To Use Best Book And Opening Odds</h4>
+    <p>Best Book identifies the highest calculated edge among the available sportsbook quotes we track, using each book’s actual line and price. Best Edge belongs to that quote; the regular market edge belongs to the market benchmark. Totals have separate Over and Under options. Best Book can still have a negative edge if every available quote is unfavorable to the model.</p>
+    <p>The All Markets tab includes opening lines and their capture time alongside current values. These opening values are the first DraftKings quotes captured by this tool, not necessarily the first odds posted anywhere. Use them to see how the market has moved.</p>
+    <p>Check the line and price at your sportsbook before acting. Quotes can change between updates, and availability varies by book and location.</p>
+
+    <h4>Make The Board Part Of Your Process</h4>
+    <p>The board gives you a consistent reference price without relying on a hunch, a half-remembered score, or whoever is on TV. Use it for line shopping, checking numbers that look off, and comparing the main public systems without opening several tabs. A rating of -5 against a market line of -3 is a starting point; the probability and price help you assess what that difference means.</p>
+    <p>Choose a market tab, search for a team, or filter by date. Click a column header to sort. All game times are Eastern. Upcoming Only hides games at tipoff. Games without model predictions are hidden from the relevant tab; a dash means a particular value is unavailable. On mobile, swipe horizontally to see more columns. Team-name links open injury reports for additional context.</p>
+    <p>This tool is for someone who already follows and bets college basketball and wants a reference price and a repeatable process. You can get ratings anywhere. What we provide is those ratings translated into prices across the board, so you can make your own decision.</p>
+    <p><a href="#btb-cbb">Back To The Table ↑</a></p>
+  </section>
+
   <script>
   (() => {
     'use strict';
