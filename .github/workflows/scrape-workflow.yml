@@ -5,6 +5,10 @@ on:
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
+concurrency:
+  group: cbb-data-writes
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -70,6 +74,9 @@ jobs:
       - name: Generate combo edges
         run: uv run src/utils/generate_combo_edges.py
 
+      - name: Capture opening Combo snapshots and publish ledger
+        run: uv run src/utils/track_opening_results.py --capture
+
       - name: Generate model record report
         run: uv run src/utils/generate_model_record.py
 
@@ -91,6 +98,7 @@ jobs:
           [ -f MM_Output_Final.csv ] && git add MM_Output_Final.csv || true
           [ -f MM_Output_Final_Close.csv ] && git add MM_Output_Final_Close.csv || true
           [ -f game_snapshots.csv ] && git add game_snapshots.csv || true
+          git add data/cbb_opening_snapshots.csv data/cbb_opening_ledger.csv data/cbb_opening_scores.json
           # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -101,3 +109,4 @@ jobs:
             git pull --rebase --autostash origin ${GITHUB_REF#refs/heads/}
             git push origin HEAD:${GITHUB_REF}
           fi
+
