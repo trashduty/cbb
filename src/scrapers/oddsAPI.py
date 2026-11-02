@@ -507,7 +507,8 @@ def get_totals_odds(data):
 
 def save_sportsbook_quotes(data):
     """Save unaggregated quotes from the same API response as consensus odds."""
-    columns = ['Game Time', 'Home Team', 'Away Team', 'Team', 'Market', 'Bookmaker', 'Line', 'Price']
+    columns = ['Game Time', 'Home Team', 'Away Team', 'Team', 'Market', 'Bookmaker', 'Line', 'Price', 'Event ID', 'Commence Time', 'Fetched At', 'Bookmaker Key']
+    fetched_at = datetime.utcnow().isoformat() + 'Z'
     records = []
     for game in data:
         home, away = game.get('home_team'), game.get('away_team')
@@ -532,7 +533,9 @@ def save_sportsbook_quotes(data):
                     records.append({'Game Time': game_time, 'Home Team': home, 'Away Team': away,
                                     'Team': name if market_name in ('Spread', 'Moneyline') else '',
                                     'Market': market_name, 'Bookmaker': title,
-                                    'Line': outcome.get('point'), 'Price': outcome.get('price')})
+                                    'Line': outcome.get('point'), 'Price': outcome.get('price'),
+                                    'Event ID': game.get('id'), 'Commence Time': timestamp.isoformat(),
+                                    'Fetched At': fetched_at, 'Bookmaker Key': book.get('key')})
     pd.DataFrame(records, columns=columns).to_csv(os.path.join(data_dir, 'sportsbook_quotes.csv'), index=False)
 
 
@@ -1368,3 +1371,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     logger.info("=== OddsAPI script completed successfully ===")
+
