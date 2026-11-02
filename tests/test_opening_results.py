@@ -73,19 +73,43 @@ class OpeningResultsTests(unittest.TestCase):
         self.assertEqual(json.dumps(tracker.capture(self.root, first, self.now), sort_keys=True), frozen)
         self.assertEqual(len([r for r in first if r['bet_type'] == 'Total']), 2)
 
-    def test_missing_models_are_not_backfilled(self):
+    def test_missing_models_wait_until_best_book_can_be_evaluated(self):
         self.write('Combo_Output.csv', [{**r, 'Predicted Outcome': '', 'average_total': '', 'Moneyline Win Probability': ''} for r in self.models])
         first = self.captures()
-        self.assertTrue(all(r['eligible'] == 'no' for r in first))
+        self.assertEqual(first, [])
         self.write('Combo_Output.csv', self.models)
-        self.assertTrue(all(r['eligible'] == 'no' for r in tracker.capture(self.root, first, self.now)))
+        self.assertEqual(len(tracker.capture(self.root, first, self.now)), 6)
 
     def test_skip_inplay_stale_wrong_book_or_missing_event_id(self):
         for field, value in [('Commence Time', self.now.isoformat()),
                              ('Fetched At', (self.now-timedelta(hours=2)).isoformat()),
-                             ('Bookmaker Key', 'fanduel'), ('Event ID', '')]:
+                             ('Bookmaker Key', ''), ('Event ID', '')]:
             self.write('data/sportsbook_quotes.csv', [{**r, field: value} for r in self.quotes])
             self.assertEqual(self.captures(), [])
+
+    def test_best_book_works_without_draftkings(self):
+        self.quotes = [{**r, 'Bookmaker Key': 'fanduel', 'Bookmaker': 'FanDuel'} for r in self.quotes]
+        self.write('data/sportsbook_quotes.csv', self.quotes)
+        rows = self.captures()
+        self.assertEqual(len(rows), 6)
+        self.assertTrue(all(r['book'] == 'FanDuel' for r in rows))
+
+    def test_rank_by_edge_not_book_order_and_freeze_winner(self):
+        candidate = {**self.quotes[0], 'Bookmaker Key': 'fanduel', 'Bookmaker': 'FanDuel', 'Price': 110}
+        self.write('data/sportsbook_quotes.csv', self.quotes + [candidate])
+        rows = self.captures()
+        winner = next(r for r in rows if r['bet_type'] == 'Spread' and r['selection'] == 'A')
+        self.assertEqual(winner['book'], 'FanDuel')
+        self.assertEqual(winner['odds'], 110)
+        self.assertAlmostEqual(winner['edge'], .56 - 100/210)
+        self.assertEqual(len(rows), 6)
+        self.write('data/sportsbook_quotes.csv', [{**candidate, 'Price': 200}])
+        self.assertEqual(tracker.capture(self.root, rows, self.now), rows)
+
+    def test_existing_draftkings_snapshot_not_replaced(self):
+        rows = self.captures()
+        self.write('data/sportsbook_quotes.csv', [{**r, 'Bookmaker Key': 'fanduel', 'Bookmaker': 'FanDuel', 'Price': 200} for r in self.quotes])
+        self.assertEqual(tracker.capture(self.root, rows, self.now), rows)
 
     def test_grades_spread_total_moneyline_push_and_actual_price_profit(self):
         rows = tracker.grade(self.captures(), self.scores(), self.now)
