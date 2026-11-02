@@ -1,7 +1,7 @@
 # /// script
 # dependencies = ["pandas"]
 # ///
-"""Immutable, forward-only DraftKings opening snapshots and positive-edge grading.
+"""Immutable, forward-only Best Book opening snapshots and positive-edge grading.
 
 Snapshots freeze quote AND contemporaneous Combo model; no retrospective filling.
 Run --capture after generate_combo_edges.py; run --grade independently of scrapers.
@@ -111,7 +111,7 @@ def capture(root, existing, now):
     pending = []
     wanted = {'Spread': set(), 'Total': set()}
     for quote in quotes:
-        if quote.get('Bookmaker Key') != 'draftkings':
+        if not quote.get('Bookmaker Key') or not quote.get('Bookmaker'):
             continue
         event, start, fetched = quote.get('Event ID'), stamp(quote.get('Commence Time')), stamp(quote.get('Fetched At'))
         # Never backfill a pregame snapshot using post-tipoff or stale data.
@@ -127,7 +127,6 @@ def capture(root, existing, now):
         odds, line = number(quote.get('Price')), number(quote.get('Line'))
         if snapshot_id in known or implied(odds) is None or (market != 'Moneyline' and line is None):
             continue
-        known.add(snapshot_id)
         team = selection if market in ('Spread', 'Moneyline') else min(quote['Home Team'], quote['Away Team'])
         model = model_map.get((tuple(sorted([quote['Home Team'], quote['Away Team']])), quote['Game Time'], team), {})
         prediction = number(model.get('Predicted Outcome' if market == 'Spread' else 'Moneyline Win Probability' if market == 'Moneyline' else 'average_total'))
@@ -138,25 +137,32 @@ def capture(root, existing, now):
             wanted['Spread' if market == 'Spread' else 'Total'].add(lookup_key)
         pending.append((quote, model, snapshot_id, market, selection, start, prediction, lookup_key))
     probabilities = lookup_probabilities(root, wanted) if pending else {}
-    additions = []
+    candidates = {}
     for quote, model, snapshot_id, market, selection, start, prediction, key in pending:
         probability = prediction if market == 'Moneyline' else probabilities.get(
             ('Spread' if market == 'Spread' else 'Total', key,
              'cover_prob' if market == 'Spread' else 'over_prob' if market == 'Over' else 'under_prob'))
         if probability is not None and not 0 <= probability <= 1:
             probability = None
+        if probability is None:
+            continue  # Best Book cannot be ranked without a contemporaneous model probability.
         odds = number(quote['Price'])
-        edge = probability - implied(odds) if probability is not None else None
-        additions.append(dict(snapshot_id=snapshot_id, event_id=quote['Event ID'],
+        edge = probability - implied(odds)
+        candidate = dict(snapshot_id=snapshot_id, event_id=quote['Event ID'],
             game=quote['Home Team']+' vs. '+quote['Away Team'], home_team=quote['Home Team'], away_team=quote['Away Team'],
             commence_time=start.isoformat(), game_date_et=start.astimezone(ET).date().isoformat(),
-            captured_at=now.isoformat(), book='DraftKings', bet_type='Total' if market in ('Over', 'Under') else market,
+            captured_at=now.isoformat(), book=quote['Bookmaker'], bet_type='Total' if market in ('Over', 'Under') else market,
             selection=selection, line=number(quote.get('Line')) if market != 'Moneyline' else None, odds=odds,
             model_prediction=prediction, probability=probability, implied_probability=implied(odds), edge=edge,
             edge_tier=tier(edge), eligible='yes' if edge is not None and edge > 0 else 'no',
-            snapshot_note='First pregame quote captured after tracker enabled' if probability is not None else 'No model/lookup probability at first capture; excluded',
-            result='Pending', home_score=None, away_score=None, graded_at='', profit_units=None))
-    return existing + additions
+            snapshot_note='First evaluable Best Book snapshot; highest edge across available tracked books',
+            result='Pending', home_score=None, away_score=None, graded_at='', profit_units=None)
+        # Same ranking as the live Best Book: highest edge, alphabetical book on ties.
+        rank = lambda row: (-row['edge'], row['book'], row['line'] if row['line'] is not None else 0, row['odds'])
+        previous = candidates.get(snapshot_id)
+        if previous is None or rank(candidate) < rank(previous):
+            candidates[snapshot_id] = candidate
+    return existing + list(candidates.values())
 
 
 def grade(rows, games, now):
