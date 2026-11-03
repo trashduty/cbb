@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T22:51:29.732145+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-03T23:03:46.174748+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 36,
       "losses": 41,
       "pushes": 0,
-      "pending": 21,
+      "pending": 22,
       "win_rate": 0.4675324675324675,
       "profit_units": -8.399310644498314
     },
@@ -54,7 +54,7 @@
       "wins": 10,
       "losses": 13,
       "pushes": 0,
-      "pending": 5,
+      "pending": 6,
       "win_rate": 0.43478260869565216,
       "profit_units": -3.892244978884911
     },
@@ -159,7 +159,7 @@
       "profit_units": 2.1799999999999997
     }
   ],
-  "snapshots": 852,
+  "snapshots": 858,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -6762,6 +6762,34 @@
       "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "94e0a9f1db5304eb4176cad1",
+      "event_id": "549bc17969103d4acc5b6378eca5602f",
+      "game": "Butler Bulldogs vs. Fairleigh Dickinson Knights",
+      "home_team": "Butler Bulldogs",
+      "away_team": "Fairleigh Dickinson Knights",
+      "commence_time": "2026-11-05T00:00:00+00:00",
+      "game_date_et": "2026-11-04",
+      "captured_at": "2026-11-03T23:03:46.174748+00:00",
+      "book": "FanDuel",
+      "bet_type": "Spread",
+      "selection": "Butler Bulldogs",
+      "line": -20.5,
+      "odds": -118.0,
+      "model_prediction": -25.5,
+      "probability": 0.6561678264864312,
+      "implied_probability": 0.5412844036697247,
+      "edge": 0.11488342281670649,
+      "edge_tier": "6%+",
+      "eligible": "yes",
+      "spread_consensus": "No",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
