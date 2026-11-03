@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T03:05:10.846753+00:00",
-  "score_status": "Scores not requested in this run",
+  "updated_at": "2026-11-03T03:24:40.094920+00:00",
+  "score_status": "Score update successful",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -11,132 +11,132 @@
     {
       "bet_type": "Spread",
       "edge_tier": "All",
-      "wins": 20,
-      "losses": 24,
+      "wins": 28,
+      "losses": 27,
       "pushes": 0,
-      "pending": 43,
-      "win_rate": 0.45454545454545453,
-      "profit_units": -5.8144174665913795
+      "pending": 32,
+      "win_rate": 0.509090909090909,
+      "profit_units": -1.52494590282314
     },
     {
       "bet_type": "Spread",
       "edge_tier": "0\u20130.9%",
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "pushes": 0,
-      "pending": 8,
-      "win_rate": 0.375,
-      "profit_units": -2.245670995670996
+      "pending": 7,
+      "win_rate": 0.4444444444444444,
+      "profit_units": -1.3528138528138531
     },
     {
       "bet_type": "Spread",
       "edge_tier": "1\u20132.9%",
-      "wins": 6,
-      "losses": 5,
+      "wins": 9,
+      "losses": 7,
       "pushes": 0,
-      "pending": 12,
-      "win_rate": 0.5454545454545454,
-      "profit_units": 0.3663184641445514
+      "pending": 7,
+      "win_rate": 0.5625,
+      "profit_units": 1.1110274588535463
     },
     {
       "bet_type": "Spread",
       "edge_tier": "3\u20135.9%",
-      "wins": 5,
+      "wins": 7,
       "losses": 9,
       "pushes": 0,
-      "pending": 8,
-      "win_rate": 0.35714285714285715,
-      "profit_units": -4.384199134199134
+      "pending": 6,
+      "win_rate": 0.4375,
+      "profit_units": -2.5109498344792462
     },
     {
       "bet_type": "Spread",
       "edge_tier": "6%+",
-      "wins": 6,
-      "losses": 5,
+      "wins": 8,
+      "losses": 6,
       "pushes": 0,
-      "pending": 15,
-      "win_rate": 0.5454545454545454,
-      "profit_units": 0.44913419913419916
+      "pending": 12,
+      "win_rate": 0.5714285714285714,
+      "profit_units": 1.2277903256164127
     },
     {
       "bet_type": "Total",
       "edge_tier": "All",
-      "wins": 19,
-      "losses": 21,
+      "wins": 24,
+      "losses": 28,
       "pushes": 0,
-      "pending": 34,
-      "win_rate": 0.475,
-      "profit_units": -3.4658594223811594
+      "pending": 22,
+      "win_rate": 0.46153846153846156,
+      "profit_units": -5.9593293180249685
     },
     {
       "bet_type": "Total",
       "edge_tier": "0\u20130.9%",
-      "wins": 2,
+      "wins": 3,
+      "losses": 7,
+      "pushes": 0,
+      "pending": 5,
+      "win_rate": 0.3,
+      "profit_units": -4.186147186147186
+    },
+    {
+      "bet_type": "Total",
+      "edge_tier": "1\u20132.9%",
+      "wins": 14,
+      "losses": 11,
+      "pushes": 0,
+      "pending": 9,
+      "win_rate": 0.56,
+      "profit_units": 1.8588159022941637
+    },
+    {
+      "bet_type": "Total",
+      "edge_tier": "3\u20135.9%",
+      "wins": 4,
       "losses": 6,
       "pushes": 0,
       "pending": 7,
-      "win_rate": 0.25,
-      "profit_units": -4.095238095238095
-    },
-    {
-      "bet_type": "Total",
-      "edge_tier": "1\u20132.9%",
-      "wins": 12,
-      "losses": 7,
-      "pushes": 0,
-      "pending": 15,
-      "win_rate": 0.631578947368421,
-      "profit_units": 4.0633247589769335
-    },
-    {
-      "bet_type": "Total",
-      "edge_tier": "3\u20135.9%",
-      "wins": 3,
-      "losses": 4,
-      "pushes": 0,
-      "pending": 10,
-      "win_rate": 0.42857142857142855,
-      "profit_units": -1.3122529644268774
+      "win_rate": 0.4,
+      "profit_units": -2.4031620553359683
     },
     {
       "bet_type": "Total",
       "edge_tier": "6%+",
-      "wins": 2,
+      "wins": 3,
       "losses": 4,
       "pushes": 0,
-      "pending": 2,
-      "win_rate": 0.3333333333333333,
-      "profit_units": -2.121693121693122
+      "pending": 1,
+      "win_rate": 0.42857142857142855,
+      "profit_units": -1.228835978835979
     },
     {
       "bet_type": "Moneyline",
       "edge_tier": "All",
-      "wins": 17,
-      "losses": 14,
+      "wins": 20,
+      "losses": 17,
       "pushes": 0,
-      "pending": 25,
-      "win_rate": 0.5483870967741935,
-      "profit_units": 2.954301572098067
+      "pending": 19,
+      "win_rate": 0.5405405405405406,
+      "profit_units": 2.381574299370794
     },
     {
       "bet_type": "Moneyline",
       "edge_tier": "0\u20130.9%",
-      "wins": 10,
-      "losses": 6,
+      "wins": 11,
+      "losses": 8,
       "pushes": 0,
-      "pending": 13,
-      "win_rate": 0.625,
-      "profit_units": 1.4740743338008409
+      "pending": 10,
+      "win_rate": 0.5789473684210527,
+      "profit_units": -0.29865293892643174
     },
     {
       "bet_type": "Moneyline",
       "edge_tier": "1\u20132.9%",
-      "wins": 2,
-      "losses": 2,
+      "wins": 3,
+      "losses": 3,
       "pushes": 0,
-      "pending": 6,
+      "pending": 4,
       "win_rate": 0.5,
-      "profit_units": -0.23757763975155277
+      "profit_units": -0.037577639751552816
     },
     {
       "bet_type": "Moneyline",
@@ -151,12 +151,12 @@
     {
       "bet_type": "Moneyline",
       "edge_tier": "6%+",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "pushes": 0,
-      "pending": 2,
-      "win_rate": 0.42857142857142855,
-      "profit_units": 2.1799999999999997
+      "pending": 1,
+      "win_rate": 0.5,
+      "profit_units": 3.1799999999999997
     }
   ],
   "snapshots": 774,
@@ -1387,11 +1387,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 98.0,
+      "away_score": 71.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9090909090909091
     },
     {
       "snapshot_id": "6b486b4eeeb59b4e643cfe55",
@@ -2704,7 +2704,7 @@
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
       "result": "Win",
-      "home_score": 96.0,
+      "home_score": 97.0,
       "away_score": 57.0,
       "graded_at": "2026-11-03T02:51:54.055930+00:00",
       "profit_units": 0.9090909090909091
@@ -3347,11 +3347,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 71.0,
+      "away_score": 70.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "f9866e7f75c934bb58fd0715",
@@ -3375,11 +3375,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 71.0,
+      "away_score": 70.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9259259259259259
     },
     {
       "snapshot_id": "1b0bba88d1c75d89fc6bf74d",
@@ -3403,11 +3403,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 79.0,
+      "away_score": 70.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9090909090909091
     },
     {
       "snapshot_id": "9fd28bc9e4163bf091c84bb0",
@@ -3431,11 +3431,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 86.0,
+      "away_score": 60.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "4ffb4d108d391bf8ce452198",
@@ -3459,11 +3459,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 86.0,
+      "away_score": 60.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "762b66582db90cfb9d69fdac",
@@ -3487,11 +3487,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 80.0,
+      "away_score": 75.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 1.2
     },
     {
       "snapshot_id": "297c931cbd7021d712e0edd7",
@@ -3515,11 +3515,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 80.0,
+      "away_score": 75.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9803921568627451
     },
     {
       "snapshot_id": "b9cc0ea8e1bd5b5fa5d2c493",
@@ -3543,11 +3543,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 80.0,
+      "away_score": 75.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "c4a1a0b4b85d6b2cb1b854b3",
@@ -3571,11 +3571,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 76.0,
+      "away_score": 61.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8928571428571429
     },
     {
       "snapshot_id": "41142ea9d2a18de852055dbb",
@@ -3599,11 +3599,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 76.0,
+      "away_score": 61.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "78638f66678a1bd7188dc741",
@@ -3627,11 +3627,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 75.0,
+      "away_score": 58.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8928571428571429
     },
     {
       "snapshot_id": "3bb4b49aaa465d3e5a3b5fba",
@@ -3655,11 +3655,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 75.0,
+      "away_score": 58.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "e647cbcb6630535e46d8e62f",
@@ -3683,11 +3683,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 95.0,
+      "away_score": 65.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8928571428571429
     },
     {
       "snapshot_id": "4db4aee85c1611f423f3f4eb",
@@ -3711,11 +3711,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 92.0,
+      "away_score": 67.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "6e240238e7a6ea620f242d55",
@@ -3739,11 +3739,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 92.0,
+      "away_score": 67.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "ea02fa8ee82daf60d791a52c",
@@ -3767,11 +3767,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 92.0,
+      "away_score": 67.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8695652173913043
     },
     {
       "snapshot_id": "e9901293d18c95e438129e5f",
@@ -3795,11 +3795,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 98.0,
+      "away_score": 59.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "55ba15ae176341b950eeedb5",
@@ -3823,11 +3823,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 98.0,
+      "away_score": 59.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9259259259259259
     },
     {
       "snapshot_id": "b537c6f4f262be1e36297920",
@@ -3851,11 +3851,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 77.0,
+      "away_score": 52.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "88df912a1d8f5629c709e23f",
@@ -3879,11 +3879,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 77.0,
+      "away_score": 52.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "57a79cce4b12287383839399",
@@ -3907,11 +3907,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 83.0,
+      "away_score": 62.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9090909090909091
     },
     {
       "snapshot_id": "4e5362ac43e3cd5813773987",
@@ -3935,11 +3935,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 77.0,
+      "away_score": 86.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 1.0
     },
     {
       "snapshot_id": "b452bb31f780148372404927",
@@ -3963,11 +3963,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 77.0,
+      "away_score": 86.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8695652173913043
     },
     {
       "snapshot_id": "fd24ccefd4ff6e6c535ed1d5",
@@ -3991,11 +3991,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 85.0,
+      "away_score": 72.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.9259259259259259
     },
     {
       "snapshot_id": "9f88de15badf2f78f3a32c9a",
@@ -4103,11 +4103,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 67.0,
+      "away_score": 55.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.22727272727272727
     },
     {
       "snapshot_id": "69cc73c45d1fd6862e90ce9b",
@@ -4131,11 +4131,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 67.0,
+      "away_score": 55.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "9567a6ff99ddc297d764b287",
@@ -4159,11 +4159,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 80.0,
+      "away_score": 58.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": 0.8928571428571429
     },
     {
       "snapshot_id": "b9263f1cadf0652a1c8795f9",
@@ -4187,11 +4187,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 80.0,
+      "away_score": 58.0,
+      "graded_at": "2026-11-03T03:24:40.094920+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "f60e32c0289e6243b1d77a31",
