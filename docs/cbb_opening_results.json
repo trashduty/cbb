@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T03:51:22.978648+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-03T04:05:08.309292+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 28,
       "losses": 28,
       "pushes": 0,
-      "pending": 31,
+      "pending": 32,
       "win_rate": 0.5,
       "profit_units": -2.52494590282314
     },
@@ -24,7 +24,7 @@
       "wins": 4,
       "losses": 5,
       "pushes": 0,
-      "pending": 7,
+      "pending": 8,
       "win_rate": 0.4444444444444444,
       "profit_units": -1.3528138528138531
     },
@@ -159,7 +159,7 @@
       "profit_units": 3.1799999999999997
     }
   ],
-  "snapshots": 774,
+  "snapshots": 780,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -6230,6 +6230,34 @@
       "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "130029c4aca0610fefd26f11",
+      "event_id": "5327528ec3e4f115e5283df73f2a1ded",
+      "game": "South Carolina Gamecocks vs. Stetson Hatters",
+      "home_team": "South Carolina Gamecocks",
+      "away_team": "Stetson Hatters",
+      "commence_time": "2026-11-04T00:00:00+00:00",
+      "game_date_et": "2026-11-03",
+      "captured_at": "2026-11-03T04:05:08.309292+00:00",
+      "book": "Fanatics",
+      "bet_type": "Spread",
+      "selection": "South Carolina Gamecocks",
+      "line": -16.0,
+      "odds": -110.0,
+      "model_prediction": -17.0,
+      "probability": 0.5320425632110974,
+      "implied_probability": 0.5238095238095238,
+      "edge": 0.008233039401573605,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "No",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
