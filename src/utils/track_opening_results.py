@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[2]
 FIELDS = ['snapshot_id', 'event_id', 'game', 'home_team', 'away_team', 'commence_time',
           'game_date_et', 'captured_at', 'book', 'bet_type', 'selection', 'line', 'odds',
           'model_prediction', 'probability', 'implied_probability', 'edge', 'edge_tier',
-          'eligible', 'snapshot_note', 'result', 'home_score', 'away_score', 'graded_at', 'profit_units']
+          'eligible', 'spread_consensus', 'snapshot_note', 'result', 'home_score', 'away_score', 'graded_at', 'profit_units']
 TIERS = ['0–0.9%', '1–2.9%', '3–5.9%', '6%+']
 
 
@@ -98,6 +98,13 @@ def lookup_probabilities(root, wanted):
     return found
 
 
+def captured_spread_consensus(model, line):
+    values = [number(model.get('spread_' + system)) for system in ('kenpom', 'evanmiya', 'barttorvik')]
+    if line is None or any(value is None for value in values):
+        return 'No'
+    return 'Yes' if all(value < line for value in values) else 'No'
+
+
 def capture(root, existing, now):
     quotes = read_csv(root / 'data/sportsbook_quotes.csv')
     models = read_csv(root / 'Combo_Output.csv')
@@ -155,6 +162,7 @@ def capture(root, existing, now):
             selection=selection, line=number(quote.get('Line')) if market != 'Moneyline' else None, odds=odds,
             model_prediction=prediction, probability=probability, implied_probability=implied(odds), edge=edge,
             edge_tier=tier(edge), eligible='yes' if edge is not None and edge > 0 else 'no',
+            spread_consensus=captured_spread_consensus(model, number(quote.get('Line'))) if market == 'Spread' else '',
             snapshot_note='First evaluable Best Book snapshot; highest edge across available tracked books',
             result='Pending', home_score=None, away_score=None, graded_at='', profit_units=None)
         # Same ranking as the live Best Book: highest edge, alphabetical book on ties.
