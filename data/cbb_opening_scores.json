@@ -57,7 +57,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "cbbce01a444134baf2a8fa533eca853e": {
     "id": "cbbce01a444134baf2a8fa533eca853e",
@@ -77,7 +77,7 @@
         "score": "49"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "38f469202f748211c7d5bf585a0f4458": {
     "id": "38f469202f748211c7d5bf585a0f4458",
@@ -97,7 +97,7 @@
         "score": "98"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "f0eb27924ac613d7606d8988e9d1e871": {
     "id": "f0eb27924ac613d7606d8988e9d1e871",
@@ -117,7 +117,7 @@
         "score": "94"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "7bc4ca60dcf27386ecd1b9d8ea62e80e": {
     "id": "7bc4ca60dcf27386ecd1b9d8ea62e80e",
@@ -137,7 +137,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "2202ea1b5c467f5f358bfe14e82c0643": {
     "id": "2202ea1b5c467f5f358bfe14e82c0643",
@@ -157,7 +157,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "bf85a07f7a34b2f043c199c2322cc442": {
     "id": "bf85a07f7a34b2f043c199c2322cc442",
@@ -177,7 +177,7 @@
         "score": "54"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
   },
   "683ca7110f83d94d2807e36e9bc3e10c": {
     "id": "683ca7110f83d94d2807e36e9bc3e10c",
@@ -197,6 +197,66 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-03T00:52:22Z"
+    "last_update": "2026-11-03T01:22:37Z"
+  },
+  "29c695dc58921fdf746ef98e504377e3": {
+    "id": "29c695dc58921fdf746ef98e504377e3",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:01:10Z",
+    "completed": true,
+    "home_team": "Michigan Wolverines",
+    "away_team": "Oakland Golden Grizzlies",
+    "scores": [
+      {
+        "name": "Michigan Wolverines",
+        "score": "84"
+      },
+      {
+        "name": "Oakland Golden Grizzlies",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-03T01:22:37Z"
+  },
+  "b4970897f70655a49fa773790bf4483f": {
+    "id": "b4970897f70655a49fa773790bf4483f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:02:10Z",
+    "completed": true,
+    "home_team": "Georgia St Panthers",
+    "away_team": "Bowling Green Falcons",
+    "scores": [
+      {
+        "name": "Georgia St Panthers",
+        "score": "73"
+      },
+      {
+        "name": "Bowling Green Falcons",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-03T01:22:37Z"
+  },
+  "a97fcea306dc976108df27ad192ababb": {
+    "id": "a97fcea306dc976108df27ad192ababb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:03:43Z",
+    "completed": true,
+    "home_team": "Cornell Big Red",
+    "away_team": "Pepperdine Waves",
+    "scores": [
+      {
+        "name": "Cornell Big Red",
+        "score": "86"
+      },
+      {
+        "name": "Pepperdine Waves",
+        "score": "85"
+      }
+    ],
+    "last_update": "2026-11-03T01:22:37Z"
   }
 }
