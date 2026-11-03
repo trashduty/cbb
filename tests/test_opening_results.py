@@ -56,6 +56,25 @@ class OpeningResultsTests(unittest.TestCase):
         return [{'id': 'event-1', 'home_team': 'A', 'away_team': 'B', 'completed': completed,
                  'scores': [{'name': 'A', 'score': home}, {'name': 'B', 'score': away}]}]
 
+    def test_spread_consensus_uses_captured_line_and_requires_all_models(self):
+        row = {'spread_kenpom': -4, 'spread_evanmiya': -5, 'spread_barttorvik': -3.5}
+        self.assertEqual(tracker.captured_spread_consensus(row, -3), 'Yes')
+        self.assertEqual(tracker.captured_spread_consensus(row, -4), 'No')
+        self.assertEqual(tracker.captured_spread_consensus({**row, 'spread_barttorvik': ''}, -3), 'No')
+        self.assertEqual(tracker.captured_spread_consensus({'spread_kenpom': 2, 'spread_evanmiya': 1, 'spread_barttorvik': 0}, 3), 'Yes')
+
+    def test_consensus_persists_and_is_not_reconstructed_for_old_rows(self):
+        models = [{**r, 'spread_kenpom': -4, 'spread_evanmiya': -5, 'spread_barttorvik': -3.5} for r in self.models]
+        self.write('Combo_Output.csv', models)
+        first = self.captures()
+        spread = next(r for r in first if r['bet_type'] == 'Spread' and r['selection'] == 'A')
+        self.assertEqual(spread['spread_consensus'], 'Yes')
+        tracker.publish(self.root, first, self.now, 'Test')
+        second = tracker.read_csv(self.root / 'data/cbb_opening_snapshots.csv')
+        self.assertEqual(next(r for r in second if r['snapshot_id'] == spread['snapshot_id'])['spread_consensus'], 'Yes')
+        old = [{k:v for k,v in row.items() if k != 'spread_consensus'} for row in first]
+        self.assertTrue(all('spread_consensus' not in r for r in tracker.capture(self.root, old, self.now)))
+
     def test_capture_all_six_quotes_only_three_positive(self):
         rows = self.captures()
         self.assertEqual(len(rows), 6)
