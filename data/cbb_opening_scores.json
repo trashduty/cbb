@@ -57,7 +57,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "cbbce01a444134baf2a8fa533eca853e": {
     "id": "cbbce01a444134baf2a8fa533eca853e",
@@ -77,7 +77,7 @@
         "score": "49"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "38f469202f748211c7d5bf585a0f4458": {
     "id": "38f469202f748211c7d5bf585a0f4458",
@@ -97,7 +97,7 @@
         "score": "98"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "f0eb27924ac613d7606d8988e9d1e871": {
     "id": "f0eb27924ac613d7606d8988e9d1e871",
@@ -117,7 +117,7 @@
         "score": "94"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "7bc4ca60dcf27386ecd1b9d8ea62e80e": {
     "id": "7bc4ca60dcf27386ecd1b9d8ea62e80e",
@@ -137,7 +137,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "2202ea1b5c467f5f358bfe14e82c0643": {
     "id": "2202ea1b5c467f5f358bfe14e82c0643",
@@ -157,7 +157,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "bf85a07f7a34b2f043c199c2322cc442": {
     "id": "bf85a07f7a34b2f043c199c2322cc442",
@@ -177,7 +177,7 @@
         "score": "54"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "683ca7110f83d94d2807e36e9bc3e10c": {
     "id": "683ca7110f83d94d2807e36e9bc3e10c",
@@ -197,7 +197,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "29c695dc58921fdf746ef98e504377e3": {
     "id": "29c695dc58921fdf746ef98e504377e3",
@@ -217,7 +217,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "b4970897f70655a49fa773790bf4483f": {
     "id": "b4970897f70655a49fa773790bf4483f",
@@ -237,7 +237,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
   },
   "a97fcea306dc976108df27ad192ababb": {
     "id": "a97fcea306dc976108df27ad192ababb",
@@ -257,6 +257,126 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-03T01:22:37Z"
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "112a0b847e8a6f5f1cd2664986697d60": {
+    "id": "112a0b847e8a6f5f1cd2664986697d60",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:02:49Z",
+    "completed": true,
+    "home_team": "Miami Hurricanes",
+    "away_team": "Florida Gators",
+    "scores": [
+      {
+        "name": "Florida Gators",
+        "score": "77"
+      },
+      {
+        "name": "Miami Hurricanes",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "64ec8d7dcae94c7fa5dc481068d7e383": {
+    "id": "64ec8d7dcae94c7fa5dc481068d7e383",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:32:23Z",
+    "completed": true,
+    "home_team": "Duke Blue Devils",
+    "away_team": "Army Knights",
+    "scores": [
+      {
+        "name": "Duke Blue Devils",
+        "score": "84"
+      },
+      {
+        "name": "Army Knights",
+        "score": "50"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "b288c1e120393642a64e0ae1b32f0d59": {
+    "id": "b288c1e120393642a64e0ae1b32f0d59",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:32:36Z",
+    "completed": true,
+    "home_team": "Temple Owls",
+    "away_team": "Central Connecticut St Blue Devils",
+    "scores": [
+      {
+        "name": "Temple Owls",
+        "score": "68"
+      },
+      {
+        "name": "Central Connecticut St Blue Devils",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "26ea50197c90508dd0685b166c64ec96": {
+    "id": "26ea50197c90508dd0685b166c64ec96",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:33:50Z",
+    "completed": true,
+    "home_team": "Georgetown Hoyas",
+    "away_team": "Loyola (MD) Greyhounds",
+    "scores": [
+      {
+        "name": "Georgetown Hoyas",
+        "score": "80"
+      },
+      {
+        "name": "Loyola (MD) Greyhounds",
+        "score": "58"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "01a67a2b10f3120e0b60ced75ee9b8bb": {
+    "id": "01a67a2b10f3120e0b60ced75ee9b8bb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-02T23:34:31Z",
+    "completed": true,
+    "home_team": "St. John's Red Storm",
+    "away_team": "Monmouth Hawks",
+    "scores": [
+      {
+        "name": "St. John's Red Storm",
+        "score": "78"
+      },
+      {
+        "name": "Monmouth Hawks",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
+  },
+  "062c86b4f45675d9bd1b0edff34f1ab8": {
+    "id": "062c86b4f45675d9bd1b0edff34f1ab8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-03T00:02:37Z",
+    "completed": true,
+    "home_team": "Troy Trojans",
+    "away_team": "Massachusetts Minutemen",
+    "scores": [
+      {
+        "name": "Troy Trojans",
+        "score": "60"
+      },
+      {
+        "name": "Massachusetts Minutemen",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-03T01:51:34Z"
   }
 }

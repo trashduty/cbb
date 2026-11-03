@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T01:34:05.196203+00:00",
-  "score_status": "Scores not requested in this run",
+  "updated_at": "2026-11-03T01:51:38.287930+00:00",
+  "score_status": "Score update successful",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -11,42 +11,42 @@
     {
       "bet_type": "Spread",
       "edge_tier": "All",
-      "wins": 3,
-      "losses": 3,
+      "wins": 6,
+      "losses": 5,
       "pushes": 0,
-      "pending": 81,
-      "win_rate": 0.5,
-      "profit_units": -0.30519480519480535
+      "pending": 76,
+      "win_rate": 0.5454545454545454,
+      "profit_units": 0.44913419913419905
     },
     {
       "bet_type": "Spread",
       "edge_tier": "0\u20130.9%",
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "pending": 16,
-      "win_rate": null,
-      "profit_units": 0
+      "pending": 15,
+      "win_rate": 0.0,
+      "profit_units": -1.0
     },
     {
       "bet_type": "Spread",
       "edge_tier": "1\u20132.9%",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "pushes": 0,
-      "pending": 22,
-      "win_rate": 0.0,
-      "profit_units": -1.0
+      "pending": 21,
+      "win_rate": 0.5,
+      "profit_units": -0.1071428571428571
     },
     {
       "bet_type": "Spread",
       "edge_tier": "3\u20135.9%",
-      "wins": 0,
-      "losses": 1,
+      "wins": 2,
+      "losses": 2,
       "pushes": 0,
-      "pending": 21,
-      "win_rate": 0.0,
-      "profit_units": -1.0
+      "pending": 18,
+      "win_rate": 0.5,
+      "profit_units": -0.1385281385281385
     },
     {
       "bet_type": "Spread",
@@ -62,11 +62,11 @@
       "bet_type": "Total",
       "edge_tier": "All",
       "wins": 2,
-      "losses": 2,
+      "losses": 4,
       "pushes": 0,
-      "pending": 70,
-      "win_rate": 0.5,
-      "profit_units": -0.12169312169312185
+      "pending": 68,
+      "win_rate": 0.3333333333333333,
+      "profit_units": -2.121693121693122
     },
     {
       "bet_type": "Total",
@@ -82,11 +82,11 @@
       "bet_type": "Total",
       "edge_tier": "1\u20132.9%",
       "wins": 1,
-      "losses": 1,
+      "losses": 3,
       "pushes": 0,
-      "pending": 32,
-      "win_rate": 0.5,
-      "profit_units": -0.04761904761904767
+      "pending": 30,
+      "win_rate": 0.25,
+      "profit_units": -2.0476190476190474
     },
     {
       "bet_type": "Total",
@@ -111,22 +111,22 @@
     {
       "bet_type": "Moneyline",
       "edge_tier": "All",
-      "wins": 4,
-      "losses": 3,
+      "wins": 6,
+      "losses": 4,
       "pushes": 0,
-      "pending": 49,
-      "win_rate": 0.5714285714285714,
-      "profit_units": 4.072857142857143
+      "pending": 46,
+      "win_rate": 0.6,
+      "profit_units": 3.5706620209059228
     },
     {
       "bet_type": "Moneyline",
       "edge_tier": "0\u20130.9%",
-      "wins": 0,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "pushes": 0,
-      "pending": 29,
-      "win_rate": null,
-      "profit_units": 0
+      "pending": 27,
+      "win_rate": 0.5,
+      "profit_units": -0.99
     },
     {
       "bet_type": "Moneyline",
@@ -141,12 +141,12 @@
     {
       "bet_type": "Moneyline",
       "edge_tier": "3\u20135.9%",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "pushes": 0,
-      "pending": 7,
-      "win_rate": 0.0,
-      "profit_units": -1.0
+      "pending": 6,
+      "win_rate": 0.5,
+      "profit_units": -0.5121951219512195
     },
     {
       "bet_type": "Moneyline",
@@ -715,11 +715,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 67.0,
+      "away_score": 77.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": 0.4878048780487805
     },
     {
       "snapshot_id": "d5e39d4b13edcc5dcd135976",
@@ -743,11 +743,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 67.0,
+      "away_score": 77.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": 0.8928571428571429
     },
     {
       "snapshot_id": "2e217994b7a4798df44e6fb7",
@@ -799,11 +799,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 84.0,
+      "away_score": 50.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": 0.9090909090909091
     },
     {
       "snapshot_id": "554697e2ca9725a1754364c3",
@@ -827,11 +827,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 68.0,
+      "away_score": 56.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "aeba66f9fa817eab7f8b1f46",
@@ -855,11 +855,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 68.0,
+      "away_score": 56.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "5ce1c77675c8a361ef285c27",
@@ -883,11 +883,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 80.0,
+      "away_score": 58.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "923866ec229c645d9520a8a5",
@@ -911,11 +911,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 78.0,
+      "away_score": 63.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": 0.9523809523809523
     },
     {
       "snapshot_id": "b3a3b698cca53f928da134b9",
@@ -939,11 +939,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 78.0,
+      "away_score": 63.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "1f59b4db4ef5b5a8fbbde46f",
@@ -2143,11 +2143,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First pregame quote captured after tracker enabled",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 60.0,
+      "away_score": 71.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "5eacd85f35f3ca90ccd34afc",
@@ -4691,11 +4691,11 @@
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Win",
+      "home_score": 84.0,
+      "away_score": 50.0,
+      "graded_at": "2026-11-03T01:51:38.287930+00:00",
+      "profit_units": 0.01
     },
     {
       "snapshot_id": "e60fa8ce506a7b0ef36ba8a0",
