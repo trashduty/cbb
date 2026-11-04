@@ -2437,6 +2437,146 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-04T01:51:53Z"
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "f29847b36e1421985a46605e7bfec15d": {
+    "id": "f29847b36e1421985a46605e7bfec15d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:00:00Z",
+    "completed": true,
+    "home_team": "Duquesne Dukes",
+    "away_team": "Fort Wayne Mastodons",
+    "scores": [
+      {
+        "name": "Duquesne Dukes",
+        "score": "78"
+      },
+      {
+        "name": "Fort Wayne Mastodons",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "a621e112c59b5b8369f80c2fb55e615d": {
+    "id": "a621e112c59b5b8369f80c2fb55e615d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:00:00Z",
+    "completed": true,
+    "home_team": "Georgia Tech Yellow Jackets",
+    "away_team": "Hampton Pirates",
+    "scores": [
+      {
+        "name": "Georgia Tech Yellow Jackets",
+        "score": "75"
+      },
+      {
+        "name": "Hampton Pirates",
+        "score": "55"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "ca4aa34ceb6699753f69ffd1d68d944b": {
+    "id": "ca4aa34ceb6699753f69ffd1d68d944b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:00:00Z",
+    "completed": true,
+    "home_team": "Kentucky Wildcats",
+    "away_team": "Manhattan Jaspers",
+    "scores": [
+      {
+        "name": "Kentucky Wildcats",
+        "score": "85"
+      },
+      {
+        "name": "Manhattan Jaspers",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "5327528ec3e4f115e5283df73f2a1ded": {
+    "id": "5327528ec3e4f115e5283df73f2a1ded",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:01:21Z",
+    "completed": true,
+    "home_team": "South Carolina Gamecocks",
+    "away_team": "Stetson Hatters",
+    "scores": [
+      {
+        "name": "South Carolina Gamecocks",
+        "score": "81"
+      },
+      {
+        "name": "Stetson Hatters",
+        "score": "55"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "2cccdbb5426caa7a69f652bb577b367c": {
+    "id": "2cccdbb5426caa7a69f652bb577b367c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:01:40Z",
+    "completed": true,
+    "home_team": "Boston College Eagles",
+    "away_team": "Wagner Seahawks",
+    "scores": [
+      {
+        "name": "Boston College Eagles",
+        "score": "76"
+      },
+      {
+        "name": "Wagner Seahawks",
+        "score": "50"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "8541be3aee4cd7967aab5691fad082f7": {
+    "id": "8541be3aee4cd7967aab5691fad082f7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:01:54Z",
+    "completed": true,
+    "home_team": "Virginia Tech Hokies",
+    "away_team": "Coppin St Eagles",
+    "scores": [
+      {
+        "name": "Virginia Tech Hokies",
+        "score": "88"
+      },
+      {
+        "name": "Coppin St Eagles",
+        "score": "54"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
+  },
+  "d2c45b0c90f12321cb072d68bd3d4a1c": {
+    "id": "d2c45b0c90f12321cb072d68bd3d4a1c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-04T00:02:37Z",
+    "completed": true,
+    "home_team": "Rhode Island Rams",
+    "away_team": "Holy Cross Crusaders",
+    "scores": [
+      {
+        "name": "Rhode Island Rams",
+        "score": "103"
+      },
+      {
+        "name": "Holy Cross Crusaders",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-04T02:24:41Z"
   }
 }
