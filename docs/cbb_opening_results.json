@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04T17:22:21.065837+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-04T17:33:40.494995+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 24,
       "losses": 33,
       "pushes": 0,
-      "pending": 4,
+      "pending": 5,
       "win_rate": 0.42105263157894735,
       "profit_units": -9.016678388801246
     },
@@ -124,7 +124,7 @@
       "wins": 14,
       "losses": 17,
       "pushes": 0,
-      "pending": 0,
+      "pending": 1,
       "win_rate": 0.45161290322580644,
       "profit_units": -5.019486272259766
     },
@@ -159,7 +159,7 @@
       "profit_units": 2.1799999999999997
     }
   ],
-  "snapshots": 888,
+  "snapshots": 894,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -6983,6 +6983,34 @@
       "probability": 0.5310871879321442,
       "implied_probability": 0.5238095238095238,
       "edge": 0.00727766412262032,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "e83358a3e4d9295a01009ff3",
+      "event_id": "d523281d43838dea9e18868e964a0b8b",
+      "game": "Vanderbilt Commodores vs. Wake Forest Demon Deacons",
+      "home_team": "Vanderbilt Commodores",
+      "away_team": "Wake Forest Demon Deacons",
+      "commence_time": "2026-11-05T23:00:00+00:00",
+      "game_date_et": "2026-11-05",
+      "captured_at": "2026-11-04T17:33:40.494995+00:00",
+      "book": "FanDuel",
+      "bet_type": "Moneyline",
+      "selection": "Wake Forest Demon Deacons",
+      "line": null,
+      "odds": 980.0,
+      "model_prediction": 0.10115994666190747,
+      "probability": 0.10115994666190747,
+      "implied_probability": 0.09259259259259259,
+      "edge": 0.008567354069314886,
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
