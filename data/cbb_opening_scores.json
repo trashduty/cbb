@@ -2418,5 +2418,25 @@
       }
     ],
     "last_update": "2026-11-03T12:47:32Z"
+  },
+  "5c606b3ad7d8fe599a32ce4141dc0033": {
+    "id": "5c606b3ad7d8fe599a32ce4141dc0033",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-03T23:01:36Z",
+    "completed": true,
+    "home_team": "Tennessee Volunteers",
+    "away_team": "Wofford Terriers",
+    "scores": [
+      {
+        "name": "Tennessee Volunteers",
+        "score": "90"
+      },
+      {
+        "name": "Wofford Terriers",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-04T01:21:57Z"
   }
 }
