@@ -2817,7 +2817,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "3bc95ac74a5ada7d2739e050f53eb5d2": {
     "id": "3bc95ac74a5ada7d2739e050f53eb5d2",
@@ -2837,7 +2837,7 @@
         "score": "49"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "9eb9f1ae70ff2e191c1322b68ee0458a": {
     "id": "9eb9f1ae70ff2e191c1322b68ee0458a",
@@ -2857,7 +2857,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "55ce7fcc3c7a9e642c63450e4df10a75": {
     "id": "55ce7fcc3c7a9e642c63450e4df10a75",
@@ -2877,7 +2877,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "ee64dfa732b4b3e3bcc3d257c1836b94": {
     "id": "ee64dfa732b4b3e3bcc3d257c1836b94",
@@ -2897,7 +2897,7 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "e85d3465ae2091684b88bf4a3d04337e": {
     "id": "e85d3465ae2091684b88bf4a3d04337e",
@@ -2917,7 +2917,7 @@
         "score": "102"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
   },
   "eccb8794e834a22613f2c0a1e603ec73": {
     "id": "eccb8794e834a22613f2c0a1e603ec73",
@@ -2937,6 +2937,26 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-05T04:23:33Z"
+    "last_update": "2026-11-05T04:52:07Z"
+  },
+  "54080f4106befd3a23a86b2cbfee1a53": {
+    "id": "54080f4106befd3a23a86b2cbfee1a53",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T03:02:32Z",
+    "completed": true,
+    "home_team": "Saint Mary's Gaels",
+    "away_team": "North Dakota St Bison",
+    "scores": [
+      {
+        "name": "Saint Mary's Gaels",
+        "score": "105"
+      },
+      {
+        "name": "North Dakota St Bison",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-05T04:52:07Z"
   }
 }
