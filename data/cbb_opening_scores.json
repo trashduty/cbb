@@ -2798,5 +2798,65 @@
       }
     ],
     "last_update": "2026-11-04T17:32:33Z"
+  },
+  "549bc17969103d4acc5b6378eca5602f": {
+    "id": "549bc17969103d4acc5b6378eca5602f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T00:00:00Z",
+    "completed": true,
+    "home_team": "Butler Bulldogs",
+    "away_team": "Fairleigh Dickinson Knights",
+    "scores": [
+      {
+        "name": "Butler Bulldogs",
+        "score": "99"
+      },
+      {
+        "name": "Fairleigh Dickinson Knights",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-05T02:26:08Z"
+  },
+  "3bc95ac74a5ada7d2739e050f53eb5d2": {
+    "id": "3bc95ac74a5ada7d2739e050f53eb5d2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T00:00:00Z",
+    "completed": true,
+    "home_team": "High Point Panthers",
+    "away_team": "Maryland-Eastern Shore Hawks",
+    "scores": [
+      {
+        "name": "High Point Panthers",
+        "score": "63"
+      },
+      {
+        "name": "Maryland-Eastern Shore Hawks",
+        "score": "49"
+      }
+    ],
+    "last_update": "2026-11-05T02:26:08Z"
+  },
+  "9eb9f1ae70ff2e191c1322b68ee0458a": {
+    "id": "9eb9f1ae70ff2e191c1322b68ee0458a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T00:00:00Z",
+    "completed": true,
+    "home_team": "Saint Joseph's Hawks",
+    "away_team": "Longwood Lancers",
+    "scores": [
+      {
+        "name": "Saint Joseph's Hawks",
+        "score": "82"
+      },
+      {
+        "name": "Longwood Lancers",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-05T02:26:08Z"
   }
 }
