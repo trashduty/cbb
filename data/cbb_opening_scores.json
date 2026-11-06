@@ -3017,7 +3017,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-06T01:22:25Z"
+    "last_update": "2026-11-06T01:51:41Z"
   },
   "9b6cb420308dc32beae2ec7b61de2dca": {
     "id": "9b6cb420308dc32beae2ec7b61de2dca",
@@ -3037,7 +3037,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-06T01:22:25Z"
+    "last_update": "2026-11-06T01:51:41Z"
   },
   "d523281d43838dea9e18868e964a0b8b": {
     "id": "d523281d43838dea9e18868e964a0b8b",
@@ -3057,6 +3057,46 @@
         "score": "51"
       }
     ],
-    "last_update": "2026-11-06T01:22:25Z"
+    "last_update": "2026-11-06T01:51:41Z"
+  },
+  "7e1e9d3f832831f68d75b5b8eb1d27d0": {
+    "id": "7e1e9d3f832831f68d75b5b8eb1d27d0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T23:01:40Z",
+    "completed": true,
+    "home_team": "Penn State Nittany Lions",
+    "away_team": "Chattanooga Mocs",
+    "scores": [
+      {
+        "name": "Penn State Nittany Lions",
+        "score": "97"
+      },
+      {
+        "name": "Chattanooga Mocs",
+        "score": "93"
+      }
+    ],
+    "last_update": "2026-11-06T01:51:41Z"
+  },
+  "590d00ebfc6e53d2afebe317131f0d52": {
+    "id": "590d00ebfc6e53d2afebe317131f0d52",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T23:30:00Z",
+    "completed": true,
+    "home_team": "Seton Hall Pirates",
+    "away_team": "LIU Sharks",
+    "scores": [
+      {
+        "name": "Seton Hall Pirates",
+        "score": "67"
+      },
+      {
+        "name": "LIU Sharks",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-06T01:51:41Z"
   }
 }
