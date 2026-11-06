@@ -3017,7 +3017,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-06T01:51:41Z"
+    "last_update": "2026-11-06T02:25:47Z"
   },
   "9b6cb420308dc32beae2ec7b61de2dca": {
     "id": "9b6cb420308dc32beae2ec7b61de2dca",
@@ -3037,7 +3037,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-06T01:51:41Z"
+    "last_update": "2026-11-06T02:25:47Z"
   },
   "d523281d43838dea9e18868e964a0b8b": {
     "id": "d523281d43838dea9e18868e964a0b8b",
@@ -3057,7 +3057,7 @@
         "score": "51"
       }
     ],
-    "last_update": "2026-11-06T01:51:41Z"
+    "last_update": "2026-11-06T02:25:47Z"
   },
   "7e1e9d3f832831f68d75b5b8eb1d27d0": {
     "id": "7e1e9d3f832831f68d75b5b8eb1d27d0",
@@ -3077,7 +3077,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-06T01:51:41Z"
+    "last_update": "2026-11-06T02:25:47Z"
   },
   "590d00ebfc6e53d2afebe317131f0d52": {
     "id": "590d00ebfc6e53d2afebe317131f0d52",
@@ -3097,6 +3097,326 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-06T01:51:41Z"
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "483ec5f7e12998303f0eb3cc7388c0c6": {
+    "id": "483ec5f7e12998303f0eb3cc7388c0c6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Saint Peter's Peacocks",
+    "away_team": "Binghamton Bearcats",
+    "scores": [
+      {
+        "name": "Saint Peter's Peacocks",
+        "score": "55"
+      },
+      {
+        "name": "Binghamton Bearcats",
+        "score": "58"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "7b1d98bf8e5fa4d2ba4e6932a269488d": {
+    "id": "7b1d98bf8e5fa4d2ba4e6932a269488d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Quinnipiac Bobcats",
+    "away_team": "Bryant Bulldogs",
+    "scores": [
+      {
+        "name": "Quinnipiac Bobcats",
+        "score": "66"
+      },
+      {
+        "name": "Bryant Bulldogs",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "4cc2399eae4e1e79a5d4e947738e5c50": {
+    "id": "4cc2399eae4e1e79a5d4e947738e5c50",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Syracuse Orange",
+    "away_team": "Central Connecticut St Blue Devils",
+    "scores": [
+      {
+        "name": "Syracuse Orange",
+        "score": "102"
+      },
+      {
+        "name": "Central Connecticut St Blue Devils",
+        "score": "49"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "3906de255fde2785a8bdde47dda988ba": {
+    "id": "3906de255fde2785a8bdde47dda988ba",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Lehigh Mountain Hawks",
+    "away_team": "Cornell Big Red",
+    "scores": [
+      {
+        "name": "Lehigh Mountain Hawks",
+        "score": "71"
+      },
+      {
+        "name": "Cornell Big Red",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "281daf2bc696b25be6b370fa26a16b44": {
+    "id": "281daf2bc696b25be6b370fa26a16b44",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Fairfield Stags",
+    "away_team": "Vermont Catamounts",
+    "scores": [
+      {
+        "name": "Fairfield Stags",
+        "score": "67"
+      },
+      {
+        "name": "Vermont Catamounts",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "689b0e55fa4029ca310b0afbcbf5834f": {
+    "id": "689b0e55fa4029ca310b0afbcbf5834f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Iona Gaels",
+    "away_team": "NJIT Highlanders",
+    "scores": [
+      {
+        "name": "Iona Gaels",
+        "score": "72"
+      },
+      {
+        "name": "NJIT Highlanders",
+        "score": "49"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "8e4eaf29e25ac652e7ef172a94588c59": {
+    "id": "8e4eaf29e25ac652e7ef172a94588c59",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Virginia Tech Hokies",
+    "away_team": "Mercer Bears",
+    "scores": [
+      {
+        "name": "Virginia Tech Hokies",
+        "score": "96"
+      },
+      {
+        "name": "Mercer Bears",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "49546f313dfdc477c2c297aad9ba986f": {
+    "id": "49546f313dfdc477c2c297aad9ba986f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Notre Dame Fighting Irish",
+    "away_team": "Mercyhurst Lakers",
+    "scores": [
+      {
+        "name": "Notre Dame Fighting Irish",
+        "score": "83"
+      },
+      {
+        "name": "Mercyhurst Lakers",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "0ecf898985b5ce93d808d02565bce97e": {
+    "id": "0ecf898985b5ce93d808d02565bce97e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Merrimack Warriors",
+    "away_team": "UMass Lowell River Hawks",
+    "scores": [
+      {
+        "name": "Merrimack Warriors",
+        "score": "61"
+      },
+      {
+        "name": "UMass Lowell River Hawks",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "0414ba396d0c4ed275a4bce4cfa7e342": {
+    "id": "0414ba396d0c4ed275a4bce4cfa7e342",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:00:00Z",
+    "completed": true,
+    "home_team": "Rider Broncs",
+    "away_team": "New Hampshire Wildcats",
+    "scores": [
+      {
+        "name": "Rider Broncs",
+        "score": "55"
+      },
+      {
+        "name": "New Hampshire Wildcats",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "6e4f744a03685bf3edc3130b13be36e9": {
+    "id": "6e4f744a03685bf3edc3130b13be36e9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:02:12Z",
+    "completed": true,
+    "home_team": "Cincinnati Bearcats",
+    "away_team": "Green Bay Phoenix",
+    "scores": [
+      {
+        "name": "Cincinnati Bearcats",
+        "score": "81"
+      },
+      {
+        "name": "Green Bay Phoenix",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "c0192c524275f9a982685604fd7c88e2": {
+    "id": "c0192c524275f9a982685604fd7c88e2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:02:25Z",
+    "completed": true,
+    "home_team": "Incarnate Word Cardinals",
+    "away_team": "Chicago St Cougars",
+    "scores": [
+      {
+        "name": "Incarnate Word Cardinals",
+        "score": "54"
+      },
+      {
+        "name": "Chicago St Cougars",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "f87c9317beb43de7e36f1d3eb8247747": {
+    "id": "f87c9317beb43de7e36f1d3eb8247747",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:02:49Z",
+    "completed": true,
+    "home_team": "Sacred Heart Pioneers",
+    "away_team": "Maine Black Bears",
+    "scores": [
+      {
+        "name": "Sacred Heart Pioneers",
+        "score": "72"
+      },
+      {
+        "name": "Maine Black Bears",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "2ae76a6632fefad0845df318c332b97e": {
+    "id": "2ae76a6632fefad0845df318c332b97e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:03:07Z",
+    "completed": true,
+    "home_team": "Navy Midshipmen",
+    "away_team": "Delaware St Hornets",
+    "scores": [
+      {
+        "name": "Navy Midshipmen",
+        "score": "66"
+      },
+      {
+        "name": "Delaware St Hornets",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "76d51047b43ad9fdf8bccd49925387c9": {
+    "id": "76d51047b43ad9fdf8bccd49925387c9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:03:31Z",
+    "completed": true,
+    "home_team": "Princeton Tigers",
+    "away_team": "Hofstra Pride",
+    "scores": [
+      {
+        "name": "Princeton Tigers",
+        "score": "60"
+      },
+      {
+        "name": "Hofstra Pride",
+        "score": "58"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
+  },
+  "f182504e9a38c42cedec008cf281a0f6": {
+    "id": "f182504e9a38c42cedec008cf281a0f6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-06T00:04:04Z",
+    "completed": true,
+    "home_team": "Charlotte 49ers",
+    "away_team": "Georgia St Panthers",
+    "scores": [
+      {
+        "name": "Charlotte 49ers",
+        "score": "77"
+      },
+      {
+        "name": "Georgia St Panthers",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-06T02:25:47Z"
   }
 }
