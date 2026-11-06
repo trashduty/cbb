@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-06T21:22:14.617121+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-06T21:33:00.397769+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 36,
       "losses": 44,
       "pushes": 0,
-      "pending": 29,
+      "pending": 30,
       "win_rate": 0.45,
       "profit_units": -7.001415659095793
     },
@@ -134,7 +134,7 @@
       "wins": 7,
       "losses": 12,
       "pushes": 0,
-      "pending": 10,
+      "pending": 11,
       "win_rate": 0.3684210526315789,
       "profit_units": 0.5760587238848096
     },
@@ -159,7 +159,7 @@
       "profit_units": 1.1799999999999997
     }
   ],
-  "snapshots": 1616,
+  "snapshots": 1620,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -12250,6 +12250,34 @@
       "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "spread_consensus": "No",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "ba254c54832e43c8ad3b486c",
+      "event_id": "74c510490b9dc16a4a1ffca922cb8dfb",
+      "game": "UNLV Rebels vs. Samford Bulldogs",
+      "home_team": "UNLV Rebels",
+      "away_team": "Samford Bulldogs",
+      "commence_time": "2026-11-07T21:00:00+00:00",
+      "game_date_et": "2026-11-07",
+      "captured_at": "2026-11-06T21:33:00.397769+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "Samford Bulldogs",
+      "line": null,
+      "odds": 525.0,
+      "model_prediction": 0.1762019397496449,
+      "probability": 0.1762019397496449,
+      "implied_probability": 0.16,
+      "edge": 0.0162019397496449,
+      "edge_tier": "1\u20132.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
