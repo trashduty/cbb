@@ -3017,6 +3017,46 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-06T00:53:14Z"
+    "last_update": "2026-11-06T01:22:25Z"
+  },
+  "9b6cb420308dc32beae2ec7b61de2dca": {
+    "id": "9b6cb420308dc32beae2ec7b61de2dca",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T23:00:00Z",
+    "completed": true,
+    "home_team": "Indiana Hoosiers",
+    "away_team": "Bellarmine Knights",
+    "scores": [
+      {
+        "name": "Indiana Hoosiers",
+        "score": "92"
+      },
+      {
+        "name": "Bellarmine Knights",
+        "score": "69"
+      }
+    ],
+    "last_update": "2026-11-06T01:22:25Z"
+  },
+  "d523281d43838dea9e18868e964a0b8b": {
+    "id": "d523281d43838dea9e18868e964a0b8b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T23:02:07Z",
+    "completed": true,
+    "home_team": "Vanderbilt Commodores",
+    "away_team": "Wake Forest Demon Deacons",
+    "scores": [
+      {
+        "name": "Vanderbilt Commodores",
+        "score": "74"
+      },
+      {
+        "name": "Wake Forest Demon Deacons",
+        "score": "51"
+      }
+    ],
+    "last_update": "2026-11-06T01:22:25Z"
   }
 }
