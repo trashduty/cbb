@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-06T22:52:26.181102+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-06T23:04:24.677841+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -159,7 +159,7 @@
       "profit_units": 1.1799999999999997
     }
   ],
-  "snapshots": 1620,
+  "snapshots": 1622,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
