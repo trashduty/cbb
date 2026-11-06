@@ -2998,5 +2998,25 @@
       }
     ],
     "last_update": "2026-11-05T10:38:22Z"
+  },
+  "e3cc352d1f8244d8775114a034a9355a": {
+    "id": "e3cc352d1f8244d8775114a034a9355a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-05T22:00:00Z",
+    "completed": true,
+    "home_team": "North Texas Mean Green",
+    "away_team": "McNeese Cowboys",
+    "scores": [
+      {
+        "name": "North Texas Mean Green",
+        "score": "77"
+      },
+      {
+        "name": "McNeese Cowboys",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-06T00:40:30Z"
   }
 }
