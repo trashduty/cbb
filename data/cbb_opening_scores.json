@@ -5057,7 +5057,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-07T20:51:16Z"
+    "last_update": "2026-11-07T21:22:16Z"
   },
   "bee8eb51e6e5e53cda4d14e196962187": {
     "id": "bee8eb51e6e5e53cda4d14e196962187",
@@ -5077,7 +5077,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-07T20:51:16Z"
+    "last_update": "2026-11-07T21:22:16Z"
   },
   "95a884620a33548d3bba4614a54981e4": {
     "id": "95a884620a33548d3bba4614a54981e4",
@@ -5097,6 +5097,66 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T20:51:16Z"
+    "last_update": "2026-11-07T21:22:16Z"
+  },
+  "462eb1ef3b8d41aebc7aa9e79ff9f114": {
+    "id": "462eb1ef3b8d41aebc7aa9e79ff9f114",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T19:00:00Z",
+    "completed": true,
+    "home_team": "Drexel Dragons",
+    "away_team": "Colgate Raiders",
+    "scores": [
+      {
+        "name": "Drexel Dragons",
+        "score": "77"
+      },
+      {
+        "name": "Colgate Raiders",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-07T21:22:16Z"
+  },
+  "882ad52df45d057724570207ff6a33b1": {
+    "id": "882ad52df45d057724570207ff6a33b1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T19:02:32Z",
+    "completed": true,
+    "home_team": "Marshall Thundering Herd",
+    "away_team": "Toledo Rockets",
+    "scores": [
+      {
+        "name": "Marshall Thundering Herd",
+        "score": "76"
+      },
+      {
+        "name": "Toledo Rockets",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-07T21:22:16Z"
+  },
+  "5904d3d077ba83db899207c895146c4e": {
+    "id": "5904d3d077ba83db899207c895146c4e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T19:05:17Z",
+    "completed": true,
+    "home_team": "South Dakota Coyotes",
+    "away_team": "CSU Fullerton Titans",
+    "scores": [
+      {
+        "name": "South Dakota Coyotes",
+        "score": "85"
+      },
+      {
+        "name": "CSU Fullerton Titans",
+        "score": "87"
+      }
+    ],
+    "last_update": "2026-11-07T21:22:16Z"
   }
 }
