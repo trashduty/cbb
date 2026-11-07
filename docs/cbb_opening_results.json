@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T00:52:14.178054+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-07T01:05:02.954554+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 36,
       "losses": 44,
       "pushes": 0,
-      "pending": 45,
+      "pending": 46,
       "win_rate": 0.45,
       "profit_units": -7.001415659095793
     },
@@ -134,7 +134,7 @@
       "wins": 7,
       "losses": 12,
       "pushes": 0,
-      "pending": 16,
+      "pending": 17,
       "win_rate": 0.3684210526315789,
       "profit_units": 0.5760587238848096
     },
@@ -159,7 +159,7 @@
       "profit_units": 1.1799999999999997
     }
   ],
-  "snapshots": 1702,
+  "snapshots": 1704,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -12976,6 +12976,34 @@
       "implied_probability": 0.7183098591549296,
       "edge": 0.005212184075071069,
       "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "0eb948f2f9abe02c6125eca5",
+      "event_id": "7795f37cca47b3cdf4005418da02c78d",
+      "game": "UC Riverside Highlanders vs. Denver Pioneers",
+      "home_team": "UC Riverside Highlanders",
+      "away_team": "Denver Pioneers",
+      "commence_time": "2026-11-08T00:30:00+00:00",
+      "game_date_et": "2026-11-07",
+      "captured_at": "2026-11-07T01:05:02.954554+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "UC Riverside Highlanders",
+      "line": null,
+      "odds": -140.0,
+      "model_prediction": 0.603123222569531,
+      "probability": 0.603123222569531,
+      "implied_probability": 0.5833333333333334,
+      "edge": 0.019789889236197622,
+      "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
