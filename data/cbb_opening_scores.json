@@ -5038,5 +5038,25 @@
       }
     ],
     "last_update": "2026-11-07T11:13:42Z"
+  },
+  "3e1fc8d41a25b1142a03fc0bc907b2f5": {
+    "id": "3e1fc8d41a25b1142a03fc0bc907b2f5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T17:01:50Z",
+    "completed": true,
+    "home_team": "Louisville Cardinals",
+    "away_team": "Morehead St Eagles",
+    "scores": [
+      {
+        "name": "Louisville Cardinals",
+        "score": "107"
+      },
+      {
+        "name": "Morehead St Eagles",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-07T19:21:34Z"
   }
 }
