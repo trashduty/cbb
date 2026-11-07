@@ -5057,7 +5057,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
   },
   "bee8eb51e6e5e53cda4d14e196962187": {
     "id": "bee8eb51e6e5e53cda4d14e196962187",
@@ -5077,7 +5077,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
   },
   "95a884620a33548d3bba4614a54981e4": {
     "id": "95a884620a33548d3bba4614a54981e4",
@@ -5097,7 +5097,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
   },
   "462eb1ef3b8d41aebc7aa9e79ff9f114": {
     "id": "462eb1ef3b8d41aebc7aa9e79ff9f114",
@@ -5117,7 +5117,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
   },
   "882ad52df45d057724570207ff6a33b1": {
     "id": "882ad52df45d057724570207ff6a33b1",
@@ -5137,7 +5137,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
   },
   "5904d3d077ba83db899207c895146c4e": {
     "id": "5904d3d077ba83db899207c895146c4e",
@@ -5157,6 +5157,46 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-07T21:22:16Z"
+    "last_update": "2026-11-07T21:51:48Z"
+  },
+  "daa0227f4cc377e5bfa32cc4dae3e97f": {
+    "id": "daa0227f4cc377e5bfa32cc4dae3e97f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T19:02:50Z",
+    "completed": true,
+    "home_team": "East Carolina Pirates",
+    "away_team": "UNC Wilmington Seahawks",
+    "scores": [
+      {
+        "name": "East Carolina Pirates",
+        "score": "75"
+      },
+      {
+        "name": "UNC Wilmington Seahawks",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-07T21:51:48Z"
+  },
+  "84d1c6e7d5e0b1c7442b5e7b1b39ffef": {
+    "id": "84d1c6e7d5e0b1c7442b5e7b1b39ffef",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T19:02:53Z",
+    "completed": true,
+    "home_team": "Abilene Christian Wildcats",
+    "away_team": "Lamar Cardinals",
+    "scores": [
+      {
+        "name": "Abilene Christian Wildcats",
+        "score": "83"
+      },
+      {
+        "name": "Lamar Cardinals",
+        "score": "82"
+      }
+    ],
+    "last_update": "2026-11-07T21:51:48Z"
   }
 }
