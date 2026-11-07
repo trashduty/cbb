@@ -5057,7 +5057,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "bee8eb51e6e5e53cda4d14e196962187": {
     "id": "bee8eb51e6e5e53cda4d14e196962187",
@@ -5077,7 +5077,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "95a884620a33548d3bba4614a54981e4": {
     "id": "95a884620a33548d3bba4614a54981e4",
@@ -5097,7 +5097,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "462eb1ef3b8d41aebc7aa9e79ff9f114": {
     "id": "462eb1ef3b8d41aebc7aa9e79ff9f114",
@@ -5117,7 +5117,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "882ad52df45d057724570207ff6a33b1": {
     "id": "882ad52df45d057724570207ff6a33b1",
@@ -5137,7 +5137,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "5904d3d077ba83db899207c895146c4e": {
     "id": "5904d3d077ba83db899207c895146c4e",
@@ -5157,7 +5157,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "daa0227f4cc377e5bfa32cc4dae3e97f": {
     "id": "daa0227f4cc377e5bfa32cc4dae3e97f",
@@ -5177,7 +5177,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "84d1c6e7d5e0b1c7442b5e7b1b39ffef": {
     "id": "84d1c6e7d5e0b1c7442b5e7b1b39ffef",
@@ -5197,7 +5197,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "272da5063b59e60066c175faaf3896a8": {
     "id": "272da5063b59e60066c175faaf3896a8",
@@ -5217,7 +5217,7 @@
         "score": "88"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "c530a7eb8fcd6a9778b6d0a4eac66c3f": {
     "id": "c530a7eb8fcd6a9778b6d0a4eac66c3f",
@@ -5237,7 +5237,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "5569c1c8821ecf008dd21c7bb1019d3c": {
     "id": "5569c1c8821ecf008dd21c7bb1019d3c",
@@ -5257,7 +5257,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
   },
   "f13bf63f79eb03b92a2ba8b8c36f087c": {
     "id": "f13bf63f79eb03b92a2ba8b8c36f087c",
@@ -5277,6 +5277,106 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-07T22:51:20Z"
+    "last_update": "2026-11-07T23:21:11Z"
+  },
+  "1f4935033dd08aad7d54289caa988f0c": {
+    "id": "1f4935033dd08aad7d54289caa988f0c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T20:41:07Z",
+    "completed": true,
+    "home_team": "Colorado Buffaloes",
+    "away_team": "San Diego St Aztecs",
+    "scores": [
+      {
+        "name": "Colorado Buffaloes",
+        "score": "66"
+      },
+      {
+        "name": "San Diego St Aztecs",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-07T23:21:11Z"
+  },
+  "ffdc4937cb4e802afce7b5b8894a1cf8": {
+    "id": "ffdc4937cb4e802afce7b5b8894a1cf8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T21:00:00Z",
+    "completed": true,
+    "home_team": "UC Santa Barbara Gauchos",
+    "away_team": "Oakland Golden Grizzlies",
+    "scores": [
+      {
+        "name": "UC Santa Barbara Gauchos",
+        "score": "90"
+      },
+      {
+        "name": "Oakland Golden Grizzlies",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-07T23:21:11Z"
+  },
+  "74c510490b9dc16a4a1ffca922cb8dfb": {
+    "id": "74c510490b9dc16a4a1ffca922cb8dfb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T21:02:58Z",
+    "completed": true,
+    "home_team": "UNLV Rebels",
+    "away_team": "Samford Bulldogs",
+    "scores": [
+      {
+        "name": "UNLV Rebels",
+        "score": "88"
+      },
+      {
+        "name": "Samford Bulldogs",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-07T23:21:11Z"
+  },
+  "ce492f4ed1f024a8332f35dd1ff065d2": {
+    "id": "ce492f4ed1f024a8332f35dd1ff065d2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T21:03:14Z",
+    "completed": true,
+    "home_team": "Rhode Island Rams",
+    "away_team": "Monmouth Hawks",
+    "scores": [
+      {
+        "name": "Rhode Island Rams",
+        "score": "84"
+      },
+      {
+        "name": "Monmouth Hawks",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-07T23:21:11Z"
+  },
+  "c4a50f597254e62cf6bb56c576e3d866": {
+    "id": "c4a50f597254e62cf6bb56c576e3d866",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T21:05:55Z",
+    "completed": true,
+    "home_team": "Utah State Aggies",
+    "away_team": "Omaha Mavericks",
+    "scores": [
+      {
+        "name": "Utah State Aggies",
+        "score": "90"
+      },
+      {
+        "name": "Omaha Mavericks",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-07T23:21:11Z"
   }
 }
