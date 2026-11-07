@@ -5057,7 +5057,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-07T19:51:40Z"
+    "last_update": "2026-11-07T20:22:16Z"
   },
   "bee8eb51e6e5e53cda4d14e196962187": {
     "id": "bee8eb51e6e5e53cda4d14e196962187",
@@ -5077,6 +5077,26 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-07T19:51:40Z"
+    "last_update": "2026-11-07T20:22:16Z"
+  },
+  "95a884620a33548d3bba4614a54981e4": {
+    "id": "95a884620a33548d3bba4614a54981e4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T18:00:00Z",
+    "completed": true,
+    "home_team": "Ohio Bobcats",
+    "away_team": "North Carolina A&T Aggies",
+    "scores": [
+      {
+        "name": "Ohio Bobcats",
+        "score": "80"
+      },
+      {
+        "name": "North Carolina A&T Aggies",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-07T20:22:16Z"
   }
 }
