@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T21:51:52.121946+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-07T22:03:51.479575+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 41,
       "losses": 64,
       "pushes": 0,
-      "pending": 31,
+      "pending": 32,
       "win_rate": 0.3904761904761905,
       "profit_units": -22.523933141613274
     },
@@ -154,12 +154,12 @@
       "wins": 5,
       "losses": 6,
       "pushes": 0,
-      "pending": 1,
+      "pending": 2,
       "win_rate": 0.45454545454545453,
       "profit_units": 3.78
     }
   ],
-  "snapshots": 1778,
+  "snapshots": 1782,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -13844,6 +13844,34 @@
       "implied_probability": 0.5121951219512195,
       "edge": 0.042093977731660126,
       "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "6edcb77f76c71a7d0ea09491",
+      "event_id": "baa422a9e95dda81059499feb5d38a44",
+      "game": "CSU Bakersfield Roadrunners vs. North Dakota St Bison",
+      "home_team": "CSU Bakersfield Roadrunners",
+      "away_team": "North Dakota St Bison",
+      "commence_time": "2026-11-08T23:00:00+00:00",
+      "game_date_et": "2026-11-08",
+      "captured_at": "2026-11-07T22:03:51.479575+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "North Dakota St Bison",
+      "line": null,
+      "odds": 110.0,
+      "model_prediction": 0.5866584160634765,
+      "probability": 0.5866584160634765,
+      "implied_probability": 0.47619047619047616,
+      "edge": 0.1104679398730003,
+      "edge_tier": "6%+",
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
