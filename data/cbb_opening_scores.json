@@ -5057,7 +5057,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "bee8eb51e6e5e53cda4d14e196962187": {
     "id": "bee8eb51e6e5e53cda4d14e196962187",
@@ -5077,7 +5077,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "95a884620a33548d3bba4614a54981e4": {
     "id": "95a884620a33548d3bba4614a54981e4",
@@ -5097,7 +5097,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "462eb1ef3b8d41aebc7aa9e79ff9f114": {
     "id": "462eb1ef3b8d41aebc7aa9e79ff9f114",
@@ -5117,7 +5117,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "882ad52df45d057724570207ff6a33b1": {
     "id": "882ad52df45d057724570207ff6a33b1",
@@ -5137,7 +5137,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "5904d3d077ba83db899207c895146c4e": {
     "id": "5904d3d077ba83db899207c895146c4e",
@@ -5157,7 +5157,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "daa0227f4cc377e5bfa32cc4dae3e97f": {
     "id": "daa0227f4cc377e5bfa32cc4dae3e97f",
@@ -5177,7 +5177,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "84d1c6e7d5e0b1c7442b5e7b1b39ffef": {
     "id": "84d1c6e7d5e0b1c7442b5e7b1b39ffef",
@@ -5197,7 +5197,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "272da5063b59e60066c175faaf3896a8": {
     "id": "272da5063b59e60066c175faaf3896a8",
@@ -5217,7 +5217,7 @@
         "score": "88"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
   },
   "c530a7eb8fcd6a9778b6d0a4eac66c3f": {
     "id": "c530a7eb8fcd6a9778b6d0a4eac66c3f",
@@ -5237,6 +5237,46 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-07T22:22:11Z"
+    "last_update": "2026-11-07T22:51:20Z"
+  },
+  "5569c1c8821ecf008dd21c7bb1019d3c": {
+    "id": "5569c1c8821ecf008dd21c7bb1019d3c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T20:02:51Z",
+    "completed": true,
+    "home_team": "Longwood Lancers",
+    "away_team": "North Carolina Central Eagles",
+    "scores": [
+      {
+        "name": "Longwood Lancers",
+        "score": "80"
+      },
+      {
+        "name": "North Carolina Central Eagles",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-07T22:51:20Z"
+  },
+  "f13bf63f79eb03b92a2ba8b8c36f087c": {
+    "id": "f13bf63f79eb03b92a2ba8b8c36f087c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-07T20:30:00Z",
+    "completed": true,
+    "home_team": "La Salle Explorers",
+    "away_team": "LIU Sharks",
+    "scores": [
+      {
+        "name": "La Salle Explorers",
+        "score": "88"
+      },
+      {
+        "name": "LIU Sharks",
+        "score": "80"
+      }
+    ],
+    "last_update": "2026-11-07T22:51:20Z"
   }
 }
