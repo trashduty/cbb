@@ -6017,6 +6017,146 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-08T19:51:38Z"
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "4a88827c71210aaa950ea6b5995aabda": {
+    "id": "4a88827c71210aaa950ea6b5995aabda",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "completed": true,
+    "home_team": "South Carolina Gamecocks",
+    "away_team": "SE Missouri St Redhawks",
+    "scores": [
+      {
+        "name": "South Carolina Gamecocks",
+        "score": "78"
+      },
+      {
+        "name": "SE Missouri St Redhawks",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "8f861f2e1704f9b0fbae3e1aa816bc48": {
+    "id": "8f861f2e1704f9b0fbae3e1aa816bc48",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:02:27Z",
+    "completed": true,
+    "home_team": "Bryant Bulldogs",
+    "away_team": "Fairfield Stags",
+    "scores": [
+      {
+        "name": "Bryant Bulldogs",
+        "score": "59"
+      },
+      {
+        "name": "Fairfield Stags",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "95432fedd19fd4b0534dd96656875b91": {
+    "id": "95432fedd19fd4b0534dd96656875b91",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:03:00Z",
+    "completed": true,
+    "home_team": "Virginia Cavaliers",
+    "away_team": "Arkansas Razorbacks",
+    "scores": [
+      {
+        "name": "Virginia Cavaliers",
+        "score": "91"
+      },
+      {
+        "name": "Arkansas Razorbacks",
+        "score": "72"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "c60a638033180898ceab69f0baae6a52": {
+    "id": "c60a638033180898ceab69f0baae6a52",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:03:03Z",
+    "completed": true,
+    "home_team": "UMass Lowell River Hawks",
+    "away_team": "Marist Red Foxes",
+    "scores": [
+      {
+        "name": "UMass Lowell River Hawks",
+        "score": "63"
+      },
+      {
+        "name": "Marist Red Foxes",
+        "score": "61"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "651b839e9ed75e621320514c90ebcaaa": {
+    "id": "651b839e9ed75e621320514c90ebcaaa",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:03:20Z",
+    "completed": true,
+    "home_team": "Maine Black Bears",
+    "away_team": "Manhattan Jaspers",
+    "scores": [
+      {
+        "name": "Maine Black Bears",
+        "score": "62"
+      },
+      {
+        "name": "Manhattan Jaspers",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "b791f115e68a00b090f9f78d07a757b1": {
+    "id": "b791f115e68a00b090f9f78d07a757b1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:04:04Z",
+    "completed": true,
+    "home_team": "Siena Saints",
+    "away_team": "Princeton Tigers",
+    "scores": [
+      {
+        "name": "Siena Saints",
+        "score": "82"
+      },
+      {
+        "name": "Princeton Tigers",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
+  },
+  "5eaa93d78d7adab11764f42c7b500faf": {
+    "id": "5eaa93d78d7adab11764f42c7b500faf",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T18:05:32Z",
+    "completed": true,
+    "home_team": "New Hampshire Wildcats",
+    "away_team": "Sacred Heart Pioneers",
+    "scores": [
+      {
+        "name": "New Hampshire Wildcats",
+        "score": "76"
+      },
+      {
+        "name": "Sacred Heart Pioneers",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-08T20:22:18Z"
   }
 }
