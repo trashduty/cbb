@@ -5998,5 +5998,25 @@
       }
     ],
     "last_update": "2026-11-08T10:41:33Z"
+  },
+  "2303b6223847bd67b993f4263a484f46": {
+    "id": "2303b6223847bd67b993f4263a484f46",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T17:00:00Z",
+    "completed": true,
+    "home_team": "St. John's Red Storm",
+    "away_team": "Iona Gaels",
+    "scores": [
+      {
+        "name": "St. John's Red Storm",
+        "score": "104"
+      },
+      {
+        "name": "Iona Gaels",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-08T19:22:03Z"
   }
 }
