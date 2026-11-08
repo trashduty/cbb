@@ -290,6 +290,7 @@ td.cbb-team-name{text-align:left}
     <details data-control="picker"><summary><span data-label="selection">All teams</span></summary><div class="cbb-picker"><input type="search" data-control="team-search" placeholder="Find a team…" aria-label="Find a team"><div class="cbb-picker-actions"><button type="button" data-action="select-visible">Select visible</button><button type="button" data-action="clear-teams">Clear</button><button type="button" data-action="close-picker">Close</button></div><div class="cbb-teams" data-label="teams"></div></div></details>
     <select data-control="date" aria-label="Filter by game date"><option value="">All dates (ET)</option></select>
     <label class="cbb-check"><input type="checkbox" data-control="upcoming" checked> Upcoming only</label>
+    <label class="cbb-check"><input type="checkbox" data-control="consensus"> Consensus only</label>
     <button type="button" data-action="refresh">Refresh</button>
   </div>
   <div class="cbb-meta"><span data-label="count">Loading games…</span><span class="cbb-status" data-label="status" role="status" aria-live="polite">Connecting to model output…</span></div>
@@ -331,7 +332,7 @@ td.cbb-team-name{text-align:left}
 
     <h4>Make The Board Part Of Your Process</h4>
     <p>The board gives you a consistent reference price without relying on a hunch, a half-remembered score, or whoever is on TV. Use it for line shopping, checking numbers that look off, and comparing the main public systems without opening several tabs. A rating of -5 against a market line of -3 is a starting point; the probability and price help you assess what that difference means.</p>
-    <p>Choose a market tab, search for a team, or filter by date. Click a column header to sort. All game times are Eastern. Upcoming Only hides games at tipoff. Games without model predictions are hidden from the relevant tab; a dash means a particular value is unavailable. On mobile, swipe horizontally to see more columns. Team-name links open injury reports for additional context.</p>
+    <p>Choose a market tab, search for a team, or filter by date. Click a column header to sort. All game times are Eastern. Upcoming Only hides games at tipoff. Consensus Only keeps matchups with a Yes in the selected market, or in any market on All Markets, while retaining both teams when available. Games without model predictions are hidden from the relevant tab; a dash means a particular value is unavailable. On mobile, swipe horizontally to see more columns. Team-name links open injury reports for additional context.</p>
     <p>This tool is for someone who already follows and bets college basketball and wants a reference price and a repeatable process. You can get ratings anywhere. What we provide is those ratings translated into prices across the board, so you can make your own decision.</p>
     <p><a href="#btb-cbb">Back To The Table ↑</a></p>
   </section>
@@ -345,7 +346,7 @@ td.cbb-team-name{text-align:left}
     const CSV_URL = root.dataset.csvUrl;
     const REFRESH_MS = 60000;
     const $ = selector => root.querySelector(selector);
-    const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]')};
+    const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]'),consensus:$('[data-control=consensus]')};
     const state = {rows:[],fields:[],teams:[],selected:new Set(),market:'spread',sort:{key:'Game Time',direction:'asc'},loaded:false,busy:false,lastSuccess:null};
     const common = [
       {key:'Game Time',label:'Game Time · ET',type:'time'},
@@ -564,6 +565,18 @@ td.cbb-team-name{text-align:left}
     function processedRows(now=Date.now()){
       const q=controls.search.value.trim().toLowerCase();
       let rows=state.rows.filter(r=>hasModelOutput(r,state.market)&&(!controls.upcoming.checked||r._kickoff===null||r._kickoff>now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
+      if(controls.consensus.checked){
+        const consensusColumns = state.market === 'all'
+          ? ['Spread Consensus', 'Total Consensus', 'Moneyline Consensus']
+          : [{spread:'Spread Consensus', total:'Total Consensus', ml:'Moneyline Consensus'}[state.market]];
+        const matchingGames = new Set(
+          state.rows
+            .filter(row => hasModelOutput(row, state.market) &&
+              consensusColumns.some(column => row[column] === 'Yes'))
+            .map(row => JSON.stringify([row.Game, row['Game Time']]))
+        );
+        rows = rows.filter(row => matchingGames.has(JSON.stringify([row.Game, row['Game Time']])));
+      }
       const config=allColumns.find(c=>c.key===state.sort.key);
       rows=rows.slice().sort((a,b)=>{
         const value=r=>state.sort.key==='Game Time'?r._kickoff:config?.type==='text'?r[state.sort.key]:numeric(r[state.sort.key]);
@@ -599,7 +612,7 @@ td.cbb-team-name{text-align:left}
           tr.append(td);
         }body.append(tr);
       }
-      if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=Math.max(columns.length,1);td.className='cbb-empty';td.textContent=state.loaded?'No games match these filters. Clear your selection or turn off Upcoming only.':'Waiting for model outputs…';tr.append(td);body.append(tr);}
+      if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=Math.max(columns.length,1);td.className='cbb-empty';td.textContent=state.loaded?'No games match these filters. Clear your selection or turn off Upcoming only or Consensus only.':'Waiting for model outputs…';tr.append(td);body.append(tr);}
       $('tbody').replaceChildren(body);
       const games=new Set(rows.map(r=>`${r.Game}|${r['Game Time']}`)).size;
       $('[data-label=count]').textContent=`${games} game${games===1?'':'s'} · ${rows.length} team row${rows.length===1?'':'s'}`;
@@ -627,7 +640,7 @@ td.cbb-team-name{text-align:left}
       }finally{clearTimeout(timeout);state.busy=false;button.disabled=false;button.textContent='Refresh';}
     }
     root.querySelectorAll('[data-market]').forEach(button=>button.addEventListener('click',()=>{state.market=button.dataset.market;state.sort={key:'Game Time',direction:'asc'};root.querySelectorAll('[data-market]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderTable();}));
-    controls.search.addEventListener('input',renderTable);controls.teamSearch.addEventListener('input',renderPicker);controls.date.addEventListener('change',renderTable);controls.upcoming.addEventListener('change',renderTable);
+    controls.search.addEventListener('input',renderTable);controls.teamSearch.addEventListener('input',renderPicker);controls.date.addEventListener('change',renderTable);controls.upcoming.addEventListener('change',renderTable);controls.consensus.addEventListener('change',renderTable);
     $('[data-action=select-visible]').addEventListener('click',()=>{visibleTeams().forEach(t=>state.selected.add(t));renderPicker();renderTable();});
     $('[data-action=clear-teams]').addEventListener('click',()=>{state.selected.clear();controls.teamSearch.value='';renderPicker();renderTable();});
     $('[data-action=close-picker]').addEventListener('click',()=>{controls.picker.open=false;});
