@@ -6017,7 +6017,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "4a88827c71210aaa950ea6b5995aabda": {
     "id": "4a88827c71210aaa950ea6b5995aabda",
@@ -6037,7 +6037,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "8f861f2e1704f9b0fbae3e1aa816bc48": {
     "id": "8f861f2e1704f9b0fbae3e1aa816bc48",
@@ -6057,7 +6057,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "95432fedd19fd4b0534dd96656875b91": {
     "id": "95432fedd19fd4b0534dd96656875b91",
@@ -6077,7 +6077,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "c60a638033180898ceab69f0baae6a52": {
     "id": "c60a638033180898ceab69f0baae6a52",
@@ -6097,7 +6097,7 @@
         "score": "61"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "651b839e9ed75e621320514c90ebcaaa": {
     "id": "651b839e9ed75e621320514c90ebcaaa",
@@ -6117,7 +6117,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "b791f115e68a00b090f9f78d07a757b1": {
     "id": "b791f115e68a00b090f9f78d07a757b1",
@@ -6137,7 +6137,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
   },
   "5eaa93d78d7adab11764f42c7b500faf": {
     "id": "5eaa93d78d7adab11764f42c7b500faf",
@@ -6157,6 +6157,146 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-08T20:52:03Z"
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "928d73b1594da7d8b59856d8bf7e05eb": {
+    "id": "928d73b1594da7d8b59856d8bf7e05eb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:00:00Z",
+    "completed": true,
+    "home_team": "Boise State Broncos",
+    "away_team": "Butler Bulldogs",
+    "scores": [
+      {
+        "name": "Boise State Broncos",
+        "score": "100"
+      },
+      {
+        "name": "Butler Bulldogs",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "5f67d16b2d4d925206004f8a2e1f1180": {
+    "id": "5f67d16b2d4d925206004f8a2e1f1180",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:00:00Z",
+    "completed": true,
+    "home_team": "Lehigh Mountain Hawks",
+    "away_team": "Brown Bears",
+    "scores": [
+      {
+        "name": "Lehigh Mountain Hawks",
+        "score": "55"
+      },
+      {
+        "name": "Brown Bears",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "36662c75f1da54ae1b0e62b85edd8c67": {
+    "id": "36662c75f1da54ae1b0e62b85edd8c67",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:00:00Z",
+    "completed": true,
+    "home_team": "Western Michigan Broncos",
+    "away_team": "Campbell Fighting Camels",
+    "scores": [
+      {
+        "name": "Western Michigan Broncos",
+        "score": "87"
+      },
+      {
+        "name": "Campbell Fighting Camels",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "e9ad86daa5e64228cd112ac2dec3b591": {
+    "id": "e9ad86daa5e64228cd112ac2dec3b591",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:00:00Z",
+    "completed": true,
+    "home_team": "St. Thomas (MN) Tommies",
+    "away_team": "Green Bay Phoenix",
+    "scores": [
+      {
+        "name": "St. Thomas (MN) Tommies",
+        "score": "67"
+      },
+      {
+        "name": "Green Bay Phoenix",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "9288bf238c64fd0f2a07dd7686f7a09a": {
+    "id": "9288bf238c64fd0f2a07dd7686f7a09a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:03:13Z",
+    "completed": true,
+    "home_team": "Albany Great Danes",
+    "away_team": "Merrimack Warriors",
+    "scores": [
+      {
+        "name": "Albany Great Danes",
+        "score": "60"
+      },
+      {
+        "name": "Merrimack Warriors",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "a14ef06cee81734fbca92d5a235cf541": {
+    "id": "a14ef06cee81734fbca92d5a235cf541",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:03:13Z",
+    "completed": true,
+    "home_team": "Dartmouth Big Green",
+    "away_team": "Central Connecticut St Blue Devils",
+    "scores": [
+      {
+        "name": "Dartmouth Big Green",
+        "score": "71"
+      },
+      {
+        "name": "Central Connecticut St Blue Devils",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
+  },
+  "2ea59be5ea48be55282cf76a1a337a9c": {
+    "id": "2ea59be5ea48be55282cf76a1a337a9c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T19:07:33Z",
+    "completed": true,
+    "home_team": "Vermont Catamounts",
+    "away_team": "Quinnipiac Bobcats",
+    "scores": [
+      {
+        "name": "Vermont Catamounts",
+        "score": "76"
+      },
+      {
+        "name": "Quinnipiac Bobcats",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-08T21:21:51Z"
   }
 }
