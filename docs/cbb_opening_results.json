@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T20:52:07.872171+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-08T21:03:45.864255+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -64,7 +64,7 @@
       "wins": 76,
       "losses": 68,
       "pushes": 0,
-      "pending": 19,
+      "pending": 20,
       "win_rate": 0.5277777777777778,
       "profit_units": 1.305246537511985
     },
@@ -84,7 +84,7 @@
       "wins": 37,
       "losses": 26,
       "pushes": 0,
-      "pending": 2,
+      "pending": 3,
       "win_rate": 0.5873015873015873,
       "profit_units": 7.737582868017652
     },
@@ -159,7 +159,7 @@
       "profit_units": 2.78
     }
   ],
-  "snapshots": 1974,
+  "snapshots": 1980,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -15888,6 +15888,34 @@
       "implied_probability": 0.5238095238095238,
       "edge": 0.043577297844539786,
       "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "e527b3cd0a75bb01471d07b7",
+      "event_id": "775e92f196ba760abeb98b6e5a9da49a",
+      "game": "Seton Hall Pirates vs. Charlotte 49ers",
+      "home_team": "Seton Hall Pirates",
+      "away_team": "Charlotte 49ers",
+      "commence_time": "2026-11-10T02:00:00+00:00",
+      "game_date_et": "2026-11-09",
+      "captured_at": "2026-11-08T21:03:45.864255+00:00",
+      "book": "theScore Bet",
+      "bet_type": "Total",
+      "selection": "Over",
+      "line": 135.5,
+      "odds": -105.0,
+      "model_prediction": 137.5,
+      "probability": 0.5310871879321442,
+      "implied_probability": 0.5121951219512195,
+      "edge": 0.018892065980924633,
+      "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
