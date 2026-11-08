@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T19:22:03.941467+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-08T19:33:36.116967+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 54,
       "losses": 78,
       "pushes": 0,
-      "pending": 29,
+      "pending": 30,
       "win_rate": 0.4090909090909091,
       "profit_units": 0.28046374445277333
     },
@@ -124,7 +124,7 @@
       "wins": 22,
       "losses": 36,
       "pushes": 0,
-      "pending": 8,
+      "pending": 9,
       "win_rate": 0.3793103448275862,
       "profit_units": -21.8455554691693
     },
@@ -159,7 +159,7 @@
       "profit_units": 2.78
     }
   ],
-  "snapshots": 1960,
+  "snapshots": 1962,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -15720,6 +15720,34 @@
       "implied_probability": 0.5238095238095238,
       "edge": 0.06939498435241975,
       "edge_tier": "6%+",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "e4689d79e49c70cb4094606e",
+      "event_id": "dba571eaa20f42408cc4687d047d445b",
+      "game": "Indiana Hoosiers vs. Syracuse Orange",
+      "home_team": "Indiana Hoosiers",
+      "away_team": "Syracuse Orange",
+      "commence_time": "2026-11-09T23:30:00+00:00",
+      "game_date_et": "2026-11-09",
+      "captured_at": "2026-11-08T19:33:36.116967+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "Syracuse Orange",
+      "line": null,
+      "odds": 170.0,
+      "model_prediction": 0.3802499274284663,
+      "probability": 0.3802499274284663,
+      "implied_probability": 0.37037037037037035,
+      "edge": 0.009879557058095956,
+      "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
