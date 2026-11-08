@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T23:22:07.515407+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-08T23:33:26.687165+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 59,
       "losses": 87,
       "pushes": 0,
-      "pending": 24,
+      "pending": 25,
       "win_rate": 0.4041095890410959,
       "profit_units": 0.9582415222305509
     },
@@ -124,7 +124,7 @@
       "wins": 23,
       "losses": 39,
       "pushes": 0,
-      "pending": 10,
+      "pending": 11,
       "win_rate": 0.3709677419354839,
       "profit_units": -24.40111102472486
     },
@@ -159,7 +159,7 @@
       "profit_units": 1.7799999999999998
     }
   ],
-  "snapshots": 2058,
+  "snapshots": 2064,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -16643,6 +16643,34 @@
       "probability": 0.5150432125615789,
       "implied_probability": 0.5121951219512195,
       "edge": 0.0028480906103593995,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "15b9be07c2b6b5d5d3a205ab",
+      "event_id": "20920eccaae2cae00a75b086fa1d8891",
+      "game": "Bowling Green Falcons vs. Cleveland St Vikings",
+      "home_team": "Bowling Green Falcons",
+      "away_team": "Cleveland St Vikings",
+      "commence_time": "2026-11-10T00:00:00+00:00",
+      "game_date_et": "2026-11-09",
+      "captured_at": "2026-11-08T23:33:26.687165+00:00",
+      "book": "BetMGM",
+      "bet_type": "Moneyline",
+      "selection": "Cleveland St Vikings",
+      "line": null,
+      "odds": 600.0,
+      "model_prediction": 0.14502639597676154,
+      "probability": 0.14502639597676154,
+      "implied_probability": 0.14285714285714285,
+      "edge": 0.002169253119618686,
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
