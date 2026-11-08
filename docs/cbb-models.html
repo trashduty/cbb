@@ -295,7 +295,7 @@ td.cbb-team-name{text-align:left}
   </div>
   <div class="cbb-meta"><span data-label="count">Loading games…</span><span class="cbb-status" data-label="status" role="status" aria-live="polite">Connecting to model output…</span></div>
   <div class="cbb-scroll" tabindex="0" role="region" aria-label="Model outputs; scroll horizontally for more columns"><table><caption hidden>BTB college basketball model outputs. All game times are Eastern.</caption><thead></thead><tbody><tr><td class="cbb-empty">Loading model outputs…</td></tr></tbody></table></div>
-  <footer class="cbb-footer"><span class="cbb-dot"></span>Best book: highest calculated edge at that book’s quoted line and price. Market edges use consensus odds. Green: positive edge; red: negative edge; gray: zero edge. Edge values are shown as calculated.<span class="cbb-note">Consensus: Yes requires all three models to favor the same bet. Total consensus requires all three above the market (Over) or all three below it (Under). Ties or missing models show No. All game times ET. Upcoming only hides games at tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
+  <footer class="cbb-footer"><span class="cbb-dot"></span>Best book: highest calculated edge at that book’s quoted line and price. Market edges use consensus odds. Green: positive edge; red: negative edge; gray: zero edge. Edge values are shown as calculated.<span class="cbb-note">Consensus: Yes requires all three models to favor the same bet. Total consensus requires all three above the market (Over) or all three below it (Under). Ties or missing models show No. All game times ET. Upcoming only hides games five minutes after tipoff. — means a value is unavailable. Scroll sideways to see more columns.</span></footer>
 
   <section id="cbb-instructions" class="cbb-instructions" aria-labelledby="cbb-instructions-title" tabindex="-1">
     <h3 id="cbb-instructions-title">How To Use The CBB Board</h3>
@@ -332,7 +332,7 @@ td.cbb-team-name{text-align:left}
 
     <h4>Make The Board Part Of Your Process</h4>
     <p>The board gives you a consistent reference price without relying on a hunch, a half-remembered score, or whoever is on TV. Use it for line shopping, checking numbers that look off, and comparing the main public systems without opening several tabs. A rating of -5 against a market line of -3 is a starting point; the probability and price help you assess what that difference means.</p>
-    <p>Choose a market tab, search for a team, or filter by date. Click a column header to sort. All game times are Eastern. Upcoming Only hides games at tipoff. Consensus Only keeps matchups with a Yes in the selected market, or in any market on All Markets, while retaining both teams when available. Games without model predictions are hidden from the relevant tab; a dash means a particular value is unavailable. On mobile, swipe horizontally to see more columns. Team-name links open injury reports for additional context.</p>
+    <p>Choose a market tab, search for a team, or filter by date. Click a column header to sort. All game times are Eastern. Upcoming Only hides games five minutes after tipoff. Consensus Only keeps matchups with a Yes in the selected market, or in any market on All Markets, while retaining both teams when available. Games without model predictions are hidden from the relevant tab; a dash means a particular value is unavailable. On mobile, swipe horizontally to see more columns. Team-name links open injury reports for additional context.</p>
     <p>This tool is for someone who already follows and bets college basketball and wants a reference price and a repeatable process. You can get ratings anywhere. What we provide is those ratings translated into prices across the board, so you can make your own decision.</p>
     <p><a href="#btb-cbb">Back To The Table ↑</a></p>
   </section>
@@ -564,7 +564,7 @@ td.cbb-team-name{text-align:left}
     }
     function processedRows(now=Date.now()){
       const q=controls.search.value.trim().toLowerCase();
-      let rows=state.rows.filter(r=>hasModelOutput(r,state.market)&&(!controls.upcoming.checked||r._kickoff===null||r._kickoff>now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
+      let rows=state.rows.filter(r=>hasModelOutput(r,state.market)&&(!controls.upcoming.checked||r._kickoff===null||r._kickoff + 5 * 60 * 1000 > now)&&(!controls.date.value||(r._kickoff!==null&&dateKey(r._kickoff)===controls.date.value))&&(!state.selected.size||state.selected.has(r.Team))&&(!q||`${r.Team} ${r.Game}`.toLowerCase().includes(q)));
       if(controls.consensus.checked){
         const consensusColumns = state.market === 'all'
           ? ['Spread Consensus', 'Total Consensus', 'Moneyline Consensus']
