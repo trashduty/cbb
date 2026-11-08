@@ -6017,7 +6017,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "4a88827c71210aaa950ea6b5995aabda": {
     "id": "4a88827c71210aaa950ea6b5995aabda",
@@ -6037,7 +6037,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "8f861f2e1704f9b0fbae3e1aa816bc48": {
     "id": "8f861f2e1704f9b0fbae3e1aa816bc48",
@@ -6057,7 +6057,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "95432fedd19fd4b0534dd96656875b91": {
     "id": "95432fedd19fd4b0534dd96656875b91",
@@ -6077,7 +6077,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "c60a638033180898ceab69f0baae6a52": {
     "id": "c60a638033180898ceab69f0baae6a52",
@@ -6097,7 +6097,7 @@
         "score": "61"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "651b839e9ed75e621320514c90ebcaaa": {
     "id": "651b839e9ed75e621320514c90ebcaaa",
@@ -6117,7 +6117,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "b791f115e68a00b090f9f78d07a757b1": {
     "id": "b791f115e68a00b090f9f78d07a757b1",
@@ -6137,7 +6137,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "5eaa93d78d7adab11764f42c7b500faf": {
     "id": "5eaa93d78d7adab11764f42c7b500faf",
@@ -6157,7 +6157,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "928d73b1594da7d8b59856d8bf7e05eb": {
     "id": "928d73b1594da7d8b59856d8bf7e05eb",
@@ -6177,7 +6177,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "5f67d16b2d4d925206004f8a2e1f1180": {
     "id": "5f67d16b2d4d925206004f8a2e1f1180",
@@ -6197,7 +6197,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "36662c75f1da54ae1b0e62b85edd8c67": {
     "id": "36662c75f1da54ae1b0e62b85edd8c67",
@@ -6217,7 +6217,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "e9ad86daa5e64228cd112ac2dec3b591": {
     "id": "e9ad86daa5e64228cd112ac2dec3b591",
@@ -6237,7 +6237,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "9288bf238c64fd0f2a07dd7686f7a09a": {
     "id": "9288bf238c64fd0f2a07dd7686f7a09a",
@@ -6257,7 +6257,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "a14ef06cee81734fbca92d5a235cf541": {
     "id": "a14ef06cee81734fbca92d5a235cf541",
@@ -6277,7 +6277,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
   },
   "2ea59be5ea48be55282cf76a1a337a9c": {
     "id": "2ea59be5ea48be55282cf76a1a337a9c",
@@ -6297,6 +6297,26 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-08T21:51:41Z"
+    "last_update": "2026-11-08T22:22:10Z"
+  },
+  "ba174c0a23d41dd018b41d17e396bad9": {
+    "id": "ba174c0a23d41dd018b41d17e396bad9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-08T20:00:00Z",
+    "completed": true,
+    "home_team": "Drake Bulldogs",
+    "away_team": "Southern Jaguars",
+    "scores": [
+      {
+        "name": "Drake Bulldogs",
+        "score": "75"
+      },
+      {
+        "name": "Southern Jaguars",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-08T22:22:10Z"
   }
 }
