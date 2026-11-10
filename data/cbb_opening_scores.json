@@ -6597,6 +6597,46 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-10T01:22:21Z"
+    "last_update": "2026-11-10T01:52:08Z"
+  },
+  "ac95e0ac2e49652512325d7f947a36c3": {
+    "id": "ac95e0ac2e49652512325d7f947a36c3",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-09T23:30:00Z",
+    "completed": true,
+    "home_team": "Pennsylvania Quakers",
+    "away_team": "Howard Bison",
+    "scores": [
+      {
+        "name": "Pennsylvania Quakers",
+        "score": "78"
+      },
+      {
+        "name": "Howard Bison",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-10T01:52:08Z"
+  },
+  "dba571eaa20f42408cc4687d047d445b": {
+    "id": "dba571eaa20f42408cc4687d047d445b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-09T23:30:00Z",
+    "completed": true,
+    "home_team": "Indiana Hoosiers",
+    "away_team": "Syracuse Orange",
+    "scores": [
+      {
+        "name": "Indiana Hoosiers",
+        "score": "83"
+      },
+      {
+        "name": "Syracuse Orange",
+        "score": "80"
+      }
+    ],
+    "last_update": "2026-11-10T01:52:08Z"
   }
 }
