@@ -12,6 +12,7 @@ import hashlib
 import json
 import math
 import os
+import subprocess
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import urlopen
@@ -24,7 +25,8 @@ ROOT = Path(__file__).resolve().parents[2]
 FIELDS = ['snapshot_id', 'event_id', 'game', 'home_team', 'away_team', 'commence_time',
           'game_date_et', 'captured_at', 'book', 'bet_type', 'selection', 'line', 'odds',
           'model_prediction', 'probability', 'implied_probability', 'edge', 'edge_tier',
-          'eligible', 'spread_consensus', 'snapshot_note', 'result', 'home_score', 'away_score', 'graded_at', 'profit_units']
+          'eligible', 'spread_consensus', 'total_consensus', 'total_consensus_source',
+          'snapshot_note', 'result', 'home_score', 'away_score', 'graded_at', 'profit_units']
 TIERS = ['0–0.9%', '1–2.9%', '3–5.9%', '6%+']
 
 
@@ -105,6 +107,69 @@ def captured_spread_consensus(model, line):
     return 'Yes' if all(value < line for value in values) else 'No'
 
 
+def captured_total_consensus(model, line, selection, missing='No'):
+    values = [number(model.get('projected_total_' + system))
+              for system in ('kenpom', 'evanmiya', 'barttorvik')]
+    if line is None or any(value is None for value in values):
+        return missing
+    if selection == 'Over':
+        return 'Yes' if all(value > line for value in values) else 'No'
+    if selection == 'Under':
+        return 'Yes' if all(value < line for value in values) else 'No'
+    return missing
+
+
+def backfill_total_consensus(root, rows):
+    """Recover the three projections from the commit that introduced each snapshot."""
+    missing = {row['snapshot_id']: row for row in rows
+               if row['bet_type'] == 'Total' and not row.get('total_consensus')}
+    if not missing:
+        return
+
+    def git(*args):
+        return subprocess.check_output(['git', '-C', str(root), *args], text=True, encoding='utf-8')
+
+    snapshot_path = 'data/cbb_opening_snapshots.csv'
+    commits = git('log', '--reverse', '--format=%H', '--', snapshot_path).splitlines()
+    recovered = 0
+    for commit in commits:
+        archived = csv.DictReader(git('show', f'{commit}:{snapshot_path}').splitlines())
+        introduced = [missing.pop(row['snapshot_id']) for row in archived
+                      if row['snapshot_id'] in missing]
+        if not introduced:
+            continue
+        # An older checkout can start at a shallow boundary containing existing rows.
+        # Only trust an archive with a parent so that boundary cannot serve as evidence.
+        parents = git('rev-list', '--parents', '-n', '1', commit).split()
+        if len(parents) < 2:
+            for row in introduced:
+                row['total_consensus'] = 'Not Recorded'
+            continue
+        models = {}
+        for model in csv.DictReader(git('show', f'{commit}:Combo_Output.csv').splitlines()):
+            teams = tuple(sorted(model.get('Game', '').split(' vs. ')))
+            models[(teams, model.get('Game Time'), model.get('Team'))] = model
+        for row in introduced:
+            start = stamp(row.get('commence_time'))
+            teams = tuple(sorted([row['home_team'], row['away_team']]))
+            game_time = start.astimezone(ET).strftime('%b %d %I:%M%p ET') if start else ''
+            model = models.get((teams, game_time, teams[0]), {})
+            frozen = number(row.get('model_prediction'))
+            if frozen is None or frozen != number(model.get('average_total')):
+                row['total_consensus'] = 'Not Recorded'
+                continue
+            consensus = captured_total_consensus(model, number(row.get('line')), row['selection'], missing='Not Recorded')
+            row['total_consensus'] = consensus
+            if consensus in ('Yes', 'No'):
+                row['total_consensus_source'] = commit
+                recovered += 1
+        if not missing:
+            break
+    for row in missing.values():
+        row['total_consensus'] = 'Not Recorded'
+    print(f'Recovered total consensus for {recovered} historical snapshots from capture commits.')
+
+
 def capture(root, existing, now):
     quotes = read_csv(root / 'data/sportsbook_quotes.csv')
     models = read_csv(root / 'Combo_Output.csv')
@@ -163,6 +228,8 @@ def capture(root, existing, now):
             model_prediction=prediction, probability=probability, implied_probability=implied(odds), edge=edge,
             edge_tier=tier(edge), eligible='yes' if edge is not None and edge > 0 else 'no',
             spread_consensus=captured_spread_consensus(model, number(quote.get('Line'))) if market == 'Spread' else '',
+            total_consensus=captured_total_consensus(model, number(quote.get('Line')), selection) if market in ('Over', 'Under') else '',
+            total_consensus_source='capture' if market in ('Over', 'Under') else '',
             snapshot_note='First evaluable Best Book snapshot; highest edge across available tracked books',
             result='Pending', home_score=None, away_score=None, graded_at='', profit_units=None)
         # Same ranking as the live Best Book: highest edge, alphabetical book on ties.
@@ -261,6 +328,7 @@ def main():
     status = 'Scores not requested in this run'
     failed = False
     if args.grade:
+        backfill_total_consensus(args.root, rows)
         try:
             games = json.loads(args.scores_json.read_text()) if args.scores_json else fetch_scores()
             for game in games:

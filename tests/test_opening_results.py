@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import csv
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -83,6 +84,38 @@ class OpeningResultsTests(unittest.TestCase):
         self.assertAlmostEqual(spread['edge'], .56 - 110/210)
         self.assertEqual(spread['line'], -3)
         self.assertEqual(spread['game_date_et'], '2026-11-02')
+
+    def test_total_consensus_backfill_uses_original_capture_and_bet_direction(self):
+        def git(*args):
+            return subprocess.check_output(['git', *args], cwd=self.root, text=True)
+
+        git('init', '-q')
+        git('config', 'user.name', 'Test')
+        git('config', 'user.email', 'test@example.com')
+        snapshot = self.root / 'data/cbb_opening_snapshots.csv'
+        tracker.write_csv(snapshot, [])
+        git('add', 'data/cbb_opening_snapshots.csv')
+        git('commit', '-qm', 'Initialize snapshots')
+        projections = {'projected_total_kenpom': 152, 'projected_total_evanmiya': 151,
+                       'projected_total_barttorvik': 153}
+        models = [{**row, **projections} for row in self.models]
+        self.write('Combo_Output.csv', models)
+        captured = self.captures()
+        totals = [row for row in captured if row['bet_type'] == 'Total']
+        self.assertEqual([row['total_consensus'] for row in totals], ['Yes', 'No'])
+        for row in totals:
+            row.pop('total_consensus')
+            row.pop('total_consensus_source')
+        tracker.write_csv(snapshot, totals)
+        git('add', 'Combo_Output.csv', 'data/cbb_opening_snapshots.csv')
+        git('commit', '-qm', 'Original capture')
+        source = git('rev-parse', 'HEAD').strip()
+        self.write('Combo_Output.csv', [{**row, 'projected_total_barttorvik': 149} for row in models])
+        git('add', 'Combo_Output.csv')
+        git('commit', '-qm', 'Later projections disagree')
+        tracker.backfill_total_consensus(self.root, totals)
+        self.assertEqual([row['total_consensus'] for row in totals], ['Yes', 'No'])
+        self.assertTrue(all(row['total_consensus_source'] == source for row in totals))
 
     def test_first_snapshot_is_immutable_and_totals_not_doubled(self):
         first = self.captures()
