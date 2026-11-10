@@ -6578,5 +6578,25 @@
       }
     ],
     "last_update": "2026-11-09T11:59:14Z"
+  },
+  "8a669cc3faabd6f315dddb8e2c261ebd": {
+    "id": "8a669cc3faabd6f315dddb8e2c261ebd",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-09T23:01:40Z",
+    "completed": true,
+    "home_team": "Ohio State Buckeyes",
+    "away_team": "Marshall Thundering Herd",
+    "scores": [
+      {
+        "name": "Ohio State Buckeyes",
+        "score": "84"
+      },
+      {
+        "name": "Marshall Thundering Herd",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-10T01:22:21Z"
   }
 }
