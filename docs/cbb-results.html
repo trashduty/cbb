@@ -2,6 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CBB Opening Results | BTB Analytics</title>
 <style>
 *{box-sizing:border-box}body{margin:20px;background:#f4f7f6;color:#243447;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1600px;margin:auto}h1{font-size:1.7rem;margin:12px 0 4px}h2{font-size:1.2rem}a{color:#234f70}button,input,select{font:inherit;padding:8px 12px;border:1px solid #ccd5dc;border-radius:6px;background:white;color:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #348d6b;outline-offset:2px}.tabs{display:flex;gap:0;border-bottom:1px solid #ccd5dc;margin:20px 0}.tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none}.tabs button[aria-pressed=true]{border-color:#2c3e50;font-weight:700}.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end}.filters label{display:flex;flex-direction:column;font-size:.85rem}.cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:20px 0}.card{background:white;padding:15px;border:1px solid #d8e2ee;border-radius:8px}.card strong{display:block;font-size:1.5rem}.muted{font-size:.85rem;color:#586b78}.scroll{overflow:auto;background:white;border-radius:8px;border:1px solid #d8e2ee}table{border-collapse:collapse;min-width:100%;font-size:.85rem}th,td{text-align:center;padding:10px 12px;white-space:nowrap;border-bottom:1px solid #ddd}th{background:#2c3e50;color:white}th button{border:0;background:none;color:white;padding:0;font-size:inherit;font-weight:bold}td.left{text-align:left}.win{color:#17613e;font-weight:bold}.loss{color:#a33434;font-weight:bold}.links{display:flex;gap:16px;flex-wrap:wrap;margin:15px 0}.note{max-width:1100px;background:#eef3f8;border-left:4px solid #2c3e50;padding:15px 20px;margin:22px 0}details{margin:22px 0;background:white;padding:15px;border:1px solid #d8e2ee;border-radius:8px}summary{cursor:pointer;font-weight:bold}#status[data-error=true]{color:#a33434}@media(max-width:750px){body{margin:12px}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:10px}.card strong{font-size:1.2rem}.tabs{overflow:auto}.filters label{flex:1;min-width:140px}}@media(max-width:420px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.active-view{display:inline-block;background:#e3f2e9;border:1px solid #a6cfb8;border-radius:6px;padding:9px 14px;font-weight:600;color:#175338}.ledger-week h3{margin:18px 0 8px;font-size:1rem}.ledger-archive summary{padding:4px 0}.ledger-archive .scroll{margin-top:12px}.ledger-empty{padding:16px;background:white;border:1px solid #d8e2ee;border-radius:6px}
 </style></head><body><main>
 <a href="./cbb-models.html">← CBB Model Board</a>
 <h1>CBB Opening Results</h1><p class="muted">Frozen opening snapshots. Positive-edge model selections. Actual final scores.</p>
@@ -14,10 +15,11 @@
 <label>Result<select id="result"><option value="graded" selected>All Graded Bets</option><option value="">All Bets (Graded + Pending)</option><option>Pending</option><option>Win</option><option>Loss</option><option>Push</option></select></label>
 <label>Opening Edge Tier<select id="tier"><option value="">All Tiers</option><option>0–0.9%</option><option>1–2.9%</option><option>3–5.9%</option><option>6%+</option></select></label>
 <label>Total Side<select id="side"><option value="">Over + Under</option><option>Over</option><option>Under</option></select></label>
-<label>Consensus<select id="consensus"><option value="">All</option><option>Yes</option><option>No</option><option>Not Recorded</option></select></label>
+<label>Consensus<select id="consensus"><option value="">All</option><option selected>Yes</option><option>No</option><option>Not Recorded</option></select></label>
 <label id="probability-filter" hidden>Model Win Probability<select id="probability-band"><option value="">All Probabilities</option></select></label>
 <button id="reset">Reset Filters</button><button id="refresh">Refresh</button>
 </div>
+<p id="active-view" class="active-view" role="status" aria-live="polite">Viewing Spreads and Totals · Graded Bets · Consensus Yes</p>
 <div class="cards" id="cards"></div>
 <h2>Record By Opening Edge Tier</h2><p class="muted">Summaries reflect the selected report and all active filters. Win rate = wins ÷ (wins + losses); pushes and pending bets are excluded.</p>
 <div class="scroll"><table><thead><tr><th>Edge Tier</th><th>Wins</th><th>Losses</th><th>Pushes</th><th>Pending</th><th>Win Rate</th><th>Net Units</th></tr></thead><tbody id="summary"></tbody></table></div>
@@ -28,7 +30,8 @@
 <p class="muted">Average model probability and expected wins use only Win/Loss selections in that band; expected wins are the sum of their captured probabilities. Small samples can differ substantially from model expectations.</p>
 </section>
 <h2>Detailed Bet Ledger</h2><p class="muted" id="count"></p><div class="links"><button id="download">Download Filtered Ledger</button><a href="./cbb_opening_snapshots.csv" download>All Opening Snapshots (CSV)</a><a href="./cbb_opening_ledger.csv" download>Full Positive-Edge Ledger (CSV)</a></div>
-<div class="scroll" tabindex="0" role="region" aria-label="Bet ledger; scroll horizontally for additional columns"><table><thead id="ledger-head"></thead><tbody id="ledger-body"></tbody></table></div>
+<p class="muted">Current-week games appear below. Earlier Monday–Sunday weeks are collapsed. Summary records and downloads include all matching weeks.</p>
+<div id="ledger-sections"></div>
 <details><summary>Definitions, Timing, And Grading</summary>
 <p><strong>Opening</strong> means first observed by this tracker after it was enabled, not necessarily the sportsbook’s first published line. Each spread side, moneyline side, Over, and Under is captured once per event. At the first capture with a valid model probability, the highest-edge available book is selected; later books and quotes do not replace it. Earlier DraftKings-only snapshots remain unchanged; see Book and Snapshot Policy in the ledger. Later line changes, price changes, or model updates do not rewrite that snapshot or add a second bet for the same selection.</p>
 <p><strong>Opening edge</strong> is the snapshot model probability minus the break-even probability implied by its captured sportsbook price. Spread and total probabilities are evaluated at that captured line. Best Book and consensus-market edges from the live board are separate analyses and are not mixed into this opening record.</p>
@@ -62,15 +65,134 @@ function consensusValue(row){
 function probabilityBand(value){const p=num(value);return p===null||p<0||p>1?null:Math.min(9,Math.floor(p*10));}
 function filterLedger(rows,filters,selectedMarket){const query=filters.search.trim().toLowerCase();return rows.filter(r=>(selectedMarket==='All'||selectedMarket==='Combined'&&['Spread','Total'].includes(r.bet_type)||r.bet_type===selectedMarket)&&(!query||(r.game+' '+r.selection).toLowerCase().includes(query))&&(!filters.from||r.game_date_et>=filters.from)&&(!filters.through||r.game_date_et<=filters.through)&&(filters.result==='graded'?['Win','Loss','Push'].includes(r.result):!filters.result||r.result===filters.result)&&(!filters.tier||r.edge_tier===filters.tier)&&(!filters.side||r.bet_type==='Total'&&r.selection===filters.side)&&(!filters.consensus||consensusValue(r)===filters.consensus)&&(!filters.probability||r.bet_type==='Moneyline'&&String(probabilityBand(r.probability))===filters.probability));}
 function probabilityStats(rows){const decisions=rows.filter(r=>['Win','Loss'].includes(r.result)&&num(r.probability)!==null),expected=decisions.reduce((sum,r)=>sum+Number(r.probability),0);return {...stats(rows),expected:decisions.length?expected:null,average:decisions.length?expected/decisions.length:null};}
+const expandedWeeks = new Set();
+function weekStart(dateString){
+  const date = new Date(dateString + 'T12:00:00Z');
+  if(!Number.isFinite(date.getTime())) return null;
+  const daysSinceMonday = (date.getUTCDay() + 6) % 7;
+  date.setUTCDate(date.getUTCDate() - daysSinceMonday);
+  return date.toISOString().slice(0,10);
+}
+function easternDate(now = new Date()){
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'
+  }).formatToParts(now).map(part => [part.type,part.value]));
+  return parts.year + '-' + parts.month + '-' + parts.day;
+}
+function weekLabel(start){
+  const first = new Date(start + 'T12:00:00Z');
+  const last = new Date(first);
+  last.setUTCDate(last.getUTCDate() + 6);
+  const format = date => new Intl.DateTimeFormat('en-US', {
+    month:'short',day:'numeric',year:'numeric',timeZone:'UTC'
+  }).format(date);
+  return format(first) + ' – ' + format(last);
+}
+function ledgerTable(rows,label){
+  const scroll = document.createElement('div');
+  scroll.className = 'scroll';
+  scroll.tabIndex = 0;
+  scroll.setAttribute('role','region');
+  scroll.setAttribute('aria-label',label + '; scroll horizontally for additional columns');
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const header = document.createElement('tr');
+  for(const [key,title] of columns){
+    const th = document.createElement('th');
+    th.scope = 'col';
+    th.setAttribute('aria-sort',key===sort?(descending?'descending':'ascending'):'none');
+    const button = document.createElement('button');
+    button.textContent = title + (key===sort?(descending?' ↓':' ↑'):' ↕');
+    button.onclick = () => {
+      descending = key===sort?!descending:true;
+      sort = key;
+      render();
+    };
+    th.append(button);
+    header.append(th);
+  }
+  thead.append(header);
+  const tbody = document.createElement('tbody');
+  for(const row of rows){
+    const tr = document.createElement('tr');
+    for(const [key] of columns){
+      const style = key==='game'||key==='selection'?'left':key==='result'?row.result.toLowerCase():'';
+      tr.append(cell('td',value(row,key),style));
+    }
+    tbody.append(tr);
+  }
+  table.append(thead,tbody);
+  scroll.append(table);
+  return scroll;
+}
+function renderLedgerWeeks(rows, now = new Date()){
+  const container = $('ledger-sections');
+  container.replaceChildren();
+  const currentMonday = weekStart(easternDate(now));
+  const current = [];
+  const archived = new Map();
+  for(const row of rows){
+    const monday = weekStart(row.game_date_et);
+    if(monday===null||monday>=currentMonday){
+      current.push(row);
+    }else{
+      if(!archived.has(monday)) archived.set(monday,[]);
+      archived.get(monday).push(row);
+    }
+  }
+  const section = document.createElement('section');
+  section.className = 'ledger-week';
+  const hasFutureWeek = current.some(row=>weekStart(row.game_date_et)>currentMonday);
+  section.append(cell('h3',(hasFutureWeek?'Current And Upcoming Games · ':'Current Week · ') + weekLabel(currentMonday)));
+  if(current.length){
+    section.append(ledgerTable(current,'Current-week bet ledger'));
+  }else{
+    section.append(cell('p','No current-week bets match these filters.','ledger-empty'));
+  }
+  container.append(section);
+  for(const monday of [...archived.keys()].sort().reverse()){
+    const weekRows = archived.get(monday);
+    const details = document.createElement('details');
+    details.className = 'ledger-archive';
+    details.open = expandedWeeks.has(monday);
+    const summary = document.createElement('summary');
+    summary.textContent = weekLabel(monday) + ' · ' + weekRows.length + ' selections';
+    details.append(summary);
+    // Build long archived tables only when opened, keeping the current view compact.
+    if(details.open) details.append(ledgerTable(weekRows,'Bet ledger for ' + weekLabel(monday)));
+    details.addEventListener('toggle',()=>{
+      if(details.open){
+        expandedWeeks.add(monday);
+        if(details.children.length===1) details.append(ledgerTable(weekRows,'Bet ledger for ' + weekLabel(monday)));
+      }else{
+        expandedWeeks.delete(monday);
+      }
+    });
+    container.append(details);
+  }
+  if(!rows.length&&!data.ledger.length){
+    section.lastChild.textContent = 'No positive-edge opening selections have been captured yet.';
+  }
+}
+function updateActiveView(){
+  const markets={Combined:'Spreads and Totals',Spread:'Spreads',Total:'Totals',Moneyline:'Moneylines',All:'All Bet Types'};
+  const result=$('result').value;
+  const resultLabel=result==='graded'?'Graded Bets':result||'Graded + Pending';
+  const consensus=$('consensus').value;
+  const labels=[markets[market],resultLabel];
+  if(market!=='Moneyline') labels.push(consensus?'Consensus '+consensus:'All Consensus Values');
+  $('active-view').textContent='Viewing ' + labels.join(' · ');
+}
 function render(){if(!data)return;const filters={search:$('search').value,from:$('from').value,through:$('through').value,result:$('result').value,tier:$('tier').value,side:$('side').value,consensus:$('consensus').value,probability:$('probability-band').value};visible=filterLedger(data.ledger,filters,market);
 $('moneyline-probabilities').hidden=market!=='Moneyline';$('probability-filter').hidden=market!=='Moneyline';$('consensus').disabled=market==='Moneyline';
 $('probability-summary').replaceChildren();if(market==='Moneyline')for(let i=0;i<probabilityBands.length;i++){const rows=visible.filter(r=>probabilityBand(r.probability)===i),t=probabilityStats(rows),tr=document.createElement('tr');for(const v of [probabilityBands[i],t.w,t.l,t.p,t.pending,percent(t.rate),percent(t.average),t.expected===null?'—':t.expected.toFixed(2),t.units.toFixed(2)])tr.append(cell('td',v));$('probability-summary').append(tr);}
 visible.sort((a,b)=>{const numeric=['line','odds','edge','probability','profit_units'].includes(sort);const sortValue=row=>sort==='consensus'?consensusValue(row):numeric?num(row[sort]):row[sort];const x=sortValue(a),y=sortValue(b);if(x===null||x===undefined||x==='')return y===null||y===undefined||y===''?0:1;if(y===null||y===undefined||y==='')return -1;return (typeof x==='number'?x-y:String(x).localeCompare(String(y)))*(descending?-1:1);});
 const s=stats(visible);$('cards').replaceChildren();for(const [label,v] of [['Wins',s.w],['Losses',s.l],['Pushes',s.p],['Pending',s.pending],['Win Rate',percent(s.rate)],['Net Units',s.units.toFixed(2)]]){const div=document.createElement('div');div.className='card';div.append(cell('span',label),cell('strong',v));$('cards').append(div);}
 $('summary').replaceChildren();for(const band of ['All',...tiers]){const t=stats(band==='All'?visible:visible.filter(r=>r.edge_tier===band)),tr=document.createElement('tr');for(const v of [band,t.w,t.l,t.p,t.pending,percent(t.rate),t.units.toFixed(2)])tr.append(cell('td',v));$('summary').append(tr);}
-const head=document.createElement('tr');for(const [key,label] of columns){const th=document.createElement('th');th.setAttribute('aria-sort',key===sort?(descending?'descending':'ascending'):'none');const b=document.createElement('button');b.textContent=label+(key===sort?(descending?' ↓':' ↑'):' ↕');b.onclick=()=>{descending=key===sort?!descending:true;sort=key;render();};th.append(b);head.append(th);}$('ledger-head').replaceChildren(head);const body=document.createDocumentFragment();for(const row of visible){const tr=document.createElement('tr');for(const [key] of columns)tr.append(cell('td',value(row,key),key==='game'||key==='selection'?'left':key==='result'?row.result.toLowerCase():''));body.append(tr);}if(!visible.length){const tr=document.createElement('tr'),td=cell('td',data.ledger.length?'No bets match these filters.':'No positive-edge opening selections have been captured yet. Records begin with the first successful tracker run.');td.colSpan=columns.length;tr.append(td);body.append(tr);}$('ledger-body').replaceChildren(body);$('count').textContent=visible.length+' selections · '+new Set(visible.map(r=>r.event_id)).size+' games';}
+renderLedgerWeeks(visible);updateActiveView();$('count').textContent=visible.length+' selections · '+new Set(visible.map(r=>r.event_id)).size+' games';}
 async function refresh(){if(busy)return;busy=true;$('refresh').disabled=true;try{const response=await fetch('./cbb_opening_results.json?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('HTTP '+response.status);const next=await response.json();if(!Array.isArray(next.ledger))throw Error('Invalid results file');data=next;render();$('status').dataset.error='false';$('status').textContent='Published '+new Date(data.updated_at).toLocaleString()+' · '+data.score_status+' · '+data.snapshots+' opening snapshots';}catch(e){$('status').dataset.error='true';$('status').textContent=(data?'Refresh failed; retaining the last loaded results. ':'Results are not available yet. ')+e.message;}finally{busy=false;$('refresh').disabled=false;}}
-document.querySelectorAll('[data-market]').forEach(b=>b.onclick=()=>{market=b.dataset.market;document.querySelectorAll('[data-market]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('side').value='';$('probability-band').value='';if(market==='Moneyline')$('consensus').value='';render();});for(const id of ['search','from','through','result','tier','side','consensus','probability-band'])$(id).addEventListener('input',render);$('reset').onclick=()=>{for(const id of ['search','from','through','result','tier','side','consensus','probability-band'])$(id).value='';$('result').value='graded';render();};$('refresh').onclick=refresh;
+document.querySelectorAll('[data-market]').forEach(b=>b.onclick=()=>{const previousMarket=market;market=b.dataset.market;document.querySelectorAll('[data-market]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('side').value='';$('probability-band').value='';if(market==='Moneyline')$('consensus').value='';else if(previousMarket==='Moneyline')$('consensus').value='Yes';render();});for(const id of ['search','from','through','result','tier','side','consensus','probability-band'])$(id).addEventListener('input',render);$('reset').onclick=()=>{for(const id of ['search','from','through','result','tier','side','consensus','probability-band'])$(id).value='';$('result').value='graded';$('consensus').value=market==='Moneyline'?'':'Yes';render();};$('refresh').onclick=refresh;
 $('download').onclick=()=>{const escape=x=>'"'+String(x??'').replace(/^[=+@-]/,"'$&").replaceAll('"','""')+'"';const keys=['snapshot_id','event_id','game_date_et','game','bet_type','selection','line','odds','edge','probability','spread_consensus','total_consensus','total_consensus_source','result','home_score','away_score','profit_units','book','snapshot_note','captured_at','graded_at'];const csv=[keys.join(','),...visible.map(r=>keys.map(k=>escape(r[k])).join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='cbb-opening-results.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};for(let i=0;i<probabilityBands.length;i++){const option=document.createElement('option');option.value=String(i);option.textContent=probabilityBands[i];$('probability-band').append(option);}refresh();setInterval(refresh,60000);
 })();
 </script></body></html>
+
