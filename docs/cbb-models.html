@@ -606,7 +606,16 @@ td.cbb-team-name{text-align:left}
           return true;
         });
       }
-      if(grouped&&state.sort.key==='Game Time'){const groups=new Map();for(const r of rows){const k=JSON.stringify([r.Game,r['Game Time']]);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r);}rows=[...groups.values()].flat();}
+      if(grouped){
+        // Rows are already sorted. The first row encountered sets each matchup's rank.
+        const groups = new Map();
+        for(const row of rows){
+          const key = JSON.stringify([row.Game,row['Game Time']]);
+          if(!groups.has(key)) groups.set(key,[]);
+          groups.get(key).push(row);
+        }
+        rows = [...groups.values()].flat();
+      }
       let previousGroup=null;
       for(const row of rows){
         const k=JSON.stringify([row.Game,row['Game Time']]);
