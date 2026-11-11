@@ -8397,6 +8397,26 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-11T18:52:02Z"
+    "last_update": "2026-11-11T19:22:21Z"
+  },
+  "759951fe63ce023850658a6be1c38e38": {
+    "id": "759951fe63ce023850658a6be1c38e38",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T16:30:00Z",
+    "completed": true,
+    "home_team": "East Texas A&M Lions",
+    "away_team": "Fairleigh Dickinson Knights",
+    "scores": [
+      {
+        "name": "East Texas A&M Lions",
+        "score": "76"
+      },
+      {
+        "name": "Fairleigh Dickinson Knights",
+        "score": "80"
+      }
+    ],
+    "last_update": "2026-11-11T19:22:21Z"
   }
 }
