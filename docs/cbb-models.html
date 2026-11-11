@@ -348,6 +348,7 @@ td.cbb-team-name{text-align:left}
     const $ = selector => root.querySelector(selector);
     const controls = {search:$('[data-control=search]'),teamSearch:$('[data-control=team-search]'),picker:$('[data-control=picker]'),date:$('[data-control=date]'),upcoming:$('[data-control=upcoming]'),consensus:$('[data-control=consensus]')};
     const state = {rows:[],fields:[],teams:[],selected:new Set(),market:'spread',sort:{key:'Game Time',direction:'asc'},loaded:false,busy:false,lastSuccess:null};
+    const marketSorts = new Map();
     const common = [
       {key:'Game Time',label:'Game Time · ET',type:'time'},
       {key:'Game',label:'Matchup',type:'text'},
@@ -577,13 +578,41 @@ td.cbb-team-name{text-align:left}
         );
         rows = rows.filter(row => matchingGames.has(JSON.stringify([row.Game, row['Game Time']])));
       }
-      const config=allColumns.find(c=>c.key===state.sort.key);
-      rows=rows.slice().sort((a,b)=>{
-        const value=r=>state.sort.key==='Game Time'?r._kickoff:config?.type==='text'?r[state.sort.key]:numeric(r[state.sort.key]);
-        const x=value(a),y=value(b);if(x===null||x===undefined||x==='')return y===null||y===undefined||y===''?0:1;if(y===null||y===undefined||y==='')return -1;
-        const result=typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y));
-        return state.sort.direction==='asc'?result:-result;
-      });return rows;
+      return rows;
+    }
+
+    function sortBoardRows(rows, grouped, sort){
+      const {key,direction} = sort;
+      const column = allColumns.find(column=>column.key===key);
+      const value = row => {
+        if(key==='Game Time') return row._kickoff;
+        return column?.type==='text' ? row[key] : numeric(row[key]);
+      };
+      const present = value => value!==null && value!==undefined && value!=='';
+      const compare = (a,b) => {
+        if(!present(a)) return present(b)?1:0;
+        if(!present(b)) return -1;
+        const order = typeof a==='number' && typeof b==='number' ? a-b : String(a).localeCompare(String(b));
+        return direction==='asc' ? order : -order;
+      };
+      const compareRows = (a,b) => compare(value(a),value(b));
+      if(!grouped) return rows.slice().sort(compareRows);
+
+      const groups = new Map();
+      for(const row of rows){
+        const id = JSON.stringify([row.Game,row['Game Time']]);
+        if(!groups.has(id)) groups.set(id,[]);
+        groups.get(id).push(row);
+      }
+      // Like the CFB board, numeric columns rank a matchup by its maximum
+      // value in both directions. Text columns use the first available value.
+      return [...groups.values()].map(group=>{
+        const values = group.map(value).filter(present);
+        const rank = values.length && values.every(value=>typeof value==='number')
+          ? Math.max(...values)
+          : values[0];
+        return {rank,rows:group.slice().sort(compareRows)};
+      }).sort((a,b)=>compare(a.rank,b.rank)).flatMap(group=>group.rows);
     }
     function renderTable(){
       const grouped=state.market==='spread'||state.market==='ml'||state.market==='all';
@@ -594,9 +623,9 @@ td.cbb-team-name{text-align:left}
         const active=state.sort.key===col.key;th.setAttribute('aria-sort',active?(state.sort.direction==='asc'?'ascending':'descending'):'none');
         const button=document.createElement('button');button.type='button';button.append(document.createTextNode(col.label));
         const arrow=document.createElement('span');arrow.className='cbb-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent=active?(state.sort.direction==='asc'?'↑':'↓'):'↕';button.append(arrow);
-        button.addEventListener('click',()=>{state.sort={key:col.key,direction:active?(state.sort.direction==='asc'?'desc':'asc'):['edge','ml_edge'].includes(col.type)?'desc':'asc'};renderTable();});th.append(button);head.append(th);
+        button.addEventListener('click',()=>{state.sort={key:col.key,direction:active?(state.sort.direction==='asc'?'desc':'asc'):'asc'};renderTable();});th.append(button);head.append(th);
       }
-      $('thead').replaceChildren(head);const body=document.createDocumentFragment();let rows=processedRows();
+      $('thead').replaceChildren(head);const body=document.createDocumentFragment();let rows=sortBoardRows(processedRows(),grouped,state.sort);
       if(state.market==='total'){
         const seen = new Set();
         rows = rows.filter(row=>{
@@ -605,16 +634,6 @@ td.cbb-team-name{text-align:left}
           seen.add(key);
           return true;
         });
-      }
-      if(grouped){
-        // Rows are already sorted. The first row encountered sets each matchup's rank.
-        const groups = new Map();
-        for(const row of rows){
-          const key = JSON.stringify([row.Game,row['Game Time']]);
-          if(!groups.has(key)) groups.set(key,[]);
-          groups.get(key).push(row);
-        }
-        rows = [...groups.values()].flat();
       }
       let previousGroup=null;
       for(const row of rows){
@@ -656,7 +675,7 @@ td.cbb-team-name{text-align:left}
         if(!state.loaded){$('tbody').replaceChildren();const tr=document.createElement('tr'),td=document.createElement('td');td.className='cbb-empty';td.textContent='Model output is currently unavailable. Please try again shortly.';tr.append(td);$('tbody').append(tr);$('[data-label=count]').textContent='Data unavailable';}
       }finally{clearTimeout(timeout);state.busy=false;button.disabled=false;button.textContent='Refresh';}
     }
-    root.querySelectorAll('[data-market]').forEach(button=>button.addEventListener('click',()=>{state.market=button.dataset.market;state.sort={key:'Game Time',direction:'asc'};root.querySelectorAll('[data-market]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderTable();}));
+    root.querySelectorAll('[data-market]').forEach(button=>button.addEventListener('click',()=>{marketSorts.set(state.market,state.sort);state.market=button.dataset.market;state.sort=marketSorts.get(state.market)||{key:'Game Time',direction:'asc'};root.querySelectorAll('[data-market]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderTable();}));
     controls.search.addEventListener('input',renderTable);controls.teamSearch.addEventListener('input',renderPicker);controls.date.addEventListener('change',renderTable);controls.upcoming.addEventListener('change',renderTable);controls.consensus.addEventListener('change',renderTable);
     $('[data-action=select-visible]').addEventListener('click',()=>{visibleTeams().forEach(t=>state.selected.add(t));renderPicker();renderTable();});
     $('[data-action=clear-teams]').addEventListener('click',()=>{state.selected.clear();controls.teamSearch.value='';renderPicker();renderTable();});
