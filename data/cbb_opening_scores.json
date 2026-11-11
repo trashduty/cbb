@@ -8397,7 +8397,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-11T21:51:54Z"
+    "last_update": "2026-11-11T22:21:55Z"
   },
   "759951fe63ce023850658a6be1c38e38": {
     "id": "759951fe63ce023850658a6be1c38e38",
@@ -8417,7 +8417,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-11T21:51:54Z"
+    "last_update": "2026-11-11T22:21:55Z"
   },
   "aa97877f068fe75687ae212a2c848bd9": {
     "id": "aa97877f068fe75687ae212a2c848bd9",
@@ -8437,7 +8437,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-11T21:51:54Z"
+    "last_update": "2026-11-11T22:21:55Z"
   },
   "8a85464bb774b0a913a1c829899c30c2": {
     "id": "8a85464bb774b0a913a1c829899c30c2",
@@ -8457,6 +8457,26 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-11T21:51:54Z"
+    "last_update": "2026-11-11T22:21:55Z"
+  },
+  "b4a1814a6efc7eb096e5ac5e857915b5": {
+    "id": "b4a1814a6efc7eb096e5ac5e857915b5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T20:00:00Z",
+    "completed": true,
+    "home_team": "Air Force Falcons",
+    "away_team": "Loyola (Chi) Ramblers",
+    "scores": [
+      {
+        "name": "Air Force Falcons",
+        "score": "107"
+      },
+      {
+        "name": "Loyola (Chi) Ramblers",
+        "score": "93"
+      }
+    ],
+    "last_update": "2026-11-11T22:21:55Z"
   }
 }
