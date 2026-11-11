@@ -1,10 +1,10 @@
 # CBB Model Record
 
-**Last Updated:** November 10, 2026 at 11:34 PM ET
+**Last Updated:** November 11, 2026 at 12:04 AM ET
 
 **Season Record Period:** 2025-11-04 to 2026-11-11
 
-**Total Games Graded:** 4347 games (8694 team-rows)
+**Total Games Graded:** 4349 games (8698 team-rows)
 
 ---
 
@@ -18,9 +18,9 @@ The opening edge is calculated when a game first appears in our system, comparin
 |-----------|--------|----------|----------------|
 | 0-1.9% | 455-444 | 50.6% | -30.40 |
 | 2-3.9% | 110-161 | 40.6% | -61.01 |
-| 4-5.9% | 36-39 | 48.0% | -6.28 |
+| 4-5.9% | 37-39 | 48.7% | -5.37 |
 | 6%+ | 6-13 | 31.6% | -7.55 |
-| **Total** | **607-657** | **48.0%** | **-105.24** |
+| **Total** | **608-657** | **48.1%** | **-104.33** |
 
 ### Spread Bets - Consensus Only
 
@@ -36,21 +36,21 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 336-492 | 40.6% | -186.58 |
+| 0-1.9% | 337-492 | 40.7% | -185.67 |
 | 2-3.9% | 84-115 | 42.2% | -38.64 |
 | 4-5.9% | 21-37 | 36.2% | -17.91 |
 | 6%+ | 5-10 | 33.3% | -5.46 |
-| **Total** | **446-654** | **40.5%** | **-248.59** |
+| **Total** | **447-654** | **40.6%** | **-247.68** |
 
 ### Moneyline Bets - Consensus Only
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 165-247 | 40.0% | -97.01 |
+| 0-1.9% | 166-247 | 40.2% | -96.11 |
 | 2-3.9% | 33-45 | 42.3% | -15.00 |
 | 4-5.9% | 7-14 | 33.3% | -7.64 |
 | 6%+ | 1-3 | 25.0% | -2.09 |
-| **Total** | **206-309** | **40.0%** | **-121.74** |
+| **Total** | **207-309** | **40.1%** | **-120.84** |
 
 ### Over Bets - All
 
@@ -76,11 +76,11 @@ The opening edge is calculated when a game first appears in our system, comparin
 
 | Edge Tier | Record | Win Rate | Profit (Units) |
 |-----------|--------|----------|----------------|
-| 0-1.9% | 300-274 | 52.3% | -1.30 |
+| 0-1.9% | 300-276 | 52.1% | -3.30 |
 | 2-3.9% | 30-20 | 60.0% | +7.27 |
 | 4-5.9% | 2-0 | 100.0% | +1.82 |
 | 6%+ | 4-0 | 100.0% | +3.64 |
-| **Total** | **336-294** | **53.3%** | **+11.43** |
+| **Total** | **336-296** | **53.2%** | **+9.43** |
 
 ### Under Bets - Consensus Only
 
@@ -102,35 +102,35 @@ Performance of each individual predictive model, calculated across all games reg
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3790-3802 | 49.9% | -356.89 |
-| Bart Torvik | 2615-2826 | 48.1% | -448.97 |
-| Evan Miya | 3973-4387 | 47.5% | -775.54 |
+| KenPom | 3794-3802 | 49.9% | -353.25 |
+| Bart Torvik | 2619-2826 | 48.1% | -445.33 |
+| Evan Miya | 3975-4389 | 47.5% | -775.72 |
 | Haslametrics | 3758-3944 | 48.8% | -527.98 |
 
 ### Individual Model Performance - Moneyline Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 5383-2493 | 68.3% | +2400.15 |
-| Bart Torvik | 3964-1756 | 69.3% | +1847.28 |
-| Evan Miya | 5900-2792 | 67.9% | +2571.10 |
+| KenPom | 5387-2493 | 68.4% | +2403.78 |
+| Bart Torvik | 3968-1756 | 69.3% | +1850.91 |
+| Evan Miya | 5904-2792 | 67.9% | +2574.74 |
 
 ### Individual Model Performance - Over Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3724-3836 | 49.3% | -450.88 |
-| Bart Torvik | 2668-2736 | 49.4% | -310.79 |
-| Evan Miya | 4092-4232 | 49.2% | -512.37 |
+| KenPom | 3726-3836 | 49.3% | -449.07 |
+| Bart Torvik | 2670-2736 | 49.4% | -308.97 |
+| Evan Miya | 4094-4232 | 49.2% | -510.55 |
 | Haslametrics | 3764-3916 | 49.0% | -494.52 |
 
 ### Individual Model Performance - Under Bets
 
 | Model | Record | Win Rate | Profit (Units) |
 |-------|--------|----------|----------------|
-| KenPom | 3836-3724 | 50.7% | -237.08 |
-| Bart Torvik | 2736-2668 | 50.6% | -180.98 |
-| Evan Miya | 4232-4092 | 50.8% | -245.11 |
+| KenPom | 3836-3726 | 50.7% | -239.08 |
+| Bart Torvik | 2736-2670 | 50.6% | -182.98 |
+| Evan Miya | 4232-4094 | 50.8% | -247.11 |
 | Haslametrics | 3916-3764 | 51.0% | -204.36 |
 
 ---
