@@ -8397,7 +8397,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
   },
   "759951fe63ce023850658a6be1c38e38": {
     "id": "759951fe63ce023850658a6be1c38e38",
@@ -8417,7 +8417,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
   },
   "aa97877f068fe75687ae212a2c848bd9": {
     "id": "aa97877f068fe75687ae212a2c848bd9",
@@ -8437,7 +8437,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
   },
   "8a85464bb774b0a913a1c829899c30c2": {
     "id": "8a85464bb774b0a913a1c829899c30c2",
@@ -8457,7 +8457,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
   },
   "b4a1814a6efc7eb096e5ac5e857915b5": {
     "id": "b4a1814a6efc7eb096e5ac5e857915b5",
@@ -8477,7 +8477,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
   },
   "fb4e0baed91adfe2f7de6ca28ed533e8": {
     "id": "fb4e0baed91adfe2f7de6ca28ed533e8",
@@ -8497,6 +8497,26 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-11T23:23:23Z"
+    "last_update": "2026-11-11T23:51:11Z"
+  },
+  "83af3d625408a5c5f1b726fe740fc2ef": {
+    "id": "83af3d625408a5c5f1b726fe740fc2ef",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T21:00:00Z",
+    "completed": true,
+    "home_team": "East Carolina Pirates",
+    "away_team": "North Carolina A&T Aggies",
+    "scores": [
+      {
+        "name": "East Carolina Pirates",
+        "score": "72"
+      },
+      {
+        "name": "North Carolina A&T Aggies",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-11T23:51:11Z"
   }
 }
