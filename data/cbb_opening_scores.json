@@ -7258,5 +7258,65 @@
       }
     ],
     "last_update": "2026-11-10T12:36:00Z"
+  },
+  "72eacb4b3afe5e4526420aa503a8ff1f": {
+    "id": "72eacb4b3afe5e4526420aa503a8ff1f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-10T23:01:36Z",
+    "completed": true,
+    "home_team": "Florida St Seminoles",
+    "away_team": "Florida Gators",
+    "scores": [
+      {
+        "name": "Florida St Seminoles",
+        "score": "72"
+      },
+      {
+        "name": "Florida Gators",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-11T01:51:55Z"
+  },
+  "2b966e38935332c263ecce66667f4b3b": {
+    "id": "2b966e38935332c263ecce66667f4b3b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-10T23:30:00Z",
+    "completed": true,
+    "home_team": "Georgetown Hoyas",
+    "away_team": "Delaware St Hornets",
+    "scores": [
+      {
+        "name": "Georgetown Hoyas",
+        "score": "83"
+      },
+      {
+        "name": "Delaware St Hornets",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-11T01:51:55Z"
+  },
+  "ee9da2e11b9dd590539d4c230c90a800": {
+    "id": "ee9da2e11b9dd590539d4c230c90a800",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-10T23:30:00Z",
+    "completed": true,
+    "home_team": "Rutgers Scarlet Knights",
+    "away_team": "NJIT Highlanders",
+    "scores": [
+      {
+        "name": "Rutgers Scarlet Knights",
+        "score": "101"
+      },
+      {
+        "name": "NJIT Highlanders",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-11T01:51:55Z"
   }
 }
