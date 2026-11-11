@@ -594,11 +594,19 @@ td.cbb-team-name{text-align:left}
         const active=state.sort.key===col.key;th.setAttribute('aria-sort',active?(state.sort.direction==='asc'?'ascending':'descending'):'none');
         const button=document.createElement('button');button.type='button';button.append(document.createTextNode(col.label));
         const arrow=document.createElement('span');arrow.className='cbb-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent=active?(state.sort.direction==='asc'?'↑':'↓'):'↕';button.append(arrow);
-        button.addEventListener('click',()=>{state.sort={key:col.key,direction:active&&state.sort.direction==='asc'?'desc':'asc'};renderTable();});th.append(button);head.append(th);
+        button.addEventListener('click',()=>{state.sort={key:col.key,direction:active?(state.sort.direction==='asc'?'desc':'asc'):['edge','ml_edge'].includes(col.type)?'desc':'asc'};renderTable();});th.append(button);head.append(th);
       }
       $('thead').replaceChildren(head);const body=document.createDocumentFragment();let rows=processedRows();
-      if(state.market==='total')rows=[...new Map(rows.map(r=>[JSON.stringify([r.Game,r['Game Time']]),r])).values()];
-      if(grouped){const groups=new Map();for(const r of rows){const k=JSON.stringify([r.Game,r['Game Time']]);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r);}rows=[...groups.values()].flat();}
+      if(state.market==='total'){
+        const seen = new Set();
+        rows = rows.filter(row=>{
+          const key = JSON.stringify([row.Game,row['Game Time']]);
+          if(seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+      if(grouped&&state.sort.key==='Game Time'){const groups=new Map();for(const r of rows){const k=JSON.stringify([r.Game,r['Game Time']]);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r);}rows=[...groups.values()].flat();}
       let previousGroup=null;
       for(const row of rows){
         const k=JSON.stringify([row.Game,row['Game Time']]);
