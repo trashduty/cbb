@@ -8397,7 +8397,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "759951fe63ce023850658a6be1c38e38": {
     "id": "759951fe63ce023850658a6be1c38e38",
@@ -8417,7 +8417,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "aa97877f068fe75687ae212a2c848bd9": {
     "id": "aa97877f068fe75687ae212a2c848bd9",
@@ -8437,7 +8437,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "8a85464bb774b0a913a1c829899c30c2": {
     "id": "8a85464bb774b0a913a1c829899c30c2",
@@ -8457,7 +8457,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "b4a1814a6efc7eb096e5ac5e857915b5": {
     "id": "b4a1814a6efc7eb096e5ac5e857915b5",
@@ -8477,7 +8477,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "fb4e0baed91adfe2f7de6ca28ed533e8": {
     "id": "fb4e0baed91adfe2f7de6ca28ed533e8",
@@ -8497,7 +8497,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
   },
   "83af3d625408a5c5f1b726fe740fc2ef": {
     "id": "83af3d625408a5c5f1b726fe740fc2ef",
@@ -8517,6 +8517,26 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-11T23:51:11Z"
+    "last_update": "2026-11-12T00:42:14Z"
+  },
+  "0c0027ceb34cc2898a318f1453a25a68": {
+    "id": "0c0027ceb34cc2898a318f1453a25a68",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T22:02:41Z",
+    "completed": true,
+    "home_team": "San Diego St Aztecs",
+    "away_team": "Bethune-Cookman Wildcats",
+    "scores": [
+      {
+        "name": "San Diego St Aztecs",
+        "score": "88"
+      },
+      {
+        "name": "Bethune-Cookman Wildcats",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-12T00:42:14Z"
   }
 }
