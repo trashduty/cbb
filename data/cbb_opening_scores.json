@@ -9338,5 +9338,25 @@
       }
     ],
     "last_update": "2026-11-12T11:44:02Z"
+  },
+  "1ee47a3559104cb9fdb52dce0dd26728": {
+    "id": "1ee47a3559104cb9fdb52dce0dd26728",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-12T20:04:40Z",
+    "completed": true,
+    "home_team": "George Mason Patriots",
+    "away_team": "UMKC Kangaroos",
+    "scores": [
+      {
+        "name": "George Mason Patriots",
+        "score": "76"
+      },
+      {
+        "name": "UMKC Kangaroos",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-12T22:22:45Z"
   }
 }
