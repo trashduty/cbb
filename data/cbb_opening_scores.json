@@ -8397,7 +8397,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "759951fe63ce023850658a6be1c38e38": {
     "id": "759951fe63ce023850658a6be1c38e38",
@@ -8417,7 +8417,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "aa97877f068fe75687ae212a2c848bd9": {
     "id": "aa97877f068fe75687ae212a2c848bd9",
@@ -8437,7 +8437,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "8a85464bb774b0a913a1c829899c30c2": {
     "id": "8a85464bb774b0a913a1c829899c30c2",
@@ -8457,7 +8457,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "b4a1814a6efc7eb096e5ac5e857915b5": {
     "id": "b4a1814a6efc7eb096e5ac5e857915b5",
@@ -8477,7 +8477,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "fb4e0baed91adfe2f7de6ca28ed533e8": {
     "id": "fb4e0baed91adfe2f7de6ca28ed533e8",
@@ -8497,7 +8497,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "83af3d625408a5c5f1b726fe740fc2ef": {
     "id": "83af3d625408a5c5f1b726fe740fc2ef",
@@ -8517,7 +8517,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
   },
   "0c0027ceb34cc2898a318f1453a25a68": {
     "id": "0c0027ceb34cc2898a318f1453a25a68",
@@ -8537,6 +8537,46 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-12T00:55:03Z"
+    "last_update": "2026-11-12T01:22:09Z"
+  },
+  "b153a909b36dcd998bab181db782802c": {
+    "id": "b153a909b36dcd998bab181db782802c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T22:55:00Z",
+    "completed": true,
+    "home_team": "Navy Midshipmen",
+    "away_team": "Pennsylvania Quakers",
+    "scores": [
+      {
+        "name": "Navy Midshipmen",
+        "score": "81"
+      },
+      {
+        "name": "Pennsylvania Quakers",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-12T01:22:09Z"
+  },
+  "5b6355f8a6a8f6fe34a477c2b8e3a7e7": {
+    "id": "5b6355f8a6a8f6fe34a477c2b8e3a7e7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-11T23:06:07Z",
+    "completed": true,
+    "home_team": "VMI Keydets",
+    "away_team": "North Carolina Central Eagles",
+    "scores": [
+      {
+        "name": "VMI Keydets",
+        "score": "65"
+      },
+      {
+        "name": "North Carolina Central Eagles",
+        "score": "51"
+      }
+    ],
+    "last_update": "2026-11-12T01:22:09Z"
   }
 }
