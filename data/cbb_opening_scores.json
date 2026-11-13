@@ -9357,7 +9357,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-13T01:21:54Z"
+    "last_update": "2026-11-13T01:51:37Z"
   },
   "d5ffc3709a43565e263ddd08e42c27c0": {
     "id": "d5ffc3709a43565e263ddd08e42c27c0",
@@ -9377,7 +9377,7 @@
         "score": "56"
       }
     ],
-    "last_update": "2026-11-13T01:21:54Z"
+    "last_update": "2026-11-13T01:51:37Z"
   },
   "864a50f3559f070e6e8d914cd49a80b4": {
     "id": "864a50f3559f070e6e8d914cd49a80b4",
@@ -9397,6 +9397,86 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-13T01:21:54Z"
+    "last_update": "2026-11-13T01:51:37Z"
+  },
+  "dce2f501e790814a83c007c4bfeaf299": {
+    "id": "dce2f501e790814a83c007c4bfeaf299",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-12T23:33:00Z",
+    "completed": true,
+    "home_team": "Indiana Hoosiers",
+    "away_team": "Tennessee Tech Golden Eagles",
+    "scores": [
+      {
+        "name": "Indiana Hoosiers",
+        "score": "90"
+      },
+      {
+        "name": "Tennessee Tech Golden Eagles",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-13T01:51:37Z"
+  },
+  "c62dc747fca57d00af7e4fe8f1326f58": {
+    "id": "c62dc747fca57d00af7e4fe8f1326f58",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-12T23:33:00Z",
+    "completed": true,
+    "home_team": "Penn State Nittany Lions",
+    "away_team": "Mercyhurst Lakers",
+    "scores": [
+      {
+        "name": "Penn State Nittany Lions",
+        "score": "72"
+      },
+      {
+        "name": "Mercyhurst Lakers",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-13T01:51:37Z"
+  },
+  "daa2c49d2dbe8e2048ae3574d63eb7f0": {
+    "id": "daa2c49d2dbe8e2048ae3574d63eb7f0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Towson Tigers",
+    "away_team": "Loyola (MD) Greyhounds",
+    "scores": [
+      {
+        "name": "Towson Tigers",
+        "score": "90"
+      },
+      {
+        "name": "Loyola (MD) Greyhounds",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-13T01:51:37Z"
+  },
+  "acfcff07d0a7ec0e61020263a6fafdb8": {
+    "id": "acfcff07d0a7ec0e61020263a6fafdb8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Rhode Island Rams",
+    "away_team": "Maryland-Eastern Shore Hawks",
+    "scores": [
+      {
+        "name": "Rhode Island Rams",
+        "score": "67"
+      },
+      {
+        "name": "Maryland-Eastern Shore Hawks",
+        "score": "47"
+      }
+    ],
+    "last_update": "2026-11-13T01:51:37Z"
   }
 }
