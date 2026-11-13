@@ -9357,7 +9357,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "d5ffc3709a43565e263ddd08e42c27c0": {
     "id": "d5ffc3709a43565e263ddd08e42c27c0",
@@ -9377,7 +9377,7 @@
         "score": "56"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "864a50f3559f070e6e8d914cd49a80b4": {
     "id": "864a50f3559f070e6e8d914cd49a80b4",
@@ -9397,7 +9397,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "dce2f501e790814a83c007c4bfeaf299": {
     "id": "dce2f501e790814a83c007c4bfeaf299",
@@ -9417,7 +9417,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "c62dc747fca57d00af7e4fe8f1326f58": {
     "id": "c62dc747fca57d00af7e4fe8f1326f58",
@@ -9437,7 +9437,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "daa2c49d2dbe8e2048ae3574d63eb7f0": {
     "id": "daa2c49d2dbe8e2048ae3574d63eb7f0",
@@ -9457,7 +9457,7 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
   },
   "acfcff07d0a7ec0e61020263a6fafdb8": {
     "id": "acfcff07d0a7ec0e61020263a6fafdb8",
@@ -9477,6 +9477,186 @@
         "score": "47"
       }
     ],
-    "last_update": "2026-11-13T01:51:37Z"
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "71ca9c50715c68ca7ed96094f62a20ce": {
+    "id": "71ca9c50715c68ca7ed96094f62a20ce",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Bowling Green Falcons",
+    "away_team": "Niagara Purple Eagles",
+    "scores": [
+      {
+        "name": "Bowling Green Falcons",
+        "score": "88"
+      },
+      {
+        "name": "Niagara Purple Eagles",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "60340e8a19f88be7b0c22c5428810081": {
+    "id": "60340e8a19f88be7b0c22c5428810081",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Brown Bears",
+    "away_team": "Canisius Golden Griffins",
+    "scores": [
+      {
+        "name": "Brown Bears",
+        "score": "81"
+      },
+      {
+        "name": "Canisius Golden Griffins",
+        "score": "86"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "fc5d4e08c0f15ae40d18fe46c8cab1f4": {
+    "id": "fc5d4e08c0f15ae40d18fe46c8cab1f4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Sacred Heart Pioneers",
+    "away_team": "Central Connecticut St Blue Devils",
+    "scores": [
+      {
+        "name": "Sacred Heart Pioneers",
+        "score": "75"
+      },
+      {
+        "name": "Central Connecticut St Blue Devils",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "ddcf26810b7aa3e03d38719931c1d035": {
+    "id": "ddcf26810b7aa3e03d38719931c1d035",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "High Point Panthers",
+    "away_team": "Southern Utah Thunderbirds",
+    "scores": [
+      {
+        "name": "High Point Panthers",
+        "score": "88"
+      },
+      {
+        "name": "Southern Utah Thunderbirds",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "aedc154c22609923dadd12582547db3a": {
+    "id": "aedc154c22609923dadd12582547db3a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "West Virginia Mountaineers",
+    "away_team": "Mercer Bears",
+    "scores": [
+      {
+        "name": "West Virginia Mountaineers",
+        "score": "75"
+      },
+      {
+        "name": "Mercer Bears",
+        "score": "61"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "c409b126f22e031f8c8cc074af6563ce": {
+    "id": "c409b126f22e031f8c8cc074af6563ce",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:00:00Z",
+    "completed": true,
+    "home_team": "Quinnipiac Bobcats",
+    "away_team": "Monmouth Hawks",
+    "scores": [
+      {
+        "name": "Quinnipiac Bobcats",
+        "score": "70"
+      },
+      {
+        "name": "Monmouth Hawks",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "cc1a52a6180b8ba1dae6567964f928fa": {
+    "id": "cc1a52a6180b8ba1dae6567964f928fa",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:01:25Z",
+    "completed": true,
+    "home_team": "Fort Wayne Mastodons",
+    "away_team": "Western Michigan Broncos",
+    "scores": [
+      {
+        "name": "Fort Wayne Mastodons",
+        "score": "59"
+      },
+      {
+        "name": "Western Michigan Broncos",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "bb076258b9d68ac93facc485d09f8f17": {
+    "id": "bb076258b9d68ac93facc485d09f8f17",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:02:20Z",
+    "completed": true,
+    "home_team": "Western Illinois Leathernecks",
+    "away_team": "CSU Bakersfield Roadrunners",
+    "scores": [
+      {
+        "name": "Western Illinois Leathernecks",
+        "score": "83"
+      },
+      {
+        "name": "CSU Bakersfield Roadrunners",
+        "score": "91"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
+  },
+  "1898e50ec19d9c95f900cd2487cb18ae": {
+    "id": "1898e50ec19d9c95f900cd2487cb18ae",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T00:05:59Z",
+    "completed": true,
+    "home_team": "Howard Bison",
+    "away_team": "Stetson Hatters",
+    "scores": [
+      {
+        "name": "Howard Bison",
+        "score": "75"
+      },
+      {
+        "name": "Stetson Hatters",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-13T02:23:23Z"
   }
 }
