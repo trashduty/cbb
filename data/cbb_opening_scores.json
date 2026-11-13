@@ -9357,6 +9357,46 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-13T00:54:31Z"
+    "last_update": "2026-11-13T01:21:54Z"
+  },
+  "d5ffc3709a43565e263ddd08e42c27c0": {
+    "id": "d5ffc3709a43565e263ddd08e42c27c0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-12T23:05:00Z",
+    "completed": true,
+    "home_team": "Bradley Braves",
+    "away_team": "Coppin St Eagles",
+    "scores": [
+      {
+        "name": "Coppin St Eagles",
+        "score": "54"
+      },
+      {
+        "name": "Bradley Braves",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-13T01:21:54Z"
+  },
+  "864a50f3559f070e6e8d914cd49a80b4": {
+    "id": "864a50f3559f070e6e8d914cd49a80b4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-12T23:05:00Z",
+    "completed": true,
+    "home_team": "UMBC Retrievers",
+    "away_team": "Morgan St Bears",
+    "scores": [
+      {
+        "name": "UMBC Retrievers",
+        "score": "85"
+      },
+      {
+        "name": "Morgan St Bears",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-13T01:21:54Z"
   }
 }
