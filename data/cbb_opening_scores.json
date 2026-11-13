@@ -9818,5 +9818,25 @@
       }
     ],
     "last_update": "2026-11-13T10:35:25Z"
+  },
+  "2151748c9e4175d788ed587a685e52d7": {
+    "id": "2151748c9e4175d788ed587a685e52d7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T20:00:00Z",
+    "completed": true,
+    "home_team": "Cleveland St Vikings",
+    "away_team": "West Florida Argonauts",
+    "scores": [
+      {
+        "name": "Cleveland St Vikings",
+        "score": "69"
+      },
+      {
+        "name": "West Florida Argonauts",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-13T21:51:36Z"
   }
 }
