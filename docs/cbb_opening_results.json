@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-13T20:51:56.520643+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-13T21:03:39.667439+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -64,7 +64,7 @@
       "wins": 115,
       "losses": 129,
       "pushes": 0,
-      "pending": 27,
+      "pending": 28,
       "win_rate": 0.4713114754098361,
       "profit_units": -23.68097323362506
     },
@@ -84,7 +84,7 @@
       "wins": 46,
       "losses": 52,
       "pushes": 0,
-      "pending": 9,
+      "pending": 10,
       "win_rate": 0.46938775510204084,
       "profit_units": -10.037308906874124
     },
@@ -159,7 +159,7 @@
       "profit_units": -4.61749373433584
     }
   ],
-  "snapshots": 3210,
+  "snapshots": 3214,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -28564,6 +28564,36 @@
       "spread_consensus": "",
       "total_consensus": "",
       "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "0c0cced695bc40f3e18191e8",
+      "event_id": "e53358c2ef0e2d73fb051ae863e2e686",
+      "game": "Gonzaga Bulldogs vs. LSU Tigers",
+      "home_team": "Gonzaga Bulldogs",
+      "away_team": "LSU Tigers",
+      "commence_time": "2026-11-14T20:30:00+00:00",
+      "game_date_et": "2026-11-14",
+      "captured_at": "2026-11-13T21:03:39.667439+00:00",
+      "book": "DraftKings",
+      "bet_type": "Total",
+      "selection": "Under",
+      "line": 161.5,
+      "odds": -105.0,
+      "model_prediction": 159.5,
+      "probability": 0.5310871879321442,
+      "implied_probability": 0.5121951219512195,
+      "edge": 0.018892065980924633,
+      "edge_tier": "1\u20132.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "Yes",
+      "total_consensus_source": "capture",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
