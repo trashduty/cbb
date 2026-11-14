@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-14T13:51:23.024033+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-14T14:03:58.396873+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 192,
       "losses": 190,
       "pushes": 0,
-      "pending": 41,
+      "pending": 42,
       "win_rate": 0.5026178010471204,
       "profit_units": -15.000168030238923
     },
@@ -24,7 +24,7 @@
       "wins": 40,
       "losses": 44,
       "pushes": 0,
-      "pending": 8,
+      "pending": 9,
       "win_rate": 0.47619047619047616,
       "profit_units": -7.842263029583146
     },
@@ -159,7 +159,7 @@
       "profit_units": -3.81749373433584
     }
   ],
-  "snapshots": 3576,
+  "snapshots": 3582,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -31469,6 +31469,36 @@
       "probability": 0.5336731946043589,
       "implied_probability": 0.5238095238095238,
       "edge": 0.009863670794835078,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "Yes",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "e1a18e348888b01e34afac8c",
+      "event_id": "b7e664d76ab994de4f92bccb1f592097",
+      "game": "Utah Utes vs. Washington Huskies",
+      "home_team": "Utah Utes",
+      "away_team": "Washington Huskies",
+      "commence_time": "2026-11-15T19:00:00+00:00",
+      "game_date_et": "2026-11-15",
+      "captured_at": "2026-11-14T14:03:58.396873+00:00",
+      "book": "DraftKings",
+      "bet_type": "Spread",
+      "selection": "Washington Huskies",
+      "line": 3.5,
+      "odds": -112.0,
+      "model_prediction": 2.5,
+      "probability": 0.5336731946043589,
+      "implied_probability": 0.5283018867924528,
+      "edge": 0.00537130781190609,
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "Yes",
