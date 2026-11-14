@@ -10918,5 +10918,25 @@
       }
     ],
     "last_update": "2026-11-14T11:13:24Z"
+  },
+  "4d805b3dd5cc85c566db652de1b4ca4e": {
+    "id": "4d805b3dd5cc85c566db652de1b4ca4e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T17:02:28Z",
+    "completed": true,
+    "home_team": "Akron Zips",
+    "away_team": "Tulane Green Wave",
+    "scores": [
+      {
+        "name": "Akron Zips",
+        "score": "65"
+      },
+      {
+        "name": "Tulane Green Wave",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-14T19:21:32Z"
   }
 }
