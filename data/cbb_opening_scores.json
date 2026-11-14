@@ -9837,7 +9837,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-14T01:21:52Z"
+    "last_update": "2026-11-14T01:51:14Z"
   },
   "434e3816a0d976cb0b270d5b09b24286": {
     "id": "434e3816a0d976cb0b270d5b09b24286",
@@ -9857,7 +9857,7 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-14T01:21:52Z"
+    "last_update": "2026-11-14T01:51:14Z"
   },
   "28ccd5b9ef2cd2f791d5c4d65f258da1": {
     "id": "28ccd5b9ef2cd2f791d5c4d65f258da1",
@@ -9877,7 +9877,7 @@
         "score": "52"
       }
     ],
-    "last_update": "2026-11-14T01:21:52Z"
+    "last_update": "2026-11-14T01:51:14Z"
   },
   "6826c51239f255c0bbc2ca893df748b9": {
     "id": "6826c51239f255c0bbc2ca893df748b9",
@@ -9897,7 +9897,7 @@
         "score": "51"
       }
     ],
-    "last_update": "2026-11-14T01:21:52Z"
+    "last_update": "2026-11-14T01:51:14Z"
   },
   "83b4c6a6cad10ef31246d4526bfcf3cf": {
     "id": "83b4c6a6cad10ef31246d4526bfcf3cf",
@@ -9917,6 +9917,86 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-14T01:21:52Z"
+    "last_update": "2026-11-14T01:51:14Z"
+  },
+  "58ad8bd17a0fe9ec1b9661c093ebef4b": {
+    "id": "58ad8bd17a0fe9ec1b9661c093ebef4b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T23:30:00Z",
+    "completed": true,
+    "home_team": "Butler Bulldogs",
+    "away_team": "Pittsburgh Panthers",
+    "scores": [
+      {
+        "name": "Butler Bulldogs",
+        "score": "64"
+      },
+      {
+        "name": "Pittsburgh Panthers",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-14T01:51:14Z"
+  },
+  "3875ce9226ab95bf60b281127edf36fc": {
+    "id": "3875ce9226ab95bf60b281127edf36fc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T00:01:45Z",
+    "completed": true,
+    "home_team": "Vanderbilt Commodores",
+    "away_team": "Prairie View Panthers",
+    "scores": [
+      {
+        "name": "Vanderbilt Commodores",
+        "score": "89"
+      },
+      {
+        "name": "Prairie View Panthers",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-14T01:51:14Z"
+  },
+  "800cf2e12ab8e83a5f1c8d234a963dfe": {
+    "id": "800cf2e12ab8e83a5f1c8d234a963dfe",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T00:02:25Z",
+    "completed": true,
+    "home_team": "GW Revolutionaries",
+    "away_team": "Harvard Crimson",
+    "scores": [
+      {
+        "name": "GW Revolutionaries",
+        "score": "85"
+      },
+      {
+        "name": "Harvard Crimson",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-14T01:51:14Z"
+  },
+  "264d36573ff96d6092d2715c343db7a9": {
+    "id": "264d36573ff96d6092d2715c343db7a9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T00:05:03Z",
+    "completed": true,
+    "home_team": "Northeastern Huskies",
+    "away_team": "Yale Bulldogs",
+    "scores": [
+      {
+        "name": "Northeastern Huskies",
+        "score": "84"
+      },
+      {
+        "name": "Yale Bulldogs",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-14T01:51:14Z"
   }
 }
