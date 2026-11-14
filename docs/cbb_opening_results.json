@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-14T23:22:06.510991+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-14T23:33:48.448832+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 96,
       "losses": 199,
       "pushes": 0,
-      "pending": 49,
+      "pending": 50,
       "win_rate": 0.3254237288135593,
       "profit_units": -69.9471742908123
     },
@@ -144,7 +144,7 @@
       "wins": 22,
       "losses": 36,
       "pushes": 0,
-      "pending": 14,
+      "pending": 15,
       "win_rate": 0.3793103448275862,
       "profit_units": -8.640077006116666
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.81749373433584
     }
   ],
-  "snapshots": 3782,
+  "snapshots": 3784,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -33629,6 +33629,36 @@
       "probability": 0.7484517004161262,
       "implied_probability": 0.7014925373134329,
       "edge": 0.046959163102693324,
+      "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "1af7d2cb8d669dc300efbb4a",
+      "event_id": "f8f468a5a4e424ca97009c8effa99395",
+      "game": "Buffalo Bulls vs. Canisius Golden Griffins",
+      "home_team": "Buffalo Bulls",
+      "away_team": "Canisius Golden Griffins",
+      "commence_time": "2026-11-15T22:30:00+00:00",
+      "game_date_et": "2026-11-15",
+      "captured_at": "2026-11-14T23:33:48.448832+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "Canisius Golden Griffins",
+      "line": null,
+      "odds": 1200.0,
+      "model_prediction": 0.13144769866397998,
+      "probability": 0.13144769866397998,
+      "implied_probability": 0.07692307692307693,
+      "edge": 0.054524621740903056,
       "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "spread_consensus": "",
