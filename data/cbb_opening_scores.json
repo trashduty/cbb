@@ -9837,6 +9837,46 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-13T23:51:30Z"
+    "last_update": "2026-11-14T00:39:45Z"
+  },
+  "434e3816a0d976cb0b270d5b09b24286": {
+    "id": "434e3816a0d976cb0b270d5b09b24286",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T22:00:00Z",
+    "completed": true,
+    "home_team": "Florida St Seminoles",
+    "away_team": "Texas A&M-CC Islanders",
+    "scores": [
+      {
+        "name": "Florida St Seminoles",
+        "score": "84"
+      },
+      {
+        "name": "Texas A&M-CC Islanders",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-14T00:39:45Z"
+  },
+  "28ccd5b9ef2cd2f791d5c4d65f258da1": {
+    "id": "28ccd5b9ef2cd2f791d5c4d65f258da1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T22:00:00Z",
+    "completed": true,
+    "home_team": "Miami Hurricanes",
+    "away_team": "North Alabama Lions",
+    "scores": [
+      {
+        "name": "Miami Hurricanes",
+        "score": "94"
+      },
+      {
+        "name": "North Alabama Lions",
+        "score": "52"
+      }
+    ],
+    "last_update": "2026-11-14T00:39:45Z"
   }
 }
