@@ -10937,6 +10937,86 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-14T19:51:17Z"
+    "last_update": "2026-11-14T20:22:37Z"
+  },
+  "d32b25cf545658dbec5e24d755ebb8ce": {
+    "id": "d32b25cf545658dbec5e24d755ebb8ce",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T18:00:00Z",
+    "completed": true,
+    "home_team": "Army Knights",
+    "away_team": "St. Thomas (MN) Tommies",
+    "scores": [
+      {
+        "name": "Army Knights",
+        "score": "79"
+      },
+      {
+        "name": "St. Thomas (MN) Tommies",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-14T20:22:37Z"
+  },
+  "0039563fd667f48d9f7345c620c428bf": {
+    "id": "0039563fd667f48d9f7345c620c428bf",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T18:02:17Z",
+    "completed": true,
+    "home_team": "Youngstown St Penguins",
+    "away_team": "Marshall Thundering Herd",
+    "scores": [
+      {
+        "name": "Youngstown St Penguins",
+        "score": "74"
+      },
+      {
+        "name": "Marshall Thundering Herd",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-14T20:22:37Z"
+  },
+  "316f65da22098736b63cd2a297b94269": {
+    "id": "316f65da22098736b63cd2a297b94269",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T18:03:28Z",
+    "completed": true,
+    "home_team": "Maine Black Bears",
+    "away_team": "Drexel Dragons",
+    "scores": [
+      {
+        "name": "Maine Black Bears",
+        "score": "64"
+      },
+      {
+        "name": "Drexel Dragons",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-14T20:22:37Z"
+  },
+  "7bea7be55ff2e132cdb74ee3608d1f7a": {
+    "id": "7bea7be55ff2e132cdb74ee3608d1f7a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T18:04:41Z",
+    "completed": true,
+    "home_team": "George Mason Patriots",
+    "away_team": "Bradley Braves",
+    "scores": [
+      {
+        "name": "Bradley Braves",
+        "score": "62"
+      },
+      {
+        "name": "George Mason Patriots",
+        "score": "61"
+      }
+    ],
+    "last_update": "2026-11-14T20:22:37Z"
   }
 }
