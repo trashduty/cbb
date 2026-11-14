@@ -10937,7 +10937,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
   },
   "d32b25cf545658dbec5e24d755ebb8ce": {
     "id": "d32b25cf545658dbec5e24d755ebb8ce",
@@ -10957,7 +10957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
   },
   "0039563fd667f48d9f7345c620c428bf": {
     "id": "0039563fd667f48d9f7345c620c428bf",
@@ -10977,7 +10977,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
   },
   "316f65da22098736b63cd2a297b94269": {
     "id": "316f65da22098736b63cd2a297b94269",
@@ -10997,7 +10997,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
   },
   "7bea7be55ff2e132cdb74ee3608d1f7a": {
     "id": "7bea7be55ff2e132cdb74ee3608d1f7a",
@@ -11017,7 +11017,7 @@
         "score": "61"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
   },
   "fc5dae0c22088288038d4b9323e692c1": {
     "id": "fc5dae0c22088288038d4b9323e692c1",
@@ -11037,6 +11037,126 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-14T20:51:12Z"
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "0970fbb6577b859695e227f2c8e40e47": {
+    "id": "0970fbb6577b859695e227f2c8e40e47",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:01:18Z",
+    "completed": true,
+    "home_team": "South Carolina Gamecocks",
+    "away_team": "Gardner-Webb Bulldogs",
+    "scores": [
+      {
+        "name": "South Carolina Gamecocks",
+        "score": "79"
+      },
+      {
+        "name": "Gardner-Webb Bulldogs",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "87495030c89d6ccf9cc9edc6abc8ff34": {
+    "id": "87495030c89d6ccf9cc9edc6abc8ff34",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:02:00Z",
+    "completed": true,
+    "home_team": "Texas Tech Red Raiders",
+    "away_team": "Stonehill Skyhawks",
+    "scores": [
+      {
+        "name": "Texas Tech Red Raiders",
+        "score": "88"
+      },
+      {
+        "name": "Stonehill Skyhawks",
+        "score": "37"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "32e34c35ae4bcafb47d5b848e7d0cea1": {
+    "id": "32e34c35ae4bcafb47d5b848e7d0cea1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:02:19Z",
+    "completed": true,
+    "home_team": "South Florida Bulls",
+    "away_team": "Coppin St Eagles",
+    "scores": [
+      {
+        "name": "South Florida Bulls",
+        "score": "73"
+      },
+      {
+        "name": "Coppin St Eagles",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "a1cc87eeeffb39fecaa58bf0df4d6ce8": {
+    "id": "a1cc87eeeffb39fecaa58bf0df4d6ce8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:02:55Z",
+    "completed": true,
+    "home_team": "Bellarmine Knights",
+    "away_team": "Northern Illinois Huskies",
+    "scores": [
+      {
+        "name": "Bellarmine Knights",
+        "score": "64"
+      },
+      {
+        "name": "Northern Illinois Huskies",
+        "score": "72"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "51f9ec7bdcf8d8941d395ace6f54d2fe": {
+    "id": "51f9ec7bdcf8d8941d395ace6f54d2fe",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:03:16Z",
+    "completed": true,
+    "home_team": "Evansville Purple Aces",
+    "away_team": "Miami (OH) RedHawks",
+    "scores": [
+      {
+        "name": "Evansville Purple Aces",
+        "score": "78"
+      },
+      {
+        "name": "Miami (OH) RedHawks",
+        "score": "86"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
+  },
+  "7428b124d458bea8a330d6a74c913ae6": {
+    "id": "7428b124d458bea8a330d6a74c913ae6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:06:51Z",
+    "completed": true,
+    "home_team": "Queens University Royals",
+    "away_team": "Wofford Terriers",
+    "scores": [
+      {
+        "name": "Queens University Royals",
+        "score": "97"
+      },
+      {
+        "name": "Wofford Terriers",
+        "score": "92"
+      }
+    ],
+    "last_update": "2026-11-14T21:22:13Z"
   }
 }
