@@ -10937,7 +10937,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "d32b25cf545658dbec5e24d755ebb8ce": {
     "id": "d32b25cf545658dbec5e24d755ebb8ce",
@@ -10957,7 +10957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "0039563fd667f48d9f7345c620c428bf": {
     "id": "0039563fd667f48d9f7345c620c428bf",
@@ -10977,7 +10977,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "316f65da22098736b63cd2a297b94269": {
     "id": "316f65da22098736b63cd2a297b94269",
@@ -10997,7 +10997,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "7bea7be55ff2e132cdb74ee3608d1f7a": {
     "id": "7bea7be55ff2e132cdb74ee3608d1f7a",
@@ -11017,7 +11017,7 @@
         "score": "61"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "fc5dae0c22088288038d4b9323e692c1": {
     "id": "fc5dae0c22088288038d4b9323e692c1",
@@ -11037,7 +11037,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "0970fbb6577b859695e227f2c8e40e47": {
     "id": "0970fbb6577b859695e227f2c8e40e47",
@@ -11057,7 +11057,7 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "87495030c89d6ccf9cc9edc6abc8ff34": {
     "id": "87495030c89d6ccf9cc9edc6abc8ff34",
@@ -11077,7 +11077,7 @@
         "score": "37"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "32e34c35ae4bcafb47d5b848e7d0cea1": {
     "id": "32e34c35ae4bcafb47d5b848e7d0cea1",
@@ -11097,7 +11097,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "a1cc87eeeffb39fecaa58bf0df4d6ce8": {
     "id": "a1cc87eeeffb39fecaa58bf0df4d6ce8",
@@ -11117,7 +11117,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "51f9ec7bdcf8d8941d395ace6f54d2fe": {
     "id": "51f9ec7bdcf8d8941d395ace6f54d2fe",
@@ -11137,7 +11137,7 @@
         "score": "86"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
   },
   "7428b124d458bea8a330d6a74c913ae6": {
     "id": "7428b124d458bea8a330d6a74c913ae6",
@@ -11157,6 +11157,66 @@
         "score": "92"
       }
     ],
-    "last_update": "2026-11-14T21:22:13Z"
+    "last_update": "2026-11-14T21:51:00Z"
+  },
+  "315f611a3a841f575260db9d7138f5e1": {
+    "id": "315f611a3a841f575260db9d7138f5e1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:02:15Z",
+    "completed": true,
+    "home_team": "North Florida Ospreys",
+    "away_team": "The Citadel Bulldogs",
+    "scores": [
+      {
+        "name": "North Florida Ospreys",
+        "score": "74"
+      },
+      {
+        "name": "The Citadel Bulldogs",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-14T21:51:00Z"
+  },
+  "1a2e873f3f0f32491daaacbc9599a73f": {
+    "id": "1a2e873f3f0f32491daaacbc9599a73f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T19:03:30Z",
+    "completed": true,
+    "home_team": "Stephen F. Austin Lumberjacks",
+    "away_team": "Rice Owls",
+    "scores": [
+      {
+        "name": "Stephen F. Austin Lumberjacks",
+        "score": "78"
+      },
+      {
+        "name": "Rice Owls",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-14T21:51:00Z"
+  },
+  "eac5014e07a9672daa591aa30d48a936": {
+    "id": "eac5014e07a9672daa591aa30d48a936",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T20:02:15Z",
+    "completed": true,
+    "home_team": "Denver Pioneers",
+    "away_team": "Wyoming Cowboys",
+    "scores": [
+      {
+        "name": "Denver Pioneers",
+        "score": "53"
+      },
+      {
+        "name": "Wyoming Cowboys",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-14T21:51:00Z"
   }
 }
