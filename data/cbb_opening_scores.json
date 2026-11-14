@@ -10937,7 +10937,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-14T20:22:37Z"
+    "last_update": "2026-11-14T20:51:12Z"
   },
   "d32b25cf545658dbec5e24d755ebb8ce": {
     "id": "d32b25cf545658dbec5e24d755ebb8ce",
@@ -10957,7 +10957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-14T20:22:37Z"
+    "last_update": "2026-11-14T20:51:12Z"
   },
   "0039563fd667f48d9f7345c620c428bf": {
     "id": "0039563fd667f48d9f7345c620c428bf",
@@ -10977,7 +10977,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-14T20:22:37Z"
+    "last_update": "2026-11-14T20:51:12Z"
   },
   "316f65da22098736b63cd2a297b94269": {
     "id": "316f65da22098736b63cd2a297b94269",
@@ -10997,7 +10997,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-14T20:22:37Z"
+    "last_update": "2026-11-14T20:51:12Z"
   },
   "7bea7be55ff2e132cdb74ee3608d1f7a": {
     "id": "7bea7be55ff2e132cdb74ee3608d1f7a",
@@ -11017,6 +11017,26 @@
         "score": "61"
       }
     ],
-    "last_update": "2026-11-14T20:22:37Z"
+    "last_update": "2026-11-14T20:51:12Z"
+  },
+  "fc5dae0c22088288038d4b9323e692c1": {
+    "id": "fc5dae0c22088288038d4b9323e692c1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-14T18:31:41Z",
+    "completed": true,
+    "home_team": "Colorado St Rams",
+    "away_team": "Loyola (Chi) Ramblers",
+    "scores": [
+      {
+        "name": "Colorado St Rams",
+        "score": "58"
+      },
+      {
+        "name": "Loyola (Chi) Ramblers",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-14T20:51:12Z"
   }
 }
