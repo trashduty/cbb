@@ -9837,7 +9837,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-14T00:51:11Z"
+    "last_update": "2026-11-14T01:21:52Z"
   },
   "434e3816a0d976cb0b270d5b09b24286": {
     "id": "434e3816a0d976cb0b270d5b09b24286",
@@ -9857,7 +9857,7 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-14T00:51:11Z"
+    "last_update": "2026-11-14T01:21:52Z"
   },
   "28ccd5b9ef2cd2f791d5c4d65f258da1": {
     "id": "28ccd5b9ef2cd2f791d5c4d65f258da1",
@@ -9877,6 +9877,46 @@
         "score": "52"
       }
     ],
-    "last_update": "2026-11-14T00:51:11Z"
+    "last_update": "2026-11-14T01:21:52Z"
+  },
+  "6826c51239f255c0bbc2ca893df748b9": {
+    "id": "6826c51239f255c0bbc2ca893df748b9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T23:00:00Z",
+    "completed": true,
+    "home_team": "Rutgers Scarlet Knights",
+    "away_team": "Bryant Bulldogs",
+    "scores": [
+      {
+        "name": "Rutgers Scarlet Knights",
+        "score": "72"
+      },
+      {
+        "name": "Bryant Bulldogs",
+        "score": "51"
+      }
+    ],
+    "last_update": "2026-11-14T01:21:52Z"
+  },
+  "83b4c6a6cad10ef31246d4526bfcf3cf": {
+    "id": "83b4c6a6cad10ef31246d4526bfcf3cf",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-13T23:00:00Z",
+    "completed": true,
+    "home_team": "Clemson Tigers",
+    "away_team": "Georgetown Hoyas",
+    "scores": [
+      {
+        "name": "Clemson Tigers",
+        "score": "78"
+      },
+      {
+        "name": "Georgetown Hoyas",
+        "score": "85"
+      }
+    ],
+    "last_update": "2026-11-14T01:21:52Z"
   }
 }
