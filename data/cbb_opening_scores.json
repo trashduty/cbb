@@ -12077,6 +12077,46 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-15T19:21:48Z"
+    "last_update": "2026-11-15T19:51:31Z"
+  },
+  "a1b8e614479a42dfc7fc085e7cfc5434": {
+    "id": "a1b8e614479a42dfc7fc085e7cfc5434",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "Delaware Blue Hens",
+    "away_team": "Colgate Raiders",
+    "scores": [
+      {
+        "name": "Delaware Blue Hens",
+        "score": "64"
+      },
+      {
+        "name": "Colgate Raiders",
+        "score": "58"
+      }
+    ],
+    "last_update": "2026-11-15T19:51:31Z"
+  },
+  "29c07e686c26cabf4f2032b342d49bee": {
+    "id": "29c07e686c26cabf4f2032b342d49bee",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "Georgia St Panthers",
+    "away_team": "Norfolk St Spartans",
+    "scores": [
+      {
+        "name": "Georgia St Panthers",
+        "score": "78"
+      },
+      {
+        "name": "Norfolk St Spartans",
+        "score": "53"
+      }
+    ],
+    "last_update": "2026-11-15T19:51:31Z"
   }
 }
