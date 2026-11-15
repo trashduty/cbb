@@ -12077,7 +12077,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "a1b8e614479a42dfc7fc085e7cfc5434": {
     "id": "a1b8e614479a42dfc7fc085e7cfc5434",
@@ -12097,7 +12097,7 @@
         "score": "58"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "29c07e686c26cabf4f2032b342d49bee": {
     "id": "29c07e686c26cabf4f2032b342d49bee",
@@ -12117,7 +12117,7 @@
         "score": "53"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "b86b1b8191df58c5dd3bbec4dde733e5": {
     "id": "b86b1b8191df58c5dd3bbec4dde733e5",
@@ -12137,7 +12137,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "4907c399e1707ee794cd6acb25c791cc": {
     "id": "4907c399e1707ee794cd6acb25c791cc",
@@ -12157,7 +12157,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "e49472d7e5932731d706ab032eb40f96": {
     "id": "e49472d7e5932731d706ab032eb40f96",
@@ -12177,7 +12177,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "460c23d41c84519f5edf6c04d47cb25a": {
     "id": "460c23d41c84519f5edf6c04d47cb25a",
@@ -12197,7 +12197,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
   },
   "6e7b60ce8a7b43c70fd1d56fe26c9a28": {
     "id": "6e7b60ce8a7b43c70fd1d56fe26c9a28",
@@ -12217,6 +12217,26 @@
         "score": "45"
       }
     ],
-    "last_update": "2026-11-15T20:22:10Z"
+    "last_update": "2026-11-15T20:51:09Z"
+  },
+  "7bd8e4044302f52d0233d1a4f9b0cc19": {
+    "id": "7bd8e4044302f52d0233d1a4f9b0cc19",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:30:00Z",
+    "completed": true,
+    "home_team": "Boston College Eagles",
+    "away_team": "New Hampshire Wildcats",
+    "scores": [
+      {
+        "name": "Boston College Eagles",
+        "score": "67"
+      },
+      {
+        "name": "New Hampshire Wildcats",
+        "score": "55"
+      }
+    ],
+    "last_update": "2026-11-15T20:51:09Z"
   }
 }
