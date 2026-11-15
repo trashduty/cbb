@@ -12077,7 +12077,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-15T19:51:31Z"
+    "last_update": "2026-11-15T20:22:10Z"
   },
   "a1b8e614479a42dfc7fc085e7cfc5434": {
     "id": "a1b8e614479a42dfc7fc085e7cfc5434",
@@ -12097,7 +12097,7 @@
         "score": "58"
       }
     ],
-    "last_update": "2026-11-15T19:51:31Z"
+    "last_update": "2026-11-15T20:22:10Z"
   },
   "29c07e686c26cabf4f2032b342d49bee": {
     "id": "29c07e686c26cabf4f2032b342d49bee",
@@ -12117,6 +12117,106 @@
         "score": "53"
       }
     ],
-    "last_update": "2026-11-15T19:51:31Z"
+    "last_update": "2026-11-15T20:22:10Z"
+  },
+  "b86b1b8191df58c5dd3bbec4dde733e5": {
+    "id": "b86b1b8191df58c5dd3bbec4dde733e5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "American Eagles",
+    "away_team": "Harvard Crimson",
+    "scores": [
+      {
+        "name": "American Eagles",
+        "score": "70"
+      },
+      {
+        "name": "Harvard Crimson",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-15T20:22:10Z"
+  },
+  "4907c399e1707ee794cd6acb25c791cc": {
+    "id": "4907c399e1707ee794cd6acb25c791cc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "Nebraska Cornhuskers",
+    "away_team": "Boise State Broncos",
+    "scores": [
+      {
+        "name": "Nebraska Cornhuskers",
+        "score": "102"
+      },
+      {
+        "name": "Boise State Broncos",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-15T20:22:10Z"
+  },
+  "e49472d7e5932731d706ab032eb40f96": {
+    "id": "e49472d7e5932731d706ab032eb40f96",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "Boston Univ. Terriers",
+    "away_team": "Dartmouth Big Green",
+    "scores": [
+      {
+        "name": "Boston Univ. Terriers",
+        "score": "90"
+      },
+      {
+        "name": "Dartmouth Big Green",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-15T20:22:10Z"
+  },
+  "460c23d41c84519f5edf6c04d47cb25a": {
+    "id": "460c23d41c84519f5edf6c04d47cb25a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "completed": true,
+    "home_team": "Memphis Tigers",
+    "away_team": "Louisville Cardinals",
+    "scores": [
+      {
+        "name": "Memphis Tigers",
+        "score": "98"
+      },
+      {
+        "name": "Louisville Cardinals",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-15T20:22:10Z"
+  },
+  "6e7b60ce8a7b43c70fd1d56fe26c9a28": {
+    "id": "6e7b60ce8a7b43c70fd1d56fe26c9a28",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T18:01:29Z",
+    "completed": true,
+    "home_team": "Iowa State Cyclones",
+    "away_team": "Niagara Purple Eagles",
+    "scores": [
+      {
+        "name": "Iowa State Cyclones",
+        "score": "66"
+      },
+      {
+        "name": "Niagara Purple Eagles",
+        "score": "45"
+      }
+    ],
+    "last_update": "2026-11-15T20:22:10Z"
   }
 }
