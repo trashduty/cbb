@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-14T23:51:31.493948+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-15T00:08:37.618165+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 97,
       "losses": 199,
       "pushes": 0,
-      "pending": 49,
+      "pending": 50,
       "win_rate": 0.3277027027027027,
       "profit_units": -69.68050762414563
     },
@@ -124,7 +124,7 @@
       "wins": 34,
       "losses": 89,
       "pushes": 0,
-      "pending": 11,
+      "pending": 12,
       "win_rate": 0.2764227642276423,
       "profit_units": -66.45932658457872
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.81749373433584
     }
   ],
-  "snapshots": 3784,
+  "snapshots": 3790,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -33660,6 +33660,36 @@
       "implied_probability": 0.07692307692307693,
       "edge": 0.054524621740903056,
       "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "2cef9a9a85d69b87eaf57899",
+      "event_id": "0e83fd8486adc74733660c5f90419737",
+      "game": "North Dakota St Bison vs. CSU Bakersfield Roadrunners",
+      "home_team": "North Dakota St Bison",
+      "away_team": "CSU Bakersfield Roadrunners",
+      "commence_time": "2026-11-15T19:00:00+00:00",
+      "game_date_et": "2026-11-15",
+      "captured_at": "2026-11-15T00:08:37.618165+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "North Dakota St Bison",
+      "line": null,
+      "odds": -205.0,
+      "model_prediction": 0.672858589035912,
+      "probability": 0.672858589035912,
+      "implied_probability": 0.6721311475409836,
+      "edge": 0.0007274414949284269,
+      "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "",
