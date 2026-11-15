@@ -12077,7 +12077,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "a1b8e614479a42dfc7fc085e7cfc5434": {
     "id": "a1b8e614479a42dfc7fc085e7cfc5434",
@@ -12097,7 +12097,7 @@
         "score": "58"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "29c07e686c26cabf4f2032b342d49bee": {
     "id": "29c07e686c26cabf4f2032b342d49bee",
@@ -12117,7 +12117,7 @@
         "score": "53"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "b86b1b8191df58c5dd3bbec4dde733e5": {
     "id": "b86b1b8191df58c5dd3bbec4dde733e5",
@@ -12137,7 +12137,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "4907c399e1707ee794cd6acb25c791cc": {
     "id": "4907c399e1707ee794cd6acb25c791cc",
@@ -12157,7 +12157,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "e49472d7e5932731d706ab032eb40f96": {
     "id": "e49472d7e5932731d706ab032eb40f96",
@@ -12177,7 +12177,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "460c23d41c84519f5edf6c04d47cb25a": {
     "id": "460c23d41c84519f5edf6c04d47cb25a",
@@ -12197,7 +12197,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "6e7b60ce8a7b43c70fd1d56fe26c9a28": {
     "id": "6e7b60ce8a7b43c70fd1d56fe26c9a28",
@@ -12217,7 +12217,7 @@
         "score": "45"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "7bd8e4044302f52d0233d1a4f9b0cc19": {
     "id": "7bd8e4044302f52d0233d1a4f9b0cc19",
@@ -12237,7 +12237,7 @@
         "score": "55"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "d6c14f3934e52f439aa1020e487e61e9": {
     "id": "d6c14f3934e52f439aa1020e487e61e9",
@@ -12257,7 +12257,7 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "66df731c5f17068a2aa084c7d1683254": {
     "id": "66df731c5f17068a2aa084c7d1683254",
@@ -12277,7 +12277,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "f8912bd0c3c303a795510b502cc81dfa": {
     "id": "f8912bd0c3c303a795510b502cc81dfa",
@@ -12297,7 +12297,7 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "35b185fdcbab65a367699da415b5d32b": {
     "id": "35b185fdcbab65a367699da415b5d32b",
@@ -12317,7 +12317,7 @@
         "score": "84"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
   },
   "0e83fd8486adc74733660c5f90419737": {
     "id": "0e83fd8486adc74733660c5f90419737",
@@ -12337,6 +12337,46 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-15T21:22:20Z"
+    "last_update": "2026-11-15T21:51:44Z"
+  },
+  "53f1d7d718a5681b4061402ea95b2cec": {
+    "id": "53f1d7d718a5681b4061402ea95b2cec",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T19:03:18Z",
+    "completed": true,
+    "home_team": "Rhode Island Rams",
+    "away_team": "Princeton Tigers",
+    "scores": [
+      {
+        "name": "Rhode Island Rams",
+        "score": "79"
+      },
+      {
+        "name": "Princeton Tigers",
+        "score": "72"
+      }
+    ],
+    "last_update": "2026-11-15T21:51:44Z"
+  },
+  "3a6ab42e6e00f60dad67f3ff4cfed815": {
+    "id": "3a6ab42e6e00f60dad67f3ff4cfed815",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T19:30:00Z",
+    "completed": true,
+    "home_team": "Marquette Golden Eagles",
+    "away_team": "Missouri Tigers",
+    "scores": [
+      {
+        "name": "Missouri Tigers",
+        "score": "69"
+      },
+      {
+        "name": "Marquette Golden Eagles",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-15T21:51:44Z"
   }
 }
