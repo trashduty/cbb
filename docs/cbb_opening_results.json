@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15T00:44:33.773124+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-15T00:49:23.440111+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 98,
       "losses": 200,
       "pushes": 0,
-      "pending": 48,
+      "pending": 49,
       "win_rate": 0.3288590604026846,
       "profit_units": -69.72812667176468
     },
@@ -124,7 +124,7 @@
       "wins": 35,
       "losses": 89,
       "pushes": 0,
-      "pending": 11,
+      "pending": 12,
       "win_rate": 0.28225806451612906,
       "profit_units": -65.50694563219777
     },
@@ -159,7 +159,7 @@
       "profit_units": -6.81749373433584
     }
   ],
-  "snapshots": 3790,
+  "snapshots": 3792,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -33689,6 +33689,36 @@
       "probability": 0.672858589035912,
       "implied_probability": 0.6721311475409836,
       "edge": 0.0007274414949284269,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "86cd9e13f4599bf8d6ba6c87",
+      "event_id": "6686ea0341f1ed3c65adcf204f26af47",
+      "game": "USC Trojans vs. Arkansas-Pine Bluff Golden Lions",
+      "home_team": "USC Trojans",
+      "away_team": "Arkansas-Pine Bluff Golden Lions",
+      "commence_time": "2026-11-16T00:00:00+00:00",
+      "game_date_et": "2026-11-15",
+      "captured_at": "2026-11-15T00:49:23.440111+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "Arkansas-Pine Bluff Golden Lions",
+      "line": null,
+      "odds": 100000.0,
+      "model_prediction": 0.00245078549690114,
+      "probability": 0.00245078549690114,
+      "implied_probability": 0.000999000999000999,
+      "edge": 0.001451784497900141,
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
