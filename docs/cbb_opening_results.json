@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15T05:52:11.057043+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-15T06:05:41.256344+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 205,
       "losses": 210,
       "pushes": 0,
-      "pending": 38,
+      "pending": 39,
       "win_rate": 0.4939759036144578,
       "profit_units": -23.249645478801032
     },
@@ -24,7 +24,7 @@
       "wins": 41,
       "losses": 48,
       "pushes": 0,
-      "pending": 9,
+      "pending": 10,
       "win_rate": 0.4606741573033708,
       "profit_units": -10.933172120492237
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.265673006044524
     }
   ],
-  "snapshots": 3804,
+  "snapshots": 3810,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -33874,6 +33874,36 @@
       "spread_consensus": "",
       "total_consensus": "No",
       "total_consensus_source": "capture",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "fd2e8242a76959937aa554af",
+      "event_id": "2446b1aebafd2acd3f2d77f6a685372d",
+      "game": "Utah Utes vs. Washington Huskies",
+      "home_team": "Utah Utes",
+      "away_team": "Washington Huskies",
+      "commence_time": "2026-12-06T00:00:00+00:00",
+      "game_date_et": "2026-12-05",
+      "captured_at": "2026-11-15T06:05:41.256344+00:00",
+      "book": "Caesars",
+      "bet_type": "Spread",
+      "selection": "Washington Huskies",
+      "line": 3.0,
+      "odds": -105.0,
+      "model_prediction": 2.5,
+      "probability": 0.5168516246190507,
+      "implied_probability": 0.5121951219512195,
+      "edge": 0.0046565026678311305,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "No",
+      "total_consensus": "",
+      "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
