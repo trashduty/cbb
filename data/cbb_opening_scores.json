@@ -12058,5 +12058,25 @@
       }
     ],
     "last_update": "2026-11-15T10:53:59Z"
+  },
+  "357a70575c2cb9185f1773634d7f1624": {
+    "id": "357a70575c2cb9185f1773634d7f1624",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-15T17:00:00Z",
+    "completed": true,
+    "home_team": "Central Connecticut St Blue Devils",
+    "away_team": "Quinnipiac Bobcats",
+    "scores": [
+      {
+        "name": "Central Connecticut St Blue Devils",
+        "score": "72"
+      },
+      {
+        "name": "Quinnipiac Bobcats",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-15T19:21:48Z"
   }
 }
