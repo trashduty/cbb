@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-16T18:51:44.740238+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-16T19:04:00.390428+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 221,
       "losses": 222,
       "pushes": 0,
-      "pending": 33,
+      "pending": 34,
       "win_rate": 0.49887133182844245,
       "profit_units": -20.94182608402511
     },
@@ -24,7 +24,7 @@
       "wins": 43,
       "losses": 51,
       "pushes": 0,
-      "pending": 7,
+      "pending": 8,
       "win_rate": 0.4574468085106383,
       "profit_units": -12.190747878067995
     },
@@ -159,7 +159,7 @@
       "profit_units": -7.265673006044524
     }
   ],
-  "snapshots": 3988,
+  "snapshots": 3994,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -35672,6 +35672,36 @@
       "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "5815eace8224508f781d54d8",
+      "event_id": "7baca68d6b97b29d21efc5ccd35ee124",
+      "game": "Murray St Racers vs. Hofstra Pride",
+      "home_team": "Murray St Racers",
+      "away_team": "Hofstra Pride",
+      "commence_time": "2026-11-17T17:00:00+00:00",
+      "game_date_et": "2026-11-17",
+      "captured_at": "2026-11-16T19:04:00.390428+00:00",
+      "book": "FanDuel",
+      "bet_type": "Spread",
+      "selection": "Hofstra Pride",
+      "line": 9.5,
+      "odds": -110.0,
+      "model_prediction": 8.5,
+      "probability": 0.5320425632110974,
+      "implied_probability": 0.5238095238095238,
+      "edge": 0.008233039401573605,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "No",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
