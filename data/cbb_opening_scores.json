@@ -12758,5 +12758,25 @@
       }
     ],
     "last_update": "2026-11-16T09:19:19Z"
+  },
+  "59707f15a9e28eda5e24ec2ed98664c7": {
+    "id": "59707f15a9e28eda5e24ec2ed98664c7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-16T19:05:14Z",
+    "completed": true,
+    "home_team": "UTEP Miners",
+    "away_team": "Florida A&M Rattlers",
+    "scores": [
+      {
+        "name": "UTEP Miners",
+        "score": "79"
+      },
+      {
+        "name": "Florida A&M Rattlers",
+        "score": "46"
+      }
+    ],
+    "last_update": "2026-11-16T21:22:38Z"
   }
 }
