@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-16T20:52:13.167475+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-16T21:03:59.807244+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -64,7 +64,7 @@
       "wins": 154,
       "losses": 161,
       "pushes": 0,
-      "pending": 25,
+      "pending": 26,
       "win_rate": 0.4888888888888889,
       "profit_units": -19.87634308116881
     },
@@ -74,7 +74,7 @@
       "wins": 33,
       "losses": 44,
       "pushes": 0,
-      "pending": 5,
+      "pending": 6,
       "win_rate": 0.42857142857142855,
       "profit_units": -13.767927724449466
     },
@@ -159,7 +159,7 @@
       "profit_units": -7.265673006044524
     }
   ],
-  "snapshots": 3994,
+  "snapshots": 3998,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -35704,6 +35704,36 @@
       "spread_consensus": "No",
       "total_consensus": "",
       "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "429f3e0240038c6891e4361f",
+      "event_id": "b84cb1c5cde0ceb1ba7bba70f8db0a81",
+      "game": "Marshall Thundering Herd vs. East Tennessee St Buccaneers",
+      "home_team": "Marshall Thundering Herd",
+      "away_team": "East Tennessee St Buccaneers",
+      "commence_time": "2026-11-18T00:00:00+00:00",
+      "game_date_et": "2026-11-17",
+      "captured_at": "2026-11-16T21:03:59.807244+00:00",
+      "book": "theScore Bet",
+      "bet_type": "Total",
+      "selection": "Under",
+      "line": 146.5,
+      "odds": -105.0,
+      "model_prediction": 145.5,
+      "probability": 0.5170982144352251,
+      "implied_probability": 0.5121951219512195,
+      "edge": 0.004903092484005556,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "No",
+      "total_consensus_source": "capture",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
