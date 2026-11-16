@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-16T18:25:42.965735+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-16T18:33:38.937955+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 113,
       "losses": 228,
       "pushes": 0,
-      "pending": 26,
+      "pending": 27,
       "win_rate": 0.3313782991202346,
       "profit_units": -85.25377771053982
     },
@@ -144,7 +144,7 @@
       "wins": 30,
       "losses": 41,
       "pushes": 0,
-      "pending": 4,
+      "pending": 5,
       "win_rate": 0.4225352112676056,
       "profit_units": -8.215141376658043
     },
@@ -159,7 +159,7 @@
       "profit_units": -7.265673006044524
     }
   ],
-  "snapshots": 3982,
+  "snapshots": 3988,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -35642,6 +35642,36 @@
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "Yes",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "e9d26abd139570cda4b76bcf",
+      "event_id": "39bce9119f7631dfd8656e4e8d388192",
+      "game": "Pittsburgh Panthers vs. Villanova Wildcats",
+      "home_team": "Pittsburgh Panthers",
+      "away_team": "Villanova Wildcats",
+      "commence_time": "2026-11-18T00:00:00+00:00",
+      "game_date_et": "2026-11-17",
+      "captured_at": "2026-11-16T18:33:38.937955+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "Villanova Wildcats",
+      "line": null,
+      "odds": 100.0,
+      "model_prediction": 0.5318562390444255,
+      "probability": 0.5318562390444255,
+      "implied_probability": 0.5,
+      "edge": 0.03185623904442547,
+      "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
