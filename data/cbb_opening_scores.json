@@ -12777,7 +12777,7 @@
         "score": "46"
       }
     ],
-    "last_update": "2026-11-17T01:51:43Z"
+    "last_update": "2026-11-17T02:26:33Z"
   },
   "e0d6bcc95d3255db6ac0b3c48284edc6": {
     "id": "e0d6bcc95d3255db6ac0b3c48284edc6",
@@ -12797,7 +12797,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-17T01:51:43Z"
+    "last_update": "2026-11-17T02:26:33Z"
   },
   "310f03765b18b61b06efddde81161621": {
     "id": "310f03765b18b61b06efddde81161621",
@@ -12817,7 +12817,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-17T01:51:43Z"
+    "last_update": "2026-11-17T02:26:33Z"
   },
   "8ebaad54ff349cdb9448bc3d6587f13a": {
     "id": "8ebaad54ff349cdb9448bc3d6587f13a",
@@ -12837,6 +12837,126 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-17T01:51:43Z"
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "7822ea7db8607455907e63e54831b177": {
+    "id": "7822ea7db8607455907e63e54831b177",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:00:00Z",
+    "completed": true,
+    "home_team": "Clemson Tigers",
+    "away_team": "The Citadel Bulldogs",
+    "scores": [
+      {
+        "name": "Clemson Tigers",
+        "score": "87"
+      },
+      {
+        "name": "The Citadel Bulldogs",
+        "score": "51"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "4a23f296a8cd67712e5f1f97df7db777": {
+    "id": "4a23f296a8cd67712e5f1f97df7db777",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:00:00Z",
+    "completed": true,
+    "home_team": "Kent State Golden Flashes",
+    "away_team": "Eastern Kentucky Colonels",
+    "scores": [
+      {
+        "name": "Kent State Golden Flashes",
+        "score": "49"
+      },
+      {
+        "name": "Eastern Kentucky Colonels",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "a77c2fc5d2de369bc3134d3721347a6c": {
+    "id": "a77c2fc5d2de369bc3134d3721347a6c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:00:00Z",
+    "completed": true,
+    "home_team": "Virginia Tech Hokies",
+    "away_team": "Richmond Spiders",
+    "scores": [
+      {
+        "name": "Virginia Tech Hokies",
+        "score": "85"
+      },
+      {
+        "name": "Richmond Spiders",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "33d4f6ff93e31ed41af6ed33a1dececb": {
+    "id": "33d4f6ff93e31ed41af6ed33a1dececb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:01:25Z",
+    "completed": true,
+    "home_team": "Georgia Bulldogs",
+    "away_team": "Jacksonville Dolphins",
+    "scores": [
+      {
+        "name": "Georgia Bulldogs",
+        "score": "107"
+      },
+      {
+        "name": "Jacksonville Dolphins",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "6e8521bae38316636711f883260823c9": {
+    "id": "6e8521bae38316636711f883260823c9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:01:47Z",
+    "completed": true,
+    "home_team": "Kentucky Wildcats",
+    "away_team": "Grambling St Tigers",
+    "scores": [
+      {
+        "name": "Kentucky Wildcats",
+        "score": "88"
+      },
+      {
+        "name": "Grambling St Tigers",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
+  },
+  "338b21f638d734fbd36a5e77eb3b0bbd": {
+    "id": "338b21f638d734fbd36a5e77eb3b0bbd",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:08:23Z",
+    "completed": true,
+    "home_team": "LIU Sharks",
+    "away_team": "St. Thomas (MN) Tommies",
+    "scores": [
+      {
+        "name": "LIU Sharks",
+        "score": "70"
+      },
+      {
+        "name": "St. Thomas (MN) Tommies",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-17T02:26:33Z"
   }
 }
