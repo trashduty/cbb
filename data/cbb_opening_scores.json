@@ -13198,5 +13198,25 @@
       }
     ],
     "last_update": "2026-11-17T10:40:12Z"
+  },
+  "7baca68d6b97b29d21efc5ccd35ee124": {
+    "id": "7baca68d6b97b29d21efc5ccd35ee124",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T17:00:00Z",
+    "completed": true,
+    "home_team": "Murray St Racers",
+    "away_team": "Hofstra Pride",
+    "scores": [
+      {
+        "name": "Murray St Racers",
+        "score": "82"
+      },
+      {
+        "name": "Hofstra Pride",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-17T19:51:47Z"
   }
 }
