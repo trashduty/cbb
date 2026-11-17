@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T05:23:11.315089+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-17T05:33:46.625699+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 116,
       "losses": 237,
       "pushes": 0,
-      "pending": 46,
+      "pending": 47,
       "win_rate": 0.3286118980169972,
       "profit_units": -84.08866143147006
     },
@@ -124,7 +124,7 @@
       "wins": 39,
       "losses": 101,
       "pushes": 0,
-      "pending": 15,
+      "pending": 16,
       "win_rate": 0.2785714285714286,
       "profit_units": -72.6452925565912
     },
@@ -159,7 +159,7 @@
       "profit_units": -2.3656730060445232
     }
   ],
-  "snapshots": 4262,
+  "snapshots": 4264,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -38220,6 +38220,36 @@
       "implied_probability": 0.06666666666666667,
       "edge": 0.025421216653502277,
       "edge_tier": "1\u20132.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "92c4a0c0305c32176878cd50",
+      "event_id": "bbe54785b59f4fe1e6949ea309e9a554",
+      "game": "West Florida Argonauts vs. Green Bay Phoenix",
+      "home_team": "West Florida Argonauts",
+      "away_team": "Green Bay Phoenix",
+      "commence_time": "2026-11-18T00:00:00+00:00",
+      "game_date_et": "2026-11-17",
+      "captured_at": "2026-11-17T05:33:46.625699+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "Green Bay Phoenix",
+      "line": null,
+      "odds": -225.0,
+      "model_prediction": 0.6944963226187334,
+      "probability": 0.6944963226187334,
+      "implied_probability": 0.6923076923076923,
+      "edge": 0.0021886303110411065,
+      "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "",
