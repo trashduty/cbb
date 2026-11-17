@@ -12777,7 +12777,7 @@
         "score": "46"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "e0d6bcc95d3255db6ac0b3c48284edc6": {
     "id": "e0d6bcc95d3255db6ac0b3c48284edc6",
@@ -12797,7 +12797,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "310f03765b18b61b06efddde81161621": {
     "id": "310f03765b18b61b06efddde81161621",
@@ -12817,7 +12817,7 @@
         "score": "57"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "8ebaad54ff349cdb9448bc3d6587f13a": {
     "id": "8ebaad54ff349cdb9448bc3d6587f13a",
@@ -12837,7 +12837,7 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "7822ea7db8607455907e63e54831b177": {
     "id": "7822ea7db8607455907e63e54831b177",
@@ -12857,7 +12857,7 @@
         "score": "51"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "4a23f296a8cd67712e5f1f97df7db777": {
     "id": "4a23f296a8cd67712e5f1f97df7db777",
@@ -12877,7 +12877,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "a77c2fc5d2de369bc3134d3721347a6c": {
     "id": "a77c2fc5d2de369bc3134d3721347a6c",
@@ -12897,7 +12897,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "33d4f6ff93e31ed41af6ed33a1dececb": {
     "id": "33d4f6ff93e31ed41af6ed33a1dececb",
@@ -12917,7 +12917,7 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "6e8521bae38316636711f883260823c9": {
     "id": "6e8521bae38316636711f883260823c9",
@@ -12937,7 +12937,7 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
   },
   "338b21f638d734fbd36a5e77eb3b0bbd": {
     "id": "338b21f638d734fbd36a5e77eb3b0bbd",
@@ -12957,6 +12957,106 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-17T02:26:33Z"
+    "last_update": "2026-11-17T02:51:41Z"
+  },
+  "3ea03086daebd51dbd93ac315be259c8": {
+    "id": "3ea03086daebd51dbd93ac315be259c8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:00:00Z",
+    "completed": true,
+    "home_team": "Tulsa Golden Hurricane",
+    "away_team": "Western Kentucky Hilltoppers",
+    "scores": [
+      {
+        "name": "Tulsa Golden Hurricane",
+        "score": "67"
+      },
+      {
+        "name": "Western Kentucky Hilltoppers",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-17T02:51:41Z"
+  },
+  "9c9906480af93da224cd3dc2f4351b9d": {
+    "id": "9c9906480af93da224cd3dc2f4351b9d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T00:30:00Z",
+    "completed": true,
+    "home_team": "Drake Bulldogs",
+    "away_team": "Tarleton State Texans",
+    "scores": [
+      {
+        "name": "Drake Bulldogs",
+        "score": "79"
+      },
+      {
+        "name": "Tarleton State Texans",
+        "score": "83"
+      }
+    ],
+    "last_update": "2026-11-17T02:51:41Z"
+  },
+  "037d59d2f185430c4ee7b3ec96f4e39e": {
+    "id": "037d59d2f185430c4ee7b3ec96f4e39e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T01:00:00Z",
+    "completed": true,
+    "home_team": "Northwestern Wildcats",
+    "away_team": "Columbia Lions",
+    "scores": [
+      {
+        "name": "Northwestern Wildcats",
+        "score": "53"
+      },
+      {
+        "name": "Columbia Lions",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-17T02:51:41Z"
+  },
+  "32d3dd215b1b902bfaa2f9aa451b3c7f": {
+    "id": "32d3dd215b1b902bfaa2f9aa451b3c7f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T01:00:00Z",
+    "completed": true,
+    "home_team": "Kansas St Wildcats",
+    "away_team": "Montana Grizzlies",
+    "scores": [
+      {
+        "name": "Kansas St Wildcats",
+        "score": "86"
+      },
+      {
+        "name": "Montana Grizzlies",
+        "score": "45"
+      }
+    ],
+    "last_update": "2026-11-17T02:51:41Z"
+  },
+  "d7b58d2eb9be75440fd207564bb76381": {
+    "id": "d7b58d2eb9be75440fd207564bb76381",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T01:00:00Z",
+    "completed": true,
+    "home_team": "Minnesota Golden Gophers",
+    "away_team": "Western Illinois Leathernecks",
+    "scores": [
+      {
+        "name": "Minnesota Golden Gophers",
+        "score": "99"
+      },
+      {
+        "name": "Western Illinois Leathernecks",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-17T02:51:41Z"
   }
 }
