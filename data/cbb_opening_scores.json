@@ -12777,6 +12777,26 @@
         "score": "46"
       }
     ],
-    "last_update": "2026-11-17T00:42:31Z"
+    "last_update": "2026-11-17T00:55:24Z"
+  },
+  "e0d6bcc95d3255db6ac0b3c48284edc6": {
+    "id": "e0d6bcc95d3255db6ac0b3c48284edc6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-16T23:00:00Z",
+    "completed": true,
+    "home_team": "UMBC Retrievers",
+    "away_team": "Iona Gaels",
+    "scores": [
+      {
+        "name": "UMBC Retrievers",
+        "score": "75"
+      },
+      {
+        "name": "Iona Gaels",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-17T00:55:24Z"
   }
 }
