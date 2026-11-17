@@ -12777,7 +12777,7 @@
         "score": "46"
       }
     ],
-    "last_update": "2026-11-17T00:55:24Z"
+    "last_update": "2026-11-17T01:23:04Z"
   },
   "e0d6bcc95d3255db6ac0b3c48284edc6": {
     "id": "e0d6bcc95d3255db6ac0b3c48284edc6",
@@ -12797,6 +12797,46 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-17T00:55:24Z"
+    "last_update": "2026-11-17T01:23:04Z"
+  },
+  "310f03765b18b61b06efddde81161621": {
+    "id": "310f03765b18b61b06efddde81161621",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-16T23:00:00Z",
+    "completed": true,
+    "home_team": "Maryland Terrapins",
+    "away_team": "Alcorn St Braves",
+    "scores": [
+      {
+        "name": "Maryland Terrapins",
+        "score": "117"
+      },
+      {
+        "name": "Alcorn St Braves",
+        "score": "57"
+      }
+    ],
+    "last_update": "2026-11-17T01:23:04Z"
+  },
+  "8ebaad54ff349cdb9448bc3d6587f13a": {
+    "id": "8ebaad54ff349cdb9448bc3d6587f13a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-16T23:30:00Z",
+    "completed": true,
+    "home_team": "Ohio State Buckeyes",
+    "away_team": "Prairie View Panthers",
+    "scores": [
+      {
+        "name": "Ohio State Buckeyes",
+        "score": "86"
+      },
+      {
+        "name": "Prairie View Panthers",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-17T01:23:04Z"
   }
 }
