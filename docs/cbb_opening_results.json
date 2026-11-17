@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T00:42:45.608530+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-17T00:47:37.843956+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 113,
       "losses": 229,
       "pushes": 0,
-      "pending": 47,
+      "pending": 48,
       "win_rate": 0.3304093567251462,
       "profit_units": -86.25377771053982
     },
@@ -144,7 +144,7 @@
       "wins": 30,
       "losses": 41,
       "pushes": 0,
-      "pending": 10,
+      "pending": 11,
       "win_rate": 0.4225352112676056,
       "profit_units": -8.215141376658043
     },
@@ -159,7 +159,7 @@
       "profit_units": -7.265673006044524
     }
   ],
-  "snapshots": 4178,
+  "snapshots": 4182,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -37654,6 +37654,36 @@
       "spread_consensus": "",
       "total_consensus": "No",
       "total_consensus_source": "capture",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "8cbf4280f506c27ef853e2df",
+      "event_id": "a80c8cd90f57a1445908c3a17489fd4a",
+      "game": "Southern Miss Golden Eagles vs. UT-Arlington Mavericks",
+      "home_team": "Southern Miss Golden Eagles",
+      "away_team": "UT-Arlington Mavericks",
+      "commence_time": "2026-11-18T01:00:00+00:00",
+      "game_date_et": "2026-11-17",
+      "captured_at": "2026-11-17T00:47:37.843956+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "UT-Arlington Mavericks",
+      "line": null,
+      "odds": 154.0,
+      "model_prediction": 0.4330572245596162,
+      "probability": 0.4330572245596162,
+      "implied_probability": 0.3937007874015748,
+      "edge": 0.03935643715804138,
+      "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
