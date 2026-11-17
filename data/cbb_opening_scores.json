@@ -13217,6 +13217,26 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-17T21:22:39Z"
+    "last_update": "2026-11-17T21:51:33Z"
+  },
+  "7f148211ccbd4dd6890aae95ab35cb92": {
+    "id": "7f148211ccbd4dd6890aae95ab35cb92",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T19:00:00Z",
+    "completed": true,
+    "home_team": "Houston Cougars",
+    "away_team": "Rutgers Scarlet Knights",
+    "scores": [
+      {
+        "name": "Houston Cougars",
+        "score": "85"
+      },
+      {
+        "name": "Rutgers Scarlet Knights",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-17T21:51:33Z"
   }
 }
