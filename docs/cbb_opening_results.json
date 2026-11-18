@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T23:51:50.709798+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-18T00:08:18.711703+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 116,
       "losses": 237,
       "pushes": 0,
-      "pending": 48,
+      "pending": 49,
       "win_rate": 0.3286118980169972,
       "profit_units": -84.08866143147006
     },
@@ -124,7 +124,7 @@
       "wins": 39,
       "losses": 101,
       "pushes": 0,
-      "pending": 17,
+      "pending": 18,
       "win_rate": 0.2785714285714286,
       "profit_units": -72.6452925565912
     },
@@ -159,7 +159,7 @@
       "profit_units": -2.3656730060445232
     }
   ],
-  "snapshots": 4382,
+  "snapshots": 4386,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -39632,6 +39632,36 @@
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "No",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "3062015b9c99f89c69e84ca3",
+      "event_id": "a380dacabd02f4dfc6c8387131a7ff81",
+      "game": "Eastern Michigan Eagles vs. Detroit Mercy Titans",
+      "home_team": "Eastern Michigan Eagles",
+      "away_team": "Detroit Mercy Titans",
+      "commence_time": "2026-11-18T23:30:00+00:00",
+      "game_date_et": "2026-11-18",
+      "captured_at": "2026-11-18T00:08:18.711703+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "Detroit Mercy Titans",
+      "line": null,
+      "odds": 500.0,
+      "model_prediction": 0.16845457951755882,
+      "probability": 0.16845457951755882,
+      "implied_probability": 0.16666666666666666,
+      "edge": 0.001787912850892165,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
