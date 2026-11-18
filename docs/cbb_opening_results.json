@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18T07:33:09.471320+00:00",
-  "score_status": "Scores not requested in this run",
+  "updated_at": "2026-11-18T07:51:55.008743+00:00",
+  "score_status": "Score update successful",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -12,21 +12,21 @@
       "bet_type": "Spread",
       "edge_tier": "All",
       "wins": 250,
-      "losses": 244,
+      "losses": 245,
       "pushes": 0,
-      "pending": 58,
-      "win_rate": 0.5060728744939271,
-      "profit_units": -16.38785131010147
+      "pending": 57,
+      "win_rate": 0.5050505050505051,
+      "profit_units": -17.387851310101468
     },
     {
       "bet_type": "Spread",
       "edge_tier": "0\u20130.9%",
       "wins": 45,
-      "losses": 53,
+      "losses": 54,
       "pushes": 0,
-      "pending": 13,
-      "win_rate": 0.45918367346938777,
-      "profit_units": -12.372566059886179
+      "pending": 12,
+      "win_rate": 0.45454545454545453,
+      "profit_units": -13.372566059886179
     },
     {
       "bet_type": "Spread",
@@ -35645,11 +35645,11 @@
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 70.0,
+      "away_score": 76.0,
+      "graded_at": "2026-11-18T07:51:55.008743+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "e9d26abd139570cda4b76bcf",
