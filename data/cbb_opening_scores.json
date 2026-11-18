@@ -13217,7 +13217,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
   },
   "7f148211ccbd4dd6890aae95ab35cb92": {
     "id": "7f148211ccbd4dd6890aae95ab35cb92",
@@ -13237,7 +13237,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
   },
   "150dfe147806ddeef1e5e91d62bbc6a4": {
     "id": "150dfe147806ddeef1e5e91d62bbc6a4",
@@ -13257,7 +13257,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
   },
   "cc8bda41e5ca0051fa27efd930cd1ba2": {
     "id": "cc8bda41e5ca0051fa27efd930cd1ba2",
@@ -13277,7 +13277,7 @@
         "score": "51"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
   },
   "ffb5a6ab57400f7a34aa9891b5c1ca9f": {
     "id": "ffb5a6ab57400f7a34aa9891b5c1ca9f",
@@ -13297,7 +13297,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
   },
   "350bca9508ce4bee01779286b2a119c4": {
     "id": "350bca9508ce4bee01779286b2a119c4",
@@ -13317,6 +13317,26 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-18T01:22:50Z"
+    "last_update": "2026-11-18T01:51:12Z"
+  },
+  "60b029abf5f77ce43eeef93342df5ccc": {
+    "id": "60b029abf5f77ce43eeef93342df5ccc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T23:30:00Z",
+    "completed": true,
+    "home_team": "Purdue Boilermakers",
+    "away_team": "Lipscomb Bisons",
+    "scores": [
+      {
+        "name": "Purdue Boilermakers",
+        "score": "95"
+      },
+      {
+        "name": "Lipscomb Bisons",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-18T01:51:12Z"
   }
 }
