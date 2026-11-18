@@ -14298,5 +14298,25 @@
       }
     ],
     "last_update": "2026-11-18T16:55:00Z"
+  },
+  "b9ceae88b150b85cac57b2c1a4f3d29c": {
+    "id": "b9ceae88b150b85cac57b2c1a4f3d29c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T17:01:43Z",
+    "completed": true,
+    "home_team": "Baylor Bears",
+    "away_team": "Jackson St Tigers",
+    "scores": [
+      {
+        "name": "Baylor Bears",
+        "score": "104"
+      },
+      {
+        "name": "Jackson St Tigers",
+        "score": "55"
+      }
+    ],
+    "last_update": "2026-11-18T19:21:39Z"
   }
 }
