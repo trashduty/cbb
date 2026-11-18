@@ -13217,7 +13217,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-17T23:51:50Z"
+    "last_update": "2026-11-18T00:43:12Z"
   },
   "7f148211ccbd4dd6890aae95ab35cb92": {
     "id": "7f148211ccbd4dd6890aae95ab35cb92",
@@ -13237,6 +13237,26 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-17T23:51:50Z"
+    "last_update": "2026-11-18T00:43:12Z"
+  },
+  "150dfe147806ddeef1e5e91d62bbc6a4": {
+    "id": "150dfe147806ddeef1e5e91d62bbc6a4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-17T21:50:13Z",
+    "completed": true,
+    "home_team": "Florida Gators",
+    "away_team": "Notre Dame Fighting Irish",
+    "scores": [
+      {
+        "name": "Florida Gators",
+        "score": "86"
+      },
+      {
+        "name": "Notre Dame Fighting Irish",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-18T00:43:12Z"
   }
 }
