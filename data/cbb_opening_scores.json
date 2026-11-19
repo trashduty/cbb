@@ -14317,7 +14317,7 @@
         "score": "55"
       }
     ],
-    "last_update": "2026-11-19T01:22:13Z"
+    "last_update": "2026-11-19T01:51:48Z"
   },
   "5a908ead2499ff9ff006def5827a69bb": {
     "id": "5a908ead2499ff9ff006def5827a69bb",
@@ -14337,7 +14337,7 @@
         "score": "100"
       }
     ],
-    "last_update": "2026-11-19T01:22:13Z"
+    "last_update": "2026-11-19T01:51:48Z"
   },
   "6f7d62819eb67c6156b4b4bb8d6eec35": {
     "id": "6f7d62819eb67c6156b4b4bb8d6eec35",
@@ -14357,6 +14357,106 @@
         "score": "86"
       }
     ],
-    "last_update": "2026-11-19T01:22:13Z"
+    "last_update": "2026-11-19T01:51:48Z"
+  },
+  "09148a74a9c2472e622e8d8f70578b20": {
+    "id": "09148a74a9c2472e622e8d8f70578b20",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T23:31:28Z",
+    "completed": true,
+    "home_team": "Penn State Nittany Lions",
+    "away_team": "IUPUI Jaguars",
+    "scores": [
+      {
+        "name": "Penn State Nittany Lions",
+        "score": "81"
+      },
+      {
+        "name": "IUPUI Jaguars",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-19T01:51:48Z"
+  },
+  "a380dacabd02f4dfc6c8387131a7ff81": {
+    "id": "a380dacabd02f4dfc6c8387131a7ff81",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T23:32:20Z",
+    "completed": true,
+    "home_team": "Eastern Michigan Eagles",
+    "away_team": "Detroit Mercy Titans",
+    "scores": [
+      {
+        "name": "Eastern Michigan Eagles",
+        "score": "99"
+      },
+      {
+        "name": "Detroit Mercy Titans",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-19T01:51:48Z"
+  },
+  "6bb27db4d687cfe912b43ff3fab4d67a": {
+    "id": "6bb27db4d687cfe912b43ff3fab4d67a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T23:32:36Z",
+    "completed": true,
+    "home_team": "Winthrop Eagles",
+    "away_team": "Chattanooga Mocs",
+    "scores": [
+      {
+        "name": "Winthrop Eagles",
+        "score": "79"
+      },
+      {
+        "name": "Chattanooga Mocs",
+        "score": "90"
+      }
+    ],
+    "last_update": "2026-11-19T01:51:48Z"
+  },
+  "1955d8fa175573a689d24209bcb4b6c0": {
+    "id": "1955d8fa175573a689d24209bcb4b6c0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T23:32:46Z",
+    "completed": true,
+    "home_team": "UNC Asheville Bulldogs",
+    "away_team": "Tennessee Tech Golden Eagles",
+    "scores": [
+      {
+        "name": "UNC Asheville Bulldogs",
+        "score": "77"
+      },
+      {
+        "name": "Tennessee Tech Golden Eagles",
+        "score": "98"
+      }
+    ],
+    "last_update": "2026-11-19T01:51:48Z"
+  },
+  "3a71df0a77c467cf8416217300fecca5": {
+    "id": "3a71df0a77c467cf8416217300fecca5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T23:33:21Z",
+    "completed": true,
+    "home_team": "Georgetown Hoyas",
+    "away_team": "Navy Midshipmen",
+    "scores": [
+      {
+        "name": "Georgetown Hoyas",
+        "score": "84"
+      },
+      {
+        "name": "Navy Midshipmen",
+        "score": "53"
+      }
+    ],
+    "last_update": "2026-11-19T01:51:48Z"
   }
 }
