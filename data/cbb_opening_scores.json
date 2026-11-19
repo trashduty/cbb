@@ -14317,7 +14317,7 @@
         "score": "55"
       }
     ],
-    "last_update": "2026-11-18T23:51:33Z"
+    "last_update": "2026-11-19T00:42:39Z"
   },
   "5a908ead2499ff9ff006def5827a69bb": {
     "id": "5a908ead2499ff9ff006def5827a69bb",
@@ -14337,6 +14337,26 @@
         "score": "100"
       }
     ],
-    "last_update": "2026-11-18T23:51:33Z"
+    "last_update": "2026-11-19T00:42:39Z"
+  },
+  "6f7d62819eb67c6156b4b4bb8d6eec35": {
+    "id": "6f7d62819eb67c6156b4b4bb8d6eec35",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-18T21:50:54Z",
+    "completed": true,
+    "home_team": "Florida Gators",
+    "away_team": "Houston Cougars",
+    "scores": [
+      {
+        "name": "Florida Gators",
+        "score": "76"
+      },
+      {
+        "name": "Houston Cougars",
+        "score": "86"
+      }
+    ],
+    "last_update": "2026-11-19T00:42:39Z"
   }
 }
