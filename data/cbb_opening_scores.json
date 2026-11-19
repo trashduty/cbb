@@ -15518,5 +15518,25 @@
       }
     ],
     "last_update": "2026-11-19T11:07:38Z"
+  },
+  "5246df4438e82883d2aa2437d1f9857c": {
+    "id": "5246df4438e82883d2aa2437d1f9857c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-19T19:32:00Z",
+    "completed": true,
+    "home_team": "Florida Gators",
+    "away_team": "West Virginia Mountaineers",
+    "scores": [
+      {
+        "name": "West Virginia Mountaineers",
+        "score": "72"
+      },
+      {
+        "name": "Florida Gators",
+        "score": "85"
+      }
+    ],
+    "last_update": "2026-11-19T21:51:41Z"
   }
 }
