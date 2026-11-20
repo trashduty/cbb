@@ -15537,7 +15537,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-20T01:22:07Z"
+    "last_update": "2026-11-20T01:51:48Z"
   },
   "57ce51731aa0e3325c489d30a2b2e7ed": {
     "id": "57ce51731aa0e3325c489d30a2b2e7ed",
@@ -15557,6 +15557,46 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-20T01:22:07Z"
+    "last_update": "2026-11-20T01:51:48Z"
+  },
+  "58f585d704a7d4680f9dd7e877eddaaf": {
+    "id": "58f585d704a7d4680f9dd7e877eddaaf",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-19T23:00:32Z",
+    "completed": true,
+    "home_team": "NC State Wolfpack",
+    "away_team": "Murray St Racers",
+    "scores": [
+      {
+        "name": "NC State Wolfpack",
+        "score": "93"
+      },
+      {
+        "name": "Murray St Racers",
+        "score": "83"
+      }
+    ],
+    "last_update": "2026-11-20T01:51:48Z"
+  },
+  "d6ff4d964a24be574d7438aa33061cd7": {
+    "id": "d6ff4d964a24be574d7438aa33061cd7",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:05:00Z",
+    "completed": true,
+    "home_team": "Ohio State Buckeyes",
+    "away_team": "UMBC Retrievers",
+    "scores": [
+      {
+        "name": "Ohio State Buckeyes",
+        "score": "101"
+      },
+      {
+        "name": "UMBC Retrievers",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-20T01:51:48Z"
   }
 }
