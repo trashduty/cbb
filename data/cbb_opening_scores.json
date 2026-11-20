@@ -15537,6 +15537,26 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-19T23:51:49Z"
+    "last_update": "2026-11-20T00:40:32Z"
+  },
+  "57ce51731aa0e3325c489d30a2b2e7ed": {
+    "id": "57ce51731aa0e3325c489d30a2b2e7ed",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-19T22:05:00Z",
+    "completed": true,
+    "home_team": "Notre Dame Fighting Irish",
+    "away_team": "Auburn Tigers",
+    "scores": [
+      {
+        "name": "Auburn Tigers",
+        "score": "73"
+      },
+      {
+        "name": "Notre Dame Fighting Irish",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-20T00:40:32Z"
   }
 }
