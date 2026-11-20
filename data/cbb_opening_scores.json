@@ -16117,6 +16117,46 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-20T19:23:33Z"
+    "last_update": "2026-11-20T19:51:37Z"
+  },
+  "2c61b23dd09630b92c98ca00c4e8dad1": {
+    "id": "2c61b23dd09630b92c98ca00c4e8dad1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T17:32:02Z",
+    "completed": true,
+    "home_team": "Minnesota Golden Gophers",
+    "away_team": "Oklahoma St Cowboys",
+    "scores": [
+      {
+        "name": "Minnesota Golden Gophers",
+        "score": "85"
+      },
+      {
+        "name": "Oklahoma St Cowboys",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-20T19:51:37Z"
+  },
+  "79e05f83b74f5df0385955f0d3f3cdcb": {
+    "id": "79e05f83b74f5df0385955f0d3f3cdcb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T17:33:17Z",
+    "completed": true,
+    "home_team": "Middle Tennessee Blue Raiders",
+    "away_team": "Temple Owls",
+    "scores": [
+      {
+        "name": "Middle Tennessee Blue Raiders",
+        "score": "76"
+      },
+      {
+        "name": "Temple Owls",
+        "score": "85"
+      }
+    ],
+    "last_update": "2026-11-20T19:51:37Z"
   }
 }
