@@ -15537,7 +15537,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-20T01:51:48Z"
+    "last_update": "2026-11-20T02:25:54Z"
   },
   "57ce51731aa0e3325c489d30a2b2e7ed": {
     "id": "57ce51731aa0e3325c489d30a2b2e7ed",
@@ -15557,7 +15557,7 @@
         "score": "78"
       }
     ],
-    "last_update": "2026-11-20T01:51:48Z"
+    "last_update": "2026-11-20T02:25:54Z"
   },
   "58f585d704a7d4680f9dd7e877eddaaf": {
     "id": "58f585d704a7d4680f9dd7e877eddaaf",
@@ -15577,7 +15577,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-20T01:51:48Z"
+    "last_update": "2026-11-20T02:25:54Z"
   },
   "d6ff4d964a24be574d7438aa33061cd7": {
     "id": "d6ff4d964a24be574d7438aa33061cd7",
@@ -15597,6 +15597,126 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-20T01:51:48Z"
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "7c168df70997b32224c52c8ab031d704": {
+    "id": "7c168df70997b32224c52c8ab031d704",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:00:00Z",
+    "completed": true,
+    "home_team": "St. Bonaventure Bonnies",
+    "away_team": "Buffalo Bulls",
+    "scores": [
+      {
+        "name": "St. Bonaventure Bonnies",
+        "score": "78"
+      },
+      {
+        "name": "Buffalo Bulls",
+        "score": "69"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "bd1799e8815981f90f74e705e6660de8": {
+    "id": "bd1799e8815981f90f74e705e6660de8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:00:00Z",
+    "completed": true,
+    "home_team": "High Point Panthers",
+    "away_team": "Montana St Bobcats",
+    "scores": [
+      {
+        "name": "High Point Panthers",
+        "score": "85"
+      },
+      {
+        "name": "Montana St Bobcats",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "daeb1516248941803c043ccbd01dd18c": {
+    "id": "daeb1516248941803c043ccbd01dd18c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:02:11Z",
+    "completed": true,
+    "home_team": "Butler Bulldogs",
+    "away_team": "Northeastern Huskies",
+    "scores": [
+      {
+        "name": "Butler Bulldogs",
+        "score": "84"
+      },
+      {
+        "name": "Northeastern Huskies",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "12dc8b35d66981d6ff559ed3761c6fed": {
+    "id": "12dc8b35d66981d6ff559ed3761c6fed",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:02:30Z",
+    "completed": true,
+    "home_team": "Quinnipiac Bobcats",
+    "away_team": "Maine Black Bears",
+    "scores": [
+      {
+        "name": "Quinnipiac Bobcats",
+        "score": "67"
+      },
+      {
+        "name": "Maine Black Bears",
+        "score": "69"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "1a7893819f5bab2287cbc72dc8226d7e": {
+    "id": "1a7893819f5bab2287cbc72dc8226d7e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:02:30Z",
+    "completed": true,
+    "home_team": "Toledo Rockets",
+    "away_team": "Robert Morris Colonials",
+    "scores": [
+      {
+        "name": "Toledo Rockets",
+        "score": "83"
+      },
+      {
+        "name": "Robert Morris Colonials",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
+  },
+  "94d6da045bf64876ebfa87d69df70fb9": {
+    "id": "94d6da045bf64876ebfa87d69df70fb9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T00:03:01Z",
+    "completed": true,
+    "home_team": "Jacksonville Dolphins",
+    "away_team": "Arkansas-Little Rock Trojans",
+    "scores": [
+      {
+        "name": "Jacksonville Dolphins",
+        "score": "72"
+      },
+      {
+        "name": "Arkansas-Little Rock Trojans",
+        "score": "78"
+      }
+    ],
+    "last_update": "2026-11-20T02:25:54Z"
   }
 }
