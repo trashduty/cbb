@@ -16117,7 +16117,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
   },
   "2c61b23dd09630b92c98ca00c4e8dad1": {
     "id": "2c61b23dd09630b92c98ca00c4e8dad1",
@@ -16137,7 +16137,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
   },
   "79e05f83b74f5df0385955f0d3f3cdcb": {
     "id": "79e05f83b74f5df0385955f0d3f3cdcb",
@@ -16157,7 +16157,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
   },
   "d6250787bbbfa6483fa5032b6f00a3ac": {
     "id": "d6250787bbbfa6483fa5032b6f00a3ac",
@@ -16177,7 +16177,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
   },
   "b2f8a6556938a584b2d3ce16aad1aa8c": {
     "id": "b2f8a6556938a584b2d3ce16aad1aa8c",
@@ -16197,7 +16197,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
   },
   "8f88d57c43c67df9c1beb816e0c11d5c": {
     "id": "8f88d57c43c67df9c1beb816e0c11d5c",
@@ -16217,6 +16217,26 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-20T22:22:22Z"
+    "last_update": "2026-11-20T22:51:51Z"
+  },
+  "c42a6f010c505da91cae91ba184692fa": {
+    "id": "c42a6f010c505da91cae91ba184692fa",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T20:10:00Z",
+    "completed": true,
+    "home_team": "Stephen F. Austin Lumberjacks",
+    "away_team": "Indiana St Sycamores",
+    "scores": [
+      {
+        "name": "Stephen F. Austin Lumberjacks",
+        "score": "86"
+      },
+      {
+        "name": "Indiana St Sycamores",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-20T22:51:51Z"
   }
 }
