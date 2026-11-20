@@ -16117,7 +16117,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-20T21:51:32Z"
+    "last_update": "2026-11-20T22:22:22Z"
   },
   "2c61b23dd09630b92c98ca00c4e8dad1": {
     "id": "2c61b23dd09630b92c98ca00c4e8dad1",
@@ -16137,7 +16137,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-20T21:51:32Z"
+    "last_update": "2026-11-20T22:22:22Z"
   },
   "79e05f83b74f5df0385955f0d3f3cdcb": {
     "id": "79e05f83b74f5df0385955f0d3f3cdcb",
@@ -16157,7 +16157,7 @@
         "score": "85"
       }
     ],
-    "last_update": "2026-11-20T21:51:32Z"
+    "last_update": "2026-11-20T22:22:22Z"
   },
   "d6250787bbbfa6483fa5032b6f00a3ac": {
     "id": "d6250787bbbfa6483fa5032b6f00a3ac",
@@ -16177,6 +16177,46 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-20T21:51:32Z"
+    "last_update": "2026-11-20T22:22:22Z"
+  },
+  "b2f8a6556938a584b2d3ce16aad1aa8c": {
+    "id": "b2f8a6556938a584b2d3ce16aad1aa8c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T20:00:00Z",
+    "completed": true,
+    "home_team": "Albany Great Danes",
+    "away_team": "Western Illinois Leathernecks",
+    "scores": [
+      {
+        "name": "Western Illinois Leathernecks",
+        "score": "60"
+      },
+      {
+        "name": "Albany Great Danes",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-20T22:22:22Z"
+  },
+  "8f88d57c43c67df9c1beb816e0c11d5c": {
+    "id": "8f88d57c43c67df9c1beb816e0c11d5c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T20:06:00Z",
+    "completed": true,
+    "home_team": "Northwestern Wildcats",
+    "away_team": "Virginia Tech Hokies",
+    "scores": [
+      {
+        "name": "Virginia Tech Hokies",
+        "score": "87"
+      },
+      {
+        "name": "Northwestern Wildcats",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-20T22:22:22Z"
   }
 }
