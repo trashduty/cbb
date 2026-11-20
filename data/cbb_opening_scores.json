@@ -16098,5 +16098,25 @@
       }
     ],
     "last_update": "2026-11-20T12:05:32Z"
+  },
+  "d6615873be75fcb42a72a8f14c93dd53": {
+    "id": "d6615873be75fcb42a72a8f14c93dd53",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-20T17:00:00Z",
+    "completed": true,
+    "home_team": "Florida St Seminoles",
+    "away_team": "Green Bay Phoenix",
+    "scores": [
+      {
+        "name": "Florida St Seminoles",
+        "score": "87"
+      },
+      {
+        "name": "Green Bay Phoenix",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-20T19:23:33Z"
   }
 }
