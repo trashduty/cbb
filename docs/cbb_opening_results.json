@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T15:51:37.065920+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-20T16:05:02.901230+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 146,
       "losses": 301,
       "pushes": 0,
-      "pending": 46,
+      "pending": 47,
       "win_rate": 0.32662192393736017,
       "profit_units": -111.59901661552425
     },
@@ -144,7 +144,7 @@
       "wins": 40,
       "losses": 52,
       "pushes": 0,
-      "pending": 12,
+      "pending": 13,
       "win_rate": 0.43478260869565216,
       "profit_units": -1.0821879421912897
     },
@@ -159,7 +159,7 @@
       "profit_units": -4.4961077886532195
     }
   ],
-  "snapshots": 5086,
+  "snapshots": 5098,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -46320,6 +46320,36 @@
       "implied_probability": 0.21739130434782608,
       "edge": 0.01652755295098099,
       "edge_tier": "1\u20132.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "a0e66c96be2177394f0ddf3d",
+      "event_id": "e1a630421d7f278a4da6480a7d1c788f",
+      "game": "Seton Hall Pirates vs. NC State Wolfpack",
+      "home_team": "Seton Hall Pirates",
+      "away_team": "NC State Wolfpack",
+      "commence_time": "2026-11-21T02:30:00+00:00",
+      "game_date_et": "2026-11-20",
+      "captured_at": "2026-11-20T16:05:02.901230+00:00",
+      "book": "FanDuel",
+      "bet_type": "Moneyline",
+      "selection": "NC State Wolfpack",
+      "line": null,
+      "odds": -138.0,
+      "model_prediction": 0.6321957888004279,
+      "probability": 0.6321957888004279,
+      "implied_probability": 0.5798319327731093,
+      "edge": 0.052363856027318634,
+      "edge_tier": "3\u20135.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "",
