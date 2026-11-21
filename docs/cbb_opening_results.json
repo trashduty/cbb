@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21T20:51:39.234461+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-21T21:03:55.544511+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 300,
       "losses": 298,
       "pushes": 1,
-      "pending": 45,
+      "pending": 46,
       "win_rate": 0.5016722408026756,
       "profit_units": -24.686958875833053
     },
@@ -44,7 +44,7 @@
       "wins": 66,
       "losses": 75,
       "pushes": 0,
-      "pending": 11,
+      "pending": 12,
       "win_rate": 0.46808510638297873,
       "profit_units": -14.621310013469285
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.4961077886532195
     }
   ],
-  "snapshots": 5398,
+  "snapshots": 5404,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -49112,6 +49112,36 @@
       "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "spread_consensus": "No",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "812f06081cdbfc9a733725b1",
+      "event_id": "9db5c4284531a6c45d11d71c9debdf30",
+      "game": "Nebraska Cornhuskers vs. Butler Bulldogs",
+      "home_team": "Nebraska Cornhuskers",
+      "away_team": "Butler Bulldogs",
+      "commence_time": "2026-11-22T17:00:00+00:00",
+      "game_date_et": "2026-11-22",
+      "captured_at": "2026-11-21T21:03:55.544511+00:00",
+      "book": "Caesars",
+      "bet_type": "Spread",
+      "selection": "Nebraska Cornhuskers",
+      "line": -11.5,
+      "odds": -110.0,
+      "model_prediction": -13.5,
+      "probability": 0.5638787496655561,
+      "implied_probability": 0.5238095238095238,
+      "edge": 0.04006922585603223,
+      "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "Yes",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
