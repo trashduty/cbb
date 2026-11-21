@@ -17137,7 +17137,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "b346f6555c1055ecaf0494e0a23d08dc": {
     "id": "b346f6555c1055ecaf0494e0a23d08dc",
@@ -17157,7 +17157,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "2c2ac18a26394f55d2739cdbd06ae05c": {
     "id": "2c2ac18a26394f55d2739cdbd06ae05c",
@@ -17177,7 +17177,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "78595a04d81f88f96e1045a0c36edf26": {
     "id": "78595a04d81f88f96e1045a0c36edf26",
@@ -17197,7 +17197,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "23caa88d308de07ac04fa745540ab35f": {
     "id": "23caa88d308de07ac04fa745540ab35f",
@@ -17217,7 +17217,7 @@
         "score": "47"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "32314571b0ef6ac30a06778a1d5c1cc1": {
     "id": "32314571b0ef6ac30a06778a1d5c1cc1",
@@ -17237,7 +17237,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "b3fab0afee75218dc01cdc6679c9ad17": {
     "id": "b3fab0afee75218dc01cdc6679c9ad17",
@@ -17257,7 +17257,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
   },
   "46f732d3eef66ef6e78bb2a0f31c1ebb": {
     "id": "46f732d3eef66ef6e78bb2a0f31c1ebb",
@@ -17277,6 +17277,46 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-21T20:22:33Z"
+    "last_update": "2026-11-21T20:51:34Z"
+  },
+  "fd01d6bd019da1ef030bd2214291558c": {
+    "id": "fd01d6bd019da1ef030bd2214291558c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T18:30:00Z",
+    "completed": true,
+    "home_team": "Western Illinois Leathernecks",
+    "away_team": "Mercyhurst Lakers",
+    "scores": [
+      {
+        "name": "Mercyhurst Lakers",
+        "score": "68"
+      },
+      {
+        "name": "Western Illinois Leathernecks",
+        "score": "65"
+      }
+    ],
+    "last_update": "2026-11-21T20:51:34Z"
+  },
+  "6f123d463b01dadf8743c5323d3b2200": {
+    "id": "6f123d463b01dadf8743c5323d3b2200",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:04:32Z",
+    "completed": true,
+    "home_team": "Morgan St Bears",
+    "away_team": "Cornell Big Red",
+    "scores": [
+      {
+        "name": "Morgan St Bears",
+        "score": "63"
+      },
+      {
+        "name": "Cornell Big Red",
+        "score": "84"
+      }
+    ],
+    "last_update": "2026-11-21T20:51:34Z"
   }
 }
