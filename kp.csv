@@ -9863,8 +9863,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-21,Pacific,Bradley,home,80.0,69,60
 2026-11-21,Mercyhurst,Western Illinois,away,71.0,71,65
 2026-11-21,Western Illinois,Mercyhurst,home,29.0,65,71
-2026-11-21,USC Upstate,UNC Greensboro,away,22.0,69,78
-2026-11-21,UNC Greensboro,USC Upstate,home,78.0,78,69
+2026-11-21,UNC Greensboro,USC Upstate,away,78.0,78,69
+2026-11-21,USC Upstate,UNC Greensboro,home,22.0,69,78
 2026-11-21,Northeastern,Stonehill,away,80.0,81,71
 2026-11-21,Stonehill,Northeastern,home,20.0,71,81
 2026-11-21,UNC Wilmington,Norfolk St.,away,85.0,83,71
@@ -9889,8 +9889,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-22,Oklahoma St.,Virginia Tech,home,44.0,81,82
 2026-11-22,Western Kentucky,George Washington,away,39.0,73,76
 2026-11-22,George Washington,Western Kentucky,home,61.0,76,73
-2026-11-22,McNeese,Texas St.,away,33.0,69,75
-2026-11-22,Texas St.,McNeese,home,67.0,75,69
+2026-11-22,McNeese,Texas St.,away,33.0,70,75
+2026-11-22,Texas St.,McNeese,home,67.0,75,70
 2026-11-22,Miami OH,Illinois Chicago,away,51.0,76,75
 2026-11-22,Illinois Chicago,Miami OH,home,49.0,75,76
 2026-11-22,Seattle,UC San Diego,away,42.0,74,76
@@ -9905,8 +9905,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-22,Nebraska,Butler,home,88.0,84,70
 2026-11-22,Liberty,Richmond,away,45.0,72,74
 2026-11-22,Richmond,Liberty,home,55.0,74,72
-2026-11-22,San Jose St.,Loyola Chicago,away,40.0,75,77
-2026-11-22,Loyola Chicago,San Jose St.,home,60.0,77,75
+2026-11-22,San Jose St.,Loyola Chicago,away,40.0,75,78
+2026-11-22,Loyola Chicago,San Jose St.,home,60.0,78,75
 2026-11-22,Fordham,San Diego,away,66.0,76,72
 2026-11-22,San Diego,Fordham,home,34.0,72,76
 2026-11-22,Loyola Marymount,UC Irvine,away,34.0,70,75
@@ -9937,12 +9937,12 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-22,Southern Miss,Valparaiso,home,24.0,70,78
 2026-11-22,Mercyhurst,Albany,away,60.0,68,65
 2026-11-22,Albany,Mercyhurst,home,40.0,65,68
-2026-11-22,Western Illinois,Canisius,away,33.0,69,74
-2026-11-22,Canisius,Western Illinois,home,67.0,74,69
-2026-11-22,UNC Asheville,Samford,away,25.0,74,81
-2026-11-22,Samford,UNC Asheville,home,75.0,81,74
-2026-11-22,West Florida,South Alabama,away,25.0,68,76
-2026-11-22,South Alabama,West Florida,home,75.0,76,68
+2026-11-22,Western Illinois,Canisius,away,33.0,69,75
+2026-11-22,Canisius,Western Illinois,home,67.0,75,69
+2026-11-22,UNC Asheville,Samford,away,26.0,74,81
+2026-11-22,Samford,UNC Asheville,home,74.0,81,74
+2026-11-22,West Florida,South Alabama,away,25.0,69,76
+2026-11-22,South Alabama,West Florida,home,75.0,76,69
 2026-11-22,Maryland Eastern Shore,IU Indy,away,20.0,67,76
 2026-11-22,IU Indy,Maryland Eastern Shore,home,80.0,76,67
 2026-11-22,Portland,Cal Baptist,away,83.0,79,68
@@ -9951,14 +9951,14 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-22,Memphis,Evansville,home,96.0,89,69
 2026-11-22,Delaware,UCLA,away,2.0,60,83
 2026-11-22,UCLA,Delaware,home,98.0,83,60
-2026-11-22,UMass Lowell,Cincinnati,away,1.0,59,86
-2026-11-22,Cincinnati,UMass Lowell,home,99.0,86,59
-2026-11-22,Louisiana,USC,away,1.0,60,86
-2026-11-22,USC,Louisiana,home,99.0,86,60
+2026-11-22,UMass Lowell,Cincinnati,away,1.0,60,86
+2026-11-22,Cincinnati,UMass Lowell,home,99.0,86,60
+2026-11-22,Louisiana,USC,away,1.0,60,87
+2026-11-22,USC,Louisiana,home,99.0,87,60
 2026-11-22,Southern Indiana,Texas,away,0.20000000000000284,57,89
 2026-11-22,Texas,Southern Indiana,home,99.8,89,57
-2026-11-22,NJIT,Boston College,away,2.0,57,79
-2026-11-22,Boston College,NJIT,home,98.0,79,57
+2026-11-22,NJIT,Boston College,away,3.0,57,79
+2026-11-22,Boston College,NJIT,home,97.0,79,57
 2026-11-22,Chicago St.,Marquette,away,1.0,55,82
 2026-11-22,Marquette,Chicago St.,home,99.0,82,55
 2026-11-23,VCU,Providence,away,50.0,73,74
@@ -9971,8 +9971,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-23,Oregon St.,Tulsa,home,67.0,81,76
 2026-11-23,Illinois St.,Santa Clara,away,33.0,75,80
 2026-11-23,Santa Clara,Illinois St.,home,67.0,80,75
-2026-11-23,Akron,Wright St.,away,38.0,70,74
-2026-11-23,Wright St.,Akron,home,62.0,74,70
+2026-11-23,Akron,Wright St.,away,38.0,71,74
+2026-11-23,Wright St.,Akron,home,62.0,74,71
 2026-11-23,Yale,Belmont,away,46.0,73,74
 2026-11-23,Belmont,Yale,home,54.0,74,73
 2026-11-23,St. Bonaventure,Appalachian St.,away,58.0,69,66
@@ -9985,8 +9985,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-23,Davidson,Northern Iowa,home,66.0,76,71
 2026-11-23,Tulane,Georgia St.,away,53.0,77,76
 2026-11-23,Georgia St.,Tulane,home,47.0,76,77
-2026-11-23,Nevada,San Francisco,away,78.0,75,67
-2026-11-23,San Francisco,Nevada,home,22.0,67,75
+2026-11-23,Nevada,San Francisco,away,78.0,76,67
+2026-11-23,San Francisco,Nevada,home,22.0,67,76
 2026-11-23,Charlotte,Florida Gulf Coast,away,70.0,77,71
 2026-11-23,Florida Gulf Coast,Charlotte,home,30.0,71,77
 2026-11-23,Georgia Southern,Northern Kentucky,away,38.0,78,82
@@ -9995,20 +9995,20 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-23,Southern Utah,Arkansas St.,home,36.0,76,80
 2026-11-23,Long Beach St.,FIU,away,30.0,74,80
 2026-11-23,FIU,Long Beach St.,home,70.0,80,74
+2026-11-23,UNC Greensboro,Pepperdine,away,29.0,75,81
+2026-11-23,Pepperdine,UNC Greensboro,home,71.0,81,75
 2026-11-23,North Carolina A&T,South Carolina St.,away,58.0,76,74
 2026-11-23,South Carolina St.,North Carolina A&T,home,42.0,74,76
 2026-11-23,William & Mary,IU Indy,away,72.0,88,81
 2026-11-23,IU Indy,William & Mary,home,28.0,81,88
 2026-11-23,Central Arkansas,North Florida,away,72.0,82,75
 2026-11-23,North Florida,Central Arkansas,home,28.0,75,82
-2026-11-23,UNC Greensboro,Pepperdine,away,27.0,74,81
-2026-11-23,Pepperdine,UNC Greensboro,home,73.0,81,74
 2026-11-23,Fairleigh Dickinson,Iona,away,25.0,63,71
 2026-11-23,Iona,Fairleigh Dickinson,home,75.0,71,63
 2026-11-23,Texas A&M Corpus Chris,Wichita St.,away,9.0,65,80
 2026-11-23,Wichita St.,Texas A&M Corpus Chris,home,91.0,80,65
-2026-11-23,Monmouth,North Carolina,away,5.0,66,84
-2026-11-23,North Carolina,Monmouth,home,95.0,84,66
+2026-11-23,Monmouth,North Carolina,away,5.0,66,85
+2026-11-23,North Carolina,Monmouth,home,95.0,85,66
 2026-11-23,Alabama St.,California,away,9.0,67,82
 2026-11-23,California,Alabama St.,home,91.0,82,67
 2026-11-23,Maryland Eastern Shore,Youngstown St.,away,11.0,63,77
@@ -10027,18 +10027,18 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-24,Purdue,DePaul,home,57.0,70,68
 2026-11-24,Saint Louis,Grand Canyon,away,42.0,80,82
 2026-11-24,Grand Canyon,Saint Louis,home,58.0,82,80
-2026-11-24,Michigan,Creighton,away,66.0,82,77
-2026-11-24,Creighton,Michigan,home,34.0,77,82
-2026-11-24,Tennessee,Maryland,away,68.0,75,69
-2026-11-24,Maryland,Tennessee,home,32.0,69,75
+2026-11-24,Michigan,Creighton,away,66.0,82,78
+2026-11-24,Creighton,Michigan,home,34.0,78,82
+2026-11-24,Tennessee,Maryland,away,68.0,75,70
+2026-11-24,Maryland,Tennessee,home,32.0,70,75
 2026-11-24,TCU,Miami FL,away,27.0,72,79
 2026-11-24,Miami FL,TCU,home,73.0,79,72
 2026-11-24,San Diego St.,Iowa St.,away,26.0,68,75
 2026-11-24,Iowa St.,San Diego St.,home,74.0,75,68
-2026-11-24,Pittsburgh,Oklahoma,away,67.0,76,71
-2026-11-24,Oklahoma,Pittsburgh,home,33.0,71,76
 2026-11-24,Nevada,Santa Clara,away,47.0,78,79
 2026-11-24,Santa Clara,Nevada,home,53.0,79,78
+2026-11-24,Pittsburgh,Oklahoma,away,67.0,76,71
+2026-11-24,Oklahoma,Pittsburgh,home,33.0,71,76
 2026-11-24,St. John's,Oregon,away,78.0,83,74
 2026-11-24,Oregon,St. John's,home,22.0,74,83
 2026-11-24,Colorado,Stanford,away,42.0,70,72
@@ -10055,10 +10055,10 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-24,Akron,Belmont,home,58.0,72,70
 2026-11-24,Eastern Michigan,Kennesaw St.,away,44.0,74,76
 2026-11-24,Kennesaw St.,Eastern Michigan,home,56.0,76,74
-2026-11-24,Gonzaga,Kansas St.,away,89.0,85,71
-2026-11-24,Kansas St.,Gonzaga,home,11.0,71,85
-2026-11-24,High Point,Duquesne,away,81.0,77,67
-2026-11-24,Duquesne,High Point,home,19.0,67,77
+2026-11-24,Gonzaga,Kansas St.,away,89.0,85,72
+2026-11-24,Kansas St.,Gonzaga,home,11.0,72,85
+2026-11-24,High Point,Duquesne,away,80.0,77,67
+2026-11-24,Duquesne,High Point,home,20.0,67,77
 2026-11-24,New Mexico St.,Ohio,away,42.0,75,77
 2026-11-24,Ohio,New Mexico St.,home,58.0,77,75
 2026-11-24,Appalachian St.,Yale,away,50.0,69,70
@@ -10073,12 +10073,12 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-24,Robert Morris,Lamar,home,44.0,73,75
 2026-11-24,Oregon St.,San Francisco,away,81.0,81,71
 2026-11-24,San Francisco,Oregon St.,home,19.0,71,81
-2026-11-24,Illinois Chicago,Rice,away,71.0,76,70
-2026-11-24,Rice,Illinois Chicago,home,29.0,70,76
-2026-11-24,Campbell,Coastal Carolina,away,42.0,74,76
-2026-11-24,Coastal Carolina,Campbell,home,58.0,76,74
 2026-11-24,Elon,Furman,away,30.0,71,77
 2026-11-24,Furman,Elon,home,70.0,77,71
+2026-11-24,Illinois Chicago,Rice,away,72.0,77,70
+2026-11-24,Rice,Illinois Chicago,home,28.0,70,77
+2026-11-24,Campbell,Coastal Carolina,away,42.0,74,76
+2026-11-24,Coastal Carolina,Campbell,home,58.0,76,74
 2026-11-24,Tarleton St.,Weber St.,away,54.0,80,79
 2026-11-24,Weber St.,Tarleton St.,home,46.0,79,80
 2026-11-24,Georgia Southern,Bellarmine,away,54.0,78,77
@@ -10113,38 +10113,38 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-24,Marist,Bryant,home,61.0,67,64
 2026-11-24,Oral Roberts,UT Arlington,away,28.0,71,78
 2026-11-24,UT Arlington,Oral Roberts,home,72.0,78,71
-2026-11-24,Southern Indiana,VMI,away,35.0,69,73
-2026-11-24,VMI,Southern Indiana,home,65.0,73,69
+2026-11-24,Southern Indiana,VMI,away,35.0,69,74
+2026-11-24,VMI,Southern Indiana,home,65.0,74,69
 2026-11-24,Lindenwood,New Haven,away,60.0,68,65
 2026-11-24,New Haven,Lindenwood,home,40.0,65,68
-2026-11-24,Samford,Georgia Tech,away,18.0,75,85
-2026-11-24,Georgia Tech,Samford,home,82.0,85,75
-2026-11-24,Southern Utah,FIU,away,23.0,75,83
-2026-11-24,FIU,Southern Utah,home,77.0,83,75
-2026-11-24,Hampton,Old Dominion,away,22.0,63,71
-2026-11-24,Old Dominion,Hampton,home,78.0,71,63
-2026-11-24,Bucknell,Cornell,away,21.0,70,80
-2026-11-24,Cornell,Bucknell,home,79.0,80,70
+2026-11-24,Southern Utah,FIU,away,23.0,75,84
+2026-11-24,FIU,Southern Utah,home,77.0,84,75
+2026-11-24,Samford,Georgia Tech,away,17.0,75,85
+2026-11-24,Georgia Tech,Samford,home,83.0,85,75
+2026-11-24,Hampton,Old Dominion,away,22.0,63,72
+2026-11-24,Old Dominion,Hampton,home,78.0,72,63
+2026-11-24,Bucknell,Cornell,away,21.0,71,80
+2026-11-24,Cornell,Bucknell,home,79.0,80,71
 2026-11-24,Alcorn St.,Louisiana Tech,away,19.0,69,79
 2026-11-24,Louisiana Tech,Alcorn St.,home,81.0,79,69
 2026-11-24,Binghamton,Lehigh,away,19.0,64,74
 2026-11-24,Lehigh,Binghamton,home,81.0,74,64
+2026-11-24,UNC Greensboro,UC Santa Barbara,away,9.0,68,83
+2026-11-24,UC Santa Barbara,UNC Greensboro,home,91.0,83,68
 2026-11-24,Charleston Southern,James Madison,away,12.0,70,83
 2026-11-24,James Madison,Charleston Southern,home,88.0,83,70
 2026-11-24,Central Michigan,Notre Dame,away,5.0,68,87
 2026-11-24,Notre Dame,Central Michigan,home,95.0,87,68
-2026-11-24,UNC Greensboro,UC Santa Barbara,away,7.0,67,84
-2026-11-24,UC Santa Barbara,UNC Greensboro,home,93.0,84,67
 2026-11-24,Stetson,South Florida,away,8.0,69,85
 2026-11-24,South Florida,Stetson,home,92.0,85,69
 2026-11-24,Lipscomb,Auburn,away,3.0,68,89
 2026-11-24,Auburn,Lipscomb,home,97.0,89,68
 2026-11-24,Florida A&M,South Alabama,away,13.0,67,79
 2026-11-24,South Alabama,Florida A&M,home,87.0,79,67
-2026-11-24,West Georgia,Tennessee Tech,away,10.0,73,87
-2026-11-24,Tennessee Tech,West Georgia,home,90.0,87,73
-2026-11-24,Gardner Webb,Bowling Green,away,10.0,69,83
-2026-11-24,Bowling Green,Gardner Webb,home,90.0,83,69
+2026-11-24,West Georgia,Tennessee Tech,away,10.0,73,88
+2026-11-24,Tennessee Tech,West Georgia,home,90.0,88,73
+2026-11-24,Gardner Webb,Bowling Green,away,11.0,69,83
+2026-11-24,Bowling Green,Gardner Webb,home,89.0,83,69
 2026-11-24,Delaware St.,Chattanooga,away,10.0,68,82
 2026-11-24,Chattanooga,Delaware St.,home,90.0,82,68
 2026-11-24,Milwaukee,Florida,away,0.4000000000000057,63,93
@@ -10157,8 +10157,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-24,Missouri,Evansville,home,99.0,88,63
 2026-11-24,New Hampshire,Seton Hall,away,4.0,56,76
 2026-11-24,Seton Hall,New Hampshire,home,96.0,76,56
-2026-11-24,UNC Asheville,Florida St.,away,2.0,66,90
-2026-11-24,Florida St.,UNC Asheville,home,98.0,90,66
+2026-11-24,UNC Asheville,Florida St.,away,2.0,67,90
+2026-11-24,Florida St.,UNC Asheville,home,98.0,90,67
 2026-11-24,Sacred Heart,Rutgers,away,2.0,69,92
 2026-11-24,Rutgers,Sacred Heart,home,98.0,92,69
 2026-11-24,UMBC,Iowa,away,1.0,61,87
@@ -10211,10 +10211,10 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-25,Pepperdine,Cal St. Bakersfield,home,67.0,83,78
 2026-11-25,CSUN,Weber St.,away,59.0,85,82
 2026-11-25,Weber St.,CSUN,home,41.0,82,85
-2026-11-25,Southern Utah,Long Beach St.,away,42.0,74,76
-2026-11-25,Long Beach St.,Southern Utah,home,58.0,76,74
-2026-11-25,Northern Illinois,SIUE,away,55.0,73,71
-2026-11-25,SIUE,Northern Illinois,home,45.0,71,73
+2026-11-25,Southern Utah,Long Beach St.,away,42.0,74,77
+2026-11-25,Long Beach St.,Southern Utah,home,58.0,77,74
+2026-11-25,Northern Illinois,SIUE,away,54.0,73,71
+2026-11-25,SIUE,Northern Illinois,home,46.0,71,73
 2026-11-25,Grambling St.,LSU New Orleans,away,39.0,77,80
 2026-11-25,LSU New Orleans,Grambling St.,home,61.0,80,77
 2026-11-25,Bethune Cookman,Richmond,away,23.0,71,80
@@ -10225,16 +10225,16 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-25,Northwestern St.,West Florida,home,62.0,73,70
 2026-11-25,Bellarmine,Northern Kentucky,away,30.0,74,80
 2026-11-25,Northern Kentucky,Bellarmine,home,70.0,80,74
-2026-11-25,Abilene Christian,South Dakota St.,away,24.0,69,76
-2026-11-25,South Dakota St.,Abilene Christian,home,76.0,76,69
+2026-11-25,Abilene Christian,South Dakota St.,away,24.0,69,77
+2026-11-25,South Dakota St.,Abilene Christian,home,76.0,77,69
 2026-11-25,Nebraska Omaha,UC Davis,away,27.0,70,77
 2026-11-25,UC Davis,Nebraska Omaha,home,73.0,77,70
 2026-11-25,Lindenwood,Stony Brook,away,28.0,69,76
 2026-11-25,Stony Brook,Lindenwood,home,72.0,76,69
 2026-11-25,Longwood,George Mason,away,16.0,67,78
 2026-11-25,George Mason,Longwood,home,84.0,78,67
-2026-11-25,USC Upstate,The Citadel,away,28.0,67,74
-2026-11-25,The Citadel,USC Upstate,home,72.0,74,67
+2026-11-25,USC Upstate,The Citadel,away,25.0,67,74
+2026-11-25,The Citadel,USC Upstate,home,75.0,74,67
 2026-11-25,Eastern Kentucky,Miami OH,away,15.0,71,83
 2026-11-25,Miami OH,Eastern Kentucky,home,85.0,83,71
 2026-11-25,Northeastern,Wisconsin,away,9.0,69,84
@@ -10279,8 +10279,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-26,Arizona St.,South Carolina,home,58.0,73,70
 2026-11-26,Georgetown,Texas,away,20.0,72,82
 2026-11-26,Texas,Georgetown,home,80.0,82,72
-2026-11-26,Boston College,UCF,away,37.0,72,76
-2026-11-26,UCF,Boston College,home,63.0,76,72
+2026-11-26,Boston College,UCF,away,37.0,73,76
+2026-11-26,UCF,Boston College,home,63.0,76,73
 2026-11-26,Jacksonville St.,UC Davis,away,52.0,72,71
 2026-11-26,UC Davis,Jacksonville St.,home,48.0,71,72
 2026-11-26,Army,UTSA,away,19.0,71,81
@@ -10293,8 +10293,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-27,North Carolina,West Virginia,home,46.0,73,74
 2026-11-27,Georgia,UCF,away,59.0,82,80
 2026-11-27,UCF,Georgia,home,41.0,80,82
-2026-11-27,Virginia,Xavier,away,78.0,84,75
-2026-11-27,Xavier,Virginia,home,22.0,75,84
+2026-11-27,Virginia,Xavier,away,78.0,84,76
+2026-11-27,Xavier,Virginia,home,22.0,76,84
 2026-11-27,Wichita St.,Kentucky,away,32.0,77,82
 2026-11-27,Kentucky,Wichita St.,home,68.0,82,77
 2026-11-27,Cincinnati,Boston College,away,80.0,76,66
@@ -10309,8 +10309,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-27,South Alabama,Fresno St.,home,43.0,74,76
 2026-11-27,Pacific,UC Davis,away,68.0,72,67
 2026-11-27,UC Davis,Pacific,home,32.0,67,72
-2026-11-27,Princeton,UNC Wilmington,away,27.0,71,78
-2026-11-27,UNC Wilmington,Princeton,home,73.0,78,71
+2026-11-27,Princeton,UNC Wilmington,away,27.0,71,79
+2026-11-27,UNC Wilmington,Princeton,home,73.0,79,71
 2026-11-27,Drake,Boise St.,away,19.0,73,83
 2026-11-27,Boise St.,Drake,home,81.0,83,73
 2026-11-27,Missouri St.,Oral Roberts,away,44.0,71,73
@@ -10325,12 +10325,12 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-27,Northwestern,Northeastern,home,73.0,78,71
 2026-11-27,Colgate,Hofstra,away,33.0,67,72
 2026-11-27,Hofstra,Colgate,home,67.0,72,67
-2026-11-27,Merrimack,Vermont,away,37.0,63,66
-2026-11-27,Vermont,Merrimack,home,63.0,66,63
+2026-11-27,Merrimack,Vermont,away,37.0,63,67
+2026-11-27,Vermont,Merrimack,home,63.0,67,63
 2026-11-27,Maine,Le Moyne,away,48.0,69,70
 2026-11-27,Le Moyne,Maine,home,52.0,70,69
-2026-11-27,Niagara,Lafayette,away,43.0,69,71
-2026-11-27,Lafayette,Niagara,home,57.0,71,69
+2026-11-27,Niagara,Lafayette,away,43.0,70,71
+2026-11-27,Lafayette,Niagara,home,57.0,71,70
 2026-11-27,Navy,Fairfield,away,39.0,67,70
 2026-11-27,Fairfield,Navy,home,61.0,70,67
 2026-11-27,Western Kentucky,Illinois,away,2.0,71,95
@@ -10343,8 +10343,8 @@ date,team,opponent,side,win_prob,team_score,opp_score
 2026-11-27,UC Santa Barbara,Lehigh,home,87.0,78,65
 2026-11-27,Old Dominion,Virginia Tech,away,7.0,66,83
 2026-11-27,Virginia Tech,Old Dominion,home,93.0,83,66
-2026-11-27,Charleston Southern,East Tennessee St.,away,20.0,67,76
-2026-11-27,East Tennessee St.,Charleston Southern,home,80.0,76,67
+2026-11-27,Charleston Southern,East Tennessee St.,away,21.0,67,77
+2026-11-27,East Tennessee St.,Charleston Southern,home,79.0,77,67
 2026-11-27,Bucknell,La Salle,away,21.0,68,77
 2026-11-27,La Salle,Bucknell,home,79.0,77,68
 2026-11-27,Bowling Green,Indiana,away,5.0,69,88
