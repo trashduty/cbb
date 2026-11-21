@@ -17137,7 +17137,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-21T18:51:41Z"
+    "last_update": "2026-11-21T19:21:55Z"
   },
   "b346f6555c1055ecaf0494e0a23d08dc": {
     "id": "b346f6555c1055ecaf0494e0a23d08dc",
@@ -17157,6 +17157,46 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-21T18:51:41Z"
+    "last_update": "2026-11-21T19:21:55Z"
+  },
+  "2c2ac18a26394f55d2739cdbd06ae05c": {
+    "id": "2c2ac18a26394f55d2739cdbd06ae05c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T17:01:52Z",
+    "completed": true,
+    "home_team": "Michigan St Spartans",
+    "away_team": "Detroit Mercy Titans",
+    "scores": [
+      {
+        "name": "Michigan St Spartans",
+        "score": "91"
+      },
+      {
+        "name": "Detroit Mercy Titans",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-21T19:21:55Z"
+  },
+  "78595a04d81f88f96e1045a0c36edf26": {
+    "id": "78595a04d81f88f96e1045a0c36edf26",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T17:03:48Z",
+    "completed": true,
+    "home_team": "Boston Univ. Terriers",
+    "away_team": "Columbia Lions",
+    "scores": [
+      {
+        "name": "Boston Univ. Terriers",
+        "score": "71"
+      },
+      {
+        "name": "Columbia Lions",
+        "score": "80"
+      }
+    ],
+    "last_update": "2026-11-21T19:21:55Z"
   }
 }
