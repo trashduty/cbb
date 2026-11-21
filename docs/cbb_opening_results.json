@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21T08:24:22.494875+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-21T08:33:21.796215+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 297,
       "losses": 292,
       "pushes": 1,
-      "pending": 53,
+      "pending": 54,
       "win_rate": 0.5042444821731749,
       "profit_units": -21.457521646395826
     },
@@ -34,7 +34,7 @@
       "wins": 90,
       "losses": 77,
       "pushes": 1,
-      "pending": 14,
+      "pending": 15,
       "win_rate": 0.5389221556886228,
       "profit_units": 4.666528282910259
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.4961077886532195
     }
   ],
-  "snapshots": 5392,
+  "snapshots": 5398,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -49082,6 +49082,36 @@
       "edge_tier": "1\u20132.9%",
       "eligible": "yes",
       "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "13b7f678e34f4b5da8ff9ca4",
+      "event_id": "fa6a6d717b7ee026ba18c92b10e5e36e",
+      "game": "East Carolina Pirates vs. Southern Illinois Salukis",
+      "home_team": "East Carolina Pirates",
+      "away_team": "Southern Illinois Salukis",
+      "commence_time": "2026-11-21T22:30:00+00:00",
+      "game_date_et": "2026-11-21",
+      "captured_at": "2026-11-21T08:33:21.796215+00:00",
+      "book": "FanDuel",
+      "bet_type": "Spread",
+      "selection": "Southern Illinois Salukis",
+      "line": 1.5,
+      "odds": -110.0,
+      "model_prediction": -0.0,
+      "probability": 0.547999242711806,
+      "implied_probability": 0.5238095238095238,
+      "edge": 0.024189718902282165,
+      "edge_tier": "1\u20132.9%",
+      "eligible": "yes",
+      "spread_consensus": "No",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
