@@ -17118,5 +17118,45 @@
       }
     ],
     "last_update": "2026-11-21T16:07:01Z"
+  },
+  "934d69fc4e080af297a4f91987ad87f0": {
+    "id": "934d69fc4e080af297a4f91987ad87f0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T16:00:00Z",
+    "completed": true,
+    "home_team": "Bucknell Bison",
+    "away_team": "Siena Saints",
+    "scores": [
+      {
+        "name": "Bucknell Bison",
+        "score": "87"
+      },
+      {
+        "name": "Siena Saints",
+        "score": "93"
+      }
+    ],
+    "last_update": "2026-11-21T18:23:20Z"
+  },
+  "b346f6555c1055ecaf0494e0a23d08dc": {
+    "id": "b346f6555c1055ecaf0494e0a23d08dc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T16:00:00Z",
+    "completed": true,
+    "home_team": "UNC Greensboro Spartans",
+    "away_team": "South Carolina Upstate Spartans",
+    "scores": [
+      {
+        "name": "UNC Greensboro Spartans",
+        "score": "85"
+      },
+      {
+        "name": "South Carolina Upstate Spartans",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-21T18:23:20Z"
   }
 }
