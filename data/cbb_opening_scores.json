@@ -17137,7 +17137,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "b346f6555c1055ecaf0494e0a23d08dc": {
     "id": "b346f6555c1055ecaf0494e0a23d08dc",
@@ -17157,7 +17157,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "2c2ac18a26394f55d2739cdbd06ae05c": {
     "id": "2c2ac18a26394f55d2739cdbd06ae05c",
@@ -17177,7 +17177,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "78595a04d81f88f96e1045a0c36edf26": {
     "id": "78595a04d81f88f96e1045a0c36edf26",
@@ -17197,7 +17197,7 @@
         "score": "80"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "23caa88d308de07ac04fa745540ab35f": {
     "id": "23caa88d308de07ac04fa745540ab35f",
@@ -17217,7 +17217,7 @@
         "score": "47"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "32314571b0ef6ac30a06778a1d5c1cc1": {
     "id": "32314571b0ef6ac30a06778a1d5c1cc1",
@@ -17237,7 +17237,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "b3fab0afee75218dc01cdc6679c9ad17": {
     "id": "b3fab0afee75218dc01cdc6679c9ad17",
@@ -17257,7 +17257,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "46f732d3eef66ef6e78bb2a0f31c1ebb": {
     "id": "46f732d3eef66ef6e78bb2a0f31c1ebb",
@@ -17277,7 +17277,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "fd01d6bd019da1ef030bd2214291558c": {
     "id": "fd01d6bd019da1ef030bd2214291558c",
@@ -17297,7 +17297,7 @@
         "score": "65"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
   },
   "6f123d463b01dadf8743c5323d3b2200": {
     "id": "6f123d463b01dadf8743c5323d3b2200",
@@ -17317,6 +17317,126 @@
         "score": "84"
       }
     ],
-    "last_update": "2026-11-21T20:51:34Z"
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "6188932ccdcc9ce9bdb8d0164df7ee6e": {
+    "id": "6188932ccdcc9ce9bdb8d0164df7ee6e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:00:00Z",
+    "completed": true,
+    "home_team": "Bowling Green Falcons",
+    "away_team": "Northern Illinois Huskies",
+    "scores": [
+      {
+        "name": "Bowling Green Falcons",
+        "score": "68"
+      },
+      {
+        "name": "Northern Illinois Huskies",
+        "score": "86"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "bbccadc262abe84faa9467469b89be97": {
+    "id": "bbccadc262abe84faa9467469b89be97",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:00:00Z",
+    "completed": true,
+    "home_team": "Portland Pilots",
+    "away_team": "Fordham Rams",
+    "scores": [
+      {
+        "name": "Portland Pilots",
+        "score": "69"
+      },
+      {
+        "name": "Fordham Rams",
+        "score": "87"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "e9245afd02b038b953f892119fe558d6": {
+    "id": "e9245afd02b038b953f892119fe558d6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:00:00Z",
+    "completed": true,
+    "home_team": "Wichita St Shockers",
+    "away_team": "New Mexico Lobos",
+    "scores": [
+      {
+        "name": "Wichita St Shockers",
+        "score": "85"
+      },
+      {
+        "name": "New Mexico Lobos",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "2da6119e4539c4666b49cb8015a6c289": {
+    "id": "2da6119e4539c4666b49cb8015a6c289",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:00:00Z",
+    "completed": true,
+    "home_team": "Wake Forest Demon Deacons",
+    "away_team": "Western Carolina Catamounts",
+    "scores": [
+      {
+        "name": "Wake Forest Demon Deacons",
+        "score": "90"
+      },
+      {
+        "name": "Western Carolina Catamounts",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "9de7cd2ef79bce15e4a473b9241c1e82": {
+    "id": "9de7cd2ef79bce15e4a473b9241c1e82",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:02:04Z",
+    "completed": true,
+    "home_team": "Rider Broncs",
+    "away_team": "Navy Midshipmen",
+    "scores": [
+      {
+        "name": "Rider Broncs",
+        "score": "69"
+      },
+      {
+        "name": "Navy Midshipmen",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
+  },
+  "ce18dbed2bcc407de6487a10df8f1771": {
+    "id": "ce18dbed2bcc407de6487a10df8f1771",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-21T19:02:30Z",
+    "completed": true,
+    "home_team": "Saint Peter's Peacocks",
+    "away_team": "Stony Brook Seawolves",
+    "scores": [
+      {
+        "name": "Saint Peter's Peacocks",
+        "score": "52"
+      },
+      {
+        "name": "Stony Brook Seawolves",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-21T21:22:34Z"
   }
 }
