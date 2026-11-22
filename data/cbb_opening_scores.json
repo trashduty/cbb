@@ -18138,5 +18138,45 @@
       }
     ],
     "last_update": "2026-11-22T12:00:57Z"
+  },
+  "9db5c4284531a6c45d11d71c9debdf30": {
+    "id": "9db5c4284531a6c45d11d71c9debdf30",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T17:00:00Z",
+    "completed": true,
+    "home_team": "Nebraska Cornhuskers",
+    "away_team": "Butler Bulldogs",
+    "scores": [
+      {
+        "name": "Butler Bulldogs",
+        "score": "74"
+      },
+      {
+        "name": "Nebraska Cornhuskers",
+        "score": "76"
+      }
+    ],
+    "last_update": "2026-11-22T19:22:28Z"
+  },
+  "8df795d92371ff8d107e74c5f9e3a315": {
+    "id": "8df795d92371ff8d107e74c5f9e3a315",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T17:01:35Z",
+    "completed": true,
+    "home_team": "UIC Flames",
+    "away_team": "Miami (OH) RedHawks",
+    "scores": [
+      {
+        "name": "UIC Flames",
+        "score": "60"
+      },
+      {
+        "name": "Miami (OH) RedHawks",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-22T19:22:28Z"
   }
 }
