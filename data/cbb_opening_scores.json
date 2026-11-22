@@ -18157,7 +18157,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-22T19:51:11Z"
+    "last_update": "2026-11-22T20:22:31Z"
   },
   "8df795d92371ff8d107e74c5f9e3a315": {
     "id": "8df795d92371ff8d107e74c5f9e3a315",
@@ -18177,7 +18177,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-22T19:51:11Z"
+    "last_update": "2026-11-22T20:22:31Z"
   },
   "6720f59950e8e460d7daf76bc09897e6": {
     "id": "6720f59950e8e460d7daf76bc09897e6",
@@ -18197,6 +18197,86 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-22T19:51:11Z"
+    "last_update": "2026-11-22T20:22:31Z"
+  },
+  "a4479cbdb9666b13f2c1f33e93f6e281": {
+    "id": "a4479cbdb9666b13f2c1f33e93f6e281",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T18:00:45Z",
+    "completed": true,
+    "home_team": "Dayton Flyers",
+    "away_team": "Northwestern Wildcats",
+    "scores": [
+      {
+        "name": "Northwestern Wildcats",
+        "score": "79"
+      },
+      {
+        "name": "Dayton Flyers",
+        "score": "55"
+      }
+    ],
+    "last_update": "2026-11-22T20:22:31Z"
+  },
+  "d3ff354cf7590632c2f875f2c49fa5e1": {
+    "id": "d3ff354cf7590632c2f875f2c49fa5e1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T18:02:27Z",
+    "completed": true,
+    "home_team": "Marquette Golden Eagles",
+    "away_team": "Chicago St Cougars",
+    "scores": [
+      {
+        "name": "Marquette Golden Eagles",
+        "score": "106"
+      },
+      {
+        "name": "Chicago St Cougars",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-22T20:22:31Z"
+  },
+  "0e691de1e271a81490db7c766b779288": {
+    "id": "0e691de1e271a81490db7c766b779288",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T18:02:43Z",
+    "completed": true,
+    "home_team": "American Eagles",
+    "away_team": "Towson Tigers",
+    "scores": [
+      {
+        "name": "American Eagles",
+        "score": "86"
+      },
+      {
+        "name": "Towson Tigers",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-22T20:22:31Z"
+  },
+  "b8b8c26c46c395035dbe4fd1d013d5ec": {
+    "id": "b8b8c26c46c395035dbe4fd1d013d5ec",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T18:05:39Z",
+    "completed": true,
+    "home_team": "LIU Sharks",
+    "away_team": "Fairfield Stags",
+    "scores": [
+      {
+        "name": "LIU Sharks",
+        "score": "71"
+      },
+      {
+        "name": "Fairfield Stags",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-22T20:22:31Z"
   }
 }
