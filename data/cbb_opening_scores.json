@@ -18157,7 +18157,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-22T19:22:28Z"
+    "last_update": "2026-11-22T19:51:11Z"
   },
   "8df795d92371ff8d107e74c5f9e3a315": {
     "id": "8df795d92371ff8d107e74c5f9e3a315",
@@ -18174,9 +18174,29 @@
       },
       {
         "name": "Miami (OH) RedHawks",
-        "score": "70"
+        "score": "71"
       }
     ],
-    "last_update": "2026-11-22T19:22:28Z"
+    "last_update": "2026-11-22T19:51:11Z"
+  },
+  "6720f59950e8e460d7daf76bc09897e6": {
+    "id": "6720f59950e8e460d7daf76bc09897e6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T18:03:01Z",
+    "completed": true,
+    "home_team": "Canisius Golden Griffins",
+    "away_team": "Western Illinois Leathernecks",
+    "scores": [
+      {
+        "name": "Canisius Golden Griffins",
+        "score": "46"
+      },
+      {
+        "name": "Western Illinois Leathernecks",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-22T19:51:11Z"
   }
 }
