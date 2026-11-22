@@ -18157,7 +18157,7 @@
         "score": "76"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "8df795d92371ff8d107e74c5f9e3a315": {
     "id": "8df795d92371ff8d107e74c5f9e3a315",
@@ -18177,7 +18177,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "6720f59950e8e460d7daf76bc09897e6": {
     "id": "6720f59950e8e460d7daf76bc09897e6",
@@ -18197,7 +18197,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "a4479cbdb9666b13f2c1f33e93f6e281": {
     "id": "a4479cbdb9666b13f2c1f33e93f6e281",
@@ -18217,7 +18217,7 @@
         "score": "55"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "d3ff354cf7590632c2f875f2c49fa5e1": {
     "id": "d3ff354cf7590632c2f875f2c49fa5e1",
@@ -18237,7 +18237,7 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "0e691de1e271a81490db7c766b779288": {
     "id": "0e691de1e271a81490db7c766b779288",
@@ -18257,7 +18257,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "b8b8c26c46c395035dbe4fd1d013d5ec": {
     "id": "b8b8c26c46c395035dbe4fd1d013d5ec",
@@ -18277,7 +18277,7 @@
         "score": "74"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
   },
   "9df92a4f1ca806fe512c3849b181da90": {
     "id": "9df92a4f1ca806fe512c3849b181da90",
@@ -18297,6 +18297,106 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-22T20:51:08Z"
+    "last_update": "2026-11-22T21:22:31Z"
+  },
+  "8973c989f9e6975bd343485eade0a1dc": {
+    "id": "8973c989f9e6975bd343485eade0a1dc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T19:00:00Z",
+    "completed": true,
+    "home_team": "Cincinnati Bearcats",
+    "away_team": "UMass Lowell River Hawks",
+    "scores": [
+      {
+        "name": "Cincinnati Bearcats",
+        "score": "78"
+      },
+      {
+        "name": "UMass Lowell River Hawks",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-22T21:22:31Z"
+  },
+  "d9147d63fc7cb44ba58391e30c6d0806": {
+    "id": "d9147d63fc7cb44ba58391e30c6d0806",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T19:01:41Z",
+    "completed": true,
+    "home_team": "Fordham Rams",
+    "away_team": "San Diego Toreros",
+    "scores": [
+      {
+        "name": "San Diego Toreros",
+        "score": "80"
+      },
+      {
+        "name": "Fordham Rams",
+        "score": "58"
+      }
+    ],
+    "last_update": "2026-11-22T21:22:31Z"
+  },
+  "ca02e6e3717e63798ba1db0542ee38ee": {
+    "id": "ca02e6e3717e63798ba1db0542ee38ee",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T19:02:05Z",
+    "completed": true,
+    "home_team": "Memphis Tigers",
+    "away_team": "Evansville Purple Aces",
+    "scores": [
+      {
+        "name": "Memphis Tigers",
+        "score": "82"
+      },
+      {
+        "name": "Evansville Purple Aces",
+        "score": "62"
+      }
+    ],
+    "last_update": "2026-11-22T21:22:31Z"
+  },
+  "c4fb85c9d4955609536990dc5dd565d9": {
+    "id": "c4fb85c9d4955609536990dc5dd565d9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T19:02:23Z",
+    "completed": true,
+    "home_team": "Youngstown St Penguins",
+    "away_team": "William & Mary Tribe",
+    "scores": [
+      {
+        "name": "Youngstown St Penguins",
+        "score": "63"
+      },
+      {
+        "name": "William & Mary Tribe",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-22T21:22:31Z"
+  },
+  "20c6981840df47c0889d7ae41c56aa84": {
+    "id": "20c6981840df47c0889d7ae41c56aa84",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-22T19:06:27Z",
+    "completed": true,
+    "home_team": "Utah Tech Trailblazers",
+    "away_team": "South Dakota Coyotes",
+    "scores": [
+      {
+        "name": "Utah Tech Trailblazers",
+        "score": "73"
+      },
+      {
+        "name": "South Dakota Coyotes",
+        "score": "74"
+      }
+    ],
+    "last_update": "2026-11-22T21:22:31Z"
   }
 }
