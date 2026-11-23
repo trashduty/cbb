@@ -18917,7 +18917,7 @@
         "score": "48"
       }
     ],
-    "last_update": "2026-11-23T20:22:36Z"
+    "last_update": "2026-11-23T20:52:01Z"
   },
   "435ce8aaf2de67393a436fc9bf8c956e": {
     "id": "435ce8aaf2de67393a436fc9bf8c956e",
@@ -18937,7 +18937,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T20:22:36Z"
+    "last_update": "2026-11-23T20:52:01Z"
   },
   "e4496b83963ca2f24052c8779d91cbeb": {
     "id": "e4496b83963ca2f24052c8779d91cbeb",
@@ -18957,7 +18957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-23T20:22:36Z"
+    "last_update": "2026-11-23T20:52:01Z"
   },
   "037aac2cff7aea7fec09fbb5a3dcf04b": {
     "id": "037aac2cff7aea7fec09fbb5a3dcf04b",
@@ -18977,7 +18977,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-23T20:22:36Z"
+    "last_update": "2026-11-23T20:52:01Z"
   },
   "276deab7d659366b50ff0608d1501b6e": {
     "id": "276deab7d659366b50ff0608d1501b6e",
@@ -18997,6 +18997,26 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T20:22:36Z"
+    "last_update": "2026-11-23T20:52:01Z"
+  },
+  "03914af0d22bba6c22c326407049444a": {
+    "id": "03914af0d22bba6c22c326407049444a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T18:31:30Z",
+    "completed": true,
+    "home_team": "Wright St Raiders",
+    "away_team": "Akron Zips",
+    "scores": [
+      {
+        "name": "Wright St Raiders",
+        "score": "66"
+      },
+      {
+        "name": "Akron Zips",
+        "score": "64"
+      }
+    ],
+    "last_update": "2026-11-23T20:52:01Z"
   }
 }
