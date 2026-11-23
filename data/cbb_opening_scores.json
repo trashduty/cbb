@@ -18917,7 +18917,7 @@
         "score": "48"
       }
     ],
-    "last_update": "2026-11-23T19:51:37Z"
+    "last_update": "2026-11-23T20:22:36Z"
   },
   "435ce8aaf2de67393a436fc9bf8c956e": {
     "id": "435ce8aaf2de67393a436fc9bf8c956e",
@@ -18937,6 +18937,66 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T19:51:37Z"
+    "last_update": "2026-11-23T20:22:36Z"
+  },
+  "e4496b83963ca2f24052c8779d91cbeb": {
+    "id": "e4496b83963ca2f24052c8779d91cbeb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T17:33:00Z",
+    "completed": true,
+    "home_team": "East Carolina Pirates",
+    "away_team": "Indiana St Sycamores",
+    "scores": [
+      {
+        "name": "East Carolina Pirates",
+        "score": "76"
+      },
+      {
+        "name": "Indiana St Sycamores",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-23T20:22:36Z"
+  },
+  "037aac2cff7aea7fec09fbb5a3dcf04b": {
+    "id": "037aac2cff7aea7fec09fbb5a3dcf04b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T18:02:11Z",
+    "completed": true,
+    "home_team": "Florida Int'l Golden Panthers",
+    "away_team": "Long Beach St 49ers",
+    "scores": [
+      {
+        "name": "Florida Int'l Golden Panthers",
+        "score": "79"
+      },
+      {
+        "name": "Long Beach St 49ers",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-23T20:22:36Z"
+  },
+  "276deab7d659366b50ff0608d1501b6e": {
+    "id": "276deab7d659366b50ff0608d1501b6e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T18:31:31Z",
+    "completed": true,
+    "home_team": "Florida Gulf Coast Eagles",
+    "away_team": "Charlotte 49ers",
+    "scores": [
+      {
+        "name": "Florida Gulf Coast Eagles",
+        "score": "58"
+      },
+      {
+        "name": "Charlotte 49ers",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-23T20:22:36Z"
   }
 }
