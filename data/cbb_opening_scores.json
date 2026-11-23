@@ -18917,6 +18917,26 @@
         "score": "48"
       }
     ],
-    "last_update": "2026-11-23T17:51:47Z"
+    "last_update": "2026-11-23T18:24:34Z"
+  },
+  "435ce8aaf2de67393a436fc9bf8c956e": {
+    "id": "435ce8aaf2de67393a436fc9bf8c956e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T16:00:00Z",
+    "completed": true,
+    "home_team": "St. Bonaventure Bonnies",
+    "away_team": "Appalachian St Mountaineers",
+    "scores": [
+      {
+        "name": "Appalachian St Mountaineers",
+        "score": "65"
+      },
+      {
+        "name": "St. Bonaventure Bonnies",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-23T18:24:34Z"
   }
 }
