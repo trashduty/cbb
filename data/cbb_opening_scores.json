@@ -18917,7 +18917,7 @@
         "score": "48"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "435ce8aaf2de67393a436fc9bf8c956e": {
     "id": "435ce8aaf2de67393a436fc9bf8c956e",
@@ -18937,7 +18937,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "e4496b83963ca2f24052c8779d91cbeb": {
     "id": "e4496b83963ca2f24052c8779d91cbeb",
@@ -18957,7 +18957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "037aac2cff7aea7fec09fbb5a3dcf04b": {
     "id": "037aac2cff7aea7fec09fbb5a3dcf04b",
@@ -18977,7 +18977,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "276deab7d659366b50ff0608d1501b6e": {
     "id": "276deab7d659366b50ff0608d1501b6e",
@@ -18997,7 +18997,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "03914af0d22bba6c22c326407049444a": {
     "id": "03914af0d22bba6c22c326407049444a",
@@ -19017,7 +19017,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "7672e3ae078a7b505b50f15e46208e4f": {
     "id": "7672e3ae078a7b505b50f15e46208e4f",
@@ -19037,7 +19037,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
   },
   "f6407650f13adaa2fc13d17570ef3327": {
     "id": "f6407650f13adaa2fc13d17570ef3327",
@@ -19057,6 +19057,66 @@
         "score": "82"
       }
     ],
-    "last_update": "2026-11-23T22:23:10Z"
+    "last_update": "2026-11-23T22:52:04Z"
+  },
+  "f1dad846a15c864b10f3cf4914c7cbd5": {
+    "id": "f1dad846a15c864b10f3cf4914c7cbd5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T20:25:57Z",
+    "completed": true,
+    "home_team": "Southern Illinois Salukis",
+    "away_team": "Middle Tennessee Blue Raiders",
+    "scores": [
+      {
+        "name": "Southern Illinois Salukis",
+        "score": "76"
+      },
+      {
+        "name": "Middle Tennessee Blue Raiders",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-23T22:52:04Z"
+  },
+  "aee64daab1ceefa09aaf0260ed750d53": {
+    "id": "aee64daab1ceefa09aaf0260ed750d53",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T20:30:00Z",
+    "completed": true,
+    "home_team": "IUPUI Jaguars",
+    "away_team": "William & Mary Tribe",
+    "scores": [
+      {
+        "name": "IUPUI Jaguars",
+        "score": "82"
+      },
+      {
+        "name": "William & Mary Tribe",
+        "score": "87"
+      }
+    ],
+    "last_update": "2026-11-23T22:52:04Z"
+  },
+  "c26aa1b5cbdc588ee415a259da2c6bf4": {
+    "id": "c26aa1b5cbdc588ee415a259da2c6bf4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T21:02:09Z",
+    "completed": true,
+    "home_team": "Belmont Bruins",
+    "away_team": "Yale Bulldogs",
+    "scores": [
+      {
+        "name": "Belmont Bruins",
+        "score": "68"
+      },
+      {
+        "name": "Yale Bulldogs",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-23T22:52:04Z"
   }
 }
