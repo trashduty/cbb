@@ -18898,5 +18898,25 @@
       }
     ],
     "last_update": "2026-11-23T16:07:14Z"
+  },
+  "98a0b4549739cc028ffa9665d77d7ffd": {
+    "id": "98a0b4549739cc028ffa9665d77d7ffd",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T16:00:00Z",
+    "completed": true,
+    "home_team": "Davidson Wildcats",
+    "away_team": "Northern Iowa Panthers",
+    "scores": [
+      {
+        "name": "Davidson Wildcats",
+        "score": "79"
+      },
+      {
+        "name": "Northern Iowa Panthers",
+        "score": "48"
+      }
+    ],
+    "last_update": "2026-11-23T17:51:47Z"
   }
 }
