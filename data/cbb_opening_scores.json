@@ -19597,7 +19597,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "c431e5cece6a42f0acf8f2898b29e83e": {
     "id": "c431e5cece6a42f0acf8f2898b29e83e",
@@ -19617,7 +19617,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "f199c1cbe3ed8c1fc4c77116bfc48499": {
     "id": "f199c1cbe3ed8c1fc4c77116bfc48499",
@@ -19637,7 +19637,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "c027a1281dd4c9e8ac848bc06f0e29fb": {
     "id": "c027a1281dd4c9e8ac848bc06f0e29fb",
@@ -19657,7 +19657,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "25c249c5d826256a741704663708b66f": {
     "id": "25c249c5d826256a741704663708b66f",
@@ -19677,7 +19677,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "becb255ccc8bc25b5f7bd29df33c9f11": {
     "id": "becb255ccc8bc25b5f7bd29df33c9f11",
@@ -19697,7 +19697,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "43a5ccec7f338df1651b828c9c8e8c5f": {
     "id": "43a5ccec7f338df1651b828c9c8e8c5f",
@@ -19717,7 +19717,7 @@
         "score": "68"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "805ca96e9d27ffe645d7a7f11348756f": {
     "id": "805ca96e9d27ffe645d7a7f11348756f",
@@ -19737,7 +19737,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "aa88b3c9dbbd08c5d5b25ea5f6b52bf1": {
     "id": "aa88b3c9dbbd08c5d5b25ea5f6b52bf1",
@@ -19757,7 +19757,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "963ef5f90b0991bdd17147e22683e18e": {
     "id": "963ef5f90b0991bdd17147e22683e18e",
@@ -19777,7 +19777,7 @@
         "score": "50"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
   },
   "2643c9fdcf8ea923eba3adf7e2d63034": {
     "id": "2643c9fdcf8ea923eba3adf7e2d63034",
@@ -19797,6 +19797,46 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-24T22:22:55Z"
+    "last_update": "2026-11-24T22:51:40Z"
+  },
+  "38c575bb916b4b6634ccbc1d442b53a2": {
+    "id": "38c575bb916b4b6634ccbc1d442b53a2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T20:03:02Z",
+    "completed": true,
+    "home_team": "Maryland Terrapins",
+    "away_team": "Tennessee Volunteers",
+    "scores": [
+      {
+        "name": "Maryland Terrapins",
+        "score": "64"
+      },
+      {
+        "name": "Tennessee Volunteers",
+        "score": "72"
+      }
+    ],
+    "last_update": "2026-11-24T22:51:40Z"
+  },
+  "4168db6bc271ba612901506cd74e1c9b": {
+    "id": "4168db6bc271ba612901506cd74e1c9b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T20:03:19Z",
+    "completed": true,
+    "home_team": "TCU Horned Frogs",
+    "away_team": "Miami Hurricanes",
+    "scores": [
+      {
+        "name": "TCU Horned Frogs",
+        "score": "84"
+      },
+      {
+        "name": "Miami Hurricanes",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-24T22:51:40Z"
   }
 }
