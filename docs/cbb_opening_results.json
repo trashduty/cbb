@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24T01:11:00.230760+00:00",
-  "score_status": "Scores not requested in this run",
+  "updated_at": "2026-11-24T01:23:24.624483+00:00",
+  "score_status": "Score update successful",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -62,11 +62,11 @@
       "bet_type": "Total",
       "edge_tier": "All",
       "wins": 243,
-      "losses": 236,
+      "losses": 237,
       "pushes": 1,
-      "pending": 70,
-      "win_rate": 0.5073068893528184,
-      "profit_units": -12.835965457267163
+      "pending": 69,
+      "win_rate": 0.50625,
+      "profit_units": -13.835965457267163
     },
     {
       "bet_type": "Total",
@@ -82,11 +82,11 @@
       "bet_type": "Total",
       "edge_tier": "1\u20132.9%",
       "wins": 94,
-      "losses": 102,
+      "losses": 103,
       "pushes": 0,
-      "pending": 29,
-      "win_rate": 0.47959183673469385,
-      "profit_units": -15.930302259821723
+      "pending": 28,
+      "win_rate": 0.47715736040609136,
+      "profit_units": -16.930302259821723
     },
     {
       "bet_type": "Total",
@@ -112,11 +112,11 @@
       "bet_type": "Moneyline",
       "edge_tier": "All",
       "wins": 179,
-      "losses": 354,
+      "losses": 355,
       "pushes": 0,
-      "pending": 71,
-      "win_rate": 0.33583489681050654,
-      "profit_units": -136.59895270846468
+      "pending": 70,
+      "win_rate": 0.3352059925093633,
+      "profit_units": -137.59895270846468
     },
     {
       "bet_type": "Moneyline",
@@ -132,11 +132,11 @@
       "bet_type": "Moneyline",
       "edge_tier": "1\u20132.9%",
       "wins": 59,
-      "losses": 112,
+      "losses": 113,
       "pushes": 0,
-      "pending": 23,
-      "win_rate": 0.34502923976608185,
-      "profit_units": -13.987797742295218
+      "pending": 22,
+      "win_rate": 0.3430232558139535,
+      "profit_units": -14.987797742295218
     },
     {
       "bet_type": "Moneyline",
@@ -53675,11 +53675,11 @@
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 90.0,
+      "away_score": 81.0,
+      "graded_at": "2026-11-24T01:23:24.624483+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "70ee8c8b15da9d80e4f21f8c",
@@ -53705,11 +53705,11 @@
       "total_consensus": "Yes",
       "total_consensus_source": "capture",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
-      "result": "Pending",
-      "home_score": null,
-      "away_score": null,
-      "graded_at": "",
-      "profit_units": null
+      "result": "Loss",
+      "home_score": 90.0,
+      "away_score": 81.0,
+      "graded_at": "2026-11-24T01:23:24.624483+00:00",
+      "profit_units": -1.0
     },
     {
       "snapshot_id": "f06015084b0210e83d48befa",
