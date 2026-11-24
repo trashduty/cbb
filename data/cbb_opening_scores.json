@@ -19597,7 +19597,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
   },
   "c431e5cece6a42f0acf8f2898b29e83e": {
     "id": "c431e5cece6a42f0acf8f2898b29e83e",
@@ -19617,7 +19617,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
   },
   "f199c1cbe3ed8c1fc4c77116bfc48499": {
     "id": "f199c1cbe3ed8c1fc4c77116bfc48499",
@@ -19637,7 +19637,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
   },
   "c027a1281dd4c9e8ac848bc06f0e29fb": {
     "id": "c027a1281dd4c9e8ac848bc06f0e29fb",
@@ -19657,7 +19657,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
   },
   "25c249c5d826256a741704663708b66f": {
     "id": "25c249c5d826256a741704663708b66f",
@@ -19677,7 +19677,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
   },
   "becb255ccc8bc25b5f7bd29df33c9f11": {
     "id": "becb255ccc8bc25b5f7bd29df33c9f11",
@@ -19697,6 +19697,46 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-24T20:51:11Z"
+    "last_update": "2026-11-24T21:22:50Z"
+  },
+  "43a5ccec7f338df1651b828c9c8e8c5f": {
+    "id": "43a5ccec7f338df1651b828c9c8e8c5f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T18:30:00Z",
+    "completed": true,
+    "home_team": "Oklahoma Sooners",
+    "away_team": "Pittsburgh Panthers",
+    "scores": [
+      {
+        "name": "Pittsburgh Panthers",
+        "score": "79"
+      },
+      {
+        "name": "Oklahoma Sooners",
+        "score": "68"
+      }
+    ],
+    "last_update": "2026-11-24T21:22:50Z"
+  },
+  "805ca96e9d27ffe645d7a7f11348756f": {
+    "id": "805ca96e9d27ffe645d7a7f11348756f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T19:00:00Z",
+    "completed": true,
+    "home_team": "San Francisco Dons",
+    "away_team": "Oregon St Beavers",
+    "scores": [
+      {
+        "name": "Oregon St Beavers",
+        "score": "87"
+      },
+      {
+        "name": "San Francisco Dons",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-24T21:22:50Z"
   }
 }
