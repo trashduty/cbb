@@ -19597,7 +19597,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T20:22:09Z"
+    "last_update": "2026-11-24T20:51:11Z"
   },
   "c431e5cece6a42f0acf8f2898b29e83e": {
     "id": "c431e5cece6a42f0acf8f2898b29e83e",
@@ -19617,7 +19617,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-24T20:22:09Z"
+    "last_update": "2026-11-24T20:51:11Z"
   },
   "f199c1cbe3ed8c1fc4c77116bfc48499": {
     "id": "f199c1cbe3ed8c1fc4c77116bfc48499",
@@ -19637,7 +19637,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T20:22:09Z"
+    "last_update": "2026-11-24T20:51:11Z"
   },
   "c027a1281dd4c9e8ac848bc06f0e29fb": {
     "id": "c027a1281dd4c9e8ac848bc06f0e29fb",
@@ -19657,7 +19657,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-24T20:22:09Z"
+    "last_update": "2026-11-24T20:51:11Z"
   },
   "25c249c5d826256a741704663708b66f": {
     "id": "25c249c5d826256a741704663708b66f",
@@ -19677,6 +19677,26 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-24T20:22:09Z"
+    "last_update": "2026-11-24T20:51:11Z"
+  },
+  "becb255ccc8bc25b5f7bd29df33c9f11": {
+    "id": "becb255ccc8bc25b5f7bd29df33c9f11",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T18:30:00Z",
+    "completed": true,
+    "home_team": "Rice Owls",
+    "away_team": "UIC Flames",
+    "scores": [
+      {
+        "name": "Rice Owls",
+        "score": "68"
+      },
+      {
+        "name": "UIC Flames",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-24T20:51:11Z"
   }
 }
