@@ -19597,7 +19597,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T19:51:22Z"
+    "last_update": "2026-11-24T20:22:09Z"
   },
   "c431e5cece6a42f0acf8f2898b29e83e": {
     "id": "c431e5cece6a42f0acf8f2898b29e83e",
@@ -19617,7 +19617,7 @@
         "score": "69"
       }
     ],
-    "last_update": "2026-11-24T19:51:22Z"
+    "last_update": "2026-11-24T20:22:09Z"
   },
   "f199c1cbe3ed8c1fc4c77116bfc48499": {
     "id": "f199c1cbe3ed8c1fc4c77116bfc48499",
@@ -19637,7 +19637,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T19:51:22Z"
+    "last_update": "2026-11-24T20:22:09Z"
   },
   "c027a1281dd4c9e8ac848bc06f0e29fb": {
     "id": "c027a1281dd4c9e8ac848bc06f0e29fb",
@@ -19657,6 +19657,26 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-24T19:51:22Z"
+    "last_update": "2026-11-24T20:22:09Z"
+  },
+  "25c249c5d826256a741704663708b66f": {
+    "id": "25c249c5d826256a741704663708b66f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T18:00:00Z",
+    "completed": true,
+    "home_team": "Florida Int'l Golden Panthers",
+    "away_team": "Southern Utah Thunderbirds",
+    "scores": [
+      {
+        "name": "Florida Int'l Golden Panthers",
+        "score": "81"
+      },
+      {
+        "name": "Southern Utah Thunderbirds",
+        "score": "66"
+      }
+    ],
+    "last_update": "2026-11-24T20:22:09Z"
   }
 }
