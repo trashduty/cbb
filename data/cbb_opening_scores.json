@@ -19578,5 +19578,25 @@
       }
     ],
     "last_update": "2026-11-24T16:14:34Z"
+  },
+  "9d626cb5f6f86d655376c21b250ef528": {
+    "id": "9d626cb5f6f86d655376c21b250ef528",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T15:00:00Z",
+    "completed": true,
+    "home_team": "Wright St Raiders",
+    "away_team": "St. Bonaventure Bonnies",
+    "scores": [
+      {
+        "name": "St. Bonaventure Bonnies",
+        "score": "72"
+      },
+      {
+        "name": "Wright St Raiders",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-24T17:22:25Z"
   }
 }
