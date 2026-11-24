@@ -19597,6 +19597,26 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-24T17:51:08Z"
+    "last_update": "2026-11-24T18:24:31Z"
+  },
+  "c431e5cece6a42f0acf8f2898b29e83e": {
+    "id": "c431e5cece6a42f0acf8f2898b29e83e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-24T16:00:00Z",
+    "completed": true,
+    "home_team": "New Mexico St Aggies",
+    "away_team": "Ohio Bobcats",
+    "scores": [
+      {
+        "name": "New Mexico St Aggies",
+        "score": "68"
+      },
+      {
+        "name": "Ohio Bobcats",
+        "score": "69"
+      }
+    ],
+    "last_update": "2026-11-24T18:24:31Z"
   }
 }
