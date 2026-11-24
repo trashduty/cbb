@@ -18917,7 +18917,7 @@
         "score": "48"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "435ce8aaf2de67393a436fc9bf8c956e": {
     "id": "435ce8aaf2de67393a436fc9bf8c956e",
@@ -18937,7 +18937,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "e4496b83963ca2f24052c8779d91cbeb": {
     "id": "e4496b83963ca2f24052c8779d91cbeb",
@@ -18957,7 +18957,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "037aac2cff7aea7fec09fbb5a3dcf04b": {
     "id": "037aac2cff7aea7fec09fbb5a3dcf04b",
@@ -18977,7 +18977,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "276deab7d659366b50ff0608d1501b6e": {
     "id": "276deab7d659366b50ff0608d1501b6e",
@@ -18997,7 +18997,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "03914af0d22bba6c22c326407049444a": {
     "id": "03914af0d22bba6c22c326407049444a",
@@ -19017,7 +19017,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "7672e3ae078a7b505b50f15e46208e4f": {
     "id": "7672e3ae078a7b505b50f15e46208e4f",
@@ -19037,7 +19037,7 @@
         "score": "66"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "f6407650f13adaa2fc13d17570ef3327": {
     "id": "f6407650f13adaa2fc13d17570ef3327",
@@ -19057,7 +19057,7 @@
         "score": "82"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "f1dad846a15c864b10f3cf4914c7cbd5": {
     "id": "f1dad846a15c864b10f3cf4914c7cbd5",
@@ -19077,7 +19077,7 @@
         "score": "77"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "aee64daab1ceefa09aaf0260ed750d53": {
     "id": "aee64daab1ceefa09aaf0260ed750d53",
@@ -19097,7 +19097,7 @@
         "score": "87"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "c26aa1b5cbdc588ee415a259da2c6bf4": {
     "id": "c26aa1b5cbdc588ee415a259da2c6bf4",
@@ -19117,7 +19117,7 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "b1abd9ff77f5dc5c376c08041fae20ea": {
     "id": "b1abd9ff77f5dc5c376c08041fae20ea",
@@ -19137,7 +19137,7 @@
         "score": "102"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "dd58df55a7af85441c65eee7310a71f5": {
     "id": "dd58df55a7af85441c65eee7310a71f5",
@@ -19157,7 +19157,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
   },
   "8705fa29b81b3f96d689da909e406bff": {
     "id": "8705fa29b81b3f96d689da909e406bff",
@@ -19177,6 +19177,26 @@
         "score": "62"
       }
     ],
-    "last_update": "2026-11-23T23:51:49Z"
+    "last_update": "2026-11-24T00:38:37Z"
+  },
+  "fc86a54f6abd13932c62fa66b82a3e28": {
+    "id": "fc86a54f6abd13932c62fa66b82a3e28",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-23T22:02:48Z",
+    "completed": true,
+    "home_team": "BYU Cougars",
+    "away_team": "Washington Huskies",
+    "scores": [
+      {
+        "name": "BYU Cougars",
+        "score": "83"
+      },
+      {
+        "name": "Washington Huskies",
+        "score": "77"
+      }
+    ],
+    "last_update": "2026-11-24T00:38:37Z"
   }
 }
