@@ -21138,5 +21138,25 @@
       }
     ],
     "last_update": "2026-11-25T16:07:24Z"
+  },
+  "38d1af886179efb99270618ed4702a3d": {
+    "id": "38d1af886179efb99270618ed4702a3d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T15:01:41Z",
+    "completed": true,
+    "home_team": "Belmont Bruins",
+    "away_team": "St. Bonaventure Bonnies",
+    "scores": [
+      {
+        "name": "Belmont Bruins",
+        "score": "68"
+      },
+      {
+        "name": "St. Bonaventure Bonnies",
+        "score": "71"
+      }
+    ],
+    "last_update": "2026-11-25T17:22:35Z"
   }
 }
