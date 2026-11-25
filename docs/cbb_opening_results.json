@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-25T19:22:29.456843+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-25T19:34:00.176934+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -64,7 +64,7 @@
       "wins": 278,
       "losses": 256,
       "pushes": 1,
-      "pending": 68,
+      "pending": 69,
       "win_rate": 0.5205992509363296,
       "profit_units": -0.6055871399323254
     },
@@ -74,7 +74,7 @@
       "wins": 56,
       "losses": 63,
       "pushes": 1,
-      "pending": 14,
+      "pending": 15,
       "win_rate": 0.47058823529411764,
       "profit_units": -11.552042160737825
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.979441121986553
     }
   ],
-  "snapshots": 6694,
+  "snapshots": 6700,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -62010,6 +62010,36 @@
       "implied_probability": 0.5238095238095238,
       "edge": 0.08376797589802454,
       "edge_tier": "6%+",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "Yes",
+      "total_consensus_source": "capture",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "1f201405bb0cb78893a9fb7f",
+      "event_id": "527932f3d90f638641c5371efdae7b50",
+      "game": "Michigan St Spartans vs. Arkansas Razorbacks",
+      "home_team": "Michigan St Spartans",
+      "away_team": "Arkansas Razorbacks",
+      "commence_time": "2026-11-26T21:30:00+00:00",
+      "game_date_et": "2026-11-26",
+      "captured_at": "2026-11-25T19:34:00.176934+00:00",
+      "book": "FanDuel",
+      "bet_type": "Total",
+      "selection": "Under",
+      "line": 151.5,
+      "odds": -110.0,
+      "model_prediction": 149.5,
+      "probability": 0.5310871879321442,
+      "implied_probability": 0.5238095238095238,
+      "edge": 0.00727766412262032,
+      "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "Yes",
