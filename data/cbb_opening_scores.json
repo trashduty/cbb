@@ -21157,7 +21157,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "477cb494daa4db3c14d2879c0e2597c9": {
     "id": "477cb494daa4db3c14d2879c0e2597c9",
@@ -21177,7 +21177,7 @@
         "score": "82"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "ffd0046855b372187fbcfcddb6274995": {
     "id": "ffd0046855b372187fbcfcddb6274995",
@@ -21197,7 +21197,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "ec01b07ca0266d4bba14bda0f9ede21c": {
     "id": "ec01b07ca0266d4bba14bda0f9ede21c",
@@ -21217,7 +21217,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "ed380fcc7e826f9e50517775dcff967e": {
     "id": "ed380fcc7e826f9e50517775dcff967e",
@@ -21237,7 +21237,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "a4c8b95f6d672698848b8c6a7eeeaee1": {
     "id": "a4c8b95f6d672698848b8c6a7eeeaee1",
@@ -21257,7 +21257,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "97f12e8f9178ef8db0b62f56e3f69f3e": {
     "id": "97f12e8f9178ef8db0b62f56e3f69f3e",
@@ -21277,7 +21277,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "e317bb85b611c4b4f5d7c004fdc049ea": {
     "id": "e317bb85b611c4b4f5d7c004fdc049ea",
@@ -21297,7 +21297,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "35ad4fa01fad6add259b5e551ba7785b": {
     "id": "35ad4fa01fad6add259b5e551ba7785b",
@@ -21317,7 +21317,7 @@
         "score": "60"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "cb9ca75b4359850d6b98a6dad9087827": {
     "id": "cb9ca75b4359850d6b98a6dad9087827",
@@ -21337,7 +21337,7 @@
         "score": "47"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "501158853dafff874254ca13b173db59": {
     "id": "501158853dafff874254ca13b173db59",
@@ -21357,7 +21357,7 @@
         "score": "44"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "d5c1b591e907d1c36a45342828f833df": {
     "id": "d5c1b591e907d1c36a45342828f833df",
@@ -21377,7 +21377,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "d7e124b82ed9910d5aa3077d19c6ada1": {
     "id": "d7e124b82ed9910d5aa3077d19c6ada1",
@@ -21397,7 +21397,7 @@
         "score": "101"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
   },
   "d493eae11aafe56f0c7dd6ba33cd5c7a": {
     "id": "d493eae11aafe56f0c7dd6ba33cd5c7a",
@@ -21417,6 +21417,26 @@
         "score": "50"
       }
     ],
-    "last_update": "2026-11-25T21:22:33Z"
+    "last_update": "2026-11-25T21:51:22Z"
+  },
+  "be3aefca8fa30c9f2569e0523c7c1b1e": {
+    "id": "be3aefca8fa30c9f2569e0523c7c1b1e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T19:06:14Z",
+    "completed": true,
+    "home_team": "LSU Tigers",
+    "away_team": "Arizona St Sun Devils",
+    "scores": [
+      {
+        "name": "Arizona St Sun Devils",
+        "score": "92"
+      },
+      {
+        "name": "LSU Tigers",
+        "score": "94"
+      }
+    ],
+    "last_update": "2026-11-25T21:51:22Z"
   }
 }
