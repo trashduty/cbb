@@ -21157,7 +21157,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-25T19:22:16Z"
+    "last_update": "2026-11-25T19:51:39Z"
   },
   "477cb494daa4db3c14d2879c0e2597c9": {
     "id": "477cb494daa4db3c14d2879c0e2597c9",
@@ -21177,7 +21177,7 @@
         "score": "82"
       }
     ],
-    "last_update": "2026-11-25T19:22:16Z"
+    "last_update": "2026-11-25T19:51:39Z"
   },
   "ffd0046855b372187fbcfcddb6274995": {
     "id": "ffd0046855b372187fbcfcddb6274995",
@@ -21197,6 +21197,46 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T19:22:16Z"
+    "last_update": "2026-11-25T19:51:39Z"
+  },
+  "ec01b07ca0266d4bba14bda0f9ede21c": {
+    "id": "ec01b07ca0266d4bba14bda0f9ede21c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T17:30:00Z",
+    "completed": true,
+    "home_team": "Detroit Mercy Titans",
+    "away_team": "N Colorado Bears",
+    "scores": [
+      {
+        "name": "Detroit Mercy Titans",
+        "score": "83"
+      },
+      {
+        "name": "N Colorado Bears",
+        "score": "93"
+      }
+    ],
+    "last_update": "2026-11-25T19:51:39Z"
+  },
+  "ed380fcc7e826f9e50517775dcff967e": {
+    "id": "ed380fcc7e826f9e50517775dcff967e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T17:33:35Z",
+    "completed": true,
+    "home_team": "Wright St Raiders",
+    "away_team": "Yale Bulldogs",
+    "scores": [
+      {
+        "name": "Wright St Raiders",
+        "score": "70"
+      },
+      {
+        "name": "Yale Bulldogs",
+        "score": "72"
+      }
+    ],
+    "last_update": "2026-11-25T19:51:39Z"
   }
 }
