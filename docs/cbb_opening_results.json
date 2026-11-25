@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-25T04:25:09.699548+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-25T04:33:43.729611+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 193,
       "losses": 388,
       "pushes": 0,
-      "pending": 75,
+      "pending": 76,
       "win_rate": 0.33218588640275387,
       "profit_units": -160.70199069279414
     },
@@ -124,7 +124,7 @@
       "wins": 56,
       "losses": 165,
       "pushes": 0,
-      "pending": 17,
+      "pending": 18,
       "win_rate": 0.25339366515837103,
       "profit_units": -124.01535484514301
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.979441121986553
     }
   ],
-  "snapshots": 6618,
+  "snapshots": 6620,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -61264,6 +61264,36 @@
       "spread_consensus": "",
       "total_consensus": "Yes",
       "total_consensus_source": "capture",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "ab4687f6b1f72a36f7a0f7d3",
+      "event_id": "ec01b07ca0266d4bba14bda0f9ede21c",
+      "game": "Detroit Mercy Titans vs. N Colorado Bears",
+      "home_team": "Detroit Mercy Titans",
+      "away_team": "N Colorado Bears",
+      "commence_time": "2026-11-25T17:30:00+00:00",
+      "game_date_et": "2026-11-25",
+      "captured_at": "2026-11-25T04:33:43.729611+00:00",
+      "book": "BetRivers",
+      "bet_type": "Moneyline",
+      "selection": "Detroit Mercy Titans",
+      "line": null,
+      "odds": 215.0,
+      "model_prediction": 0.3191373062138679,
+      "probability": 0.3191373062138679,
+      "implied_probability": 0.31746031746031744,
+      "edge": 0.0016769887535504346,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
       "home_score": null,
