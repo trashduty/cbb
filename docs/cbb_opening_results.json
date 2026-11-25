@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-25T04:51:47.326184+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-25T05:04:39.960412+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 193,
       "losses": 388,
       "pushes": 0,
-      "pending": 76,
+      "pending": 77,
       "win_rate": 0.33218588640275387,
       "profit_units": -160.70199069279414
     },
@@ -124,7 +124,7 @@
       "wins": 56,
       "losses": 165,
       "pushes": 0,
-      "pending": 18,
+      "pending": 19,
       "win_rate": 0.25339366515837103,
       "profit_units": -124.01535484514301
     },
@@ -159,7 +159,7 @@
       "profit_units": -5.979441121986553
     }
   ],
-  "snapshots": 6620,
+  "snapshots": 6622,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -61289,6 +61289,36 @@
       "probability": 0.3191373062138679,
       "implied_probability": 0.31746031746031744,
       "edge": 0.0016769887535504346,
+      "edge_tier": "0\u20130.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "307a1d0ede47d162e1ce5259",
+      "event_id": "ce5f5c47a886dbd64ae1a0a140487282",
+      "game": "North Dakota Fighting Hawks vs. SE Louisiana Lions",
+      "home_team": "North Dakota Fighting Hawks",
+      "away_team": "SE Louisiana Lions",
+      "commence_time": "2026-11-25T20:00:00+00:00",
+      "game_date_et": "2026-11-25",
+      "captured_at": "2026-11-25T05:04:39.960412+00:00",
+      "book": "DraftKings",
+      "bet_type": "Moneyline",
+      "selection": "North Dakota Fighting Hawks",
+      "line": null,
+      "odds": 100.0,
+      "model_prediction": 0.5044066428411211,
+      "probability": 0.5044066428411211,
+      "implied_probability": 0.5,
+      "edge": 0.004406642841121133,
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
