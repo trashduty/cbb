@@ -21157,7 +21157,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "477cb494daa4db3c14d2879c0e2597c9": {
     "id": "477cb494daa4db3c14d2879c0e2597c9",
@@ -21177,7 +21177,7 @@
         "score": "82"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "ffd0046855b372187fbcfcddb6274995": {
     "id": "ffd0046855b372187fbcfcddb6274995",
@@ -21197,7 +21197,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "ec01b07ca0266d4bba14bda0f9ede21c": {
     "id": "ec01b07ca0266d4bba14bda0f9ede21c",
@@ -21217,7 +21217,7 @@
         "score": "93"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "ed380fcc7e826f9e50517775dcff967e": {
     "id": "ed380fcc7e826f9e50517775dcff967e",
@@ -21237,7 +21237,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "a4c8b95f6d672698848b8c6a7eeeaee1": {
     "id": "a4c8b95f6d672698848b8c6a7eeeaee1",
@@ -21257,7 +21257,7 @@
         "score": "63"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "97f12e8f9178ef8db0b62f56e3f69f3e": {
     "id": "97f12e8f9178ef8db0b62f56e3f69f3e",
@@ -21277,7 +21277,7 @@
         "score": "64"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
   },
   "e317bb85b611c4b4f5d7c004fdc049ea": {
     "id": "e317bb85b611c4b4f5d7c004fdc049ea",
@@ -21297,6 +21297,46 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-25T20:23:36Z"
+    "last_update": "2026-11-25T20:51:41Z"
+  },
+  "35ad4fa01fad6add259b5e551ba7785b": {
+    "id": "35ad4fa01fad6add259b5e551ba7785b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T17:01:59Z",
+    "completed": true,
+    "home_team": "Marquette Golden Eagles",
+    "away_team": "Virginia Cavaliers",
+    "scores": [
+      {
+        "name": "Marquette Golden Eagles",
+        "score": "54"
+      },
+      {
+        "name": "Virginia Cavaliers",
+        "score": "60"
+      }
+    ],
+    "last_update": "2026-11-25T20:51:41Z"
+  },
+  "cb9ca75b4359850d6b98a6dad9087827": {
+    "id": "cb9ca75b4359850d6b98a6dad9087827",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-25T18:35:53Z",
+    "completed": true,
+    "home_team": "Davidson Wildcats",
+    "away_team": "Tulane Green Wave",
+    "scores": [
+      {
+        "name": "Davidson Wildcats",
+        "score": "74"
+      },
+      {
+        "name": "Tulane Green Wave",
+        "score": "47"
+      }
+    ],
+    "last_update": "2026-11-25T20:51:41Z"
   }
 }
