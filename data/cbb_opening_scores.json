@@ -22317,7 +22317,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "35a3f7e451a688a08a5aec9c161172e1": {
     "id": "35a3f7e451a688a08a5aec9c161172e1",
@@ -22337,7 +22337,7 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "1e866ef633893abc2acc46b7f71e6486": {
     "id": "1e866ef633893abc2acc46b7f71e6486",
@@ -22357,7 +22357,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "fce1d0e39b7353f5d69bc77cf21ee9d1": {
     "id": "fce1d0e39b7353f5d69bc77cf21ee9d1",
@@ -22377,7 +22377,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "a0efacdfc613932ff56223ca6412613e": {
     "id": "a0efacdfc613932ff56223ca6412613e",
@@ -22397,7 +22397,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "b71753c18ee4bb20584550465299033b": {
     "id": "b71753c18ee4bb20584550465299033b",
@@ -22417,7 +22417,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
   },
   "1ea8ceedbe8d577ba3c6ed8239137c4c": {
     "id": "1ea8ceedbe8d577ba3c6ed8239137c4c",
@@ -22437,6 +22437,26 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-26T22:22:26Z"
+    "last_update": "2026-11-26T22:51:58Z"
+  },
+  "c388303afe97dac3042dcbfd2cd644a5": {
+    "id": "c388303afe97dac3042dcbfd2cd644a5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T20:35:27Z",
+    "completed": true,
+    "home_team": "Michigan Wolverines",
+    "away_team": "Miami Hurricanes",
+    "scores": [
+      {
+        "name": "Michigan Wolverines",
+        "score": "70"
+      },
+      {
+        "name": "Miami Hurricanes",
+        "score": "97"
+      }
+    ],
+    "last_update": "2026-11-26T22:51:58Z"
   }
 }
