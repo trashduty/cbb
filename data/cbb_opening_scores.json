@@ -22317,7 +22317,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-26T21:22:34Z"
+    "last_update": "2026-11-26T21:51:19Z"
   },
   "35a3f7e451a688a08a5aec9c161172e1": {
     "id": "35a3f7e451a688a08a5aec9c161172e1",
@@ -22337,7 +22337,7 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-26T21:22:34Z"
+    "last_update": "2026-11-26T21:51:19Z"
   },
   "1e866ef633893abc2acc46b7f71e6486": {
     "id": "1e866ef633893abc2acc46b7f71e6486",
@@ -22357,7 +22357,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-26T21:22:34Z"
+    "last_update": "2026-11-26T21:51:19Z"
   },
   "fce1d0e39b7353f5d69bc77cf21ee9d1": {
     "id": "fce1d0e39b7353f5d69bc77cf21ee9d1",
@@ -22377,7 +22377,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-26T21:22:34Z"
+    "last_update": "2026-11-26T21:51:19Z"
   },
   "a0efacdfc613932ff56223ca6412613e": {
     "id": "a0efacdfc613932ff56223ca6412613e",
@@ -22397,6 +22397,26 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-26T21:22:34Z"
+    "last_update": "2026-11-26T21:51:19Z"
+  },
+  "b71753c18ee4bb20584550465299033b": {
+    "id": "b71753c18ee4bb20584550465299033b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T19:00:00Z",
+    "completed": true,
+    "home_team": "Arizona St Sun Devils",
+    "away_team": "South Carolina Gamecocks",
+    "scores": [
+      {
+        "name": "South Carolina Gamecocks",
+        "score": "80"
+      },
+      {
+        "name": "Arizona St Sun Devils",
+        "score": "73"
+      }
+    ],
+    "last_update": "2026-11-26T21:51:19Z"
   }
 }
