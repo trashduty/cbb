@@ -22317,7 +22317,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "35a3f7e451a688a08a5aec9c161172e1": {
     "id": "35a3f7e451a688a08a5aec9c161172e1",
@@ -22337,7 +22337,7 @@
         "score": "79"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "1e866ef633893abc2acc46b7f71e6486": {
     "id": "1e866ef633893abc2acc46b7f71e6486",
@@ -22357,7 +22357,7 @@
         "score": "70"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "fce1d0e39b7353f5d69bc77cf21ee9d1": {
     "id": "fce1d0e39b7353f5d69bc77cf21ee9d1",
@@ -22377,7 +22377,7 @@
         "score": "71"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "a0efacdfc613932ff56223ca6412613e": {
     "id": "a0efacdfc613932ff56223ca6412613e",
@@ -22397,7 +22397,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "b71753c18ee4bb20584550465299033b": {
     "id": "b71753c18ee4bb20584550465299033b",
@@ -22417,7 +22417,7 @@
         "score": "73"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "1ea8ceedbe8d577ba3c6ed8239137c4c": {
     "id": "1ea8ceedbe8d577ba3c6ed8239137c4c",
@@ -22437,7 +22437,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "c388303afe97dac3042dcbfd2cd644a5": {
     "id": "c388303afe97dac3042dcbfd2cd644a5",
@@ -22457,7 +22457,7 @@
         "score": "97"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
   },
   "ddd97a754132d5db69231a8b2fe84a9b": {
     "id": "ddd97a754132d5db69231a8b2fe84a9b",
@@ -22477,6 +22477,26 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-26T23:22:17Z"
+    "last_update": "2026-11-26T23:51:50Z"
+  },
+  "527932f3d90f638641c5371efdae7b50": {
+    "id": "527932f3d90f638641c5371efdae7b50",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T21:50:00Z",
+    "completed": true,
+    "home_team": "Michigan St Spartans",
+    "away_team": "Arkansas Razorbacks",
+    "scores": [
+      {
+        "name": "Michigan St Spartans",
+        "score": "70"
+      },
+      {
+        "name": "Arkansas Razorbacks",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-26T23:51:50Z"
   }
 }
