@@ -22317,6 +22317,46 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-26T18:51:46Z"
+    "last_update": "2026-11-26T19:22:02Z"
+  },
+  "35a3f7e451a688a08a5aec9c161172e1": {
+    "id": "35a3f7e451a688a08a5aec9c161172e1",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T17:00:00Z",
+    "completed": true,
+    "home_team": "UTSA Roadrunners",
+    "away_team": "Army Knights",
+    "scores": [
+      {
+        "name": "UTSA Roadrunners",
+        "score": "61"
+      },
+      {
+        "name": "Army Knights",
+        "score": "79"
+      }
+    ],
+    "last_update": "2026-11-26T19:22:02Z"
+  },
+  "1e866ef633893abc2acc46b7f71e6486": {
+    "id": "1e866ef633893abc2acc46b7f71e6486",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T17:00:00Z",
+    "completed": true,
+    "home_team": "Purdue Boilermakers",
+    "away_team": "Oklahoma Sooners",
+    "scores": [
+      {
+        "name": "Purdue Boilermakers",
+        "score": "63"
+      },
+      {
+        "name": "Oklahoma Sooners",
+        "score": "70"
+      }
+    ],
+    "last_update": "2026-11-26T19:22:02Z"
   }
 }
