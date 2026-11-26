@@ -22298,5 +22298,25 @@
       }
     ],
     "last_update": "2026-11-26T16:14:13Z"
+  },
+  "22c0c9538b8e804cc96baa21c839726f": {
+    "id": "22c0c9538b8e804cc96baa21c839726f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-26T16:00:00Z",
+    "completed": true,
+    "home_team": "Cincinnati Bearcats",
+    "away_team": "Georgia Bulldogs",
+    "scores": [
+      {
+        "name": "Cincinnati Bearcats",
+        "score": "83"
+      },
+      {
+        "name": "Georgia Bulldogs",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-26T18:26:07Z"
   }
 }
