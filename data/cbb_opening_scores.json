@@ -22737,7 +22737,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-27T20:22:48Z"
+    "last_update": "2026-11-27T20:51:20Z"
   },
   "f3cd5043f4c5a7d9f1a5b5dc4f0417f3": {
     "id": "f3cd5043f4c5a7d9f1a5b5dc4f0417f3",
@@ -22757,7 +22757,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-27T20:22:48Z"
+    "last_update": "2026-11-27T20:51:20Z"
   },
   "91d74387d259e10c504cb54aea9d4f1e": {
     "id": "91d74387d259e10c504cb54aea9d4f1e",
@@ -22777,7 +22777,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-27T20:22:48Z"
+    "last_update": "2026-11-27T20:51:20Z"
   },
   "6c246469b03c12801d6ff588d968a6e4": {
     "id": "6c246469b03c12801d6ff588d968a6e4",
@@ -22797,6 +22797,46 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-27T20:22:48Z"
+    "last_update": "2026-11-27T20:51:20Z"
+  },
+  "6d123a59bb5220938562ae9ab3a41d77": {
+    "id": "6d123a59bb5220938562ae9ab3a41d77",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T18:07:36Z",
+    "completed": true,
+    "home_team": "St. John's Red Storm",
+    "away_team": "Iowa State Cyclones",
+    "scores": [
+      {
+        "name": "St. John's Red Storm",
+        "score": "80"
+      },
+      {
+        "name": "Iowa State Cyclones",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-27T20:51:20Z"
+  },
+  "4c0c9710cadfc6d63465ad20a30f5565": {
+    "id": "4c0c9710cadfc6d63465ad20a30f5565",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T19:00:00Z",
+    "completed": true,
+    "home_team": "South Alabama Jaguars",
+    "away_team": "Fresno St Bulldogs",
+    "scores": [
+      {
+        "name": "South Alabama Jaguars",
+        "score": "61"
+      },
+      {
+        "name": "Fresno St Bulldogs",
+        "score": "81"
+      }
+    ],
+    "last_update": "2026-11-27T20:51:20Z"
   }
 }
