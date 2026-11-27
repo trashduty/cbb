@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-27T00:56:28.574402+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-27T01:05:09.703087+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -64,7 +64,7 @@
       "wins": 295,
       "losses": 274,
       "pushes": 1,
-      "pending": 65,
+      "pending": 66,
       "win_rate": 0.5184534270650264,
       "profit_units": -3.10022293891595
     },
@@ -104,7 +104,7 @@
       "wins": 30,
       "losses": 20,
       "pushes": 0,
-      "pending": 6,
+      "pending": 7,
       "win_rate": 0.6,
       "profit_units": 7.657998201476462
     },
@@ -159,7 +159,7 @@
       "profit_units": -8.453125332512869
     }
   ],
-  "snapshots": 7000,
+  "snapshots": 7006,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -64953,6 +64953,36 @@
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "No",
+      "total_consensus_source": "capture",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "44a1be682d1e23c91515cde3",
+      "event_id": "b45868adb6bfc90b2080067130c72a87",
+      "game": "East Tennessee St Buccaneers vs. Charleston Southern Buccaneers",
+      "home_team": "East Tennessee St Buccaneers",
+      "away_team": "Charleston Southern Buccaneers",
+      "commence_time": "2026-11-28T00:00:00+00:00",
+      "game_date_et": "2026-11-27",
+      "captured_at": "2026-11-27T01:05:09.703087+00:00",
+      "book": "FanDuel",
+      "bet_type": "Total",
+      "selection": "Under",
+      "line": 145.5,
+      "odds": -105.0,
+      "model_prediction": 140.0,
+      "probability": 0.5821675611909751,
+      "implied_probability": 0.5121951219512195,
+      "edge": 0.0699724392397556,
+      "edge_tier": "6%+",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "Yes",
       "total_consensus_source": "capture",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
       "result": "Pending",
