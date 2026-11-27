@@ -22737,7 +22737,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "f3cd5043f4c5a7d9f1a5b5dc4f0417f3": {
     "id": "f3cd5043f4c5a7d9f1a5b5dc4f0417f3",
@@ -22757,7 +22757,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "91d74387d259e10c504cb54aea9d4f1e": {
     "id": "91d74387d259e10c504cb54aea9d4f1e",
@@ -22777,7 +22777,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "6c246469b03c12801d6ff588d968a6e4": {
     "id": "6c246469b03c12801d6ff588d968a6e4",
@@ -22797,7 +22797,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "6d123a59bb5220938562ae9ab3a41d77": {
     "id": "6d123a59bb5220938562ae9ab3a41d77",
@@ -22817,7 +22817,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "4c0c9710cadfc6d63465ad20a30f5565": {
     "id": "4c0c9710cadfc6d63465ad20a30f5565",
@@ -22837,7 +22837,7 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "eaf627a916aa57020a2810007ee9bcf2": {
     "id": "eaf627a916aa57020a2810007ee9bcf2",
@@ -22857,7 +22857,7 @@
         "score": "88"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "47ad721bbda353aee31ea130877d792c": {
     "id": "47ad721bbda353aee31ea130877d792c",
@@ -22877,7 +22877,7 @@
         "score": "59"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
   },
   "04915f643fc6eb1073d25f6bc1d8e53f": {
     "id": "04915f643fc6eb1073d25f6bc1d8e53f",
@@ -22897,6 +22897,66 @@
         "score": "56"
       }
     ],
-    "last_update": "2026-11-27T21:22:55Z"
+    "last_update": "2026-11-27T21:51:28Z"
+  },
+  "3c4a55460f244697b344618aba7c816d": {
+    "id": "3c4a55460f244697b344618aba7c816d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T19:02:18Z",
+    "completed": true,
+    "home_team": "Le Moyne Dolphins",
+    "away_team": "Maine Black Bears",
+    "scores": [
+      {
+        "name": "Le Moyne Dolphins",
+        "score": "86"
+      },
+      {
+        "name": "Maine Black Bears",
+        "score": "90"
+      }
+    ],
+    "last_update": "2026-11-27T21:51:28Z"
+  },
+  "e70390bc589c34764d968355a3430fc3": {
+    "id": "e70390bc589c34764d968355a3430fc3",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T19:30:00Z",
+    "completed": true,
+    "home_team": "UCLA Bruins",
+    "away_team": "Georgetown Hoyas",
+    "scores": [
+      {
+        "name": "UCLA Bruins",
+        "score": "75"
+      },
+      {
+        "name": "Georgetown Hoyas",
+        "score": "63"
+      }
+    ],
+    "last_update": "2026-11-27T21:51:28Z"
+  },
+  "bc3fb1851c83444219f558d4229a1f0c": {
+    "id": "bc3fb1851c83444219f558d4229a1f0c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T20:00:00Z",
+    "completed": true,
+    "home_team": "Butler Bulldogs",
+    "away_team": "Bellarmine Knights",
+    "scores": [
+      {
+        "name": "Butler Bulldogs",
+        "score": "92"
+      },
+      {
+        "name": "Bellarmine Knights",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-27T21:51:28Z"
   }
 }
