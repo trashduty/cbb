@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-27T22:22:30.131948+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-27T22:33:30.922624+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -114,7 +114,7 @@
       "wins": 214,
       "losses": 427,
       "pushes": 0,
-      "pending": 84,
+      "pending": 85,
       "win_rate": 0.3338533541341654,
       "profit_units": -170.62502675525212
     },
@@ -124,7 +124,7 @@
       "wins": 61,
       "losses": 178,
       "pushes": 0,
-      "pending": 21,
+      "pending": 22,
       "win_rate": 0.25523012552301255,
       "profit_units": -134.10421663376093
     },
@@ -159,7 +159,7 @@
       "profit_units": -8.453125332512869
     }
   ],
-  "snapshots": 7272,
+  "snapshots": 7280,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -67440,6 +67440,36 @@
       "implied_probability": 0.875,
       "edge": 0.03090267749917608,
       "edge_tier": "3\u20135.9%",
+      "eligible": "yes",
+      "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "f5f4a0c5855d795b922efe79",
+      "event_id": "7d92a4434a2b9ea121903ae4ee4370f2",
+      "game": "Eastern Illinois Panthers vs. Northern Illinois Huskies",
+      "home_team": "Eastern Illinois Panthers",
+      "away_team": "Northern Illinois Huskies",
+      "commence_time": "2026-11-28T20:00:00+00:00",
+      "game_date_et": "2026-11-28",
+      "captured_at": "2026-11-27T22:33:30.922624+00:00",
+      "book": "Fanatics",
+      "bet_type": "Moneyline",
+      "selection": "Northern Illinois Huskies",
+      "line": null,
+      "odds": -550.0,
+      "model_prediction": 0.854462983778879,
+      "probability": 0.854462983778879,
+      "implied_probability": 0.8461538461538461,
+      "edge": 0.008309137625032825,
+      "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
       "total_consensus": "",
