@@ -22737,7 +22737,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-27T19:22:17Z"
+    "last_update": "2026-11-27T19:51:35Z"
   },
   "f3cd5043f4c5a7d9f1a5b5dc4f0417f3": {
     "id": "f3cd5043f4c5a7d9f1a5b5dc4f0417f3",
@@ -22757,6 +22757,26 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-27T19:22:17Z"
+    "last_update": "2026-11-27T19:51:35Z"
+  },
+  "91d74387d259e10c504cb54aea9d4f1e": {
+    "id": "91d74387d259e10c504cb54aea9d4f1e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T18:00:00Z",
+    "completed": true,
+    "home_team": "Merrimack Warriors",
+    "away_team": "Vermont Catamounts",
+    "scores": [
+      {
+        "name": "Vermont Catamounts",
+        "score": "57"
+      },
+      {
+        "name": "Merrimack Warriors",
+        "score": "75"
+      }
+    ],
+    "last_update": "2026-11-27T19:51:35Z"
   }
 }
