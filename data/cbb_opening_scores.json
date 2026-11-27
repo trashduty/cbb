@@ -22718,5 +22718,25 @@
       }
     ],
     "last_update": "2026-11-27T16:06:44Z"
+  },
+  "70d6ec6a65d41a114e5e07f1111c4b44": {
+    "id": "70d6ec6a65d41a114e5e07f1111c4b44",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T16:00:19Z",
+    "completed": true,
+    "home_team": "Xavier Musketeers",
+    "away_team": "Virginia Cavaliers",
+    "scores": [
+      {
+        "name": "Xavier Musketeers",
+        "score": "71"
+      },
+      {
+        "name": "Virginia Cavaliers",
+        "score": "83"
+      }
+    ],
+    "last_update": "2026-11-27T18:25:08Z"
   }
 }
