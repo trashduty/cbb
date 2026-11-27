@@ -22737,7 +22737,7 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
   },
   "f3cd5043f4c5a7d9f1a5b5dc4f0417f3": {
     "id": "f3cd5043f4c5a7d9f1a5b5dc4f0417f3",
@@ -22757,7 +22757,7 @@
         "score": "67"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
   },
   "91d74387d259e10c504cb54aea9d4f1e": {
     "id": "91d74387d259e10c504cb54aea9d4f1e",
@@ -22777,7 +22777,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
   },
   "6c246469b03c12801d6ff588d968a6e4": {
     "id": "6c246469b03c12801d6ff588d968a6e4",
@@ -22797,7 +22797,7 @@
         "score": "72"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
   },
   "6d123a59bb5220938562ae9ab3a41d77": {
     "id": "6d123a59bb5220938562ae9ab3a41d77",
@@ -22817,7 +22817,7 @@
         "score": "75"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
   },
   "4c0c9710cadfc6d63465ad20a30f5565": {
     "id": "4c0c9710cadfc6d63465ad20a30f5565",
@@ -22837,6 +22837,66 @@
         "score": "81"
       }
     ],
-    "last_update": "2026-11-27T20:51:20Z"
+    "last_update": "2026-11-27T21:22:55Z"
+  },
+  "eaf627a916aa57020a2810007ee9bcf2": {
+    "id": "eaf627a916aa57020a2810007ee9bcf2",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T18:40:50Z",
+    "completed": true,
+    "home_team": "Wake Forest Demon Deacons",
+    "away_team": "Memphis Tigers",
+    "scores": [
+      {
+        "name": "Wake Forest Demon Deacons",
+        "score": "85"
+      },
+      {
+        "name": "Memphis Tigers",
+        "score": "88"
+      }
+    ],
+    "last_update": "2026-11-27T21:22:55Z"
+  },
+  "47ad721bbda353aee31ea130877d792c": {
+    "id": "47ad721bbda353aee31ea130877d792c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T19:00:00Z",
+    "completed": true,
+    "home_team": "Fairfield Stags",
+    "away_team": "Navy Midshipmen",
+    "scores": [
+      {
+        "name": "Fairfield Stags",
+        "score": "75"
+      },
+      {
+        "name": "Navy Midshipmen",
+        "score": "59"
+      }
+    ],
+    "last_update": "2026-11-27T21:22:55Z"
+  },
+  "04915f643fc6eb1073d25f6bc1d8e53f": {
+    "id": "04915f643fc6eb1073d25f6bc1d8e53f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T19:00:00Z",
+    "completed": true,
+    "home_team": "Vanderbilt Commodores",
+    "away_team": "Southern Jaguars",
+    "scores": [
+      {
+        "name": "Vanderbilt Commodores",
+        "score": "111"
+      },
+      {
+        "name": "Southern Jaguars",
+        "score": "56"
+      }
+    ],
+    "last_update": "2026-11-27T21:22:55Z"
   }
 }
