@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-27T23:22:31.277894+00:00",
-  "score_status": "Score update successful",
+  "updated_at": "2026-11-27T23:33:29.690681+00:00",
+  "score_status": "Scores not requested in this run",
   "tiers": [
     "0\u20130.9%",
     "1\u20132.9%",
@@ -14,7 +14,7 @@
       "wins": 395,
       "losses": 375,
       "pushes": 2,
-      "pending": 86,
+      "pending": 87,
       "win_rate": 0.512987012987013,
       "profit_units": -14.424268320010285
     },
@@ -54,7 +54,7 @@
       "wins": 114,
       "losses": 99,
       "pushes": 0,
-      "pending": 15,
+      "pending": 16,
       "win_rate": 0.5352112676056338,
       "profit_units": 5.8031168516366645
     },
@@ -159,7 +159,7 @@
       "profit_units": -8.453125332512869
     }
   ],
-  "snapshots": 7282,
+  "snapshots": 7290,
   "ledger": [
     {
       "snapshot_id": "dbc62d853a1e34ae818fcd2a",
@@ -67472,6 +67472,36 @@
       "edge_tier": "0\u20130.9%",
       "eligible": "yes",
       "spread_consensus": "",
+      "total_consensus": "",
+      "total_consensus_source": "",
+      "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
+      "result": "Pending",
+      "home_score": null,
+      "away_score": null,
+      "graded_at": "",
+      "profit_units": null
+    },
+    {
+      "snapshot_id": "862b7f27cf17f954a1aefd66",
+      "event_id": "6b7546051f151f75d04c67037d323b96",
+      "game": "Georgia Tech Yellow Jackets vs. Alcorn St Braves",
+      "home_team": "Georgia Tech Yellow Jackets",
+      "away_team": "Alcorn St Braves",
+      "commence_time": "2026-11-28T18:00:00+00:00",
+      "game_date_et": "2026-11-28",
+      "captured_at": "2026-11-27T23:33:29.690681+00:00",
+      "book": "DraftKings",
+      "bet_type": "Spread",
+      "selection": "Alcorn St Braves",
+      "line": 26.5,
+      "odds": -104.0,
+      "model_prediction": 23.5,
+      "probability": 0.5953061616817894,
+      "implied_probability": 0.5098039215686274,
+      "edge": 0.08550224011316199,
+      "edge_tier": "6%+",
+      "eligible": "yes",
+      "spread_consensus": "No",
       "total_consensus": "",
       "total_consensus_source": "",
       "snapshot_note": "First evaluable Best Book snapshot; highest edge across available tracked books",
