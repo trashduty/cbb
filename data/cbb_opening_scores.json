@@ -22737,6 +22737,26 @@
         "score": "83"
       }
     ],
-    "last_update": "2026-11-27T18:51:22Z"
+    "last_update": "2026-11-27T19:22:17Z"
+  },
+  "f3cd5043f4c5a7d9f1a5b5dc4f0417f3": {
+    "id": "f3cd5043f4c5a7d9f1a5b5dc4f0417f3",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2026-11-27T17:00:00Z",
+    "completed": true,
+    "home_team": "St. Thomas (MN) Tommies",
+    "away_team": "Liberty Flames",
+    "scores": [
+      {
+        "name": "Liberty Flames",
+        "score": "76"
+      },
+      {
+        "name": "St. Thomas (MN) Tommies",
+        "score": "67"
+      }
+    ],
+    "last_update": "2026-11-27T19:22:17Z"
   }
 }
